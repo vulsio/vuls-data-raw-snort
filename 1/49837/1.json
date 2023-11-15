@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49837",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Tpshop remote file include attempt\"; flow:to_server,established; http_uri; content:\"/vendor/phpdocumentor/reflection-docblock/tests/phpDocumentor/Reflection/DocBlock/Tag/LinkTagTeet.php\",fast_pattern,nocase; http_client_body; content:\"down_url=\",nocase; pcre:\"/(^|&)down_url=[^&]*?(http|ftp)/im\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2018-9919; reference:url,seclists.org/fulldisclosure/2018/May/11; classtype:web-application-attack; sid:49837; rev:1;"
+}

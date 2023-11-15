@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45001",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Netgear WNR2000 information leak attempt\"; flow:to_server,established; http_uri; content:\"/BRS_netgear_success.html\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2016-10175; reference:url,seclists.org/fulldisclosure/2016/Dec/72; classtype:attempted-recon; sid:45001; rev:3;"
+}

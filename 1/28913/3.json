@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28913",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 58455",
+  "Option": "msg:\"MALWARE-BACKDOOR Zollard variant outbound connection attempt\"; flow:to_server,established; content:\".zollard/\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:telnet; reference:url,www.deependresearch.org/2013/12/hey-zollard-leave-my-internet-of-things.html; classtype:trojan-activity; sid:28913; rev:3;"
+}

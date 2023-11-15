@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "42820",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+  "Option": "msg:\"OS-WINDOWS Microsoft Malware Protection Engine type confusion attempt\"; flow:to_client,established; file_data; content:\"Error\"; content:\".toString.call\",within 50,fast_pattern; content:\"message\",within 25; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:cve,2017-0290; reference:url,technet.microsoft.com/en-us/library/security/4022344.aspx; classtype:attempted-admin; sid:42820; rev:2;"
+}

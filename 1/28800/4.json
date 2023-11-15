@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28800",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 80",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:1; pkt_data; content:\"GET / HTTP/1.1|0D 0A|Accept: */*|0D 0A|Accept-Language:\",depth 45; content:\"|0D 0A|Connection: Close|0D 0A 0D 0A|\",fast_pattern; http_header; content:\"google.com|0D 0A|\"; content:\"|3B 20|MSIE|20|\"; content:!\"Accept-Encoding: \"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d4b16269c9849c33a7bb2fdc782173a00e99db12a585689618dde3f4c6fcb101/analysis/; classtype:trojan-activity; sid:28800; rev:4;"
+}

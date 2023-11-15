@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1239",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
+  "Option": "msg:\"OS-WINDOWS RFParalyze Attempt\"; flow:to_server,established; content:\"BEAVIS\"; content:\"yep yep\"; metadata:ruleset community; reference:bugtraq,1163; reference:cve,2000-0347; reference:nessus,10392; classtype:attempted-recon; sid:1239; rev:14;"
+}

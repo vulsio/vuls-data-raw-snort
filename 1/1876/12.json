@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1876",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP nph-publish.cgi access\"; flow:to_server,established; http_uri; content:\"/nph-publish.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1177; reference:nessus,10164; classtype:web-application-activity; sid:1876; rev:12;"
+}

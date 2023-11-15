@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1693",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE create table attempt\"; flow:to_server,established; content:\"create table\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1693; rev:8;"
+}

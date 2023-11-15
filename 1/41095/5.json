@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "41095",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Netgear WNR2000 authentication bypass attempt\"; flow:to_server,established; http_uri; content:\"/apply_noauth.cgi\",depth 17,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2016-10176; reference:url,seclists.org/fulldisclosure/2016/Dec/72; classtype:attempted-admin; sid:41095; rev:5;"
+}

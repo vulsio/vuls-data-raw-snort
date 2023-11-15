@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3083",
+  "Rev": "10",
+  "Header": "alert tcp $HOME_NET 5880 -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR Y3KRAT 1.5 Connection confirmation\"; flow:to_client,established; flowbits:isset,backdoor.y3krat_15.client.response; content:\"client\",depth 7; metadata:ruleset community; classtype:misc-activity; sid:3083; rev:10;"
+}

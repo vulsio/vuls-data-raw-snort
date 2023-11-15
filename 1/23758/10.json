@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "23758",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"FILE-IDENTIFY XML file magic detected\"; flow:to_server,established; file_data; content:\"<xml>\",depth 50,nocase; flowbits:set,file.xml; flowbits:noalert; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:smtp; classtype:misc-activity; sid:23758; rev:10;"
+}

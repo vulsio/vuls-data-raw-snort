@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "272",
+  "Rev": "16",
+  "Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"OS-WINDOWS Microsoft WIndows IGMP dos attack\"; fragbits:M+; ip_proto:2; metadata:ruleset community; reference:bugtraq,514; reference:cve,1999-0918; reference:url,technet.microsoft.com/en-us/security/bulletin/MS99-034; classtype:attempted-dos; sid:272; rev:16;"
+}

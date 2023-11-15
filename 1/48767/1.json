@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "48767",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zebrocy variant payload download attempt\"; flow:to_server,established; http_uri; content:\"/Templates/NormalOld.dotm\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/07646dc0a8c8946bb78be9b96147d4327705c1a3c3bd3fbcedab32c43d914305; classtype:trojan-activity; sid:48767; rev:1;"
+}

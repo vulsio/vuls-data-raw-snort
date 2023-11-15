@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "25948",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"EXPLOIT-KIT redirection to driveby download\"; flow:to_client,established; file_data; content:\"/Home/index.php|22| width=1 height=1 scrolling=no></iframe>\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:25948; rev:4;"
+}

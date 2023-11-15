@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "39080",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.NetWiredRC variant connection setup\"; flow:to_server,established; content:\"|3B 00 00 00 05|\",depth 5; isdataat:!64; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/5db3b9ce06e334cb61279dd936a40be75df6732228bb692a7a84b1299eb09071/analysis/1464362377/; classtype:trojan-activity; sid:39080; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "889",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP ppdscgi.exe access\"; flow:to_server,established; http_uri; content:\"/ppdscgi.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,491; reference:nessus,10187; reference:url,online.securityfocus.com/archive/1/16878; classtype:attempted-recon; sid:889; rev:22;"
+}

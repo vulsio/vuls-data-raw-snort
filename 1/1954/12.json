@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1954",
+  "Rev": "12",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 500:",
+  "Option": "msg:\"PROTOCOL-RPC AMD UDP pid request\"; flow:to_server; content:\"|00 04 93 F3|\",depth 4,offset 12; content:\"|00 00 00 09|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; classtype:rpc-portmap-decode; sid:1954; rev:12;"
+}

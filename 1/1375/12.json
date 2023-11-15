@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1375",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP sadmind worm access\"; flow:to_server,established; content:\"GET x HTTP/1.0\",depth 15; metadata:ruleset community; service:http; reference:url,www.cert.org/advisories/CA-2001-11.html; classtype:attempted-recon; sid:1375; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2408",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Invision Power Board search.pl access\"; flow:to_server,established; http_uri; content:\"/search.pl\"; pkt_data; content:\"st=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,9766; reference:cve,2004-0338; classtype:web-application-activity; sid:2408; rev:9;"
+}

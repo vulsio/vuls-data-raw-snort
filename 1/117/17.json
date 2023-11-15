@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "117",
+  "Rev": "17",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR Infector.1.x\"; flow:established,to_client; content:\"WHATISIT\",depth 9; metadata:impact_flag red,ruleset community; reference:nessus,11157; classtype:misc-activity; sid:117; rev:17;"
+}

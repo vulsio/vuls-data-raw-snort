@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1090",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Allaire Pro Web Shell attempt\"; flow:to_server,established; http_uri; content:\"/authenticate.cgi?PASSWORD\",fast_pattern,nocase; pkt_data; content:\"config.ini\"; metadata:ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1100; classtype:web-application-attack; sid:1090; rev:18;"
+}

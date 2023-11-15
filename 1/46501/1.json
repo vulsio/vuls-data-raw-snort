@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46501",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Agent outbound request\"; flow:to_server,established; http_uri; content:\".php?&1001=\",fast_pattern,nocase; content:\"99=\"; content:\"f1=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/123275cc76ef377986715c98abb0fec50cbd53f01dc3976080009dc7cdafbe86/analysis/; classtype:trojan-activity; sid:46501; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2353",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP IdeaBox cord.php file include\"; flow:to_server,established; http_uri; content:\"/index.php\",nocase; pkt_data; content:\"ideaDir=\",fast_pattern,nocase; content:\"cord.php\",nocase; metadata:ruleset community; service:http; reference:bugtraq,7488; classtype:web-application-activity; sid:2353; rev:11;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1755",
+  "Rev": "24",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+  "Option": "msg:\"PROTOCOL-IMAP partial body buffer overflow attempt\"; flow:to_server,established; content:\"PARTIAL\",nocase; content:\"BODY[\",distance 0,nocase; isdataat:1024,relative; pcre:\"/\\sPARTIAL.*?BODY\\[[^\\]]{1024}/smi\"; metadata:ruleset community; service:imap; reference:bugtraq,4713; reference:cve,2002-0379; reference:nessus,10966; classtype:misc-attack; sid:1755; rev:24;"
+}

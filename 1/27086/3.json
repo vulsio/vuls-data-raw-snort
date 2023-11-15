@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27086",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"EXPLOIT-KIT Unknown Malvertising exploit kit stage-1 redirect\"; flow:to_client,established; content:\"<html><body><script>|0A|var \",fast_pattern; content:\"document.createElement(\",within 80; content:\".setAttribute(|22|archive|22|, \",within 65; content:\".setAttribute(|22|codebase|22|, \",within 65; content:\".setAttribute(|22|id|22|, \",within 65; content:\".setAttribute(|22|code|22|, \",within 65; content:\"|22|)|3B 0A|document.body.appendChild(\",within 65; content:\"</script>|0A|</body>|0A|</html>|0A 0A|\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:27086; rev:3;"
+}

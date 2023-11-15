@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26562",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Nuclear exploit kit Spoofed Host Header .com- requests\"; flow:to_server,established; http_header; content:\".com-\"; pcre:\"/\\r\\nHost\\x3a\\x20[a-z0-9\\x2d\\x2e]+\\.com\\x2d[a-z0-9\\x2d\\x2e]+(\\x3a\\d{1,5})?\\r\\n/i\"; content:\"|0D 0A|Accept|3A 20|text/html, image/gif, image/jpeg, *|3B| q=.2, */*|3B| q=.2|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26562; rev:3;"
+}

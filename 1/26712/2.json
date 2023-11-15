@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26712",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Kazy Trojan check-in\"; flow:to_server,established; http_header; content:\"User-Agent: Opera/11 |28|Windows NT 5.1|3B 20 3B| x86|29|\",fast_pattern,nocase; http_uri; content:\"/count.php?page=\",depth 16; metadata:impact_flag red,ruleset community; service:http; reference:url,camas.comodo.com/cgi-bin/submit?file=6d823488b26533f5151c3bab93c2a8ba832c9320e612d58d1134740abe3ca157; classtype:trojan-activity; sid:26712; rev:2;"
+}

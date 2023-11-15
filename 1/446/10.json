@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "446",
+  "Rev": "10",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP SKIP undefined code\"; icode:>0; itype:39; metadata:ruleset community; classtype:misc-activity; sid:446; rev:10;"
+}

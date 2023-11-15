@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40550",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Dexter Banker variant second stage download attempt\"; flow:to_server,established; http_uri; content:\"/images/\",fast_pattern,nocase; content:\".rar\"; http_header; content:\"User-Agent|3A 20|Mozilla/4.0",
+  "Option": "compatible|3B| Synapse)|0D 0A|\"; content:!\"Accept\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/25657a5b4e65add11d42c59aa854834977ddb3fe969f10efa2fa637b0329b3bb/analysis/1477407128/; classtype:trojan-activity; sid:40550; rev:2;"
+}

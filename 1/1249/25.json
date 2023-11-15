@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1249",
+  "Rev": "25",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage rad fp4areg.dll access\"; flow:to_server,established; http_uri; content:\"/fp4areg.dll\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2906; reference:cve,2001-0341; reference:nessus,10699; classtype:web-application-activity; sid:1249; rev:25;"
+}

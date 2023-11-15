@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34959",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.SpyBanker variant outbound connection\"; flow:to_server,established; http_client_body; content:\"texto=%0D%0A\",depth 12; http_uri; content:\"/consulta\"; http_header; content:\"User-Agent: Mozilla/3.0",
+  "Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/33b598e185ba483c5c1571651a03b90359fb1f56b55e902c7038baf315c5dad9/analysis/; classtype:trojan-activity; sid:34959; rev:2;"
+}

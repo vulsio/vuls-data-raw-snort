@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "44643",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8291",
+  "Option": "msg:\"SERVER-OTHER Mikrotik RouterOS denial of service attempt\"; flow:to_server,established; content:\"|12 02|\",depth 2; content:\"|FF ED 00 00 00 00|\",distance 0; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2012-6050; classtype:denial-of-service; sid:44643; rev:3;"
+}

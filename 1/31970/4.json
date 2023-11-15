@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31970",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Astrum exploit kit redirection attempt\"; flow:to_server,established; http_uri; bufferlen:>60; http_method; content:\"POST\"; http_uri; pcre:\"/\\x2f[\\w\\x2d]*\\x2e+$/m\"; http_header; content:\"Referer|3A 20|\"; content:\"x-req|3A 20|\",fast_pattern; content:\"Connection|3A 20|Keep-Alive|0D 0A|\"; content:\"Pragma|3A 20|no-cache|0D 0A|\"; flowbits:set,file.exploit_kit.jar&file.exploit_kit.pdf&file.exploit_kit.flash&file.exploit_kit.silverlight; metadata:ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2014/09/astrum-ek.html; classtype:trojan-activity; sid:31970; rev:4;"
+}

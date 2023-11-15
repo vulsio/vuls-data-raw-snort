@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1637",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP yabb access\"; flow:to_server,established; http_uri; content:\"/YaBB\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1668; reference:cve,2000-0853; reference:nessus,10512; classtype:attempted-recon; sid:1637; rev:21;"
+}

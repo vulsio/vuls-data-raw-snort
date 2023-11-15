@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56602",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Backdoor.CSBundle_Original Server 3 inbound beacon attempt\"; flow:to_client,established; file_data; content:\"{|22|alias|22|:|22|apx|22|,|22|prefix|22|:|22||22|,|22|suffix|22|:null,|22|suggestions|22|:[],|22|responseId|22|:|22|15QE9JX9CKE2P|22|,|22|addon|22|: |22|\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56602; rev:1;"
+}

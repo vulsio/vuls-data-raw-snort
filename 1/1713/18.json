@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1713",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cgforum.cgi access\"; flow:to_server,established; http_uri; content:\"/cgforum.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1951; reference:cve,2000-1132; classtype:web-application-activity; sid:1713; rev:18;"
+}

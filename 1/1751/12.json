@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1751",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 32772:34000",
+  "Option": "msg:\"SERVER-OTHER cachefsd buffer overflow attempt\"; flow:to_server,established; isdataat:720; content:\"|00 01 87 86 00 00 00 01 00 00 00 05|\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,4631; reference:cve,2002-0084; reference:nessus,10951; classtype:misc-attack; sid:1751; rev:12;"
+}

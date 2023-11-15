@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "30915",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.SpySmall variant outbound connection\"; flow:to_server,established; http_client_body; content:\"|3E 00|e|00|c|00|h|00|o|00 20 00|c|00|m|00|d|00 5F 00|b|00|e|00|g|00|i|00|n|00|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/df51eccf430ac391d09817d003977b4ea6af36117ce3aaee2fa0ebf04505c0d2/analysis/; classtype:trojan-activity; sid:30915; rev:3;"
+}

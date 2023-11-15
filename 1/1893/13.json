@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1893",
+  "Rev": "13",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161",
+  "Option": "msg:\"PROTOCOL-SNMP missing community string attempt\"; content:\"0\",depth 1; content:\"|02|\",within 6; content:\"|04 00|\",within 8; pcre:\"/^\\x30(\\x84....|\\x82..|[^\\x80-\\xFF])\\x02(\\x84\\x00\\x00\\x00\\x01.|\\x82\\x00\\x01.|\\x01.)\\x04\\x00/\"; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,2112; reference:cve,1999-0517; classtype:misc-attack; sid:1893; rev:13;"
+}

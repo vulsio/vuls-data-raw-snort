@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28106",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Banload information upload\"; flow:to_server,established; http_uri; content:\"/v22/mutabixa/1nf3ct/\"; content:\"chave=\",distance 0; content:\"&url=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.nyxbone.com/malware/banload.html; classtype:trojan-activity; sid:28106; rev:3;"
+}

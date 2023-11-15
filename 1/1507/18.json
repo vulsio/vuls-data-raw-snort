@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1507",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP alibaba.pl arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/alibaba.pl|7C|\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,770; reference:cve,1999-0885; reference:nessus,10013; classtype:web-application-attack; sid:1507; rev:18;"
+}

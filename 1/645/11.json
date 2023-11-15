@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "645",
+  "Rev": "11",
+  "Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SHELLCODE sparc NOOP\"; content:\"|80 1C|@|11 80 1C|@|11 80 1C|@|11 80 1C|@|11|\",fast_pattern,nocase; metadata:ruleset community; classtype:shellcode-detect; sid:645; rev:11;"
+}

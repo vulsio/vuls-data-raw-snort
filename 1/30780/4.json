@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "30780",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET [21,25,443,465,636,992,993,995,2484] -> $EXTERNAL_NET any",
+  "Option": "msg:\"SERVER-OTHER OpenSSL TLSv1 large heartbeat response - possible ssl heartbleed attempt\"; flow:to_client,established; content:\"|17 03 01|\"; byte_jump:2,0,relative; content:\"|18 03 01|\",within 3,fast_pattern; byte_test:2,>,128,0,relative; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ssl; reference:cve,2014-0160; classtype:attempted-recon; sid:30780; rev:4;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27919",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus encrypted POST Data exfiltration\"; flow:to_server,established; http_header; content:\"Accept-Encoding|3A| identity, *|3B|q=0|0D 0A|\",fast_pattern,nocase; content:\"|3B| MSIE \"; http_client_body; pcre:\"/[^ -~\\r\\n]{4}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1020; reference:url,www.virustotal.com/en/file/8825abfca1a6d843ce5670858886cb63bb1317ddbb92f91ffd46cfdcaba9ac00/analysis/; classtype:trojan-activity; sid:27919; rev:5;"
+}

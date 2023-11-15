@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1918",
+  "Rev": "10",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP SolarWinds IP scan attempt\"; icode:0; itype:8; content:\"SolarWinds.Net\",fast_pattern,nocase; metadata:ruleset community; classtype:network-scan; sid:1918; rev:10;"
+}

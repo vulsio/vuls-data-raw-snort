@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2086",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP streaming server parse_xml.cgi access\"; flow:to_server,established; content:\"/parse_xml.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6954; reference:bugtraq,6955; reference:bugtraq,6956; reference:bugtraq,6958; reference:cve,2003-0050; reference:cve,2003-0051; reference:cve,2003-0052; reference:cve,2003-0053; reference:cve,2003-0423; classtype:web-application-activity; sid:2086; rev:14;"
+}

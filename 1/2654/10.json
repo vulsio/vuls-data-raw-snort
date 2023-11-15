@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2654",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP PHPNuke Forum viewtopic SQL insertion attempt\"; flow:to_server,established; http_uri; content:\"/modules.php\",nocase; pkt_data; content:\"name=Forums\"; content:\"file=viewtopic\",fast_pattern,nocase; pcre:\"/forum=.*'/\"; metadata:ruleset community; service:http; reference:bugtraq,7193; classtype:web-application-attack; sid:2654; rev:10;"
+}

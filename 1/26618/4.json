@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26618",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET $HTTP_PORTS -> $EXTERNAL_NET any",
+  "Option": "msg:\"DELETED SERVER-WEBAPP Potential hostile executable served from local compromised or malicious WordPress site\"; flow:to_client,established; http_uri; content:\"/wp-content/\"; pkt_data; content:\".exe|20|HTTP/1.\",fast_pattern,nocase; http_uri; pcre:\"/\\/\\d+\\.exe$/\"; metadata:ruleset community; reference:url,blog.avast.com/2013/05/03/regents-of-louisiana-spreading-sirefef-malware; classtype:trojan-activity; sid:26618; rev:4;"
+}

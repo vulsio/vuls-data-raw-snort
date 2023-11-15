@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1904",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+  "Option": "msg:\"PROTOCOL-IMAP find overflow attempt\"; flow:established,to_server; content:\"FIND\",nocase; isdataat:100,relative; pcre:\"/^\\sFIND\\s[^\\n]{100}/smi\"; metadata:ruleset community; service:imap; reference:bugtraq,1110; reference:cve,2000-0284; reference:nessus,10374; classtype:misc-attack; sid:1904; rev:16;"
+}

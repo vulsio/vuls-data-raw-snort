@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "33816",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE Adware Goobzo/CrossRider variant outbound connection\"; flow:to_server,established; http_uri; content:\"/ping.ashx?action=\",fast_pattern,nocase; content:\"&usid=\"; content:\"&aff=\",distance 0; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/bace69ffe133e7693b3b77994a3c81e990288ca4b642cffe12938d705c7019df/analysis/; classtype:misc-activity; sid:33816; rev:2;"
+}

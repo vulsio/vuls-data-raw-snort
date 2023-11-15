@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3086",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP 3Com 3CRADSL72 ADSL 11g Wireless Router app_sta.stm access attempt\"; flow:to_server,established; http_uri; content:\"/app_sta.stm\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,11408; reference:cve,2004-1596; classtype:web-application-activity; sid:3086; rev:10;"
+}

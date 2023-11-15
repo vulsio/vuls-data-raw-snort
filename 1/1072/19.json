@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1072",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Lotus Domino directory traversal\"; flow:to_server,established; http_uri; content:\".nsf/\"; content:\"../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2173; reference:cve,2001-0009; reference:nessus,12248; classtype:web-application-attack; sid:1072; rev:19;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2413",
+  "Rev": "16",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 500",
+  "Option": "msg:\"SERVER-OTHER ISAKMP delete hash with empty hash attempt\"; flow:to_server; content:\"|08|\",depth 1,offset 16; content:\"|0C|\",depth 1,offset 28; content:\"|00 04|\",depth 2,offset 30; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,9416; reference:bugtraq,9417; reference:cve,2004-0164; classtype:misc-attack; sid:2413; rev:16;"
+}

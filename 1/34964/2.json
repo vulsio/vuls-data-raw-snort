@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34964",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE Win.Adware.Sendori user-agent detection\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|Sendori-Client-Win32\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/26ee215c531b6c50d28ef9b9a48db05b08139e460b997167de1813484beb7a9e/analysis/; classtype:misc-activity; sid:34964; rev:2;"
+}

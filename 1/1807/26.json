@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1807",
+  "Rev": "26",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"POLICY-OTHER Chunked-Encoding transfer with no data attempt\"; flow:to_server,established; content:\"Transfer-Encoding: chunked|0D 0A 0D 0A 0D 0A|\",nocase; isdataat:!0,relative; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,4474; reference:bugtraq,4485; reference:bugtraq,5033; reference:cve,2002-0071; reference:cve,2002-0079; reference:cve,2002-0386; reference:cve,2002-0392; reference:nessus,10932; classtype:policy-violation; sid:1807; rev:26;"
+}

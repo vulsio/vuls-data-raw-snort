@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "48035",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.AcridRain outbound connection\"; flow:to_server,established; http_client_body; content:\"browser/Vivaldi.txtPK\",fast_pattern,nocase; http_uri; content:\"/Upload/\"; http_raw_uri; bufferlen:8; http_header; content:!\"User-Agent|3A 20|\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/3d28392d2dc1292a95b6d8f394c982844a9da0cdd84101039cf6ca3cf9874c1c/analysis/; classtype:trojan-activity; sid:48035; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "719",
+  "Rev": "15",
+  "Header": "alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any",
+  "Option": "msg:\"PROTOCOL-TELNET root login\"; flow:to_client,established; content:\"login|3A| root\",fast_pattern,nocase; metadata:ruleset community; service:telnet; classtype:suspicious-login; sid:719; rev:15;"
+}

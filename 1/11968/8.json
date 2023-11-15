@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "11968",
+  "Rev": "8",
+  "Header": "alert udp $EXTERNAL_NET any -> $SIP_SERVERS $SIP_PORTS",
+  "Option": "msg:\"PROTOCOL-VOIP inbound INVITE message\"; flow:to_server; content:\"INVITE\",fast_pattern,nocase; sip_method:invite; metadata:policy max-detect-ips drop,ruleset community; service:sip; reference:url,www.ietf.org/rfc/rfc3261.txt; classtype:protocol-command-decode; sid:11968; rev:8;"
+}

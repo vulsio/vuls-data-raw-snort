@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1019",
+  "Rev": "30",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS Malformed Hit-Highlighting Argument File Access Attempt\"; flow:to_server,established; http_uri; content:\"CiWebHitsFile=\",nocase; pkt_data; pcre:\"/CiWebHitsFile=\\/?([^\\r\\n\\x3b\\&]*\\.\\.\\/)?/i\"; http_uri; content:\"CiRestriction=none\",fast_pattern,nocase; content:\"ciHiliteType=Full\",nocase; metadata:ruleset community; service:http; reference:bugtraq,950; reference:cve,2000-0097; reference:url,technet.microsoft.com/en-us/security/bulletin/ms00-006; reference:url,www.securityfocus.com/archive/1/43762; classtype:web-application-attack; sid:1019; rev:30;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1860",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8080",
+  "Option": "msg:\"SERVER-WEBAPP Linksys router default password login attempt\"; flow:to_server,established; http_header; content:\"Authorization|3A|\",nocase; pcre:\"/^Authorization\\x3a(\\s*|\\s*\\r?\\n\\s+)Basic\\s+OmFkbWlu/smi\"; metadata:ruleset community; service:http; reference:nessus,10999; reference:url,attack.mitre.org/techniques/T1078; classtype:default-login-attempt; sid:1860; rev:15;"
+}

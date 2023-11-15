@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "847",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP campas access\"; flow:to_server,established; http_uri; content:\"/campas\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1975; reference:cve,1999-0146; reference:nessus,10035; classtype:attempted-recon; sid:847; rev:22;"
+}

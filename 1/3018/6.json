@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3018",
+  "Rev": "6",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
+  "Option": "msg:\"NETBIOS SMB NT Trans NT CREATE oversized Security Descriptor attempt\"; flow:established,to_server; content:\"|00|\",depth 1; content:\"|FF|SMB|A0|\",within 5,distance 3; byte_test:1,!&,128,6,relative; pcre:\"/^.{27}/R\"; content:\"|01 00|\",within 2,distance 37; byte_jump:4,-15,little,relative,from_beginning; pcre:\"/^.{4}/R\"; byte_test:4,>,1024,36,relative,little; metadata:ruleset community; reference:cve,2004-1154; classtype:protocol-command-decode; sid:3018; rev:6;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "864",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP day5datanotifier.cgi access\"; flow:to_server,established; http_uri; content:\"/day5datanotifier.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1232; classtype:attempted-recon; sid:864; rev:19;"
+}

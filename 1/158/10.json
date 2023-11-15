@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "158",
+  "Rev": "10",
+  "Header": "alert tcp $HOME_NET 666 -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR BackConstruction 2.1 Server FTP Open Reply\"; flow:to_client,established; content:\"FTP Port open\"; metadata:ruleset community; classtype:misc-activity; sid:158; rev:10;"
+}

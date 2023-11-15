@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31642",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Tinybanker variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:4; http_uri; content:\"/de/\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/5.0",
+  "Option": "compatible|3B| MSIE 9.0|3B| Windows NT 6.1|3B| Trident/5.0)|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|Host: \"; content:\"Content-Length: 13|0D 0A|Connection: Close|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.avast.com/2014/07/17/tinybanker-trojan-targets-banking-customers/; reference:url,www.virustotal.com/en/file/b88b978d00b9b3a011263f398fa6a21098aba714db14f7e71062ea4a6b2e974e/analysis/; classtype:trojan-activity; sid:31642; rev:3;"
+}

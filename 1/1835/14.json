@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1835",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Macromedia SiteSpring cross site scripting attempt\"; flow:to_server,established; http_uri; content:\"/error/500error.jsp\",nocase; content:\"et=\"; content:\"<script\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,5249; reference:cve,2002-1027; classtype:web-application-attack; sid:1835; rev:14;"
+}

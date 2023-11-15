@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "50260",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Downloader.TeamBot additional payload download attempt\"; flow:to_server,established; http_uri; content:\"/7773/plug/\",fast_pattern,nocase; content:\".ahk\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/efe51c2453821310c7a34dca3054021d0f6d453b7133c381d75e3140901efd12; classtype:trojan-activity; sid:50260; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45398",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE Osx.Adware.SurfBuyer adware outbound connection detected\"; flow:to_server,established; http_raw_uri; bufferlen:>1000; http_uri; content:\"/click?h=\",fast_pattern,nocase; content:\"subid=\"; content:\"data_fb=\"; content:\"data_rtt=\"; content:\"data_proto=\"; content:\"data_ic=\"; content:\"data_ss=\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/en/file/baed00c6e6b157f3a53c76a200de84927f5c9d448cf76438c55d62c18033ba1b/analysis/; classtype:trojan-activity; sid:45398; rev:2;"
+}

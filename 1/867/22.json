@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "867",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP visadmin.exe access\"; flow:to_server,established; http_uri; content:\"/visadmin.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1808; reference:cve,1999-0970; reference:nessus,10295; classtype:attempted-recon; sid:867; rev:22;"
+}

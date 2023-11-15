@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38993",
+  "Rev": "9",
+  "Header": "alert tcp any any -> any $HTTP_PORTS",
+  "Option": "msg:\"SQL use of sleep function in HTTP header - likely SQL injection attempt\"; flow:established,to_server; http_header; content:\"User-Agent|3A| \"; content:\"sleep(\",fast_pattern,nocase; pcre:\"/User-Agent\\x3A\\x20[^\\r\\n]*sleep\\x28/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,blog.cloudflare.com/the-sleepy-user-agent/; classtype:web-application-attack; sid:38993; rev:9;"
+}

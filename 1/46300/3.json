@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46300",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP QNAP VioStor NVR and QNAP NAS command injection attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/pingping.cgi\",fast_pattern,nocase; http_client_body; content:\"ping_ip\",nocase; content:\"Content-Disposition\",nocase; pcre:\"/name\\s*=\\s*[\\x22\\x27]?ping_ip((?!^--).)*?[\\r\\n]{2,}((?!^--).)*?([\\x60\\x3b\\x7c\\x26]|[\\x3c\\x3e\\x24]\\x28)/sim\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2013-0143; classtype:web-application-attack; sid:46300; rev:3;"
+}

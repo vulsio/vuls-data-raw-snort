@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2356",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP WebChat db_mysql.php file include\"; flow:to_server,established; http_uri; content:\"/defines.php\",nocase; pkt_data; content:\"WEBCHATPATH=\",nocase; content:\"db_mysql.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7000; reference:cve,2007-0485; classtype:web-application-attack; sid:2356; rev:12;"
+}

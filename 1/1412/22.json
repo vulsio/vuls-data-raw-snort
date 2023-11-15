@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1412",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 161",
+  "Option": "msg:\"PROTOCOL-SNMP public access tcp\"; flow:to_server,established; content:\"public\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:snmp; reference:bugtraq,2112; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,7212; reference:cve,1999-0517; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1412; rev:22;"
+}

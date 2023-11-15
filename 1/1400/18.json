@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1400",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS /scripts/samples/ access\"; flow:to_server,established; http_uri; content:\"/scripts/samples/\",nocase; metadata:ruleset community; service:http; reference:nessus,10370; classtype:web-application-attack; sid:1400; rev:18;"
+}

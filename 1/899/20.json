@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "899",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Amaya templates sendtemp.pl directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/sendtemp.pl\",fast_pattern,nocase; content:\"templ=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2504; reference:cve,2001-0272; reference:nessus,10614; classtype:web-application-attack; sid:899; rev:20;"
+}

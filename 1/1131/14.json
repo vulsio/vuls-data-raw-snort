@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1131",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP .wwwacl access\"; flow:to_server,established; http_uri; content:\".www_acl\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:1131; rev:14;"
+}

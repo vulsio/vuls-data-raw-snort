@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1998",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP calendar.php access\"; flow:to_server,established; http_uri; content:\"/calendar.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,5820; reference:bugtraq,9353; reference:cve,2002-1660; reference:cve,2004-1785; reference:nessus,11179; classtype:web-application-activity; sid:1998; rev:14;"
+}

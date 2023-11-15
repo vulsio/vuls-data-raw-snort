@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1697",
+  "Rev": "7",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE alter database attempt\"; flow:to_server,established; content:\"alter database\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1697; rev:7;"
+}

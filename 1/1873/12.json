@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1873",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP globals.jsa access\"; flow:to_server,established; http_uri; content:\"/globals.jsa\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,4034; reference:cve,2002-0562; reference:nessus,10850; classtype:web-application-activity; sid:1873; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "44591",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.PandaZeus malicious certificate exchange\"; flow:to_client,established; content:\"|16 03|\"; content:\"|30 82|\",within 2,distance 13; content:\"Let's Encrypt\"; content:\"gloverkentok.us\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:ssl; reference:url,virustotal.com/#/file/220a2b2d7353a697496abcabf1b4c1990b8c9b7143e6dada17782ddd9ee2c232; classtype:trojan-activity; sid:44591; rev:2;"
+}

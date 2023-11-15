@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1810",
+  "Rev": "19",
+  "Header": "alert tcp $HOME_NET 22 -> $EXTERNAL_NET any",
+  "Option": "msg:\"SERVER-OTHER successful gobbles ssh exploit GOBBLE\"; flow:to_client,established; content:\"*GOBBLE*\"; metadata:ruleset community; reference:bugtraq,5093; reference:cve,2002-0390; reference:cve,2002-0640; classtype:successful-admin; sid:1810; rev:19;"
+}

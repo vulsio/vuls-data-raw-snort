@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38580",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+  "Option": "msg:\"FILE-OFFICE RFT document malformed header\"; flow:to_client,established; flowbits:isset,file.rtf; file_data; content:\"|7B 5C|rtvpn\",depth 7; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:cve,2015-1641; reference:url,technet.microsoft.com/en-us/security/bulletin/ms15-033; classtype:attempted-user; sid:38580; rev:2;"
+}

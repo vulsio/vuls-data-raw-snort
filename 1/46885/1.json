@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46885",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 25",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Joanap variant outbound connection\"; flow:to_server,established; content:\"TO: Joana <xiake722@gmail.com>\",fast_pattern,nocase; content:\"SUBJECT: |5B|T|5D|\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:url,www.virustotal.com/#/file/077d9e0e12357d27f7f0c336239e961a7049971446f7a3f10268d9439ef67885/detection; reference:url,www.virustotal.com/#/file/4c5b8c3e0369eb738686c8a111dfe460e26eb3700837c941ea2e9afd3255981e/detection; classtype:trojan-activity; sid:46885; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "22043",
+  "Rev": "8",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"FILE-IDENTIFY XM file download request\"; flow:to_server,established; http_uri; content:\".xm\",fast_pattern,nocase; pcre:\"/\\x2exm([\\?\\x5c\\x2f]|$)/smi\"; flowbits:set,file.xm; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; classtype:misc-activity; sid:22043; rev:8;"
+}

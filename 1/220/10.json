@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "220",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+  "Option": "msg:\"MALWARE-BACKDOOR HideSource backdoor attempt\"; flow:to_server,established; content:\"wank\"; metadata:ruleset community; classtype:misc-activity; sid:220; rev:10;"
+}

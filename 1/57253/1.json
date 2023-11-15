@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "57253",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-MAIL Microsoft Exchange Server arbitrary file write attempt\"; flow:to_server,established; http_uri; content:\"/DDIService.svc/SetObject\",fast_pattern,nocase; content:\"VirtualDirectory\",nocase; http_client_body; content:\"FilePathName\",nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2021-27065; reference:url,portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2021-27065; classtype:attempted-admin; sid:57253; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2260",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL VRFY overflow attempt\"; flow:to_server,established; content:\"VRFY\",nocase; isdataat:255,relative; pcre:\"/^VRFY[^\\n]{255}/smi\"; metadata:ruleset community; service:smtp; reference:bugtraq,6991; reference:bugtraq,7230; reference:cve,2002-1337; reference:cve,2003-0161; classtype:attempted-admin; sid:2260; rev:17;"
+}

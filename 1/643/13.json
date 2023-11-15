@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "643",
+  "Rev": "13",
+  "Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SHELLCODE HP-UX NOOP\"; content:\"|0B|9|02 80 0B|9|02 80 0B|9|02 80 0B|9|02 80|\",fast_pattern,nocase; metadata:ruleset community; classtype:shellcode-detect; sid:643; rev:13;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1229",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP CWD ...\"; flow:to_server,established; content:\"CWD\",nocase; content:\"...\",distance 0; pcre:\"/^CWD\\s[^\\n]*?\\.\\.\\./smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,9237; classtype:bad-unknown; sid:1229; rev:13;"
+}

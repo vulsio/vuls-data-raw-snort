@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "33851",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Poseidon outbound connection\"; flow:established,to_server; http_header; content:\"Mozilla/4.0",
+  "Option": "compatible|3B| MSIE 8.0|3B| Windows NT 6.1|3B| Trident/4.0|3B| SLCC2|3B| .NET CLR 2.0.50727|3B| .NET CLR 3.5.30729|3B| .NET CLR 3.0.30729|3B| Media Center PC 6.0)\",fast_pattern,nocase; http_client_body; content:\"uid=\",depth 4; content:\"&uinfo=\",within 26; content:\"&win=\",distance 0; content:\"&bits=\",within 6,distance 3; content:\"&build=\",within 20,distance 8; metadata:impact_flag red,ruleset community; service:http; reference:url,blogs.cisco.com/security/talos/poseidon; classtype:trojan-activity; sid:33851; rev:3;"
+}

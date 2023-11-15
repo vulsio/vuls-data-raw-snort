@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1147",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cat_ access\"; flow:to_server,established; http_uri; content:\"cat \",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,374; reference:cve,1999-0039; classtype:attempted-recon; sid:1147; rev:21;"
+}

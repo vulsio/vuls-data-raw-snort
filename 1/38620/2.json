@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38620",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dridex certificate exchange\"; flow:to_client,established; content:\"|16 03|\"; content:\"|0B|\",distance 3; content:\"|55 04 07 0C 0B|Ouagadougou\"; content:\"|55 04 0A 0C 16|Tiongon Wledb A.M.B.A.\",distance 6; content:\"|55 04 03 0C 10|ina.themanyag.zm\",distance 6; metadata:impact_flag red,ruleset community; service:ssl; reference:url,www.virustotal.com/en/file/fc25709c4e05dbfbcc6ae0cf8a7c06e80156ae05179203021838259aeda9801a/analysis/1461600547/; classtype:trojan-activity; sid:38620; rev:2;"
+}

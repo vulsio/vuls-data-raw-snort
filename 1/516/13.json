@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "516",
+  "Rev": "13",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161",
+  "Option": "msg:\"PROTOCOL-SNMP NT UserList\"; flow:to_server; content:\"+|06 10|@|14 D1 02 19|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:nessus,10546; classtype:attempted-recon; sid:516; rev:13;"
+}

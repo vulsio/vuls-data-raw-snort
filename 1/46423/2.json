@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46423",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kraens initial outbound request\"; flow:to_server,established; http_uri; content:\"/up_d.php\",fast_pattern,nocase; http_client_body; content:\"{|22|i|22|:\",depth 5; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/426d7bb2f4b362c6ff6b982565aa2bdb47e70320da0f60ba6c9bf04049e08829; classtype:trojan-activity; sid:46423; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2229",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP viewtopic.php access\"; flow:to_server,established; http_uri; content:\"/viewtopic.php\",fast_pattern,nocase; content:\"days=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,7979; reference:cve,2003-0486; reference:nessus,11767; classtype:web-application-attack; sid:2229; rev:15;"
+}

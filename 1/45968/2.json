@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45968",
+  "Rev": "2",
+  "Header": "alert udp $HOME_NET any -> $EXTERNAL_NET 53",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.UDPOS outbound data exfiltration\"; flow:to_server; isdataat:150; content:\"|0F|\"; content:\"|04|note\",within 5,distance 15,fast_pattern; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:dns; reference:url,attack.mitre.org/techniques/T1020; reference:url,blogs.forcepoint.com/security-labs/udpos-exfiltrating-credit-card-data-dns; reference:url,www.virustotal.com/#/file/62688903adfc719c5514f25a17563547aac4801959852f5d49faa93967ce86cf/detection; classtype:trojan-activity; sid:45968; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "612",
+  "Rev": "12",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-RPC rusers query UDP\"; content:\"|00 01 86 A2|\",depth 4,offset 12; content:\"|00 00 00 02|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; reference:cve,1999-0626; classtype:attempted-recon; sid:612; rev:12;"
+}

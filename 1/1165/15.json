@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1165",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Novell Groupwise gwweb.exe access\"; flow:to_server,established; content:\"/GWWEB.EXE\",nocase; metadata:ruleset community; service:http; reference:bugtraq,879; reference:cve,1999-1005; reference:cve,1999-1006; reference:nessus,10877; classtype:attempted-recon; sid:1165; rev:15;"
+}

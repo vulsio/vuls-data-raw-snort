@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34868",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Rovnix variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/vbulletin/post.php?qu=\",fast_pattern,nocase; http_header; content:!\"User-Agent:\"; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a184775757cf30f9593977ee0344cd6c54deb4b14a012a7af8e3a2cdbb85a749/analysis/; classtype:trojan-activity; sid:34868; rev:2;"
+}

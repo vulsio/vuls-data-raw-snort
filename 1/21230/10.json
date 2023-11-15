@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21230",
+  "Rev": "10",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Betad variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/login.php\",nocase; http_client_body; content:\"|C9 97 A2 F3 7E 37 CB 7E 27|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/46a87d0818ffd828df5c8fca63b1628f068e50cf3d20ec0e4e009e1dd547b9e9/analysis/; classtype:trojan-activity; sid:21230; rev:10;"
+}

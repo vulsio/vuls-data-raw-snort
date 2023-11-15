@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1690",
+  "Rev": "7",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE grant attempt\"; flow:to_server,established; content:\"grant \",nocase; content:\" to \",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1690; rev:7;"
+}

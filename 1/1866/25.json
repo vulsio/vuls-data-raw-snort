@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1866",
+  "Rev": "25",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
+  "Option": "msg:\"PROTOCOL-POP USER overflow attempt\"; flow:to_server,established; content:\"USER\"; isdataat:50,relative; pcre:\"/^USER\\s[^\\n]{50}/smi\"; metadata:policy max-detect-ips drop,ruleset community; service:pop3; reference:bugtraq,11256; reference:bugtraq,19651; reference:bugtraq,789; reference:cve,1999-0494; reference:cve,2002-1781; reference:cve,2006-2502; reference:cve,2006-4364; reference:nessus,10311; reference:url,www.delegate.org/mail-lists/delegate-en/1475; classtype:attempted-admin; sid:1866; rev:25;"
+}

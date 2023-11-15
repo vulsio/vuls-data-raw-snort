@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1612",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP ftp.pl attempt\"; flow:to_server,established; http_uri; content:\"/ftp.pl?\",nocase; content:\"dir=../..\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,1471; reference:cve,2000-0674; reference:nessus,10467; classtype:web-application-attack; sid:1612; rev:16;"
+}

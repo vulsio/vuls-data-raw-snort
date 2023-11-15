@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2359",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Invision Board ipchat.php file include\"; flow:to_server,established; http_uri; content:\"/ipchat.php\",nocase; pkt_data; content:\"root_path=\"; content:\"conf_global.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6976; reference:cve,2003-1385; classtype:web-application-attack; sid:2359; rev:12;"
+}

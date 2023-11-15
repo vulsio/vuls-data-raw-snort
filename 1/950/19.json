@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "950",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage cfgwiz.exe access\"; flow:to_server,established; http_uri; content:\"/cfgwiz.exe\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2002-1717; classtype:web-application-activity; sid:950; rev:19;"
+}

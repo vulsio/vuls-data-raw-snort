@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "24598",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"POLICY-SPAM 1.usa.gov URL in email, possible spam redirect\"; flow:to_server, established; file_data; content:\"http|3A 2F 2F|1.usa.gov\"; pcre:\"/http\\x3A\\x2f\\x2f1\\.usa\\.gov\\x2f[a-f0-9]{6,8}/smi\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:url,www.symantec.com/connect/blogs/spam-gov-urls; classtype:bad-unknown; sid:24598; rev:4;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "35734",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Netgear WNDR4700 and R6200 admin interface authentication bypass attempt\"; flow:to_server,established; http_uri; content:\"/BRS_03B_haveBackupFile_fileRestore.html\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,59406; reference:cve,2013-3071; classtype:attempted-admin; sid:35734; rev:4;"
+}

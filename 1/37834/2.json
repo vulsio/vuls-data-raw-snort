@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "37834",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Locky variant outbound connection\"; flow:to_server,established; http_uri; content:\"/lockycrypt.rar\",fast_pattern,nocase; http_header; content:!\"User-Agent\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/ee6abe4a9530b78e997d9c28394356216778eaf2d46aa3503999e7d6bfbefe90/analysis/; classtype:trojan-activity; sid:37834; rev:2;"
+}

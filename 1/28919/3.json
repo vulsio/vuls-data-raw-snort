@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28919",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 80 ( msg:\"MALWARE-CNC Win.Trojan.Symmi variant network connectivity check\"; flow:to_server,established; http_header; content:\"Host: bitly.com|0D 0A|Accept: text/html, */*|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: Mozilla/3.0",
+  "Option": "compatible|3B| Indy Library)\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/084455c1de5d9440eb95edd2e6868aab1ce3dd674c2e3ba481254edc65b30b89/analysis/; classtype:trojan-activity; sid:28919; rev:3;"
+}

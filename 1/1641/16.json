@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1641",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 6789:6790",
+  "Option": "msg:\"SERVER-OTHER DB2 dos attempt\"; flow:to_server,established; isdataat:0; isdataat:!1; metadata:ruleset community; reference:bugtraq,3010; reference:cve,2001-1143; reference:nessus,10871; classtype:denial-of-service; sid:1641; rev:16;"
+}

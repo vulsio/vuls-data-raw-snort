@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2326",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS sgdynamo.exe access\"; flow:to_server,established; http_uri; content:\"/sgdynamo.exe\",nocase; metadata:ruleset community; service:http; reference:bugtraq,4720; reference:cve,2002-0375; reference:nessus,11955; classtype:web-application-activity; sid:2326; rev:15;"
+}

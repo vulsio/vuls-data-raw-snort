@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "410",
+  "Rev": "8",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP Fragment Reassembly Time Exceeded\"; icode:1; itype:11; metadata:ruleset community; classtype:misc-activity; sid:410; rev:8;"
+}

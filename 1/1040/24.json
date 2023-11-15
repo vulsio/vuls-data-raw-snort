@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1040",
+  "Rev": "24",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS srchadm access\"; flow:to_server,established; http_uri; content:\"/srchadm\",nocase; metadata:ruleset community; service:http; reference:nessus,11032; classtype:web-application-activity; sid:1040; rev:24;"
+}

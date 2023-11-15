@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2566",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP PHPBB viewforum.php access\"; flow:to_server,established; http_uri; content:\"/viewforum.php\",nocase; content:\"topic_id=\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9865; reference:bugtraq,9866; reference:cve,2004-1809; reference:nessus,12093; classtype:web-application-activity; sid:2566; rev:14;"
+}

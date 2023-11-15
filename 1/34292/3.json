@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34292",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kraken outbound connection\"; flow:to_server,established; http_uri; content:\"/idcontact.php?\"; content:\"&steam=\",within 35; content:\"&origin=\",within 10; content:\"&webnavig=\",within 12; metadata:impact_flag red,ruleset community; service:http; reference:url,itsjack.cc/blog/2015/02/krakenhttp-not-sinking-my-ship-part-1; reference:url,www.virustotal.com/en/file/27fa65a3166def75feb75f8feb25dd9784b8f2518c73defcc4ed3e9f46868e76/analysis/; classtype:trojan-activity; sid:34292; rev:3;"
+}

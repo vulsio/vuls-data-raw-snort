@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31644",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Andr.Trojan.Scarelocker outbound connection\"; flow:to_server,established; http_uri; content:\"/api.php\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|Apache-HttpClient|2F|UNAVAILABLE\"; http_client_body; content:\"method=\"; content:\"&app_key=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2014/08/scarepackageknstant.html; reference:url,www.virustotal.com/en/file/ebed6a20738f68787e19eaafc725bc8c76fba6b104e468ddcfb05a4d88a11811/analysis/; classtype:trojan-activity; sid:31644; rev:3;"
+}

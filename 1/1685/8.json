@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1685",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE all_tab_privs access\"; flow:to_server,established; content:\"all_tab_privs\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1685; rev:8;"
+}

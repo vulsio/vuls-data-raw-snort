@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "581",
+  "Rev": "18",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 111",
+  "Option": "msg:\"PROTOCOL-RPC portmap pcnfsd request UDP\"; flow:to_server; content:\"|00 01 86 A0|\",depth 4,offset 12; content:\"|00 00 00 03|\",within 4,distance 4; byte_jump:4,4,relative,align; byte_jump:4,4,relative,align; content:\"|00 02|I|F1|\",within 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; service:sunrpc; reference:bugtraq,205; reference:bugtraq,4816; reference:cve,1999-0078; reference:cve,1999-0353; reference:cve,2002-0910; classtype:rpc-portmap-decode; sid:581; rev:18;"
+}

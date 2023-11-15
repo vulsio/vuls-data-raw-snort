@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26398",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gamarue variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; pkt_data; content:\"panel1/gate.php\"; content:\" HTTP/1.1|0D 0A|Cache-Control: no-cache|0D 0A|Connection|3A|\",fast_pattern,nocase; http_client_body; content:\"+\",depth 15; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b34f23afc2f6ca093b2923f0aa12d942a5960cf48475272df5b60edf556e4299/analysis/; classtype:trojan-activity; sid:26398; rev:3;"
+}

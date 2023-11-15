@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46341",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+  "Option": "msg:\"SERVER-WEBAPP Akeeba Kickstart cross site request forgery attempt\"; flow:to_client,established; file_data; content:\"administrator/index.php\",fast_pattern,nocase; content:\"option=com_joomlaupdate\",nocase; content:\"task=update.install\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:cve,2014-7229; classtype:web-application-attack; sid:46341; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "926",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion set odbc ini attempt\"; flow:to_server,established; content:\"CFUSION_SETODBCINI|28 29|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,550; reference:cve,1999-0760; classtype:web-application-attack; sid:926; rev:16;"
+}

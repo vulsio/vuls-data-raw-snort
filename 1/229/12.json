@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "229",
+  "Rev": "12",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP Stacheldraht client check skillz\"; icmp_id:666; itype:0; content:\"skillz\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:229; rev:12;"
+}

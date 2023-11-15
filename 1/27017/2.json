@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27017",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dapato variant inbound response connection\"; flow:to_client,established; http_header; content:\"Content-Length: 150|0D 0A|\",fast_pattern,nocase; file_data; content:\"|0D 0A|\",depth 2,offset 4; content:\"|0D 0A|\",within 2,distance 4; content:\"|0D 0A|\",within 2,distance 4; pcre:\"/^([A-F0-9]{4})\\r\\n\\1\\r\\n\\1\\r\\n([A-F0-9]{26})\\r\\n[A-F0-9]{48}\\r\\n\\2\\r\\n\\2$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/111ffe389dc8fa802b8aff3b4e02a2f59d1b6492763f9dc5a20a84f4da46932a/analysis/; classtype:trojan-activity; sid:27017; rev:2;"
+}

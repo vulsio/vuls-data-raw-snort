@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2307",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP PayPal Storefront remote file include attempt\"; flow:to_server,established; http_uri; content:\"do=ext\"; content:\"page=\"; pcre:\"/page=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,8791; reference:nessus,11873; classtype:web-application-attack; sid:2307; rev:15;"
+}

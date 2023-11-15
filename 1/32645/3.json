@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32645",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string RUpdate\"; flow:to_server,established; content:\"User-Agent: RUpdate|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0d68f1d3855543a4732e551e9e4375a2cd85d9ab11a86334f67ad99c5f6990a0/analysis/; classtype:trojan-activity; sid:32645; rev:3;"
+}

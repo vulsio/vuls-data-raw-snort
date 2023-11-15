@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1256",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS CodeRed v2 root.exe access\"; flow:to_server,established; http_uri; content:\"/root.exe\",nocase; metadata:ruleset community; service:http; reference:url,www.cert.org/advisories/CA-2001-19.html; classtype:web-application-attack; sid:1256; rev:20;"
+}

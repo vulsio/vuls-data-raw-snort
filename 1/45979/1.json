@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45979",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC MultiOS.Trojan.OSCelestial variant outbound connection\"; flow:to_server,established; content:\"|72 00 17|com.net.LoginDataPacket\",fast_pattern,nocase; content:\"|74 00 13|Lcom/net/LoginData\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/en/file/9b4843ff0181af15a6c8478ca00aafd4296592a2985a480575810f4f64442742/analysis/; classtype:trojan-activity; sid:45979; rev:1;"
+}

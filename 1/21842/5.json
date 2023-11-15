@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21842",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP System variable in URI attempt - %PATHEXT%\"; flow:to_server,established; http_uri; content:\"%PATHEXT%\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:21842; rev:5;"
+}

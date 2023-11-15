@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1528",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP BBoard access\"; flow:to_server,established; http_uri; content:\"/servlet/sunexamples.BBoardServlet\"; metadata:ruleset community; service:http; reference:bugtraq,1459; reference:cve,2000-0629; reference:nessus,10507; classtype:web-application-activity; sid:1528; rev:15;"
+}

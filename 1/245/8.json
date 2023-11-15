@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "245",
+  "Rev": "8",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 10498",
+  "Option": "msg:\"MALWARE-OTHER mstream handler ping to agent\"; flow:to_server; content:\"ping\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:245; rev:8;"
+}

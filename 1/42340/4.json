@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "42340",
+  "Rev": "4",
+  "Header": "alert tcp any any -> $HOME_NET 445",
+  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB anonymous session IPC share access attempt\"; flow:to_server,established; flowbits:isset,smb.null_session; content:\"|FF|SMB|75 00 00 00 00|\",depth 9,offset 4; content:\"|00 5C 00|I|00|P|00|C|00|$|00 00 00|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:netbios-ssn; reference:url,attack.mitre.org/techniques/T1077; reference:url,msdn.microsoft.com/en-us/library/ee441910.aspx; reference:url,technet.microsoft.com/en-us/security/bulletin/MS17-010; classtype:attempted-recon; sid:42340; rev:4;"
+}

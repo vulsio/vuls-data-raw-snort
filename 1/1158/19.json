@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1158",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP windmail.exe access\"; flow:to_server,established; http_uri; content:\"/windmail.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1073; reference:cve,2000-0242; reference:nessus,10365; classtype:attempted-recon; sid:1158; rev:19;"
+}

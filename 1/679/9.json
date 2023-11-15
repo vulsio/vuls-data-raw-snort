@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "679",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 139",
+  "Option": "msg:\"SQL sp_adduser database user creation\"; flow:to_server,established; content:\"s|00|p|00|_|00|a|00|d|00|d|00|u|00|s|00|e|00|r|00|\",depth 32,offset 32,nocase; metadata:ruleset community; classtype:attempted-user; sid:679; rev:9;"
+}

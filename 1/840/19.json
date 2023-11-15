@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "840",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP perlshop.cgi access\"; flow:to_server,established; http_uri; content:\"/perlshop.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1374; classtype:attempted-recon; sid:840; rev:19;"
+}

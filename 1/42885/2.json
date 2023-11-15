@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "42885",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any <> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC WashingTon ssl certificate negotiation attempt\"; flow:to_server,established; content:\"WashingTon\",fast_pattern,nocase; content:\"WebMaster@Microsoft.com\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:42885; rev:2;"
+}

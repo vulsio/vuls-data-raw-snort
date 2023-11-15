@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38333",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Linux.Trojan.Bifrose outbound connection\"; flow:to_server; content:\"|9B 4F B0 75 E2 76 96 04 5A F1 F9 43 D4 A2 6B|\",depth 15,offset 4; content:\"|76 13 85 45 17 1B|\",within 6,distance 1; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0a0d7bed3c8aa0e0e87e484a37e62b0bd0e97981b0bea55f6f3607316831ba5d/analysis/; classtype:trojan-activity; sid:38333; rev:2;"
+}

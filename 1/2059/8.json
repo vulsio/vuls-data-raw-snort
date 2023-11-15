@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2059",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP MsmMask.exe access\"; flow:to_server,established; http_uri; content:\"/MsmMask.exe\"; metadata:ruleset community; service:http; reference:nessus,11163; classtype:web-application-activity; sid:2059; rev:8;"
+}

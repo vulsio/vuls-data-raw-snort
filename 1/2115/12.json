@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2115",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP album.pl access\"; flow:to_server,established; content:\"/album.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7444; reference:cve,2003-1456; reference:nessus,11581; classtype:web-application-activity; sid:2115; rev:12;"
+}

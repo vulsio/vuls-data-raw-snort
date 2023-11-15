@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26910",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC ZeroAccess Encrypted 128-byte POST No Accept Headers\"; flow:to_server,established; http_method; content:\"POST\"; http_header; content:\"Content-Length: 128|0D 0A|\",fast_pattern,nocase; pkt_data; content:\" HTTP/1.\"; content:\"|0D 0A|User-Agent: \",within 14,distance 1; http_header; content:!\"|0D 0A|Accept\"; http_client_body; pcre:\"/[^ -~\\x0d\\x0a]{4}/\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:26910; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2457",
+  "Rev": "7",
+  "Header": "alert tcp any any <> any 5101",
+  "Option": "msg:\"POLICY-SOCIAL Yahoo IM message\"; flow:established; content:\"YMSG\",depth 4,nocase; metadata:ruleset community; classtype:policy-violation; sid:2457; rev:7;"
+}

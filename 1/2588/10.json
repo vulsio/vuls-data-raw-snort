@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2588",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP TUTOS path disclosure attempt\"; flow:to_server,established; http_uri; content:\"/note_overview.php\"; pkt_data; content:\"id=\"; metadata:ruleset community; service:http; reference:bugtraq,10129; reference:url,www.securiteam.com/unixfocus/5FP0J15CKE.html; classtype:web-application-activity; sid:2588; rev:10;"
+}

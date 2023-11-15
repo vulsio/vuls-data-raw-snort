@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56606",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Rat.Tool.CSBundleUSATodayServer variant inbound command attempt\"; flow:to_client,established; http_header; content:\"X-Timer: S1593010188.776402,VS0,VE1\",fast_pattern,nocase; content:\"Content-Type: application/json|5C 3B| charset=utf-8\"; content:\"Strict-Transport-Security: max-age=10890000\"; content:\"Cache-Control: public, immutable, max-age=315360000\"; content:\"X-Cache: HIT, HIT\"; content:\"Vary: X-AbVariant, X-AltUrl, Accept-Encoding\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56606; rev:1;"
+}

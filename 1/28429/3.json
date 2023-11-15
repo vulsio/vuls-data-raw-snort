@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28429",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Glazunov exploit kit outbound jnlp download attempt\"; flow:to_server,established; http_raw_uri; bufferlen:15; http_uri; content:\".jnlp\",fast_pattern; http_header; content:\" Java/1.\"; http_uri; pcre:\"/\\/[a-z0-9]{9}\\.jnlp$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2013-2471; reference:url,nakedsecurity.sophos.com/2013/07/02/the-four-seasons-of-glazunov-digging-further-into-sibhost-and-flimkit/; classtype:trojan-activity; sid:28429; rev:3;"
+}

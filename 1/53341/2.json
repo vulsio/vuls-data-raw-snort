@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "53341",
+  "Rev": "2",
+  "Header": "alert tcp any any -> $HOME_NET 8009",
+  "Option": "msg:\"SERVER-APACHE Apache Tomcat AJP connector arbitrary file access attempt\"; flow:to_server,established; content:\"|12 34|\",depth 2; content:\"|02|\",within 1,distance 2; byte_test:1,!&,0xF9,0,relative; byte_extract:2,1,protocol_len,relative; content:\"HTTP\",within protocol_len,nocase; content:\"javax.servlet.include.request_uri|00|\",fast_pattern,nocase; content:\"javax.servlet.include.servlet_path|00|\",nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2020-1938; classtype:attempted-user; sid:53341; rev:2;"
+}

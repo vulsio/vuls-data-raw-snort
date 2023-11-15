@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2274",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
+  "Option": "msg:\"PROTOCOL-POP login brute force attempt\"; flow:to_server,established,no_stream; content:\"USER\",fast_pattern,nocase; detection_filter:track by_dst, count 30, seconds 30; metadata:ruleset community; service:pop3; reference:url,attack.mitre.org/techniques/T1110; classtype:suspicious-login; sid:2274; rev:11;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1808",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Apache chunked-encoding memory corruption exploit attempt\"; flow:to_server,established; http_header; content:\"|C0|PR|89 E1|PQRP|B8 3B 00 00 00 CD 80|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,5033; reference:cve,2002-0392; classtype:web-application-activity; sid:1808; rev:17;"
+}

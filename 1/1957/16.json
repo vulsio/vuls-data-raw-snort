@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1957",
+  "Rev": "16",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-RPC sadmind UDP PING\"; content:\"|00 01 87 88|\",depth 4,offset 12; content:\"|00 00 00 00|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,866; reference:cve,1999-0977; reference:nessus,10229; classtype:protocol-command-decode; sid:1957; rev:16;"
+}

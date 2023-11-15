@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26656",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Travnet Botnet data upload\"; flow:to_server,established; http_uri; content:\"hostid=\"; content:\"|26|hostname=\"; content:\"|26|hostip=\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/F7E9A1A4FC4766ABD799B517AD70CD5FA234C8ACC10D96CA51ECF9CF227B94E8/analysis/; classtype:trojan-activity; sid:26656; rev:2;"
+}

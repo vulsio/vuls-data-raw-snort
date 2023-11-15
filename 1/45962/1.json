@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45962",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Revenge RAT inbound heartbeat check\"; flow:to_client,established; content:\"PNC|2A 2D 5D|NK|5B 2D 2A|\",depth 11; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/en/file/518f7803ad1b8e630f50719d7cb3638ea5d67fa4d4387a55f44ddca4ef55a3ee/analysis/; reference:url,www.virustotal.com/en/file/79bdbf9ec639d5ccf3992e9c9fe9eeba21d191dc168194a80b50f3aa8068892a/analysis/; reference:url,www.virustotal.com/en/file/edb115dd5ca7c7f9dd069746daa0a4ee6298bf94de62510d3f8bebfa5f5a8bcd/analysis/; classtype:trojan-activity; sid:45962; rev:1;"
+}

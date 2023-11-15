@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31507",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 25",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.HW32 variant spam attempt\"; flow:to_server, established; content:\"MAIL FROM: <Reademal.com>|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:smtp; reference:url,www.virustotal.com/en/file/e69b310dff09830641d4b9682375ce3df503674d23c429bd7847979ea9250b2b/analysis/; classtype:trojan-activity; sid:31507; rev:2;"
+}

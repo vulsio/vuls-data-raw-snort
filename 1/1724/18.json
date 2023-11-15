@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1724",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP emumail.cgi access\"; flow:to_server,established; http_uri; content:\"/emumail.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,5824; reference:cve,2002-1526; classtype:web-application-activity; sid:1724; rev:18;"
+}

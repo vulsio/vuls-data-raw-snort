@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "33519",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent - ALIZER\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|ALIZER|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/958c004400ca2a736473c68d842cbea9038bde940d1e44fb08cf08c4352c5f55/analysis/; classtype:trojan-activity; sid:33519; rev:3;"
+}

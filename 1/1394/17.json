@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1394",
+  "Rev": "17",
+  "Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SHELLCODE x86 inc ecx NOOP\"; content:\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\"; metadata:ruleset community; classtype:shellcode-detect; sid:1394; rev:17;"
+}

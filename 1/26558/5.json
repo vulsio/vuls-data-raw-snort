@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26558",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC User-Agent known Malicious user agent Brutus AET\"; flow:to_server,established; http_header; content:\"Mozilla|2F|3.0 |28|Compatible|29 3B|Brutus|2F|AET\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,sectools.org/tool/brutus; classtype:misc-activity; sid:26558; rev:5;"
+}

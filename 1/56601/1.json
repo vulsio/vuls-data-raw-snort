@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56601",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Backdoor.CSBundle_Original Stager 2 download attempt\"; flow:to_client,established; http_header; content:\"Content-Type: text/json|0D 0A|\"; content:\"Server: Microsoft-IIS/10.0|0D 0A|\"; content:\"X-Powered-By: ASP.NET|0D 0A|\"; content:\"Cache-Control: no-cache, no-store, max-age=0, must-revalidate|0D 0A|\"; content:\"Pragma: no-cache|0D 0A|\"; content:\"X-Frame-Options: SAMEORIGIN|0D 0A|\"; content:\"Content-Type: image/gif\"; file_data; content:\"|01 00 01 00 00 02 01 44 00 3B|\"; content:\"|FF FF FF 21 F9 04 01 00 00 00 2C 00 00 00 00|\"; content:\"|47 49 46 38 39 61 01 00 01 00 80 00 00 00 00|\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56601; rev:1;"
+}

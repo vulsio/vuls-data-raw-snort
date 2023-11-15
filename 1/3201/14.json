@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3201",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS httpodbc.dll access - nimda\"; flow:to_server,established; http_uri; content:\"/httpodbc.dll\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2708; reference:cve,2001-0333; classtype:web-application-activity; sid:3201; rev:14;"
+}

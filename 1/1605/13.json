@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1605",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 6004",
+  "Option": "msg:\"SERVER-OTHER iParty DOS attempt\"; flow:to_server,established; content:\"|FF FF FF FF FF FF|\"; metadata:ruleset community; reference:bugtraq,6844; reference:cve,1999-1566; reference:nessus,10111; classtype:misc-attack; sid:1605; rev:13;"
+}

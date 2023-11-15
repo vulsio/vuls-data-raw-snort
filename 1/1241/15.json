@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1241",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP SWEditServlet directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/SWEditServlet\"; pkt_data; content:\"template=../../../\"; metadata:ruleset community; service:http; reference:bugtraq,2868; reference:cve,2001-0555; classtype:attempted-user; sid:1241; rev:15;"
+}

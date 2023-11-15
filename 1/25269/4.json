@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "25269",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Buterat variant outbound connection\"; flow:to_server,established; http_header; content:\"From|3A|\"; content:\"Via|3A|\"; http_raw_uri; bufferlen:13; http_uri; pcre:\"/^\\x2f\\d{3}\\x2f\\d{3}\\x2ehtml$/\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/90fb793d1fd7245b841ca4b195e3944a991d97d854090729062d700fe74553e5/analysis/; classtype:trojan-activity; sid:25269; rev:4;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "912",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion parks access\"; flow:to_server,established; http_uri; content:\"/cfdocs/examples/parks/detail.cfm\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,550; reference:cve,1999-0760; classtype:attempted-recon; sid:912; rev:18;"
+}

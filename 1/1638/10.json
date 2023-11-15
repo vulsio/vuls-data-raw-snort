@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1638",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 22",
+  "Option": "msg:\"INDICATOR-SCAN SSH Version map attempt\"; flow:to_server,established; content:\"Version_Mapper\",fast_pattern,nocase; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:network-scan; sid:1638; rev:10;"
+}

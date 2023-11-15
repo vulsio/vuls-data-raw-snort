@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28148",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Mevade variant outbound connection\"; flow:to_server,established; http_header; content:\"|0D 0A|uuid: \",fast_pattern,nocase; content:!\"User-Agent:\"; http_client_body; pcre:\"/[^\\n -~\\r]{4}/\"; http_header; content:\"Content-Type|3A| binary/octet-stream|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/526fe8eee74dc51a23e458115179dcda4027277b696b6a06889ed52751b39f54/analysis/; classtype:trojan-activity; sid:28148; rev:3;"
+}

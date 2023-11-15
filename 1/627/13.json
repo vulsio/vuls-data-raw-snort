@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "627",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SCAN cybercop os SFU12 probe\"; flow:stateless; ack:0; flags:SFU12; content:\"AAAAAAAAAAAAAAAA\",depth 16; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:attempted-recon; sid:627; rev:13;"
+}

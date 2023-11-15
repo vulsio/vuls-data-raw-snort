@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3114",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [139,445]",
+  "Option": "msg:\"OS-WINDOWS DCERPC NCACN-IP-TCP llsrpc LlsrConnect overflow attempt\"; flow:to_server,established; dce_iface:uuid 342cfd40-3c6c-11ce-a893-08002b2e9c6d; dce_opnum:\"0\"; dce_stub_data; byte_test:4,>,52,0,dce; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:netbios-ssn; reference:bugtraq,12481; reference:cve,2005-0050; reference:url,technet.microsoft.com/en-us/security/bulletin/ms05-010; classtype:attempted-admin; sid:3114; rev:20;"
+}

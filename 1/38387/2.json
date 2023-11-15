@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38387",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 21",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.FTPKeyLogger outbound connection\"; flow:to_server,established; content:\"STOR Screenshot from|3A 20|\",fast_pattern; content:\"|29|.png\",within 80; metadata:impact_flag red,ruleset community; service:ftp; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/44f956d41f5aea97884f88f60c1e28dc246b4b7318a87b332367e7f0476ca8fc/analysis/1459279340/; classtype:trojan-activity; sid:38387; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21287",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"FILE-IDENTIFY XSLT file attachment detected\"; flow:to_server,established; content:\".xslt\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2exslt/i\"; flowbits:set,file.xml; flowbits:noalert; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:smtp; reference:url,attack.mitre.org/techniques/T1220; classtype:misc-activity; sid:21287; rev:14;"
+}

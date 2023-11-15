@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "236",
+  "Rev": "13",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP Stacheldraht client check gag\"; icmp_id:668; itype:0; content:\"gesundheit!\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:236; rev:13;"
+}

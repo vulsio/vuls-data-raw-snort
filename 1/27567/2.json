@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27567",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Rovnix malicious download request\"; flow:to_server,established; http_uri; content:\"/ld.aspx\",nocase; http_header; content:\"User-Agent|3A 20|FWVersionTestAgent|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.didierstevens.com/2013/08/04/quickpost-rovnix-pcap; reference:url,blogs.technet.com/b/mmpc/archive/2013/07/25/the-evolution-of-ronvix-private-tcp-ip-stacks.aspx; classtype:trojan-activity; sid:27567; rev:2;"
+}

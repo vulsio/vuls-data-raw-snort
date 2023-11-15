@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "385",
+  "Rev": "8",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP traceroute\"; itype:8; ttl:1; metadata:ruleset community; classtype:attempted-recon; sid:385; rev:8;"
+}

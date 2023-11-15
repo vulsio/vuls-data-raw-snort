@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2052",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP overflow.cgi access\"; flow:to_server,established; http_uri; content:\"/overflow.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6326; reference:cve,2002-1361; reference:nessus,11190; reference:url,www.cert.org/advisories/CA-2002-35.html; classtype:web-application-activity; sid:2052; rev:13;"
+}

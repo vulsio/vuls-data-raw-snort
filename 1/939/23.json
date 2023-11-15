@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "939",
+  "Rev": "23",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage posting\"; flow:to_server,established; content:\"POST\"; http_uri; content:\"/author.dll\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2144; reference:cve,2001-0096; reference:nessus,10585; reference:url,technet.microsoft.com/en-us/security/bulletin/MS00-100; classtype:web-application-activity; sid:939; rev:23;"
+}

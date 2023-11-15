@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31053",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.MadnessPro outbound connection\"; flow:to_server,established; http_uri; content:\"/?\"; content:\"uid=\"; content:\"&mk=\",fast_pattern; content:\"&os=\"; content:\"&rs=\"; content:\"&c=\"; content:\"&rq=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.cylance.com/a-study-in-bots-madness-pro; classtype:trojan-activity; sid:31053; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "44971",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 9251",
+  "Option": "msg:\"SERVER-OTHER QNAP transcode server command injection attempt\"; flow:to_server,established; content:\"|01 00 00 00|\",depth 4; content:\"|7C|\",distance 0; content:\"|09|\",within 50; metadata:policy max-detect-ips drop,ruleset community; reference:url,www.qnap.com/en-us/; classtype:attempted-admin; sid:44971; rev:3;"
+}

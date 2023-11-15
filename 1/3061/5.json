@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3061",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3632",
+  "Option": "msg:\"APP-DETECT distccd remote command execution attempt\"; flow:to_server,established; content:\"DIST00000001\",depth 12,nocase; metadata:ruleset community; reference:url,distcc.samba.org/security.html; classtype:policy-violation; sid:3061; rev:5;"
+}

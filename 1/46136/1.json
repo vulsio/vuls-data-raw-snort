@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46136",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Banbra variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent: Mozilla/3.0",
+  "Option": "compatible|3B| Indy Library)\"; http_client_body; content:\"remetente=\",depth 10,fast_pattern; content:\"&destinatario\",distance 0; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:46136; rev:1;"
+}

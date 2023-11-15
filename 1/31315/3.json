@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31315",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.MSIL variant outbound connection\"; flow:to_server,established; content:\"/srv2.php?param=1 HTTP/1.1|0D 0A|Host: \",fast_pattern,nocase; content:\"Connection: Keep-Alive|0D 0A 0D 0A|\"; http_header; content:!\"User-Agent:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malwr.com/analysis/ZDI5NTViMGI2MzZiNDU0MTlhMzNlZDhiZGUwNjFmOGY/; classtype:trojan-activity; sid:31315; rev:3;"
+}

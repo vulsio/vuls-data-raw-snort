@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1493",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP RBS ISP /newuser access\"; flow:to_server,established; http_uri; content:\"/newuser\"; metadata:ruleset community; service:http; reference:bugtraq,1704; reference:cve,2000-1036; reference:nessus,10521; classtype:web-application-activity; sid:1493; rev:16;"
+}

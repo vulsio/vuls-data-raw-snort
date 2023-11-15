@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "809",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP whois_raw.cgi arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/whois_raw.cgi?\"; pkt_data; content:\"|0A|\"; metadata:ruleset community; service:http; reference:bugtraq,304; reference:cve,1999-1063; reference:nessus,10306; reference:url,attack.mitre.org/techniques/T1065; classtype:web-application-attack; sid:809; rev:20;"
+}

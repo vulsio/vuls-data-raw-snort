@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "24359",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [139,445]",
+  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB NTLM NULL session attempt\"; flow:to_server,established; content:\"|FF|SMB|73 00 00 00 00|\",depth 9,offset 4; content:\"|00 00|\",within 2,distance 13; content:\"|FF|\",within 1,distance 9; content:\"NTLMSSP|00 03 00 00 00|\",within 100; content:\"|00 00 00 00 48 00 00 00|\",within 8,distance 24,fast_pattern; flowbits:set,smb.null_session; flowbits:noalert; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:netbios-ssn; reference:bugtraq,1163; reference:cve,2000-0347; classtype:attempted-recon; sid:24359; rev:9;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2042",
+  "Rev": "9",
+  "Header": "alert udp $HOME_NET 49 -> $EXTERNAL_NET any",
+  "Option": "msg:\"POLICY-OTHER xtacacs accepted login response\"; flow:to_client; content:\"|80 02|\",depth 2; content:\"|01|\",distance 4; metadata:ruleset community; classtype:misc-activity; sid:2042; rev:9;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2063",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Demarc SQL injection attempt\"; flow:to_server,established; http_uri; content:\"/dm/demarc\"; pkt_data; content:\"s_key=\"; content:\"'\",distance 0; content:\"'\",distance 1; content:\"'\",distance 0; metadata:ruleset community; service:http; reference:bugtraq,4520; reference:cve,2002-0539; classtype:web-application-activity; sid:2063; rev:13;"
+}

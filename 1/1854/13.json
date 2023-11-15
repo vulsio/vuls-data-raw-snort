@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1854",
+  "Rev": "13",
+  "Header": "alert icmp $EXTERNAL_NET any <> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP Stacheldraht handler->agent niggahbitch\"; icmp_id:9015; itype:0; content:\"niggahbitch\"; metadata:ruleset community; reference:cve,2000-0138; reference:url,staff.washington.edu/dittrich/misc/stacheldraht.analysis; classtype:attempted-dos; sid:1854; rev:13;"
+}

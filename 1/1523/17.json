@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1523",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP ans.pl access\"; flow:to_server,established; http_uri; content:\"/ans.pl\"; metadata:ruleset community; service:http; reference:bugtraq,4147; reference:bugtraq,4149; reference:cve,2002-0306; reference:cve,2002-0307; reference:nessus,10875; classtype:web-application-activity; sid:1523; rev:17;"
+}

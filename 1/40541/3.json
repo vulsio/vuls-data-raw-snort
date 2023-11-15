@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40541",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Satana ransomware outbound connection\"; flow:to_server,established; http_uri; content:\"/add.php\",fast_pattern,nocase; http_client_body; content:\"id=\"; content:\"code=\"; content:\"sdata=\"; content:\"name=\"; content:\"md5=\"; content:\"dlen=\"; http_header; content:!\"Connection\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/683a09da219918258c58a7f61f7dc4161a3a7a377cf82a31b840baabfb9a4a96/analysis/1477327210/; classtype:trojan-activity; sid:40541; rev:3;"
+}

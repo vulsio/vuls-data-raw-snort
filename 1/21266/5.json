@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21266",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string Morfeus Scanner\"; flow:to_server, established; http_header; content:\"User|2D|Agent|3A 20|Morfeus|20|Fucking|20|Scanner\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:network-scan; sid:21266; rev:5;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2249",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS /pcadmin/login.asp access\"; flow:to_server,established; http_uri; content:\"/pcadmin/login.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,8103; reference:nessus,11785; classtype:web-application-activity; sid:2249; rev:15;"
+}

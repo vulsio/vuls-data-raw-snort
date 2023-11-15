@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "492",
+  "Rev": "15",
+  "Header": "alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any",
+  "Option": "msg:\"PROTOCOL-TELNET login failed\"; flow:to_client,established; content:\"Login failed\",nocase; metadata:ruleset community; service:telnet; classtype:bad-unknown; sid:492; rev:15;"
+}

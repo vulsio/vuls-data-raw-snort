@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "626",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SCAN cybercop os PA12 attempt\"; flow:stateless; flags:PA12; content:\"AAAAAAAAAAAAAAAA\",depth 16; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:attempted-recon; sid:626; rev:13;"
+}

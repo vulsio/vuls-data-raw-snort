@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1096",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Talentsoft Web+ internal IP Address access\"; flow:to_server,established; http_uri; content:\"/webplus.exe?\",nocase; content:\"about\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,1720; reference:url,archives.neohapsis.com/archives/ntbugtraq/2000-q3/0168.html; classtype:web-application-activity; sid:1096; rev:17;"
+}

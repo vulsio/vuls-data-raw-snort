@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46129",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.HW32 variant outbound connection\"; flow:to_server,established; http_client_body; content:\"Cpa=+EXEC+\",depth 10; content:\"%27%2C%27\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0b2e8a9413d3b34d532d553922bd402830c1784302fc8ecaeeee17e826798d46/analysis/; classtype:trojan-activity; sid:46129; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1097",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Talentsoft Web+ exploit attempt\"; flow:to_server,established; http_uri; content:\"/webplus.cgi?\",nocase; content:\"Script=/webplus/webping/webping.wml\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,1725; classtype:web-application-attack; sid:1097; rev:18;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40896",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"BROWSER-FIREFOX Mozilla Firefox ESR NotifyTimeChange use after free attempt\"; flow:to_client,established; file_data; content:\".pauseAnimations\",fast_pattern,nocase; content:\"svg\",nocase; content:\"animate\",nocase; content:\"begin\",within 50,nocase; content:\"end\",within 50,nocase; content:\".end\",within 30,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2016-9079; reference:url,www.mozilla.org/en-US/security/advisories/mfsa2016-92/; classtype:attempted-user; sid:40896; rev:3;"
+}

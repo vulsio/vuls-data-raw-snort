@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "37646",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Symmi variant dropper download connection\"; flow:to_client,established; file_data; content:\"|A6 4D AA E1 65 52 A5 E1 E3 58 76 E1 81 4D A5 E1 CE 48 9C E1 BB 4D A5 E1 CE 48 A9 E1 A1 4D A5 E1|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/881bb1538b4d077976cd9b27523cd5af9bd86c0ae3bce4edf453e74bba9f4c1b/analysis/; classtype:trojan-activity; sid:37646; rev:2;"
+}

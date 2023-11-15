@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1261",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 4242",
+  "Option": "msg:\"SERVER-OTHER AIX pdnsd overflow\"; flow:to_server,established; isdataat:1000; content:\"|7F FF FB|x|7F FF FB|x|7F FF FB|x|7F FF FB|x\"; content:\"@|8A FF C8|@|82 FF D8 3B|6|FE 03 3B|v|FE 02|\"; metadata:ruleset community; reference:bugtraq,3237; reference:bugtraq,590; reference:cve,1999-0745; classtype:attempted-user; sid:1261; rev:15;"
+}

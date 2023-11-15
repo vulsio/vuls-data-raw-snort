@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2585",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP nessus 2.x 404 probe\"; flow:to_server,established; http_uri; content:\"/NessusTest\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10386; classtype:attempted-recon; sid:2585; rev:9;"
+}

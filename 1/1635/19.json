@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1635",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
+  "Option": "msg:\"PROTOCOL-POP APOP overflow attempt\"; flow:to_server,established; content:\"APOP\",nocase; isdataat:256,relative; pcre:\"/^APOP\\s[^\\n]{256}/smi\"; metadata:ruleset community; service:pop3; reference:bugtraq,1652; reference:cve,2000-0840; reference:cve,2000-0841; reference:nessus,10559; classtype:attempted-admin; sid:1635; rev:19;"
+}

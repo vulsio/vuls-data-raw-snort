@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "605",
+  "Rev": "13",
+  "Header": "alert tcp $HOME_NET 513 -> $EXTERNAL_NET any",
+  "Option": "msg:\"PROTOCOL-SERVICES rlogin login failure\"; flow:to_client,established; content:\"login incorrect\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:unsuccessful-user; sid:605; rev:13;"
+}

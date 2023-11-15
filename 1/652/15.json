@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "652",
+  "Rev": "15",
+  "Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SHELLCODE Linux shellcode\"; content:\"|90 90 90 E8 C0 FF FF FF|/bin/sh\",fast_pattern,nocase; metadata:ruleset community; classtype:shellcode-detect; sid:652; rev:15;"
+}

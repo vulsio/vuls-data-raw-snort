@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "33522",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent - DNS Changer\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|DNS Check|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2b16bd74ed6cf86938a7108b6a6fa9343ac4f890f0228b964a98c45428cb4e3c/analysis/; reference:url,www.virustotal.com/en/file/e5cbca1c1cca4ce5ef8beddca38869bdb18e089b969171e5ba337aa756371c36/analysis/; classtype:trojan-activity; sid:33522; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1457",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP user_update_admin.pl access\"; flow:to_server,established; http_uri; content:\"/user_update_admin.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1486; reference:cve,2000-0627; classtype:attempted-recon; sid:1457; rev:18;"
+}

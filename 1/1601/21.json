@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1601",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP htsearch arbitrary file read attempt\"; flow:to_server,established; http_uri; content:\"/htsearch?exclude=`\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1026; reference:cve,2000-0208; reference:nessus,10105; classtype:web-application-attack; sid:1601; rev:21;"
+}

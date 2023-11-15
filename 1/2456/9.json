@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2456",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET 5050 -> $HOME_NET any",
+  "Option": "msg:\"POLICY-SOCIAL Yahoo Messenger File Transfer Receive Request\"; flow:established; content:\"YMSG\",depth 4; content:\"|00|M\",depth 2,offset 10; metadata:ruleset community; classtype:policy-violation; sid:2456; rev:9;"
+}

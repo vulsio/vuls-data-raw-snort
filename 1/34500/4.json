@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34500",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR Win.Backdoor.Wekby Torn variant outbound connection\"; flow:established, to_server; isdataat:15; isdataat:!16; content:\"|00 00 00 11 C8 00 00 00 00 00 00 00 00 00 00 00|\",depth 16,fast_pattern,fast_pattern_offset 0,fast_pattern_length 12; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/en/file/1D6BCF409C85887861D587C8AABFC8C8393EA692FE93C0A6836BE507A7F75985/analysis/; classtype:trojan-activity; sid:34500; rev:4;"
+}

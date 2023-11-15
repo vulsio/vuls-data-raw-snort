@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "662",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL Sendmail 5.5.5 exploit\"; flow:to_server,established; content:\"mail from|3A| |22 7C|\",fast_pattern,nocase; metadata:ruleset community; service:smtp; reference:cve,1999-0203; reference:nessus,10258; classtype:attempted-admin; sid:662; rev:17;"
+}

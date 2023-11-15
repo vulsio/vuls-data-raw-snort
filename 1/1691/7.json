@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1691",
+  "Rev": "7",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE ALTER USER attempt\"; flow:to_server,established; content:\"alter user\",nocase; content:\" identified by \",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1691; rev:7;"
+}

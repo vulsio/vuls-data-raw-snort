@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29828",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Adload.dyhq variant outbound connection\"; flow:to_server,established; http_uri; content:\"/get/?ver=\",depth 10; content:\"&aid=\",distance 0; content:\"&hid=\",distance 0; content:\"&rid=\",distance 0; content:\"&data=\",distance 0; http_header; content:!\"Referer:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f5fbdc74afc209f2648490e077a2fcddc402cbc57ababbc2f735aaecde95681b/analysis/; classtype:trojan-activity; sid:29828; rev:2;"
+}

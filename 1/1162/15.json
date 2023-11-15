@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1162",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cart 32 AdminPwd access\"; flow:to_server,established; http_uri; content:\"/c32web.exe/ChangeAdminPassword\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1153; reference:cve,2000-0429; classtype:attempted-recon; sid:1162; rev:15;"
+}

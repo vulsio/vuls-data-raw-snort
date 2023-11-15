@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "52027",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-OTHER Xml.Phishing.Evernote outbound connection\"; flow:to_server,established; http_uri; content:\"_truthcolor=\",fast_pattern,nocase; content:\"dramafrine\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/50d0c853da4e7d2226d70e136d6e88e8e3841cc67a85df976d1bdf7084571a60/analysis/; classtype:misc-activity; sid:52027; rev:1;"
+}

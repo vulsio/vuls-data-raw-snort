@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28042",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Caphaw variant outbound connection\"; flow:to_server,established; http_uri; content:\"/ping.html?r=\",fast_pattern,nocase; content:!\"/utils/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,research.zscaler.com/2013/09/a-new-wave-of-win32caphaw-attacks.html; classtype:trojan-activity; sid:28042; rev:5;"
+}

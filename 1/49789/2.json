@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49789",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zacinlo outbound connection\"; flow:to_server,established; http_uri; content:\"/updaterinfo.bin\",fast_pattern,nocase; http_header; content:\"User-Agent: wget\"; content:\"Referer:\"; content:\"/updater/\",within 50; content:!\"Accept-Encoding\"; content:!\"Accept-\"; content:!\"Content-\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,labs.bitdefender.com/2018/06/six-years-and-counting-inside-the-complex-zacinlo-ad-fraud-operation/; classtype:trojan-activity; sid:49789; rev:2;"
+}

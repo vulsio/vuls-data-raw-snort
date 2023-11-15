@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2697",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE alter file buffer overflow attempt\"; flow:to_server,established; content:\"alter\",nocase; pcre:\"/ALTER\\s.*?FILE\\s+((AS|MEMBER|TO)\\s+)?(\\x27[^\\x27]{512}|\\x22[^\\x22]{512})/smi\"; metadata:ruleset community; classtype:attempted-user; sid:2697; rev:4;"
+}

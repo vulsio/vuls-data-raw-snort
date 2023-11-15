@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "807",
+  "Rev": "24",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP /wwwboard/passwd.txt access\"; flow:to_server,established; http_uri; content:\"/wwwboard/passwd.txt\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,649; reference:cve,1999-0953; reference:cve,1999-0954; reference:nessus,10321; classtype:attempted-recon; sid:807; rev:24;"
+}

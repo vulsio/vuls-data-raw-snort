@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2291",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Advanced Poll admin_license.php access\"; flow:to_server,established; http_uri; content:\"/admin_license.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,8890; reference:cve,2003-1178; reference:cve,2003-1179; reference:cve,2003-1180; reference:cve,2003-1181; reference:nessus,11487; classtype:web-application-activity; sid:2291; rev:17;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1284",
+  "Rev": "17",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER readme.eml download attempt\"; flow:to_server,established; http_uri; content:\"/readme.eml\",nocase; metadata:ruleset community; service:http; reference:url,www.cert.org/advisories/CA-2001-26.html; classtype:attempted-user; sid:1284; rev:17;"
+}

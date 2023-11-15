@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1061",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SQL xp_cmdshell attempt\"; flow:to_server,established; content:\"xp_cmdshell\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,5309; classtype:web-application-attack; sid:1061; rev:13;"
+}

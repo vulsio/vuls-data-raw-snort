@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1917",
+  "Rev": "16",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1900",
+  "Option": "msg:\"INDICATOR-SCAN UPnP service discover attempt\"; flow:to_server; content:\"M-SEARCH \",depth 9; content:\"ssdp|3A|discover\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:network-scan; sid:1917; rev:16;"
+}

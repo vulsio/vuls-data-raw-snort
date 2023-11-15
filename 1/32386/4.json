@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32386",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Nuclear exploit kit outbound structure\"; flow:to_server,established; http_uri; content:\"/f/\",depth 3; pcre:\"/^\\/f(\\/[^\\x2f]+)?\\/14\\d{8}(\\/\\d{9,10})?(\\/\\d)+(\\/x[a-f0-9]+(\\x3b\\d)+?)?$/\"; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; classtype:trojan-activity; sid:32386; rev:4;"
+}

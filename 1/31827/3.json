@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31827",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Delf variant outbound connection\"; flow:to_server,established; content:\"/token/token.html HTTP/1.1|0D 0A|User-Agent: \",fast_pattern,nocase; http_header; content:!\"Accept\"; content:!\"Referer:\"; pkt_data; pcre:\"/\\)\\r\\nHost\\x3a\\x20[a-z\\d\\x2e\\x2d]{6,32}\\r\\nCache\\x2dControl\\x3a\\x20no\\x2dcache\\r\\n\\r\\n$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/59e721000aa38a91ed42799e955f9337482c627e0675520aa54dcad068e6e004/analysis/1409846457/; classtype:trojan-activity; sid:31827; rev:3;"
+}

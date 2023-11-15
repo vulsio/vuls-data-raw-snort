@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "355",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP pass wh00t\"; flow:to_server,established; content:\"pass wh00t\",fast_pattern,nocase; metadata:ruleset community; service:ftp; classtype:suspicious-login; sid:355; rev:13;"
+}

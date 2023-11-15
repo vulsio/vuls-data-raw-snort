@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2191",
+  "Rev": "6",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 445",
+  "Option": "msg:\"NETBIOS SMB DCERPC invalid bind attempt\"; flow:to_server,established; content:\"|FF|SMB%\",depth 5,offset 4,nocase; content:\"&|00|\",within 2,distance 56; content:\"|5C 00|P|00|I|00|P|00|E|00 5C 00|\",within 12,distance 5,nocase; content:\"|05|\",within 1,distance 2; content:\"|0B|\",within 1,distance 1; byte_test:1,&,1,0,relative; content:\"|00|\",within 1,distance 21; metadata:ruleset community; service:netbios-ssn; classtype:attempted-dos; sid:2191; rev:6;"
+}

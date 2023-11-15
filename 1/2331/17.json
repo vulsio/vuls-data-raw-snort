@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2331",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP MatrikzGB privilege escalation attempt\"; flow:to_server,established; http_uri; content:\"new_rights=admin\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,8430; classtype:web-application-activity; sid:2331; rev:17;"
+}

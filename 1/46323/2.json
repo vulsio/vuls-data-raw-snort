@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46323",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Netgear DGN2200B stored cross-site scripting attempt\"; flow:to_server,established; http_uri; content:\"/fw_serv_add.cgi\",fast_pattern,nocase; http_client_body; content:\"userdefined=\",nocase; pcre:\"/userdefined=[^&]*?([\\x22\\x27\\x3c\\x3e\\x28\\x29]|script|onload|src)/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.netgear.com/home/products/networking/dsl-modems-routers/dgn2200.aspx; classtype:attempted-user; sid:46323; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "834",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP rwwwshell.pl access\"; flow:to_server,established; http_uri; content:\"/rwwwshell.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.itsecurity.com/papers/p37.htm; classtype:attempted-recon; sid:834; rev:19;"
+}

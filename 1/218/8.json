@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "218",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+  "Option": "msg:\"MALWARE-BACKDOOR MISC Solaris 2.5 attempt\"; flow:to_server,established; content:\"friday\"; metadata:ruleset community; classtype:attempted-user; sid:218; rev:8;"
+}

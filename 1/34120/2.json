@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34120",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE InstallMetrix fetch offers stage outbound connection\"; flow:to_server,established; http_uri; content:\"/installer_gate_client.php?\",fast_pattern,nocase; content:\"download_id=\"; content:\"&mode=getcombo\",distance 0; content:\"&offers=\",distance 0; http_header; content:!\"Accept\"; content:!\"Connection\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d99db4f7f047cbf672eb19ea2e492a45d948338c0f10ef4761db3b9e372ba90e/analysis/1426449298/; classtype:misc-activity; sid:34120; rev:2;"
+}

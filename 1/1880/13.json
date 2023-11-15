@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1880",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP oracle web application server access\"; flow:to_server,established; http_uri; content:\"/ows-bin/\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1053; reference:cve,2000-0169; reference:nessus,10348; classtype:web-application-activity; sid:1880; rev:13;"
+}

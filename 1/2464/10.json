@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2464",
+  "Rev": "10",
+  "Header": "alert ip any any -> any any",
+  "Option": "msg:\"SERVER-OTHER Ethereal EIGRP prefix length overflow attempt\"; ip_proto:88; byte_test:1,>,32,44; metadata:ruleset community; reference:bugtraq,9952; reference:cve,2004-0176; reference:cve,2004-0367; classtype:attempted-admin; sid:2464; rev:10;"
+}

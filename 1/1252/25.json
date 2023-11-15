@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1252",
+  "Rev": "25",
+  "Header": "alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any",
+  "Option": "msg:\"PROTOCOL-TELNET bsd telnet exploit response\"; flow:to_client,established; raw_data; content:\"|0D 0A|[Yes]|0D 0A FF FE 08 FF FD|&\",fast_pattern,nocase; metadata:ruleset community; service:telnet; reference:bugtraq,3064; reference:cve,2001-0554; reference:nessus,10709; classtype:attempted-admin; sid:1252; rev:25;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "484",
+  "Rev": "8",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP PING Sniffer Pro/NetXRay network scan\"; itype:8; content:\"Cinco Network, Inc.\",depth 32; metadata:ruleset community; classtype:misc-activity; sid:484; rev:8;"
+}

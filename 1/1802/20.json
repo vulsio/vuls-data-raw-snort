@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1802",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS .asa HTTP header buffer overflow attempt\"; flow:to_server,established; content:\"HTTP/\",nocase; http_uri; content:\".asa\",fast_pattern,nocase; pkt_data; content:\"|3A|\"; content:\"|0A|\"; content:\"|00|\"; metadata:ruleset community; service:http; reference:bugtraq,4476; reference:cve,2002-0150; reference:nessus,10936; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-018; classtype:web-application-attack; sid:1802; rev:20;"
+}

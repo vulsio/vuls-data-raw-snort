@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49840",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP LG-Ericsson iPECS NMS 30M directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/ipecs-cm/download\",fast_pattern,nocase; content:\"file\",nocase; content:\"../\"; pcre:\"/[?&]file(name|path)=[^&]*?\\x2e\\x2e\\x2f/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2018-15138; reference:url,www.exploit-db.com/exploits/45167; classtype:web-application-attack; sid:49840; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2489",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 80",
+  "Option": "msg:\"SERVER-OTHER esignal STREAMQUOTE buffer overflow attempt\"; flow:to_server,established; content:\"<STREAMQUOTE>\",nocase; isdataat:1040,relative; content:!\"</STREAMQUOTE>\",within 1040,nocase; metadata:ruleset community; reference:bugtraq,9978; reference:cve,2004-1868; classtype:attempted-admin; sid:2489; rev:9;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2347",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP myPHPNuke partner.php access\"; flow:to_server,established; http_uri; content:\"/partner.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6544; classtype:web-application-activity; sid:2347; rev:14;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "39801",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 900",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Spyrat variant outbound connection\"; flow:to_server,established; content:\"myversion|7C|2.5.2.\",depth 19; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/e64f536556739d50a673a952da7f110f1156fad0f7360d401794e5a8d65ce63a/analysis/; classtype:trojan-activity; sid:39801; rev:2;"
+}

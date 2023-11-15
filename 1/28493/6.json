@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28493",
+  "Rev": "6",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC DeputyDog diskless method outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent: lynx|0D 0A|\",fast_pattern,nocase; http_method; content:\"POST\"; http_uri; pcre:\"/^\\x2f[0-9a-f]+$/i\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2013-3918; reference:url,technet.microsoft.com/en-us/security/bulletin/MS13-090; classtype:trojan-activity; sid:28493; rev:6;"
+}

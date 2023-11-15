@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1126",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP AuthChangeUrl access\"; flow:to_server,established; http_uri; content:\"_AuthChangeUrl?\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2110; reference:cve,1999-0407; classtype:attempted-recon; sid:1126; rev:19;"
+}

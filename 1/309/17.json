@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "309",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL sniffit overflow\"; flow:to_server,established; isdataat:512; flags:A+; content:\"from|3A 90 90 90 90 90 90 90 90 90 90 90|\",nocase; metadata:ruleset community; service:smtp; reference:bugtraq,1158; reference:cve,2000-0343; classtype:attempted-admin; sid:309; rev:17;"
+}

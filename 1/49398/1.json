@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49398",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [139,445]",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zebrocy variant outbound connection\"; flow:to_server,established; content:\"S|00|e|00|m|00|i|00|n|00|a|00|r|00|_|00|2|00|0|00|1|00|8|00|_|00|1|00|.|00|A|00|O|00|-|00|A|00|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:netbios-ssn; reference:url,virustotal.com/#/file/573ea78afb50100f896185164da3b8519e2e0f609a34a7c70460eca5b4ae640d; classtype:trojan-activity; sid:49398; rev:1;"
+}

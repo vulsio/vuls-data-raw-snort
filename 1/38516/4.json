@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38516",
+  "Rev": "4",
+  "Header": "alert udp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Sweeper outbound connection\"; flow:to_server,no_stream; dsize:24; content:\"|61 63 36 62 66 34 64 30 66 35 36 30 30 30 34 36 32 37 31 31 30 33 39 39|\",fast_pattern,nocase; detection_filter:track by_src, count 1000, seconds 1; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/38221267218184b17a78d8814d1bd06b12143be859488ae15ca0d754f32d60fc/analysis/1460472611/; classtype:trojan-activity; sid:38516; rev:4;"
+}

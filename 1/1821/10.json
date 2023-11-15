@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1821",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 515",
+  "Option": "msg:\"SERVER-OTHER LPD dvips remote command execution attempt\"; flow:to_server,established; content:\"psfile=|22|`\"; metadata:ruleset community; reference:bugtraq,3241; reference:cve,2001-1002; reference:nessus,11023; classtype:system-call-detect; sid:1821; rev:10;"
+}

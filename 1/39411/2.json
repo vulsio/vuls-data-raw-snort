@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "39411",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Qbot variant outbound connection\"; flow:to_server,established; http_uri; content:\"zwlviewforumogaf.php\",fast_pattern,nocase; http_header; content:\"Host|3A| a.topgunnphoto.com\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/020356457e95f7607c1941e03294b4c16e23daa402d7e79cfd2ba91b23969480/analysis/1463667519/; classtype:trojan-activity; sid:39411; rev:2;"
+}

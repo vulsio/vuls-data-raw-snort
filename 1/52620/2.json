@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "52620",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt\"; flow:to_server,established; http_uri; content:\"/vpns/\",fast_pattern,nocase; http_raw_header; content:\"NSC_USER:\"; content:\"../\",within 10; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2019-19781; reference:url,support.citrix.com/article/CTX267027; classtype:web-application-attack; sid:52620; rev:2;"
+}

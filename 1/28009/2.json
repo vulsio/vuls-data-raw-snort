@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28009",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC BLYPT installer configkey outbound traffic\"; flow:to_server,established; http_uri; content:\"/index.aspx?info=configkey\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,blog.trendmicro.com/trendlabs-security-intelligence/blypt-a-new-backdoor-family-installed-via-java-exploit; classtype:trojan-activity; sid:28009; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38587",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Backdoor.DFSCook variant temporary redirect attempt\"; flow:to_client,established; http_stat_code; content:\"307\"; http_stat_msg; content:\"Temporary Redirect\"; pkt_data; content:\"Set-Cookie|3A 20|DFSCOOK=\",fast_pattern,nocase; content:\"Location: \"; content:\"/api.php?d=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/7a32e9d01e66f68461e410a29e38e147fb8a3d3695f1e55f4cf0d2ad789d5b2d/analysis/1460564508/; classtype:trojan-activity; sid:38587; rev:2;"
+}

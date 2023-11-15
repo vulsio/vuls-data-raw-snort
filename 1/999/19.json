@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "999",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS bdir access\"; flow:to_server,established; http_uri; content:\"/scripts/iisadmin/bdir.htr\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2280; classtype:web-application-activity; sid:999; rev:19;"
+}

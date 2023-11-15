@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1919",
+  "Rev": "31",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP CWD overflow attempt\"; flow:to_server,established; content:\"CWD\",nocase; isdataat:180,relative; pcre:\"/^CWD(?!\\n)\\s[^\\n]{180}/smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,11069; reference:bugtraq,1227; reference:bugtraq,1690; reference:bugtraq,6869; reference:bugtraq,7251; reference:bugtraq,7950; reference:cve,1999-0219; reference:cve,1999-1058; reference:cve,1999-1510; reference:cve,2000-1035; reference:cve,2000-1194; reference:cve,2001-0781; reference:cve,2002-0126; reference:cve,2002-0405; classtype:attempted-admin; sid:1919; rev:31;"
+}

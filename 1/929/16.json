@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "929",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion CFUSION_VERIFYMAIL access\"; flow:to_server,established; content:\"CFUSION_VERIFYMAIL|28 29|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,550; reference:cve,1999-0760; classtype:attempted-user; sid:929; rev:16;"
+}

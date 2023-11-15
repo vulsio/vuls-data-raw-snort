@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32367",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.GameOverZeus variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:<10; http_uri; content:\"/update\"; http_method; content:\"POST\"; http_header; content:\"|0D 0A|Accept-Encoding:|0D 0A|Connection: close|0D 0A|Content-Length: \",fast_pattern,nocase; content:!\"User-Agent:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d866214d1f921028f9001ae399e9f8dec32ec8998c84d20d60a992164888a6fc/analysis; classtype:trojan-activity; sid:32367; rev:3;"
+}

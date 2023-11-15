@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1838",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET 22 -> $HOME_NET any",
+  "Option": "msg:\"SERVER-OTHER SSH server banner overflow\"; flow:to_client,established; content:\"SSH-\",nocase; isdataat:200,relative; pcre:\"/^SSH-\\s?[^\\n]{200}/ism\"; metadata:ruleset community; reference:bugtraq,5287; reference:cve,2002-1059; reference:nessus,15822; classtype:misc-attack; sid:1838; rev:14;"
+}

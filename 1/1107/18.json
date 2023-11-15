@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1107",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP ftp.pl access\"; flow:to_server,established; http_uri; content:\"/ftp.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1471; reference:cve,2000-0674; reference:nessus,10467; classtype:web-application-activity; sid:1107; rev:18;"
+}

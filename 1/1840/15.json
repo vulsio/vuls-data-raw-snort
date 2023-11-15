@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1840",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"FILE-JAVA Oracle Javascript document.domain attempt\"; flow:to_client,established; file_data; content:\"document.domain|28|\",nocase; metadata:ruleset community; service:http; reference:bugtraq,5346; reference:cve,2002-0815; classtype:attempted-user; sid:1840; rev:15;"
+}

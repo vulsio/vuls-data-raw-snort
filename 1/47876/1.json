@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47876",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Andr.Trojan.AnubisCrypt variant outbound post detected\"; flow:to_server, established; http_uri; content:\"/private/\",fast_pattern; content:\".php\",distance 0; http_client_body; content:\"p=\"; http_header; content:\"User-Agent:\"; content:\"Android\",within 100; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/d27034b9f58aa71f08f3c57d893fe07cdd395c9b4e494fbcca2a1d1ca3dce88e/detection; classtype:trojan-activity; sid:47876; rev:1;"
+}

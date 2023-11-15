@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28324",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE FakeAV runtime detection\"; flow:to_server,established; http_uri; content:\"&affid=\",fast_pattern,nocase; content:\"/api/\",nocase; content:\"?ts=\",nocase; content:\"&token=\",nocase; content:\"&group=\",nocase; content:\"&nid=\",nocase; content:\"&lid=\",nocase; content:\"&ver=\",nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:28324; rev:3;"
+}

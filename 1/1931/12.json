@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1931",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP rpc-nlog.pl access\"; flow:to_server,established; http_uri; content:\"/rpc-nlog.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1278; reference:url,marc.theaimsgroup.com/?l=bugtraq&m=91470326629357&w=2; reference:url,marc.theaimsgroup.com/?l=bugtraq&m=91471400632145&w=2; classtype:web-application-activity; sid:1931; rev:12;"
+}

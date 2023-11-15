@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26834",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Sweet Orange exploit kit landing page in.php base64 uri\"; flow:to_server,established; http_raw_uri; bufferlen:<75; http_uri; content:\"/in.php\"; content:\"&q=\",distance 0; content:\"==\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2010-0188; reference:cve,2012-0422; reference:cve,2012-0431; reference:cve,2012-0607; reference:cve,2012-1723; reference:cve,2012-4681; reference:cve,2012-5076; reference:cve,2013-2423; classtype:trojan-activity; sid:26834; rev:5;"
+}

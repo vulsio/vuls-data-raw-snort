@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21833",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP System variable directory traversal attempt - %USERDATA%\"; flow:to_server,established; http_uri; content:\"%USERDATA%\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:21833; rev:5;"
+}

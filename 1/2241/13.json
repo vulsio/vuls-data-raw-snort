@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2241",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cwmail.exe access\"; flow:to_server,established; http_uri; content:\"/cwmail.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4093; reference:cve,2002-0273; reference:nessus,11727; classtype:web-application-activity; sid:2241; rev:13;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32825",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Darkhotel outbound connection\"; flow:to_server,established; http_uri; content:\"/bin/read_i.php?\"; content:\"a1=\"; content:\"&a2=step2-down\",fast_pattern,nocase; content:\"&a3=\"; content:\"&a4=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,securelist.com/files/2014/11/darkhotel_kl_07.11.pdf; reference:url,securelist.com/files/2014/11/darkhotelappendixindicators_kl.pdf; classtype:trojan-activity; sid:32825; rev:3;"
+}

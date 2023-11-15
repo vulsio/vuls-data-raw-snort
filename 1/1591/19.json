@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1591",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP faqmanager.cgi access\"; flow:to_server,established; http_uri; content:\"/faqmanager.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3810; reference:cve,2002-2033; reference:nessus,10837; classtype:web-application-activity; sid:1591; rev:19;"
+}

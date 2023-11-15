@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1474",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cal_make.pl access\"; flow:to_server,established; http_uri; content:\"/cal_make.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2663; reference:cve,2001-0463; reference:nessus,10664; classtype:web-application-activity; sid:1474; rev:21;"
+}

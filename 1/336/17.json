@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "336",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP CWD ~root attempt\"; flow:to_server,established; content:\"CWD\",nocase; content:\"~root\",distance 1,nocase; pcre:\"/^CWD\\s+~root/smi\"; metadata:ruleset community; service:ftp; reference:cve,1999-0082; classtype:bad-unknown; sid:336; rev:17;"
+}

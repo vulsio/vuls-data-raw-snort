@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1953",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 500:",
+  "Option": "msg:\"PROTOCOL-RPC AMD TCP pid request\"; flow:to_server,established; content:\"|00 04 93 F3|\",depth 4,offset 16; content:\"|00 00 00 09|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; classtype:rpc-portmap-decode; sid:1953; rev:10;"
+}

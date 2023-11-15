@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46487",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Ammy heartbeat\"; flow:to_server,established; content:\"id=\",depth 3,offset 5; content:\"&os=\",within 4,distance 8; content:\"&priv=\",distance 0; content:\"&cred=\",distance 0; content:\"&pcname=\",distance 0; content:\"&build_time=\",distance 0,fast_pattern; content:\"&card=\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:46487; rev:1;"
+}

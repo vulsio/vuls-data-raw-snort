@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "41498",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Ransomware.CryptoLocker binary download response attempt\"; flow:to_client,established; content:\"Set-Cookie|3A 20|mediaplanBAK|3D|\",fast_pattern,nocase; content:\"Set-Cookie|3A 20|mediaplan|3D|\"; http_header; content:\"Content-Type|3A 20|text/plain\"; file_data; content:\"MZ\"; byte_jump:4,58,relative,little; content:\"PE|00 00|\",within 4,distance -64; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/571a7014d1ee4e359e7eb5d2c7b3e6c527f4fcef322781f1c56a1b5bf28c8eb2/analysis/1485884599/; classtype:trojan-activity; sid:41498; rev:2;"
+}

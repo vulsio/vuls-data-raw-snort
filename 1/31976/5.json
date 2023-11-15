@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31976",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"OS-OTHER Bash CGI environment variable injection attempt\"; flow:to_server,established; http_client_body; content:\"() {\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:31976; rev:5;"
+}

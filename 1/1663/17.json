@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1663",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP *%20.pl access\"; flow:to_server,established; http_uri; content:\" .pl\",fast_pattern,nocase; pcre:\"/\\/[^\\r\\n]*\\x20.pl/i\"; metadata:ruleset community; service:http; reference:nessus,11007; reference:url,rtfm.vn.ua/inet/sec/cgi-bugs.htm; reference:url,www.securityfocus.com/archive/1/149482; classtype:web-application-attack; sid:1663; rev:17;"
+}

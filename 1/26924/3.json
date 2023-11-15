@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26924",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Potential Gozi Trojan HTTP Header Structure\"; flow:to_server,established; http_raw_uri; bufferlen:255<=>260; pkt_data; content:\"= HTTP/1.\",fast_pattern,nocase; http_uri; content:\".php?\"; http_header; content:!\"Accept\"; http_raw_uri; pcre:\"/^\\/[a-z]{2,20}\\.php\\?[a-z]{2,10}\\x3d[a-zA-Z0-9\\x2f\\x2b]+\\x3d$/\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:26924; rev:3;"
+}

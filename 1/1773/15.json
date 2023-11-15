@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1773",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP php.exe access\"; flow:to_server,established; http_uri; content:\"/php.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.securitytracker.com/alerts/2002/Jan/1003104.html; classtype:web-application-activity; sid:1773; rev:15;"
+}

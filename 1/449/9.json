@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "449",
+  "Rev": "9",
+  "Header": "alert icmp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP Time-To-Live Exceeded in Transit\"; icode:0; itype:11; metadata:ruleset community; classtype:misc-activity; sid:449; rev:9;"
+}

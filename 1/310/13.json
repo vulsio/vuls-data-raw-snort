@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "310",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL x86 windows MailMax overflow\"; flow:to_server,established; content:\"|EB|E|EB| [|FC|3|C9 B1 82 8B F3 80|+\",fast_pattern,nocase; metadata:ruleset community; service:smtp; reference:bugtraq,2312; reference:cve,1999-0404; classtype:attempted-admin; sid:310; rev:13;"
+}

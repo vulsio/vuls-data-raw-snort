@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1137",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Phorum authentication access\"; flow:to_server,established; content:\"PHP_AUTH_USER=boogieman\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2274; reference:cve,2000-1230; classtype:attempted-recon; sid:1137; rev:18;"
+}

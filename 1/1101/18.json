@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1101",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"INDICATOR-SCAN Webtrends HTTP probe\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Webtrends Security Analyzer|0D 0A|\"; metadata:ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:web-application-activity; sid:1101; rev:18;"
+}

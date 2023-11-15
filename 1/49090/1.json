@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49090",
+  "Rev": "1",
+  "Header": "alert tcp any any -> $HOME_NET 445",
+  "Option": "msg:\"SERVER-SAMBA Samba is_known_pipe arbitrary module load code execution attempt\"; flow:to_server,established; flowbits:isset,smb.tree.connect.ipc; content:\"|FF|SMB|A2 00 00 00 00|\",depth 9,offset 4; byte_test:2,=,1,1,relative,little,bitmask 0x8000; byte_extract:2,72,len,relative,little; content:\"/\",within 2; content:\"/\",within len,distance 2; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:netbios-ssn; reference:cve,2017-7494; reference:url,www.samba.org/samba/security/CVE-2017-7494.html; classtype:attempted-user; sid:49090; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1163",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP webdist.cgi access\"; flow:to_server,established; http_uri; content:\"/webdist.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,374; reference:cve,1999-0039; reference:nessus,10299; classtype:web-application-activity; sid:1163; rev:19;"
+}

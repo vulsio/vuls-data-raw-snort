@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2015",
+  "Rev": "14",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 111",
+  "Option": "msg:\"PROTOCOL-RPC portmap UNSET attempt UDP 111\"; flow:to_server; content:\"|00 01 86 A0|\",depth 4,offset 12; content:\"|00 00 00 02|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; service:sunrpc; reference:bugtraq,1892; reference:cve,2011-0321; classtype:rpc-portmap-decode; sid:2015; rev:14;"
+}

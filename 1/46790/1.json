@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46790",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Andr.Trojan.ZooPark outbound connection attempt\"; flow:to_server,established; http_uri; content:\"/spyMobile/upload.php\",fast_pattern,nocase; content:\"iemi=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/76fa36d35e0e16b0ea416726b0da2a66dfe7d7b35504cf6c475eac4cfa95fe3a/analysis; classtype:trojan-activity; sid:46790; rev:1;"
+}

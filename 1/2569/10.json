@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2569",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cPanel resetpass access\"; flow:to_server,established; http_uri; content:\"/resetpass\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9848; reference:cve,2004-1769; classtype:web-application-activity; sid:2569; rev:10;"
+}

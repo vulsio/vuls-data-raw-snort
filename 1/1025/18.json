@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1025",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS perl access\"; flow:to_server,established; http_uri; content:\"/scripts/perl\",nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1025; rev:18;"
+}

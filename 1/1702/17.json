@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1702",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Amaya templates sendtemp.pl access\"; flow:to_server,established; http_uri; content:\"/sendtemp.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2504; reference:cve,2001-0272; classtype:web-application-activity; sid:1702; rev:17;"
+}

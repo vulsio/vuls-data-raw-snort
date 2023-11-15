@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1519",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP apache ?M=D directory list attempt\"; flow:to_server,established; http_uri; content:\"/?M=D\"; metadata:ruleset community; service:http; reference:bugtraq,3009; reference:cve,2001-0731; reference:nessus,10704; classtype:web-application-activity; sid:1519; rev:16;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1735",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"BROWSER-OTHER Mozilla Netscape XMLHttpRequest local file read attempt\"; flow:to_client,established; file_data; content:\"new XMLHttpRequest|28|\"; content:\"file|3A|//\",nocase; metadata:ruleset community; service:http; reference:bugtraq,4628; reference:cve,2002-0354; classtype:web-application-attack; sid:1735; rev:13;"
+}

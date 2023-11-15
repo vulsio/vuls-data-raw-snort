@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "530",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
+  "Option": "msg:\"OS-WINDOWS NT NULL session\"; flow:to_server,established; content:\"|00 00 00 00|W|00|i|00|n|00|d|00|o|00|w|00|s|00| |00|N|00|T|00| |00|1|00|3|00|8|00|1\"; metadata:ruleset community; reference:bugtraq,1163; reference:cve,2000-0347; classtype:attempted-recon; sid:530; rev:14;"
+}

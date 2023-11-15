@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29261",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper variant outbound connection\"; flow:to_server,established; http_uri; bufferlen:19; content:\"/FileToDownload.exe\",fast_pattern,nocase; http_header; content:\"Host: dl.dropbox.com|0D 0A|\"; content:!\"Accept\"; content:!\"User-Agent\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1102; reference:url,file-analyzer.net/analysis/1087/5386/0/html; reference:url,www.virustotal.com/en/file/913cc54750e8bb6b88d5ccbfc988e0107f80ad14ba4d052a3f3db11ccfd8ce4a/analysis/; classtype:trojan-activity; sid:29261; rev:3;"
+}

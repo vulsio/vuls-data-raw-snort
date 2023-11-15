@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2570",
+  "Rev": "25",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP invalid HTTP version string\"; flow:to_server,established; content:\" HTTP/\",depth 300,nocase; isdataat:5,relative; content:!\"0.9\",within 3; content:!\"1.0\",within 3; content:!\"1.1\",within 3; pcre:!\"/^[^\\n]* HTTP\\x2f(0\\.9|1\\.[01])\\s*\\n/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,34240; reference:bugtraq,9809; reference:cve,2009-0478; reference:nessus,11593; classtype:non-standard-protocol; sid:2570; rev:25;"
+}

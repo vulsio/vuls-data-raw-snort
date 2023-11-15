@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1194",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP sojourn.cgi File attempt\"; flow:to_server,established; http_uri; content:\"/sojourn.cgi?\",nocase; content:\"cat=\",distance 0,nocase; pkt_data; content:\"%00\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1052; reference:cve,2000-0180; reference:nessus,10349; classtype:web-application-attack; sid:1194; rev:21;"
+}

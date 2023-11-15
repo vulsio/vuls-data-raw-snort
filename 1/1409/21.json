@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1409",
+  "Rev": "21",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161:162",
+  "Option": "msg:\"PROTOCOL-SNMP community string buffer overflow attempt\"; flow:to_server; content:\"|02 01 00 04 82 01 00|\",offset 4; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:cve,2002-0012; reference:cve,2002-0013; reference:url,www.cert.org/advisories/CA-2002-03.html; classtype:misc-attack; sid:1409; rev:21;"
+}

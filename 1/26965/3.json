@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26965",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Win32 Facebook Secure Cryptor C2\"; flow:to_server,established; http_uri; content:\"/forum/search.php?email=\"; content:\"&method=\",distance 0; http_header; content:!\"Referer\"; content:!\"Accept-\"; metadata:ruleset community; service:http; reference:url,blog.avast.com/2013/06/18/your-facebook-connection-is-now-secured; classtype:trojan-activity; sid:26965; rev:3;"
+}

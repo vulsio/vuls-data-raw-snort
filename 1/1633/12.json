@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1633",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"DELETED POLICY-SOCIAL AIM receive message\"; flow:to_client; content:\"*|02|\",depth 2; content:\"|00 04 00 07|\",depth 4,offset 6; metadata:ruleset community; classtype:policy-violation; sid:1633; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26381",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-OTHER UTF-8 BOM in zip file attachment detected\"; flow:to_client,established; file_data; content:\"|EF BB BF 50 4B 03 04|\",depth 7; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data, imap, pop3; classtype:trojan-activity; sid:26381; rev:5;"
+}

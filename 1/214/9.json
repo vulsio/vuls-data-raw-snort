@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "214",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+  "Option": "msg:\"MALWARE-BACKDOOR MISC Linux rootkit attempt lrkr0x\"; flow:to_server,established; content:\"lrkr0x\"; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1014; classtype:attempted-admin; sid:214; rev:9;"
+}

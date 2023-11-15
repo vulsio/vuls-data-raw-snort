@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1943",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP /Carello/add.exe access\"; flow:to_server,established; http_uri; content:\"/Carello/add.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1245; reference:cve,2000-0396; reference:nessus,11776; classtype:web-application-activity; sid:1943; rev:13;"
+}

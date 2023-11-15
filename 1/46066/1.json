@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46066",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.yty second stage downloader initial outbound connection\"; flow:to_server,established; http_uri; content:\"/football/goal\",fast_pattern,nocase; http_client_body; content:\"ball=\"; content:\"score=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.arbornetworks.com/blog/asert/donot-team-leverages-new-modular-malware-framework-south-asia/; classtype:trojan-activity; sid:46066; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "658",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL Microsoft Windows Exchange Server 5.5 mime DOS\"; flow:to_server,established; content:\"charset = |22 22|\",nocase; metadata:ruleset community; service:smtp; reference:bugtraq,1869; reference:cve,2000-1006; reference:nessus,10558; reference:url,technet.microsoft.com/en-us/security/bulletin/MS00-082; classtype:attempted-dos; sid:658; rev:19;"
+}

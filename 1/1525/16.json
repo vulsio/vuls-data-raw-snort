@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1525",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Axis Storpoint CD access\"; flow:to_server,established; http_uri; content:\"/config/html/cnf_gi.htm\"; metadata:ruleset community; service:http; reference:bugtraq,1025; reference:cve,2000-0191; reference:nessus,10023; classtype:web-application-activity; sid:1525; rev:16;"
+}

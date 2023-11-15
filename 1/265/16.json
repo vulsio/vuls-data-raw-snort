@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "265",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
+  "Option": "msg:\"OS-LINUX x86 Linux overflow attempt ADMv2\"; flow:to_server,established; content:\"|89 F7 29 C7 89 F3 89 F9 89 F2 AC|<|FE|\",fast_pattern,nocase; metadata:ruleset community; service:dns; classtype:attempted-admin; sid:265; rev:16;"
+}

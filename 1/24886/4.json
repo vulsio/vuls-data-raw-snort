@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "24886",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dorkbot variant outbound connection\"; flow:to_server,established; http_uri; content:\".php?ip=\"; content:\"&os=\",distance 0; content:\"&name=\",distance 0; content:\"&id=\",distance 0; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/c425af6875dff2c0627421086f66b7e058f51d22939478529702d193837c6cfe/analysis/; classtype:trojan-activity; sid:24886; rev:4;"
+}

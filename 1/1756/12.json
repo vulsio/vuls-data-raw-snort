@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1756",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS NewsPro administration authentication attempt\"; flow:to_server,established; content:\"logged,true\"; metadata:ruleset community; service:http; reference:bugtraq,4672; reference:cve,2002-1734; classtype:web-application-activity; sid:1756; rev:12;"
+}

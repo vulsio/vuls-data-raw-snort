@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "52549",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.XpertRAT outbound connection\"; flow:to_server,established; isdataat:!11; content:\"|7C|root|7C|\",depth 6,offset 3; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/gui/file/064d1d9a20f737679bb7ce912854c7ab29f78a0716ee8bc8dc69ade02acdca5a/detection; classtype:trojan-activity; sid:52549; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1436",
+  "Rev": "12",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"POLICY-MULTIMEDIA Apple Quicktime User Agent access\"; flow:to_server,established; content:\"User-Agent|3A| Quicktime\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:policy-violation; sid:1436; rev:12;"
+}

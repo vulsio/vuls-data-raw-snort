@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32065",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Asprox inbound connection\"; flow:to_client,established; http_header; content:\"Content-Length: 30\"; file_data; content:\"|3C|html|3E 3C|body|3E|hi!|3C 2F|body|3E 3C 2F|html|3E|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8ba8292eaa47967618c2376afe524736f4fa7eec15ed9cca17abfca692d26fe4/analysis/; classtype:trojan-activity; sid:32065; rev:3;"
+}

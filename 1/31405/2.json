@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31405",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-APACHE Apache Chunked-Encoding worm attempt\"; flow:to_server,established; content:\"Transfer-Encoding: Chunked\",fast_pattern,nocase; content:\"|0D 0A|\",distance 0; byte_test:8,>,2147483647,0,string,hex,relative; content:\"|20|\",within 9; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,4474; reference:bugtraq,4485; reference:bugtraq,5033; reference:cve,2002-0071; reference:cve,2002-0079; reference:cve,2002-0392; reference:nessus,10932; classtype:web-application-attack; sid:31405; rev:2;"
+}

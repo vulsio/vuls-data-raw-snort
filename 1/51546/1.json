@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "51546",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.ModularInstaller variant outbound connection detected\"; flow:to_server,established; http_uri; content:\"/webkit_cookies\"; http_header; content:\"X-Finder-\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.flashpoint-intel.com/blog/newly-discovered-malware-framework-cashing-in-on-ad-fraud/; classtype:trojan-activity; sid:51546; rev:1;"
+}

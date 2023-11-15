@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "712",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+  "Option": "msg:\"PROTOCOL-TELNET ld_library_path\"; flow:to_server,established; content:\"ld_library_path\",fast_pattern,nocase; metadata:ruleset community; service:telnet; reference:bugtraq,459; reference:cve,1999-0073; classtype:attempted-admin; sid:712; rev:16;"
+}

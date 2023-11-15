@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1704",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cal_make.pl directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/cal_make.pl\",nocase; pkt_data; content:\"p0=../../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2663; reference:cve,2001-0463; reference:nessus,10664; classtype:web-application-attack; sid:1704; rev:15;"
+}

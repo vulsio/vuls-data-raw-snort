@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "848",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP view-source directory traversal\"; flow:to_server,established; http_uri; content:\"/view-source\",fast_pattern,nocase; http_raw_uri; content:\"../\"; metadata:ruleset community; service:http; reference:bugtraq,2251; reference:bugtraq,8883; reference:cve,1999-0174; classtype:web-application-attack; sid:848; rev:20;"
+}

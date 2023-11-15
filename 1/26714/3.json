@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26714",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.BlackRev rev 2 outbound traffic\"; flow:to_server,established; http_uri; content:\"gate.php|3F|reg=\"; pcre:\"/gate\\x2ephp\\x3freg=[a-zA-Z]{15}/\"; http_header; content:\"User-Agent|3A| Mozilla/4.0",
+  "Option": "SEObot)|0D 0A|\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,ddos.arbornetworks.com/2013/05/the-revolution-will-be-written-in-delphi; classtype:trojan-activity; sid:26714; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2009",
+  "Rev": "7",
+  "Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
+  "Option": "msg:\"INDICATOR-COMPROMISE CVS invalid repository response\"; flow:to_client,established; content:\"error \"; content:\"|3A| no such repository\"; content:\"I HATE YOU\",fast_pattern,nocase; metadata:ruleset community; classtype:misc-attack; sid:2009; rev:7;"
+}

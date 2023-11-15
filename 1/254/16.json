@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "254",
+  "Rev": "16",
+  "Header": "alert udp $EXTERNAL_NET 53 -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-DNS SPOOF query response with TTL of 1 min. and no authority\"; flow:to_client; content:\"|81 80|\",depth 4,offset 2,fast_pattern; byte_test:2,>,0,0,relative,big; byte_test:2,>,0,2,relative,big; content:\"|00 00 00 00|\",within 4,distance 4; content:\"|C0 0C 00 01 00 01|\",distance 0; byte_test:4,<,61,0,relative,big; byte_test:4,>,0,0,relative,big; metadata:policy max-detect-ips drop,ruleset community; service:dns; classtype:bad-unknown; sid:254; rev:16;"
+}

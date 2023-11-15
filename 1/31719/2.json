@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31719",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"FILE-IMAGE Microsoft Multiple Products JPEG parser heap overflow attempt\"; flow:to_server,established; flowbits:isset,file.jpeg; file_data; content:\"|00 10|JFIF\",depth 6,offset 4; pcre:\"/^.{0,100}\\xFF[\\xE1\\xE2\\xED\\xFE]\\x00[\\x00\\x01]/s\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:bugtraq,11173; reference:cve,2004-0200; reference:url,www.microsoft.com/security/bulletins/200409_jpeg.mspx; classtype:attempted-user; sid:31719; rev:2;"
+}

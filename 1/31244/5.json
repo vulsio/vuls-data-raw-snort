@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31244",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [$HTTP_PORTS,443]",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kuluoz outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:43; pkt_data; content:\"POST /\",depth 6; content:\" HTTP/1.1\",within 9,distance 42; content:\"Firefox/\",distance 0; content:!\"|0D 0A|Accept-\"; pcre:\"/^POST\\x20\\x2f[A-F\\d]{42}\\x20HTTP/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/93a40a83977ca24df6e12d7d6f19a9b9d92cb3ea3174ea9d4398ad2048205c42/analysis/; classtype:trojan-activity; sid:31244; rev:5;"
+}

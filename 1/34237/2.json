@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34237",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE Eorezo get advertisement\"; flow:to_server,established; http_uri; content:\"/cgi-bin/advert/getads.cgi?\"; content:\"did=\",distance 0; http_header; content:\"User-Agent|3A 20|mpck_\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a31d47e5d6885c32cad2fb5799033982e7f9d070ed350cd2025dd8594d067651/analysis/1426449407/; classtype:misc-activity; sid:34237; rev:2;"
+}

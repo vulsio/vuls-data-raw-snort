@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1423",
+  "Rev": "24",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP content-disposition memchr overflow\"; flow:to_server,established; http_header; content:\"Content-Disposition|3A|\",nocase; pkt_data; content:\"name=|22 CC CC CC CC CC|\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4183; reference:cve,2002-0081; reference:nessus,10867; classtype:web-application-attack; sid:1423; rev:24;"
+}

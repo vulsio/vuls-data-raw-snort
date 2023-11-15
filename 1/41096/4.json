@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "41096",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Netgear WNR2000 hidden_lang_avi stack buffer overflow attempt\"; flow:to_server,established; http_uri; content:\"/lang_check\",nocase; http_client_body; content:\"hidden_lang_avi=\",nocase; isdataat:36,relative; content:!\"&\",within 36; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2016-10174; reference:url,seclists.org/fulldisclosure/2016/Dec/72; classtype:attempted-admin; sid:41096; rev:4;"
+}

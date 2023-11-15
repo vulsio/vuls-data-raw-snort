@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47650",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Marap outbound beacon detected\"; flow:to_server,established; http_uri; content:\"/dot.php\",fast_pattern,nocase; http_client_body; content:\"param=\",depth 6; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/bc1fc69f9747dc034ece7d9bb795c5e596d9be6ca71efe75c6c0fd18f3cbfbf5/analysis/; classtype:trojan-activity; sid:47650; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "118",
+  "Rev": "12",
+  "Header": "alert tcp $HOME_NET 666 -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR SatansBackdoor.2.0.Beta\"; flow:to_client,established; content:\"Remote|3A| \",depth 11,nocase; content:\"You are connected to me.|0D 0A|Remote|3A| Ready for commands\",distance 0,nocase; metadata:ruleset community; reference:url,www.megasecurity.org/trojans/s/satanzbackdoor/SBD2.0b.html; reference:url,www3.ca.com/securityadvisor/pest/pest.aspx?id=5260; classtype:trojan-activity; sid:118; rev:12;"
+}

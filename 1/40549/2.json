@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40549",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.CryPy ransomware variant outbound connection\"; flow:to_server,established; http_uri; content:\"/victim.php?info=\",fast_pattern,nocase; content:\"&ip=\"; content:\"info=\"; http_header; content:\"User-Agent|3A 20|Python-urllib/\"; content:!\"Accept\"; content:!\"Connection\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/de6da70478e7f84cd06ace1a0934cc9d5732f35aa20e960dc121fd8cf2388d6e/analysis/1477329470/; classtype:trojan-activity; sid:40549; rev:2;"
+}

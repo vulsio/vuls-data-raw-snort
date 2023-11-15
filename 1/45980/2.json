@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45980",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC MultiOS.Trojan.OSCelestial variant inbound connection\"; flow:to_client,established; content:\"|74 00 29|net.oscp.client.keylogger.KeystrokeLogger\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/9b4843ff0181af15a6c8478ca00aafd4296592a2985a480575810f4f64442742/analysis/; classtype:trojan-activity; sid:45980; rev:2;"
+}

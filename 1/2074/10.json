@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2074",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Mambo uploadimage.php upload php file attempt\"; flow:to_server,established; http_uri; content:\"/uploadimage.php\"; pkt_data; content:\"userfile_name=\"; content:\".php\",distance 1; metadata:ruleset community; service:http; reference:bugtraq,6572; reference:cve,2003-1204; reference:nessus,16315; classtype:web-application-attack; sid:2074; rev:10;"
+}

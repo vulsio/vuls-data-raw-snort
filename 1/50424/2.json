@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "50424",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent - BURAN - Win.Trojan.Buran\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|BURAN|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0bed6711e6db24563a66ee99928864e8cf3f8cff0636c1efca1b14ef15941603/analysis/; classtype:trojan-activity; sid:50424; rev:2;"
+}

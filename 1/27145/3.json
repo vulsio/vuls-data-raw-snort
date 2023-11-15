@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27145",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"DELETED MALWARE-CNC Win.Trojan.Seinup variant outbound connection\"; flow:to_server,established; http_uri; content:\"php|3F|\",fast_pattern,nocase; pcre:\"/\\x2ephp\\x3f[a-z0-9]{11,13}=.*?\\x26[a-z0-9]{3,5}=.*?\\x26[a-z0-9]{7,9}=.*?\\x26[a-z0-9]{14,16}=/\"; metadata:ruleset community; reference:url,www.fireeye.com/blog/technical/malware-research/2013/06/trojan-apt-seinup-hitting-asean.html; classtype:trojan-activity; sid:27145; rev:3;"
+}

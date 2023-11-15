@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "43981",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Andr.Trojan.Femas variant outbound connection\"; flow:to_server,established; http_client_body; content:\"did=\"; http_uri; content:\"/update/upfolder/updatefun.php\",fast_pattern,nocase; http_header; content:\"Dalvik/\"; content:\"Android\",within 25; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.lookout.com/blog/2017/02/16/viperrat-mobile-apt/; reference:url,securelist.com/blog/incidents/77562/breaking-the-weakest-link-of-the-strongest-chain/; classtype:trojan-activity; sid:43981; rev:2;"
+}

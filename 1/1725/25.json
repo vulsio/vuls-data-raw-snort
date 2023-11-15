@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1725",
+  "Rev": "25",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS +.htr code fragment attempt\"; flow:to_server,established; http_uri; content:\" .htr\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1488; reference:cve,2000-0630; reference:cve,2001-0004; reference:nessus,10680; reference:url,technet.microsoft.com/en-us/security/bulletin/MS00-044; reference:url,technet.microsoft.com/en-us/security/bulletin/ms01-004; classtype:web-application-attack; sid:1725; rev:25;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "317",
+  "Rev": "11",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 635",
+  "Option": "msg:\"OS-LINUX x86 Linux mountd overflow\"; flow:to_server; content:\"|EB|@^1|C0|@|89|F|04 89 C3|@|89 06|\"; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,121; reference:cve,1999-0002; classtype:attempted-admin; sid:317; rev:11;"
+}

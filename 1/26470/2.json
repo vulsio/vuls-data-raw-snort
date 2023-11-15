@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26470",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-OTHER Win.Trojan.Zeus Spam 2013 dated zip/exe HTTP Response - potential malware download\"; flow:to_client,established; content:\"-2013.zip|0D 0A|\",fast_pattern,nocase; http_header; content:\"-2013.zip|0D 0A|\"; content:\"-\",within 1,distance -14; file_data; content:\"-2013.exe\"; content:\"-\",within 1,distance -14; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2eff3ee6ac7f5bf85e4ebcbe51974d0708cef666581ef1385c628233614b22c0/analysis/; classtype:trojan-activity; sid:26470; rev:2;"
+}

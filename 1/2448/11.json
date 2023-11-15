@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2448",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP setinfo.hts access\"; flow:to_server,established; http_uri; content:\"/setinfo.hts\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9973; reference:cve,2004-1857; reference:nessus,12120; classtype:web-application-activity; sid:2448; rev:11;"
+}

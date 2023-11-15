@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32380",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 25",
+  "Option": "msg:\"FILE-IDENTIFY dib file attachment detected\"; flow:to_server,established; content:\".dib\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2edib/i\"; flowbits:set,file.bmp; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:smtp; reference:url,en.wikipedia.org/wiki/BMP_file_format; classtype:misc-activity; sid:32380; rev:12;"
+}

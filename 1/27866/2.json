@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27866",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"EXPLOIT-KIT Blackholev2/Darkleech exploit kit landing page\"; flow:to_client,established; file_data; content:\"<body><b></b><style>div{overflow|3A|hidden|3B|width|3A|1px|3B|height|3A|1px}</style><div>\",fast_pattern,nocase; flowbits:set,file.exploit_kit.jar; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:27866; rev:2;"
+}

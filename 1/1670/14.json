@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1670",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP /home/ftp access\"; flow:to_server,established; http_uri; content:\"/home/ftp\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11032; classtype:web-application-activity; sid:1670; rev:14;"
+}

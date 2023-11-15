@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47338",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.ARS VBS loader outbound connection\"; flow:to_server,established; http_uri; content:\"?os=\"; content:\"&user=\"; content:\"&av=\"; content:\"&fw=\"; content:\"&hwid=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.flashpoint-intel.com/blog/meet-ars-vbs-loader/; classtype:trojan-activity; sid:47338; rev:1;"
+}

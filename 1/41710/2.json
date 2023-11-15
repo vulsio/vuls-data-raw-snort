@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "41710",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"INDICATOR-COMPROMISE Binary file download request from internationalized domain name using Microsoft BITS\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Microsoft BITS\"; content:\"Host|3A 20|xn--\",fast_pattern,nocase; http_uri; pcre:\"/(\\x2ebat|\\x2eexe)$/smi\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:41710; rev:2;"
+}

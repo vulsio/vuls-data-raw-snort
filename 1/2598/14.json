@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2598",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Samba SWAT Authorization port 901 overflow attempt\"; flow:to_server,established; content:\"Authorization|3A| Basic\",nocase; pcre:\"/^Authorization\\x3a(\\s*|\\s*\\r?\\n\\s+)Basic\\s+=/smi\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,10780; reference:cve,2004-0600; classtype:web-application-attack; sid:2598; rev:14;"
+}

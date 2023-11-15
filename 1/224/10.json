@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "224",
+  "Rev": "10",
+  "Header": "alert icmp 3.3.3.3/32 any -> $EXTERNAL_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP Stacheldraht server spoof\"; icmp_id:666; itype:0; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:224; rev:10;"
+}

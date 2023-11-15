@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "233",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 27665",
+  "Option": "msg:\"MALWARE-OTHER Trin00 Attacker to Master default startup password\"; flow:established,to_server; content:\"betaalmostdone\"; metadata:ruleset community; reference:cve,2000-0138; reference:url,attack.mitre.org/techniques/T1078; classtype:attempted-dos; sid:233; rev:11;"
+}

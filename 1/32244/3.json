@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32244",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"BROWSER-FIREFOX Mozilla 1.0 Javascript arbitrary cookie access attempt\"; flow:to_server,established; file_data; content:\"javascript|3A|//\",fast_pattern,nocase; content:\"document.cookie\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:bugtraq,5293; reference:cve,2002-2314; classtype:attempted-user; sid:32244; rev:3;"
+}

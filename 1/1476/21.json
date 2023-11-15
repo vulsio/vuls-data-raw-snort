@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1476",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP sdbsearch.cgi access\"; flow:to_server,established; http_uri; content:\"/sdbsearch.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1658; reference:cve,2001-1130; reference:nessus,10503; reference:nessus,10720; classtype:attempted-recon; sid:1476; rev:21;"
+}

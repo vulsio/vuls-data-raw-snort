@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26842",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-BACKDOOR Win.Backdoor.Boda Malware Checkin\"; flow:to_server,established; http_client_body; content:\"macName=\",depth 60; content:\"&macOS=\",within 100; content:\"&macMac=\",within 200; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26842; rev:2;"
+}

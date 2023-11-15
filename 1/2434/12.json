@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2434",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP MDaemon form2raw.cgi access\"; flow:to_server,established; content:\"/form2raw.cgi\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,9317; reference:cve,2003-1200; reference:url,secunia.com/advisories/10512/; classtype:web-application-activity; sid:2434; rev:12;"
+}

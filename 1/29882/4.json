@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29882",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.WEC variant outbound connection\"; flow:to_server,established; isdataat:68; isdataat:!69; http_raw_uri; bufferlen:1; pkt_data; content:\"GET / HTTP/1.1|0D 0A|User-Agent: Mozilla/4.0|0D 0A|Host: checkip.dyndns.org|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/164c792247b2822ab1dce8271a9498d3c9172ff21d36feccf83265ded1be8d0b/analysis/; classtype:trojan-activity; sid:29882; rev:4;"
+}

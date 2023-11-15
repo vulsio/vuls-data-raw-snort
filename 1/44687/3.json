@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "44687",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt\"; flow:to_server,established; http_uri; content:\"/setup.cgi\",nocase; content:\"currentsetting.htm\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,60281; reference:url,www.exploit-db.com/exploits/25978/; classtype:attempted-admin; sid:44687; rev:3;"
+}

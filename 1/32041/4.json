@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32041",
+  "Rev": "4",
+  "Header": "alert udp $EXTERNAL_NET any -> $SIP_SERVERS $SIP_PORTS",
+  "Option": "msg:\"OS-OTHER Bash environment variable injection attempt\"; flow:stateless; sip_header; content:\"() {\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:sip; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:32041; rev:4;"
+}

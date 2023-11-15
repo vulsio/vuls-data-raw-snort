@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "48140",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Downloader.XAgent variant outbound connection\"; flow:to_server,established; http_uri; content:\"&itwm=\",fast_pattern,nocase; pcre:\"/&itwm=([a-z0-9\\-\\=]{1,50})/i\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/b814fdbb7cfe6e5192fe1126835b903354d75bfb15a6c262ccc2caf13a8ce4b6; classtype:trojan-activity; sid:48140; rev:2;"
+}

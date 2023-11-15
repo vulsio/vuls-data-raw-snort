@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1045",
+  "Rev": "15",
+  "Header": "alert tcp $HTTP_SERVERS $HTTP_PORTS -> $EXTERNAL_NET any",
+  "Option": "msg:\"SERVER-IIS Unauthorized IP Access Attempt\"; flow:to_client,established; content:\"403\"; content:\"Forbidden|3A|\"; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1045; rev:15;"
+}

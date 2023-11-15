@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "57541",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-BACKDOOR Perl.Backdoor.ATRIUM variant inbound cnc connection\"; flow:to_server,established; http_uri; content:\"/compcheckresult.cgi\",fast_pattern,nocase; content:\"id=\",nocase; pcre:\"/[?&]id=/i\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2021/04/suspected-apt-actors-leverage-bypass-techniques-pulse-secure-zero-day.html; classtype:trojan-activity; sid:57541; rev:1;"
+}

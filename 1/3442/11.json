@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3442",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 515",
+  "Option": "msg:\"OS-WINDOWS Microsoft Windows TCP print service overflow attempt\"; flow:to_server,established; pcre:\"/^(\\x03|\\x04|\\x05)/s\"; content:\"|00|\",within 497; content:\"|0A|\",within 497; metadata:ruleset community; reference:bugtraq,1082; reference:cve,2000-0232; reference:url,technet.microsoft.com/en-us/security/bulletin/MS00-021; classtype:attempted-dos; sid:3442; rev:11;"
+}

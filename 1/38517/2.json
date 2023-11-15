@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38517",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC binary download while video expected\"; flow:to_client,established; http_header; content:\"Content-Type|3A 20|video/quicktime|0D 0A 0D 0A|\"; file_data; content:\"MZ\",within 2; byte_jump:4,58,relative,little; content:\"PE|00 00|\",within 4,distance -64; metadata:impact_flag red,ruleset community; service:ftp-data, http, imap, pop3; reference:url,www.virustotal.com/en/file/38221267218184b17a78d8814d1bd06b12143be859488ae15ca0d754f32d60fc/analysis/1460472611/; classtype:trojan-activity; sid:38517; rev:2;"
+}

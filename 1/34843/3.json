@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34843",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent - EMERY - Win.Trojan.W97M\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|EMERY|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d0f0a446162c6dafc58e4034f4879275d3766f20336b6998cb5a5779d995a243/analysis/; classtype:trojan-activity; sid:34843; rev:3;"
+}

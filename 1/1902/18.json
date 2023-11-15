@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1902",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+  "Option": "msg:\"PROTOCOL-IMAP lsub literal overflow attempt\"; flow:to_server,established; content:\"LSUB\",fast_pattern,nocase; pcre:\"/\\sLSUB\\s[^\\n]*?\\s\\{/smi\"; byte_test:5,>,256,0,string,dec,relative; metadata:ruleset community; service:imap; reference:bugtraq,1110; reference:cve,2000-0284; reference:nessus,10374; classtype:misc-attack; sid:1902; rev:18;"
+}

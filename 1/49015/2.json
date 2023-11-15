@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49015",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 20256",
+  "Option": "msg:\"PROTOCOL-SCADA PCOM Get PLC Name binary request\"; flow:to_server,established; byte_test:1,=,102,2; content:\"|0C|\",depth 1,offset 18; metadata:policy max-detect-ips drop,ruleset community; reference:url,unitronicsplc.com; classtype:attempted-recon; sid:49015; rev:2;"
+}

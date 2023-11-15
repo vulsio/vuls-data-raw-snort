@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "632",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL expn cybercop attempt\"; flow:to_server,established; content:\"expn cybercop\",fast_pattern,nocase; metadata:ruleset community; service:smtp; classtype:protocol-command-decode; sid:632; rev:15;"
+}

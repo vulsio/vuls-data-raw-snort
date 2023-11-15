@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1200",
+  "Rev": "17",
+  "Header": "alert tcp $HTTP_SERVERS $HTTP_PORTS -> $EXTERNAL_NET any",
+  "Option": "msg:\"INDICATOR-COMPROMISE Invalid URL\"; flow:to_client,established; file_data; content:\"Invalid URL\",nocase; metadata:ruleset community; service:http; reference:url,technet.microsoft.com/en-us/security/bulletin/MS00-063; classtype:attempted-recon; sid:1200; rev:17;"
+}

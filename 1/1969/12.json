@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1969",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP ion-p access\"; flow:to_server,established; http_uri; content:\"/ion-p\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6091; reference:cve,2002-1559; reference:nessus,11729; classtype:web-application-activity; sid:1969; rev:12;"
+}

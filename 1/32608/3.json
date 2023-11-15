@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32608",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Sodebral HTTP Response attempt\"; flow:to_client,established; file_data; isdataat:!193; content:\"BRASIL\",depth 6; http_header; content:!\"Content-Length\"; content:\"Transfer-Encoding: chunked\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e0290c3900445dc00ca24888924e37fa6ac17ecaddc60591e32b81536b9f5ef7/analysis/; classtype:trojan-activity; sid:32608; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "39738",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Trans variant outbound connection\"; flow:to_server,established; http_uri; content:\"/site/images/banners/casecor21.gif\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a4c1234bb748f9bcabeb9ab990614fd4c1035135c5f5068fd42bace4b75fff0e/analysis/; classtype:trojan-activity; sid:39738; rev:3;"
+}

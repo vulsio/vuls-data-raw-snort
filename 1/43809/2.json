@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "43809",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 9080",
+  "Option": "msg:\"SERVER-WEBAPP Kaspersky Linux File Server WMC cross site request forgery attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/cgictl?action=setTaskSettings\",fast_pattern,nocase; http_client_body; content:\"settings={|22|\",nocase; content:\"taskId=\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,99330; reference:cve,2017-9810; reference:url,coresecurity.com/advisories/Kaspersky-Anti-Virus-File-Server-Multiple-Vulnerabilities; classtype:web-application-attack; sid:43809; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2572",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS SmarterTools SmarterMail login.aspx buffer overflow attempt\"; flow:to_server,established; http_uri; content:\"/login.aspx\",nocase; pkt_data; content:\"txtusername=\"; isdataat:980,relative; content:!\"|0A|\",within 980,nocase; metadata:ruleset community; service:http; reference:bugtraq,9805; reference:cve,2004-2585; classtype:web-application-attack; sid:2572; rev:12;"
+}

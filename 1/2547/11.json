@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2547",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER HP Web JetAdmin remote file upload attempt\"; flow:to_server,established; http_uri; content:\"/plugins/hpjwja/script/devices_update_printer_fw_upload.hts\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9971; reference:cve,2004-1856; classtype:web-application-activity; sid:2547; rev:11;"
+}

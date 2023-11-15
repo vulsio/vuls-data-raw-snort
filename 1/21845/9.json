@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21845",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-OTHER TDS Sutra - redirect received\"; flow:to_client,established; content:\"_0000=\",fast_pattern; http_cookie; content:\"SL_\"; content:\"_0000=\",within 8; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,wepawet.iseclab.org/view.php?hash=822b95927fd4d8bb6eb2e62f4e1ef645&t=1243359208&type=js; reference:url,www.nartv.org/tag/tds/; reference:url,xylibox.blogspot.com/2011/12/sutra-tds-v34.html; classtype:trojan-activity; sid:21845; rev:9;"
+}

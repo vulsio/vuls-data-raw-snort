@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28114",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Fareit variant outbound connection - /default.htm GET Encrypted Payload\"; flow:to_server,established; http_raw_uri; bufferlen:12; http_method; content:\"GET\"; http_uri; content:\"/default.htm\",fast_pattern,nocase; http_header; content:!\"Referer\"; content:!\"Accept\"; http_client_body; pcre:\"/[^\\r -~\\n]{4}/\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/0682508f3d7c85e086055ce943aeaa634484d8e0cb22be776bac6930b00fae49/analysis/; classtype:trojan-activity; sid:28114; rev:2;"
+}

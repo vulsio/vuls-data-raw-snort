@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1789",
+  "Rev": "12",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 6666:7000",
+  "Option": "msg:\"POLICY-SOCIAL IRC dns request\"; flow:to_server,established; content:\"USERHOST \"; metadata:ruleset community; classtype:policy-violation; sid:1789; rev:12;"
+}

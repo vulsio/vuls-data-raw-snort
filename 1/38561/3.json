@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38561",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.GateKeylogger plugins download attempt\"; flow:to_server,established; content:\".p HTTP/1.1\",fast_pattern,nocase; http_uri; content:\"/plugins/\"; pcre:\"/\\/plugins\\/[a-z]{3,10}\\.p/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1056; reference:url,attack.mitre.org/techniques/T1176; reference:url,www.virustotal.com/en/file/77c802db1731fa8dae1b03d978f89b046309adfa1237b1497a69ccb9c2d82c16/analysis/1459520578/; classtype:trojan-activity; sid:38561; rev:3;"
+}

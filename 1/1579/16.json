@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1579",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Domino webadmin.nsf access\"; flow:to_server,established; http_uri; content:\"/webadmin.nsf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9900; reference:bugtraq,9901; reference:cve,2004-2310; reference:cve,2004-2311; reference:cve,2004-2369; reference:nessus,10629; classtype:attempted-recon; sid:1579; rev:16;"
+}

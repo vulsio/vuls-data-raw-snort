@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "906",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion getfile.cfm access\"; flow:to_server,established; http_uri; content:\"/cfdocs/exampleapp/email/getfile.cfm\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,229; reference:cve,1999-0800; reference:cve,2001-0535; classtype:attempted-recon; sid:906; rev:22;"
+}

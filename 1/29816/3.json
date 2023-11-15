@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29816",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Jackpos outbound connection\"; flow:to_server, established; http_uri; content:\"/post\"; http_header; content:\"User-Agent: something\",fast_pattern,nocase; http_client_body; content:\"mac=\"; content:\"&t1=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/39c13ee490a2c4cf6f3aafe92734edbf2373f25cc6fab8e15cd4cf590f1abdf1/analysis; classtype:trojan-activity; sid:29816; rev:3;"
+}

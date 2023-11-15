@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1710",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP bbs_forum.cgi access\"; flow:to_server,established; http_uri; content:\"/bbs_forum.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2177; reference:cve,2001-0123; reference:url,www.cgisecurity.com/advisory/3.1.txt; classtype:web-application-activity; sid:1710; rev:18;"
+}

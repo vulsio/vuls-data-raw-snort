@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2002",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP remote include path attempt\"; flow:to_server,established; http_uri; content:\".php\",nocase; content:\"path=\",fast_pattern,nocase; pcre:\"/path=(https?|ftps?|php)/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/File_inclusion_vulnerability; reference:url,php.net/manual/en/function.include.php; classtype:web-application-attack; sid:2002; rev:18;"
+}

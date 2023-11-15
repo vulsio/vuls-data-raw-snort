@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "259",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
+  "Option": "msg:\"SERVER-OTHER Bind Buffer Overflow via NXT records named overflow ADM\"; flow:to_server,established; content:\"thisissometempspaceforthesockinaddrinyeahyeahiknowthisislamebutanywaywhocareshorizongotitworkingsoalliscool\",fast_pattern,nocase; metadata:ruleset community; service:dns; reference:bugtraq,788; reference:cve,1999-0833; classtype:attempted-admin; sid:259; rev:18;"
+}

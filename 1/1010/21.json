@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1010",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS encoding access\"; flow:to_server,established; content:\"%1u\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,886; reference:cve,2000-0024; reference:url,technet.microsoft.com/en-us/security/bulletin/MS99-061; classtype:web-application-activity; sid:1010; rev:21;"
+}

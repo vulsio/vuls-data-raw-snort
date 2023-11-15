@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1984",
+  "Rev": "12",
+  "Header": "alert udp $HOME_NET 4120 -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR DeepThroat 3.1 Server Response on port 4120\"; flow:to_client; content:\"Ahhhh My Mouth Is Open\"; metadata:ruleset community; reference:nessus,10053; classtype:trojan-activity; sid:1984; rev:12;"
+}

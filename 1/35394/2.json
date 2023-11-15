@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "35394",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.TorrentLocker/Teerac payment page request\"; flow:to_server,established; http_uri; content:\".php?user_code=\"; content:\"&user_pass=\",fast_pattern,nocase; http_header; content:\"Referer|3A|\"; content:\"tor\",within 30,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/4072beeaf09fe6fef48365f1c14fd800e21b32cfa2af561f515bc45372dd590d/analysis/; classtype:trojan-activity; sid:35394; rev:2;"
+}

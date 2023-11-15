@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32851",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"APP-DETECT Absolute Software Computrace outbound connection - search64.namequery.com\"; flow:to_server,established; http_header; content:\"Host|3A| search64.namequery.com|0D 0A|\",fast_pattern,nocase; content:\"TagId: \"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,absolute.com/support/consumer/technology_computrace; reference:url,attack.mitre.org/techniques/T1014; reference:url,www.blackhat.com/docs/us-14/materials/us-14-Kamlyuk-Kamluk-Computrace-Backdoor-Revisited.pdf; reference:url,www.blackhat.com/presentations/bh-usa-09/ORTEGA/BHUSA09-Ortega-DeactivateRootkit-PAPER.pdf; classtype:misc-activity; sid:32851; rev:3;"
+}

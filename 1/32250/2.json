@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32250",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Hydraq.variant outbound detected\"; flow:to_server,established; http_uri; content:\"/info.xml\"; http_header; content:\"Host:\"; content:\"update-adobe.com\",within 30; metadata:ruleset community; service:http; classtype:trojan-activity; sid:32250; rev:2;"
+}

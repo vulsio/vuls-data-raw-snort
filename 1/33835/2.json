@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "33835",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE User-Agent adware OutBrowse/Amonitize\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|\"; content:\" in my heart of heart.|0D 0A|\",within 150,fast_pattern; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:33835; rev:2;"
+}

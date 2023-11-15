@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "41337",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Andr.Trojan.Sysch variant outbound connection\"; flow:to_server,established; http_header; content:\"GZIPOK|3A 20|\",fast_pattern,nocase; content:\"CompGZ|3A 20|\"; content:\"ReqType|3A 20|\"; http_uri; content:\".do\"; http_header; content:!\"Accept\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/5a0bb7bba9153801fa88ef1bedfad564d95d2d61a23de8cb87af8b589207277f/analysis/1484684079/; reference:url,virustotal.com/en/file/82da35ab3b0a47fe8de8b0cc24d53711e17960f5887a16769e76650d9556b399/analysis/1484684069/; classtype:trojan-activity; sid:41337; rev:3;"
+}

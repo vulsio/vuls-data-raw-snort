@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "19190",
+  "Rev": "9",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 445",
+  "Option": "msg:\"NETBIOS SMB-DS Trans2 Distributed File System GET_DFS_REFERRAL request\"; flow:established,to_server; content:\"|00|\",offset 1; content:\"|FF|SMB2\",depth 5,offset 4; content:\"|00 00 00 00|\",within 4; content:\"|10 00|\",depth 2,offset 65; flowbits:set,smb.trans2.get_dfs_referral; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:netbios-ssn; classtype:protocol-command-decode; sid:19190; rev:9;"
+}

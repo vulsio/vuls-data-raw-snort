@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2330",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+  "Option": "msg:\"PROTOCOL-IMAP auth overflow attempt\"; flow:to_server,established; content:\"AUTH\"; isdataat:368,relative; content:!\"|0A|\",within 368; metadata:ruleset community; service:imap; reference:bugtraq,8861; reference:cve,2003-1177; reference:nessus,11910; classtype:misc-attack; sid:2330; rev:11;"
+}

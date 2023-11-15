@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31262",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Worm.VBNA variant outbound connection\"; flow:to_server,established; http_uri; content:\"/0.gif?\",depth 7; pkt_data; content:\" HTTP/1.1|0D 0A|Host: sstatic1.histats.com|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,malwr.com/analysis/NWI5M2QwY2QxZWIwNDU4NDliYjU5NWJmMzc0MzQ2MDE/; reference:url,www.virustotal.com/en/file/0a777870b65d3dc80b56baf77f6d9e342d25a1c7d670077eca14a0f4309f9e26/analysis/; reference:url,www.virustotal.com/en/file/b5a01ce5e2b074f40d86ecca802658a5c998b5bf452f164b1a76f8fa27f53b15/analysis/; classtype:trojan-activity; sid:31262; rev:4;"
+}

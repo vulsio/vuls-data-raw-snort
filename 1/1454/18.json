@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1454",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP wwwwais access\"; flow:to_server,established; http_uri; content:\"/wwwwais\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,2001-0223; reference:nessus,10597; classtype:attempted-recon; sid:1454; rev:18;"
+}

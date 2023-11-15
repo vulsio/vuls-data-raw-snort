@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26277",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Linksys E1500/E2500 apply.cgi submit_button page redirection attempt\"; flow:to_server,established; http_uri; content:\"/apply.cgi\",fast_pattern,nocase; http_raw_uri; content:\"submit_button\"; content:\"%0\",distance 0; pkt_data; pcre:\"/[?&]submit_button=[^&]+%0[^&]/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-admin; sid:26277; rev:5;"
+}

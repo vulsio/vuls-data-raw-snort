@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28156",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE Linkury outbound time check\"; flow:to_server,established; isdataat:71; isdataat:!72; http_raw_uri; bufferlen:8; pkt_data; content:\"/utc/now HTTP/1.1|0D 0A|Host: www.timeapi.org|0D 0A|Connection: Keep-Alive|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a2c4e162624ddb169542e12e148a3be6bfe79a1fed4adfb28ad1a308a0d1bade/analysis/1380219003/; classtype:trojan-activity; sid:28156; rev:4;"
+}

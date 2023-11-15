@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29666",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Linkup outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:20; http_method; content:\"POST\"; http_uri; content:\"/uplink.php?logo.jpg\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/5.0\"; http_client_body; content:\"token=\",depth 6; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.emsisoft.com/2014/02/03/malware-analysis-ransomware-linkup-blocks-dns-and-mines-bitcoins/; classtype:trojan-activity; sid:29666; rev:4;"
+}

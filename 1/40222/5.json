@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40222",
+  "Rev": "5",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET [500,848,4500,4848]",
+  "Option": "msg:\"SERVER-OTHER Cisco IOS Group-Prime SHA memory disclosure attempt\"; flow:to_server; dsize:>2000; content:\"|00 00 00 00 00 00 00 00|\",depth 8,offset 8; content:\"|00 00 00 01 00 00 00 01|\",depth 8,offset 32; content:\"|01 01 04 01|\",within 4,distance 4; content:\"|80 02 00 02 80 04 00 01 00 06|\",distance 0,fast_pattern; byte_test:2,>,2000,0,relative; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2016-6415; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160916-ikev1; classtype:attempted-recon; sid:40222; rev:5;"
+}

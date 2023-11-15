@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "43813",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Kaspersky Linux File Server WMC cross site scripting attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/cgictl\",fast_pattern,nocase; content:\"scriptName=\",nocase; pcre:\"/[?&]scriptName=[^&]*?([\\x22\\x27\\x3c\\x3e\\x28\\x29]|script|onload|src)/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,99330; reference:cve,2017-9813; reference:url,coresecurity.com/advisories/Kaspersky-Anti-Virus-File-Server-Multiple-Vulnerabilities; classtype:attempted-user; sid:43813; rev:2;"
+}

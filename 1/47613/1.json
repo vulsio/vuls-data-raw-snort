@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47613",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Joomla Proclaim biblestudy backup access attempt\"; flow:to_server,established; http_uri; content:\"/media/com_biblestudy/backup/\",fast_pattern,nocase; content:\".sql\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:47613; rev:1;"
+}

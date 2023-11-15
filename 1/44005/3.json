@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "44005",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Cisco DDR2200 ADSL gateway command injection attempt\"; flow:to_server,established; http_uri; content:\"waitPingqry\",fast_pattern,nocase; content:\"pingAddr=\",nocase; pcre:\"/[?&]pingAddr=[^&]*?([\\x60\\x3b\\x7c]|[\\x3c\\x3e\\x24]\\x28)/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2017-11588; reference:url,seclists.org/fulldisclosure/2017/Jul/26; classtype:web-application-attack; sid:44005; rev:3;"
+}

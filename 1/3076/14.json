@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3076",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+  "Option": "msg:\"PROTOCOL-IMAP UNSUBSCRIBE overflow attempt\"; flow:established,to_server; content:\"UNSUBSCRIBE\",nocase; isdataat:100; pcre:\"/^\\w+\\s+UNSUBSCRIBE\\s[^\\n]{100}/smi\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:imap; reference:bugtraq,11775; reference:bugtraq,15488; reference:cve,2004-1211; reference:cve,2005-3189; reference:nessus,15867; classtype:attempted-admin; sid:3076; rev:14;"
+}

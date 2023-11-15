@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29664",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.DomaIQ variant outbound connection\"; flow:to_server,established; content:\"/trace/Start HTTP/1.1|0D 0A|Host: \",fast_pattern,nocase; http_uri; content:\"/debug/Version/\",depth 15; http_header; content:!\"Accept\"; content:!\"User-Agent:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,file-analyzer.net/analysis/1546/6325/0/html#network; reference:url,www.virustotal.com/en/file/59795540fc058979c6be02351507330fce8a8d3c6f10cbcd4ee21ab0144b9a7f/analysis/1390421409/; classtype:trojan-activity; sid:29664; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3016",
+  "Rev": "10",
+  "Header": "alert tcp $HOME_NET 63536 -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Insane Network 4.0 connection port 63536\"; flow:to_client,established; content:\"Insane Network vs 4.0 by Suid Flow|0A 0D|www.blackcode.com|0A 0D|[r00t]|23|\",depth 62; metadata:ruleset community; classtype:misc-activity; sid:3016; rev:10;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45983",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"POLICY-OTHER Sandvine PacketLogic http redirection attempt\"; flow:to_client,established; content:\"Temporary Redirect\",fast_pattern,nocase; id:13330; fragbits:!MDR; flags:FA; http_stat_code; content:\"307\",depth 3; http_stat_msg; content:\"Temporary Redirect\",nocase; metadata:ruleset community; service:http; reference:url,citizenlab.ca/2018/03/bad-traffic-sandvines-packetlogic-devices-deploy-government-spyware-turkey-syria; reference:url,github.com/citizenlab/badtraffic; classtype:misc-activity; sid:45983; rev:3;"
+}

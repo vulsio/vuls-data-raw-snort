@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34365",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Magento remote code execution attempt\"; flow:to_server,established; http_uri; content:\"/Adminhtml_\"; content:\"forwarded=\",distance 0; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2015-1398; classtype:attempted-admin; sid:34365; rev:3;"
+}

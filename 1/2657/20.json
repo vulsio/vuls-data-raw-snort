@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2657",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 443",
+  "Option": "msg:\"SERVER-WEBAPP SSLv2 Client_Hello with pad Challenge Length overflow attempt\"; flow:to_server,established; ssl_version:sslv2; ssl_state:client_hello; content:\"|01 00 02|\",depth 3,offset 2; byte_test:2,>,32,9; metadata:policy max-detect-ips drop,ruleset community; service:ssl; classtype:attempted-admin; sid:2657; rev:20;"
+}

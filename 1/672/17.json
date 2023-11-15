@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "672",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL vrfy decode\"; flow:to_server,established; content:\"vrfy\",nocase; content:\"decode\",distance 1,nocase; pcre:\"/^vrfy\\s+decode/smi\"; metadata:ruleset community; service:smtp; reference:cve,1999-0096; classtype:attempted-recon; sid:672; rev:17;"
+}

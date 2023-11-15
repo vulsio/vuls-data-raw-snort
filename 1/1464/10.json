@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1464",
+  "Rev": "10",
+  "Header": "alert tcp $HOME_NET 8002 -> $EXTERNAL_NET any",
+  "Option": "msg:\"INDICATOR-COMPROMISE oracle one hour install\"; flow:to_client,established; content:\"Oracle Applications One-Hour Install\"; metadata:ruleset community; reference:nessus,10737; classtype:bad-unknown; sid:1464; rev:10;"
+}

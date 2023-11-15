@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1787",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP csPassword.cgi access\"; flow:to_server,established; http_uri; content:\"/csPassword.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4885; reference:bugtraq,4886; reference:bugtraq,4887; reference:bugtraq,4889; reference:cve,2002-0917; reference:cve,2002-0918; classtype:web-application-activity; sid:1787; rev:15;"
+}

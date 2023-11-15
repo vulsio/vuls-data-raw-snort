@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2248",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS DirectoryListing.asp access\"; flow:to_server,established; http_uri; content:\"/DirectoryListing.asp\",nocase; metadata:ruleset community; service:http; reference:cve,2001-0938; classtype:web-application-activity; sid:2248; rev:15;"
+}

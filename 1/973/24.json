@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "973",
+  "Rev": "24",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS *.idc attempt\"; flow:to_server,established; http_uri; content:\"/*.idc\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1448; reference:cve,1999-0874; reference:cve,2000-0661; classtype:web-application-attack; sid:973; rev:24;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56599",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Backdoor.CSBundle_Original stager outbound connection attempt\"; flow:to_server,established; http_header; content:\"Accept: */*\"; content:\"Accept-Language: en-US\"; content:\"Accept-Encoding: gzip, deflate\"; http_cookie; content:\"Cookie: SIDCC=AN0-TYutOSq-fxZK6e4kagm70VyKACiG1susXcYRuxK08Y-rHysliq0LWklTqjtulAhQOPH8uA\"; http_uri; content:\"/api/v1/user\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56599; rev:1;"
+}

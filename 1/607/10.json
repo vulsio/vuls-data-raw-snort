@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "607",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 514",
+  "Option": "msg:\"PROTOCOL-SERVICES rsh bin\"; flow:to_server,established; content:\"bin|00|bin|00|\",fast_pattern,nocase; metadata:ruleset community; classtype:attempted-user; sid:607; rev:10;"
+}

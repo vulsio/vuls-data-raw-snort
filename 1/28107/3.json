@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28107",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Banload download\"; flow:to_server,established; http_uri; content:\".jpg\"; content:\"User-Agent|3A| runddll32.exe\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.nyxbone.com/malware/banload.html; classtype:trojan-activity; sid:28107; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32503",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"DELETED BLACKLIST User-Agent known malicious user-agent string myupdate\"; flow:to_server,established; content:\"User-Agent: myupdate\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/c9189ab85dcb7782bd048d1b91b6c2c414d6f7e7197f1e7a11189a92ad43c9f7/analysis/; classtype:trojan-activity; sid:32503; rev:2;"
+}

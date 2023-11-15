@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28945",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"INDICATOR-COMPROMISE exe.exe download\"; flow:to_server,established; http_raw_uri; bufferlen:>7; http_uri; content:\"/exe.exe\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,urlquery.net/search.php?q=%5C%2F%5BEe%5D%5BXx%5D%5BEe%5D%5C.%5BEe%5D%5BXx%5D%5BEe%5D%24&type=regexp&start=2013-11-21&end=2013-12-06&max=400; classtype:trojan-activity; sid:28945; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1259",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP SWEditServlet access\"; flow:to_server,established; http_uri; content:\"/SWEditServlet\"; metadata:ruleset community; service:http; reference:bugtraq,2868; classtype:attempted-recon; sid:1259; rev:14;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "967",
+  "Rev": "26",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage dvwssr.dll access\"; flow:to_server,established; http_uri; content:\"/dvwssr.dll\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1108; reference:bugtraq,1109; reference:cve,2000-0260; reference:nessus,10369; reference:url,technet.microsoft.com/en-us/security/bulletin/ms00-025; classtype:web-application-activity; sid:967; rev:26;"
+}

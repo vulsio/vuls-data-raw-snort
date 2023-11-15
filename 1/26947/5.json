@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26947",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"EXPLOIT-KIT DotkaChef/Rmayana/DotCache exploit kit inbound java exploit download\"; flow:to_client,established; http_header; content:\"filename=atom.jar\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2013-2423; reference:url,www.basemont.com/new_exploit_kit_june_2013; classtype:trojan-activity; sid:26947; rev:5;"
+}

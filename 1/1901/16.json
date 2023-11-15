@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1901",
+  "Rev": "16",
+  "Header": "alert tcp $HOME_NET 751 -> $EXTERNAL_NET any",
+  "Option": "msg:\"SERVER-OTHER successful kadmind buffer overflow attempt\"; flow:to_client,established; content:\"*GOBBLE*\",depth 8; metadata:ruleset community; reference:bugtraq,5731; reference:bugtraq,6024; reference:cve,2002-1226; reference:cve,2002-1235; reference:url,www.kb.cert.org/vuls/id/875073; classtype:successful-admin; sid:1901; rev:16;"
+}

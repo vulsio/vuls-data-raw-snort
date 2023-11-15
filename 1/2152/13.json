@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2152",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP test.php access\"; flow:to_server,established; http_uri; content:\"/test.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11617; classtype:web-application-activity; sid:2152; rev:13;"
+}

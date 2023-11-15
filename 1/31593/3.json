@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31593",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Andr.Trojan.SMSSend outbound connection\"; flow:to_server,established; http_uri; content:\"sms\"; content:\".ashx?t=\",fast_pattern,nocase; http_header; content:!\"User-Agent|3A 20|\"; content:!\"Accept|3A 20|\"; content:!\"Content-Type|3A 20|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a70a62ac920e83bab5e3e38ac8853ca3f45b6022f4d4ca47c9ae5cb9049700bb/analysis/1406724303/; classtype:trojan-activity; sid:31593; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2449",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP ALLO overflow attempt\"; flow:to_server,established; content:\"ALLO\",nocase; isdataat:200,relative; pcre:\"/^ALLO(?!\\n)\\s[^\\n]{200}/smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,9953; reference:cve,2004-1883; reference:nessus,14598; classtype:attempted-admin; sid:2449; rev:12;"
+}

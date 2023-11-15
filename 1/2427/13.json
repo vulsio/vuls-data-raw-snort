@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2427",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 119",
+  "Option": "msg:\"PROTOCOL-NNTP checkgroups overflow attempt\"; flow:to_server,established; content:\"checkgroups\",fast_pattern,nocase; pcre:\"/^checkgroups\\x3a[^\\n]{21}/smi\"; metadata:ruleset community; reference:bugtraq,9382; reference:cve,2004-0045; reference:nessus,11984; classtype:attempted-admin; sid:2427; rev:13;"
+}

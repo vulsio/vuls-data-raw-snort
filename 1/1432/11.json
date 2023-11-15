@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1432",
+  "Rev": "11",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"PUA-P2P GNUTella client request\"; flow:to_server,established; content:\"GNUTELLA\",depth 8; metadata:ruleset community; classtype:policy-violation; sid:1432; rev:11;"
+}

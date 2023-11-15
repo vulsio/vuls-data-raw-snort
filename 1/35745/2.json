@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "35745",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"INDICATOR-COMPROMISE Wild Neutron potential exploit attempt\"; flow:to_server,established; http_raw_uri; bufferlen:>25; http_uri; content:\".swf?\"; content:\"styleid=\",distance 0; content:\"&langid=\",distance 0; content:\"&sid=\",distance 0; content:\"&d=\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/; classtype:trojan-activity; sid:35745; rev:2;"
+}

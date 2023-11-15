@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2614",
+  "Rev": "6",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE time_zone buffer overflow attempt\"; flow:to_server,established; content:\"TIME_ZONE\",nocase; pcre:\"/TIME_ZONE\\s*=\\s*((\\x27[^\\x27]{1000,})|(\\x22[^\\x22]{1000,}))/msi\"; metadata:ruleset community; reference:bugtraq,9587; reference:cve,2003-1208; reference:nessus,12047; reference:url,www.nextgenss.com/advisories/ora_time_zone.txt; classtype:attempted-user; sid:2614; rev:6;"
+}

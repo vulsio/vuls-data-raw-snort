@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26923",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_uri; content:\"/images/\"; content:\".php?id=\",distance 1; pcre:\"/\\/images\\/[a-zA-Z]\\.php\\?id\\=[0-9]{2,3}(\\.\\d)?$/i\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:26923; rev:3;"
+}

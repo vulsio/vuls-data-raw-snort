@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1992",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP LIST directory traversal attempt\"; flow:to_server,established; content:\"LIST\",nocase; content:\"..\",distance 1; content:\"..\",distance 1; metadata:ruleset community; service:ftp; reference:bugtraq,2618; reference:cve,2001-0680; reference:cve,2002-1054; reference:nessus,11112; classtype:protocol-command-decode; sid:1992; rev:14;"
+}

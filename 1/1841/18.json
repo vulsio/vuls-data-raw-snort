@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1841",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"BROWSER-FIREFOX Mozilla 1.0 Javascript arbitrary cookie access attempt\"; flow:to_client,established; file_data; content:\"javascript|3A|//\",fast_pattern,nocase; content:\"document.cookie\",nocase; metadata:ruleset community; service:http; reference:bugtraq,5293; reference:cve,2002-2314; classtype:attempted-user; sid:1841; rev:18;"
+}

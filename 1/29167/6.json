@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29167",
+  "Rev": "6",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"EXPLOIT-KIT CritX exploit kit payload download attempt\"; flow:to_client,established; http_header; content:\".exe|0D 0A|\",fast_pattern,nocase; content:\"filename=\"; content:\".exe|0D 0A|\",within 6,distance 24; pcre:\"/filename=(?![a-f]{24}|\\d{24})[a-f\\d]{24}\\.exe\\r\\n/\"; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; classtype:trojan-activity; sid:29167; rev:6;"
+}

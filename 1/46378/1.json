@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46378",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $FILE_DATA_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper variant outbound connection\"; flow:established,to_server; http_client_body; content:\"IHkoeWRrcnkpIikqNy95ZCB5LSl5ZCB5\",depth 40,fast_pattern; http_header; content:!\"Referer|3A|\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/fd08f6bc823cbfa495f0568ba4284e02f1cad57e56bd04ef0a0b948ea9dddee4/details; classtype:trojan-activity; sid:46378; rev:1;"
+}

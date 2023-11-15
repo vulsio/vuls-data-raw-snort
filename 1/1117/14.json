@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1117",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Lotus EditDoc attempt\"; flow:to_server,established; http_uri; content:\"?EditDocument\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.securiteam.com/exploits/5NP080A1RE.html; classtype:attempted-recon; sid:1117; rev:14;"
+}

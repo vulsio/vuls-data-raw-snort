@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "212",
+  "Rev": "7",
+  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+  "Option": "msg:\"MALWARE-BACKDOOR MISC rewt attempt\"; flow:to_server,established; content:\"rewt\"; metadata:ruleset community; classtype:attempted-admin; sid:212; rev:7;"
+}

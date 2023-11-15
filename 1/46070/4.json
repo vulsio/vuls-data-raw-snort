@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46070",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.yty file exfiltration outbound request\"; flow:to_server,established; http_header; content:\"Expect: 100-continue\",fast_pattern,nocase; http_client_body; content:\"id=\",depth 3; content:\"&pc=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1020; reference:url,www.arbornetworks.com/blog/asert/donot-team-leverages-new-modular-malware-framework-south-asia/; classtype:trojan-activity; sid:46070; rev:4;"
+}

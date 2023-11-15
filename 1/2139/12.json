@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2139",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP /*.shtml access\"; flow:to_server,established; http_uri; content:\"/*.shtml\"; metadata:ruleset community; service:http; reference:bugtraq,1517; reference:cve,2000-0683; reference:nessus,11604; classtype:web-application-activity; sid:2139; rev:12;"
+}

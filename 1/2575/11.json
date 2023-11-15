@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2575",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Opt-X header.php remote file include attempt\"; flow:to_server,established; http_uri; content:\"/header.php\",nocase; pkt_data; content:\"systempath=\",fast_pattern,nocase; pcre:\"/systempath=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,9732; reference:cve,2004-2368; classtype:web-application-attack; sid:2575; rev:11;"
+}

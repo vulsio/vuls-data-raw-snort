@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46782",
+  "Rev": "6",
+  "Header": "alert tcp $EXTERNAL_NET [443,8443] -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Unix.Trojan.Vpnfilter variant SSL connection attempt\"; flow:to_client,established; content:\"|09 4D 69 63 72 6F 73 6F 66 74 31 10 30 0E 06 03 55 04 0B 13 07 53 75 70 70 6F 72 74 31 0B 30 09 06 03 55 04 03 13 02 63 61|\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,blog.talosintelligence.com/2018/05/VPNFilter.html; classtype:trojan-activity; sid:46782; rev:6;"
+}

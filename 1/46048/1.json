@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46048",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gen variant outbound communication\"; flow:established,to_server; http_uri; content:\"/A56WY\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,us-cert.gov/ncas/alerts/TA17-293A; classtype:trojan-activity; sid:46048; rev:1;"
+}

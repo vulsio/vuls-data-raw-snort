@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27533",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Potential Win.Trojan.Kraziomel Download - 000.jpg\"; flow:to_server,established; http_raw_uri; bufferlen:8; http_uri; content:\"/000.jpg\",fast_pattern,nocase; pkt_data; content:\"HTTP/1.0|0D 0A|Host: \"; content:!\"|3A 20|\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/33525f8cf5ca951095d4af7376e026821b81557526d4846916805387fb9c5bb2/analysis/; classtype:trojan-activity; sid:27533; rev:4;"
+}

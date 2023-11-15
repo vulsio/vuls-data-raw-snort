@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "35746",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_uri; content:\"/atomic.php\",fast_pattern,nocase; http_header; content:\"|0D 0A|User-Agent: Mozilla/4.0|0D 0A|\"; http_client_body; content:\"|A0 CD 37 A4 5B|\",depth 5; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a7009a6ed3ff0191e3c8e7f8b27b9b16afe2a82d1eb131ecd27d8f8a5b17e819/analysis/; classtype:trojan-activity; sid:35746; rev:2;"
+}

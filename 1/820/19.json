@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "820",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP anaconda directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/apexec.pl\"; pkt_data; content:\"template=../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2338; reference:bugtraq,2388; reference:cve,2000-0975; reference:cve,2001-0308; reference:nessus,10536; classtype:web-application-attack; sid:820; rev:19;"
+}

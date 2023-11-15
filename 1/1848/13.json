@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1848",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP webcart-lite access\"; flow:to_server,established; http_uri; content:\"/webcart-lite/\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-0610; reference:nessus,10298; classtype:web-application-activity; sid:1848; rev:13;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1024",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS newdsn.exe access\"; flow:to_server,established; http_uri; content:\"/scripts/tools/newdsn.exe\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1818; reference:cve,1999-0191; reference:nessus,10360; classtype:web-application-activity; sid:1024; rev:20;"
+}

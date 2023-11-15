@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2055",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Bugtraq enter_bug.cgi access\"; flow:to_server,established; http_uri; content:\"/enter_bug.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3272; reference:cve,2002-0008; classtype:web-application-activity; sid:2055; rev:15;"
+}

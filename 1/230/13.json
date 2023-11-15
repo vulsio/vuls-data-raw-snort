@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "230",
+  "Rev": "13",
+  "Header": "alert tcp $HOME_NET 20432 -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-OTHER shaft client login to handler\"; flow:to_client,established; content:\"login|3A|\",fast_pattern,nocase; metadata:ruleset community; reference:cve,2000-0138; reference:url,security.royans.net/info/posts/bugtraq_ddos3.shtml; classtype:attempted-dos; sid:230; rev:13;"
+}

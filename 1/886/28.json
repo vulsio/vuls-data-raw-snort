@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "886",
+  "Rev": "28",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP phf access\"; flow:to_server,established; http_uri; content:\"/phf\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,629; reference:cve,1999-0067; classtype:web-application-activity; sid:886; rev:28;"
+}

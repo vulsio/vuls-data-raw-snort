@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56613",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> any $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Rat.Tool.FeyeYelp variant outbound beacon attempt\"; flow:to_server,established; content:\"_gat_global=1\",fast_pattern,nocase,nocase; http_cookie; content:\"_gat_global=1\",nocase; content:\"recent_locations\",nocase; content:\"_gat_www=1\",nocase; content:\"bse=\",nocase; pcre:\"/bse=[^&\\x3B]{128}/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56613; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2257",
+  "Rev": "16",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 135",
+  "Option": "msg:\"OS-WINDOWS DCERPC Messenger Service buffer overflow attempt\"; content:\"|04 00|\",depth 2; byte_test:1,>,15,2,relative; byte_jump:4,86,little,align,relative; byte_jump:4,8,little,align,relative; byte_test:4,>,1024,0,little,relative; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,8826; reference:cve,2003-0717; reference:nessus,11888; reference:nessus,11890; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-043; classtype:attempted-admin; sid:2257; rev:16;"
+}

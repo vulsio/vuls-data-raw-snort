@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2561",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 873",
+  "Option": "msg:\"SERVER-OTHER rsync backup-dir directory traversal attempt\"; flow:to_server,established; content:\"--backup-dir\",fast_pattern,nocase; pcre:\"/--backup-dir\\s+\\x2e\\x2e\\x2f/\"; metadata:ruleset community; reference:bugtraq,10247; reference:cve,2004-0426; reference:nessus,12230; classtype:string-detect; sid:2561; rev:8;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1073",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP webhits.exe access\"; flow:to_server,established; http_uri; content:\"/scripts/samples/search/webhits.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,950; reference:cve,2000-0097; classtype:web-application-activity; sid:1073; rev:15;"
+}

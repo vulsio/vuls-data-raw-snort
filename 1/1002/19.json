@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1002",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS cmd.exe access\"; flow:to_server,established; http_uri; content:\"cmd.exe\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:web-application-attack; sid:1002; rev:19;"
+}

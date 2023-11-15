@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46339",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Ransomware.Matrix outbound connection\"; flow:to_server,established; http_uri; content:\"add.php?apikey=\"; content:\"&compuser=\"; content:\"&sid=\"; content:\"&phase=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/#/file/996ea85f12a17e8267dcc32eae9ad20cff44115182e707153006162711fbe3c9/detection; classtype:trojan-activity; sid:46339; rev:3;"
+}

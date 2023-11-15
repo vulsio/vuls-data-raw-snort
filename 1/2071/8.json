@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2071",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP post32.exe access\"; flow:to_server,established; http_uri; content:\"/post32.exe\"; metadata:ruleset community; service:http; reference:bugtraq,1485; classtype:web-application-activity; sid:2071; rev:8;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "51484",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-OTHER ANDR.Trojan.Agent outbound connection attempt\"; flow:to_server,established; http_uri; content:\"/recv_android.php\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2bbd16a5c6e8f59cc221500b680af434785611de1194216d47ef10c52b2032e1/analysis/; classtype:trojan-activity; sid:51484; rev:1;"
+}

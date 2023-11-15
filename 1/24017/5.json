@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "24017",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-OTHER Possible malicious redirect - rebots.php\"; flow:to_server,established; http_uri; content:\"/rebots.php\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2012/08/rebots-php-javascript-malware-being-actively-injected.html; reference:url,labs.sucuri.net/db/malware/mwjs-include-rebots; classtype:misc-activity; sid:24017; rev:5;"
+}

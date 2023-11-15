@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1623",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP invalid MODE\"; flow:to_server,established; content:\"MODE\",fast_pattern,nocase; pcre:\"/^MODE\\s+[^ABSC]{1}/msi\"; metadata:ruleset community; service:ftp; reference:url,www.faqs.org/rfcs/rfc959.html; classtype:protocol-command-decode; sid:1623; rev:14;"
+}

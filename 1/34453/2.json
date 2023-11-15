@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34453",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Bancos variant outbound connection\"; flow:to_server,established; http_client_body; content:\"sname=\",depth 6; pkt_data; content:\".php HTTP/1.0|0D 0A|\"; http_header; content:\"User-Agent: Mozilla/3.0",
+  "Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/6ca7047c377ad26b9db86c4028b59aa2f6600bfbdb74f1af3519ebf10314b3a6/analysis/; classtype:trojan-activity; sid:34453; rev:2;"
+}

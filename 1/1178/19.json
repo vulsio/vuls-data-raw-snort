@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1178",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Phorum read access\"; flow:to_server,established; http_uri; content:\"/read.php3\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:1178; rev:19;"
+}

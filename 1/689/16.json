@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "689",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 139",
+  "Option": "msg:\"SERVER-MSSQL xp_reg* registry access\"; flow:to_server,established; content:\"x|00|p|00|_|00|r|00|e|00|g|00|\",depth 32,offset 32,nocase; metadata:ruleset community; reference:bugtraq,5205; reference:cve,2002-0642; reference:nessus,10642; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-034; classtype:attempted-user; sid:689; rev:16;"
+}

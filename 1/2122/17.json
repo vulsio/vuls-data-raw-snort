@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2122",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
+  "Option": "msg:\"PROTOCOL-POP UIDL negative argument attempt\"; flow:to_server,established; content:\"UIDL\",fast_pattern,nocase; pcre:\"/^UIDL\\s+-\\d/smi\"; metadata:ruleset community; service:pop3; reference:bugtraq,6053; reference:cve,2002-1539; reference:nessus,11570; classtype:misc-attack; sid:2122; rev:17;"
+}

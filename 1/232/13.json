@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "232",
+  "Rev": "13",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 31335",
+  "Option": "msg:\"MALWARE-OTHER Trin00 Daemon to Master *HELLO* message detected\"; flow:to_server; content:\"*HELLO*\"; metadata:ruleset community; reference:cve,2000-0138; reference:url,www.sans.org/newlook/resources/IDFAQ/trinoo.htm; classtype:attempted-dos; sid:232; rev:13;"
+}

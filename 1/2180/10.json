@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2180",
+  "Rev": "10",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"PUA-P2P BitTorrent announce request\"; flow:to_server,established; content:\"/announce\"; content:\"info_hash=\"; content:\"peer_id=\"; content:\"event=\"; metadata:ruleset community; service:http; classtype:policy-violation; sid:2180; rev:10;"
+}

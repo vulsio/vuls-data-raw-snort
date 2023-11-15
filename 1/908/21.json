@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "908",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion administrator access\"; flow:to_server,established; http_uri; content:\"/cfide/administrator/index.cfm\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1314; reference:cve,2000-0538; reference:nessus,10581; classtype:attempted-recon; sid:908; rev:21;"
+}

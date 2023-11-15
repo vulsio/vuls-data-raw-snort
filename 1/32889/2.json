@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32889",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"FILE-IMAGE Microsoft and libpng multiple products PNG large image width overflow attempt\"; flow:to_server,established; flowbits:isset,file.png; file_data; content:\"|89|PNG|0D 0A 1A 0A|\"; content:\"IHDR\",within 8; byte_test:4,>,32767,0,relative; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:bugtraq,11523; reference:cve,2004-0990; reference:cve,2004-1244; reference:cve,2007-5503; reference:url,sourceforge.net/p/png-mng/mailman/message/33173462/; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-009; classtype:attempted-user; sid:32889; rev:2;"
+}

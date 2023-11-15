@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1656",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP pfdispaly.cgi access\"; flow:to_server,established; http_uri; content:\"/pfdispaly.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,64; reference:cve,1999-0270; reference:nessus,10174; classtype:web-application-activity; sid:1656; rev:19;"
+}

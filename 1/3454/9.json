@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3454",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 617",
+  "Option": "msg:\"SERVER-OTHER Arkeia client backup generic info probe\"; flow:to_server,established; content:\"ARKFS|00|root|00|root\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:bugtraq,12594; reference:cve,2005-0491; classtype:attempted-recon; sid:3454; rev:9;"
+}

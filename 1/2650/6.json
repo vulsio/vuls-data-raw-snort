@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2650",
+  "Rev": "6",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE user name buffer overflow attempt\"; flow:to_server,established; content:\"connect_data\",nocase; content:\"|28|user=\",nocase; isdataat:1000,relative; content:!\"|29|\",within 1000; metadata:ruleset community; reference:bugtraq,6849; reference:cve,2003-0095; reference:url,otn.oracle.com/deploy/security/pdf/2003alert51.pdf; reference:url,www.appsecinc.com/Policy/PolicyCheck62.html; classtype:attempted-user; sid:2650; rev:6;"
+}

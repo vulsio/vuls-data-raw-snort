@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1155",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Ecommerce checks.txt access\"; flow:to_server,established; http_uri; content:\"/orders/checks.txt\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2281; classtype:attempted-recon; sid:1155; rev:15;"
+}

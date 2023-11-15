@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1738",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP global.inc access\"; flow:to_server,established; http_uri; content:\"/global.inc\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4612; reference:cve,2002-0614; classtype:web-application-attack; sid:1738; rev:13;"
+}

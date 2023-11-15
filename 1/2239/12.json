@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2239",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP redirect.exe access\"; flow:to_server,established; http_uri; content:\"/redirect.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1256; reference:cve,2000-0401; reference:nessus,11723; classtype:web-application-activity; sid:2239; rev:12;"
+}

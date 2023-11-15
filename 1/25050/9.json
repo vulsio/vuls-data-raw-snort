@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "25050",
+  "Rev": "9",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:11<=>20; http_method; content:\"POST\"; http_uri; content:\".php\"; http_header; content:\"|3B 20|MSIE|20|\"; content:!\"|0D 0A|Accept|2D|Language|3A|\"; content:!\"|0D 0A|Referer|3A|\"; content:!\"|0D 0A|Cookie|3A|\"; http_client_body; content:!\"Content-Disposition\"; pkt_data; content:\"Content-Length: \",nocase; byte_test:8,<,369,0,string,relative; http_client_body; pcre:\"/[^\\x20-\\x7e\\x0d\\x0a]{4}/\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:25050; rev:9;"
+}

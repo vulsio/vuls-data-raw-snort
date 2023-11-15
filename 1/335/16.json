@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "335",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP .rhosts\"; flow:to_server,established; content:\".rhosts\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; classtype:suspicious-filename-detect; sid:335; rev:16;"
+}

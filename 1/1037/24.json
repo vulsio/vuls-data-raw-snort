@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1037",
+  "Rev": "24",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS showcode.asp access\"; flow:to_server,established; http_uri; content:\"/showcode.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,167; reference:cve,1999-0736; reference:nessus,10007; reference:url,technet.microsoft.com/en-us/security/bulletin/MS99-013; classtype:web-application-activity; sid:1037; rev:24;"
+}

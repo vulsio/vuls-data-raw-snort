@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2141",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP shoutbox.php directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/shoutbox.php\"; pkt_data; content:\"conf=\"; content:\"../\",distance 0; metadata:ruleset community; service:http; reference:nessus,11668; classtype:web-application-attack; sid:2141; rev:8;"
+}

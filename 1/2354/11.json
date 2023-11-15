@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2354",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP IdeaBox notification.php file include\"; flow:to_server,established; http_uri; content:\"/index.php\",nocase; pkt_data; content:\"gorumDir=\",fast_pattern,nocase; content:\"notification.php\",nocase; metadata:ruleset community; service:http; reference:bugtraq,7488; classtype:web-application-activity; sid:2354; rev:11;"
+}

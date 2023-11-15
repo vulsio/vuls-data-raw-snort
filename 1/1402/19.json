@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1402",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS iissamples access\"; flow:to_server,established; http_uri; content:\"/iissamples/\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:nessus,11032; classtype:web-application-attack; sid:1402; rev:19;"
+}

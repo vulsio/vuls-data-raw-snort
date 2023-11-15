@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3084",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 6101",
+  "Option": "msg:\"SERVER-OTHER Veritas backup overflow attempt\"; flow:to_server,established; content:\"|02 00|\",depth 2; content:\"|00|\",within 1,distance 1; isdataat:72; content:!\"|00|\",depth 66,offset 6; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:bugtraq,11974; reference:cve,2004-1172; classtype:attempted-admin; sid:3084; rev:16;"
+}

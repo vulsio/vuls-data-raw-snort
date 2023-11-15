@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "883",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP flexform access\"; flow:to_server,established; http_uri; content:\"/flexform\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.wiretrip.net/rfp/p/doc.asp/i2/d6.htm; classtype:attempted-recon; sid:883; rev:17;"
+}

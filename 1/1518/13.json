@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1518",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8000",
+  "Option": "msg:\"SERVER-WEBAPP nstelemetry.adp access\"; flow:to_server,established; content:\"/nstelemetry.adp\"; metadata:ruleset community; service:http; reference:nessus,10753; classtype:web-application-activity; sid:1518; rev:13;"
+}

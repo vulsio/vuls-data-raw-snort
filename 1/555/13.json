@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "555",
+  "Rev": "13",
+  "Header": "alert tcp $HOME_NET 23 -> $EXTERNAL_NET any",
+  "Option": "msg:\"POLICY-OTHER WinGate telnet server response\"; flow:to_client,established; content:\"WinGate>\"; metadata:ruleset community; reference:cve,1999-0657; classtype:misc-activity; sid:555; rev:13;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1668",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP /cgi-bin/ access\"; flow:to_server,established; http_uri; content:\"/cgi-bin/\"; pkt_data; content:\"/cgi-bin/ HTTP\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1668; rev:14;"
+}

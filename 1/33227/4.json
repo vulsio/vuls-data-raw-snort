@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "33227",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Agent.BHHK variant outbound connection\"; flow:to_server,established; isdataat:135; isdataat:!136; http_raw_uri; bufferlen:1; pkt_data; content:\"GET / HTTP/1.1|0D 0A|User-Agent: Mozilla/4.0",
+  "Option": "compatible|3B| MSIE 7.0|3B| Windows NT 6.0)|0D 0A|Host: windowsupdate.microsoft.com|0D 0A|Connection: Close|0D 0A 0D 0A|\",fast_pattern,nocase; http_header; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/cab1fffe7a34b5bb7dab2cacd406cf15628d835ab63502d28df78c2faeaad366/analysis/1421677054/; classtype:trojan-activity; sid:33227; rev:4;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1106",
+  "Rev": "23",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Poll-it access\"; flow:to_server,established; http_uri; content:\"/pollit/Poll_It_SSI_v2.0.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1431; reference:cve,2000-0590; reference:nessus,10459; classtype:web-application-activity; sid:1106; rev:23;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1999",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP edit_image.php access\"; flow:to_server,established; http_uri; content:\"/edit_image.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3288; reference:cve,2001-1020; reference:nessus,11104; classtype:web-application-activity; sid:1999; rev:13;"
+}

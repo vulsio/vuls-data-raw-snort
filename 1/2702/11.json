@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2702",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Oracle iSQLPlus username overflow attempt\"; flow:to_server,established; http_uri; content:\"/isqlplus\",nocase; pkt_data; pcre:\"/username=[^&\\x3b\\r\\n]{255}/si\"; metadata:ruleset community; service:http; reference:bugtraq,10871; reference:cve,2004-1362; reference:cve,2004-1363; reference:cve,2004-1364; reference:cve,2004-1365; reference:cve,2004-1366; reference:cve,2004-1368; reference:cve,2004-1369; reference:cve,2004-1370; reference:cve,2004-1371; reference:url,www.nextgenss.com/advisories/ora-isqlplus.txt; classtype:web-application-attack; sid:2702; rev:11;"
+}

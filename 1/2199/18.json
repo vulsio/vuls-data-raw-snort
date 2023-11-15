@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2199",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP multidiff.cgi access\"; flow:to_server,established; http_uri; content:\"/multidiff.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4579; reference:bugtraq,5517; reference:cve,2003-0153; reference:nessus,11748; classtype:web-application-activity; sid:2199; rev:18;"
+}

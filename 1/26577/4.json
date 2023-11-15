@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26577",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent Opera 10\"; flow:to_server,established; http_header; content:\"Opera/10|20|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.avast.com/2013/05/03/regents-of-louisiana-spreading-s irefef-malware; reference:url,dev.opera.com/articles/view/opera-ua-string-changes; classtype:trojan-activity; sid:26577; rev:4;"
+}

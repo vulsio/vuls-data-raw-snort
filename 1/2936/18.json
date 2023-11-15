@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2936",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [139,445]",
+  "Option": "msg:\"OS-WINDOWS DCERPC NCACN-IP-TCP nddeapi NDdeSetTrustedShareW overflow attempt\"; flow:to_server,established; dce_iface:uuid 2f5f3220-c126-1076-b549-074d078619da; dce_opnum:\"12\"; dce_stub_data; isdataat:256; content:!\"|00|\",depth 256,offset 12; metadata:ruleset community; service:netbios-ssn; reference:bugtraq,11372; reference:cve,2004-0206; reference:url,technet.microsoft.com/en-us/security/bulletin/ms04-031; classtype:attempted-admin; sid:2936; rev:18;"
+}

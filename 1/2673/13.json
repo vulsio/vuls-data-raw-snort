@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2673",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+  "Option": "msg:\"FILE-IMAGE libpng tRNS overflow attempt\"; flow:to_client,established; flowbits:isset,file.png; file_data; content:\"|89|PNG|0D 0A 1A 0A|\"; content:\"IHDR\",within 4,distance 4; content:\"tRNS\",distance 0; byte_test:4,>,256,-8,relative,big; pcre:\"/IHDR(?!.*?PLTE).*?tRNS/s\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:bugtraq,10872; reference:cve,2004-0597; classtype:attempted-user; sid:2673; rev:13;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1536",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP calendar_admin.pl arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/calendar_admin.pl?\",nocase; content:\"config=|7C|\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,1215; reference:cve,2000-0432; reference:nessus,10506; classtype:web-application-attack; sid:1536; rev:19;"
+}

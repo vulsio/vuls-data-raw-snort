@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "439",
+  "Rev": "9",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP Reserved for Security Type 19\"; icode:0; itype:19; metadata:ruleset community; classtype:misc-activity; sid:439; rev:9;"
+}

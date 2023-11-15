@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2194",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP CSMailto.cgi access\"; flow:to_server,established; http_uri; content:\"/CSMailto.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4579; reference:bugtraq,6265; reference:cve,2002-0749; reference:nessus,11748; classtype:web-application-activity; sid:2194; rev:18;"
+}

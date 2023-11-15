@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "161",
+  "Rev": "10",
+  "Header": "alert udp $EXTERNAL_NET 3344 -> $HOME_NET 3345",
+  "Option": "msg:\"MALWARE-BACKDOOR Matrix 2.0 Client connect\"; flow:to_server; content:\"activate\"; metadata:ruleset community; classtype:misc-activity; sid:161; rev:10;"
+}

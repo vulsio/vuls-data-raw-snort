@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1254",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP PHPLIB remote command attempt\"; flow:to_server,established; content:\"_PHPLIB[libdir]\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3079; reference:cve,2001-1370; reference:nessus,14910; classtype:attempted-user; sid:1254; rev:16;"
+}

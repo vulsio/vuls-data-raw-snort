@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3154",
+  "Rev": "12",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 53",
+  "Option": "msg:\"PROTOCOL-DNS UDP inverse query overflow\"; flow:to_server; isdataat:400; byte_test:1,<,16,2; byte_test:1,&,8,2; metadata:policy max-detect-ips drop,ruleset community; service:dns; reference:bugtraq,134; reference:cve,1999-0009; classtype:attempted-admin; sid:3154; rev:12;"
+}

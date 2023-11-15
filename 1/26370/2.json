@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26370",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Bancos variant outbound connection - ksa.txt\"; flow:to_server,established; http_raw_uri; bufferlen:8; http_uri; content:\"/ksa.txt\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|Mozilla/3.0",
+  "Option": "compatible|3B| Indy Library)\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d8870137f7f761055a2ac83b03eb3f8fe26015fa0ba99f41551ca59374c6a3ec/analysis/1365436849/; classtype:trojan-activity; sid:26370; rev:2;"
+}

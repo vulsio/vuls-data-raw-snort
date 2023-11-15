@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3148",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"OS-WINDOWS Microsoft Windows HTML Help hhctrl.ocx clsid access attempt\"; flow:to_client,established; file_data; content:\"clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,11467; reference:bugtraq,4857; reference:bugtraq,5874; reference:cve,2002-0693; reference:cve,2002-0823; reference:cve,2004-1043; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-055; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-001; reference:url,www.ngssoftware.com/advisories/ms-winhlp.txt; classtype:attempted-user; sid:3148; rev:21;"
+}

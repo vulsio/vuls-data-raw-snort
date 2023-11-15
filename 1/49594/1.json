@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49594",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.SectorA05 outbound connection attempt\"; flow:to_server,established; http_uri; content:\".php?file=Cobra_\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,threatrecon.nshc.net/2019/01/30/operation-kitty-phishing/; classtype:trojan-activity; sid:49594; rev:1;"
+}

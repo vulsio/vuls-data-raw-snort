@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "480",
+  "Rev": "9",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP PING speedera\"; itype:8; content:\"89|3A 3B|<=>?\",depth 100; metadata:ruleset community; classtype:misc-activity; sid:480; rev:9;"
+}

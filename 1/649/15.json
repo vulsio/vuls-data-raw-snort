@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "649",
+  "Rev": "15",
+  "Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SHELLCODE x86 setgid 0\"; content:\"|B0 B5 CD 80|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:system-call-detect; sid:649; rev:15;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1871",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Oracle XSQLConfig.xml access\"; flow:to_server,established; http_uri; content:\"/XSQLConfig.xml\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,4290; reference:cve,2002-0568; reference:nessus,10855; classtype:web-application-activity; sid:1871; rev:12;"
+}

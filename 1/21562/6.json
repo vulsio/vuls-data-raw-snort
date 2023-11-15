@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21562",
+  "Rev": "6",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Bredolab variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_header; content:\"User-Agent|3A 20|Mozilla/4.0|0D 0A|\"; http_client_body; content:\"smk=\",depth 4; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/9384733182a6cbe5236b9b253d1f070570b7f6b6ff31aa86be253421f4c5c645/analysis/; classtype:trojan-activity; sid:21562; rev:6;"
+}

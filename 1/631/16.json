@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "631",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL ehlo cybercop attempt\"; flow:to_server,established; content:\"ehlo cybercop|0A|quit|0A|\",fast_pattern,nocase; metadata:ruleset community; service:smtp; classtype:protocol-command-decode; sid:631; rev:16;"
+}

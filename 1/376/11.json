@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "376",
+  "Rev": "11",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP PING Microsoft Windows\"; itype:8; content:\"0123456789abcdefghijklmnop\",depth 32; metadata:ruleset community; classtype:misc-activity; sid:376; rev:11;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26749",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.BlackRev cnc allhttp command\"; flow:to_client,established; file_data; content:\"allhttp|7C|\",depth 8; pcre:\"/^allhttp\\x7c\\d+\\x7c\\d+\\x7C[a-z0-9]+\\x2E[a-z]{2,3}\\x7C[a-z0-9]+\\x7C/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,ddos.arbornetworks.com/2013/05/the-revolution-will-be-written-in-delphi; classtype:trojan-activity; sid:26749; rev:5;"
+}

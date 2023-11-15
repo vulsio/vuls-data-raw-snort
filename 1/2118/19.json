@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2118",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+  "Option": "msg:\"PROTOCOL-IMAP list overflow attempt\"; flow:established,to_server; content:\"LIST\",nocase; isdataat:100,relative; pcre:\"/\\sLIST\\s[^\\n]{100}/smi\"; metadata:policy max-detect-ips drop,ruleset community; service:imap; reference:bugtraq,1110; reference:bugtraq,15006; reference:cve,2000-0284; reference:cve,2005-3155; reference:nessus,10374; classtype:misc-attack; sid:2118; rev:19;"
+}

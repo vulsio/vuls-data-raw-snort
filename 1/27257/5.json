@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27257",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kryptic 7-byte URI Invalid Firefox Headers - no Accept-Language\"; flow:to_server,established; http_raw_uri; bufferlen:7; http_method; content:\"GET\"; http_header; content:\"Firefox/3.\",fast_pattern,nocase; http_uri; pcre:\"/^\\/[A-Z]{6}$/\"; http_header; content:!\"Accept-Language:\"; content:!\"Referer:\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/8c1ff08a25b93da66921c75d0d21a9c08c5d3d36b95f9eaf113ecd84fa452944/analysis/1374505566/; classtype:trojan-activity; sid:27257; rev:5;"
+}

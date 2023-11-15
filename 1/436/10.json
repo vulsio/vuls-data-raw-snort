@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "436",
+  "Rev": "10",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP Redirect for TOS and Host\"; icode:3; itype:5; metadata:ruleset community; reference:cve,1999-0265; classtype:misc-activity; sid:436; rev:10;"
+}

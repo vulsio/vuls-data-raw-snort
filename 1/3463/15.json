@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3463",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP awstats access\"; flow:to_server,established; http_uri; content:\"/awstats.pl\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,12572; reference:nessus,16456; classtype:web-application-activity; sid:3463; rev:15;"
+}

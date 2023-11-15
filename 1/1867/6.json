@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1867",
+  "Rev": "6",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 177",
+  "Option": "msg:\"X11 xdmcp info query\"; flow:to_server; content:\"|00 01 00 02 00 01 00|\",fast_pattern,nocase; metadata:ruleset community; reference:nessus,10891; classtype:attempted-recon; sid:1867; rev:6;"
+}

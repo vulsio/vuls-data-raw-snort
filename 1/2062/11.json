@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2062",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP iPlanet .perf access\"; flow:to_server,established; http_uri; content:\"/.perf\"; metadata:ruleset community; service:http; reference:nessus,11220; classtype:web-application-activity; sid:2062; rev:11;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1005",
+  "Rev": "23",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS codebrowser SDK access\"; flow:to_server,established; http_uri; content:\"/iissamples/sdk/asp/docs/codebrws.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,167; reference:cve,1999-0736; classtype:web-application-activity; sid:1005; rev:23;"
+}

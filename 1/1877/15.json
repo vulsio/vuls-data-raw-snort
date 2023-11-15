@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1877",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP printenv access\"; flow:to_server,established; http_uri; content:\"/printenv\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1658; reference:cve,2000-0868; reference:nessus,10188; reference:nessus,10503; classtype:web-application-activity; sid:1877; rev:15;"
+}

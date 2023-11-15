@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1564",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP login.htm access\"; flow:to_server,established; http_uri; content:\"/login.htm\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,665; reference:cve,1999-1533; classtype:web-application-activity; sid:1564; rev:14;"
+}

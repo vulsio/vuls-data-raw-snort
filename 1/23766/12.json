@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "23766",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"FILE-IDENTIFY EMF file magic detected\"; flow:to_server,established; file_data; content:\"|01 00 00 00|\",depth 4; content:\"|20|EMF\",within 4,distance 36,fast_pattern; flowbits:set,file.emf; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:smtp; classtype:misc-activity; sid:23766; rev:12;"
+}

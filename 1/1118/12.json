@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1118",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP ls 20-l\"; flow:to_server,established; content:\"ls%20-l\",nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:1118; rev:12;"
+}

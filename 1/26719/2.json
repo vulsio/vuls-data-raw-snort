@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26719",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kbot variant outbound connection\"; flow:to_server,established; http_uri; content:\"s_alive.php?id=\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,blog.avast.com/2013/05/22/grum-lives/; classtype:trojan-activity; sid:26719; rev:2;"
+}

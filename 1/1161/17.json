@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1161",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP piranha passwd.php3 access\"; flow:to_server,established; http_uri; content:\"/passwd.php3\"; metadata:ruleset community; service:http; reference:bugtraq,1149; reference:cve,2000-0322; classtype:attempted-recon; sid:1161; rev:17;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "238",
+  "Rev": "14",
+  "Header": "alert icmp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP TFN server response\"; icmp_id:123; itype:0; content:\"shell bound\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:238; rev:14;"
+}

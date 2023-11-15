@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40559",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.iSpy variant outbound connection\"; flow:to_server,established; http_uri; content:\"iSpyKelogger\",fast_pattern,nocase; http_client_body; content:\"gate=\"; content:\"token=\",distance 0; content:\"name=\",distance 0; http_header; content:!\"User-Agent\"; content:!\"Connection\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/11e611585bfb6ff1f823e3c035ef6cfae39dfe2209e15ed01a8db8b3f9526519/analysis/1477417828/; classtype:trojan-activity; sid:40559; rev:3;"
+}

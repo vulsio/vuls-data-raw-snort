@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "640",
+  "Rev": "11",
+  "Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SHELLCODE AIX NOOP\"; content:\"O|FF FB 82|O|FF FB 82|O|FF FB 82|O|FF FB 82|\",fast_pattern,nocase; metadata:ruleset community; classtype:shellcode-detect; sid:640; rev:11;"
+}

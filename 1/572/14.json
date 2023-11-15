@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "572",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 32771:34000",
+  "Option": "msg:\"PROTOCOL-RPC DOS ttdbserv Solaris\"; flow:to_server,established; content:\"|00 00 00 00|\",depth 4,offset 8; content:\"|00 01 86 F3 00 00 00 01 00 00 00 0F 00 00 00 01|\",depth 32,offset 16; metadata:ruleset community; reference:bugtraq,122; reference:cve,1999-0003; classtype:attempted-dos; sid:572; rev:14;"
+}

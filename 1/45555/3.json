@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45555",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP MikroTik RouterOS jsproxy readPostData memory corruption attempt\"; flow:to_server,established; http_uri; content:\"/jsproxy\",depth 8,fast_pattern,nocase; pkt_data; content:\"|0D 0A|Content-Length: \",nocase; byte_test:10,>,0x20000,0,relative,string,dec; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,forum.mikrotik.com/viewtopic.php?t=119308; classtype:attempted-admin; sid:45555; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "39064",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Sinrin initial JS dropper outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:<31; http_header; content:\"Accept|3A 20|*/*|0D 0A|UA-CPU|3A 20|\",fast_pattern,nocase; content:\"Connection|3A 20|Keep-Alive|0D 0A|\"; content:\"Accept-Encoding|3A 20|gzip, deflate|0D 0A|\"; content:!\"Referer\"; http_uri; pcre:\"/\\/[a-z0-9]{8,10}\\x3f[A-Za-z]{7,10}\\x3d[A-Za-z]{6,10}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e0f8b6fd78c724b688f6467baf37f08c5ed198ea1b4224f31f50c8acbad49742/analysis/; classtype:trojan-activity; sid:39064; rev:3;"
+}

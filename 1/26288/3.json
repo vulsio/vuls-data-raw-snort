@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26288",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Brontok Worm variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Brontok.A8 Browser|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.securelist.com/en/descriptions/10286064/Email-Worm.Win32.Brontok.rf?print_mode=1; classtype:trojan-activity; sid:26288; rev:3;"
+}

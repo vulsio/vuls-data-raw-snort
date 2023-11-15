@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29220",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Strictor variant outbound connection\"; flow:to_server,established; http_uri; bufferlen:19; content:\"/mod/lookfashon.jpg\",fast_pattern,nocase; http_header; content:!\"Accept-Language:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0fe413704c85751b060546ebfd428d57726d8fd002ca95ec8deb76f5f37ed9c4/analysis/1389125202/; classtype:trojan-activity; sid:29220; rev:2;"
+}

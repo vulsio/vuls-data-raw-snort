@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46872",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET 20480 -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.CowerSnail command and control response detected\"; flow:to_client,established; content:\"pk\",depth 2; content:\"R|00|e|00|q|00|u|00|e|00|s|00|t|00|\",fast_pattern,nocase; content:\"|00|a|00|r|00|g|00|\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:irc; reference:url,www.virustotal.com/#/file/3fb8a4d2ed4f662a4cb4270bb5f488b79c8758aa6fc5c8b119c78fba38d6b7d1/detection; classtype:trojan-activity; sid:46872; rev:1;"
+}

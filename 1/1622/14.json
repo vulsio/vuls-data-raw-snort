@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1622",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP RNFR ././ attempt\"; flow:to_server,established; content:\"RNFR \",fast_pattern,nocase; content:\" ././\"; metadata:ruleset community; service:ftp; reference:cve,1999-0081; classtype:misc-attack; sid:1622; rev:14;"
+}

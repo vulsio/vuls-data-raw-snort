@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "25511",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Symmi variant outbound connection\"; flow:to_server,established; content:\"lfstream|26|\",depth 9,offset 8; pcre:\"/^POST\\x20\\x2fg[ao]lfstream\\x26/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/file/f4c44b5331c30b62beacae5d343d591584715c2d9d6d65848216b61efd916ec1/analysis/; classtype:trojan-activity; sid:25511; rev:4;"
+}

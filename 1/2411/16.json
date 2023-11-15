@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2411",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 554",
+  "Option": "msg:\"SERVER-WEBAPP RealNetworks RealSystem Server DESCRIBE buffer overflow attempt\"; flow:to_server,established; content:\"DESCRIBE\",nocase; content:\"../\",distance 1; pcre:\"/^DESCRIBE\\s[^\\n]{300}/smi\"; metadata:ruleset community; reference:bugtraq,8476; reference:cve,2003-0725; reference:nessus,11642; reference:url,www.service.real.com/help/faq/security/rootexploit091103.html; classtype:web-application-attack; sid:2411; rev:16;"
+}

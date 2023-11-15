@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46895",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Nocturnal outbound connection\"; flow:to_server,established; http_uri; content:\"/server/gate.php\",fast_pattern,nocase; http_client_body; content:\"name=|22|hwid|22|\"; content:\"name=|22|platform|22|\"; content:\"name=|22|pcount|22|\"; content:\"name=|22|cccount|22|\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/ae7e5a7b34dc216e9da384fcf9868ab2c1a1d731f583f893b2d2d4009da15a4e/analysis/; classtype:trojan-activity; sid:46895; rev:1;"
+}

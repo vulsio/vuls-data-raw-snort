@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3274",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+  "Option": "msg:\"PROTOCOL-TELNET login buffer non-evasive overflow attempt \"; flow:to_server,established; raw_data; content:\"|FF FA|'|00 00|\"; pcre:\"/T.*?T.*?Y.*?P.*?R.*?O.*?M.*?P.*?T/Ri\"; flowbits:set,ttyprompt; metadata:policy max-detect-ips drop,ruleset community; service:telnet; reference:bugtraq,3681; reference:cve,2001-0797; reference:nessus,10827; classtype:attempted-admin; sid:3274; rev:15;"
+}

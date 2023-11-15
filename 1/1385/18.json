@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1385",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP mod-plsql administration access\"; flow:to_server,established; http_uri; content:\"/admin_/\"; metadata:ruleset community; service:http; reference:bugtraq,3726; reference:bugtraq,3727; reference:cve,2001-1216; reference:cve,2001-1217; reference:nessus,10849; classtype:web-application-activity; sid:1385; rev:18;"
+}

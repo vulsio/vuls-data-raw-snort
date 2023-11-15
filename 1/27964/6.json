@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27964",
+  "Rev": "6",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gh0st variant outbound connection\"; flow:to_server,established; content:\"Gh0st\",depth 5; content:\"|00 00 00|\",within 3,distance 1; content:\"|00 00 78 9C|\",within 4,distance 2; metadata:impact_flag red,ruleset community; reference:url,virustotal.com/en/file/a4fd37b8b9eabd0bfda7293acbb1b6c9f97f8cc3042f3f78ad2b11816e1f9a59/analysis/1425053730/; classtype:trojan-activity; sid:27964; rev:6;"
+}

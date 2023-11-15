@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1463",
+  "Rev": "16",
+  "Header": "alert tcp $HOME_NET any <> $EXTERNAL_NET 6666:7000",
+  "Option": "msg:\"POLICY-SOCIAL IRC message\"; flow:established; isdataat:!139; content:\"PRIVMSG \"; metadata:ruleset community; classtype:policy-violation; sid:1463; rev:16;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40764",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Android.Trojan.SpyNote RAT variant getContacts command response\"; flow:to_server,established; content:\"send|7C|G|7C 7C|Cont|7C|acts|7C|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/14eb51b26fa4932fc660daf7e803600bf29a8a46fe3f1d652194bc48e9617bd9/analysis/1478720273/; classtype:trojan-activity; sid:40764; rev:2;"
+}

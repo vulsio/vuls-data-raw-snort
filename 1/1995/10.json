@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1995",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP alya.cgi access\"; flow:to_server,established; http_uri; content:\"/alya.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11118; classtype:web-application-activity; sid:1995; rev:10;"
+}

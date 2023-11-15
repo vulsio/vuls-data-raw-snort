@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1757",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP b2 arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/b2/b2-include/\"; pkt_data; content:\"b2inc\"; content:\"http|3A|//\"; metadata:ruleset community; service:http; reference:bugtraq,4673; reference:cve,2002-0734; reference:cve,2002-1466; reference:nessus,11667; classtype:web-application-attack; sid:1757; rev:14;"
+}

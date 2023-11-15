@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "673",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 1433",
+  "Option": "msg:\"SQL sp_start_job - program execution\"; flow:to_server,established; content:\"s|00|p|00|_|00|s|00|t|00|a|00|r|00|t|00|_|00|j|00|o|00|b|00|\",fast_pattern,nocase; metadata:ruleset community; classtype:attempted-user; sid:673; rev:9;"
+}

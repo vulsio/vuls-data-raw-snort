@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1686",
+  "Rev": "7",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE dba_tablespace access\"; flow:to_server,established; content:\"dba_tablespace\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1686; rev:7;"
+}

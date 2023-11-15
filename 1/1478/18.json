@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1478",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Simple Web Counter URI Parameter Buffer Overflow attempt\"; flow:to_server,established; http_uri; content:\"/swc\",nocase; content:\"ctr=\",distance 0,nocase; http_raw_uri; bufferlen:>500; metadata:ruleset community; service:http; reference:bugtraq,6581; reference:nessus,10493; classtype:attempted-user; sid:1478; rev:18;"
+}

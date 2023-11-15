@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2217",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Ipswitch IMail printmail.cgi access\"; flow:to_server,established; http_uri; content:\"/printmail.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3427; reference:bugtraq,4579; reference:cve,2001-1283; reference:nessus,11748; classtype:web-application-activity; sid:2217; rev:18;"
+}

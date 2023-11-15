@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29259",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Graftor variant outbound connection\"; flow:to_server,established; http_uri; content:\"/chamjavanv.inf?aapf/login.jsp?=\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a46c3fee842f1ded35b6a4e003c0e6ea62ee66d354d4b826b4c3e5aa9310b3ba/analysis/; classtype:trojan-activity; sid:29259; rev:2;"
+}

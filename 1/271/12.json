@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "271",
+  "Rev": "12",
+  "Header": "alert udp any 19 <> any 7",
+  "Option": "msg:\"SERVER-OTHER UDP echo+chargen bomb\"; flow:to_server; metadata:policy max-detect-ips drop,ruleset community; reference:cve,1999-0103; reference:cve,1999-0635; classtype:attempted-dos; sid:271; rev:12;"
+}

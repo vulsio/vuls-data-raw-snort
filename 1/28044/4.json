@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28044",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.CryptoLocker variant connection\"; flow:to_server,established; http_uri; content:\"/crypt_1_sell\",fast_pattern,nocase; pcre:\"/\\/crypt_1_sell\\d\\d-\\d\\d.exe$/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d4b16269c9849c33a7bb2fdc782173a00e99db12a585689618dde3f4c6fcb101/analysis; classtype:trojan-activity; sid:28044; rev:4;"
+}

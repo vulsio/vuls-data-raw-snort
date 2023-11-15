@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1966",
+  "Rev": "11",
+  "Header": "alert udp $EXTERNAL_NET any -> 255.255.255.255 27155",
+  "Option": "msg:\"SERVER-OTHER GlobalSunTech Access Point Information Disclosure attempt\"; flow:to_server; content:\"gstsearch\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,6100; reference:cve,2002-2137; classtype:misc-activity; sid:1966; rev:11;"
+}

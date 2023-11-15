@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3409",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [135,139,445,593,1024:]",
+  "Option": "msg:\"OS-WINDOWS DCERPC NCACN-IP-TCP IActivation remoteactivation overflow attempt\"; flow:to_server,established; dce_iface:uuid 4d9f4ab8-7d1c-11cf-861e-0020af6e7c57; dce_opnum:\"0\"; dce_stub_data; byte_test:4,>,256,52,dce; metadata:policy max-detect-ips drop,ruleset community; service:dcerpc, netbios-ssn; reference:bugtraq,8205; reference:cve,2003-0352; reference:cve,2003-0528; reference:cve,2003-0715; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-026; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-039; classtype:attempted-admin; sid:3409; rev:18;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34462",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Linux.Downloader.Mumblehard variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:1; http_header; content:\"User-Agent: Mozilla/5.0",
+  "Option": "Windows NT 6.1|3B| rv:7.0.1) Gecko/20100101 Firefox/7.0.1|0D 0A|\",fast_pattern,nocase; content:\"Accept: text/html,application/xhtml+xml,application/xml|3B|q=0.8,*/*|3B|q=0.9|0D 0A|\"; content:\"Accept-Language: en-us,en|3B|q=0.5|0D 0A|\",distance 0; content:\"Accept-Encoding: gzip, deflate|0D 0A|\",distance 0; content:\"Accept-Charset: ISO-8859-1,utf-8|3B|q=0.7,*|3B|q=0.7|0D 0A|\",distance 0; content:\"Connection: close|0D 0A 0D 0A|\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/file/84dfe2ac489ba41dfb25166a983ee2d664022bbcc01058c56a1b1de82f785a43/analysis/1430849540/; classtype:trojan-activity; sid:34462; rev:4;"
+}

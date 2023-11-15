@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2246",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP webadmin.dll access\"; flow:to_server,established; http_uri; content:\"/webadmin.dll\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7438; reference:bugtraq,7439; reference:bugtraq,8024; reference:cve,2003-0471; reference:nessus,11771; classtype:web-application-activity; sid:2246; rev:14;"
+}

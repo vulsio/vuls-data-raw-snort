@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32181",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Backdoor.ZxShell connection outgoing attempt\"; flow:to_server,established; isdataat:15; isdataat:!16; content:\"|86 19 00 00 04 01 00 00|\",depth 8; metadata:impact_flag red,ruleset community; reference:url,virustotal.com/en/file/438ed90e1f69b5dcae2d30d241159aaed74f9d3125c60f1003915b2237978f7d/analysis/; classtype:trojan-activity; sid:32181; rev:4;"
+}

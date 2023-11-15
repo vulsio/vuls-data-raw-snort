@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "979",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS ASP contents view\"; flow:to_server,established; http_uri; content:\".htw?CiWebHitsFile\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1861; reference:cve,2000-0942; reference:url,technet.microsoft.com/en-us/security/bulletin/MS00-006; classtype:web-application-attack; sid:979; rev:22;"
+}

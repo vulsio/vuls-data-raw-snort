@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "396",
+  "Rev": "12",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP Destination Unreachable Fragmentation Needed and DF bit was set\"; icode:4; itype:3; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2004-0790; reference:cve,2005-0068; reference:cve,2015-7759; classtype:misc-activity; sid:396; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "30191",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Uroburos usermode-centric client request\"; flow:to_server,established; http_uri; content:\"/1/6b-558694705129b01c0\",fast_pattern,nocase; pkt_data; content:\"Connection: Keep-Alive|0D 0A|\",nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,info.baesystemsdetica.com/rs/baesystems/images/snake_whitepaper.pdf; reference:url,public.gdatasoftware.com/Web/Content/INT/Blog/2014/02_2014/documents/GData_Uroburos_RedPaper_EN_v1.pdf; reference:url,www.virustotal.com/en/file/50edc955a6e8e431f5ecebb5b1d3617d3606b8296f838f0f986a929653d289ed/analysis/; classtype:trojan-activity; sid:30191; rev:2;"
+}

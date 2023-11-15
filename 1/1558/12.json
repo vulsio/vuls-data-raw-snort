@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1558",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8080",
+  "Option": "msg:\"SERVER-WEBAPP Delegate whois overflow attempt\"; flow:to_server,established; content:\"whois|3A|//\",nocase; metadata:ruleset community; service:http; reference:cve,2000-0165; reference:nessus,10054; classtype:web-application-activity; sid:1558; rev:12;"
+}

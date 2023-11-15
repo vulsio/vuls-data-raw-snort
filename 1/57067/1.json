@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "57067",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER HP Web JetAdmin file write attempt\"; flow:to_server,established; http_uri; content:\"/plugins/framework/script/tree.xms\",fast_pattern,nocase; content:\"WriteToFile\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,9973; classtype:web-application-activity; sid:57067; rev:1;"
+}

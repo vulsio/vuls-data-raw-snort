@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1849",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP webfind.exe access\"; flow:to_server,established; http_uri; content:\"/webfind.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1487; reference:cve,2000-0622; reference:nessus,10475; classtype:web-application-activity; sid:1849; rev:15;"
+}

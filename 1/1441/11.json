@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1441",
+  "Rev": "11",
+  "Header": "alert udp any any -> any 69",
+  "Option": "msg:\"PROTOCOL-TFTP GET nc.exe\"; flow:to_server; content:\"|00 01|\",depth 2; content:\"nc.exe\",offset 2,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:successful-admin; sid:1441; rev:11;"
+}

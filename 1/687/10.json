@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "687",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 1433",
+  "Option": "msg:\"SQL xp_cmdshell - program execution\"; flow:to_server,established; content:\"x|00|p|00|_|00|c|00|m|00|d|00|s|00|h|00|e|00|l|00|l|00|\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,5309; classtype:attempted-user; sid:687; rev:10;"
+}

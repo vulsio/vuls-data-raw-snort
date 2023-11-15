@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "36065",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Bagsu variant outbound connection\"; flow:to_server,established; http_uri; content:\"/offers_new?v=\",fast_pattern,nocase; http_header; content:!\"User-Agent\"; http_uri; content:\"&a=\"; content:\"&i=\",distance 0; content:\"&f=\",distance 0; content:\"&u=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/049bc9beeba4acd2a558dc695f65ad284b0ae1ff89f69a38f743510d6ab640c0/analysis; classtype:trojan-activity; sid:36065; rev:2;"
+}

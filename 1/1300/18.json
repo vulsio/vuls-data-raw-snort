@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1300",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP admin.php file upload attempt\"; flow:to_server,established; http_uri; content:\"/admin.php\",fast_pattern,nocase; content:\"file_name=\"; metadata:ruleset community; service:http; reference:bugtraq,3361; reference:cve,2001-1032; classtype:attempted-admin; sid:1300; rev:18;"
+}

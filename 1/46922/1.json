@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46922",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Fareit variant outbound connection\"; flow:to_server,established; http_uri; content:\"/panel/logout.php\",depth 17; http_header; content:!\"Accept\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/en/file/6de535e8d4b82e5554a138ec1d6c6b530943ff08d5e04308d695f473e74f9600/analysis/; classtype:trojan-activity; sid:46922; rev:1;"
+}

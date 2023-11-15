@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2049",
+  "Rev": "9",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1434",
+  "Option": "msg:\"SQL ping attempt\"; flow:to_server; content:\"|02|\",depth 1; metadata:policy max-detect-ips drop,ruleset community; reference:nessus,10674; classtype:misc-activity; sid:2049; rev:9;"
+}

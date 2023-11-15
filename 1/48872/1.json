@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "48872",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Agent variant outbound connection\"; flow:to_server,established; http_uri; content:\"/foth1018/go.php\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:48872; rev:1;"
+}

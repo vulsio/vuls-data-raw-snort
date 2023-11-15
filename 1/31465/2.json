@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31465",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Androm Click Fraud Request\"; flow:to_server,established; http_uri; content:\"/query?version=\",fast_pattern,nocase; content:\"&sid=\"; content:\"&builddate=\",distance 0; content:\"&q=\",distance 0; content:\"&ref=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,malwr.com/analysis/ZmE3ZWU2YTkyM2U0NGQ0MmI1NDcxMjUwZDE2NTM5MjQ/; classtype:trojan-activity; sid:31465; rev:2;"
+}

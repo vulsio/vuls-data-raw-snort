@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47377",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Unix.Trojan.Vpnfilter plugin variant connection attempt\"; flow:to_client,established; content:\"|00 AC D3 62 78 26 76 31 E5 E7 E5 1D C2 3C 15 40 25 2F 90 BD 1F 7F 0E 5E 33 77 EC 0C 1E 6B 61 47|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1176; reference:url,blog.talosintelligence.com/2018/05/VPNFilter.html; classtype:trojan-activity; sid:47377; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2365",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP newsPHP Language file include attempt\"; flow:to_server,established; http_uri; content:\"/nphpd.php\",fast_pattern,nocase; pkt_data; content:\"LangFile\",nocase; metadata:ruleset community; service:http; reference:bugtraq,8488; classtype:web-application-activity; sid:2365; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3017",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 42",
+  "Option": "msg:\"OS-WINDOWS Microsoft Windows WINS overflow attempt\"; flow:to_server,established; byte_test:1,&,64,6; byte_test:1,&,32,6; byte_test:1,&,16,6; byte_test:1,&,8,6; pcre:!\"/^.{8}(\\x05\\x37(\\x1E[\\x90-\\xFF]|[\\x1F-\\x2F].|\\x30[\\x00-\\x70])|\\x00\\x00\\x00[\\x00-\\x65]|\\x02\\x68\\x05\\xC0)/s\"; metadata:policy max-detect-ips drop,ruleset community; service:wins; reference:bugtraq,11763; reference:cve,2004-0567; reference:cve,2004-1080; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-045; reference:url,www.immunitysec.com/downloads/instantanea.pdf; classtype:misc-attack; sid:3017; rev:17;"
+}

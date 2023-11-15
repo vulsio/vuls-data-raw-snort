@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1541",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
+  "Option": "msg:\"PROTOCOL-FINGER version query\"; flow:to_server,established; content:\"version\"; metadata:ruleset community; classtype:attempted-recon; sid:1541; rev:9;"
+}

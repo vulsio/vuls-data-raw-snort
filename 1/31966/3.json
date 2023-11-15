@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31966",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"EXPLOIT-KIT Astrum exploit kit payload delivery\"; flow:to_client,established; flowbits:isset,file.exploit_kit.pe; file_data; content:\"|D5 B1 F8 24 89 28 15 47|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2014/09/astrum-ek.html; classtype:trojan-activity; sid:31966; rev:3;"
+}

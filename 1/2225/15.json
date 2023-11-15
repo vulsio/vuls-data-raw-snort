@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2225",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Linksys BEFSR41 gozila.cgi access\"; flow:to_server,established; http_uri; content:\"/gozila.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6086; reference:cve,2002-1236; reference:nessus,11773; classtype:web-application-activity; sid:2225; rev:15;"
+}

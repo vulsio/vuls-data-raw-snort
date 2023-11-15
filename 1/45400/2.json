@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45400",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Osx.Trojan.OceanLotus outbound connection attempt\"; flow:to_server,established; content:\"/sigstore.db?\",fast_pattern,nocase; http_uri; content:\"k=\"; content:\"?q=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.alienvault.com/blogs/labs-research/oceanlotus-for-os-x-an-application-bundle-pretending-to-be-an-adobe-flash-update; classtype:trojan-activity; sid:45400; rev:2;"
+}

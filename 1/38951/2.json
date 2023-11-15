@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38951",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE Win.Adware.OpenSoftwareUpdater variant outbound connection attempt\"; flow:to_server,established; http_uri; content:\"/installer.php?\"; pkt_data; content:\"CODE=\",fast_pattern,nocase; http_uri; content:\"UID=\"; content:\"action=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/829918eb3edb26deccd2d80c7ac8bc8ad58b4fb76a370c11731884b408a21a73/analysis/1463575824/; classtype:trojan-activity; sid:38951; rev:2;"
+}

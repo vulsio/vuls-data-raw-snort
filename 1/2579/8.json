@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2579",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 88",
+  "Option": "msg:\"SERVER-OTHER kerberos principal name overflow TCP\"; flow:to_server,established; content:\"j\",depth 1,offset 4; content:\"|01 A1|\"; asn1:oversize_length 1024,relative_offset -1; metadata:ruleset community; service:kerberos; reference:cve,2003-0072; reference:nessus,11512; reference:url,attack.mitre.org/techniques/T1097; reference:url,web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2003-005-buf.txt; classtype:attempted-admin; sid:2579; rev:8;"
+}

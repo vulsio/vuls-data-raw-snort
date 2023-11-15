@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21375",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Remote Execution Backdoor Attempt Against Horde\"; flow:to_server,established; http_uri; content:\"/services/javascript.php\",fast_pattern,nocase; http_cookie; content:\"href=\"; http_client_body; content:\"file=open_calendar.js\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2012-0209; reference:url,dev.horde.org/h/jonah/stories/view.php?channel_id=1&id=155; reference:url,eromang.zataz.com/2012/02/15/cve-2012-0209-horde-backdoor-analysis/; reference:url,pastebin.com/U3ADiWrP; classtype:web-application-attack; sid:21375; rev:8;"
+}

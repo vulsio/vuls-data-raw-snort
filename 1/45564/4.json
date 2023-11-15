@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45564",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Unix.Trojan.Vpnfilter variant outbound connection attempt\"; flow:to_server,established; http_header; content:\"User-Agent: Mozilla/5.0|0D 0A|Host: \",fast_pattern,nocase; content:\"Accept: */*|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A 0D 0A|\"; content:!\"Cookie:\"; content:!\"Referer:\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,blog.talosintelligence.com/2018/05/VPNFilter.html; classtype:trojan-activity; sid:45564; rev:4;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27248",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gamarue - Mozi1la User-Agent\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Mozi1la/4.0|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/03103b40b95070e4d14803e949dc754ca02bcea25e8b3a4194f7d248f15ca515/analysis/; classtype:trojan-activity; sid:27248; rev:4;"
+}

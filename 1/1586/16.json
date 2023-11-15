@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1586",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Domino mail.box access\"; flow:to_server,established; http_uri; content:\"/mail.box\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,881; reference:cve,2000-0021; reference:cve,2000-0022; reference:cve,2000-0023; reference:nessus,10629; classtype:attempted-recon; sid:1586; rev:16;"
+}

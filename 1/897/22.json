@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "897",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP pals-cgi access\"; flow:to_server,established; http_uri; content:\"/pals-cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2372; reference:cve,2001-0216; reference:cve,2001-0217; reference:nessus,10611; classtype:attempted-recon; sid:897; rev:22;"
+}

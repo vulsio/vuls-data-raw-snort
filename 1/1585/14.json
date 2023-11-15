@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1585",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Domino agentrunner.nsf access\"; flow:to_server,established; http_uri; content:\"/agentrunner.nsf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10629; classtype:attempted-recon; sid:1585; rev:14;"
+}

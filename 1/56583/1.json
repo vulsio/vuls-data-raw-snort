@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56583",
+  "Rev": "1",
+  "Header": "alert tcp any any -> any 88",
+  "Option": "msg:\"MALWARE-TOOLS GhostPack Rubeus kerberos request attempt\"; flow:to_server,established; content:\"|05|\",depth 30; content:\"|0A|\",within 1,distance 4; content:\"Z\"; content:\"|6C 69 6C 00|\",within 25; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:kerberos; reference:url,github.com/fireeye/red_team_tool_countermeasures; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56583; rev:1;"
+}

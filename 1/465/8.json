@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "465",
+  "Rev": "8",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP ISS Pinger\"; itype:8; content:\"ISSPNGRQ\",depth 32; metadata:ruleset community; classtype:attempted-recon; sid:465; rev:8;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28556",
+  "Rev": "3",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 53",
+  "Option": "msg:\"PROTOCOL-DNS DNS query amplification attempt\"; flow:to_server; content:\"|00 01|\",depth 2,offset 4; content:\"|00 01|\",within 2,distance 4; byte_test:1,!&,0xF8,2; content:\"|00 00 FF 00 01 00 00 29|\"; byte_test:2,>,0x7FFF,0,relative; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:dns; reference:url,www.us-cert.gov/ncas/alerts/TA13-088A; classtype:attempted-dos; sid:28556; rev:3;"
+}

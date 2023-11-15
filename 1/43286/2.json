@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "43286",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP /cgi-bin/sh file access attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/sh\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:43286; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32667",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Chopstick variant outbound request\"; flow:to_server,established; http_uri; content:\"/webhp?rel=\"; content:\"hl=\",distance 0; content:\"ai=\",distance 0; http_client_body; content:!\".\",depth 20; content:!\"|22|\",depth 20; content:!\"|3A|\",depth 20; isdataat:500,relative; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/7f6f9645499f5840b59fb59525343045abf91bc57183aae459dca98dc8216965/analysis/; classtype:trojan-activity; sid:32667; rev:4;"
+}

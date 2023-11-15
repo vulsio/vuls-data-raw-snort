@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1021",
+  "Rev": "29",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS ism.dll attempt\"; flow:to_server,established; http_uri; content:\" .htr\",nocase; pcre:\"/\\s{230,}\\.htr/\"; metadata:ruleset community; service:http; reference:bugtraq,1193; reference:cve,2000-0457; reference:nessus,10680; reference:url,technet.microsoft.com/en-us/security/bulletin/MS00-031; classtype:web-application-attack; sid:1021; rev:29;"
+}

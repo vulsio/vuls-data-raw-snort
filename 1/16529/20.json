@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "16529",
+  "Rev": "20",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"FILE-IDENTIFY JPEG file download request\"; flow:to_server,established; http_uri; content:\".pjpeg\",fast_pattern,nocase; pcre:\"/\\x2epjpeg([\\?\\x5c\\x2f]|$)/smi\"; flowbits:set,file.jpeg; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/Jpg; classtype:misc-activity; sid:16529; rev:20;"
+}

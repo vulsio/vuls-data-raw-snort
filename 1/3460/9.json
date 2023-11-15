@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3460",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP REST with numeric argument\"; flow:to_server,established; content:\"REST\",fast_pattern,nocase; pcre:\"/REST\\s+[0-9]+\\n/i\"; metadata:ruleset community; service:ftp; reference:bugtraq,7825; classtype:attempted-recon; sid:3460; rev:9;"
+}

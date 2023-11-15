@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "219",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+  "Option": "msg:\"MALWARE-BACKDOOR HidePak backdoor attempt\"; flow:to_server,established; content:\"StoogR\"; metadata:ruleset community; classtype:misc-activity; sid:219; rev:10;"
+}

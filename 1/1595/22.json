@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1595",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS htimage.exe access\"; flow:to_server,established; http_uri; content:\"/htimage.exe\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1117; reference:bugtraq,964; reference:cve,2000-0122; reference:cve,2000-0256; reference:nessus,10376; classtype:web-application-activity; sid:1595; rev:22;"
+}

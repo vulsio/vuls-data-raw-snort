@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1505",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP alchemy http server PRN arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/PRN/\",fast_pattern; http_raw_uri; content:\"../../\"; metadata:ruleset community; service:http; reference:bugtraq,3599; reference:cve,2001-0871; reference:nessus,10818; classtype:web-application-activity; sid:1505; rev:16;"
+}

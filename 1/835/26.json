@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "835",
+  "Rev": "26",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP test-cgi access\"; flow:to_server,established; http_uri; content:\"/test-cgi\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2003; reference:cve,1999-0070; reference:nessus,10282; classtype:attempted-recon; sid:835; rev:26;"
+}

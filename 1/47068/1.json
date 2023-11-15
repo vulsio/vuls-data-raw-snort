@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47068",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.TechSupportScam installed binary outbound connection\"; flow:to_server,established; http_uri; content:\"/register.php?\",fast_pattern,nocase; content:\"p=\",nocase; content:\"&code=\",nocase; http_header; content:!\"User-Agent\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/c9adabc7516e38ce611cbde5856fbe6b06e8afee4422d754aa810aec59ecd8d8/detection; classtype:trojan-activity; sid:47068; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1987",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 7100",
+  "Option": "msg:\"SERVER-OTHER xfs overflow attempt\"; flow:to_server,established; isdataat:512; content:\"B|00 02|\",depth 3; metadata:ruleset community; reference:bugtraq,6241; reference:cve,2002-1317; reference:nessus,11188; classtype:misc-activity; sid:1987; rev:11;"
+}

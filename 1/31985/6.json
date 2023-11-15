@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31985",
+  "Rev": "6",
+  "Header": "alert udp $HOME_NET 67 -> $HOME_NET 68",
+  "Option": "msg:\"OS-OTHER Malicious DHCP server bash environment variable injection attempt\"; flow:stateless; content:\"() {\",fast_pattern,nocase; content:\"|02 01 06 00|\",depth 4; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:31985; rev:6;"
+}

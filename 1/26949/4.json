@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26949",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"EXPLOIT-KIT DotkaChef/Rmayana/DotCache exploit kit landing page\"; flow:to_client,established; file_data; content:\"<applet width=\"; content:\"0\",within 1,distance 1; content:\" height=\",within 8,distance 1; content:\"0\",within 1,distance 1; content:\" code=\",within 6,distance 1; content:\"site.avi\",within 8,distance 1,nocase; content:\" archive=\",within 9,distance 1; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.basemont.com/new_exploit_kit_june_2013; classtype:trojan-activity; sid:26949; rev:4;"
+}

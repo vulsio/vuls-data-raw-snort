@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "288",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
+  "Option": "msg:\"PROTOCOL-POP EXPLOIT x86 Linux overflow\"; flow:to_server,established; content:\"|D8|@|CD 80 E8 D9 FF FF FF|/bin/sh\",fast_pattern,nocase; metadata:ruleset community; service:pop3; classtype:attempted-admin; sid:288; rev:13;"
+}

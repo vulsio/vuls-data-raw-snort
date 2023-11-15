@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1576",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Domino cersvr.nsf access\"; flow:to_server,established; http_uri; content:\"/cersvr.nsf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10629; classtype:attempted-recon; sid:1576; rev:14;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "606",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 513",
+  "Option": "msg:\"PROTOCOL-SERVICES rlogin root\"; flow:to_server,established; content:\"root|00|root|00|\",depth 10; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; classtype:attempted-admin; sid:606; rev:12;"
+}

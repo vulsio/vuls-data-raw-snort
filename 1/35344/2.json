@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "35344",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Cryptowall click fraud response\"; flow:to_client,established; file_data; content:\"2|7C|http://\",depth 9; content:\"/search.php|7C|http://\",within 60; content:\"|7C|Mozilla/4.0 \",within 100; content:\"/r.php?key=\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/3b78dd891a81c18cffa5031e52f9c2329e2986ba83c5c75a67dc4ae3d1f0bec3/analysis/; classtype:trojan-activity; sid:35344; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32853",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Poolfiend variant outbound connection\"; flow:to_server, established; http_uri; content:\"/11/feed.php\",fast_pattern,nocase; http_method; content:\"POST\"; http_header; content:!\"Accept\"; http_client_body; pcre:\"/[a-z\\d\\x2f\\x2b\\x3d]{100}/AGi\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/12a803cd2f67d2dbdc3fb1a6940b9a11b61f6d8455f139e6e90893d9a4eb455a/analysis/; classtype:trojan-activity; sid:32853; rev:3;"
+}

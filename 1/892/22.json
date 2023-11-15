@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "892",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP AnyForm2 access\"; flow:to_server,established; http_uri; content:\"/AnyForm2\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,719; reference:cve,1999-0066; reference:nessus,10277; classtype:attempted-recon; sid:892; rev:22;"
+}

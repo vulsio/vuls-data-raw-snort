@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "985",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS JET VBA access\"; flow:to_server,established; http_uri; content:\"/scripts/samples/details.idc\",nocase; metadata:ruleset community; service:http; reference:bugtraq,286; reference:cve,1999-0874; classtype:web-application-activity; sid:985; rev:22;"
+}

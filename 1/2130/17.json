@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2130",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS IISProtect siteadmin.asp access\"; flow:to_server,established; http_uri; content:\"/iisprotect/admin/SiteAdmin.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,7675; reference:cve,2003-0377; reference:nessus,11662; classtype:web-application-activity; sid:2130; rev:17;"
+}

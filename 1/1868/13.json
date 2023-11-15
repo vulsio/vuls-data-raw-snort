@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1868",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8080",
+  "Option": "msg:\"SERVER-WEBAPP Interactive Story story.pl arbitrary file read attempt\"; flow:to_server,established; http_uri; content:\"/story.pl\"; pkt_data; content:\"next=../\"; metadata:ruleset community; service:http; reference:bugtraq,3028; reference:cve,2001-0804; reference:nessus,10817; classtype:default-login-attempt; sid:1868; rev:13;"
+}

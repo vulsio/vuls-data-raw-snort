@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45090",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Backdoor.StoneDrill server selection outbound connection\"; flow:to_server,established; http_uri; content:\"public/Check_Exist.php\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,securelist.com/files/2017/03/Report_Shamoon_StoneDrill_final.pdf; classtype:trojan-activity; sid:45090; rev:2;"
+}

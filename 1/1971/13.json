@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1971",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP SITE EXEC format string attempt\"; flow:to_server,established; content:\"SITE\",nocase; content:\"EXEC\",distance 0,nocase; pcre:\"/^SITE\\s+EXEC\\s[^\\n]*?%[^\\n]*?%/smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,1387; reference:bugtraq,1505; reference:cve,2000-0573; classtype:bad-unknown; sid:1971; rev:13;"
+}

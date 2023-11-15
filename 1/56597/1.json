@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56597",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC MultiOS.Malware.GORAT outbound communications attempt\"; flow:to_server,established; http_method; content:\"POST\"; http_header; content:\"Connection: upgrade\"; content:\"|0D 0A|Upgrade: tcp/1|0D 0A|\",fast_pattern,nocase; content:!\"|0D 0A|Referer:\"; content:!\"|0D 0A|Accept\"; content:!\"|0D 0A|Cookie:\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56597; rev:1;"
+}

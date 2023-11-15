@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47723",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Andr.Trojan.MysteryBot outbound connection\"; flow:to_server,established; http_uri; content:\"/site/gate.php?i=eyAiYWN0aW9uIjog\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/334f1efd0b347d54a418d1724d51f8451b7d0bebbd05f648383d05c00726a7ae/analysis/; classtype:trojan-activity; sid:47723; rev:1;"
+}

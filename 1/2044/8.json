@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2044",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1723",
+  "Option": "msg:\"POLICY-OTHER PPTP Start Control Request attempt\"; flow:to_server,established,no_stream; content:\"|00 01|\",depth 2,offset 2; content:\"|00 01|\",depth 2,offset 8; metadata:ruleset community; classtype:attempted-admin; sid:2044; rev:8;"
+}

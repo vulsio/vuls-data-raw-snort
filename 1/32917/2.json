@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32917",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET [547,8080,133,117,189,159] -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR Win.Trojan.Wiper inbound communication attempt\"; flow:to_client,established; content:\"|7B 08 2A 2A|\",offset 17; content:\"|08 2A 2A 01 00|\",distance 0; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32917; rev:2;"
+}

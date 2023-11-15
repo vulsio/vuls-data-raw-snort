@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2256",
+  "Rev": "12",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1024:",
+  "Option": "msg:\"PROTOCOL-RPC sadmind query with root credentials attempt UDP\"; flow:to_server; content:\"|00 01 87 88|\",depth 4,offset 12; content:\"|00 00 00 01 00 00 00 01|\",within 8,distance 4; byte_jump:4,8,relative,align; content:\"|00 00 00 00|\",within 4; metadata:policy max-detect-ips drop,ruleset community; service:sunrpc; classtype:misc-attack; sid:2256; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2412",
+  "Rev": "9",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"INDICATOR-COMPROMISE successful cross site scripting forced download attempt\"; flow:to_server,established; content:\"|0A|Referer|3A| res|3A|/C|3A|\"; metadata:ruleset community; classtype:successful-user; sid:2412; rev:9;"
+}

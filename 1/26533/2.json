@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26533",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Unknown malware - Incorrect headers - Referer HTTP/1.0\"; flow:to_server,established; http_header; content:\"Referer: HTTP/1.0|0D 0A|\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:trojan-activity; sid:26533; rev:2;"
+}

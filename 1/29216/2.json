@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29216",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Androm variant outbound connection\"; flow:to_server,established; http_uri; content:\"/se/gate.php\"; pkt_data; content:\"HTTP/1.1|0D 0A|Cache-Control: no-cache|0D 0A|Connection: close|0D 0A|Pragma: no-cache|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|User-Agent: Mozilla/4.0|0D 0A|Content-Length: \",fast_pattern,nocase; http_client_body; pcre:\"/\\x3d\\x0a$/\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/0baf3197bdb2c665fea0a84db91d3f65171cf6cf9a732fd394ff9f707ddaf682/analysis/; classtype:trojan-activity; sid:29216; rev:2;"
+}

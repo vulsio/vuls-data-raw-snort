@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2674",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE dbms_repcat.add_delete_resolution buffer overflow attempt\"; flow:to_server,established; content:\"dbms_repcat.add_delete_resolution\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*sname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|sname\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|(\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*oname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|oname\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]*\\x27|\\x22[^\\x22]+\\x22)\\s*,\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/si\"; metadata:ruleset community; classtype:attempted-user; sid:2674; rev:4;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46827",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dunihi outbound connection\"; flow:to_server,established; content:\"|00 00 A2 30 81 9F 30 0D 06 09 2A 86 48 86 F7 0D 01 01 01 05 00 03 81 8D 00 30 81 89 02 81 81 00|\",depth 32; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/en/file/be442a5f8be3bf720236f71a613a534b8aa82b16b0daf8ff84a59bcb92e19e7d/analysis/; classtype:trojan-activity; sid:46827; rev:2;"
+}

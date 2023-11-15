@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21727",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+  "Option": "msg:\"FILE-IDENTIFY ANI file magic detection\"; flow:to_client,established; file_data; content:\"RIFF\",depth 4; content:\"ACON\",within 4,distance 4; flowbits:set,file.ani; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:ftp-data, http, imap, pop3; classtype:misc-activity; sid:21727; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29459",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Fexel variant outbound connection\"; flow:to_server,established; content:\"|0A|Agtid|3A 20|\"; content:\"08x|0D 0A|\",within 5,distance 8; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b33ffbec01b43301edd9db42a59dcd33dd45f638733e2f92f0cb5bfe86714734/analysis/; classtype:trojan-activity; sid:29459; rev:3;"
+}

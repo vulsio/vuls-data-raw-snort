@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "57462",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET $HTTP_PORTS -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR Perl.Backdoor.STEADYPULSE webshell variant access\"; flow:to_client,established; file_data; content:\"Results of |27|\"; content:\"|27| execution:|0A 0A|\",within 260; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2021/04/suspected-apt-actors-leverage-bypass-techniques-pulse-secure-zero-day.html; classtype:trojan-activity; sid:57462; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "866",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP post-query access\"; flow:to_server,established; http_uri; content:\"/post-query\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6752; reference:cve,2001-0291; classtype:attempted-recon; sid:866; rev:20;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2066",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Lotus Notes .pl script source download attempt\"; flow:to_server,established; http_uri; content:\".pl\"; pkt_data; content:\".pl\"; content:\".\",within 1; metadata:ruleset community; service:http; reference:bugtraq,6841; reference:cve,2003-1408; classtype:web-application-attack; sid:2066; rev:12;"
+}

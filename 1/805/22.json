@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "805",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Progress webspeed access\"; flow:to_server,established; http_uri; content:\"/wsisa.dll/WService=\",fast_pattern,nocase; content:\"WSMadmin\",nocase; metadata:ruleset community; service:http; reference:bugtraq,969; reference:cve,2000-0127; reference:nessus,10304; classtype:attempted-user; sid:805; rev:22;"
+}

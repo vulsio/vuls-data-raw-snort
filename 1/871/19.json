@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "871",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP survey.cgi access\"; flow:to_server,established; http_uri; content:\"/survey.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1817; reference:cve,1999-0936; classtype:attempted-recon; sid:871; rev:19;"
+}

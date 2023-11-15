@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2420",
+  "Rev": "33",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"FILE-IDENTIFY RealNetworks Realplayer .rmp playlist file download request\"; flow:to_server,established; http_uri; content:\".rmp\",fast_pattern,nocase; pcre:\"/\\x2ermp([\\?\\x5c\\x2f]|$)/smi\"; flowbits:set,file.rmp; flowbits:set,file.realplayer.playlist; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/.ram; classtype:misc-activity; sid:2420; rev:33;"
+}

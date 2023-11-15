@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1661",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS cmd32.exe access\"; flow:to_server,established; http_uri; content:\"cmd32.exe\",nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1661; rev:15;"
+}

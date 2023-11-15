@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "44401",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET [443,447,449] -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Trickbot self-signed certificate exchange\"; flow:to_client,established; content:\"|16 03|\"; content:\"|30 82|\",distance 13; content:\"|00 92 93 45 3A 42 8B 15 4C|\",fast_pattern,nocase; content:\"London\"; content:\"example.com\"; metadata:impact_flag red,ruleset community; service:ssl; reference:url,malware-traffic-analysis.net/2017/08/12/index.html; classtype:trojan-activity; sid:44401; rev:2;"
+}

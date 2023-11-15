@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21850",
+  "Rev": "7",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-OTHER TDS Sutra - request hi.cgi\"; flow:to_server,established; http_uri; content:\"/hi.cgi\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,wepawet.iseclab.org/view.php?hash=822b95927fd4d8bb6eb2e62f4e1ef645&t=1243359208&type=js; reference:url,www.nartv.org/tag/tds/; reference:url,xylibox.blogspot.com/2011/12/sutra-tds-v34.html; classtype:trojan-activity; sid:21850; rev:7;"
+}

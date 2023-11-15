@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "41699",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Netgear DGN2200 ping.cgi command injection attempt\"; flow:to_server,established; http_uri; content:\"/ping.cgi\",nocase; content:\"ping_IPAddr=\",fast_pattern,nocase; http_raw_uri; content:\"%26\"; pcre:\"/[?&]ping_IPAddr=[^&]*?%26/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2017-6077; reference:url,seclists.org/fulldisclosure/2017/Feb/50; classtype:web-application-attack; sid:41699; rev:3;"
+}

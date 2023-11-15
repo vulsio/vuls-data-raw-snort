@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31991",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string - Treck - Win.Backdoor.Upatre\"; flow:to_server,established; content:\"/0/ HTTP/1.\"; content:\"User-Agent: Treck|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e295922322324e048657a5b4c0c4c9717a1a127e39ba45a03dc5d4d4bb2e523f/analysis/; classtype:trojan-activity; sid:31991; rev:4;"
+}

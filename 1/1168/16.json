@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1168",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP mall log order access\"; flow:to_server,established; http_uri; content:\"/mall_log_files/order.log\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2266; reference:cve,1999-0606; classtype:attempted-recon; sid:1168; rev:16;"
+}

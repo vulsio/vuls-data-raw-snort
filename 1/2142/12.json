@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2142",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP shoutbox.php access\"; flow:to_server,established; http_uri; content:\"/shoutbox.php\",fast_pattern,nocase; content:\"conf=\",nocase; metadata:ruleset community; service:http; reference:nessus,11668; classtype:web-application-activity; sid:2142; rev:12;"
+}

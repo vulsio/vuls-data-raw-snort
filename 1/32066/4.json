@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32066",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Asprox outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:20<=>23; http_uri; content:\"/b/pkg/T202\",depth 11,fast_pattern; http_header; content:\"UA-CPU: \"; pkt_data; content:\"Connection: Keep-Alive|0D 0A 0D 0A|\"; http_uri; pcre:\"/\\x2fb\\x2fpkg\\x2fT202[0-9a-z]{10}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8ba8292eaa47967618c2376afe524736f4fa7eec15ed9cca17abfca692d26fe4/analysis/; classtype:trojan-activity; sid:32066; rev:4;"
+}

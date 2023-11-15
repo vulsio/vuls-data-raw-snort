@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1214",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP intranet access\"; flow:to_server,established; http_uri; content:\"/intranet/\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11626; classtype:attempted-recon; sid:1214; rev:14;"
+}

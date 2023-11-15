@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "30482",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET 1600:1604 -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zbot/Bublik inbound connection\"; flow:to_client,established; content:\"E|00|N|00|D|00|S|00|E|00|R|00|V|00|E|00|R|00|B|00|U|00|F|00|F|00|E|00|R|00|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; reference:url,isc.sans.edu/forums/diary/Malicious+PDF+sent+in+massive+scam+to+Colombian+users+claiming+to+be+from+Credit+score+agency/17875; reference:url,www.virustotal.com/en/file/bbc1a8b0892785c75f0f44d9414e424ed03cefbf951ed20eaae50031670c8a96/analysis/; classtype:trojan-activity; sid:30482; rev:3;"
+}

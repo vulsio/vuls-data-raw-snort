@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1937",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
+  "Option": "msg:\"PROTOCOL-POP LIST overflow attempt\"; flow:to_server,established; content:\"LIST\",nocase; isdataat:10,relative; pcre:\"/^LIST\\s[^\\n]{10}/smi\"; metadata:ruleset community; service:pop3; reference:bugtraq,948; reference:cve,2000-0096; reference:nessus,10197; classtype:attempted-admin; sid:1937; rev:13;"
+}

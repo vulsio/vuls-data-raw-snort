@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1473",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP newsdesk.cgi access\"; flow:to_server,established; http_uri; content:\"/newsdesk.cgi\",fast_pattern,nocase; http_raw_uri; content:\"../\"; metadata:ruleset community; service:http; reference:bugtraq,2172; reference:cve,2001-0232; reference:nessus,10586; classtype:attempted-recon; sid:1473; rev:20;"
+}

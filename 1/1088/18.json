@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1088",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP eXtropia webstore directory traversal\"; flow:to_server,established; http_uri; content:\"/web_store.cgi\"; pkt_data; content:\"page=../\"; metadata:ruleset community; service:http; reference:bugtraq,1774; reference:cve,2000-1005; reference:nessus,10532; classtype:web-application-attack; sid:1088; rev:18;"
+}

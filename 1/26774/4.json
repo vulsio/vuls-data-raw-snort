@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26774",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Worm.Luder variant outbound connection\"; flow:to_server,established; http_uri; content:\"/loader.cpl\",fast_pattern,nocase; pcre:\"/\\/loader\\.cpl$/\"; http_header; content:\"|3B 20|MSIE|20|\"; content:!\"|0D 0A|Accept-Language:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1196; reference:url,www.virustotal.com/en/file/6077fd6cbb44c78a16d66fedb10492c7776127dc76ee071b051970971212bae8/analysis/; classtype:trojan-activity; sid:26774; rev:4;"
+}

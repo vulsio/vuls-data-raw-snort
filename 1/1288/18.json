@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1288",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage /_vti_bin/ access\"; flow:to_server,established; http_uri; content:\"/_vti_bin/\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:nessus,11032; classtype:web-application-activity; sid:1288; rev:18;"
+}

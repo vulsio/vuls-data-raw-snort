@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56610",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-OTHER Cobalt Strike beacon outbound connection attempt\"; flow:to_server,established; http_header; content:\"auth=0|5C 3B|loc=US}\",fast_pattern,nocase; content:\"sess-=\"; content:\"Accept-Encoding: gzip, deflate, br\"; content:\"Accept-Language: en-US|0D 0A|\"; content:\"Accept: */*\"; http_uri; pcre:\"/^\\x2f(updates|license\\x2feula|docs\\x2foffice|software-activation)/i\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56610; rev:1;"
+}

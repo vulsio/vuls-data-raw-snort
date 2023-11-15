@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1172",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP bigconf.cgi access\"; flow:to_server,established; http_uri; content:\"/bigconf.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,778; reference:cve,1999-1550; reference:nessus,10027; classtype:web-application-activity; sid:1172; rev:18;"
+}

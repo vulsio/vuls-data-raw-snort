@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28940",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Rovnix malicious download\"; flow:to_server,established; http_uri; content:\"/config.php?\",fast_pattern,nocase; content:\"version=\"; content:\"user=\"; content:\"server=\"; content:\"id=\"; content:\"crc=\"; content:\"id=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,isc.sans.edu/forums/diary/Suspected+Active+Rovnix+Botnet+Controller/17180; reference:url,www.welivesecurity.com/2012/02/22/rovnix-reloaded-new-step-of-evolution/; classtype:trojan-activity; sid:28940; rev:3;"
+}

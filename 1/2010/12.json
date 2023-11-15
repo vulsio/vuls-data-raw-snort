@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2010",
+  "Rev": "12",
+  "Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
+  "Option": "msg:\"INDICATOR-COMPROMISE CVS double free exploit attempt response\"; flow:to_client,established; content:\"free|28 29 3A| warning|3A| chunk is already free\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,6650; reference:cve,2003-0015; reference:nessus,11385; classtype:misc-attack; sid:2010; rev:12;"
+}

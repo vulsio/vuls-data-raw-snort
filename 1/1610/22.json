@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1610",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP formmail arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/formmail\",fast_pattern,nocase; pkt_data; content:\"%0a\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1187; reference:bugtraq,2079; reference:cve,1999-0172; reference:cve,2000-0411; reference:nessus,10076; reference:nessus,10782; classtype:web-application-attack; sid:1610; rev:22;"
+}

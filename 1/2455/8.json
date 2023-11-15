@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2455",
+  "Rev": "8",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 5050",
+  "Option": "msg:\"POLICY-SOCIAL Yahoo IM conference message\"; flow:to_server,established; content:\"YMSG\",depth 4,nocase; content:\"|00 1D|\",depth 2,offset 10; metadata:ruleset community; classtype:policy-violation; sid:2455; rev:8;"
+}

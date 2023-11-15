@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1675",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE misparsed login response\"; flow:to_client,established; content:\"description=|28|\",nocase; content:!\"connect_data=|28|sid=\",nocase; content:!\"address=|28|protocol=tcp\",nocase; metadata:ruleset community; classtype:suspicious-login; sid:1675; rev:8;"
+}

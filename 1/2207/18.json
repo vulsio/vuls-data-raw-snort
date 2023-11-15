@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2207",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP FileSeek fileseek.cgi access\"; flow:to_server,established; http_uri; content:\"/fileseek.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4579; reference:bugtraq,6784; reference:cve,2002-0611; reference:nessus,11748; classtype:web-application-activity; sid:2207; rev:18;"
+}

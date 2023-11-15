@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "971",
+  "Rev": "28",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS ISAPI .printer access\"; flow:to_server,established; http_uri; content:\".printer\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2674; reference:cve,2001-0241; reference:nessus,10661; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-023; classtype:web-application-activity; sid:971; rev:28;"
+}

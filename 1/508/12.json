@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "508",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 70",
+  "Option": "msg:\"SERVER-OTHER gopher proxy\"; flow:to_server,established; content:\"ftp|3A|\",fast_pattern,nocase; content:\"@/\"; metadata:ruleset community; classtype:bad-unknown; sid:508; rev:12;"
+}

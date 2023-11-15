@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29891",
+  "Rev": "8",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Pushdo variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_header; content:!\"Referer|3A 20|\"; content:\"Accept|3A| */*|0D 0A|Accept-Language|3A| en-us|0D 0A|Content-Type|3A| application/octet-stream|0D 0A|Content-Length|3A| \",depth 93; content:\"Connection|3A| Keep-Alive|0D 0A|Cache-Control|3A| no-cache|0D 0A|\",distance 0; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:29891; rev:8;"
+}

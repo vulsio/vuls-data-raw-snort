@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1991",
+  "Rev": "9",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 1863",
+  "Option": "msg:\"POLICY-SOCIAL Microsoft MSN login attempt\"; flow:to_server,established; content:\"USR \",depth 4,nocase; content:\" TWN \",distance 1,nocase; metadata:ruleset community; classtype:policy-violation; sid:1991; rev:9;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26319",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC file path used as User-Agent - potential Trojan\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|C:|5C|\",fast_pattern,nocase; http_uri; pcre:\"/\\.exe$/i\"; http_header; pcre:\"/^User\\x2dAgent\\x3a\\x20c\\x3a\\x5c[^\\r\\n]*?\\.exe\\r\\n/im\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/5dd932e083cf9d910bc43bb998983f5ec35691c1b84708a355f7c46b358fa375/analysis/; classtype:trojan-activity; sid:26319; rev:3;"
+}

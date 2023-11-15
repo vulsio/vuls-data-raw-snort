@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32888",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"INDICATOR-COMPROMISE Potential Redirect from Compromised WordPress site to Fedex - Spammed Malware Download attempt\"; flow:to_server,established; http_raw_uri; bufferlen:1; http_method; content:\"GET\"; http_header; content:\"/wp-admin/\",fast_pattern,nocase; content:\"Host: www.fedex.com|0D 0A|\"; pcre:\"/Referer\\x3a\\x20[\\x20-\\x7E]*?\\/wp\\x2dadmin\\/[a-z\\d\\x2d]+?\\.php\\r\\n/i\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.hybrid-analysis.com/sample/a531bc62b0460eba5b0003b535a2e9cceae0b623aecfdc6f0331743fbee77e56/; classtype:trojan-activity; sid:32888; rev:2;"
+}

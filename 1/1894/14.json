@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1894",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 749",
+  "Option": "msg:\"INDICATOR-SHELLCODE kadmind buffer overflow attempt\"; flow:to_server,established; content:\"|00 C0 05 08 00 C0 05 08 00 C0 05 08 00 C0 05 08|\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,5731; reference:bugtraq,6024; reference:cve,2002-1226; reference:cve,2002-1235; reference:nessus,15015; reference:url,www.kb.cert.org/vuls/id/875073; classtype:shellcode-detect; sid:1894; rev:14;"
+}

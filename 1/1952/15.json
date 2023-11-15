@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1952",
+  "Rev": "15",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-RPC mountd UDP mount request\"; flow:to_server; content:\"|00 01 86 A5|\",depth 4,offset 12; content:\"|00 00 00 01|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; classtype:attempted-recon; sid:1952; rev:15;"
+}

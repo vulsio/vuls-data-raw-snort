@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31973",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Chebri variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:10; pkt_data; content:\"/index.php HTTP/1.0|0D 0A|Host: google.com|0D 0A|User-Agent: \",fast_pattern,nocase; http_client_body; content:\"0=\",depth 2; http_header; content:\"Accept-Encoding: none|0D 0A 0D 0A|\"; pcre:\"/User\\x2dAgent\\x3a\\x20[A-F\\d]{32}\\r\\n/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/db94644fc351fb4a9117b68ab625494daa2ebe36117a8333577d857a7c2d1ec6/analysis/1409853252/; classtype:trojan-activity; sid:31973; rev:3;"
+}

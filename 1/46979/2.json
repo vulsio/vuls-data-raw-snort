@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46979",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"INDICATOR-COMPROMISE Microsoft Office Discovery User-Agent to a potential URL shortener service\"; flow:to_server,established; http_raw_uri; bufferlen:<10; http_header; content:\"Host: \"; content:\"|0D 0A|\",within 14; http_method; content:\"OPTIONS\"; http_header; content:\"User-Agent: Microsoft Office \"; content:\"Discovery|0D 0A|\",within 25; content:!\"Accept\"; content:!\"Referer|3A|\"; content:!\"Cookie|3A|\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,virustotal.com/en/file/d615a205d92898896b0f553a027ffd9b7b7cde0c29ebe0b1f9364e1cf2831236/analysis/; classtype:misc-activity; sid:46979; rev:2;"
+}

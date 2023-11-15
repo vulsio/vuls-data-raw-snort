@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "48846",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Osx.Trojan.WindTail outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent: usrnode/\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/ad282e5ba2bc06a128eb20da753350278a2e47ab545fdab808e94a2ff7b4061e; classtype:trojan-activity; sid:48846; rev:1;"
+}

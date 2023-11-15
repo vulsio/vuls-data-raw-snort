@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "30198",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Symmi variant outbound connection\"; flow:to_server,established; http_header; content:\".xpg.com.br|0D 0A|Accept: text/html, */*|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: Mozilla/3.0",
+  "Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d28a89d789d51b30730a43ef903bc0fbb58e7014e9d55fbb2e42fd640fee1eac/analysis/; classtype:trojan-activity; sid:30198; rev:3;"
+}

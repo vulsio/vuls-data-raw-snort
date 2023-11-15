@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "37814",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1720",
+  "Option": "msg:\"POLICY-OTHER Polycom Botnet inbound connection attempt\"; flow:to_server,established; content:\"|03 00|\",depth 2; content:\"|08|\",distance 2; content:\"|05|\",distance 4; content:\"MERA RTU\",within 100,fast_pattern; metadata:ruleset community; reference:url,support.polycom.com/global/documents/support/documentation/H_3_2_3_Botnet_Bulletin_v_1_2.pdf; classtype:trojan-activity; sid:37814; rev:4;"
+}

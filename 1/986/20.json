@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "986",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS MSProxy access\"; flow:to_server,established; http_uri; content:\"/scripts/proxy/w3proxy.dll\",nocase; metadata:ruleset community; service:http; reference:url,support.microsoft.com/?kbid=331066; classtype:web-application-activity; sid:986; rev:20;"
+}

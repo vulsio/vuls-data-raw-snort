@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28555",
+  "Rev": "2",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1434",
+  "Option": "msg:\"MALWARE-OTHER SQL Slammer worm propagation attempt inbound\"; flow:to_server; content:\"|04|\",depth 1; content:\"Qh.dll\",fast_pattern,nocase; content:\"sock\"; content:\"send\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; reference:bugtraq,5310; reference:bugtraq,5311; reference:cve,2002-0649; classtype:trojan-activity; sid:28555; rev:2;"
+}

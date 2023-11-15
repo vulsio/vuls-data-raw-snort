@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21500",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"FILE-IDENTIFY XML file attachment detected\"; flow:to_server,established; content:\".xml\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2exml/i\"; flowbits:set,file.xml; flowbits:noalert; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:smtp; classtype:misc-activity; sid:21500; rev:12;"
+}

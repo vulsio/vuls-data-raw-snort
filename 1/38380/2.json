@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38380",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dridex file download attempt\"; flow:to_server,established; file_data; content:\"FeintedEscalator\",fast_pattern,nocase; content:\"InkingGrange\"; metadata:impact_flag red,ruleset community; service:smtp; reference:url,www.virustotal.com/en/file/f4bf52759270fa4fc4e5745d51dd8d73b49feae9de5bedfd8f4e0a865e8047c4/analysis/1459264179/; classtype:trojan-activity; sid:38380; rev:2;"
+}

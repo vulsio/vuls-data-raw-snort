@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1814",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP CISCO VoIP DOS ATTEMPT\"; flow:to_server,established; http_uri; content:\"/StreamingStatistics\"; metadata:ruleset community; service:http; reference:bugtraq,4794; reference:cve,2002-0882; reference:nessus,11013; classtype:misc-attack; sid:1814; rev:15;"
+}

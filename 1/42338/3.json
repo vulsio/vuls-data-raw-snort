@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "42338",
+  "Rev": "3",
+  "Header": "alert tcp any any -> $HOME_NET 445",
+  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB large NT RENAME transaction request memory leak attempt\"; flow:to_server,established; content:\"|FF|SMB|A0|\",depth 5,offset 4; content:\"|05 00|\",within 2,distance 64; byte_test:2,>,1024,0,relative,little; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:netbios-ssn; reference:url,msdn.microsoft.com/en-us/library/ee441910.aspx; reference:url,technet.microsoft.com/en-us/security/bulletin/MS17-010; classtype:attempted-recon; sid:42338; rev:3;"
+}

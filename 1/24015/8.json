@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "24015",
+  "Rev": "8",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Magania variant outbound connection\"; flow:to_server,established; content:\"User-Agent: Google page|0D 0A|\",fast_pattern,nocase; content:\".asp?\"; content:\"mac=\",within 4; content:\"&ver=\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.seculert.com/blog/2013/06/adversary-arsenal-exposed-part-i-pinkstats.html; reference:url,www.virustotal.com/file/6a813f96bb65367a8b5c5ba2937c773785a0a0299032a6c77b9b0862be8bdb71/analysis/; classtype:trojan-activity; sid:24015; rev:8;"
+}

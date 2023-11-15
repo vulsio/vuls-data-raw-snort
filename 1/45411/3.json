@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45411",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"POLICY-OTHER TrendMicro ServerProtect server configuration file download detected\"; flow:to_server,established; http_uri; content:\"/activeupdate/ini_xml.zip\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,2017-9035; reference:url,www.coresecurity.com/advisories/trend-micro-serverprotect-multiple-vulnerabilities; classtype:attempted-recon; sid:45411; rev:3;"
+}

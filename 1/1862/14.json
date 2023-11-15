@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1862",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP mrtg.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/mrtg.cgi\"; pkt_data; content:\"cfg=/../\"; metadata:ruleset community; service:http; reference:bugtraq,4017; reference:cve,2002-0232; reference:nessus,11001; classtype:web-application-attack; sid:1862; rev:14;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "25521",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"OS-MOBILE Android User-Agent detected\"; flow:established,to_server; http_header; content:\"User-Agent|3A|\"; content:\"android\",distance 0,fast_pattern,nocase; pcre:\"/^User-Agent\\x3a[^\\r\\n]*android/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:policy-violation; sid:25521; rev:4;"
+}

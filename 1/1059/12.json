@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1059",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SQL xp_filelist attempt\"; flow:to_server,established; content:\"xp_filelist\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1059; rev:12;"
+}

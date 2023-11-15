@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "44699",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Internal field separator use in HTTP URI attempt\"; flow:to_server,established; http_uri; content:\"${IFS}\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:web-application-attack; sid:44699; rev:3;"
+}

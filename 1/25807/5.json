@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "25807",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Urausy Botnet variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:95<=>102; http_header; content:\"|29 20|Chrome|2F|\"; content:!\"|0A|Accept-Encoding|3A 20|\"; http_uri; pcre:\"/^\\x2f[a-z\\x2d\\x5f]{90,97}\\.php$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.botnets.fr/index.php/Urausy; classtype:trojan-activity; sid:25807; rev:5;"
+}

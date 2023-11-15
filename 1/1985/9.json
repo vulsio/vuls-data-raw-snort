@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1985",
+  "Rev": "9",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR Doly variant outbound connection attempt\"; flow:to_client,established; content:\"* Doly trojan v1.5 - Connected.\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,virustotal.com/en/file/499446edf3dfd200ebf3df2526cd4d101979e626afcd1860193f71829be23922/; classtype:trojan-activity; sid:1985; rev:9;"
+}

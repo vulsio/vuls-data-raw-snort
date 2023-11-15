@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26563",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Harakit botnet traffic\"; flow:to_server,established; http_raw_uri; bufferlen:10; http_header; content:\"sousi.extasix.com|0D 0A|\",fast_pattern,nocase; http_uri; content:\"/genst.htm\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.symantec.com/security_response/attacksignatures/detail.jsp?asid=23239; reference:url,www.virustotal.com/en/file/3df72fe102fddc74de2da518ea16948bd2c8c0e910c28c4358367e10723ba21f/analysis/; classtype:trojan-activity; sid:26563; rev:2;"
+}

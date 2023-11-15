@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31455",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Rig Exploit Kit Outbound DGA Request\"; flow:established,to_server; http_raw_uri; bufferlen:25<=>32; http_uri; content:\".html?0.\",depth 11,offset 2; pcre:\"/\\/[a-z]{1,4}\\x2ehtml\\x3f0\\x2e[0-9]{15,}$/\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.symantec.com/connect/blogs/rig-exploit-kit-used-recent-website-compromise; classtype:trojan-activity; sid:31455; rev:4;"
+}

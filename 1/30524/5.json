@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "30524",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [21,25,443,465,636,992,993,995,2484]",
+  "Option": "msg:\"SERVER-OTHER OpenSSL TLSv1.1 heartbeat read overrun attempt\"; flow:to_server,established; content:\"|18 03 02 00 03 01 40 00|\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ssl; reference:cve,2014-0160; classtype:attempted-recon; sid:30524; rev:5;"
+}

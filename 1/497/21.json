@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "497",
+  "Rev": "21",
+  "Header": "alert tcp $HTTP_SERVERS $HTTP_PORTS -> $EXTERNAL_NET any",
+  "Option": "msg:\"INDICATOR-COMPROMISE file copied ok\"; flow:to_client,established; file_data; content:\"1 file|28|s|29| copied\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1806; reference:cve,2000-0884; classtype:bad-unknown; sid:497; rev:21;"
+}

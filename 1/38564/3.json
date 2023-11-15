@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38564",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.GateKeylogger keylog exfiltration attempt\"; flow:to_server,established; http_uri; content:\"/post.php?\",fast_pattern,nocase; content:\"pl=\"; content:\"&education=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1020; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/77c802db1731fa8dae1b03d978f89b046309adfa1237b1497a69ccb9c2d82c16/analysis/1459520578/; classtype:trojan-activity; sid:38564; rev:3;"
+}

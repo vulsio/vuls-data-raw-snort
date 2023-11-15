@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26659",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"BROWSER-FIREFOX Possible Mozilla Firefox Plugin install from non-Mozilla source\"; flow:to_server,established; http_header; content:!\"mozilla\"; http_uri; content:\".xpi\",nocase; pcre:\"/\\.xpi$/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,research.zscaler.com/2012/09/how-to-install-silently-malicious.html; classtype:bad-unknown; sid:26659; rev:4;"
+}

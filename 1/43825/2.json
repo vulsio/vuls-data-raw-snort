@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "43825",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Osx.Trojan.XAgent outbound connection\"; flow:to_server,established; http_header; content:\"(unknown version)\"; content:\"Darwin/\",within 30; content:\"Accept|3A 20|*/*|0D 0A|\"; http_uri; pcre:\"/\\/(search|find|results|open|search|close|watch)\\/\\x3f[a-zA-Z0-9]{2,8}\\x3d/i\"; http_header; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,contagiodump.blogspot.com/2017/02/russian-apt-apt28-collection-of-samples.html; reference:url,download.bitdefender.com/resources/files/News/CaseStudies/study/143/Bitdefender-Whitepaper-APT-Mac-A4-en-EN-web.pdf; classtype:trojan-activity; sid:43825; rev:2;"
+}

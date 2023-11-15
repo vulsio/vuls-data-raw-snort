@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2043",
+  "Rev": "8",
+  "Header": "alert udp $HOME_NET 500 -> $EXTERNAL_NET 500",
+  "Option": "msg:\"INDICATOR-SCAN isakmp login failed\"; content:\"|10 05|\",depth 2,offset 17; content:\"|00 00 00 01 01 00 00 18|\",within 8,distance 13; metadata:policy max-detect-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:misc-activity; sid:2043; rev:8;"
+}

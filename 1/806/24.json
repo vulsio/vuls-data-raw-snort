@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "806",
+  "Rev": "24",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP yabb directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/YaBB\",fast_pattern,nocase; http_raw_uri; content:\"../\"; metadata:ruleset community; service:http; reference:bugtraq,1668; reference:cve,2000-0853; reference:nessus,10512; classtype:attempted-recon; sid:806; rev:24;"
+}

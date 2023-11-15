@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "955",
+  "Rev": "23",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage access.cnf access\"; flow:to_server,established; http_uri; content:\"/_vti_pvt/access.cnf\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,4078; reference:cve,2002-1717; reference:nessus,10575; classtype:web-application-activity; sid:955; rev:23;"
+}

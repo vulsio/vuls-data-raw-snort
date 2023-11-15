@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1302",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP console.exe access\"; flow:to_server,established; http_uri; content:\"/cgi-bin/console.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3375; reference:cve,2001-1252; classtype:attempted-recon; sid:1302; rev:15;"
+}

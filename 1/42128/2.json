@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "42128",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Ismdoor variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent|3A| WinHttpClient\",fast_pattern,nocase; http_raw_uri; content:\"//Home/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.vectranetworks.com/blog/an-analysis-of-the-shamoon-2-malware-attack; classtype:trojan-activity; sid:42128; rev:2;"
+}

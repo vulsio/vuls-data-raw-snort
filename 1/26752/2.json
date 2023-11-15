@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26752",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"DELETED MALWARE-CNC Harbinger rootkit click fraud HTTP response\"; flow:to_client,established; file_data; content:\"http://\",depth 7; content:\"|7C|Mozilla/\",fast_pattern,nocase; pcre:\"/\\|(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\|\\d+\\|/\"; metadata:ruleset community; classtype:trojan-activity; sid:26752; rev:2;"
+}

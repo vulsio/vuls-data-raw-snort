@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31454",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.ChoHeap variant outbound connection\"; flow:to_server,established; content:\".rar HTTP/1.1|0D 0A|Accept: text/*, application/*|0D 0A|User-Agent: Mozilla/5.0|0D 0A|Host: \",fast_pattern,nocase; http_header; content:\"|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0423e10a674fb7e96557eac50b51207709a248df6e06aeeba401ded6157c1298/analysis/; classtype:trojan-activity; sid:31454; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1551",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP /CVS/Entries access\"; flow:to_server,established; http_uri; content:\"/CVS/Entries\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:nessus,10922; reference:nessus,11032; classtype:web-application-activity; sid:1551; rev:14;"
+}

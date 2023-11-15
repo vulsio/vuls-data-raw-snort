@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1583",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Domino mailw46.nsf access\"; flow:to_server,established; http_uri; content:\"/mailw46.nsf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10629; classtype:attempted-recon; sid:1583; rev:14;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "39581",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.NanoBot/Perseus initial outbound connection\"; flow:to_server,established; isdataat:59; isdataat:!60; content:\"|38 00 00 00 F5 13 89 53|\",depth 8; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/4b16d1e205f198222bd2b2bb8dbd55886a9e2b79de484eec0d8cce5db376d3c8/analysis/; classtype:trojan-activity; sid:39581; rev:4;"
+}

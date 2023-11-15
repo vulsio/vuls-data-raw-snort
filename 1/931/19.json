@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "931",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion cfmlsyntaxcheck.cfm access\"; flow:to_server,established; http_uri; content:\"/cfdocs/cfmlsyntaxcheck.cfm\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,550; reference:cve,1999-0760; classtype:attempted-recon; sid:931; rev:19;"
+}

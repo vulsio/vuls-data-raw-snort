@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26776",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Blocker variant outbound connection POST\"; flow:to_server,established; http_method; content:\"POST\"; http_client_body; content:\"cmd=gravar&dados=\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/c157a06965bf9edc101350c6122d108ccb1d99600cbb6967ef41dfed255f2009/analysis/; classtype:trojan-activity; sid:26776; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27565",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-OTHER HideMeBetter spam injection variant\"; flow:to_client,established; file_data; content:\"<div id=|22|HideMeBetter|22|>\",fast_pattern,nocase; content:\"if(document|2E|getElementById(|22|HideMeBetter|22|)|20 21 3D 20|null)\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2013/07/hidemebetter-spam-injection-variant.html; classtype:trojan-activity; sid:27565; rev:2;"
+}

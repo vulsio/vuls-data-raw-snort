@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49680",
+  "Rev": "1",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"MALWARE-CNC Win.Ransomware.Lockergoga binary download attempt\"; flow:to_server,established; flowbits:isset,file.exe; file_data; content:\"|40 74 6B 85 FF 7C 65 7F 04 85 F6 74 5F 8B 03 8B 40 04 8B 4C 18 38 0F B7 54 18 40 89 55 EC 8B 41|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:url,bleepingcomputer.com/news/security/new-lockergoga-ransomware-allegedly-used-in-altran-attack/; classtype:trojan-activity; sid:49680; rev:1;"
+}

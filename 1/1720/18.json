@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1720",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP talkback.cgi access\"; flow:to_server,established; http_uri; content:\"/talkbalk.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2547; reference:cve,2001-0420; classtype:web-application-activity; sid:1720; rev:18;"
+}

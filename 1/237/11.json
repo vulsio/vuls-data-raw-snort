@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "237",
+  "Rev": "11",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 27444",
+  "Option": "msg:\"MALWARE-OTHER Trin00 Master to Daemon default password attempt\"; flow:to_server; content:\"l44adsl\"; metadata:ruleset community; reference:cve,2000-0138; reference:url,attack.mitre.org/techniques/T1078; classtype:attempted-dos; sid:237; rev:11;"
+}

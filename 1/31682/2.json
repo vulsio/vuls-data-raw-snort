@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31682",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Badur download attempt\"; flow:to_server,established; http_raw_uri; bufferlen:9; http_uri; content:\"/tmps.exe\",fast_pattern,nocase; http_header; content:\"Proxy-Authorization: Basic |0D 0A|\"; http_cookie; content:\"__cfduid=\",depth 9; http_header; content:\") Chrome/\"; content:!\"Accept-\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/840b3b76030696b1ce9eccd5ee6d55dd79c0120871094cb9266769c09f03029c/analysis/; classtype:trojan-activity; sid:31682; rev:2;"
+}

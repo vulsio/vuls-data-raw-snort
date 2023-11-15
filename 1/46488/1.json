@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46488",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Ammy download attempt\"; flow:to_server,established; http_uri; content:\"/q2/index.php?\",fast_pattern,nocase; content:\"id=\"; content:\"&c=\"; content:\"&mk=\"; content:\"&il=\"; content:\"&vr=\"; content:\"&bt=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:46488; rev:1;"
+}

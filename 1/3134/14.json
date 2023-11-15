@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3134",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+  "Option": "msg:\"FILE-IMAGE Microsoft PNG large colour depth download attempt\"; flow:to_client,established; flowbits:isset,file.png; file_data; content:\"|89|PNG|0D 0A 1A 0A|\"; content:\"IHDR\",within 8; byte_test:1,>,16,8,relative; metadata:ruleset community; service:ftp-data, http, imap, pop3; reference:bugtraq,11523; reference:cve,2004-0990; reference:cve,2004-1244; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-009; classtype:attempted-user; sid:3134; rev:14;"
+}

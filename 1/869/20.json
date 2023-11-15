@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "869",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP dumpenv.pl access\"; flow:to_server,established; http_uri; content:\"/dumpenv.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1178; reference:nessus,10060; classtype:attempted-recon; sid:869; rev:20;"
+}

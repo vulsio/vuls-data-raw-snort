@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "879",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP admin.pl access\"; flow:to_server,established; http_uri; content:\"/admin.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3839; reference:cve,2002-1748; reference:url,online.securityfocus.com/archive/1/249355; classtype:attempted-recon; sid:879; rev:20;"
+}

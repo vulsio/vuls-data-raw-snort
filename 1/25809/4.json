@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "25809",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"DELETED MALWARE-CNC Sality logos.gif URLs\"; flow:to_server,established; http_uri; content:\"/logos.gif?\",fast_pattern,nocase; pcre:\"/\\x2Flogos\\.gif\\x3F[0-9a-f]+=\\x2d?\\d+/i\"; http_header; content:!\"|0A|Referer|3A|\"; content:!\"|0A|Cookie|3A|\"; metadata:ruleset community; reference:url,www.virustotal.com/en/file/79416e894ee7040e88f9918802db4d473140d45e45d945abebe820a1841ec5ba/analysis/; classtype:trojan-activity; sid:25809; rev:4;"
+}

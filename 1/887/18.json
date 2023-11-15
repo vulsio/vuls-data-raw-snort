@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "887",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP www-sql access\"; flow:to_server,established; http_uri; content:\"/www-sql\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,marc.theaimsgroup.com/?l=bugtraq&m=88704258804054&w=2; classtype:attempted-recon; sid:887; rev:18;"
+}

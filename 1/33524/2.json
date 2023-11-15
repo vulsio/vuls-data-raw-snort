@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "33524",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.DNSChanger variant outbound connection\"; flow:to_server,established; http_uri; content:\"/updateb.xml?\",fast_pattern,nocase; content:\"rnd=\"; content:\"&spfail=\",within 20; content:\"&guid=\",within 15; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2b16bd74ed6cf86938a7108b6a6fa9343ac4f890f0228b964a98c45428cb4e3c/analysis/; reference:url,www.virustotal.com/en/file/e5cbca1c1cca4ce5ef8beddca38869bdb18e089b969171e5ba337aa756371c36/analysis/; classtype:trojan-activity; sid:33524; rev:2;"
+}

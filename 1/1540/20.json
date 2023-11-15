@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1540",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion ?Mode=debug attempt\"; flow:to_server,established; http_uri; content:\"Mode=debug\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,1999-0760; reference:nessus,10797; classtype:web-application-activity; sid:1540; rev:20;"
+}

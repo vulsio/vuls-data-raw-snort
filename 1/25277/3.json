@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "25277",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-OTHER Request for a non-legit postal receipt\"; flow:to_server,established; http_uri; content:\".php?php=receipt\",fast_pattern,nocase; pcre:\"/\\x2f[a-z0-9]+\\.php\\?php\\x3dreceipt$/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,urlquery.net/search.php?q=.php%3Fphp%3Dreceipt&type=string; classtype:misc-activity; sid:25277; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "41443",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Ransomware.X-Mas variant keylogger outbound connection\"; flow:to_server,established; http_uri; content:\"/gate.php\",fast_pattern,nocase; http_client_body; content:\"163=\"; content:\"&x=\",distance 0; content:\"&z=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1056; reference:url,virustotal.com/en/file/b49d2b3c6978584408f3c668863cc88e892bd333a9db9c3de14964d59fc3298f/analysis/1484847208/; classtype:trojan-activity; sid:41443; rev:4;"
+}

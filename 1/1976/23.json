@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1976",
+  "Rev": "23",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP RMD overflow attempt\"; flow:to_server,established; content:\"RMD\",nocase; isdataat:100,relative; pcre:\"/^RMD(?!\\n)\\s[^\\n]{100}/smi\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,15457; reference:bugtraq,2972; reference:bugtraq,39041; reference:cve,2000-0133; reference:cve,2001-0826; reference:cve,2001-1021; reference:cve,2005-3683; reference:cve,2010-0625; classtype:attempted-admin; sid:1976; rev:23;"
+}

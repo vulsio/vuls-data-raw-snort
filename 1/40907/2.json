@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40907",
+  "Rev": "2",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1040",
+  "Option": "msg:\"PROTOCOL-OTHER TP-Link TDDP Get_config configuration leak attempt\"; flow:to_server; content:\"|01 02 00|\",depth 3; content:\"|00 00|\",within 2,distance 7; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.coresecurity.com/advisories/tp-link-tddp-multiple-vulnerabilities; classtype:attempted-recon; sid:40907; rev:2;"
+}

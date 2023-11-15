@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1826",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP WEB-INF access\"; flow:to_server,established; http_uri; content:\"/WEB-INF\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1830; reference:bugtraq,5119; reference:cve,2000-1050; reference:cve,2001-0179; reference:nessus,11037; classtype:web-application-activity; sid:1826; rev:17;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27201",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Neurevt variant outbound connection\"; flow:to_server,established; http_client_body; content:\"ps0=\",depth 4; content:\"ps1=\",distance 0; content:\"cs1=\",distance 0; content:\"cs2=\",distance 0; content:\"cs3=\",distance 0; pcre:\"/ps0=[A-F0-9]*&ps1=[A-F0-9]*&cs1=[A-F0-9]*&cs2=[A-F0-9]*&cs3=[A-F0-9]*/\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27201; rev:5;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31458",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.SDBot variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:8; http_uri; content:\"/install\"; http_client_body; content:\"argc=\",depth 5; content:\"&name=\",distance 0; content:\"&previous=\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/5682e096bad2d2e75fb09122af272572b23ca5defb70325ab7cdc4c534a68e7d/analysis; classtype:trojan-activity; sid:31458; rev:3;"
+}

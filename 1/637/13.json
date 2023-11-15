@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "637",
+  "Rev": "13",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SCAN Webtrends Scanner UDP Probe\"; flow:to_server; content:\"|0A|help|0A|quite|0A|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; reference:url,www.netiq.com/products/vsm/default.asp; classtype:attempted-recon; sid:637; rev:13;"
+}

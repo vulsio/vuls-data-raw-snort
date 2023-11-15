@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "144",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP ADMw0rm ftp login attempt\"; flow:to_server,established; content:\"USER\",nocase; content:\"w0rm\",distance 1,nocase; pcre:\"/^USER\\s+w0rm/smi\"; metadata:ruleset community; service:ftp; classtype:suspicious-login; sid:144; rev:16;"
+}

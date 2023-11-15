@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46051",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Bandook/Anbacas outbound connection attempt\"; flow:to_server,established; content:\"QDAwMD\",depth 6,fast_pattern; content:\"&&&\",within 200; isdataat:!0,relative; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,info.lookout.com/rs/051-ESQ-475/images/Lookout_Dark-Caracal_srr_20180118_us_v.1.0.pdf; reference:url,www.virustotal.com/#/file/bf600e7b27bdd9e396e5c396aba7f079c244bfb92ee45c721c2294aa36586206/detection; classtype:trojan-activity; sid:46051; rev:1;"
+}

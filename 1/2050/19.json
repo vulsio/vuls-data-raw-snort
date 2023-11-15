@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2050",
+  "Rev": "19",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1434",
+  "Option": "msg:\"SERVER-MSSQL version overflow attempt\"; flow:to_server; dsize:>100; content:\"|04|\",depth 1; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,5310; reference:cve,2002-0649; reference:nessus,10674; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-039; classtype:attempted-admin; sid:2050; rev:19;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40184",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Phoenix Exploit Kit inbound geoip.php bdr exploit attempt\"; flow:to_server,established; http_uri; content:\"/geoip.php?bdr=\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/phoenix_exec.rb; classtype:web-application-activity; sid:40184; rev:2;"
+}

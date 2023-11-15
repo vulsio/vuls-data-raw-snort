@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3457",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 617",
+  "Option": "msg:\"SERVER-OTHER Arkeia backup client type 77 overflow attempt\"; flow:to_server,established; content:\"|00|M\",depth 2; byte_test:2,>,23,6; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:bugtraq,12594; reference:cve,2005-0491; reference:nessus,17158; classtype:attempted-user; sid:3457; rev:14;"
+}

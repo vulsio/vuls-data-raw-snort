@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1834",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP PHP-Wiki cross site scripting attempt\"; flow:to_server,established; http_uri; content:\"/modules.php?\"; content:\"name=Wiki\",fast_pattern,nocase; content:\"<script\",nocase; metadata:ruleset community; service:http; reference:bugtraq,5254; reference:cve,2002-1070; classtype:web-application-attack; sid:1834; rev:16;"
+}

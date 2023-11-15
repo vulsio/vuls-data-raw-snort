@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2406",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+  "Option": "msg:\"PROTOCOL-TELNET APC SmartSlot default admin account attempt\"; flow:to_server,established; content:\"TENmanUFactOryPOWER\",fast_pattern,nocase; metadata:ruleset community; service:telnet; reference:bugtraq,9681; reference:cve,2004-0311; reference:nessus,12066; reference:url,attack.mitre.org/techniques/T1078; classtype:suspicious-login; sid:2406; rev:14;"
+}

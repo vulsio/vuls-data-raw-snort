@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1009",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS directory listing\"; flow:to_server,established; http_uri; content:\"/ServerVariables_Jscript.asp\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:nessus,10573; classtype:web-application-attack; sid:1009; rev:19;"
+}

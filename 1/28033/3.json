@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28033",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Ransomware.Urausy variant outbound connection\"; flow:to_server,established; http_uri; bufferlen:>95; pkt_data; content:\"User-Agent|3A| Opera/10.80 |28|Windows NT 5.1|3B| U|3B| Edition Yx|3B| en|29| Presto/2.9.168 Version/11.52|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/\\x2f[a-z-_]{90,}\\x2e(html|php)$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e74e0b2f3efbe8edadeaeef501fe268e2ff7c8a8bc8550de7924f77f2a612941/analysis/1378636986/; classtype:trojan-activity; sid:28033; rev:3;"
+}

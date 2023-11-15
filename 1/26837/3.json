@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26837",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC BitBot Idle C2 response\"; flow:to_client,established; file_data; content:\"<|5C||5C||5C|>IDLE<|5C||5C||5C|>\",depth 18; metadata:ruleset community; service:http; classtype:trojan-activity; sid:26837; rev:3;"
+}

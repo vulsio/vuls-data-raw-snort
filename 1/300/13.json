@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "300",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 2766",
+  "Option": "msg:\"OS-SOLARIS Oracle Solaris npls x86 overflow\"; flow:to_server,established; content:\"|EB 23|^3|C0 88|F|FA 89|F|F5 89|6\"; metadata:ruleset community; reference:bugtraq,2319; reference:cve,1999-1588; classtype:attempted-admin; sid:300; rev:13;"
+}

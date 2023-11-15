@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1504",
+  "Rev": "14",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 7001",
+  "Option": "msg:\"POLICY-OTHER AFS access\"; flow:to_server; content:\"|00 00 03 E7 00 00 00 00 00 00 00|e|00 00 00 00 00 00 00 00 0D 05 00 00 00 00 00 00 00|\",fast_pattern,nocase; metadata:ruleset community; reference:nessus,10441; classtype:misc-activity; sid:1504; rev:14;"
+}

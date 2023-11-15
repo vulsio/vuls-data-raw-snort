@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3013",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 23432",
+  "Option": "msg:\"MALWARE-CNC Asylum 0.1 connection request\"; flow:to_server,established; content:\"RQS\",depth 3; flowbits:set,backdoor.asylum.connect; flowbits:noalert; metadata:ruleset community; classtype:misc-activity; sid:3013; rev:8;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "24972",
+  "Rev": "6",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [139,445]",
+  "Option": "msg:\"NETBIOS SMB Trans2 FIND_FIRST2 find file and directory info request\"; flow:to_server,established; content:\"|FF|SMB2|00 00 00 00|\",depth 9,offset 4; byte_test:1,!&,0x80,0,relative; content:\"|01 00|\",within 2,distance 52; byte_jump:2,-10,relative,little,from_beginning,post_offset 10; content:\"|04 01|\",within 2; flowbits:set,smb.trans2.fileinfo; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:netbios-ssn; classtype:protocol-command-decode; sid:24972; rev:6;"
+}

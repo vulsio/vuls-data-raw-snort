@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2072",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP lyris.pl access\"; flow:to_server,established; http_uri; content:\"/lyris.pl\"; metadata:ruleset community; service:http; reference:bugtraq,1584; reference:cve,2000-0758; classtype:web-application-activity; sid:2072; rev:10;"
+}

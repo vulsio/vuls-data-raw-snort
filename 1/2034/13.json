@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2034",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-RPC ypserv maplist request TCP\"; flow:to_server,established; content:\"|00 01 86 A4|\",depth 4,offset 16; content:\"|00 00 00 0B|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; reference:bugtraq,5914; reference:bugtraq,6016; reference:cve,2002-1232; classtype:rpc-portmap-decode; sid:2034; rev:13;"
+}

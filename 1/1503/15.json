@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1503",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP admentor admin.asp access\"; flow:to_server,established; http_uri; content:\"/admentor/admin/admin.asp\"; metadata:ruleset community; service:http; reference:bugtraq,4152; reference:cve,2002-0308; reference:nessus,10880; reference:url,www.securiteam.com/windowsntfocus/5DP0N1F6AW.html; classtype:web-application-activity; sid:1503; rev:15;"
+}

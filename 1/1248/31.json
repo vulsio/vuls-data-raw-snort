@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1248",
+  "Rev": "31",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage rad fp30reg.dll access\"; flow:to_server,established; http_uri; content:\"/fp30reg.dll\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2906; reference:cve,2001-0341; reference:cve,2003-0822; reference:nessus,10699; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-035; classtype:web-application-activity; sid:1248; rev:31;"
+}

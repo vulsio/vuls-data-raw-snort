@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29189",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Magnitude exploit kit Microsoft Internet Explorer Payload request\"; flow:to_server,established; http_raw_uri; bufferlen:34; http_uri; content:\"/?\",depth 2,fast_pattern; pcre:\"/^\\/\\?[a-f0-9]{32}$/\"; http_header; content:\" MSIE \"; content:!\"Referer|3A|\"; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; classtype:trojan-activity; sid:29189; rev:5;"
+}

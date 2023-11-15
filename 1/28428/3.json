@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28428",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"EXPLOIT-KIT Glazunov exploit kit landing page\"; flow:to_client,established; file_data; content:\"= |22|applet|22 3B 20|\"; content:\"= |22|object|22 3B 20|\",within 50; content:\"=|27|param|27 3B 20|\",within 50; content:\".zip|27 3B| </script>\",distance 0; pcre:\"/\\/\\d+\\/\\d\\.zip\\x27\\x3b/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2013-2471; reference:url,nakedsecurity.sophos.com/2013/07/02/the-four-seasons-of-glazunov-digging-further-into-sibhost-and-flimkit/; classtype:trojan-activity; sid:28428; rev:3;"
+}

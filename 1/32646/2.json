@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32646",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-COMPROMISE Potential malware download - _pdf.exe within .zip file\"; flow:to_client,established; flowbits:isset,file.zip; file_data; content:\"_pdf.exe\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0d68f1d3855543a4732e551e9e4375a2cd85d9ab11a86334f67ad99c5f6990a0/analysis/; classtype:trojan-activity; sid:32646; rev:2;"
+}

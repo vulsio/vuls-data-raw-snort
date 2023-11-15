@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1839",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP mailman cross site scripting attempt\"; flow:to_server,established; http_uri; content:\"/mailman/\",nocase; content:\"?\"; content:\"info=\"; content:\"<script\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,5298; reference:cve,2002-0855; reference:nessus,14984; classtype:web-application-attack; sid:1839; rev:14;"
+}

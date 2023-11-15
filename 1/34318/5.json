@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34318",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.CryptoWall variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:<130; http_uri; content:\".php?\",nocase; content:\"|3D|\",within 1,distance 1; http_header; content:\"Cache-Control: no-cache|0D 0A 0D 0A|\",nocase; content:!\"|0D 0A|Accept-\"; content:\"Content-Type: application/x-www-form-urlencoded|0D 0A|\",fast_pattern,nocase; http_client_body; content:\"|3D|\",depth 2,offset 1; pcre:\"/^[a-z]\\x3d[a-f\\d]{80,140}$/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d14f1d1e07bd116ed0faf5896438177f36a05adacf5af4f32910e313e9c1fd93/analysis/; classtype:trojan-activity; sid:34318; rev:5;"
+}

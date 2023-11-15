@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2358",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Typo3 translations.php file include\"; flow:to_server,established; http_uri; content:\"/translations.php\",fast_pattern,nocase; pkt_data; content:\"ONLY=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,6984; classtype:web-application-attack; sid:2358; rev:13;"
+}

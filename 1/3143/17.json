@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3143",
+  "Rev": "17",
+  "Header": "alert tcp $HOME_NET 139 -> $EXTERNAL_NET any",
+  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB Trans2 FIND_FIRST2 command response overflow attempt\"; flow:to_client,established; flowbits:isset,smb.trans2; content:\"|00|\",depth 1; content:\"|FF|SMB2\",within 5,distance 3; pcre:\"/^.{27}/R\"; flowbits:unset,smb.trans2; byte_test:2,>,15,7,relative,little; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,12484; reference:cve,2005-0045; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-011; classtype:protocol-command-decode; sid:3143; rev:17;"
+}

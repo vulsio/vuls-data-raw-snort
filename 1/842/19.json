@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "842",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP aglimpse access\"; flow:to_server,established; http_uri; content:\"/aglimpse\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2026; reference:cve,1999-0147; reference:nessus,10095; classtype:attempted-recon; sid:842; rev:19;"
+}

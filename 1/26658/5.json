@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26658",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"BROWSER-WEBKIT Possible Google Chrome Plugin install from non-trusted source\"; flow:to_server,established; http_header; content:!\"googleusercontent\"; content:!\"google.com\"; http_uri; content:\"|2F|crx|2F|blobs\"; http_header; content:!\"gvt1.com\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,blogs.technet.com/b/mmpc/archive/2013/05/10/browser-extension-hijacks-facebook-profiles.aspx; classtype:bad-unknown; sid:26658; rev:5;"
+}

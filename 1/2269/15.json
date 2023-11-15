@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2269",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL Sendmail RCPT TO prescan too many addresses overflow\"; flow:to_server,established; content:\"RCPT TO|3A|\",fast_pattern,nocase; pcre:\"/^RCPT TO\\x3a\\s*[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?</smi\"; metadata:ruleset community; service:smtp; reference:bugtraq,6991; reference:cve,2002-1337; classtype:attempted-admin; sid:2269; rev:15;"
+}

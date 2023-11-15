@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2355",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Invision Board emailer.php file include\"; flow:to_server,established; http_uri; content:\"/ad_member.php\",fast_pattern,nocase; content:\"emailer.php\",nocase; metadata:ruleset community; service:http; reference:bugtraq,7204; classtype:web-application-activity; sid:2355; rev:13;"
+}

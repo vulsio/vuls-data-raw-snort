@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32935",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-OTHER Win.Trojan.Wiper download attempt\"; flow:to_client,established; file_data; content:\"|8A 10 80 C2 4E 80 F2 79 88 10|\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32935; rev:2;"
+}

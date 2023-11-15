@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "29869",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Napolar phishing attack\"; flow:to_client,established; content:\"facebook.com.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; reference:url,www.virustotal.com/en/file/58762cf6aa8eea5744716986773a2c22ae7412eae634be7bed648c96465bc8ef/analysis/; classtype:trojan-activity; sid:29869; rev:4;"
+}

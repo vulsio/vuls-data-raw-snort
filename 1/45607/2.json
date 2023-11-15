@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45607",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Rokrat variant outbound connection detected\"; flow:to_server,established; http_uri; content:\".php?id=\"; content:\"fp_vs=\",fast_pattern,nocase; content:\"os_vs=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/#/file/3004196da6055c6f062c94a9aae8dc357fa19b953b071049083e69e840083cf9/detection; classtype:trojan-activity; sid:45607; rev:2;"
+}

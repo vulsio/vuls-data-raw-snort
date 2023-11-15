@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "313",
+  "Rev": "10",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 518",
+  "Option": "msg:\"OS-LINUX ntalkd x86 Linux overflow\"; flow:to_server; content:\"|01 03 00 00 00 00 00 01 00 02 02 E8|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,210; classtype:attempted-admin; sid:313; rev:10;"
+}

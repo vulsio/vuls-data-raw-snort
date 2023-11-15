@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "50901",
+  "Rev": "1",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 500",
+  "Option": "msg:\"SERVER-OTHER OpenBSD ISAKMP denial of service attempt\"; flow:to_server; content:\"|6C 6A CD CF B8 41 3F F8 00 00 00 00 00 00 00 00 01 10 04 01 00 00 00 00 00 00 00 1C|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2004-0222; classtype:denial-of-service; sid:50901; rev:1;"
+}

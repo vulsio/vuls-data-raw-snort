@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2178",
+  "Rev": "23",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP USER format string attempt\"; flow:to_server,established; content:\"USER\",fast_pattern,nocase; pcre:\"/^USER\\s[^\\n]*?%[^\\n]*?%/smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,7474; reference:bugtraq,7776; reference:bugtraq,9262; reference:bugtraq,9402; reference:bugtraq,9600; reference:bugtraq,9800; reference:cve,2004-0277; reference:nessus,10041; reference:nessus,11687; classtype:misc-attack; sid:2178; rev:23;"
+}

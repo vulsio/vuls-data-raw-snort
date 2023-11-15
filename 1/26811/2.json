@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26811",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC XP Fake Antivirus Payment Page Request\"; flow:to_server,established; http_raw_uri; bufferlen:23; http_uri; content:\"/content/img/awards.jpg\",fast_pattern,nocase; http_header; pcre:\"/\\r\\nReferer\\x3A\\x20http\\x3A\\x2F\\x2f[a-z0-9\\x2d\\x2e]+\\x2F\\x3Fdo\\x3Dpayment\\x26ver\\x3D\\d+\\x26sid\\x3D\\d+\\x26sn\\x3D\\d+\\r\\n/\"; metadata:ruleset community; service:http; reference:url,camas.comodo.com/cgi-bin/submit?file=cf3eff5320b0c8d41490e412e89b97559bf34fcde8f9934e5fb7c76467a679d8; classtype:trojan-activity; sid:26811; rev:2;"
+}

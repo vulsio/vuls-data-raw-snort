@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2226",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP pmachine remote file include attempt\"; flow:to_server,established; http_uri; content:\"lib.inc.php\",fast_pattern,nocase; content:\"pm_path=\"; pcre:\"/pm_path=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,7919; reference:nessus,11739; classtype:web-application-attack; sid:2226; rev:19;"
+}

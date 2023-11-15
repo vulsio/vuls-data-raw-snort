@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "25519",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"OS-MOBILE Apple iPad User-Agent detected\"; flow:established,to_server; http_header; content:\"User-Agent|3A|\"; content:\"iPad\",distance 0,fast_pattern; pcre:\"/^User-Agent\\x3a[^\\r\\n]*iPad/\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:policy-violation; sid:25519; rev:5;"
+}

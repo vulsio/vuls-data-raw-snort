@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "613",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET 10101 -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SCAN myscan\"; flow:stateless; ack:0; flags:S; ttl:>220; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:attempted-recon; sid:613; rev:11;"
+}

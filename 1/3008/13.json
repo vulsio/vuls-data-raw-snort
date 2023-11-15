@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3008",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+  "Option": "msg:\"PROTOCOL-IMAP delete literal overflow attempt\"; flow:established,to_server; content:\"DELETE\",fast_pattern,nocase; pcre:\"/\\sDELETE\\s[^\\n]*?\\{/smi\"; byte_test:5,>,100,0,string,dec,relative; metadata:ruleset community; service:imap; reference:bugtraq,11675; reference:cve,2005-1520; reference:nessus,15771; classtype:misc-attack; sid:3008; rev:13;"
+}

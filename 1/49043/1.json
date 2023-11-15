@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49043",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"PUA-ADWARE Osx.Adware.Genieo variant outbound connection detected\"; flow:to_server,established; http_header; content:\"User-Agent: LinqurySearch\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/850b4f620e874ed6117c7e1d15dd1c502d7e38cd4dd872753d502f39e3a5c8d8; classtype:trojan-activity; sid:49043; rev:1;"
+}

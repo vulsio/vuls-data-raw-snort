@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34994",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Banbra variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:43; http_uri; content:\"/imagens/nacional/new/1/2/3/br/contador.php\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/5.0",
+  "Option": "Windows NT 6.1|3B| WOW64|3B| rv:12.0) Gecko/20100101 Firefox/12.0\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/078f4f7bbd0a7fc3f1934a4988997e9f3b69ca8b9dc1bfd37a6c85b44fb50b48/analysis/; classtype:trojan-activity; sid:34994; rev:2;"
+}

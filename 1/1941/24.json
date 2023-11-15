@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1941",
+  "Rev": "24",
+  "Header": "alert udp any any -> any 69",
+  "Option": "msg:\"PROTOCOL-TFTP GET filename overflow attempt\"; flow:to_server; content:\"|00 01|\",depth 2; isdataat:100,relative; content:!\"|00|\",within 100; metadata:policy max-detect-ips drop,ruleset community; service:tftp; reference:bugtraq,20131; reference:bugtraq,22923; reference:bugtraq,36121; reference:bugtraq,5328; reference:cve,2002-0813; reference:cve,2006-4948; reference:cve,2007-1435; reference:cve,2009-2957; reference:cve,2009-2958; reference:nessus,18264; classtype:attempted-admin; sid:1941; rev:24;"
+}

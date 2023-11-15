@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47557",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.PLEAD downloader outbound connection\"; flow:to_server,established; content:\"GET /index.php?id=\",depth 18; content:\"HTTP/1.1|0D 0A|\",within 10,distance 11,nocase; content:\"Cookie:\"; isdataat:50,relative; content:!\"=\",within 50; content:!\"|3B|\",within 50; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,blog.jpcert.or.jp/2018/06/plead-downloader-used-by-blacktech.html; classtype:trojan-activity; sid:47557; rev:2;"
+}

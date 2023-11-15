@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "411",
+  "Rev": "8",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP IPV6 I-Am-Here\"; icode:0; itype:34; metadata:ruleset community; classtype:misc-activity; sid:411; rev:8;"
+}

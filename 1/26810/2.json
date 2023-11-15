@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26810",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"DELETED MALWARE-CNC Win.Trojan.Syndicasec Stage Two traffic\"; flow:to_server,established; http_method; content:\"POST\"; http_client_body; content:\"cstype=server|26|authname=\"; metadata:ruleset community; reference:url,www.welivesecurity.com/2013/05/23/syndicasec-in-the-sin-bin; classtype:trojan-activity; sid:26810; rev:2;"
+}

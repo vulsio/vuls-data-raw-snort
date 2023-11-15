@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1080",
+  "Rev": "23",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP unify eWave ServletExec upload\"; flow:to_server,established; http_uri; content:\"/servlet/com.unify.servletexec.UploadServlet\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1868; reference:bugtraq,1876; reference:cve,2000-1024; reference:cve,2000-1025; reference:nessus,10570; classtype:web-application-attack; sid:1080; rev:23;"
+}

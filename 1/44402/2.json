@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "44402",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET [443,447,449] -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Trickbot self-signed certificate exchange\"; flow:to_client,established; content:\"|16 03|\"; content:\"|30 82|\",distance 13; content:\"|00 DC 5E AE E6 3E EC 78 EC|\"; content:\"Alaska\"; content:\"John_Alaska@gmail.com\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:ssl; reference:url,virustotal.com/en/file/70041c335a374d84f64c6c31d59ff09bd8473fd049cfcb46fe085d1eb92ac0b8/analysis/1502073944/; classtype:trojan-activity; sid:44402; rev:2;"
+}

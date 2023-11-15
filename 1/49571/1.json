@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "49571",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Fakewmi variant outbound connection attempt\"; flow:to_server,established; http_uri; content:\".png?ID=\",fast_pattern,nocase; content:\"&MAC=\"; content:\"&OS=\"; content:\"&BIT=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/bdbfa96d17c2f06f68b3bcc84568cf445915e194f130b0dc2411805cf889b6cc/detection; classtype:trojan-activity; sid:49571; rev:1;"
+}

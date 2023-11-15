@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2008",
+  "Rev": "9",
+  "Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
+  "Option": "msg:\"INDICATOR-COMPROMISE CVS invalid user authentication response\"; flow:to_client,established; content:\"E Fatal error, aborting.\",fast_pattern,nocase; content:\"|3A| no such user\"; metadata:ruleset community; classtype:misc-attack; sid:2008; rev:9;"
+}

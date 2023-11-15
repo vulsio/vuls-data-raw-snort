@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1173",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP architext_query.pl access\"; flow:to_server,established; http_uri; content:\"/ews/architext_query.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2248; reference:cve,1999-0279; reference:nessus,10064; reference:url,www2.fedcirc.gov/alerts/advisories/1998/txt/fedcirc.98.03.txt; classtype:attempted-recon; sid:1173; rev:18;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46819",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-OTHER Win.Ransomware.Satan payload download\"; flow:to_server,established; http_uri; content:\"/cab/sts.exe\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b686cba1894f8ab5cec0ce5db195022def00204f6cd143a325608ec93e8b74ee/analysis/; classtype:trojan-activity; sid:46819; rev:1;"
+}

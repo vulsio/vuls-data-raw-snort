@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27144",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Private exploit kit outbound traffic\"; flow:to_server,established; http_uri; content:\".php?\"; http_header; content:\"content-type: application/\"; content:\" Java/1\"; http_uri; pcre:\"/\\x2ephp\\x3f[a-z]+=[a-fA-Z0-9]+&[a-z]+=[0-9]+$/i\"; metadata:policy balanced-ips alert,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2006-0003; reference:cve,2010-0188; reference:cve,2011-3544; reference:cve,2013-1347; reference:cve,2013-1493; reference:cve,2013-2423; reference:url,malwageddon.blogspot.com/2013/07/unknown-ek-well-hey-hey-i-wanna-be.html; reference:url,malware.dontneedcoffee.com/2013/07/pep-new-bep.html; reference:url,www.malwaresigs.com/2013/07/03/another-unknown-ek; classtype:trojan-activity; sid:27144; rev:3;"
+}

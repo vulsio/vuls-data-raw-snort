@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3153",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
+  "Option": "msg:\"PROTOCOL-DNS TCP inverse query overflow\"; flow:to_server,established; byte_test:1,<,16,4; byte_test:1,&,8,4; isdataat:400; metadata:ruleset community; service:dns; reference:bugtraq,134; reference:cve,1999-0009; classtype:attempted-admin; sid:3153; rev:9;"
+}

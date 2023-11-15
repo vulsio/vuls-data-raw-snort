@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3194",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS .bat executable file parsing attack\"; flow:to_server,established; http_uri; content:\".bat|22|\",nocase; pcre:\"/\\x2ebat\\x22.*?\\x26/smi\"; metadata:ruleset community; service:http; reference:bugtraq,1912; reference:cve,2000-0886; classtype:web-application-attack; sid:3194; rev:16;"
+}

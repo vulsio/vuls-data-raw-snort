@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "30003",
+  "Rev": "6",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Hello/LightsOut exploit kit payload download attempt\"; flow:to_server,established; http_uri; content:\".php?a=dw\",fast_pattern,nocase; pcre:\"/\\?a=dw[a-z]$/\"; http_header; content:\" Java/1.\"; flowbits:set,file.exploit_kit.pe; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2011-1255; reference:cve,2012-1723; reference:cve,2013-1489; reference:url,attack.mitre.org/techniques/T1189; reference:url,blogs.cisco.com/security/watering-hole-attacks-target-energy-sector/; reference:url,jsunpack.jeek.org/?report=2a298ffa14fd2772bd646bd559f610b0c3b51862; reference:url,jsunpack.jeek.org/?report=977b49ea5dc5ef85d8f50d1f1222befee8bf3581; classtype:trojan-activity; sid:30003; rev:6;"
+}

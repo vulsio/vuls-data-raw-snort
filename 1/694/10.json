@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "694",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 139",
+  "Option": "msg:\"INDICATOR-SHELLCODE shellcode attempt\"; flow:to_server,established; content:\"H|00|%|00|x|00|w|00 90 00 90 00 90 00 90 00 90 00|3|00 C0 00|P|00|h|00|.|00|\"; metadata:ruleset community; classtype:attempted-user; sid:694; rev:10;"
+}

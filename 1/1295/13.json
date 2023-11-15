@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1295",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
+  "Option": "msg:\"INDICATOR-COMPROMISE nimda RICHED20.DLL\"; flow:to_server,established; content:\"R|00|I|00|C|00|H|00|E|00|D|00|2|00|0|00|.|00|D|00|L|00|L\",nocase; metadata:ruleset community; reference:url,www.f-secure.com/v-descs/nimda.shtml; classtype:bad-unknown; sid:1295; rev:13;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47016",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Spyware.Invisimole CnC outbound connection\"; flow:to_server,established; http_uri; content:\"/www/\",depth 5,fast_pattern; content:\"/00\",distance 0; http_header; content:!\"Accept|3A|\"; http_raw_uri; pcre:\"/\\/www\\/(%[A-F0-9]{2}){5,}\\/00/\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/be554e706f6b8ab8f4bbea209b669e9dca98bf647faa55c46756f322dadab32f/analysis/; classtype:trojan-activity; sid:47016; rev:1;"
+}

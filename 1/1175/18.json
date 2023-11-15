@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1175",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP wwwboard.pl access\"; flow:to_server,established; http_uri; content:\"/wwwboard.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1795; reference:bugtraq,649; reference:cve,1999-0930; reference:cve,1999-0954; classtype:attempted-recon; sid:1175; rev:18;"
+}

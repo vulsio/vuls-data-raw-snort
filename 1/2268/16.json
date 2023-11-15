@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2268",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL Sendmail MAIL FROM prescan too long addresses overflow\"; flow:to_server,established; content:\"MAIL FROM|3A|\",fast_pattern,nocase; pcre:\"/^MAIL FROM\\x3a\\s+[\\w\\s@\\.]{200,}\\x3b[\\w\\s@\\.]{200,}\\x3b[\\w\\s@\\.]{200}/smi\"; metadata:ruleset community; service:smtp; reference:bugtraq,7230; reference:cve,2003-0161; reference:nessus,11499; classtype:attempted-admin; sid:2268; rev:16;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32531",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"DELETED MALWARE-CNC Win.Trojan.Androm variant outbound connection attempt\"; flow:to_server,established; http_raw_uri; bufferlen:13; http_method; content:\"POST\"; http_uri; content:\"/and/gate.php\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/4.0|0D 0A|\"; metadata:ruleset community; reference:url,www.virustotal.com/en/file/b4d4e5ca72c0c5905bb3a4ed3ad51ee7202901887522d6899b5f48f8ef6f3dcd/analysis/; classtype:trojan-activity; sid:32531; rev:2;"
+}

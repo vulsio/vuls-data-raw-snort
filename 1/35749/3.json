@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "35749",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Backdoor.IsSpace outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/SNews.asp?HostID=\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,publicintelligence.net/fbi-hack-tools-opm/; classtype:trojan-activity; sid:35749; rev:3;"
+}

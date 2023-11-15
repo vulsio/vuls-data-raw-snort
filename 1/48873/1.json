@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "48873",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.BitterRAT variant outbound connection\"; flow:to_server,established; http_uri; content:\"/js/drv\",fast_pattern,nocase; http_raw_uri; bufferlen:7; http_header; content:!\"Referer:\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/7d1e26a031db514dd8258de071b96dc57ebc31baf394129c020dd65b8acfc517; classtype:trojan-activity; sid:48873; rev:1;"
+}

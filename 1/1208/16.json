@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1208",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP responder.cgi access\"; flow:to_server,established; http_uri; content:\"/responder.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3155; classtype:web-application-activity; sid:1208; rev:16;"
+}

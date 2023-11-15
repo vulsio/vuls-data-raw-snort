@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28803",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Injector inbound connection\"; flow:to_client,established; file_data; content:\"UPDATE|7C|\",depth 7; pcre:\"/^UPDATE\\|[0-9]\\.[0-9]\\.[0-9]\\|[A-F0-9]{48}\\|{3}$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/253b2cb7f6eacaaaca5053f73445defce5df2cd4a5564ebc0721e0323a6c3557/analysis/1383139183/; classtype:trojan-activity; sid:28803; rev:5;"
+}

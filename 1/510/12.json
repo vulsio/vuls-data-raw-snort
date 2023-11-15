@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "510",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 9000:9002",
+  "Option": "msg:\"POLICY-OTHER HP JetDirect LCD modification attempt\"; flow:to_server,established; content:\"@PJL RDYMSG DISPLAY =\"; metadata:ruleset community; reference:bugtraq,2245; classtype:misc-activity; sid:510; rev:12;"
+}

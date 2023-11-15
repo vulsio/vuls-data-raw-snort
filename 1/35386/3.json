@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "35386",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Bedep initial outbound connection\"; flow:to_server,established; http_client_body; content:\"protocolVersion|22|\",offset 2; content:\"|22|rev|22|\",within 10; content:\"|22|buildId|22|\",within 15; content:\"|22|tags|22 3A|\",distance 0; content:\"|22|type|22 3A 22|\",within 10; metadata:impact_flag red,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2015/07/a-fileless-ursnif-doing-some-pos.html; classtype:trojan-activity; sid:35386; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "947",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage orders.txt access\"; flow:to_server,established; http_uri; content:\"/_private/orders.txt\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2002-1717; classtype:web-application-activity; sid:947; rev:18;"
+}

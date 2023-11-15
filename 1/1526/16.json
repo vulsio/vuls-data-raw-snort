@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1526",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP basilix sendmail.inc access\"; flow:to_server,established; http_uri; content:\"/inc/sendmail.inc\"; metadata:ruleset community; service:http; reference:bugtraq,2198; reference:cve,2001-1044; reference:nessus,10601; classtype:web-application-activity; sid:1526; rev:16;"
+}

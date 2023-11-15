@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28969",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT HiMan exploit kit outbound payload retreival - specific string\"; flow:to_server,established; http_uri; content:\"/tx.exe\",fast_pattern,nocase; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; classtype:trojan-activity; sid:28969; rev:4;"
+}

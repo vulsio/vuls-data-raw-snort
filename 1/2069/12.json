@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2069",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP chip.ini access\"; flow:to_server,established; http_uri; content:\"/chip.ini\"; metadata:ruleset community; service:http; reference:bugtraq,2755; reference:bugtraq,2775; reference:cve,2001-0749; reference:cve,2001-0771; classtype:web-application-activity; sid:2069; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "647",
+  "Rev": "15",
+  "Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-SHELLCODE Oracle sparc setuid 0\"; content:\"|82 10| |17 91 D0| |08|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:system-call-detect; sid:647; rev:15;"
+}

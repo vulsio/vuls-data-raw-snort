@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40866",
+  "Rev": "3",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1040",
+  "Option": "msg:\"PROTOCOL-OTHER TP-Link TDDP SET_CONFIG type buffer overflow attempt\"; flow:to_server; dsize:>336; content:\"|01 01 00|\",depth 3; byte_test:4,>=,0x0264,4,big; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.coresecurity.com/advisories/tp-link-tddp-multiple-vulnerabilities; classtype:attempted-user; sid:40866; rev:3;"
+}

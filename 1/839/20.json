@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "839",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP finger access\"; flow:to_server,established; http_uri; content:\"/finger\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-0612; reference:nessus,10071; classtype:attempted-recon; sid:839; rev:20;"
+}

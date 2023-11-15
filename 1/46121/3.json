@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46121",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET 32764 -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-OTHER use of undocumented ScMM test interface in Cisco small business devices detected\"; flow:to_client,established; isdataat:6; content:\"MMcS\",depth 4; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2014-0659; classtype:misc-activity; sid:46121; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2159",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any <> $HOME_NET 179",
+  "Option": "msg:\"SERVER-OTHER BGP invalid type 0\"; flow:stateless; content:\"|FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF|\",depth 16; content:\"|00|\",within 1,distance 2; metadata:ruleset community; reference:bugtraq,6213; reference:cve,2002-1350; reference:nessus,14011; reference:nessus,15043; classtype:bad-unknown; sid:2159; rev:15;"
+}

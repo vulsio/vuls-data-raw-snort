@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "880",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP LWGate access\"; flow:to_server,established; http_uri; content:\"/LWGate\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.netspace.org/~dwb/lwgate/lwgate-history.html; reference:url,www.wiretrip.net/rfp/p/doc.asp/i2/d6.htm; classtype:attempted-recon; sid:880; rev:20;"
+}

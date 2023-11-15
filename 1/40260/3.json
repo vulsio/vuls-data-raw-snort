@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40260",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Osx.Trojan.Keydnap variant initial backdoor download attempt\"; flow:to_server,established; http_uri; content:\"/icloudsyncd\",fast_pattern,nocase; http_header; content:\"Accept|3A 20|*/*\"; content:!\"User-Agent|3A 20|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.malwarebytes.com/cybercrime/2016/07/mac-malware-osx-keydnap-steals-keychain/; reference:url,www.welivesecurity.com/2016/07/06/new-osxkeydnap-malware-hungry-credentials/; classtype:trojan-activity; sid:40260; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28988",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any ( msg:\"MALWARE-CNC Win.Worm.Steckt IRCbot variant outbound connection\"; flow:to_server,established; content:\"JOIN #test1|20 7C 0D 0A|JOIN #test2|20 7C 0D 0A|JOIN #test3",
+  "Option": "null)|0D 0A|\",depth 50; metadata:impact_flag red,ruleset community; service:irc; reference:url,www.virustotal.com/en/file/480eb4aa76a55ad7b0db128138113615ca834f9e6c62f798f54c8ac0759657fe/analysis/1387177714/; reference:url,www.virustotal.com/en/file/5b1d04b7504a3ac1befe4408fd4f9cd877b92661db47a75f197924cb660551d3/analysis/1387178129/; classtype:trojan-activity; sid:28988; rev:3;"
+}

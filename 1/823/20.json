@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "823",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cvsweb.cgi access\"; flow:to_server,established; http_uri; content:\"/cvsweb.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1469; reference:cve,2000-0670; reference:nessus,10465; classtype:attempted-recon; sid:823; rev:20;"
+}

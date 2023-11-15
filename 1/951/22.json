@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "951",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage authors.pwd access\"; flow:to_server,established; http_uri; content:\"/authors.pwd\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,989; reference:cve,1999-0386; reference:nessus,10078; classtype:web-application-activity; sid:951; rev:22;"
+}

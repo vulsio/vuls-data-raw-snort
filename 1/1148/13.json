@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1148",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Ecommerce import.txt access\"; flow:to_server,established; http_uri; content:\"/orders/import.txt\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:1148; rev:13;"
+}

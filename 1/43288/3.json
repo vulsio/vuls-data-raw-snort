@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "43288",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP /etc/motd file access attempt\"; flow:to_server,established; http_uri; content:\"/etc/motd\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1087; classtype:attempted-recon; sid:43288; rev:3;"
+}

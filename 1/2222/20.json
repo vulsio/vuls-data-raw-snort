@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2222",
+  "Rev": "20",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Infinity CGI exploit scanner nph-exploitscanget.cgi access\"; flow:to_server,established; http_uri; content:\"/nph-exploitscanget.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7910; reference:bugtraq,7911; reference:bugtraq,7913; reference:cve,2003-0434; reference:nessus,11740; classtype:web-application-activity; sid:2222; rev:20;"
+}

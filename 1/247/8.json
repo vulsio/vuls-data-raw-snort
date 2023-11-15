@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "247",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 12754",
+  "Option": "msg:\"MALWARE-OTHER mstream client to handler\"; flow:to_server,established; content:\">\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:247; rev:8;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1930",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+  "Option": "msg:\"PROTOCOL-IMAP auth literal overflow attempt\"; flow:established,to_server; content:\"AUTH\",fast_pattern,nocase; pcre:\"/({(?=\\d+}[^\\n]*?\\sAUTH)|AUTH\\s[^\\n]*?{(?=\\d+}))/smi\"; byte_test:5,>,256,0,string,dec,relative; metadata:policy max-detect-ips drop,ruleset community; service:imap; reference:bugtraq,21724; reference:cve,1999-0005; reference:cve,2006-6424; classtype:misc-attack; sid:1930; rev:16;"
+}

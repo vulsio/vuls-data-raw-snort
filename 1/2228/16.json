@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2228",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP phpMyAdmin db_details_importdocsql.php access\"; flow:to_server,established; http_uri; content:\"db_details_importdocsql.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7962; reference:bugtraq,7965; reference:nessus,11761; classtype:web-application-attack; sid:2228; rev:16;"
+}

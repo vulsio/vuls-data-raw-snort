@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2127",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP ikonboard.cgi access\"; flow:to_server,established; http_uri; content:\"/ikonboard.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7361; reference:nessus,11605; classtype:web-application-activity; sid:2127; rev:13;"
+}

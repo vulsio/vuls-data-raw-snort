@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "32010",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 23",
+  "Option": "msg:\"MALWARE-CNC Linux.Backdoor.Flooder outbound telnet connection attempt\"; flow:to_server,established; content:\"/bin/busybox|3B|echo -e |27 5C|147|5C|141|5C|171|5C|146|5C|147|5C|164|27 0D 0A|\",fast_pattern,nocase; metadata:ruleset community; service:telnet; reference:url,www.virustotal.com/en/file/73b0d95541c84965fa42c3e257bb349957b3be626dec9d55efcc6ebcba6fa489/analysis/; classtype:trojan-activity; sid:32010; rev:2;"
+}

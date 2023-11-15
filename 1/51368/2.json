@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "51368",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-BACKDOOR Win.Backdoor.Agent webshell inbound request attempt\"; flow:to_server,established; http_header; content:\"Response.Write(|22|UAshell|22|)|3B 0D 0A|\",fast_pattern,nocase; http_uri; content:\"/ua.aspx\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2019-0604; reference:url,portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0604; classtype:trojan-activity; sid:51368; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26698",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-OTHER Compromised Website response - leads to Exploit Kit\"; flow:to_client,established; file_data; content:\"<!--ded509-->\"; content:\"<!--/ded509-->\",distance 0; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.jsunpack.jeek.org/?report=c94ca7cda909cf93ae95db22a27bb5d711c2ae8f; classtype:trojan-activity; sid:26698; rev:2;"
+}

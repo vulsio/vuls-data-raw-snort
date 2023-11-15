@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "33650",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Tinba outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:9; http_uri; content:\"/preview/\"; http_header; content:\"Content-Length: 157|0D 0A|\"; content:!\"User-Agent|3A 20|\"; http_client_body; content:\"|00 80 00 00 00|\",depth 5,offset 24; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8eb2c85abe7acee219e344ae0592a2b1c159bdafa037be39ac062bdaeeb1f621/analysis/; classtype:trojan-activity; sid:33650; rev:3;"
+}

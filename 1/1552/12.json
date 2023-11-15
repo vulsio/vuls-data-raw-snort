@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1552",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cvsweb version access\"; flow:to_server,established; http_uri; content:\"/cvsweb/version\"; metadata:ruleset community; service:http; reference:cve,2000-0670; reference:nessus,10465; classtype:web-application-activity; sid:1552; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46050",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.CrossRAT outbound connection attempt\"; flow:to_server,established; content:\"[^8]&&&\",fast_pattern,nocase; content:\"[^8]&&&\"; isdataat:!0,relative; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/#/file/da81aec00b563123d2fbd14fb6a76619c90f81e83c5bd8aa0676922cae96b9ad/detection; classtype:trojan-activity; sid:46050; rev:1;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56593",
+  "Rev": "1",
+  "Header": "alert udp $EXTERNAL_NET 53 -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Cobalt Strike DNS beacon inbound TXT record\"; flow:to_client; content:\"|00 01 00 01|\",depth 4,offset 4; content:\"|03|\",within 15; content:\"|0A|_domainkey\",within 11,distance 3; content:\"|00 00 10 00 01 C0 0C 00 10 00 01 00 00 00 02 01 00 FF|v=DKIM1|5C 3B| p=\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:dns; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56593; rev:1;"
+}

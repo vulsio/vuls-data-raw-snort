@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "915",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion evaluate.cfm access\"; flow:to_server,established; http_uri; content:\"/cfdocs/snippets/evaluate.cfm\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,550; reference:cve,1999-0760; classtype:attempted-recon; sid:915; rev:19;"
+}

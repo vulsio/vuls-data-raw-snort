@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "45960",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Silverstar outbound connection\"; flow:to_server,established; http_uri; content:\"response=fallback\",fast_pattern,nocase; content:\"/api.php?\",depth 9; content:\"gpu=\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/3f751799a501532f43ca5f12fe80aa0bad78f9f5d57e76bf49b401bb99f355df/detection; classtype:trojan-activity; sid:45960; rev:1;"
+}

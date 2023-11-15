@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27965",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any ( msg:\"MALWARE-CNC Win.Trojan.Eupuds variant connection\"; flow:to_client,established; file_data; content:\"insert into avs",
+  "Option": "id, pc,data,ref,country , id_user, mostrar)values(\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/09f4611c05dcff55d4471b90d41b0fd3e6d3289f71321301751008dab75ded4d/analysis/; classtype:trojan-activity; sid:27965; rev:3;"
+}

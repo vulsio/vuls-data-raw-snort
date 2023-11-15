@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3043",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
+  "Option": "msg:\"NETBIOS SMB NT Trans NT CREATE andx invalid SACL ace size dos attempt\"; flow:stateless; content:\"|00|\",depth 1; content:\"|FF|SMB\",within 4,distance 3; pcre:\"/^(\\x75|\\x2d|\\x2f|\\x73|\\xa2|\\x2e|\\x24|\\x74)/sR\"; byte_test:1,!&,128,6,relative; content:\"|A0|\",depth 1,offset 39; byte_jump:2,0,little,relative; content:\"|01 00|\",within 2,distance 37; byte_jump:4,-7,little,relative,from_beginning; pcre:\"/^.{4}/R\"; content:!\"|00 00 00 00|\",within 4,distance 12; byte_jump:4,12,relative,little; content:\"|00 00|\",within 2,distance -10; metadata:ruleset community; classtype:protocol-command-decode; sid:3043; rev:4;"
+}

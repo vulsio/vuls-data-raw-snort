@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2565",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP modules.php access\"; flow:to_server,established; http_uri; content:\"/modules.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9879; reference:cve,2004-1817; classtype:web-application-activity; sid:2565; rev:14;"
+}

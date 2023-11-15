@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46052",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string Uploador - Win.Trojan.CrossRAT\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Uploador|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/da81aec00b563123d2fbd14fb6a76619c90f81e83c5bd8aa0676922cae96b9ad/detection; classtype:trojan-activity; sid:46052; rev:1;"
+}

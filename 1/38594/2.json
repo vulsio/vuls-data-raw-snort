@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38594",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"APP-DETECT Bloomberg web crawler outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent: BLP_bbot\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,irwebreport.com/20110223/bloomberg-bot-strikes-again-transocean-earnings-leaked; classtype:misc-activity; sid:38594; rev:2;"
+}

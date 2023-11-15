@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2090",
+  "Rev": "22",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS WEBDAV exploit attempt\"; flow:to_server,established; http_header; content:\"HTTP/1.1|0A|Content-type|3A| text/xml|0A|HOST|3A|\"; content:\"Accept|3A| */*|0A|Translate|3A| f|0A|Content-length|3A|5276|0A 0A|\"; metadata:ruleset community; service:http; reference:bugtraq,7116; reference:bugtraq,7716; reference:cve,2003-0109; reference:nessus,11413; reference:url,technet.microsoft.com/en-us/security/bulletin/ms03-007; classtype:attempted-admin; sid:2090; rev:22;"
+}

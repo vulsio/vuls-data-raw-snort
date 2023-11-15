@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1870",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP siteUserMod.cgi access\"; flow:to_server,established; http_uri; content:\"/.cobalt/siteUserMod/siteUserMod.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,951; reference:cve,2000-0117; reference:nessus,10253; classtype:web-application-activity; sid:1870; rev:13;"
+}

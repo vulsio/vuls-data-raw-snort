@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "334",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP .forward\"; flow:to_server,established; content:\".forward\"; metadata:ruleset community; service:ftp; classtype:suspicious-filename-detect; sid:334; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3009",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 20034",
+  "Option": "msg:\"MALWARE-BACKDOOR NetBus Pro 2.0 connection request\"; flow:to_server,established; content:\"BN |00 02 00|\",depth 6; content:\"|05 00|\",depth 2,offset 8; flowbits:set,backdoor.netbus_2.connect; flowbits:noalert; metadata:ruleset community; classtype:misc-activity; sid:3009; rev:8;"
+}

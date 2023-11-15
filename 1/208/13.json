@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "208",
+  "Rev": "13",
+  "Header": "alert tcp $HOME_NET 555 -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR PhaseZero Server Active on Network\"; flow:established,to_client; content:\"phAse zero server\",depth 17,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:url,www.megasecurity.org/trojans/p/phasezero/PhaseZero1.0b.html; reference:url,www3.ca.com/securityadvisor/pest/pest.aspx?id=4539; classtype:trojan-activity; sid:208; rev:13;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1510",
+  "Rev": "16",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP test.bat arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/test.bat|7C|\"; metadata:ruleset community; service:http; reference:bugtraq,762; reference:cve,1999-0947; reference:nessus,10016; classtype:web-application-attack; sid:1510; rev:16;"
+}

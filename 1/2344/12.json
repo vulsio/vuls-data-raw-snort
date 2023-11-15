@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2344",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP XCWD overflow attempt\"; flow:to_server,established; content:\"XCWD\",nocase; isdataat:100,relative; pcre:\"/^XCWD(?!\\n)\\s[^\\n]{100}/smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,11542; reference:bugtraq,8704; reference:cve,2004-2728; classtype:attempted-admin; sid:2344; rev:12;"
+}

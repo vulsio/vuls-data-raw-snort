@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1105",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP BigBrother access\"; flow:to_server,established; http_uri; content:\"/bb-hostsvc.sh?\",nocase; content:\"HOSTSVC\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,1455; reference:cve,2000-0638; reference:nessus,10460; classtype:attempted-recon; sid:1105; rev:18;"
+}

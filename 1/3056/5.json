@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3056",
+  "Rev": "5",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 445",
+  "Option": "msg:\"NETBIOS SMB-DS NT Trans NT CREATE unicode invalid SACL ace size dos attempt\"; flow:stateless; content:\"|00|\",depth 1; content:\"|FF|SMB|A0|\",within 5,distance 3; byte_test:1,&,128,6,relative; pcre:\"/^.{27}/R\"; content:\"|01 00|\",within 2,distance 37; byte_jump:4,-7,little,relative,from_beginning; pcre:\"/^.{4}/R\"; content:!\"|00 00 00 00|\",within 4,distance 16; byte_jump:4,16,relative,little; content:\"|00 00|\",within 2,distance -10; metadata:ruleset community; service:netbios-ssn; classtype:protocol-command-decode; sid:3056; rev:5;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1762",
+  "Rev": "27",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP phf arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/phf?Q\",fast_pattern,nocase; http_raw_uri; content:\"%0a\",nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,629; reference:cve,1999-0067; classtype:web-application-attack; sid:1762; rev:27;"
+}

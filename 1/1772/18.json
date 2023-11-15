@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1772",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS pbserver access\"; flow:to_server,established; http_uri; content:\"/pbserver/pbserver.dll\",nocase; metadata:ruleset community; service:http; reference:cve,2000-1089; reference:url,technet.microsoft.com/en-us/security/bulletin/ms00-094; classtype:web-application-activity; sid:1772; rev:18;"
+}

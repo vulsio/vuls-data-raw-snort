@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "47639",
+  "Rev": "3",
+  "Header": "alert udp $EXTERNAL_NET 53 -> $HOME_NET any",
+  "Option": "msg:\"INDICATOR-OBFUSCATION DNS TXT response record tunneling\"; flow:to_client; dsize:>300; content:\"|00 10 00 01 00 00 00 00 01 00 FF|\",fast_pattern,nocase; detection_filter:track by_src, count 25, seconds 1; metadata:policy max-detect-ips drop,ruleset community; service:dns; reference:url,attack.mitre.org/techniques/T1048; classtype:misc-activity; sid:47639; rev:3;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "903",
+  "Rev": "19",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion cfcache.map access\"; flow:to_server,established; http_uri; content:\"/cfcache.map\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,917; reference:cve,2000-0057; classtype:attempted-recon; sid:903; rev:19;"
+}

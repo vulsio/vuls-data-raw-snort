@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1719",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP talkback.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/talkbalk.cgi\",nocase; pkt_data; content:\"article=../../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2547; reference:cve,2001-0420; classtype:web-application-attack; sid:1719; rev:14;"
+}

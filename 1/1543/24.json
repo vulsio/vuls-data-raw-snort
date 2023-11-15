@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1543",
+  "Rev": "24",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP cgiwrap access\"; flow:to_server,established; http_uri; content:\"/cgiwrap\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1238; reference:bugtraq,3084; reference:bugtraq,777; reference:cve,1999-1530; reference:cve,2000-0431; reference:cve,2001-0987; reference:nessus,10041; classtype:web-application-activity; sid:1543; rev:24;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2065",
+  "Rev": "7",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Lotus Notes .csp script source download attempt\"; flow:to_server,established; http_uri; content:\".csp.\"; metadata:ruleset community; service:http; classtype:web-application-attack; sid:2065; rev:7;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2484",
+  "Rev": "9",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP source.jsp access\"; flow:to_server,established; http_uri; content:\"/source.jsp\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,12119; classtype:web-application-activity; sid:2484; rev:9;"
+}

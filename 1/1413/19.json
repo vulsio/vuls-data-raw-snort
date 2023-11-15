@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1413",
+  "Rev": "19",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161",
+  "Option": "msg:\"PROTOCOL-SNMP private access udp\"; flow:to_server; content:\"private\"; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:bugtraq,7212; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1413; rev:19;"
+}

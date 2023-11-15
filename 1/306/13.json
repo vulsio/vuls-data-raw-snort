@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "306",
+  "Rev": "13",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 9090",
+  "Option": "msg:\"SERVER-OTHER VQServer admin\"; flow:to_server,established; content:\"GET / HTTP/1.1\",nocase; metadata:ruleset community; reference:bugtraq,1610; reference:cve,2000-0766; reference:nessus,10354; reference:url,www.vqsoft.com/vq/server/docs/other/control.html; classtype:attempted-admin; sid:306; rev:13;"
+}

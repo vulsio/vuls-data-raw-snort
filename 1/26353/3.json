@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26353",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"INDICATOR-COMPROMISE IP address check to dyndns.org detected\"; flow:to_server,established; http_header; content:\"Host|3A 20|checkip.dyndns.org\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:misc-activity; sid:26353; rev:3;"
+}

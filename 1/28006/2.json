@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28006",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-OTHER Win.Trojan.Kuluoz outbound download request\"; flow:to_server,established; http_uri; content:\"?message=\",fast_pattern,nocase; pcre:\"/(info|app)\\x2ephp\\x3fmessage\\x3d/\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,malwaremustdie.blogspot.com/2013/09/302-redirector-new-cushion-attempt-to.html; classtype:trojan-activity; sid:28006; rev:2;"
+}

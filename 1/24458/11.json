@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "24458",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"FILE-IDENTIFY JPEG file magic detected\"; flow:to_server,established; file_data; content:\"|FF D8 FF EE|\",depth 4; flowbits:set,file.jpeg; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:smtp; classtype:misc-activity; sid:24458; rev:11;"
+}

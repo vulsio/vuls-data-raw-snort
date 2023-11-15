@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "266",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
+  "Option": "msg:\"OS-OTHER x86 FreeBSD overflow attempt\"; flow:to_server,established; content:\"|EB|n^|C6 06 9A|1|C9 89|N|01 C6|F|05|\"; metadata:ruleset community; service:dns; classtype:attempted-admin; sid:266; rev:15;"
+}

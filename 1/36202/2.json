@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "36202",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Yakes variant dropper\"; flow:to_server,established; http_uri; content:\"/document.php?rnd=\",fast_pattern,nocase; content:\"&id=\",depth 4,offset 22; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/ff0ae81f0dece17baf8480d866c9462c9f3d49be9adde8b16f105e244eb31d67/analysis/; classtype:trojan-activity; sid:36202; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "878",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP w3tvars.pm access\"; flow:to_server,established; http_uri; content:\"/w3tvars.pm\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:878; rev:18;"
+}

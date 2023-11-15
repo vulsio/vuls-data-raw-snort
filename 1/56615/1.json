@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "56615",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Cobalt Strike beacon outbound connection attempt\"; flow:to_server,established; content:\"nyt-gdpr=0|3B|nyt-purr=cfh|3B|nyt-geo=US}\",fast_pattern,nocase; pcre:\"/^GET\\s(?:\\/ads\\/google|\\/vi-assets\\/static-assets|\\/v1\\/preferences|\\/idcta\\/translations|\\/v2\\/preferences)/\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:attempted-user; sid:56615; rev:1;"
+}

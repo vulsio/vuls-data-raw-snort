@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "3193",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS .cmd executable file parsing attack\"; flow:to_server,established; http_uri; content:\".cmd|22|\",nocase; pcre:\"/\\x2ecmd\\x22.*?\\x26/smi\"; metadata:ruleset community; service:http; reference:bugtraq,1912; reference:cve,2000-0886; classtype:web-application-attack; sid:3193; rev:17;"
+}

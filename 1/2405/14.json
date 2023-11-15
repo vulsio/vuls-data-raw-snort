@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2405",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP phptest.php access\"; flow:to_server,established; http_uri; content:\"/phptest.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9737; reference:cve,2004-2374; classtype:web-application-activity; sid:2405; rev:14;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26522",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent NOKIAN95/WEB\"; flow:to_server,established; content:\"User-Agent|3A| NOKIAN95|2F|WEB\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,blog.trendmicro.com/trendlabs-security-intelligence/targeted-attack-campaign-hides-behind-ssl-communication/; classtype:trojan-activity; sid:26522; rev:4;"
+}

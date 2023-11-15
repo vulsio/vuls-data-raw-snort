@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "30336",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Linux.Trojan.Calfbot outbound connection\"; flow:to_server,established; http_uri; content:\"/b/index.php?id=\",fast_pattern,nocase; content:\"&sent=\"; content:\"&notsent=\",distance 0; content:\"&stat=\",distance 0; metadata:ruleset community; service:http; reference:url,www.welivesecurity.com/wp-content/uploads/2014/03/operation_windigo.pdf; classtype:trojan-activity; sid:30336; rev:2;"
+}

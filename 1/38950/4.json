@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38950",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.PassStealer passwords exfiltration attempt\"; flow:to_server; file_data; content:\"Passwords Recorded On \",fast_pattern; content:\"Time of Recording:\",within 20,distance 22; content:\"IP Address\",within 12,distance 15; metadata:impact_flag red,ruleset community; service:ftp; reference:url,attack.mitre.org/techniques/T1020; reference:url,virustotal.com/en/file/5780e8408c8d5c84d1fbe5c53eeb77832a6af54fd41fab7f720c89fc10989340/analysis/1463495191/; classtype:trojan-activity; sid:38950; rev:4;"
+}

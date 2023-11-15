@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1565",
+  "Rev": "21",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP eshop.pl arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/eshop.pl?\",nocase; content:\"seite=|3B|\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,3340; reference:cve,2001-1014; classtype:web-application-attack; sid:1565; rev:21;"
+}

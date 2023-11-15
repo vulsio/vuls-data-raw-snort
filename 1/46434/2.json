@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "46434",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Adware.Doyo client outbound connection\"; flow:established,to_server; content:\"|01 00 00 00 01 01 00 00 01 00 00 00 00 00 04 00 03 00 00 00 00 00 00 00 00 00 00 00|\",depth 28; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/#/file/0692bfe17754036b12b862cd5618051d8b2def85aca2a910188a12baa1ed0060; classtype:trojan-activity; sid:46434; rev:2;"
+}

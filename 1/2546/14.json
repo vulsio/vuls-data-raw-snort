@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2546",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP MDTM overflow attempt\"; flow:to_server,established; content:\"MDTM\",nocase; isdataat:100,relative; pcre:\"/^MDTM(?!\\n)\\s[^\\n]{100}/smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,9751; reference:cve,2001-1021; reference:cve,2004-0330; reference:nessus,12080; classtype:attempted-admin; sid:2546; rev:14;"
+}

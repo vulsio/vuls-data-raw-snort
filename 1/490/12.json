@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "490",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL battle-mail traffic\"; flow:to_server,established; content:\"BattleMail\"; metadata:ruleset community; service:smtp; classtype:policy-violation; sid:490; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "27202",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"DELETED MALWARE-CNC Win.Harbinger Rootkit Click Fraud HTTP request\"; flow:to_server,established; http_raw_uri; bufferlen:8; http_uri; content:\"/task/\",fast_pattern,nocase; pcre:\"/^\\/task\\/\\d\\/$/\"; http_header; content:!\"Accept|3A 20|\"; content:\"|3B 20|MSIE|20|\"; metadata:ruleset community; classtype:trojan-activity; sid:27202; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "460",
+  "Rev": "12",
+  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+  "Option": "msg:\"PROTOCOL-ICMP unassigned type 2\"; icode:0; itype:2; metadata:ruleset community; classtype:misc-activity; sid:460; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1240",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 2224",
+  "Option": "msg:\"SERVER-OTHER MDBMS overflow\"; flow:to_server,established; content:\"|01|1|DB CD 80 E8|[|FF FF FF|\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,1252; reference:cve,2000-0446; reference:nessus,10422; classtype:attempted-admin; sid:1240; rev:10;"
+}

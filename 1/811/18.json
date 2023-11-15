@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "811",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP websitepro path access\"; flow:to_server,established; content:\" /HTTP/1.\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,932; reference:cve,2000-0066; reference:nessus,10303; classtype:attempted-recon; sid:811; rev:18;"
+}

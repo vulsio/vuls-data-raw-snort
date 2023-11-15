@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2362",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP YaBB SE packages.php file include\"; flow:to_server,established; http_uri; content:\"/packages.php\",fast_pattern,nocase; pkt_data; content:\"packer.php\",nocase; metadata:ruleset community; service:http; reference:bugtraq,6663; classtype:web-application-attack; sid:2362; rev:12;"
+}

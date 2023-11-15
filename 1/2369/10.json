@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2369",
+  "Rev": "10",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP ISAPISkeleton.dll access\"; flow:to_server,established; http_uri; content:\"/ISAPISkeleton.dll\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9516; reference:cve,2004-2128; classtype:web-application-activity; sid:2369; rev:10;"
+}

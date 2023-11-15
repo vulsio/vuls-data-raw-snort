@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "51636",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Amadey botnet outbound connection\"; flow:to_server,established; http_client_body; content:\"bi=\",fast_pattern,nocase; http_uri; content:\"/index.php\",nocase; http_client_body; content:\"id=\",nocase; content:\"sd=\",nocase; content:\"vs=\",nocase; content:\"ar=\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/gui/file/ea09fb5b9c31bbf5817f22634f0ad837605a3352df099690d5e3a948bb719e83; classtype:trojan-activity; sid:51636; rev:3;"
+}

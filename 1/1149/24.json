@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1149",
+  "Rev": "24",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP count.cgi access\"; flow:to_server,established; http_uri; content:\"/count.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,128; reference:cve,1999-0021; reference:nessus,10049; classtype:web-application-activity; sid:1149; rev:24;"
+}

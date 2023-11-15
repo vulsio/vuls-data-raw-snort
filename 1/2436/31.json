@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2436",
+  "Rev": "31",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"FILE-IDENTIFY Microsoft Windows Audio wmf file download request\"; flow:to_server,established; http_uri; content:\".wmf\",fast_pattern,nocase; pcre:\"/\\x2ewmf([\\?\\x5c\\x2f]|$)/smi\"; flowbits:set,file.wmf; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/.wmf; classtype:misc-activity; sid:2436; rev:31;"
+}

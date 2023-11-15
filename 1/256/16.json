@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "256",
+  "Rev": "16",
+  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 53",
+  "Option": "msg:\"PROTOCOL-DNS named authors attempt\"; flow:to_server; content:\"|07|authors\",offset 12,nocase; content:\"|04|bind|00|\",offset 12,nocase; metadata:policy max-detect-ips drop,ruleset community; service:dns; reference:nessus,10728; classtype:attempted-recon; sid:256; rev:16;"
+}

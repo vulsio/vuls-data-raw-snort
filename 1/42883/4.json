@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "42883",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.MadMax implant outbound connection attempt\"; flow:established,to_server; http_uri; content:\"/mm.jpg\",depth 7,fast_pattern; http_header; content:\"User-Agent|3A 20|Mozilla/5.0",
+  "Option": "compatible\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:42883; rev:4;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2271",
+  "Rev": "7",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+  "Option": "msg:\"MALWARE-BACKDOOR FsSniffer connection attempt\"; flow:to_server,established; content:\"RemoteNC Control Password|3A|\"; metadata:ruleset community; reference:nessus,11854; classtype:trojan-activity; sid:2271; rev:7;"
+}

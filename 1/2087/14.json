@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2087",
+  "Rev": "14",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+  "Option": "msg:\"SERVER-MAIL From comment overflow attempt\"; flow:to_server,established; content:\"From|3A|\",nocase; content:\"<><><><><><><><><><><><><><><><><><><><><><>\",distance 0; content:\"|28|\",distance 1; content:\"|29|\",distance 1; metadata:ruleset community; service:smtp; reference:bugtraq,6991; reference:cve,2002-1337; reference:url,www.kb.cert.org/vuls/id/398025; classtype:attempted-admin; sid:2087; rev:14;"
+}

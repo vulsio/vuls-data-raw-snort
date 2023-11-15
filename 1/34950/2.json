@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "34950",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Prok variant outbound connection\"; flow:to_server,established; http_uri; content:\"/prok/\"; http_header; content:\"Content-Type: multipart/form-data, boundary=7DF051D\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/ada4a63abae42266f9d472f1d4ebd0bd22702270f8b38ad7a824a16ce449ea2b/analysis/; classtype:trojan-activity; sid:34950; rev:2;"
+}

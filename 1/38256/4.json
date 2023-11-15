@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "38256",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win-Linux.Trojan.Derusbi variant outbound connection\"; flow:to_server,established; http_method; content:\"CONNECT\"; http_header; content:\"User-Agent|3A 20|Mozilla/4.0|0D 0A|\",fast_pattern,nocase; content:\"Pragma|3A 20|no-cache\"; content:\"Proxy-Connection|3A 20|Keep-Alive|0D 0A|\"; content:\"Accept: */*\"; content:\"Accept-Encoding|3A| identity\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.fidelissecurity.com/sites/default/files/TA_Fidelis_Turbo_1602%283%29.pdf; classtype:trojan-activity; sid:38256; rev:4;"
+}

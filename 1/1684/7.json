@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1684",
+  "Rev": "7",
+  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+  "Option": "msg:\"SERVER-ORACLE all_tab_columns access\"; flow:to_server,established; content:\"all_tab_columns\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1684; rev:7;"
+}

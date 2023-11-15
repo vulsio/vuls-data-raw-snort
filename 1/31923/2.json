@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31923",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Symmi variant HTTP response attempt\"; flow:to_client,established; file_data; content:\"%set_intercepts%\",fast_pattern,nocase; content:\"%ban_contact%\"; content:\"%ebaylive%\"; content:\"%dep_host%\"; content:\"%relay_soxid%\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/4c0549384574ae91b68d58d92da3deacfcf714b27fb8d762ce9de8c58990ffb1/analysis/; classtype:trojan-activity; sid:31923; rev:2;"
+}

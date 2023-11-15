@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28147",
+  "Rev": "5",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Conficker variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_uri; content:\"/search?q=\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/4.0",
+  "Option": "compatible|3B| MSIE \"; content:\": no-cache|0D 0A 0D 0A|\"; content:!\"Accept\"; content:!\"Referer\"; http_uri; pcre:\"/^\\/search\\?q=[0-9]$/mi\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/57212e057db0d45d94d08cd47dec85f0d85a20a7f4d3824559c81a50999cc2a5/analysis/; classtype:trojan-activity; sid:28147; rev:5;"
+}

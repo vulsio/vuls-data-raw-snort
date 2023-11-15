@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2571",
+  "Rev": "15",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS SmarterTools SmarterMail frmGetAttachment.aspx access\"; flow:to_server,established; http_uri; content:\"/frmGetAttachment.aspx\",nocase; metadata:ruleset community; service:http; reference:bugtraq,9805; reference:cve,2004-2585; classtype:web-application-activity; sid:2571; rev:15;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "52259",
+  "Rev": "1",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Js.Trojan.FakeUpdate outbound connection\"; flow:to_server,established; content:\"POST /1x1.png HTTP/\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/8035806fc7109137ab55d39046ad9e010597bf5390b2e82740add8d1749edaf3; classtype:trojan-activity; sid:52259; rev:1;"
+}

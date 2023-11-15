@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1726",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS doctodep.btr access\"; flow:to_server,established; http_uri; content:\"doctodep.btr\"; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1726; rev:12;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "21438",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"EXPLOIT-KIT Blackhole exploit kit JavaScript carat string splitting with hostile applet\"; flow:to_client,established; content:\"<html><body><applet|20|code=\",nocase; content:\"|20|archive=\",distance 0,nocase; content:\"display|3A|none|3B|\",distance 0,nocase; pcre:\"/([@\\x2da-z0-9]+?\\x5e){10}/smi\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2006-0003; reference:cve,2007-5659; reference:cve,2008-0655; reference:cve,2008-2992; reference:cve,2009-0927; reference:cve,2010-1885; reference:cve,2011-0559; reference:cve,2011-2110; reference:cve,2011-3544; reference:cve,2012-0188; reference:cve,2012-0507; reference:cve,2012-1723; reference:cve,2012-1889; reference:cve,2012-4681; reference:url,community.websense.com/blogs/securitylabs/pages/black-hole-exploit-kit.aspx; classtype:trojan-activity; sid:21438; rev:8;"
+}

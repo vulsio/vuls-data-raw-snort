@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1225",
+  "Rev": "12",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 6000",
+  "Option": "msg:\"X11 MIT Magic Cookie detected\"; flow:established; content:\"MIT-MAGIC-COOKIE-1\",fast_pattern,nocase; metadata:ruleset community; classtype:attempted-user; sid:1225; rev:12;"
+}

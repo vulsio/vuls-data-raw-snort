@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1244",
+  "Rev": "29",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-IIS ISAPI .idq attempt\"; flow:to_server,established; http_uri; content:\".idq?\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1065; reference:bugtraq,968; reference:cve,2000-0071; reference:cve,2000-0126; reference:cve,2001-0500; reference:nessus,10115; classtype:web-application-attack; sid:1244; rev:29;"
+}

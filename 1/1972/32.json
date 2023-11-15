@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1972",
+  "Rev": "32",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP PASS overflow attempt\"; flow:to_server,established; content:\"PASS\",nocase; isdataat:100,relative; pcre:\"/^PASS(?!\\n)\\s[^\\n]{100}/smi\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,10078; reference:bugtraq,10720; reference:bugtraq,15457; reference:bugtraq,1690; reference:bugtraq,22045; reference:bugtraq,3884; reference:bugtraq,45957; reference:bugtraq,8601; reference:bugtraq,9285; reference:cve,1999-1519; reference:cve,1999-1539; reference:cve,2000-1035; reference:cve,2002-0126; reference:cve,2002-0895; reference:cve,2005-3683; reference:cve,2006-6576; classtype:attempted-admin; sid:1972; rev:32;"
+}

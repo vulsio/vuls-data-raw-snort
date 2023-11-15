@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "26075",
+  "Rev": "3",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Bancos variant outbound connection SQL query POST data\"; flow:to_server,established; http_client_body; content:\"a=select CAMPO from PAGINA where CODIGO = \",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/88efcb549a52e3fb6359a3888e72726aac00c730edcd5280e0248d11306a645d/analysis/; classtype:trojan-activity; sid:26075; rev:3;"
+}

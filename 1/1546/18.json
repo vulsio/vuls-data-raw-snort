@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1546",
+  "Rev": "18",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Cisco HTTP double-percent DOS attempt\"; flow:to_server,established; http_uri; content:\"/%%\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1154; reference:cve,2000-0380; reference:nessus,10387; classtype:web-application-attack; sid:1546; rev:18;"
+}

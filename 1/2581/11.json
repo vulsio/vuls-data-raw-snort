@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2581",
+  "Rev": "11",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP SAP Crystal Reports crystalimagehandler.aspx access\"; flow:to_server,established; http_uri; content:\"/crystalimagehandler.aspx\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,2004-0204; reference:url,www.microsoft.com/security/bulletins/200406_crystal.mspx; classtype:web-application-activity; sid:2581; rev:11;"
+}

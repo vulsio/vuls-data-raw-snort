@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "2104",
+  "Rev": "10",
+  "Header": "alert tcp $HOME_NET 512 -> $EXTERNAL_NET any",
+  "Option": "msg:\"INDICATOR-COMPROMISE rexec username too long response\"; flow:to_client,established; content:\"username too long\",depth 17; metadata:ruleset community; reference:bugtraq,7459; reference:cve,2003-1097; classtype:unsuccessful-user; sid:2104; rev:10;"
+}

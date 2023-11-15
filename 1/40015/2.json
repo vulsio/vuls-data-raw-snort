@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "40015",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+  "Option": "msg:\"BROWSER-FIREFOX Mozilla Firefox about field spoofing attempt\"; flow:to_client,established; file_data; content:\"about:\",fast_pattern,nocase; content:\"?\",within 15; content:\"<\",within 100; content:\"location\",nocase; pcre:\"/\\babout:[a-z]+?\\?[^\\n]+?\\</i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2016-5268; reference:url,bugzilla.mozilla.org/show_bug.cgi?id=1253673; reference:url,www.mozilla.org/en-US/security/advisories/mfsa2016-83/; classtype:attempted-user; sid:40015; rev:2;"
+}

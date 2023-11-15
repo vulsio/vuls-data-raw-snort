@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1927",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+  "Option": "msg:\"PROTOCOL-FTP authorized_keys\"; flow:to_server,established; content:\"authorized_keys\",fast_pattern,nocase; metadata:ruleset community; service:ftp; classtype:suspicious-filename-detect; sid:1927; rev:8;"
+}

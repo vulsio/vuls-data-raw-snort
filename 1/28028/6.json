@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28028",
+  "Rev": "6",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"EXPLOIT-KIT Blackholev2/Cool exploit kit exploit download attempt\"; flow:to_server,established; http_raw_uri; bufferlen:50<=>250; http_method; content:\"GET\"; http_header; content:\" Java/1.\",fast_pattern,nocase; http_uri; content:\".php?\"; pcre:\"/\\/(?:[^\\/]+?\\/[a-z]{2,24}[_-][a-z]{2,16}([_-][a-z]{2,16})*?|closest\\/[a-z0-9]{15,25})\\.php\\?[\\(\\)\\!\\*\\w-]+=[\\(\\)\\!\\*\\w-]+&[\\(\\)\\*\\!\\w-]+=[\\(\\)\\!\\*\\w-]+&[\\(\\)\\!\\*\\w-]+=[\\(\\)\\!\\*\\w-]+&[\\(\\)\\!\\*\\w-]+=[\\(\\)\\!\\*\\w-]+&[\\(\\)\\!\\*\\w-]+=[\\(\\)\\!\\*\\w-]+$/\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:28028; rev:6;"
+}

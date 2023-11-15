@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "28302",
+  "Rev": "2",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"DELETED MALWARE-CNC Win.Trojan.Harbinger Rootkit variant - click fraud task request\"; flow:to_server,established; http_raw_uri; bufferlen:9; http_uri; content:\"/task/\",fast_pattern,nocase; pcre:\"/^\\/task\\/\\d\\d\\/$/\"; http_header; content:!\"Accept|3A 20|\"; content:!\"Referer:\"; content:!\"Accept-Encoding:\"; metadata:ruleset community; reference:url,virustotal.com/en/file/35bad2a35eac89fa7601cfe7a872d3450bf436b7a3d9100ce66ce2f91376c2ff/analysis/1373030276/; classtype:trojan-activity; sid:28302; rev:2;"
+}

@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "23795",
+  "Rev": "8",
+  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+  "Option": "msg:\"DELETED MALWARE-OTHER function urchin - known malware function name\"; flow:to_client,established; file_data; content:\"function urchin|28 29|\",fast_pattern,nocase; metadata:ruleset community; reference:url,labs.snort.org/docs/23795.txt; classtype:trojan-activity; sid:23795; rev:8;"
+}

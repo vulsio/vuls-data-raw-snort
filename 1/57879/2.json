@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "57879",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"INDICATOR-COMPROMISE Revil Kaseya ransomware log clearing http upload\"; flow:to_server,established; file_data; content:\"Server.CreateObject\"; content:\"KComWExec.execCmd\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,doublepulsar.com/kaseya-supply-chain-attack-delivers-mass-ransomware-event-to-us-companies-76e4ec6ec64b; reference:url,www.huntress.com/blog/rapid-response-kaseya-vsa-mass-msp-ransomware-incident; classtype:web-application-attack; sid:57879; rev:2;"
+}

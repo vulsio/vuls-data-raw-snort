@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "31070",
+  "Rev": "4",
+  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-CNC Win.Rootkit.Necurs outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:15; http_uri; content:\"/docs/index.php\",fast_pattern,nocase; http_header; content:\"Content-Type|3A 20|application/octet-stream\"; content:!\"User-Agent|3A 20|\"; content:!\"Accept|3A 20|\"; content:!\"Referer|3A 20|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1014; reference:url,www.virustotal.com/en/file/b47a1bdf5e53f4a754413d2461f7db9a4c7d1e0845c1f676b5399061e3dc1a4b/analysis/; classtype:trojan-activity; sid:31070; rev:4;"
+}

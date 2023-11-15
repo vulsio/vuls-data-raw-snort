@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "1193",
+  "Rev": "17",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP oracle web arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/ows-bin/\",nocase; content:\"?&\"; metadata:ruleset community; service:http; reference:bugtraq,1053; reference:cve,2000-0169; reference:nessus,10348; classtype:web-application-attack; sid:1193; rev:17;"
+}
