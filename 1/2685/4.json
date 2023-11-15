@@ -3,5 +3,5 @@
   "SID": "2685",
   "Rev": "4",
   "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE sys.dbms_repcat_rq.add_column buffer overflow attempt\"; flow:to_server,established; content:\"sys.dbms_repcat_rq.add_column\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*SCHEMA_NAME[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|SCHEMA_NAME\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/si\"; metadata:ruleset community; classtype:attempted-user; sid:2685; rev:4;"
+  "Option": "msg:\"SERVER-ORACLE sys.dbms_repcat_rq.add_column buffer overflow attempt\"; flow:to_server,established; content:\"sys.dbms_repcat_rq.add_column\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*SCHEMA_NAME[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|SCHEMA_NAME\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/is\"; metadata:ruleset community; classtype:attempted-user; sid:2685; rev:4;"
 }

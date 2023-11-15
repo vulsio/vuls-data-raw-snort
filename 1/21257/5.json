@@ -3,5 +3,5 @@
   "SID": "21257",
   "Rev": "5",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC URI - known scanner tool muieblackcat\"; flow:to_server, established; http_uri; content:\"/muieblackcat\",nocase; pcre:\"/\\/muieblackcat$/i\"; metadata:ruleset community; service:http; reference:url,serverfault.com/questions/309309/what-is-muieblackcat; classtype:network-scan; sid:21257; rev:5;"
+  "Option": "msg:\"MALWARE-CNC URI - known scanner tool muieblackcat\"; flow:to_server,established; http_uri; content:\"/muieblackcat\",nocase; pcre:\"/\\/muieblackcat$/i\"; metadata:ruleset community; service:http; reference:url,serverfault.com/questions/309309/what-is-muieblackcat; classtype:network-scan; sid:21257; rev:5;"
 }

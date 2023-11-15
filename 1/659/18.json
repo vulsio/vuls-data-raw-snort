@@ -3,5 +3,5 @@
   "SID": "659",
   "Rev": "18",
   "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Sendmail expn decode\"; flow:to_server,established; content:\"expn\",nocase; content:\"decode\",fast_pattern,nocase; pcre:\"/^expn\\s+decode/smi\"; metadata:ruleset community; service:smtp; reference:cve,1999-0096; reference:nessus,10248; classtype:attempted-recon; sid:659; rev:18;"
+  "Option": "msg:\"SERVER-MAIL Sendmail expn decode\"; flow:to_server,established; content:\"expn\",nocase; content:\"decode\",fast_pattern,nocase; pcre:\"/^expn\\s+decode/ims\"; metadata:ruleset community; service:smtp; reference:cve,1999-0096; reference:nessus,10248; classtype:attempted-recon; sid:659; rev:18;"
 }

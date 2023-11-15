@@ -3,5 +3,5 @@
   "SID": "1903",
   "Rev": "16",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
-  "Option": "msg:\"PROTOCOL-IMAP rename overflow attempt\"; flow:established,to_server; content:\"RENAME\",nocase; isdataat:100,relative; pcre:\"/\\sRENAME\\s[^\\n]{100}/smi\"; metadata:ruleset community; service:imap; reference:bugtraq,1110; reference:cve,2000-0284; reference:nessus,10374; classtype:misc-attack; sid:1903; rev:16;"
+  "Option": "msg:\"PROTOCOL-IMAP rename overflow attempt\"; flow:to_server,established; content:\"RENAME\",nocase; isdataat:100,relative; pcre:\"/\\sRENAME\\s[^\\n]{100}/ims\"; metadata:ruleset community; service:imap; reference:bugtraq,1110; reference:cve,2000-0284; reference:nessus,10374; classtype:misc-attack; sid:1903; rev:16;"
 }

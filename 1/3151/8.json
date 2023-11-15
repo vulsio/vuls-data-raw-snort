@@ -3,5 +3,5 @@
   "SID": "3151",
   "Rev": "8",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
-  "Option": "msg:\"PROTOCOL-FINGER / execution attempt\"; flow:to_server,established; content:\"/\"; pcre:\"/^\\x2f/smi\"; metadata:ruleset community; reference:cve,1999-0612; reference:cve,2000-0915; classtype:attempted-recon; sid:3151; rev:8;"
+  "Option": "msg:\"PROTOCOL-FINGER / execution attempt\"; flow:to_server,established; content:\"/\"; pcre:\"/^\\x2f/ims\"; metadata:ruleset community; reference:cve,1999-0612; reference:cve,2000-0915; classtype:attempted-recon; sid:3151; rev:8;"
 }

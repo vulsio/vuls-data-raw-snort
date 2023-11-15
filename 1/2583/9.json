@@ -3,5 +3,5 @@
   "SID": "2583",
   "Rev": "9",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 2401",
-  "Option": "msg:\"SERVER-OTHER CVS Max-dotdot integer overflow attempt\"; flow:to_server,established; content:\"Max-dotdot\",fast_pattern,nocase; pcre:\"/^Max-dotdot[\\s\\r\\n]*\\d{3,}/msi\"; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,10499; reference:cve,2004-0417; classtype:misc-attack; sid:2583; rev:9;"
+  "Option": "msg:\"SERVER-OTHER CVS Max-dotdot integer overflow attempt\"; flow:to_server,established; content:\"Max-dotdot\",fast_pattern,nocase; pcre:\"/^Max-dotdot[\\s\\r\\n]*\\d{3,}/ims\"; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,10499; reference:cve,2004-0417; classtype:misc-attack; sid:2583; rev:9;"
 }

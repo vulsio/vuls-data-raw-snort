@@ -3,5 +3,5 @@
   "SID": "2577",
   "Rev": "10",
   "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-OTHER local resource redirection attempt\"; flow:to_client,established; http_header; content:\"Location|3A|\",nocase; pcre:\"/^Location\\x3a(\\s*|\\s*\\r?\\n\\s+)*URL\\s*\\x3a/smi\"; metadata:ruleset community; service:http; reference:cve,2004-0549; reference:url,www.kb.cert.org/vuls/id/713878; classtype:attempted-user; sid:2577; rev:10;"
+  "Option": "msg:\"FILE-OTHER local resource redirection attempt\"; flow:to_client,established; http_header; content:\"Location|3A|\",nocase; pcre:\"/^Location\\x3a(\\s*|\\s*\\r?\\n\\s+)*URL\\s*\\x3a/ims\"; metadata:ruleset community; service:http; reference:cve,2004-0549; reference:url,www.kb.cert.org/vuls/id/713878; classtype:attempted-user; sid:2577; rev:10;"
 }

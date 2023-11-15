@@ -3,5 +3,5 @@
   "SID": "21256",
   "Rev": "7",
   "Header": "alert tcp $EXTERNAL_NET 21 -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER known malicious FTP quit banner - Goodbye happy r00ting\"; flow:established,to_client; content:\"221 Goodbye happy r00ting\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp; reference:url,taosecurity.blogspot.com/2006/01/nepenthes-discoveries-earlier-today-i.html; classtype:trojan-activity; sid:21256; rev:7;"
+  "Option": "msg:\"MALWARE-OTHER known malicious FTP quit banner - Goodbye happy r00ting\"; flow:to_client,established; content:\"221 Goodbye happy r00ting\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp; reference:url,taosecurity.blogspot.com/2006/01/nepenthes-discoveries-earlier-today-i.html; classtype:trojan-activity; sid:21256; rev:7;"
 }

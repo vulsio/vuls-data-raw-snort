@@ -3,5 +3,5 @@
   "SID": "2320",
   "Rev": "7",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1655",
-  "Option": "msg:\"SERVER-OTHER ebola USER overflow attempt\"; flow:to_server,established; content:\"USER\",fast_pattern,nocase; pcre:\"/^USER\\s[^\\n]{49}/smi\"; metadata:ruleset community; reference:bugtraq,9156; classtype:attempted-admin; sid:2320; rev:7;"
+  "Option": "msg:\"SERVER-OTHER ebola USER overflow attempt\"; flow:to_server,established; content:\"USER\",fast_pattern,nocase; pcre:\"/^USER\\s[^\\n]{49}/ims\"; metadata:ruleset community; reference:bugtraq,9156; classtype:attempted-admin; sid:2320; rev:7;"
 }

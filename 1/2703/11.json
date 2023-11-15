@@ -3,5 +3,5 @@
   "SID": "2703",
   "Rev": "11",
   "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Oracle iSQLPlus login.uix username overflow attempt\"; flow:to_server,established; http_uri; content:\"/login.uix\",nocase; pkt_data; pcre:\"/username=[^&\\x3b\\r\\n]{250}/smi\"; metadata:ruleset community; service:http; reference:bugtraq,10871; reference:cve,2004-1362; reference:cve,2004-1363; reference:cve,2004-1364; reference:cve,2004-1365; reference:cve,2004-1366; reference:cve,2004-1368; reference:cve,2004-1369; reference:cve,2004-1370; reference:cve,2004-1371; reference:url,www.nextgenss.com/advisories/ora-isqlplus.txt; classtype:web-application-attack; sid:2703; rev:11;"
+  "Option": "msg:\"SERVER-WEBAPP Oracle iSQLPlus login.uix username overflow attempt\"; flow:to_server,established; http_uri; content:\"/login.uix\",nocase; pkt_data; pcre:\"/username=[^&\\x3b\\r\\n]{250}/ims\"; metadata:ruleset community; service:http; reference:bugtraq,10871; reference:cve,2004-1362; reference:cve,2004-1363; reference:cve,2004-1364; reference:cve,2004-1365; reference:cve,2004-1366; reference:cve,2004-1368; reference:cve,2004-1369; reference:cve,2004-1370; reference:cve,2004-1371; reference:url,www.nextgenss.com/advisories/ora-isqlplus.txt; classtype:web-application-attack; sid:2703; rev:11;"
 }

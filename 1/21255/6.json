@@ -3,5 +3,5 @@
   "SID": "21255",
   "Rev": "6",
   "Header": "alert tcp $EXTERNAL_NET 21 -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER known malicious FTP login banner - 0wns j0\"; flow:established,to_client; content:\"220|20|\",depth 4; content:\"0wns j0\",distance 0,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp; reference:url,seclists.org/fulldisclosure/2004/Sep/895; reference:url,www.cyber-ta.org/releases/malware-analysis/public/SOURCES/CLUSTERS-NEW/behavior-summary.html; classtype:trojan-activity; sid:21255; rev:6;"
+  "Option": "msg:\"MALWARE-OTHER known malicious FTP login banner - 0wns j0\"; flow:to_client,established; content:\"220|20|\",depth 4; content:\"0wns j0\",distance 0,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp; reference:url,seclists.org/fulldisclosure/2004/Sep/895; reference:url,www.cyber-ta.org/releases/malware-analysis/public/SOURCES/CLUSTERS-NEW/behavior-summary.html; classtype:trojan-activity; sid:21255; rev:6;"
 }

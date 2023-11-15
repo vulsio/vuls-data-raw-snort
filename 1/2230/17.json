@@ -3,5 +3,5 @@
   "SID": "2230",
   "Rev": "17",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP NetGear router default password login attempt admin/password\"; flow:to_server,established; http_header; content:\"Authorization|3A|\",nocase; content:\"YWRtaW46cGFzc3dvcmQ\",nocase; pcre:\"/^Authorization\\x3a(\\s*|\\s*\\r?\\n\\s+)Basic\\s+YWRtaW46cGFzc3dvcmQ/smi\"; metadata:ruleset community; service:http; reference:nessus,11737; reference:url,attack.mitre.org/techniques/T1078; classtype:default-login-attempt; sid:2230; rev:17;"
+  "Option": "msg:\"SERVER-WEBAPP NetGear router default password login attempt admin/password\"; flow:to_server,established; http_header; content:\"Authorization|3A|\",nocase; content:\"YWRtaW46cGFzc3dvcmQ\",nocase; pcre:\"/^Authorization\\x3a(\\s*|\\s*\\r?\\n\\s+)Basic\\s+YWRtaW46cGFzc3dvcmQ/ims\"; metadata:ruleset community; service:http; reference:nessus,11737; reference:url,attack.mitre.org/techniques/T1078; classtype:default-login-attempt; sid:2230; rev:17;"
 }

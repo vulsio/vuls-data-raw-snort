@@ -3,5 +3,5 @@
   "SID": "3171",
   "Rev": "16",
   "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET [135,1024:]",
-  "Option": "msg:\"OS-WINDOWS DCERPC NCADG-IP-UDP msqueue function 4 overflow attempt\"; dce_iface:uuid 975201B0-59CA-11D0-A8D5-00A0C90D8051; dce_opnum:\"4\"; dce_stub_data; byte_test:4,>,128,8,dce; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:dcerpc; reference:cve,2005-0059; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-017; classtype:attempted-admin; sid:3171; rev:16;"
+  "Option": "msg:\"OS-WINDOWS DCERPC NCADG-IP-UDP msqueue function 4 overflow attempt\"; dce_iface:uuid 975201b0-59ca-11d0-a8d5-00a0c90d8051; dce_opnum:\"4\"; dce_stub_data; byte_test:4,>,128,8,dce; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:dcerpc; reference:cve,2005-0059; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-017; classtype:attempted-admin; sid:3171; rev:16;"
 }

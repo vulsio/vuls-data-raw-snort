@@ -3,5 +3,5 @@
   "SID": "32926",
   "Rev": "2",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER Win.Trojan.Wiper listener download attempt\"; flow:to_client,established; file_data; content:\"|15 02 14 17 08 09 14 02 67 75 77 77 67 08 0C 66 66 66|\",depth 22; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32926; rev:2;"
+  "Option": "msg:\"MALWARE-OTHER Win.Trojan.Wiper listener download attempt\"; flow:to_client,established; file_data; content:\"|15 02 14 17 08 09 14 02 67 75 77 77 67 08 0C 66 66 66|\",depth 22; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32926; rev:2;"
 }

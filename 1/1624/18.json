@@ -3,5 +3,5 @@
   "SID": "1624",
   "Rev": "18",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP PWD overflow attempt\"; flow:to_server,established; content:\"PWD\",nocase; isdataat:190,relative; pcre:\"/^PWD\\s.{190}/smi\"; metadata:ruleset community; service:ftp; classtype:protocol-command-decode; sid:1624; rev:18;"
+  "Option": "msg:\"PROTOCOL-FTP PWD overflow attempt\"; flow:to_server,established; content:\"PWD\",nocase; isdataat:190,relative; pcre:\"/^PWD\\s.{190}/ims\"; metadata:ruleset community; service:ftp; classtype:protocol-command-decode; sid:1624; rev:18;"
 }

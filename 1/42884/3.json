@@ -3,5 +3,5 @@
   "SID": "42884",
   "Rev": "3",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.MadMax implant outbound connection\"; flow:established,to_server; http_uri; content:\"/logon.aspx?Id=\",fast_pattern,nocase; http_header; content:\"Cookie|3A 20|SessionData=\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:42884; rev:3;"
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.MadMax implant outbound connection\"; flow:to_server,established; http_uri; content:\"/logon.aspx?Id=\",fast_pattern,nocase; http_header; content:\"Cookie|3A 20|SessionData=\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:42884; rev:3;"
 }

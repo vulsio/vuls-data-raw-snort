@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "60642",
+  "Rev": "3",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP Microsoft Exchange Server remote code execution attempt\"; flow:to_server,established; http_uri; content:\"autodiscover.json\",fast_pattern,nocase; content:\"Powershell\",distance 0,nocase; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-41040; reference:cve,2022-41082; reference:url,msrc-blog.microsoft.com/2022/09/29/customer-guidance-for-reported-zero-day-vulnerabilities-in-microsoft-exchange-server/; classtype:attempted-user; gid:1; sid:60642; rev:3;"
+}

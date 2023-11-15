@@ -1,7 +1,0 @@
-{
-  "GID": "1",
-  "SID": "3005",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 445",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB-DS Session Setup NTLMSSP unicode andx asn1 overflow attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB\",within 4,distance 3; pcre:\"/^(\\x75|\\x2d|\\x2f|\\xa2|\\x2e|\\x24|\\x74)/sR\"; byte_test:1,&,128,6,relative; content:\"s\",depth 1,offset 39; byte_jump:2,0,little,relative; byte_test:4,&,2147483648,21,relative,little; content:!\"NTLMSSP\",within 7,distance 27; asn1:double_overflow, bitstring_overflow, relative_offset 27, oversize_length 2048; metadata:ruleset community; service:netbios-ssn; reference:bugtraq,9633; reference:bugtraq,9635; reference:cve,2003-0818; reference:nessus,12052; reference:nessus,12065; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-007; classtype:protocol-command-decode; sid:3005; rev:12;"
-}

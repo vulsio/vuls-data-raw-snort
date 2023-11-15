@@ -3,5 +3,5 @@
   "SID": "1382",
   "Rev": "13",
   "Header": "alert tcp any any -> any 6666:7000",
-  "Option": "msg:\"SERVER-OTHER CHAT IRC Ettercap parse overflow attempt\"; flow:to_server,established; content:\"PRIVMSG\",fast_pattern,nocase; content:\"nickserv\",nocase; content:\"IDENTIFY\",nocase; isdataat:100,relative; pcre:\"/^PRIVMSG\\s+nickserv\\s+IDENTIFY\\s[^\\n]{100}/smi\"; metadata:ruleset community; reference:url,www.bugtraq.org/dev/GOBBLES-12.txt; classtype:misc-attack; sid:1382; rev:13;"
+  "Option": "msg:\"SERVER-OTHER CHAT IRC Ettercap parse overflow attempt\"; flow:to_server,established; content:\"PRIVMSG\",fast_pattern,nocase; content:\"nickserv\",nocase; content:\"IDENTIFY\",nocase; isdataat:100,relative; pcre:\"/^PRIVMSG\\s+nickserv\\s+IDENTIFY\\s[^\\n]{100}/ims\"; metadata:ruleset community; reference:url,www.bugtraq.org/dev/GOBBLES-12.txt; classtype:misc-attack; sid:1382; rev:13;"
 }

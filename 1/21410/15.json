@@ -3,5 +3,5 @@
   "SID": "21410",
   "Rev": "15",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"FILE-IDENTIFY paq8o file download request\"; flow:to_server,established; http_uri; content:\".paq8o\",fast_pattern,nocase; pcre:\"/\\x2epaq8o([\\?\\x5c\\x2f]|$)/smi\"; flowbits:set,file.zip; flowbits:noalert; metadata:policy balanced-ips alert,policy connectivity-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; classtype:misc-activity; sid:21410; rev:15;"
+  "Option": "msg:\"FILE-IDENTIFY paq8o file download request\"; flow:to_server,established; http_uri; content:\".paq8o\",fast_pattern,nocase; pcre:\"/\\x2epaq8o([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.zip; flowbits:noalert; metadata:policy balanced-ips alert,policy connectivity-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; classtype:misc-activity; sid:21410; rev:15;"
 }

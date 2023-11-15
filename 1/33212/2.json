@@ -3,5 +3,5 @@
   "SID": "33212",
   "Rev": "2",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"PUA-ADWARE SoftPulse variant HTTP response attempt\"; flow:to_client,established; file_data; content:\",|22|installerBehavior|22|:{|22|hideOnInstall|22|:\",fast_pattern,nocase; content:\"{|22|time|22|:\"; content:\"|22|country|22|\",within 30; content:\",|22|countryId|22|:\",within 20; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:url,www.virustotal.com/en/file/7aa774bffa2eb38c691774c1cc59e0adf6186da62afc417baa6333670e1e3011/analysis/1421687954/; classtype:trojan-activity; sid:33212; rev:2;"
+  "Option": "msg:\"PUA-ADWARE SoftPulse variant HTTP response attempt\"; flow:to_client,established; file_data; content:\",|22|installerBehavior|22|:{|22|hideOnInstall|22|:\",fast_pattern,nocase; content:\"{|22|time|22|:\"; content:\"|22|country|22|\",within 30; content:\",|22|countryId|22|:\",within 20; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,www.virustotal.com/en/file/7aa774bffa2eb38c691774c1cc59e0adf6186da62afc417baa6333670e1e3011/analysis/1421687954/; classtype:trojan-activity; sid:33212; rev:2;"
 }

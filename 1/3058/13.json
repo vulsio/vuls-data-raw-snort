@@ -3,5 +3,5 @@
   "SID": "3058",
   "Rev": "13",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
-  "Option": "msg:\"PROTOCOL-IMAP copy literal overflow attempt\"; flow:established,to_server; content:\"COPY\",fast_pattern,nocase; pcre:\"/\\sCOPY\\s[^\\n]*?\\{/smi\"; byte_test:5,>,1024,0,string,dec,relative; metadata:ruleset community; service:imap; reference:bugtraq,1110; reference:cve,2000-0284; reference:nessus,10374; classtype:misc-attack; sid:3058; rev:13;"
+  "Option": "msg:\"PROTOCOL-IMAP copy literal overflow attempt\"; flow:to_server,established; content:\"COPY\",fast_pattern,nocase; pcre:\"/\\sCOPY\\s[^\\n]*?\\{/ims\"; byte_test:5,>,1024,0,relative,string,dec; metadata:ruleset community; service:imap; reference:bugtraq,1110; reference:cve,2000-0284; reference:nessus,10374; classtype:misc-attack; sid:3058; rev:13;"
 }

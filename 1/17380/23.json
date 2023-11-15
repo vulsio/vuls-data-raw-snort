@@ -3,5 +3,5 @@
   "SID": "17380",
   "Rev": "23",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"FILE-IDENTIFY PNG file download request\"; flow:to_server,established; http_uri; content:\".png\",fast_pattern,nocase; pcre:\"/\\x2epng([\\?\\x5c\\x2f]|$)/smi\"; flowbits:set,file.png; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; classtype:misc-activity; sid:17380; rev:23;"
+  "Option": "msg:\"FILE-IDENTIFY PNG file download request\"; flow:to_server,established; http_uri; content:\".png\",fast_pattern,nocase; pcre:\"/\\x2epng([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.png; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; classtype:misc-activity; sid:17380; rev:23;"
 }

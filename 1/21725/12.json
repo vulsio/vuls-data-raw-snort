@@ -3,5 +3,5 @@
   "SID": "21725",
   "Rev": "12",
   "Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY ANI file attachment detected\"; flow:to_client,established; content:\".ani\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2eani/i\"; flowbits:set,file.ani; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap, pop3; classtype:misc-activity; sid:21725; rev:12;"
+  "Option": "msg:\"FILE-IDENTIFY ANI file attachment detected\"; flow:to_client,established; content:\".ani\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2eani/i\"; flowbits:set,file.ani; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap,pop3; classtype:misc-activity; sid:21725; rev:12;"
 }

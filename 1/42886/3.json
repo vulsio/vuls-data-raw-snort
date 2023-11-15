@@ -1,7 +1,0 @@
-{
-  "GID": "1",
-  "SID": "42886",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent Win.Trojan.Agent malicious user agent\"; flow:to_server,established; http_header; content:\"User-Agent|3A| HttpBrowser/1.0\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:42886; rev:3;"
-}

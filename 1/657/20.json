@@ -3,5 +3,5 @@
   "SID": "657",
   "Rev": "20",
   "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Netmanager chameleon SMTPd buffer overflow attempt\"; flow:to_server,established; content:\"HELP\",nocase; isdataat:500,relative; pcre:\"/^HELP\\s[^\\n]{500}/ism\"; metadata:ruleset community; service:smtp; reference:bugtraq,2387; reference:cve,1999-0261; classtype:attempted-admin; sid:657; rev:20;"
+  "Option": "msg:\"SERVER-MAIL Netmanager chameleon SMTPd buffer overflow attempt\"; flow:to_server,established; content:\"HELP\",nocase; isdataat:500,relative; pcre:\"/^HELP\\s[^\\n]{500}/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,2387; reference:cve,1999-0261; classtype:attempted-admin; sid:657; rev:20;"
 }

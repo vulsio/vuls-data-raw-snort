@@ -3,5 +3,5 @@
   "SID": "48818",
   "Rev": "2",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Js.Trojan.Agent variant outbound connection\"; flow:established,to_server; http_header; content:\"User-Agent|3A| xmsSofts_1.0.0_\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:48818; rev:2;"
+  "Option": "msg:\"MALWARE-CNC Js.Trojan.Agent variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent|3A| xmsSofts_1.0.0_\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:48818; rev:2;"
 }

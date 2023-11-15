@@ -3,5 +3,5 @@
   "SID": "337",
   "Rev": "21",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP CEL overflow attempt\"; flow:to_server,established; content:\"CEL\",nocase; isdataat:100,relative; pcre:\"/^CEL(?!\\n)\\s[^\\n]{100}/smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,679; reference:cve,1999-0789; reference:nessus,10009; classtype:attempted-admin; sid:337; rev:21;"
+  "Option": "msg:\"PROTOCOL-FTP CEL overflow attempt\"; flow:to_server,established; content:\"CEL\",nocase; isdataat:100,relative; pcre:\"/^CEL(?!\\n)\\s[^\\n]{100}/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,679; reference:cve,1999-0789; reference:nessus,10009; classtype:attempted-admin; sid:337; rev:21;"
 }

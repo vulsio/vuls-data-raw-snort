@@ -1,7 +1,0 @@
-{
-  "GID": "1",
-  "SID": "28954",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"DELETED MALWARE-CNC Win.Trojan.Bunitu.G proxy connection to Yahoo\"; flow:to_server,established; http_uri; content:\"/hjs?\"; content:\"&__r=\",distance 0; content:\"&post=\",distance 0; http_header; content:\"Proxy-Connection|3A 20|\",fast_pattern,nocase; pcre:\"/^Referer\\x3a[^\\r\\n]*yahoo\\x2ecom/smi\"; metadata:ruleset community; classtype:trojan-activity; sid:28954; rev:2;"
-}

@@ -3,5 +3,5 @@
   "SID": "2374",
   "Rev": "19",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP NLST overflow attempt\"; flow:to_server,established; content:\"NLST\",nocase; isdataat:200,relative; pcre:\"/^NLST(?!\\n)\\s[^\\n]{200}/smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,7909; reference:cve,1999-1544; reference:cve,2009-3023; reference:url,technet.microsoft.com/en-us/security/bulletin/MS09-053; reference:url,www.kb.cert.org/vuls/id/276653; classtype:attempted-admin; sid:2374; rev:19;"
+  "Option": "msg:\"PROTOCOL-FTP NLST overflow attempt\"; flow:to_server,established; content:\"NLST\",nocase; isdataat:200,relative; pcre:\"/^NLST(?!\\n)\\s[^\\n]{200}/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,7909; reference:cve,1999-1544; reference:cve,2009-3023; reference:url,technet.microsoft.com/en-us/security/bulletin/MS09-053; reference:url,www.kb.cert.org/vuls/id/276653; classtype:attempted-admin; sid:2374; rev:19;"
 }

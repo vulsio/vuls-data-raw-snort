@@ -3,5 +3,5 @@
   "SID": "2684",
   "Rev": "4",
   "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE sys.ltutil.pushdeferredtxns buffer overflow attempt\"; flow:to_server,established; content:\"sys.ltutil.pushdeferredtxns\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{512,}\\x27|\\x22[^\\x22]{512,}\\x22)[\\r\\n\\s]*\\x3b.*repgrpname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|repgrpname\\s*=>\\s*(\\x27[^\\x27]{512,}|\\x22[^\\x22]{512,})|\\(\\s*(\\x27[^\\x27]{512,}|\\x22[^\\x22]{512,}))/si\"; metadata:ruleset community; classtype:attempted-user; sid:2684; rev:4;"
+  "Option": "msg:\"SERVER-ORACLE sys.ltutil.pushdeferredtxns buffer overflow attempt\"; flow:to_server,established; content:\"sys.ltutil.pushdeferredtxns\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{512,}\\x27|\\x22[^\\x22]{512,}\\x22)[\\r\\n\\s]*\\x3b.*repgrpname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|repgrpname\\s*=>\\s*(\\x27[^\\x27]{512,}|\\x22[^\\x22]{512,})|\\(\\s*(\\x27[^\\x27]{512,}|\\x22[^\\x22]{512,}))/is\"; metadata:ruleset community; classtype:attempted-user; sid:2684; rev:4;"
 }

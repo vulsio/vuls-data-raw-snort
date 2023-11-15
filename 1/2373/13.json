@@ -3,5 +3,5 @@
   "SID": "2373",
   "Rev": "13",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP XMKD overflow attempt\"; flow:to_server,established; content:\"XMKD\",nocase; isdataat:200,relative; pcre:\"/^XMKD(?!\\n)\\s[^\\n]{200}/smi\"; metadata:ruleset community; service:ftp; reference:bugtraq,7909; reference:cve,2000-0133; reference:cve,2001-1021; classtype:attempted-admin; sid:2373; rev:13;"
+  "Option": "msg:\"PROTOCOL-FTP XMKD overflow attempt\"; flow:to_server,established; content:\"XMKD\",nocase; isdataat:200,relative; pcre:\"/^XMKD(?!\\n)\\s[^\\n]{200}/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,7909; reference:cve,2000-0133; reference:cve,2001-1021; classtype:attempted-admin; sid:2373; rev:13;"
 }

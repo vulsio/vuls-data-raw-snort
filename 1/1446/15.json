@@ -3,5 +3,5 @@
   "SID": "1446",
   "Rev": "15",
   "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL vrfy root\"; flow:to_server,established; content:\"vrfy\",nocase; content:\"root\",distance 1,nocase; pcre:\"/^vrfy\\s+root/smi\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; classtype:attempted-recon; sid:1446; rev:15;"
+  "Option": "msg:\"SERVER-MAIL vrfy root\"; flow:to_server,established; content:\"vrfy\",nocase; content:\"root\",distance 1,nocase; pcre:\"/^vrfy\\s+root/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; classtype:attempted-recon; sid:1446; rev:15;"
 }

@@ -3,5 +3,5 @@
   "SID": "42882",
   "Rev": "3",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC ZoxPNG initial outbound connection\"; flow:established, to_server; http_uri; content:\"/search?q=Google&go=&qs=n&form=\",fast_pattern,nocase; content:\"pq=google&sc=8-1&sp=-1&sk=\"; http_header; content:\"Cookie|3A 20|SESSIONID=\",nocase; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:42882; rev:3;"
+  "Option": "msg:\"MALWARE-CNC ZoxPNG initial outbound connection\"; flow:to_server,established; http_uri; content:\"/search?q=Google&go=&qs=n&form=\",fast_pattern,nocase; content:\"pq=google&sc=8-1&sp=-1&sk=\"; http_header; content:\"Cookie|3A 20|SESSIONID=\",nocase; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:42882; rev:3;"
 }

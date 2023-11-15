@@ -3,5 +3,5 @@
   "SID": "3142",
   "Rev": "11",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 445",
-  "Option": "msg:\"NETBIOS SMB-DS Trans2 FIND_FIRST2 andx attempt\"; flow:established,to_server; content:\"|00|\",depth 1; content:\"|FF|SMB\",within 4,distance 3; pcre:\"/^(\\x75|\\x2d|\\x2f|\\x73|\\xa2|\\x2e|\\x24|\\x74)/sR\"; content:\"2\",depth 1,offset 39; byte_jump:2,0,little,relative; content:\"|01 00|\",within 2,distance 29; flowbits:set,smb.trans2; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:netbios-ssn; classtype:protocol-command-decode; sid:3142; rev:11;"
+  "Option": "msg:\"NETBIOS SMB-DS Trans2 FIND_FIRST2 andx attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB\",within 4,distance 3; pcre:\"/^(\\x75|\\x2d|\\x2f|\\x73|\\xa2|\\x2e|\\x24|\\x74)/Rs\"; content:\"2\",depth 1,offset 39; byte_jump:2,0,relative,little; content:\"|01 00|\",within 2,distance 29; flowbits:set,smb.trans2; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:netbios-ssn; classtype:protocol-command-decode; sid:3142; rev:11;"
 }

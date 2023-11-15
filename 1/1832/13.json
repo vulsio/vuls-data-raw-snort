@@ -3,5 +3,5 @@
   "SID": "1832",
   "Rev": "13",
   "Header": "alert tcp $EXTERNAL_NET 80 -> $HOME_NET any",
-  "Option": "msg:\"POLICY-SOCIAL ICQ forced user addition\"; flow:established,to_client; content:\"Content-Type|3A| application/x-icq\",fast_pattern,nocase; content:\"[ICQ User]\"; metadata:ruleset community; reference:bugtraq,3226; reference:cve,2001-1305; classtype:policy-violation; sid:1832; rev:13;"
+  "Option": "msg:\"POLICY-SOCIAL ICQ forced user addition\"; flow:to_client,established; content:\"Content-Type|3A| application/x-icq\",fast_pattern,nocase; content:\"[ICQ User]\"; metadata:ruleset community; reference:bugtraq,3226; reference:cve,2001-1305; classtype:policy-violation; sid:1832; rev:13;"
 }

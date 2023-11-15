@@ -3,5 +3,5 @@
   "SID": "2101",
   "Rev": "23",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB Trans Max Param/Count OS-WINDOWS attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB%\",within 5,distance 3; byte_test:1,!&,128,6,relative; pcre:\"/^.{27}/sR\"; content:\"|00 00 00 00|\",within 4,distance 5; metadata:ruleset community; reference:bugtraq,5556; reference:cve,2002-0724; reference:nessus,11110; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-045; reference:url,www.corest.com/common/showdoc.php?idx=262; classtype:protocol-command-decode; sid:2101; rev:23;"
+  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB Trans Max Param/Count OS-WINDOWS attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB%\",within 5,distance 3; byte_test:1,!&,128,6,relative; pcre:\"/^.{27}/Rs\"; content:\"|00 00 00 00|\",within 4,distance 5; metadata:ruleset community; reference:bugtraq,5556; reference:cve,2002-0724; reference:nessus,11110; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-045; reference:url,www.corest.com/common/showdoc.php?idx=262; classtype:protocol-command-decode; sid:2101; rev:23;"
 }

@@ -3,5 +3,5 @@
   "SID": "1450",
   "Rev": "13",
   "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Vintra Mailserver expn *@\"; flow:to_server,established; content:\"expn\",fast_pattern,nocase; content:\"*@\"; pcre:\"/^expn\\s+\\*@/smi\"; metadata:ruleset community; service:smtp; reference:cve,1999-1200; classtype:misc-attack; sid:1450; rev:13;"
+  "Option": "msg:\"SERVER-MAIL Vintra Mailserver expn *@\"; flow:to_server,established; content:\"expn\",fast_pattern,nocase; content:\"*@\"; pcre:\"/^expn\\s+\\*@/ims\"; metadata:ruleset community; service:smtp; reference:cve,1999-1200; classtype:misc-attack; sid:1450; rev:13;"
 }

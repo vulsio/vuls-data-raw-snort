@@ -3,5 +3,5 @@
   "SID": "32179",
   "Rev": "2",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [53,80,443,5432]",
-  "Option": "msg:\"MALWARE-CNC WIN.Trojan.Plugx variant outbound connection\"; flow:to_server,established; content:\"HHV1:\"; content:\"HHV2:\",within 20; content:\"HHV3: 61456\",within 20,fast_pattern; content:\"HHV4:\",within 20; metadata:impact_flag red,ruleset community; service:dns, http, ssl; reference:url,virustotal.com/en/file/4d464f9def2276dac15d19ccf049b7c68642290bc0e345e06d4b6e9103fde9e6/analysis/; classtype:trojan-activity; sid:32179; rev:2;"
+  "Option": "msg:\"MALWARE-CNC WIN.Trojan.Plugx variant outbound connection\"; flow:to_server,established; content:\"HHV1:\"; content:\"HHV2:\",within 20; content:\"HHV3: 61456\",within 20,fast_pattern; content:\"HHV4:\",within 20; metadata:impact_flag red,ruleset community; service:dns,http,ssl; reference:url,virustotal.com/en/file/4d464f9def2276dac15d19ccf049b7c68642290bc0e345e06d4b6e9103fde9e6/analysis/; classtype:trojan-activity; sid:32179; rev:2;"
 }

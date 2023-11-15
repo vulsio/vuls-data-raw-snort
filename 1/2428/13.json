@@ -3,5 +3,5 @@
   "SID": "2428",
   "Rev": "13",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 119",
-  "Option": "msg:\"PROTOCOL-NNTP ihave overflow attempt\"; flow:to_server,established; content:\"ihave\",fast_pattern,nocase; pcre:\"/^ihave\\x3a[^\\n]{21}/smi\"; metadata:ruleset community; reference:bugtraq,9382; reference:cve,2004-0045; reference:nessus,11984; classtype:attempted-admin; sid:2428; rev:13;"
+  "Option": "msg:\"PROTOCOL-NNTP ihave overflow attempt\"; flow:to_server,established; content:\"ihave\",fast_pattern,nocase; pcre:\"/^ihave\\x3a[^\\n]{21}/ims\"; metadata:ruleset community; reference:bugtraq,9382; reference:cve,2004-0045; reference:nessus,11984; classtype:attempted-admin; sid:2428; rev:13;"
 }

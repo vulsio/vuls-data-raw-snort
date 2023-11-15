@@ -3,5 +3,5 @@
   "SID": "1437",
   "Rev": "27",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY Microsoft Windows Media download detected\"; flow:to_client,established; http_header; content:\"Content-Type|3A|\",nocase; pcre:\"/^Content-Type\\x3a\\s*(?=[av])(video\\/x\\-ms\\-(w[vm]x|asf)|a(udio\\/x\\-ms\\-w(m[av]|ax)|pplication\\/x\\-ms\\-wm[zd]))/smi\"; metadata:ruleset community; service:ftp-data, http, imap, pop3; classtype:misc-activity; sid:1437; rev:27;"
+  "Option": "msg:\"FILE-IDENTIFY Microsoft Windows Media download detected\"; flow:to_client,established; http_header; content:\"Content-Type|3A|\",nocase; pcre:\"/^Content-Type\\x3a\\s*(?=[av])(video\\/x\\-ms\\-(w[vm]x|asf)|a(udio\\/x\\-ms\\-w(m[av]|ax)|pplication\\/x\\-ms\\-wm[zd]))/ims\"; metadata:ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:1437; rev:27;"
 }

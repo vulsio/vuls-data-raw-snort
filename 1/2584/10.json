@@ -3,5 +3,5 @@
   "SID": "2584",
   "Rev": "10",
   "Header": "alert tcp $EXTERNAL_NET 6666:6669 -> $HOME_NET any",
-  "Option": "msg:\"SERVER-OTHER eMule buffer overflow attempt\"; flow:to_client,established; content:\"PRIVMSG\",fast_pattern,nocase; pcre:\"/^PRIVMSG\\s+[^\\s]+\\s+\\x3a\\s*\\x01SENDLINK\\x7c[^\\x7c]{69}/smi\"; metadata:ruleset community; reference:bugtraq,10039; reference:cve,2004-1892; reference:nessus,12233; classtype:attempted-user; sid:2584; rev:10;"
+  "Option": "msg:\"SERVER-OTHER eMule buffer overflow attempt\"; flow:to_client,established; content:\"PRIVMSG\",fast_pattern,nocase; pcre:\"/^PRIVMSG\\s+[^\\s]+\\s+\\x3a\\s*\\x01SENDLINK\\x7c[^\\x7c]{69}/ims\"; metadata:ruleset community; reference:bugtraq,10039; reference:cve,2004-1892; reference:nessus,12233; classtype:attempted-user; sid:2584; rev:10;"
 }

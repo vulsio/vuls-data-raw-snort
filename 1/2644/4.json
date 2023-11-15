@@ -3,5 +3,5 @@
   "SID": "2644",
   "Rev": "4",
   "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE from_tz buffer overflow attempt\"; flow:to_server,established; content:\"FROM_TZ\",nocase; pcre:\"/\\(\\s*TIMESTAMP\\s*(\\s*(\\x27[^\\x27]+'|\\x22[^\\x22]+\\x22)\\s*,)\\s*((\\x27[^\\x27]{1000,})|(\\x22[^\\x22]{1000,}))/Rmsi\"; metadata:ruleset community; reference:url,www.nextgenss.com/advisories/ora_from_tz.txt; classtype:attempted-user; sid:2644; rev:4;"
+  "Option": "msg:\"SERVER-ORACLE from_tz buffer overflow attempt\"; flow:to_server,established; content:\"FROM_TZ\",nocase; pcre:\"/\\(\\s*TIMESTAMP\\s*(\\s*(\\x27[^\\x27]+'|\\x22[^\\x22]+\\x22)\\s*,)\\s*((\\x27[^\\x27]{1000,})|(\\x22[^\\x22]{1000,}))/Rims\"; metadata:ruleset community; reference:url,www.nextgenss.com/advisories/ora_from_tz.txt; classtype:attempted-user; sid:2644; rev:4;"
 }

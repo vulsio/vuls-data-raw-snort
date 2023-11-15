@@ -1,7 +1,0 @@
-{
-  "GID": "1",
-  "SID": "26481",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"DELETED MALWARE-CNC Win.Trojan.Crysis variant outbound connection\"; flow:to_server,established; http_header; content:\"|0D 0A|Content-Length|3A 20|88|0D 0A|\",fast_pattern,nocase; http_client_body; content:\"+\",depth 1,offset 71; content:\"+\",within 1,distance 3; metadata:ruleset community; classtype:trojan-activity; sid:26481; rev:4;"
-}

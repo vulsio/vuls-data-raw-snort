@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "59931",
+  "Rev": "2",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"MALWARE-BACKDOOR Jsp.Webshell.Chopper upload attempt\"; flow:to_server,established; content:\"DriverManager.getConnection\"; content:\"ServletOutputStream\"; content:\"ResultSetMetaData\"; content:\"request.getParameter\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-26134; reference:url,community.atlassian.com/t5/Confluence-discussions/CVE-2022-26134-Critical-severity-unauthenticated-remote-code/td-p/20456533; classtype:trojan-activity; gid:1; sid:59931; rev:2;"
+}

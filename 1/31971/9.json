@@ -3,5 +3,5 @@
   "SID": "31971",
   "Rev": "9",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Astrum exploit kit multiple exploit download request\"; flow:to_server,established; http_uri; bufferlen:>60; pkt_data; content:\"GET\"; content:\".. HTTP/1.\",fast_pattern,nocase; http_uri; pcre:\"/\\x2f[\\w\\x2d]*\\x2e\\x2e$/m\"; http_header; content:\"Connection|3A 20|Keep-Alive|0D 0A|\"; flowbits:set,file.exploit_kit.jar&file.exploit_kit.pdf&file.exploit_kit.flash&file.exploit_kit.silverlight; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2014/09/astrum-ek.html; classtype:trojan-activity; sid:31971; rev:9;"
+  "Option": "msg:\"EXPLOIT-KIT Astrum exploit kit multiple exploit download request\"; flow:to_server,established; http_uri; bufferlen:>60; pkt_data; content:\"GET\"; content:\".. HTTP/1.\",fast_pattern,nocase; http_uri; pcre:\"/\\x2f[\\w\\x2d]*\\x2e\\x2e$/m\"; http_header; content:\"Connection|3A 20|Keep-Alive|0D 0A|\"; flowbits:set,file.exploit_kit.flash&file.exploit_kit.jar&file.exploit_kit.pdf&file.exploit_kit.silverlight; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2014/09/astrum-ek.html; classtype:trojan-activity; sid:31971; rev:9;"
 }

@@ -1,7 +1,0 @@
-{
-  "GID": "1",
-  "SID": "1306",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"DELETED SERVER-WEBAPP store.cgi product directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/store.cgi\",nocase; pkt_data; content:\"product=\"; content:\"../..\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,2385; reference:cve,2001-0305; classtype:web-application-attack; sid:1306; rev:17;"
-}

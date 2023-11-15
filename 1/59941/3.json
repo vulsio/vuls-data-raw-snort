@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "59941",
+  "Rev": "3",
+  "Header": "alert http",
+  "Option": "msg:\"SERVER-WEBAPP Atlassian Confluence OGNL expression injection attempt\"; flow:to_server,established; http_uri; content:\"${\",fast_pattern; content:\"atlassian.\",distance 0; content:\"|28|\",distance 0; content:\"}\",distance 0; pcre:\"/\\x24\\x7b[^\\x7d]*?atlassian\\x2e[^\\x7d]*?\\x28/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2022-26134; classtype:attempted-user; gid:1; sid:59941; rev:3;"
+}

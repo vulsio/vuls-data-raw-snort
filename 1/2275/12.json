@@ -3,5 +3,5 @@
   "SID": "2275",
   "Rev": "12",
   "Header": "alert tcp $SMTP_SERVERS 25 -> $EXTERNAL_NET any",
-  "Option": "msg:\"SERVER-MAIL AUTH LOGON brute force attempt\"; flow:to_client,established,no_stream; content:\"Authentication unsuccessful\",offset 54,nocase; detection_filter:track by_dst, count 5, seconds 60; metadata:ruleset community; service:smtp; reference:url,attack.mitre.org/techniques/T1110; classtype:suspicious-login; sid:2275; rev:12;"
+  "Option": "msg:\"SERVER-MAIL AUTH LOGON brute force attempt\"; flow:to_client,established,no_stream; content:\"Authentication unsuccessful\",offset 54,nocase; detection_filter:track by_dst,count 5,seconds 60; metadata:ruleset community; service:smtp; reference:url,attack.mitre.org/techniques/T1110; classtype:suspicious-login; sid:2275; rev:12;"
 }

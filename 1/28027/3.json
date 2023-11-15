@@ -1,7 +1,0 @@
-{
-  "GID": "1",
-  "SID": "28027",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"DELETED EXPLOIT-KIT Blackholev2 exploit kit redirection embedding detected\"; flow:to_client,established; file_data; content:\"{ position|3A|absolute|3B| left|3A|-\"; content:\"px|3B| top|3A|-\",within 25; content:\"px} </style> <div class=|22|\",within 50; metadata:ruleset community; classtype:trojan-activity; sid:28027; rev:3;"
-}

@@ -3,5 +3,5 @@
   "SID": "25513",
   "Rev": "12",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY Portable Executable download detected\"; flow:to_client,established; http_header; content:\"application/octet-stream\",fast_pattern,nocase; pcre:\"/^Content-Type\\x3a[\\x20\\x09]+application\\/octet-stream/smi\"; file_data; content:\"MZ\",within 2; flowbits:set,file.exe; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:ftp-data, http, imap, pop3; classtype:misc-activity; sid:25513; rev:12;"
+  "Option": "msg:\"FILE-IDENTIFY Portable Executable download detected\"; flow:to_client,established; http_header; content:\"application/octet-stream\",fast_pattern,nocase; pcre:\"/^Content-Type\\x3a[\\x20\\x09]+application\\/octet-stream/ims\"; file_data; content:\"MZ\",within 2; flowbits:set,file.exe; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:25513; rev:12;"
 }

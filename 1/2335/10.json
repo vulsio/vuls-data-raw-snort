@@ -3,5 +3,5 @@
   "SID": "2335",
   "Rev": "10",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3535",
-  "Option": "msg:\"PROTOCOL-FTP RMD / attempt\"; flow:to_server,established; content:\"RMD\",fast_pattern,nocase; pcre:\"/^RMD\\s+\\x2f$/smi\"; metadata:ruleset community; reference:bugtraq,9159; classtype:attempted-dos; sid:2335; rev:10;"
+  "Option": "msg:\"PROTOCOL-FTP RMD / attempt\"; flow:to_server,established; content:\"RMD\",fast_pattern,nocase; pcre:\"/^RMD\\s+\\x2f$/ims\"; metadata:ruleset community; reference:bugtraq,9159; classtype:attempted-dos; sid:2335; rev:10;"
 }

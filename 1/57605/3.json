@@ -1,7 +1,0 @@
-{
-  "GID": "1",
-  "SID": "57605",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows HTTP protocol stack remote code execution attempt\"; flow:to_server,established; http_header; content:\"Accept-Encoding:\",fast_pattern,nocase; pcre:\"/^Accept-Encoding:\\x20*[^\\r\\n]*\\x2c[\\x20\\x09]*\\x2c/im\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2021-31166; reference:cve,2022-21907; reference:url,portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2021-31166; classtype:attempted-user; sid:57605; rev:3;"
-}

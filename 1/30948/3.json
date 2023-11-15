@@ -3,5 +3,5 @@
   "SID": "30948",
   "Rev": "3",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR Win.Backdoor.Hikit outbound banner response\"; flow:to_client,established; content:\"|5D 00 20 00|h|00|i|00|k|00|i|00|t|00|>|00|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http, ssl; reference:url,www.virustotal.com/en/file/aa4b2b448a5e246888304be51ef9a65a11a53bab7899bc1b56e4fc20e1b1fd9f/analysis/; classtype:trojan-activity; sid:30948; rev:3;"
+  "Option": "msg:\"MALWARE-BACKDOOR Win.Backdoor.Hikit outbound banner response\"; flow:to_client,established; content:\"|5D 00 20 00|h|00|i|00|k|00|i|00|t|00|>|00|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http,ssl; reference:url,www.virustotal.com/en/file/aa4b2b448a5e246888304be51ef9a65a11a53bab7899bc1b56e4fc20e1b1fd9f/analysis/; classtype:trojan-activity; sid:30948; rev:3;"
 }

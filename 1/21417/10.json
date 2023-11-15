@@ -3,5 +3,5 @@
   "SID": "21417",
   "Rev": "10",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any ( msg:\"FILE-PDF hostile PDF associated with Laik exploit kit\"; flow:to_client,established; flowbits:isset,file.pdf; file_data; content:\"%PDF-1.\"; content:\") /CreationDate",
-  "Option": "D:20110405234628)>>\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data, http, imap, pop3; classtype:trojan-activity; sid:21417; rev:10;"
+  "Option": "D:20110405234628)>>\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; classtype:trojan-activity; sid:21417; rev:10;"
 }

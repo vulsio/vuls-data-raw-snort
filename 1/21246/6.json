@@ -3,5 +3,5 @@
   "SID": "21246",
   "Rev": "6",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string DataCha0s\"; flow:to_server, established; http_header; content:\"User-Agent|3A 20|DataCha0s\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.internetofficer.com/web-robot/datacha0s/; classtype:network-scan; sid:21246; rev:6;"
+  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string DataCha0s\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|DataCha0s\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.internetofficer.com/web-robot/datacha0s/; classtype:network-scan; sid:21246; rev:6;"
 }

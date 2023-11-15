@@ -3,5 +3,5 @@
   "SID": "20260",
   "Rev": "19",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"FILE-IDENTIFY Microsoft Client Agent Helper JAR file download request\"; flow:to_server,established; content:\"_helper.jar\",fast_pattern,nocase; http_uri; pcre:\"/agent_(win|lin|mac)_helper\\.jar$/si\"; flowbits:set,file.jar.agent_helper; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:cve,2011-1969; reference:url,technet.microsoft.com/en-us/security/bulletin/MS11-079; classtype:misc-activity; sid:20260; rev:19;"
+  "Option": "msg:\"FILE-IDENTIFY Microsoft Client Agent Helper JAR file download request\"; flow:to_server,established; content:\"_helper.jar\",fast_pattern,nocase; http_uri; pcre:\"/agent_(win|lin|mac)_helper\\.jar$/is\"; flowbits:set,file.jar.agent_helper; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:cve,2011-1969; reference:url,technet.microsoft.com/en-us/security/bulletin/MS11-079; classtype:misc-activity; sid:20260; rev:19;"
 }

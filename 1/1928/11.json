@@ -3,5 +3,5 @@
   "SID": "1928",
   "Rev": "11",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP shadow retrieval attempt\"; flow:to_server,established; content:\"RETR\",nocase; content:\"shadow\"; pcre:\"/^RETR[^\\n]*shadow$/smi\"; metadata:ruleset community; service:ftp; classtype:suspicious-filename-detect; sid:1928; rev:11;"
+  "Option": "msg:\"PROTOCOL-FTP shadow retrieval attempt\"; flow:to_server,established; content:\"RETR\",nocase; content:\"shadow\"; pcre:\"/^RETR[^\\n]*shadow$/ims\"; metadata:ruleset community; service:ftp; classtype:suspicious-filename-detect; sid:1928; rev:11;"
 }

@@ -3,5 +3,5 @@
   "SID": "46301",
   "Rev": "2",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER QNAP QTS X-Forwarded-For buffer overflow\"; flow:to_server,established; http_uri; content:\"/cgi-bin/filemanager/wfm2Login.cgi\",fast_pattern,nocase; http_raw_header; content:\"X-Forwarded-For\",nocase; isdataat:90,relative; http_header; pcre:\"/X-Forwarded-For:[^\\n\\r]{90}/smi\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.qnap.com/en/security-advisory/nas-201712-15; classtype:web-application-attack; sid:46301; rev:2;"
+  "Option": "msg:\"SERVER-OTHER QNAP QTS X-Forwarded-For buffer overflow\"; flow:to_server,established; http_uri; content:\"/cgi-bin/filemanager/wfm2Login.cgi\",fast_pattern,nocase; http_raw_header; content:\"X-Forwarded-For\",nocase; isdataat:90,relative; http_header; pcre:\"/X-Forwarded-For:[^\\n\\r]{90}/ims\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.qnap.com/en/security-advisory/nas-201712-15; classtype:web-application-attack; sid:46301; rev:2;"
 }

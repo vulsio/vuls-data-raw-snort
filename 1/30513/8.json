@@ -3,5 +3,5 @@
   "SID": "30513",
   "Rev": "8",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [21,25,443,465,636,992,993,995,2484]",
-  "Option": "msg:\"SERVER-OTHER OpenSSL TLSv1.2 heartbeat read overrun attempt\"; flow:to_server,established,only_stream; content:\"|18 03 03|\",depth 3; detection_filter:track by_src, count 3, seconds 1; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ssl; reference:cve,2014-0160; classtype:attempted-recon; sid:30513; rev:8;"
+  "Option": "msg:\"SERVER-OTHER OpenSSL TLSv1.2 heartbeat read overrun attempt\"; flow:to_server,established,only_stream; content:\"|18 03 03|\",depth 3; detection_filter:track by_src,count 3,seconds 1; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ssl; reference:cve,2014-0160; classtype:attempted-recon; sid:30513; rev:8;"
 }

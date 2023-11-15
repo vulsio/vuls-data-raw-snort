@@ -3,5 +3,5 @@
   "SID": "1054",
   "Rev": "14",
   "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP weblogic/tomcat .jsp view source attempt\"; flow:to_server,established; http_uri; content:\".jsp\",nocase; pkt_data; pcre:!\"/^\\w+\\s+[^\\n\\s\\?]*\\.jsp/smi\"; metadata:ruleset community; service:http; reference:bugtraq,2527; classtype:web-application-attack; sid:1054; rev:14;"
+  "Option": "msg:\"SERVER-WEBAPP weblogic/tomcat .jsp view source attempt\"; flow:to_server,established; http_uri; content:\".jsp\",nocase; pkt_data; pcre:!\"/^\\w+\\s+[^\\n\\s\\?]*\\.jsp/ims\"; metadata:ruleset community; service:http; reference:bugtraq,2527; classtype:web-application-attack; sid:1054; rev:14;"
 }

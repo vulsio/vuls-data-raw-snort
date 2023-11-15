@@ -3,5 +3,5 @@
   "SID": "2460",
   "Rev": "9",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 5100",
-  "Option": "msg:\"POLICY-SOCIAL Yahoo IM conference request\"; flow:to_server,established; content:\"<R\",depth 2; pcre:\"/^\\x3c(REQIMG|RVWCFG)\\x3e/ism\"; metadata:ruleset community; classtype:policy-violation; sid:2460; rev:9;"
+  "Option": "msg:\"POLICY-SOCIAL Yahoo IM conference request\"; flow:to_server,established; content:\"<R\",depth 2; pcre:\"/^\\x3c(REQIMG|RVWCFG)\\x3e/ims\"; metadata:ruleset community; classtype:policy-violation; sid:2460; rev:9;"
 }

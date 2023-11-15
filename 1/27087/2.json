@@ -1,7 +1,0 @@
-{
-  "GID": "1",
-  "SID": "27087",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"DELETED EXPLOIT-KIT Unknown Malvertising Exploit Kit Hostile Jar app.jar\"; flow:to_server,established; http_uri; content:\"/app.jar\",fast_pattern,nocase; http_header; content:\" Java/\"; metadata:ruleset community; classtype:trojan-activity; sid:27087; rev:2;"
-}

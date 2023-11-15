@@ -3,5 +3,5 @@
   "SID": "2651",
   "Rev": "6",
   "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE NUMTODSINTERVAL/NUMTOYMINTERVAL buffer overflow attempt\"; flow:to_server,established; content:\"NUMTO\",nocase; content:\"INTERVAL\",distance 2,nocase; pcre:\"/NUMTO(DS|YM)INTERVAL\\s*\\(\\s*\\d+\\s*,\\s*((\\x27[^\\x27]{1000,})|(\\x22[^\\x22]{1000,}))/msi\"; metadata:ruleset community; reference:bugtraq,9587; reference:cve,2003-1208; reference:url,www.nextgenss.com/advisories/ora_numtodsinterval.txt; reference:url,www.nextgenss.com/advisories/ora_numtoyminterval.txt; classtype:attempted-user; sid:2651; rev:6;"
+  "Option": "msg:\"SERVER-ORACLE NUMTODSINTERVAL/NUMTOYMINTERVAL buffer overflow attempt\"; flow:to_server,established; content:\"NUMTO\",nocase; content:\"INTERVAL\",distance 2,nocase; pcre:\"/NUMTO(DS|YM)INTERVAL\\s*\\(\\s*\\d+\\s*,\\s*((\\x27[^\\x27]{1000,})|(\\x22[^\\x22]{1000,}))/ims\"; metadata:ruleset community; reference:bugtraq,9587; reference:cve,2003-1208; reference:url,www.nextgenss.com/advisories/ora_numtodsinterval.txt; reference:url,www.nextgenss.com/advisories/ora_numtoyminterval.txt; classtype:attempted-user; sid:2651; rev:6;"
 }

@@ -3,5 +3,5 @@
   "SID": "660",
   "Rev": "19",
   "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL expn root\"; flow:to_server,established; content:\"expn\",nocase; content:\"root\",fast_pattern,nocase; pcre:\"/^expn\\s+root/smi\"; metadata:ruleset community; service:smtp; reference:nessus,10249; classtype:attempted-recon; sid:660; rev:19;"
+  "Option": "msg:\"SERVER-MAIL expn root\"; flow:to_server,established; content:\"expn\",nocase; content:\"root\",fast_pattern,nocase; pcre:\"/^expn\\s+root/ims\"; metadata:ruleset community; service:smtp; reference:nessus,10249; classtype:attempted-recon; sid:660; rev:19;"
 }

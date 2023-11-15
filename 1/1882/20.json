@@ -3,5 +3,5 @@
   "SID": "1882",
   "Rev": "20",
   "Header": "alert ip $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE id check returned userid\"; content:\"uid=\",nocase; content:\" gid=\",distance 0; pcre:\"/uid=\\d{1,5}\\S+\\s+gid=\\d{1,5}/smi\"; metadata:policy max-detect-ips drop,ruleset community; classtype:bad-unknown; sid:1882; rev:20;"
+  "Option": "msg:\"INDICATOR-COMPROMISE id check returned userid\"; content:\"uid=\",nocase; content:\" gid=\",distance 0; pcre:\"/uid=\\d{1,5}\\S+\\s+gid=\\d{1,5}/ims\"; metadata:policy max-detect-ips drop,ruleset community; classtype:bad-unknown; sid:1882; rev:20;"
 }

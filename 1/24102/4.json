@@ -1,7 +1,0 @@
-{
-  "GID": "1",
-  "SID": "24102",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"DELETED MALWARE-OTHER Possible Kuluoz spamvertised URL in email\"; flow:to_server,established; content:\"href=|22|http|3A 2F 2F|\"; content:\".htm|22|\",within 50; pcre:\"/\\x2f[A-Z]{10}\\.htm\\x22/ms\"; metadata:ruleset community; reference:url,blog.webroot.com/2012/08/31/cybercriminals-impersonate-ups-serve-malware; classtype:trojan-activity; sid:24102; rev:4;"
-}

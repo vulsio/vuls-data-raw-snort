@@ -3,5 +3,5 @@
   "SID": "32366",
   "Rev": "2",
   "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"OS-OTHER Bash environment variable injection attempt\"; flow:to_server,established; content:\"() {\"; content:\"}\",within 25; pcre:\"/^[\\w\\x2d\\x5f]+?\\x3a\\s*?\\x28\\x29\\s\\x7b/mi\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:32366; rev:2;"
+  "Option": "msg:\"OS-OTHER Bash environment variable injection attempt\"; flow:to_server,established; content:\"() {\"; content:\"}\",within 25; pcre:\"/^[\\w\\x2d\\x5f]+?\\x3a\\s*?\\x28\\x29\\s\\x7b/im\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:32366; rev:2;"
 }

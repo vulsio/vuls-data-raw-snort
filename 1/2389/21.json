@@ -3,5 +3,5 @@
   "SID": "2389",
   "Rev": "21",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP RNTO overflow attempt\"; flow:to_server,established; content:\"RNTO\",nocase; isdataat:200,relative; pcre:\"/^RNTO(?!\\n)\\s[^\\n]{200}/smi\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,15457; reference:bugtraq,8315; reference:cve,2000-0133; reference:cve,2001-1021; reference:cve,2003-0466; reference:cve,2005-3683; classtype:attempted-admin; sid:2389; rev:21;"
+  "Option": "msg:\"PROTOCOL-FTP RNTO overflow attempt\"; flow:to_server,established; content:\"RNTO\",nocase; isdataat:200,relative; pcre:\"/^RNTO(?!\\n)\\s[^\\n]{200}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,15457; reference:bugtraq,8315; reference:cve,2000-0133; reference:cve,2001-1021; reference:cve,2003-0466; reference:cve,2005-3683; classtype:attempted-admin; sid:2389; rev:21;"
 }

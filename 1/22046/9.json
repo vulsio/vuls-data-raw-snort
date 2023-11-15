@@ -3,5 +3,5 @@
   "SID": "22046",
   "Rev": "9",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY XM file magic detected\"; flow:to_client,established; file_data; content:\"Extended Module:\",fast_pattern,nocase; flowbits:set,file.xm; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:ftp-data, http, imap, pop3; classtype:misc-activity; sid:22046; rev:9;"
+  "Option": "msg:\"FILE-IDENTIFY XM file magic detected\"; flow:to_client,established; file_data; content:\"Extended Module:\",fast_pattern,nocase; flowbits:set,file.xm; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:22046; rev:9;"
 }

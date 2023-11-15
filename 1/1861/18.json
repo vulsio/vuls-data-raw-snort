@@ -3,5 +3,5 @@
   "SID": "1861",
   "Rev": "18",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8080",
-  "Option": "msg:\"SERVER-WEBAPP Linksys router default username and password login attempt\"; flow:to_server,established; content:\"YWRtaW46YWRtaW4\"; pcre:\"/^Authorization\\x3a\\s*Basic\\s+(?-i)YWRtaW46YWRtaW4[=\\s]/smi\"; metadata:ruleset community; service:http; reference:nessus,10999; reference:url,attack.mitre.org/techniques/T1078; classtype:default-login-attempt; sid:1861; rev:18;"
+  "Option": "msg:\"SERVER-WEBAPP Linksys router default username and password login attempt\"; flow:to_server,established; content:\"YWRtaW46YWRtaW4\"; pcre:\"/^Authorization\\x3a\\s*Basic\\s+(?-i)YWRtaW46YWRtaW4[=\\s]/ims\"; metadata:ruleset community; service:http; reference:nessus,10999; reference:url,attack.mitre.org/techniques/T1078; classtype:default-login-attempt; sid:1861; rev:18;"
 }

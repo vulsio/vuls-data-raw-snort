@@ -3,5 +3,5 @@
   "SID": "2663",
   "Rev": "16",
   "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Ipswitch WhatsUpGold instancename overflow attempt\"; flow:to_server,established; http_uri; content:\"/_maincfgret.cgi\",fast_pattern,nocase; content:\"instancename=\",nocase; isdataat:513,relative; pcre:\"/instancename=[^&\\x3b\\r\\n]{513}/smi\"; metadata:ruleset community; service:http; reference:bugtraq,11043; reference:cve,2004-0798; classtype:web-application-attack; sid:2663; rev:16;"
+  "Option": "msg:\"SERVER-WEBAPP Ipswitch WhatsUpGold instancename overflow attempt\"; flow:to_server,established; http_uri; content:\"/_maincfgret.cgi\",fast_pattern,nocase; content:\"instancename=\",nocase; isdataat:513,relative; pcre:\"/instancename=[^&\\x3b\\r\\n]{513}/ims\"; metadata:ruleset community; service:http; reference:bugtraq,11043; reference:cve,2004-0798; classtype:web-application-attack; sid:2663; rev:16;"
 }

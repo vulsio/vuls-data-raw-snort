@@ -3,5 +3,5 @@
   "SID": "3025",
   "Rev": "9",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 445",
-  "Option": "msg:\"NETBIOS SMB-DS NT Trans NT CREATE unicode andx oversized Security Descriptor attempt\"; flow:established,to_server; content:\"|00|\",depth 1; content:\"|FF|SMB\",within 4,distance 3; pcre:\"/^(\\x75|\\x2d|\\x2f|\\x73|\\xa2|\\x2e|\\x24|\\x74)/sR\"; byte_test:1,&,128,6,relative; content:\"|A0|\",depth 1,offset 39; byte_jump:2,0,little,relative; content:\"|01 00|\",within 2,distance 37; byte_jump:4,-15,little,relative,from_beginning; pcre:\"/^.{4}/R\"; byte_test:4,>,1024,36,relative,little; metadata:ruleset community; service:netbios-ssn; reference:cve,2004-1154; classtype:protocol-command-decode; sid:3025; rev:9;"
+  "Option": "msg:\"NETBIOS SMB-DS NT Trans NT CREATE unicode andx oversized Security Descriptor attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB\",within 4,distance 3; pcre:\"/^(\\x75|\\x2d|\\x2f|\\x73|\\xa2|\\x2e|\\x24|\\x74)/Rs\"; byte_test:1,&,128,6,relative; content:\"|A0|\",depth 1,offset 39; byte_jump:2,0,relative,little; content:\"|01 00|\",within 2,distance 37; byte_jump:4,-15,relative,from_beginning,little; pcre:\"/^.{4}/R\"; byte_test:4,>,1024,36,relative,little; metadata:ruleset community; service:netbios-ssn; reference:cve,2004-1154; classtype:protocol-command-decode; sid:3025; rev:9;"
 }

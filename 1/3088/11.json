@@ -3,5 +3,5 @@
   "SID": "3088",
   "Rev": "11",
   "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-MULTIMEDIA Nullsoft Winamp cda file name overflow attempt\"; flow:to_client,established; file_data; content:\".cda\",nocase; pcre:\"/(\\x5c[^\\x5c]{16,}|\\x2f[^\\x2f]{16,})\\.cda$/smi\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,11730; reference:cve,2004-1119; reference:nessus,15817; classtype:attempted-user; sid:3088; rev:11;"
+  "Option": "msg:\"FILE-MULTIMEDIA Nullsoft Winamp cda file name overflow attempt\"; flow:to_client,established; file_data; content:\".cda\",nocase; pcre:\"/(\\x5c[^\\x5c]{16,}|\\x2f[^\\x2f]{16,})\\.cda$/ims\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,11730; reference:cve,2004-1119; reference:nessus,15817; classtype:attempted-user; sid:3088; rev:11;"
 }

@@ -3,5 +3,5 @@
   "SID": "21695",
   "Rev": "12",
   "Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY SMI file attachment detected\"; flow:to_client,established; content:\".smi\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2esmi/i\"; flowbits:set,file.realplayer.playlist; flowbits:set,file.dmg; flowbits:set,file.smi; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap, pop3; classtype:misc-activity; sid:21695; rev:12;"
+  "Option": "msg:\"FILE-IDENTIFY SMI file attachment detected\"; flow:to_client,established; content:\".smi\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2esmi/i\"; flowbits:set,file.realplayer.playlist; flowbits:set,file.dmg; flowbits:set,file.smi; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap,pop3; classtype:misc-activity; sid:21695; rev:12;"
 }

@@ -3,5 +3,5 @@
   "SID": "2334",
   "Rev": "11",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3535",
-  "Option": "msg:\"PROTOCOL-FTP Yak! FTP server default account login attempt\"; flow:to_server,established; content:\"USER\",nocase; content:\"y049575046\",fast_pattern,nocase; pcre:\"/^USER\\s+y049575046/smi\"; metadata:ruleset community; reference:bugtraq,9072; reference:url,attack.mitre.org/techniques/T1078; classtype:suspicious-login; sid:2334; rev:11;"
+  "Option": "msg:\"PROTOCOL-FTP Yak! FTP server default account login attempt\"; flow:to_server,established; content:\"USER\",nocase; content:\"y049575046\",fast_pattern,nocase; pcre:\"/^USER\\s+y049575046/ims\"; metadata:ruleset community; reference:bugtraq,9072; reference:url,attack.mitre.org/techniques/T1078; classtype:suspicious-login; sid:2334; rev:11;"
 }

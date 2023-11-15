@@ -3,5 +3,5 @@
   "SID": "1975",
   "Rev": "27",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP DELE overflow attempt\"; flow:to_server,established; content:\"DELE\",nocase; isdataat:100,relative; pcre:\"/^DELE(?!\\n)\\s[^\\n]{100}/mi\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,15457; reference:bugtraq,2972; reference:bugtraq,46922; reference:cve,2001-0826; reference:cve,2001-1021; reference:cve,2005-3683; reference:cve,2010-4228; reference:nessus,11755; classtype:attempted-admin; sid:1975; rev:27;"
+  "Option": "msg:\"PROTOCOL-FTP DELE overflow attempt\"; flow:to_server,established; content:\"DELE\",nocase; isdataat:100,relative; pcre:\"/^DELE(?!\\n)\\s[^\\n]{100}/im\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,15457; reference:bugtraq,2972; reference:bugtraq,46922; reference:cve,2001-0826; reference:cve,2001-1021; reference:cve,2005-3683; reference:cve,2010-4228; reference:nessus,11755; classtype:attempted-admin; sid:1975; rev:27;"
 }

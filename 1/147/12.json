@@ -3,5 +3,5 @@
   "SID": "147",
   "Rev": "12",
   "Header": "alert tcp $HOME_NET 6969 -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR GateCrasher\"; flow:established,to_client; content:\"GateCrasher\",depth 11,nocase; content:\"Server\",distance 0,nocase; content:\"On-Line...\",distance 0,nocase; pcre:\"/^GateCrasher\\s+v\\d+\\x2E\\d+\\x2C\\s+Server\\s+On-Line\\x2E\\x2E\\x2E/smi\"; metadata:policy max-detect-ips drop,ruleset community; reference:url,www.spywareguide.com/product_show.php?id=973; classtype:trojan-activity; sid:147; rev:12;"
+  "Option": "msg:\"MALWARE-BACKDOOR GateCrasher\"; flow:to_client,established; content:\"GateCrasher\",depth 11,nocase; content:\"Server\",distance 0,nocase; content:\"On-Line...\",distance 0,nocase; pcre:\"/^GateCrasher\\s+v\\d+\\x2E\\d+\\x2C\\s+Server\\s+On-Line\\x2E\\x2E\\x2E/ims\"; metadata:policy max-detect-ips drop,ruleset community; reference:url,www.spywareguide.com/product_show.php?id=973; classtype:trojan-activity; sid:147; rev:12;"
 }

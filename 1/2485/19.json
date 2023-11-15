@@ -3,5 +3,5 @@
   "SID": "2485",
   "Rev": "19",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"BROWSER-PLUGINS Symantec Norton Internet Security 2004 ActiveX clsid access\"; flow:to_client,established; file_data; content:\"0534CF61-83C5-4765-B19B-45F7A4E135D0\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:bugtraq,9916; reference:cve,2004-0363; classtype:attempted-user; sid:2485; rev:19;"
+  "Option": "msg:\"BROWSER-PLUGINS Symantec Norton Internet Security 2004 ActiveX clsid access\"; flow:to_client,established; file_data; content:\"0534CF61-83C5-4765-B19B-45F7A4E135D0\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:bugtraq,9916; reference:cve,2004-0363; classtype:attempted-user; sid:2485; rev:19;"
 }

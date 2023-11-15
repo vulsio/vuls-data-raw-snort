@@ -3,5 +3,5 @@
   "SID": "29829",
   "Rev": "2",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP HNAP remote code execution attempt\"; flow:established,to_server; http_raw_uri; bufferlen:6; http_uri; content:\"/HNAP1\",fast_pattern,nocase; http_header; content:\"Authorization: Basic YWRtaW46\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,isc.sans.edu/diary/Linksys+Worm+%22TheMoon%22+Summary%3A+What+we+know+so+far/17633; classtype:attempted-admin; sid:29829; rev:2;"
+  "Option": "msg:\"SERVER-WEBAPP HNAP remote code execution attempt\"; flow:to_server,established; http_raw_uri; bufferlen:6; http_uri; content:\"/HNAP1\",fast_pattern,nocase; http_header; content:\"Authorization: Basic YWRtaW46\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,isc.sans.edu/diary/Linksys+Worm+%22TheMoon%22+Summary%3A+What+we+know+so+far/17633; classtype:attempted-admin; sid:29829; rev:2;"
 }

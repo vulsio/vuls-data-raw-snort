@@ -3,5 +3,5 @@
   "SID": "21736",
   "Rev": "12",
   "Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY JPG file attachment detected\"; flow:to_client,established; content:\".jif\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2ejif/i\"; flowbits:set,file.jpeg; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:imap, pop3; classtype:misc-activity; sid:21736; rev:12;"
+  "Option": "msg:\"FILE-IDENTIFY JPG file attachment detected\"; flow:to_client,established; content:\".jif\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2ejif/i\"; flowbits:set,file.jpeg; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:imap,pop3; classtype:misc-activity; sid:21736; rev:12;"
 }

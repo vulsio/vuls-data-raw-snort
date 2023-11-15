@@ -3,5 +3,5 @@
   "SID": "1792",
   "Rev": "16",
   "Header": "alert tcp $EXTERNAL_NET 119 -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-NNTP return code buffer overflow attempt\"; flow:to_client,established; content:\"200\"; isdataat:256,relative; pcre:\"/^200\\s[^\\n]{256}/smi\"; metadata:ruleset community; reference:bugtraq,4900; reference:cve,2002-0909; classtype:protocol-command-decode; sid:1792; rev:16;"
+  "Option": "msg:\"PROTOCOL-NNTP return code buffer overflow attempt\"; flow:to_client,established; content:\"200\"; isdataat:256,relative; pcre:\"/^200\\s[^\\n]{256}/ims\"; metadata:ruleset community; reference:bugtraq,4900; reference:cve,2002-0909; classtype:protocol-command-decode; sid:1792; rev:16;"
 }

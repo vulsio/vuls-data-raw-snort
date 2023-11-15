@@ -3,5 +3,5 @@
   "SID": "51672",
   "Rev": "1",
   "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [$HTTP_PORTS,10011]",
-  "Option": "msg:\"MALWARE-CNC Andr.Trojan.Moonshine outbound connection\"; flow:established,to_server; content:\"User-Agent: hots scot\",fast_pattern,nocase; content:\"/ws?\",nocase; content:\"whisky_id=\",nocase; content:\"device_id=\",nocase; content:\"Upgrade: websocket\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/6977e6098815cd91016be9d76f194ed4622640d03c6cdd66b1032306a2190af7/analysis/; classtype:trojan-activity; sid:51672; rev:1;"
+  "Option": "msg:\"MALWARE-CNC Andr.Trojan.Moonshine outbound connection\"; flow:to_server,established; content:\"User-Agent: hots scot\",fast_pattern,nocase; content:\"/ws?\",nocase; content:\"whisky_id=\",nocase; content:\"device_id=\",nocase; content:\"Upgrade: websocket\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/6977e6098815cd91016be9d76f194ed4622640d03c6cdd66b1032306a2190af7/analysis/; classtype:trojan-activity; sid:51672; rev:1;"
 }

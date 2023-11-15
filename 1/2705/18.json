@@ -3,5 +3,5 @@
   "SID": "2705",
   "Rev": "18",
   "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IMAGE Microsoft Multiple Products JPEG parser heap overflow attempt\"; flow:to_client,established; http_header; content:\"Content-Type\",nocase; content:\"image/\",nocase; pcre:\"/^Content-Type\\x3A\\s*image\\x2F/smi\"; file_data; content:\"|FF D8|\",within 2,fast_pattern; pcre:\"/^.{0,100}\\xFF[\\xE1\\xE2\\xED\\xFE]\\x00[\\x00\\x01]/sR\"; metadata:ruleset community; service:http; reference:bugtraq,11173; reference:cve,2004-0200; reference:url,www.microsoft.com/security/bulletins/200409_jpeg.mspx; classtype:attempted-user; sid:2705; rev:18;"
+  "Option": "msg:\"FILE-IMAGE Microsoft Multiple Products JPEG parser heap overflow attempt\"; flow:to_client,established; http_header; content:\"Content-Type\",nocase; content:\"image/\",nocase; pcre:\"/^Content-Type\\x3A\\s*image\\x2F/ims\"; file_data; content:\"|FF D8|\",within 2,fast_pattern; pcre:\"/^.{0,100}\\xFF[\\xE1\\xE2\\xED\\xFE]\\x00[\\x00\\x01]/Rs\"; metadata:ruleset community; service:http; reference:bugtraq,11173; reference:cve,2004-0200; reference:url,www.microsoft.com/security/bulletins/200409_jpeg.mspx; classtype:attempted-user; sid:2705; rev:18;"
 }

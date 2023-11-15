@@ -3,5 +3,5 @@
   "SID": "2580",
   "Rev": "12",
   "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"SERVER-WEBAPP server negative Content-Length attempt\"; flow:to_client,established; content:\"Content-Length\",nocase; pcre:\"/^Content-Length\\s*\\x3a\\s*-\\d+/mi\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,10508; reference:cve,2004-0492; reference:url,www.guninski.com/modproxy1.html; classtype:attempted-admin; sid:2580; rev:12;"
+  "Option": "msg:\"SERVER-WEBAPP server negative Content-Length attempt\"; flow:to_client,established; content:\"Content-Length\",nocase; pcre:\"/^Content-Length\\s*\\x3a\\s*-\\d+/im\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,10508; reference:cve,2004-0492; reference:url,www.guninski.com/modproxy1.html; classtype:attempted-admin; sid:2580; rev:12;"
 }

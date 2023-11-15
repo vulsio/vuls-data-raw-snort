@@ -3,5 +3,5 @@
   "SID": "53583",
   "Rev": "2",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE RTF document with Equation and BITSAdmin download attempt\"; flow:to_client,established; flowbits:isset,file.rtf|file.doc; file_data; content:\"0200000002CE020000000000C000000000000046\",fast_pattern,nocase; content:\"6269747361646d696e\",nocase; metadata:impact_flag red,ruleset community; service:ftp-data, http, imap, pop3; classtype:trojan-activity; sid:53583; rev:2;"
+  "Option": "msg:\"INDICATOR-COMPROMISE RTF document with Equation and BITSAdmin download attempt\"; flow:to_client,established; flowbits:isset,file.doc|file.rtf; file_data; content:\"0200000002CE020000000000C000000000000046\",fast_pattern,nocase; content:\"6269747361646d696e\",nocase; metadata:impact_flag red,ruleset community; service:ftp-data,http,imap,pop3; classtype:trojan-activity; sid:53583; rev:2;"
 }

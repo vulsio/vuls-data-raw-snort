@@ -3,5 +3,5 @@
   "SID": "2439",
   "Rev": "23",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-MULTIMEDIA RealNetworks RealPlayer playlist http URL overflow attempt\"; flow:to_client,established; flowbits:isset,file.realplayer.playlist; file_data; content:\"http|3A|//\",nocase; pcre:\"/^http\\x3a\\x2f\\x2f[^\\n]{400}/smi\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:bugtraq,13264; reference:bugtraq,9579; reference:cve,2004-0258; reference:cve,2005-0755; classtype:attempted-user; sid:2439; rev:23;"
+  "Option": "msg:\"FILE-MULTIMEDIA RealNetworks RealPlayer playlist http URL overflow attempt\"; flow:to_client,established; flowbits:isset,file.realplayer.playlist; file_data; content:\"http|3A|//\",nocase; pcre:\"/^http\\x3a\\x2f\\x2f[^\\n]{400}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:bugtraq,13264; reference:bugtraq,9579; reference:cve,2004-0258; reference:cve,2005-0755; classtype:attempted-user; sid:2439; rev:23;"
 }

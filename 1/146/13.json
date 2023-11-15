@@ -3,5 +3,5 @@
   "SID": "146",
   "Rev": "13",
   "Header": "alert tcp $HOME_NET 30100:30102 -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR NetSphere access\"; flow:established,to_client; content:\"NetSphere\"; metadata:ruleset community; classtype:trojan-activity; sid:146; rev:13;"
+  "Option": "msg:\"MALWARE-BACKDOOR NetSphere access\"; flow:to_client,established; content:\"NetSphere\"; metadata:ruleset community; classtype:trojan-activity; sid:146; rev:13;"
 }

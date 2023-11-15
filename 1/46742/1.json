@@ -3,5 +3,5 @@
   "SID": "46742",
   "Rev": "1",
   "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper malicious script download attempt\"; flow:to_client,established; file_data; content:\"<script\",nocase; content:\"ActiveXObject\",nocase; content:\"WScript.Shell\",fast_pattern,nocase; content:\"p o w e r s h e l l\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data, http, imap, pop3; reference:url,virustotal.com/#/file/76afa767b0374bde95d9a93074aceaec88228ba234caa13dd01313076baf02ee/detection; classtype:trojan-activity; sid:46742; rev:1;"
+  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper malicious script download attempt\"; flow:to_client,established; file_data; content:\"<script\",nocase; content:\"ActiveXObject\",nocase; content:\"WScript.Shell\",fast_pattern,nocase; content:\"p o w e r s h e l l\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,virustotal.com/#/file/76afa767b0374bde95d9a93074aceaec88228ba234caa13dd01313076baf02ee/detection; classtype:trojan-activity; sid:46742; rev:1;"
 }

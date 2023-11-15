@@ -3,5 +3,5 @@
   "SID": "152",
   "Rev": "11",
   "Header": "alert tcp $HOME_NET 5401:5402 -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR BackConstruction 2.1 Connection\"; flow:established,to_client; content:\"c|3A 5C|\"; metadata:ruleset community; classtype:misc-activity; sid:152; rev:11;"
+  "Option": "msg:\"MALWARE-BACKDOOR BackConstruction 2.1 Connection\"; flow:to_client,established; content:\"c|3A 5C|\"; metadata:ruleset community; classtype:misc-activity; sid:152; rev:11;"
 }

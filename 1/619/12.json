@@ -3,5 +3,5 @@
   "SID": "619",
   "Rev": "12",
   "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 80",
-  "Option": "msg:\"INDICATOR-SCAN cybercop os probe\"; flow:stateless; isdataat:!0; flags:SF12; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:attempted-recon; sid:619; rev:12;"
+  "Option": "msg:\"INDICATOR-SCAN cybercop os probe\"; flow:stateless; isdataat:!0; flags:12FS; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:attempted-recon; sid:619; rev:12;"
 }

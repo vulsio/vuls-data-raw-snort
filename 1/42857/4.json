@@ -1,0 +1,7 @@
+{
+  "GID": "1",
+  "SID": "42857",
+  "Rev": "4",
+  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+  "Option": "msg:\"SERVER-WEBAPP MVPower DVR Shell arbitrary command execution attempt\"; flow:to_server,established; http_uri; bufferlen:>13; content:\"/shell?\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.pentestpartners.com/blog/pwning-cctv-cameras/; classtype:attempted-admin; gid:1; sid:42857; rev:4;"
+}
