@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33453",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Kovter variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:13; http_method; content:\"POST\"; http_uri; content:\"/12/index.php\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/5.0",
-  "Option": "Windows NT 6.1|3B| Trident/7.0|3B| rv:11.0) like Gecko|0D 0A|\"; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/db8952943708f4eefa72ad04ff01bdf9acb33fdd89a5ad98b0ec2649fb116a52/analysis/1422981882/; classtype:trojan-activity; sid:33453; rev:3;"
+	"GID": "1",
+	"SID": "33453",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Kovter variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:13; http_method; content:\"POST\"; http_uri; content:\"/12/index.php\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/5.0",
+	"Option": "Windows NT 6.1|3B| Trident/7.0|3B| rv:11.0) like Gecko|0D 0A|\"; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/db8952943708f4eefa72ad04ff01bdf9acb33fdd89a5ad98b0ec2649fb116a52/analysis/1422981882/; classtype:trojan-activity; sid:33453; rev:3;"
 }

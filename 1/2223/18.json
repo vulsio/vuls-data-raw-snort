@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2223",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP CGIScript.net csNews.cgi access\"; flow:to_server,established; http_uri; content:\"/csNews.cgi\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,4994; reference:cve,2002-0923; reference:cve,2002-1751; reference:nessus,11726; classtype:web-application-activity; sid:2223; rev:18;"
+	"GID": "1",
+	"SID": "2223",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP CGIScript.net csNews.cgi access\"; flow:to_server,established; http_uri; content:\"/csNews.cgi\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,4994; reference:cve,2002-0923; reference:cve,2002-1751; reference:nessus,11726; classtype:web-application-activity; sid:2223; rev:18;"
 }

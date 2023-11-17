@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46335",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER QNAP QTS hard coded credential access attempt\"; flow:to_server,established; content:\"PASS joxu06wj/|0D 0A|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:cve,2015-7261; classtype:default-login-attempt; sid:46335; rev:3;"
+	"GID": "1",
+	"SID": "46335",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER QNAP QTS hard coded credential access attempt\"; flow:to_server,established; content:\"PASS joxu06wj/|0D 0A|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:cve,2015-7261; classtype:default-login-attempt; sid:46335; rev:3;"
 }

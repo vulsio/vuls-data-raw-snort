@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1475",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP mailit.pl access\"; flow:to_server,established; http_uri; content:\"/mailit.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10417; classtype:attempted-recon; sid:1475; rev:18;"
+	"GID": "1",
+	"SID": "1475",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP mailit.pl access\"; flow:to_server,established; http_uri; content:\"/mailit.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10417; classtype:attempted-recon; sid:1475; rev:18;"
 }

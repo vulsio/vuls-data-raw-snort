@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "58730",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Apache Log4j logging remote code execution attempt\"; flow:to_server,established; content:\"lower\",fast_pattern,nocase; http_cookie; content:\"lower\",nocase; pcre:\"/(%(25)?24|\\x24)(%(25)?7b|\\x7b)lower(%(25)?3a|\\x3a)/i\"; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2021-44228; reference:cve,2021-44832; reference:cve,2021-45046; reference:cve,2021-45105; reference:cve,2022-20933; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-meraki-mx-vpn-dos-vnESbgBf; classtype:attempted-user; gid:1; sid:58730; rev:7;"
+	"GID": "1",
+	"SID": "58730",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Apache Log4j logging remote code execution attempt\"; flow:to_server,established; content:\"lower\",fast_pattern,nocase; http_cookie; content:\"lower\",nocase; pcre:\"/(%(25)?24|\\x24)(%(25)?7b|\\x7b)lower(%(25)?3a|\\x3a)/i\"; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2021-44228; reference:cve,2021-44832; reference:cve,2021-45046; reference:cve,2021-45105; reference:cve,2022-20933; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-meraki-mx-vpn-dos-vnESbgBf; classtype:attempted-user; gid:1; sid:58730; rev:7;"
 }

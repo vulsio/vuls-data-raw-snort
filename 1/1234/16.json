@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1234",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP VirusWall FtpSaveCSP access\"; flow:to_server,established; http_uri; content:\"/FtpSaveCSP.dll\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2808; reference:cve,2001-0432; reference:nessus,10733; classtype:attempted-recon; sid:1234; rev:16;"
+	"GID": "1",
+	"SID": "1234",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP VirusWall FtpSaveCSP access\"; flow:to_server,established; http_uri; content:\"/FtpSaveCSP.dll\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2808; reference:cve,2001-0432; reference:nessus,10733; classtype:attempted-recon; sid:1234; rev:16;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "826",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP htmlscript access\"; flow:to_server,established; http_uri; content:\"/htmlscript\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2001; reference:cve,1999-0264; reference:nessus,10106; classtype:attempted-recon; sid:826; rev:21;"
+	"GID": "1",
+	"SID": "826",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP htmlscript access\"; flow:to_server,established; http_uri; content:\"/htmlscript\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2001; reference:cve,1999-0264; reference:nessus,10106; classtype:attempted-recon; sid:826; rev:21;"
 }

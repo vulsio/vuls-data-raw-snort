@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41334",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Locky variant outbound connection\"; flow:to_server,established; http_uri; content:\"/admin.php?f=\",fast_pattern,nocase; http_header; content:\"UA-CPU|3A 20|\"; content:\"MSIE 7.0|3B|\"; content:\"Accept|3A 20|*/*\"; content:!\"Accept-Language\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/b9cf176ddb51fa60c7512cdbafc5a598929ac3d0b3d0443a80a7f33259aa70f2/analysis/1484673198/; classtype:trojan-activity; sid:41334; rev:3;"
+	"GID": "1",
+	"SID": "41334",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Locky variant outbound connection\"; flow:to_server,established; http_uri; content:\"/admin.php?f=\",fast_pattern,nocase; http_header; content:\"UA-CPU|3A 20|\"; content:\"MSIE 7.0|3B|\"; content:\"Accept|3A 20|*/*\"; content:!\"Accept-Language\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/b9cf176ddb51fa60c7512cdbafc5a598929ac3d0b3d0443a80a7f33259aa70f2/analysis/1484673198/; classtype:trojan-activity; sid:41334; rev:3;"
 }

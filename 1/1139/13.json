@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1139",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP whisker HEAD/./\"; flow:to_server,established; content:\"HEAD/./\"; metadata:ruleset community; service:http; reference:url,www.wiretrip.net/rfp/pages/whitepapers/whiskerids.html; classtype:attempted-recon; sid:1139; rev:13;"
+	"GID": "1",
+	"SID": "1139",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP whisker HEAD/./\"; flow:to_server,established; content:\"HEAD/./\"; metadata:ruleset community; service:http; reference:url,www.wiretrip.net/rfp/pages/whitepapers/whiskerids.html; classtype:attempted-recon; sid:1139; rev:13;"
 }

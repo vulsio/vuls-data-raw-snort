@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "50811",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 65314",
-  "Option": "msg:\"MALWARE-CNC Unix.Backdoor.Godlua variant outbound connection\"; flow:to_server,established; content:\"|01 00 10|\",depth 3; content:\"|00 12 5C|\",within 3,distance 9; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,virustotal.com/gui/file/bd8b1bd06817772af89d93a1789d5df13e15136e53a6af60be0900986c56234f/detection; classtype:trojan-activity; sid:50811; rev:1;"
+	"GID": "1",
+	"SID": "50811",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 65314",
+	"Option": "msg:\"MALWARE-CNC Unix.Backdoor.Godlua variant outbound connection\"; flow:to_server,established; content:\"|01 00 10|\",depth 3; content:\"|00 12 5C|\",within 3,distance 9; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,virustotal.com/gui/file/bd8b1bd06817772af89d93a1789d5df13e15136e53a6af60be0900986c56234f/detection; classtype:trojan-activity; sid:50811; rev:1;"
 }

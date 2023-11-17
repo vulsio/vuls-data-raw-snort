@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1211",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP web-map.cgi access\"; flow:to_server,established; http_uri; content:\"/web-map.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1211; rev:14;"
+	"GID": "1",
+	"SID": "1211",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP web-map.cgi access\"; flow:to_server,established; http_uri; content:\"/web-map.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1211; rev:14;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1081",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Netscape Servers suite DOS\"; flow:to_server,established; http_uri; content:\"/dsgw/bin/search?context=\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1868; reference:cve,2000-1025; classtype:web-application-attack; sid:1081; rev:18;"
+	"GID": "1",
+	"SID": "1081",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Netscape Servers suite DOS\"; flow:to_server,established; http_uri; content:\"/dsgw/bin/search?context=\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1868; reference:cve,2000-1025; classtype:web-application-attack; sid:1081; rev:18;"
 }

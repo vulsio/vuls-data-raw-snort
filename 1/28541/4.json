@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28541",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess Download Headers\"; flow:to_server,established; http_raw_uri; bufferlen:5<=>14; http_header; content:\"|0D 0A|Accept: */*|0D 0A|Accept-Encoding: identity, *|3B|q=0|0D 0A|Connection: close|0D 0A|User-Agent: \",fast_pattern,nocase; pkt_data; content:\".exe HTTP/1.0|0D 0A|Host: \"; http_uri; pcre:\"/^\\x2f[a-z\\d]{1,8}\\.exe$/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/#/file/eeaeb1506d805271b5147ce911df9c264d63e4d229de4464ef879a83fb225a40/detection; classtype:trojan-activity; sid:28541; rev:4;"
+	"GID": "1",
+	"SID": "28541",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess Download Headers\"; flow:to_server,established; http_raw_uri; bufferlen:5<=>14; http_header; content:\"|0D 0A|Accept: */*|0D 0A|Accept-Encoding: identity, *|3B|q=0|0D 0A|Connection: close|0D 0A|User-Agent: \",fast_pattern,nocase; pkt_data; content:\".exe HTTP/1.0|0D 0A|Host: \"; http_uri; pcre:\"/^\\x2f[a-z\\d]{1,8}\\.exe$/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/#/file/eeaeb1506d805271b5147ce911df9c264d63e4d229de4464ef879a83fb225a40/detection; classtype:trojan-activity; sid:28541; rev:4;"
 }

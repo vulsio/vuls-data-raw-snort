@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26469",
-  "Rev": "5",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"SERVER-ORACLE Oracle WebCenter FatWire Satellite Server header injection on blobheadername2 attempt\"; flow:to_server,established; content:\"blobheadername2=Refresh\",fast_pattern,nocase; content:\"blobheadervalue2=\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2013-1509; reference:url,www.oracle.com/technetwork/topics/security/cpuapr2013-1899555.html; classtype:web-application-attack; sid:26469; rev:5;"
+	"GID": "1",
+	"SID": "26469",
+	"Rev": "5",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"SERVER-ORACLE Oracle WebCenter FatWire Satellite Server header injection on blobheadername2 attempt\"; flow:to_server,established; content:\"blobheadername2=Refresh\",fast_pattern,nocase; content:\"blobheadervalue2=\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2013-1509; reference:url,www.oracle.com/technetwork/topics/security/cpuapr2013-1899555.html; classtype:web-application-attack; sid:26469; rev:5;"
 }

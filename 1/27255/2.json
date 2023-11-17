@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27255",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"INDICATOR-COMPROMISE All Numbers .EXE file name from abnormally ordered HTTP headers - Potential Yakes Trojan Download\"; flow:to_server,established; http_method; content:\"GET\"; pkt_data; content:\".exe HTTP/1.1|0D 0A|Cache-Control: \",fast_pattern,nocase; content:\".exe HTTP/1.1\",nocase; content:\"|0D 0A|Cache-Control: no-cache|0D 0A|Connection: close|0D 0A|Pragma: no-cache|0D 0A|User-Agent: \",within 76; content:\"|3A 20|\",distance 0; content:!\"|3A 20|\",distance 0; http_uri; pcre:\"/\\x2f\\d+\\.exe$/i\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/980c4ed3dd130c9313a35434e0b102a6b8b038c98735814834334ccc03e4da3c/analysis/; classtype:trojan-activity; sid:27255; rev:2;"
+	"GID": "1",
+	"SID": "27255",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"INDICATOR-COMPROMISE All Numbers .EXE file name from abnormally ordered HTTP headers - Potential Yakes Trojan Download\"; flow:to_server,established; http_method; content:\"GET\"; pkt_data; content:\".exe HTTP/1.1|0D 0A|Cache-Control: \",fast_pattern,nocase; content:\".exe HTTP/1.1\",nocase; content:\"|0D 0A|Cache-Control: no-cache|0D 0A|Connection: close|0D 0A|Pragma: no-cache|0D 0A|User-Agent: \",within 76; content:\"|3A 20|\",distance 0; content:!\"|3A 20|\",distance 0; http_uri; pcre:\"/\\x2f\\d+\\.exe$/i\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/980c4ed3dd130c9313a35434e0b102a6b8b038c98735814834334ccc03e4da3c/analysis/; classtype:trojan-activity; sid:27255; rev:2;"
 }

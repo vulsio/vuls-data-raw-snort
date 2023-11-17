@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "40827",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"PUA-ADWARE MindSpark framework installer attempt\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|Mindspark MIP \",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9f2cc1688bee96849ced91ade04d4d51e6fd18fa47ab1dc2c12a029aa672f7ce/analysis/; classtype:trojan-activity; sid:40827; rev:2;"
+	"GID": "1",
+	"SID": "40827",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"PUA-ADWARE MindSpark framework installer attempt\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|Mindspark MIP \",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9f2cc1688bee96849ced91ade04d4d51e6fd18fa47ab1dc2c12a029aa672f7ce/analysis/; classtype:trojan-activity; sid:40827; rev:2;"
 }

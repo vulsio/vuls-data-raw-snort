@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1548",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP csSearch.cgi access\"; flow:to_server,established; http_uri; content:\"/csSearch.cgi\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,4368; reference:cve,2002-0495; reference:nessus,10924; classtype:web-application-activity; sid:1548; rev:18;"
+	"GID": "1",
+	"SID": "1548",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP csSearch.cgi access\"; flow:to_server,established; http_uri; content:\"/csSearch.cgi\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,4368; reference:cve,2002-0495; reference:nessus,10924; classtype:web-application-activity; sid:1548; rev:18;"
 }

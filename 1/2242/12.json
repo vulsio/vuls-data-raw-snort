@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2242",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ddicgi.exe access\"; flow:to_server,established; http_uri; content:\"/ddicgi.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1657; reference:cve,2000-0826; reference:nessus,11728; classtype:web-application-activity; sid:2242; rev:12;"
+	"GID": "1",
+	"SID": "2242",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ddicgi.exe access\"; flow:to_server,established; http_uri; content:\"/ddicgi.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1657; reference:cve,2000-0826; reference:nessus,11728; classtype:web-application-activity; sid:2242; rev:12;"
 }

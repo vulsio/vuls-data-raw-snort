@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "231",
-  "Rev": "11",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 31335",
-  "Option": "msg:\"MALWARE-OTHER Trin00 Daemon to Master message detected\"; flow:to_server; content:\"l44\",fast_pattern,nocase; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:231; rev:11;"
+	"GID": "1",
+	"SID": "231",
+	"Rev": "11",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 31335",
+	"Option": "msg:\"MALWARE-OTHER Trin00 Daemon to Master message detected\"; flow:to_server; content:\"l44\",fast_pattern,nocase; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:231; rev:11;"
 }

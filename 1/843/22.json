@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "843",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP anform2 access\"; flow:to_server,established; http_uri; content:\"/AnForm2\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,719; reference:cve,1999-0066; classtype:attempted-recon; sid:843; rev:22;"
+	"GID": "1",
+	"SID": "843",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP anform2 access\"; flow:to_server,established; http_uri; content:\"/AnForm2\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,719; reference:cve,1999-0066; classtype:attempted-recon; sid:843; rev:22;"
 }

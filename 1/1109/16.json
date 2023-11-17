@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1109",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ROXEN directory list attempt\"; flow:to_server,established; http_uri; content:\"/%00\"; metadata:ruleset community; service:http; reference:bugtraq,1510; reference:cve,2000-0671; reference:nessus,10479; classtype:attempted-recon; sid:1109; rev:16;"
+	"GID": "1",
+	"SID": "1109",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ROXEN directory list attempt\"; flow:to_server,established; http_uri; content:\"/%00\"; metadata:ruleset community; service:http; reference:bugtraq,1510; reference:cve,2000-0671; reference:nessus,10479; classtype:attempted-recon; sid:1109; rev:16;"
 }

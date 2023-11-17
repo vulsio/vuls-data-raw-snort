@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "333",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
-  "Option": "msg:\"PROTOCOL-FINGER . query\"; flow:to_server,established; content:\".\"; metadata:ruleset community; reference:cve,1999-0198; reference:nessus,10072; classtype:attempted-recon; sid:333; rev:14;"
+	"GID": "1",
+	"SID": "333",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
+	"Option": "msg:\"PROTOCOL-FINGER . query\"; flow:to_server,established; content:\".\"; metadata:ruleset community; reference:cve,1999-0198; reference:nessus,10072; classtype:attempted-recon; sid:333; rev:14;"
 }

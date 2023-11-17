@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28986",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Worm.Neeris IRCbot variant outbound connection\"; flow:to_server,established; content:\"JOIN #biz abc|0D 0A|\",depth 15; metadata:impact_flag red,ruleset community; service:irc; reference:url,www.virustotal.com/en/file/0a8f320fc7535f164bbd9d0e462fd459c55ff448cf5e84dc2115f2f4aa800e6b/analysis/1387176826/; classtype:trojan-activity; sid:28986; rev:3;"
+	"GID": "1",
+	"SID": "28986",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Worm.Neeris IRCbot variant outbound connection\"; flow:to_server,established; content:\"JOIN #biz abc|0D 0A|\",depth 15; metadata:impact_flag red,ruleset community; service:irc; reference:url,www.virustotal.com/en/file/0a8f320fc7535f164bbd9d0e462fd459c55ff448cf5e84dc2115f2f4aa800e6b/analysis/1387176826/; classtype:trojan-activity; sid:28986; rev:3;"
 }

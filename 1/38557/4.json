@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38557",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.GateKeylogger outbound connection\"; flow:to_server,established; http_uri; content:\"/News/gate.php\",fast_pattern,nocase; http_header; content:\"Connection|3A 20|Keep-Alive\"; content:!\"Accept\"; content:!\"Content-Type\"; content:\"User-Agent|3A 20|\"; pcre:\"/User-Agent\\x3a\\x20[A-F0-9]{32}\\x0d\\x0a/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/77c802db1731fa8dae1b03d978f89b046309adfa1237b1497a69ccb9c2d82c16/analysis/1459520578/; classtype:trojan-activity; sid:38557; rev:4;"
+	"GID": "1",
+	"SID": "38557",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.GateKeylogger outbound connection\"; flow:to_server,established; http_uri; content:\"/News/gate.php\",fast_pattern,nocase; http_header; content:\"Connection|3A 20|Keep-Alive\"; content:!\"Accept\"; content:!\"Content-Type\"; content:\"User-Agent|3A 20|\"; pcre:\"/User-Agent\\x3a\\x20[A-F0-9]{32}\\x0d\\x0a/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/77c802db1731fa8dae1b03d978f89b046309adfa1237b1497a69ccb9c2d82c16/analysis/1459520578/; classtype:trojan-activity; sid:38557; rev:4;"
 }

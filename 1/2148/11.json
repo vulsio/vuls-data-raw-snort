@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2148",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP BLNews objects.inc.php4 access\"; flow:to_server,established; http_uri; content:\"/objects.inc.php4\"; metadata:ruleset community; service:http; reference:bugtraq,7677; reference:cve,2003-0394; reference:nessus,11647; classtype:web-application-activity; sid:2148; rev:11;"
+	"GID": "1",
+	"SID": "2148",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP BLNews objects.inc.php4 access\"; flow:to_server,established; http_uri; content:\"/objects.inc.php4\"; metadata:ruleset community; service:http; reference:bugtraq,7677; reference:cve,2003-0394; reference:nessus,11647; classtype:web-application-activity; sid:2148; rev:11;"
 }

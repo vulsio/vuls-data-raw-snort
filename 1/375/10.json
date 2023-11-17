@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "375",
-  "Rev": "10",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP PING LINUX/*BSD\"; dsize:8; id:13170; itype:8; metadata:ruleset community; classtype:misc-activity; sid:375; rev:10;"
+	"GID": "1",
+	"SID": "375",
+	"Rev": "10",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP PING LINUX/*BSD\"; dsize:8; id:13170; itype:8; metadata:ruleset community; classtype:misc-activity; sid:375; rev:10;"
 }

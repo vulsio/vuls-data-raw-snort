@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56600",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Backdoor.CSBundle_Original outbound connection attempt\"; flow:to_server,established; http_header; content:\"Accept: */*|0D 0A|\"; content:\"Accept-Language: en-US|0D 0A|\"; content:\"Accept-Encoding: gzip, deflate|0D 0A|\"; http_uri; pcre:\"/(\\/check|\\/v1\\/stats|\\/gql|\\/1.5\\/95648064|\\/u\\/0\\/_\\/og\\/botguard\\/get|\\/ev\\/\\w{3}001001)/i\"; file_data; content:\"{|22|locale|22|:|22|en|22|,|22|channel|22|:|22|prod|22|,|22|addon|22|:|22|\"; content:\"ses-\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56600; rev:1;"
+	"GID": "1",
+	"SID": "56600",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Backdoor.CSBundle_Original outbound connection attempt\"; flow:to_server,established; http_header; content:\"Accept: */*|0D 0A|\"; content:\"Accept-Language: en-US|0D 0A|\"; content:\"Accept-Encoding: gzip, deflate|0D 0A|\"; http_uri; pcre:\"/(\\/check|\\/v1\\/stats|\\/gql|\\/1.5\\/95648064|\\/u\\/0\\/_\\/og\\/botguard\\/get|\\/ev\\/\\w{3}001001)/i\"; file_data; content:\"{|22|locale|22|:|22|en|22|,|22|channel|22|:|22|prod|22|,|22|addon|22|:|22|\"; content:\"ses-\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56600; rev:1;"
 }

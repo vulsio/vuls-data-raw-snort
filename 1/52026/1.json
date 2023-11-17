@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "52026",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-OTHER Xml.Phishing.Evernote outbound connection\"; flow:to_server,established; http_uri; content:\"_spacertoofee=\",fast_pattern,nocase; content:\"hondacbrheavy\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/26f541b6e334574311c168af5d84b2d6887115bbff33ae5b45d28b0f66901b87/analysis/; classtype:misc-activity; sid:52026; rev:1;"
+	"GID": "1",
+	"SID": "52026",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-OTHER Xml.Phishing.Evernote outbound connection\"; flow:to_server,established; http_uri; content:\"_spacertoofee=\",fast_pattern,nocase; content:\"hondacbrheavy\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/26f541b6e334574311c168af5d84b2d6887115bbff33ae5b45d28b0f66901b87/analysis/; classtype:misc-activity; sid:52026; rev:1;"
 }

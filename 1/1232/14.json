@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1232",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1812",
-  "Option": "msg:\"SERVER-WEBAPP VirusWall catinfo access\"; flow:to_server,established; content:\"/catinfo\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2579; reference:bugtraq,2808; reference:cve,2001-0432; reference:nessus,10650; classtype:attempted-recon; sid:1232; rev:14;"
+	"GID": "1",
+	"SID": "1232",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1812",
+	"Option": "msg:\"SERVER-WEBAPP VirusWall catinfo access\"; flow:to_server,established; content:\"/catinfo\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2579; reference:bugtraq,2808; reference:cve,2001-0432; reference:nessus,10650; classtype:attempted-recon; sid:1232; rev:14;"
 }

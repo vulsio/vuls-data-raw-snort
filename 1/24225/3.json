@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "24225",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-OTHER malicious redirection attempt\"; flow:to_server,established; http_uri; content:\"a=YWZmaWQ9MDUyODg\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2012/09/compromised-websites-hosting-calls-to-java-exploit.html; classtype:bad-unknown; sid:24225; rev:3;"
+	"GID": "1",
+	"SID": "24225",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-OTHER malicious redirection attempt\"; flow:to_server,established; http_uri; content:\"a=YWZmaWQ9MDUyODg\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2012/09/compromised-websites-hosting-calls-to-java-exploit.html; classtype:bad-unknown; sid:24225; rev:3;"
 }

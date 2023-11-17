@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33740",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"FILE-IMAGE Microsoft emf file download request\"; flow:to_server,established; flowbits:isset,file.emf; file_data; content:\" EMF\",depth 4,offset 40; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:bugtraq,10120; reference:bugtraq,28819; reference:bugtraq,9707; reference:cve,2003-0906; reference:cve,2007-5746; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-011; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-032; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-053; reference:url,technet.microsoft.com/en-us/security/bulletin/MS06-001; classtype:misc-activity; sid:33740; rev:2;"
+	"GID": "1",
+	"SID": "33740",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"FILE-IMAGE Microsoft emf file download request\"; flow:to_server,established; flowbits:isset,file.emf; file_data; content:\" EMF\",depth 4,offset 40; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:bugtraq,10120; reference:bugtraq,28819; reference:bugtraq,9707; reference:cve,2003-0906; reference:cve,2007-5746; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-011; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-032; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-053; reference:url,technet.microsoft.com/en-us/security/bulletin/MS06-001; classtype:misc-activity; sid:33740; rev:2;"
 }

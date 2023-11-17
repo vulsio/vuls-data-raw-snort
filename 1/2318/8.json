@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2318",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 2401",
-  "Option": "msg:\"SERVER-OTHER CVS non-relative path access attempt\"; flow:to_server,established; content:\"Argument\"; pcre:\"/^Argument\\s+\\//ims\"; pcre:\"/^Directory/Rims\"; metadata:ruleset community; reference:bugtraq,9178; reference:cve,2003-0977; reference:nessus,11947; classtype:misc-attack; sid:2318; rev:8;"
+	"GID": "1",
+	"SID": "2318",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 2401",
+	"Option": "msg:\"SERVER-OTHER CVS non-relative path access attempt\"; flow:to_server,established; content:\"Argument\"; pcre:\"/^Argument\\s+\\//ims\"; pcre:\"/^Directory/Rims\"; metadata:ruleset community; reference:bugtraq,9178; reference:cve,2003-0977; reference:nessus,11947; classtype:misc-attack; sid:2318; rev:8;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "676",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 139",
-  "Option": "msg:\"SQL sp_start_job - program execution\"; flow:to_server,established; content:\"s|00|p|00|_|00|s|00|t|00|a|00|r|00|t|00|_|00|j|00|o|00|b|00|\",depth 32,offset 32,nocase; metadata:ruleset community; classtype:attempted-user; sid:676; rev:9;"
+	"GID": "1",
+	"SID": "676",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 139",
+	"Option": "msg:\"SQL sp_start_job - program execution\"; flow:to_server,established; content:\"s|00|p|00|_|00|s|00|t|00|a|00|r|00|t|00|_|00|j|00|o|00|b|00|\",depth 32,offset 32,nocase; metadata:ruleset community; classtype:attempted-user; sid:676; rev:9;"
 }

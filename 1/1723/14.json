@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1723",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP emumail.cgi NULL attempt\"; flow:to_server,established; http_uri; content:\"/emumail.cgi\"; pkt_data; content:\"type=\",nocase; content:\"%00\"; metadata:ruleset community; service:http; reference:bugtraq,5824; reference:cve,2002-1526; classtype:web-application-activity; sid:1723; rev:14;"
+	"GID": "1",
+	"SID": "1723",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP emumail.cgi NULL attempt\"; flow:to_server,established; http_uri; content:\"/emumail.cgi\"; pkt_data; content:\"type=\",nocase; content:\"%00\"; metadata:ruleset community; service:http; reference:bugtraq,5824; reference:cve,2002-1526; classtype:web-application-activity; sid:1723; rev:14;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2123",
-  "Rev": "12",
-  "Header": "alert tcp $HOME_NET !21:23 -> $EXTERNAL_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE Microsoft cmd.exe banner\"; flow:established; content:\"Microsoft Windows\",depth 18; content:\"|28|C|29| Copyright 1985-\",distance 0; content:\"Microsoft Corp.\",distance 0; metadata:policy max-detect-ips drop,ruleset community; reference:nessus,11633; classtype:successful-admin; sid:2123; rev:12;"
+	"GID": "1",
+	"SID": "2123",
+	"Rev": "12",
+	"Header": "alert tcp $HOME_NET !21:23 -> $EXTERNAL_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE Microsoft cmd.exe banner\"; flow:established; content:\"Microsoft Windows\",depth 18; content:\"|28|C|29| Copyright 1985-\",distance 0; content:\"Microsoft Corp.\",distance 0; metadata:policy max-detect-ips drop,ruleset community; reference:nessus,11633; classtype:successful-admin; sid:2123; rev:12;"
 }

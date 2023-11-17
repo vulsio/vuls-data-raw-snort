@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56864",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC MultiOS.Malware.GORAT command and control SSL certificate\"; flow:to_client,established; ssl_state:server_hello; content:\"|16 03 03|\",depth 3; content:\"ACME Shell Co.0\"; content:\"Z\",distance 0; content:\"ACME Shell Co.0\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ssl; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56864; rev:1;"
+	"GID": "1",
+	"SID": "56864",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC MultiOS.Malware.GORAT command and control SSL certificate\"; flow:to_client,established; ssl_state:server_hello; content:\"|16 03 03|\",depth 3; content:\"ACME Shell Co.0\"; content:\"Z\",distance 0; content:\"ACME Shell Co.0\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ssl; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56864; rev:1;"
 }

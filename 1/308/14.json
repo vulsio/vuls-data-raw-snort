@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "308",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET 21 -> $HOME_NET any",
-  "Option": "msg:\"SERVER-OTHER NextFTP client overflow\"; flow:to_client,established; content:\"|B4| |B4|!|8B CC 83 E9 04 8B 19|3|C9|f|B9 10|\"; metadata:ruleset community; service:ftp; reference:bugtraq,572; reference:cve,1999-0671; classtype:attempted-user; sid:308; rev:14;"
+	"GID": "1",
+	"SID": "308",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET 21 -> $HOME_NET any",
+	"Option": "msg:\"SERVER-OTHER NextFTP client overflow\"; flow:to_client,established; content:\"|B4| |B4|!|8B CC 83 E9 04 8B 19|3|C9|f|B9 10|\"; metadata:ruleset community; service:ftp; reference:bugtraq,572; reference:cve,1999-0671; classtype:attempted-user; sid:308; rev:14;"
 }

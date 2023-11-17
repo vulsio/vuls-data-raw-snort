@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56614",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-BACKDOOR Cobalt Strike beacon connection attempt\"; flow:to_server,established; http_header; content:\"client-=\",fast_pattern,nocase; content:\"Accept-Encoding|3A| gzip, deflate, br\"; content:\"|5C 3B|auth=1|7D|\"; http_uri; pcre:\"/^\\/v1\\/(queue|profile|docs\\/wsdl|pull)/i\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56614; rev:1;"
+	"GID": "1",
+	"SID": "56614",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-BACKDOOR Cobalt Strike beacon connection attempt\"; flow:to_server,established; http_header; content:\"client-=\",fast_pattern,nocase; content:\"Accept-Encoding|3A| gzip, deflate, br\"; content:\"|5C 3B|auth=1|7D|\"; http_uri; pcre:\"/^\\/v1\\/(queue|profile|docs\\/wsdl|pull)/i\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56614; rev:1;"
 }

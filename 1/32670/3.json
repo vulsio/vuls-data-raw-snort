@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32670",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Dropper.Ch variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/tasks.php\",fast_pattern,nocase; http_header; content:\"Content-length:\"; content:\"Content-type:\"; content:!\"Accept\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/3d8f05f45f8335198e5488716be2a9c5cebead7d0321bc371fa475d689ffe658/analysis/; classtype:trojan-activity; sid:32670; rev:3;"
+	"GID": "1",
+	"SID": "32670",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Dropper.Ch variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/tasks.php\",fast_pattern,nocase; http_header; content:\"Content-length:\"; content:\"Content-type:\"; content:!\"Accept\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/3d8f05f45f8335198e5488716be2a9c5cebead7d0321bc371fa475d689ffe658/analysis/; classtype:trojan-activity; sid:32670; rev:3;"
 }

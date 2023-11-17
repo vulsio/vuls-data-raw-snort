@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "364",
-  "Rev": "11",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP IRDP router selection\"; itype:10; metadata:ruleset community; reference:bugtraq,578; reference:cve,1999-0875; classtype:misc-activity; sid:364; rev:11;"
+	"GID": "1",
+	"SID": "364",
+	"Rev": "11",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP IRDP router selection\"; itype:10; metadata:ruleset community; reference:bugtraq,578; reference:cve,1999-0875; classtype:misc-activity; sid:364; rev:11;"
 }

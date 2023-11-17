@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1202",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP search.vts access\"; flow:to_server,established; http_uri; content:\"/search.vts\"; metadata:ruleset community; service:http; reference:bugtraq,162; classtype:attempted-recon; sid:1202; rev:14;"
+	"GID": "1",
+	"SID": "1202",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP search.vts access\"; flow:to_server,established; http_uri; content:\"/search.vts\"; metadata:ruleset community; service:http; reference:bugtraq,162; classtype:attempted-recon; sid:1202; rev:14;"
 }

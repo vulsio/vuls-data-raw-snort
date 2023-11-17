@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28557",
-  "Rev": "3",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 53",
-  "Option": "msg:\"PROTOCOL-DNS Malformed DNS query with HTTP content\"; flow:to_server; content:\"|54 20|\",fast_pattern,nocase; content:\"GET |2F| HTTP\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:dns; reference:url,www.ietf.org/rfc/rfc2616.txt; classtype:misc-activity; sid:28557; rev:3;"
+	"GID": "1",
+	"SID": "28557",
+	"Rev": "3",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 53",
+	"Option": "msg:\"PROTOCOL-DNS Malformed DNS query with HTTP content\"; flow:to_server; content:\"|54 20|\",fast_pattern,nocase; content:\"GET |2F| HTTP\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:dns; reference:url,www.ietf.org/rfc/rfc2616.txt; classtype:misc-activity; sid:28557; rev:3;"
 }

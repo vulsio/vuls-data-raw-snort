@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2202",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Webmin Directory edit_action.cgi access\"; flow:to_server,established; http_uri; content:\"/edit_action.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3698; reference:bugtraq,4579; reference:cve,2001-1196; reference:nessus,11748; classtype:web-application-activity; sid:2202; rev:18;"
+	"GID": "1",
+	"SID": "2202",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Webmin Directory edit_action.cgi access\"; flow:to_server,established; http_uri; content:\"/edit_action.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3698; reference:bugtraq,4579; reference:cve,2001-1196; reference:nessus,11748; classtype:web-application-activity; sid:2202; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3036",
-  "Rev": "6",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
-  "Option": "msg:\"NETBIOS SMB NT Trans NT CREATE unicode DACL overflow attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB|A0|\",within 5,distance 3; byte_test:1,&,128,6,relative; pcre:\"/^.{27}/R\"; content:\"|01 00|\",within 2,distance 37; byte_jump:4,-7,relative,from_beginning,little; pcre:\"/^.{4}/R\"; content:!\"|00 00 00 00|\",within 4,distance 16; byte_jump:4,16,relative,little; byte_test:4,>,32,-16,relative,little; metadata:ruleset community; reference:cve,2004-1154; classtype:protocol-command-decode; sid:3036; rev:6;"
+	"GID": "1",
+	"SID": "3036",
+	"Rev": "6",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
+	"Option": "msg:\"NETBIOS SMB NT Trans NT CREATE unicode DACL overflow attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB|A0|\",within 5,distance 3; byte_test:1,&,128,6,relative; pcre:\"/^.{27}/R\"; content:\"|01 00|\",within 2,distance 37; byte_jump:4,-7,relative,from_beginning,little; pcre:\"/^.{4}/R\"; content:!\"|00 00 00 00|\",within 4,distance 16; byte_jump:4,16,relative,little; byte_test:4,>,32,-16,relative,little; metadata:ruleset community; reference:cve,2004-1154; classtype:protocol-command-decode; sid:3036; rev:6;"
 }

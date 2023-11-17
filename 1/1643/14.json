@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1643",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP db2www access\"; flow:to_server,established; http_uri; content:\"/db2www\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,2000-0677; classtype:web-application-activity; sid:1643; rev:14;"
+	"GID": "1",
+	"SID": "1643",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP db2www access\"; flow:to_server,established; http_uri; content:\"/db2www\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,2000-0677; classtype:web-application-activity; sid:1643; rev:14;"
 }

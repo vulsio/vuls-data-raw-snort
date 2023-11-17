@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46969",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Autophyte dropper variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:10; http_uri; content:\"/mainls.cs\",fast_pattern,nocase; http_header; content:\"Content-Type: application/octet-stream\",nocase; content:!\"User-Agent\",nocase; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/086a50476f5ceee4b10871c1a8b0a794e96a337966382248a8289598b732bd47/detection; classtype:trojan-activity; sid:46969; rev:1;"
+	"GID": "1",
+	"SID": "46969",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Autophyte dropper variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:10; http_uri; content:\"/mainls.cs\",fast_pattern,nocase; http_header; content:\"Content-Type: application/octet-stream\",nocase; content:!\"User-Agent\",nocase; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/086a50476f5ceee4b10871c1a8b0a794e96a337966382248a8289598b732bd47/detection; classtype:trojan-activity; sid:46969; rev:1;"
 }

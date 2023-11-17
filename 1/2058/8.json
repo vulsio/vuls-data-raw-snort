@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2058",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP MsmMask.exe attempt\"; flow:to_server,established; http_uri; content:\"/MsmMask.exe\"; pkt_data; content:\"mask=\"; metadata:ruleset community; service:http; reference:nessus,11163; classtype:web-application-attack; sid:2058; rev:8;"
+	"GID": "1",
+	"SID": "2058",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP MsmMask.exe attempt\"; flow:to_server,established; http_uri; content:\"/MsmMask.exe\"; pkt_data; content:\"mask=\"; metadata:ruleset community; service:http; reference:nessus,11163; classtype:web-application-attack; sid:2058; rev:8;"
 }

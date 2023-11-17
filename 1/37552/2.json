@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "37552",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Engr variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:7<=>8; http_uri; content:\".php\"; http_header; content:\"boundary=Xu02=$\",fast_pattern,nocase; content:!\"User-Agent\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/54f6600db99fdab31453f3e23e8fb080438cd1ec36b6fc2868ff86cf88f14bb0/analysis/; classtype:trojan-activity; sid:37552; rev:2;"
+	"GID": "1",
+	"SID": "37552",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Engr variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:7<=>8; http_uri; content:\".php\"; http_header; content:\"boundary=Xu02=$\",fast_pattern,nocase; content:!\"User-Agent\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/54f6600db99fdab31453f3e23e8fb080438cd1ec36b6fc2868ff86cf88f14bb0/analysis/; classtype:trojan-activity; sid:37552; rev:2;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1487",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS /iisadmpwd/aexp2.htr access\"; flow:to_server,established; http_uri; content:\"/iisadmpwd/aexp2.htr\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2110; reference:bugtraq,4236; reference:cve,1999-0407; reference:cve,2002-0421; reference:nessus,10371; classtype:web-application-activity; sid:1487; rev:22;"
+	"GID": "1",
+	"SID": "1487",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS /iisadmpwd/aexp2.htr access\"; flow:to_server,established; http_uri; content:\"/iisadmpwd/aexp2.htr\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2110; reference:bugtraq,4236; reference:cve,1999-0407; reference:cve,2002-0421; reference:nessus,10371; classtype:web-application-activity; sid:1487; rev:22;"
 }

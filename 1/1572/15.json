@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1572",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP commerce.cgi arbitrary file access attempt\"; flow:to_server,established; http_uri; content:\"/commerce.cgi\"; content:\"page=\"; http_raw_uri; content:\"/../\"; metadata:ruleset community; service:http; reference:bugtraq,2361; reference:cve,2001-0210; reference:nessus,10612; classtype:attempted-recon; sid:1572; rev:15;"
+	"GID": "1",
+	"SID": "1572",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP commerce.cgi arbitrary file access attempt\"; flow:to_server,established; http_uri; content:\"/commerce.cgi\"; content:\"page=\"; http_raw_uri; content:\"/../\"; metadata:ruleset community; service:http; reference:bugtraq,2361; reference:cve,2001-0210; reference:nessus,10612; classtype:attempted-recon; sid:1572; rev:15;"
 }

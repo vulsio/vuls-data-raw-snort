@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2562",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 81",
-  "Option": "msg:\"SERVER-WEBAPP McAfee ePO file upload attempt\"; flow:to_server,established; content:\"/spipe/repl_file\",nocase; content:\"Command=BEGIN\",nocase; metadata:ruleset community; service:http; reference:bugtraq,10200; reference:cve,2004-0038; classtype:attempted-admin; sid:2562; rev:9;"
+	"GID": "1",
+	"SID": "2562",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 81",
+	"Option": "msg:\"SERVER-WEBAPP McAfee ePO file upload attempt\"; flow:to_server,established; content:\"/spipe/repl_file\",nocase; content:\"Command=BEGIN\",nocase; metadata:ruleset community; service:http; reference:bugtraq,10200; reference:cve,2004-0038; classtype:attempted-admin; sid:2562; rev:9;"
 }

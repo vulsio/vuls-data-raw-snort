@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "667",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Sendmail 8.6.10 exploit\"; flow:to_server,established; content:\"Croot|0D 0A|Mprog, P=/bin/\",fast_pattern,nocase; metadata:ruleset community; service:smtp; reference:bugtraq,2311; reference:cve,1999-0204; classtype:attempted-user; sid:667; rev:17;"
+	"GID": "1",
+	"SID": "667",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL Sendmail 8.6.10 exploit\"; flow:to_server,established; content:\"Croot|0D 0A|Mprog, P=/bin/\",fast_pattern,nocase; metadata:ruleset community; service:smtp; reference:bugtraq,2311; reference:cve,1999-0204; classtype:attempted-user; sid:667; rev:17;"
 }

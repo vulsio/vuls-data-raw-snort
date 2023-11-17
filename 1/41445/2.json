@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41445",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER QNAP remote buffer overflow attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/cgi.cgi\",fast_pattern,nocase; content:\"u=\"; content:\"p=\"; isdataat:263,relative; content:!\"&\",within 263; content:!\"|0D 0A|\",within 263; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,seclists.org/bugtraq/2017/Jan/5; classtype:attempted-admin; sid:41445; rev:2;"
+	"GID": "1",
+	"SID": "41445",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER QNAP remote buffer overflow attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/cgi.cgi\",fast_pattern,nocase; content:\"u=\"; content:\"p=\"; isdataat:263,relative; content:!\"&\",within 263; content:!\"|0D 0A|\",within 263; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,seclists.org/bugtraq/2017/Jan/5; classtype:attempted-admin; sid:41445; rev:2;"
 }

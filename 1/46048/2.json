@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46048",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gen variant outbound communication\"; flow:to_server,established; http_raw_uri; bufferlen:6; http_uri; content:\"/A56WY\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,us-cert.gov/ncas/alerts/TA17-293A; classtype:trojan-activity; gid:1; sid:46048; rev:2;"
+	"GID": "1",
+	"SID": "46048",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Gen variant outbound communication\"; flow:to_server,established; http_raw_uri; bufferlen:6; http_uri; content:\"/A56WY\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,us-cert.gov/ncas/alerts/TA17-293A; classtype:trojan-activity; gid:1; sid:46048; rev:2;"
 }

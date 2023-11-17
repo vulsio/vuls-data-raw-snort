@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1453",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP AT-generated.cgi access\"; flow:to_server,established; http_uri; content:\"/AT-generated.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1072; classtype:attempted-recon; sid:1453; rev:17;"
+	"GID": "1",
+	"SID": "1453",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP AT-generated.cgi access\"; flow:to_server,established; http_uri; content:\"/AT-generated.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1072; classtype:attempted-recon; sid:1453; rev:17;"
 }

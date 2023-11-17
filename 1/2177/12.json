@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2177",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB startup folder unicode access\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB2\",depth 5,offset 4; content:\"|5C 00|S|00|t|00|a|00|r|00|t|00| |00|M|00|e|00|n|00|u|00 5C 00|P|00|r|00|o|00|g|00|r|00|a|00|m|00|s|00 5C 00|S|00|t|00|a|00|r|00|t|00|u|00|p\",distance 0,nocase; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1060; classtype:attempted-recon; sid:2177; rev:12;"
+	"GID": "1",
+	"SID": "2177",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows SMB startup folder unicode access\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB2\",depth 5,offset 4; content:\"|5C 00|S|00|t|00|a|00|r|00|t|00| |00|M|00|e|00|n|00|u|00 5C 00|P|00|r|00|o|00|g|00|r|00|a|00|m|00|s|00 5C 00|S|00|t|00|a|00|r|00|t|00|u|00|p\",distance 0,nocase; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1060; classtype:attempted-recon; sid:2177; rev:12;"
 }

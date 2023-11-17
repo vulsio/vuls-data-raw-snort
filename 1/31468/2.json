@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31468",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Papras variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/viewforum.php?f=\",fast_pattern,nocase; content:\"&sid=\"; http_header; content:!\"Referer:\"; content:!\"Cookie:\"; http_uri; pcre:\"/sid=[0-9A-F]{32}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9e548d9a37c46423680e324b31204197babc45ddc05835afa772fde8627e72b2/analysis/; classtype:trojan-activity; sid:31468; rev:2;"
+	"GID": "1",
+	"SID": "31468",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Papras variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/viewforum.php?f=\",fast_pattern,nocase; content:\"&sid=\"; http_header; content:!\"Referer:\"; content:!\"Cookie:\"; http_uri; pcre:\"/sid=[0-9A-F]{32}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9e548d9a37c46423680e324b31204197babc45ddc05835afa772fde8627e72b2/analysis/; classtype:trojan-activity; sid:31468; rev:2;"
 }

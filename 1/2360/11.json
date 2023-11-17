@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2360",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP myphpPagetool pt_config.inc file include\"; flow:to_server,established; http_uri; content:\"/doc/admin\",nocase; pkt_data; content:\"ptinclude=\",nocase; content:\"pt_config.inc\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6744; classtype:web-application-attack; sid:2360; rev:11;"
+	"GID": "1",
+	"SID": "2360",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP myphpPagetool pt_config.inc file include\"; flow:to_server,established; http_uri; content:\"/doc/admin\",nocase; pkt_data; content:\"ptinclude=\",nocase; content:\"pt_config.inc\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6744; classtype:web-application-attack; sid:2360; rev:11;"
 }

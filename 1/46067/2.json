@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46067",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.yty plugin downloader initial outbound connection\"; flow:to_server,established; http_header; content:\"Expect: 100-continue\",fast_pattern,nocase; http_client_body; content:\"pc=\"; content:\"pc_data=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1176; reference:url,www.arbornetworks.com/blog/asert/donot-team-leverages-new-modular-malware-framework-south-asia/; classtype:trojan-activity; sid:46067; rev:2;"
+	"GID": "1",
+	"SID": "46067",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.yty plugin downloader initial outbound connection\"; flow:to_server,established; http_header; content:\"Expect: 100-continue\",fast_pattern,nocase; http_client_body; content:\"pc=\"; content:\"pc_data=\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1176; reference:url,www.arbornetworks.com/blog/asert/donot-team-leverages-new-modular-malware-framework-south-asia/; classtype:trojan-activity; sid:46067; rev:2;"
 }

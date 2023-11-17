@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33677",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Babar outbound connection\"; flow:to_server,established; http_uri; content:\"/bb/index.php\"; http_header; content:\"User-Agent|3A 20|Mozilla/4.0",
-  "Option": "compatible|3B| MSI 6.0|3B|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/c72a055b677cd9e5e2b2dcbba520425d023d906e6ee609b79c643d9034938ebf/analysis/; classtype:trojan-activity; sid:33677; rev:2;"
+	"GID": "1",
+	"SID": "33677",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Babar outbound connection\"; flow:to_server,established; http_uri; content:\"/bb/index.php\"; http_header; content:\"User-Agent|3A 20|Mozilla/4.0",
+	"Option": "compatible|3B| MSI 6.0|3B|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/c72a055b677cd9e5e2b2dcbba520425d023d906e6ee609b79c643d9034938ebf/analysis/; classtype:trojan-activity; sid:33677; rev:2;"
 }

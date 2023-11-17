@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2671",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"BROWSER-IE Microsoft Internet Explorer bitmap BitmapOffset integer overflow attempt\"; flow:to_client,established; flowbits:isset,file.bmp; file_data; content:\"BM\"; byte_test:4,>,2147480000,8,relative,little; metadata:ruleset community; service:ftp-data,http,imap,pop3; reference:bugtraq,9663; reference:cve,2004-0566; reference:url,technet.microsoft.com/en-us/security/bulletin/ms04-025; classtype:attempted-user; sid:2671; rev:18;"
+	"GID": "1",
+	"SID": "2671",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"BROWSER-IE Microsoft Internet Explorer bitmap BitmapOffset integer overflow attempt\"; flow:to_client,established; flowbits:isset,file.bmp; file_data; content:\"BM\"; byte_test:4,>,2147480000,8,relative,little; metadata:ruleset community; service:ftp-data,http,imap,pop3; reference:bugtraq,9663; reference:cve,2004-0566; reference:url,technet.microsoft.com/en-us/security/bulletin/ms04-025; classtype:attempted-user; sid:2671; rev:18;"
 }

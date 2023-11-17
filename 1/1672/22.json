@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1672",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP CWD ~ attempt\"; flow:to_server,established; content:\"CWD\",fast_pattern,nocase; pcre:\"/^CWD\\s+~/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,2601; reference:bugtraq,9215; reference:cve,2001-0421; classtype:denial-of-service; sid:1672; rev:22;"
+	"GID": "1",
+	"SID": "1672",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP CWD ~ attempt\"; flow:to_server,established; content:\"CWD\",fast_pattern,nocase; pcre:\"/^CWD\\s+~/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,2601; reference:bugtraq,9215; reference:cve,2001-0421; classtype:denial-of-service; sid:1672; rev:22;"
 }

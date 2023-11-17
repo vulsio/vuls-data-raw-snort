@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "37816",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kazy variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:10; http_client_body; content:\"post=\",depth 5,fast_pattern; http_uri; content:\"/index.php\"; http_header; content:!\"User-Agent\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/522e5d4ea0771f5c0bc300c2d66a0445a66ae85bd4b50c21a502365db0a638d9/analysis/; classtype:trojan-activity; sid:37816; rev:2;"
+	"GID": "1",
+	"SID": "37816",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kazy variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:10; http_client_body; content:\"post=\",depth 5,fast_pattern; http_uri; content:\"/index.php\"; http_header; content:!\"User-Agent\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/522e5d4ea0771f5c0bc300c2d66a0445a66ae85bd4b50c21a502365db0a638d9/analysis/; classtype:trojan-activity; sid:37816; rev:2;"
 }

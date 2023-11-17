@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1828",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP iPlanet Search directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/search\",nocase; content:\"NS-query-pat=\",fast_pattern,nocase; content:\"../\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,5191; reference:cve,2002-1042; reference:nessus,11043; classtype:web-application-attack; sid:1828; rev:16;"
+	"GID": "1",
+	"SID": "1828",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP iPlanet Search directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/search\",nocase; content:\"NS-query-pat=\",fast_pattern,nocase; content:\"../\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,5191; reference:cve,2002-1042; reference:nessus,11043; classtype:web-application-attack; sid:1828; rev:16;"
 }

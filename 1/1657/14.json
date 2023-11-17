@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1657",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP pagelog.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/pagelog.cgi\",nocase; pkt_data; content:\"name=../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1864; reference:cve,2000-0940; reference:nessus,10591; classtype:web-application-activity; sid:1657; rev:14;"
+	"GID": "1",
+	"SID": "1657",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP pagelog.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/pagelog.cgi\",nocase; pkt_data; content:\"name=../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1864; reference:cve,2000-0940; reference:nessus,10591; classtype:web-application-activity; sid:1657; rev:14;"
 }

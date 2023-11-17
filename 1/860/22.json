@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "860",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP snork.bat access\"; flow:to_server,established; http_uri; content:\"/snork.bat\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2023; reference:cve,1999-0233; classtype:attempted-recon; sid:860; rev:22;"
+	"GID": "1",
+	"SID": "860",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP snork.bat access\"; flow:to_server,established; http_uri; content:\"/snork.bat\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2023; reference:cve,1999-0233; classtype:attempted-recon; sid:860; rev:22;"
 }

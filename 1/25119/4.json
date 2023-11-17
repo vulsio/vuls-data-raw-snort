@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25119",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent - NewBrandTest\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|NewBrandTest|0D 0A|\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/02b18d0aa415e299515891b56424751e846ca917d3bb55b82f07cfb97f62c4e1/analysis/; classtype:trojan-activity; sid:25119; rev:4;"
+	"GID": "1",
+	"SID": "25119",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent - NewBrandTest\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|NewBrandTest|0D 0A|\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/02b18d0aa415e299515891b56424751e846ca917d3bb55b82f07cfb97f62c4e1/analysis/; classtype:trojan-activity; sid:25119; rev:4;"
 }

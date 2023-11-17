@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "59933",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-BACKDOOR Jsp.Webshell.Noop upload attempt\"; flow:to_server,established; content:\"java.util.*\"; content:\"java.io.FileOutputStream\",distance 0; content:\"request.getParameter(|22|name|22|)\",within 200,fast_pattern; content:\"confluence\",nocase; content:\"request.getParameter(|22|contentString|22|)\"; isdataat:!300,relative; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-26134; reference:url,community.atlassian.com/t5/Confluence-discussions/CVE-2022-26134-Critical-severity-unauthenticated-remote-code/td-p/20456533; classtype:trojan-activity; gid:1; sid:59933; rev:2;"
+	"GID": "1",
+	"SID": "59933",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-BACKDOOR Jsp.Webshell.Noop upload attempt\"; flow:to_server,established; content:\"java.util.*\"; content:\"java.io.FileOutputStream\",distance 0; content:\"request.getParameter(|22|name|22|)\",within 200,fast_pattern; content:\"confluence\",nocase; content:\"request.getParameter(|22|contentString|22|)\"; isdataat:!300,relative; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-26134; reference:url,community.atlassian.com/t5/Confluence-discussions/CVE-2022-26134-Critical-severity-unauthenticated-remote-code/td-p/20456533; classtype:trojan-activity; gid:1; sid:59933; rev:2;"
 }

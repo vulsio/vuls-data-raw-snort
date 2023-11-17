@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41663",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Osx.Downloader.MacDownloader variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:14; http_uri; content:\"/Servermac.php\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/7a9cdb9d608b88bd7afce001cb285c2bb2ae76f5027977e8635aa04bd064ffb7/analysis/; classtype:trojan-activity; sid:41663; rev:2;"
+	"GID": "1",
+	"SID": "41663",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Osx.Downloader.MacDownloader variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:14; http_uri; content:\"/Servermac.php\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/7a9cdb9d608b88bd7afce001cb285c2bb2ae76f5027977e8635aa04bd064ffb7/analysis/; classtype:trojan-activity; sid:41663; rev:2;"
 }

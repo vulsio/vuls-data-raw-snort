@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "59925",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Multiple products OGNL expression injection attempt\"; flow:to_server,established; http_uri; content:\".action\",nocase; content:\"getRuntime\"; content:\"exec\",within 15; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:attempted-admin; gid:1; sid:59925; rev:2;"
+	"GID": "1",
+	"SID": "59925",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Multiple products OGNL expression injection attempt\"; flow:to_server,established; http_uri; content:\".action\",nocase; content:\"getRuntime\"; content:\"exec\",within 15; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:attempted-admin; gid:1; sid:59925; rev:2;"
 }

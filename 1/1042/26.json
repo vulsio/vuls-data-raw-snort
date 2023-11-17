@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1042",
-  "Rev": "26",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS view source via translate header\"; flow:to_server,established; http_header; content:\"Translate|3A| F\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,14764; reference:bugtraq,1578; reference:cve,2000-0778; reference:nessus,10491; classtype:web-application-activity; sid:1042; rev:26;"
+	"GID": "1",
+	"SID": "1042",
+	"Rev": "26",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS view source via translate header\"; flow:to_server,established; http_header; content:\"Translate|3A| F\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,14764; reference:bugtraq,1578; reference:cve,2000-0778; reference:nessus,10491; classtype:web-application-activity; sid:1042; rev:26;"
 }

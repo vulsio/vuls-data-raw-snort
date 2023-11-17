@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27085",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"EXPLOIT-KIT Unknown Malvertising exploit kit Hostile Jar pipe.class\"; flow:to_client,established; flowbits:isset,file.jar; file_data; content:\"PK\"; content:\"|00|pipe.class\",distance 0; content:\"|00|inc.class\",distance 0; content:\"|00|fdp.class\",distance 0,fast_pattern; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:27085; rev:3;"
+	"GID": "1",
+	"SID": "27085",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"EXPLOIT-KIT Unknown Malvertising exploit kit Hostile Jar pipe.class\"; flow:to_client,established; flowbits:isset,file.jar; file_data; content:\"PK\"; content:\"|00|pipe.class\",distance 0; content:\"|00|inc.class\",distance 0; content:\"|00|fdp.class\",distance 0,fast_pattern; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:27085; rev:3;"
 }

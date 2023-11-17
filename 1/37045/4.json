@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "37045",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kovter outbound connection\"; flow:to_server,established; http_uri; content:\"/counter/?\",fast_pattern,nocase; http_header; content:\"UA-CPU\"; content:\"MSIE 7.0|3B|\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/e3da9c7f20e7f24891e0dec594dad6d9deebee145153611a5c05c69593284a27/analysis/; reference:url,www.virustotal.com/en/file/9d6b1bd74848dd0549ad3883b7292d3ba0a4fa06d0aaf562032b0bf6dc198249/analysis/; classtype:trojan-activity; sid:37045; rev:4;"
+	"GID": "1",
+	"SID": "37045",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kovter outbound connection\"; flow:to_server,established; http_uri; content:\"/counter/?\",fast_pattern,nocase; http_header; content:\"UA-CPU\"; content:\"MSIE 7.0|3B|\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/e3da9c7f20e7f24891e0dec594dad6d9deebee145153611a5c05c69593284a27/analysis/; reference:url,www.virustotal.com/en/file/9d6b1bd74848dd0549ad3883b7292d3ba0a4fa06d0aaf562032b0bf6dc198249/analysis/; classtype:trojan-activity; sid:37045; rev:4;"
 }

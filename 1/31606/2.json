@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31606",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Glupteba payload download request\"; flow:to_server,established; http_uri; content:\"/software.php?\",fast_pattern,nocase; http_header; content:\"Accept|3A| */*\"; content:\"User-Agent|3A| Mozilla/4.0 |28|compatible|3B| MSIE 7.0|3B| Windows NT 6.1|3B|\"; http_uri; pcre:\"/\\/software\\x2ephp\\x3f[0-9]{15,}/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0bcc2bf3cf06952e18c3e1d9860698dbb3ff1644a0389a9756c1b82b66fb2b83/analysis/; classtype:trojan-activity; sid:31606; rev:2;"
+	"GID": "1",
+	"SID": "31606",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Glupteba payload download request\"; flow:to_server,established; http_uri; content:\"/software.php?\",fast_pattern,nocase; http_header; content:\"Accept|3A| */*\"; content:\"User-Agent|3A| Mozilla/4.0 |28|compatible|3B| MSIE 7.0|3B| Windows NT 6.1|3B|\"; http_uri; pcre:\"/\\/software\\x2ephp\\x3f[0-9]{15,}/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0bcc2bf3cf06952e18c3e1d9860698dbb3ff1644a0389a9756c1b82b66fb2b83/analysis/; classtype:trojan-activity; sid:31606; rev:2;"
 }

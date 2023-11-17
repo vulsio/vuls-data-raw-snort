@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56862",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC MultiOS.Malware.GORAT outbound communication attempt\"; flow:to_server,established; http_method; content:\"POST\"; raw_data; content:\"|0D 0A 0D 0A|murica\",fast_pattern,nocase; http_header; content:!\"|0D 0A|Referer:\"; content:!\"|0D 0A|Accept\"; content:!\"|0D 0A|Cookie:\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56862; rev:1;"
+	"GID": "1",
+	"SID": "56862",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC MultiOS.Malware.GORAT outbound communication attempt\"; flow:to_server,established; http_method; content:\"POST\"; raw_data; content:\"|0D 0A 0D 0A|murica\",fast_pattern,nocase; http_header; content:!\"|0D 0A|Referer:\"; content:!\"|0D 0A|Accept\"; content:!\"|0D 0A|Cookie:\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56862; rev:1;"
 }

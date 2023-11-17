@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "48093",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.MirageFox variant outbound connection\"; flow:to_server,established; http_uri; content:\"/search?gid=\",fast_pattern,nocase; http_header; content:\"Accept:*/*\"; http_method; content:\"POST\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/97813e76564aa829a359c2d12c9c6b824c532de0fc15f43765cf6b106a32b9a5/analysis; classtype:trojan-activity; sid:48093; rev:1;"
+	"GID": "1",
+	"SID": "48093",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.MirageFox variant outbound connection\"; flow:to_server,established; http_uri; content:\"/search?gid=\",fast_pattern,nocase; http_header; content:\"Accept:*/*\"; http_method; content:\"POST\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/97813e76564aa829a359c2d12c9c6b824c532de0fc15f43765cf6b106a32b9a5/analysis; classtype:trojan-activity; sid:48093; rev:1;"
 }

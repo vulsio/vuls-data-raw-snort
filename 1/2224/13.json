@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2224",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Psunami Bulletin Board psunami.cgi access\"; flow:to_server,established; http_uri; content:\"/psunami.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6607; reference:nessus,11750; classtype:web-application-activity; sid:2224; rev:13;"
+	"GID": "1",
+	"SID": "2224",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Psunami Bulletin Board psunami.cgi access\"; flow:to_server,established; http_uri; content:\"/psunami.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6607; reference:nessus,11750; classtype:web-application-activity; sid:2224; rev:13;"
 }

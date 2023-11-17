@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1069",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SQL xp_regread attempt\"; flow:to_server,established; content:\"xp_regread\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1069; rev:12;"
+	"GID": "1",
+	"SID": "1069",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SQL xp_regread attempt\"; flow:to_server,established; content:\"xp_regread\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1069; rev:12;"
 }

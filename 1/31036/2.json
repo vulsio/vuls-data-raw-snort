@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31036",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.SpyBanker variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; pkt_data; content:\".php HTTP/1.0|0D 0A|Connection: keep-alive|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|Content-Length: 0|0D 0A|Host: \"; content:\"|0D 0A|Accept: text/html,application/xhtml+xml,application/xml|3B|q=0.9,*/*|3B|q=0.8|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: Mozilla/3.0",
-  "Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/726644e5f666b133159e6c2591cdd3bc628bcd335b381b74fcfd2e4db73689af/analysis/; reference:url,www.virustotal.com/en/file/af56f8f97c8872d043a4002daa6331f3b3be296427b0e5d0560fd174e9f59e78/analysis/; classtype:trojan-activity; sid:31036; rev:2;"
+	"GID": "1",
+	"SID": "31036",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.SpyBanker variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; pkt_data; content:\".php HTTP/1.0|0D 0A|Connection: keep-alive|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|Content-Length: 0|0D 0A|Host: \"; content:\"|0D 0A|Accept: text/html,application/xhtml+xml,application/xml|3B|q=0.9,*/*|3B|q=0.8|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: Mozilla/3.0",
+	"Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/726644e5f666b133159e6c2591cdd3bc628bcd335b381b74fcfd2e4db73689af/analysis/; reference:url,www.virustotal.com/en/file/af56f8f97c8872d043a4002daa6331f3b3be296427b0e5d0560fd174e9f59e78/analysis/; classtype:trojan-activity; sid:31036; rev:2;"
 }

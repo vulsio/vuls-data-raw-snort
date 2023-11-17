@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "23670",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"FILE-IDENTIFY RTF file magic detected\"; flow:to_server,established; file_data; content:\"{|5C|rt\",fast_pattern,nocase; flowbits:set,file.rtf; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:smtp; classtype:misc-activity; sid:23670; rev:14;"
+	"GID": "1",
+	"SID": "23670",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"FILE-IDENTIFY RTF file magic detected\"; flow:to_server,established; file_data; content:\"{|5C|rt\",fast_pattern,nocase; flowbits:set,file.rtf; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:smtp; classtype:misc-activity; sid:23670; rev:14;"
 }

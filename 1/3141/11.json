@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3141",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 445",
-  "Option": "msg:\"NETBIOS SMB-DS Trans2 FIND_FIRST2 attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB2\",within 5,distance 3; pcre:\"/^.{27}/R\"; content:\"|01 00|\",within 2,distance 29; flowbits:set,smb.trans2; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:netbios-ssn; classtype:protocol-command-decode; sid:3141; rev:11;"
+	"GID": "1",
+	"SID": "3141",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 445",
+	"Option": "msg:\"NETBIOS SMB-DS Trans2 FIND_FIRST2 attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB2\",within 5,distance 3; pcre:\"/^.{27}/R\"; content:\"|01 00|\",within 2,distance 29; flowbits:set,smb.trans2; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:netbios-ssn; classtype:protocol-command-decode; sid:3141; rev:11;"
 }

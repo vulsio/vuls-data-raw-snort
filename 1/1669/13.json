@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1669",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP /cgi-dos/ access\"; flow:to_server,established; http_uri; content:\"/cgi-dos/\"; pkt_data; content:\"/cgi-dos/ HTTP\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1669; rev:13;"
+	"GID": "1",
+	"SID": "1669",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP /cgi-dos/ access\"; flow:to_server,established; http_uri; content:\"/cgi-dos/\"; pkt_data; content:\"/cgi-dos/ HTTP\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1669; rev:13;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1664",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP mkplog.exe access\"; flow:to_server,established; http_uri; content:\"/mkplog.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1664; rev:13;"
+	"GID": "1",
+	"SID": "1664",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP mkplog.exe access\"; flow:to_server,established; http_uri; content:\"/mkplog.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1664; rev:13;"
 }

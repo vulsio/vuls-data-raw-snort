@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29790",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Careto plugin download\"; flow:to_server,established; http_uri; content:\"/l/af_l_addon.xpi\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1176; reference:url,www.virustotal.com/en/file/19e818d0da361c4feedd456fca63d68d4b024fbbd3d9265f606076c7ee72e8f8/analysis/; classtype:trojan-activity; sid:29790; rev:4;"
+	"GID": "1",
+	"SID": "29790",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Careto plugin download\"; flow:to_server,established; http_uri; content:\"/l/af_l_addon.xpi\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1176; reference:url,www.virustotal.com/en/file/19e818d0da361c4feedd456fca63d68d4b024fbbd3d9265f606076c7ee72e8f8/analysis/; classtype:trojan-activity; sid:29790; rev:4;"
 }

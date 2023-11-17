@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "240",
-  "Rev": "10",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 20433",
-  "Option": "msg:\"MALWARE-OTHER shaft agent to handler\"; flow:to_server; content:\"alive\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:240; rev:10;"
+	"GID": "1",
+	"SID": "240",
+	"Rev": "10",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 20433",
+	"Option": "msg:\"MALWARE-OTHER shaft agent to handler\"; flow:to_server; content:\"alive\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:240; rev:10;"
 }

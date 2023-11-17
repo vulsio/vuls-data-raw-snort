@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32938",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-TOOLS Win.Trojan.Wiper proxy tool download attempt\"; flow:to_client,established; file_data; content:\"|82 F4 DE D4 D3 C2 CA F5 C8 C8 D3 82 FB F4 DE D4 D3 C2 CA 94 95 FB D4 D1 C4 CF C8 D4 D3 89 C2 DF C2 87 8A CC 87 00|\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32938; rev:2;"
+	"GID": "1",
+	"SID": "32938",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-TOOLS Win.Trojan.Wiper proxy tool download attempt\"; flow:to_client,established; file_data; content:\"|82 F4 DE D4 D3 C2 CA F5 C8 C8 D3 82 FB F4 DE D4 D3 C2 CA 94 95 FB D4 D1 C4 CF C8 D4 D3 89 C2 DF C2 87 8A CC 87 00|\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32938; rev:2;"
 }

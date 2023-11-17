@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "323",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
-  "Option": "msg:\"PROTOCOL-FINGER root query\"; flow:to_server,established; content:\"root\"; metadata:ruleset community; classtype:attempted-recon; sid:323; rev:11;"
+	"GID": "1",
+	"SID": "323",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
+	"Option": "msg:\"PROTOCOL-FINGER root query\"; flow:to_server,established; content:\"root\"; metadata:ruleset community; classtype:attempted-recon; sid:323; rev:11;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41335",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Locky variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:12; http_uri; content:\"/checkupdate\",fast_pattern,nocase; http_header; content:\"x-requested-with|3A 20|\"; content:\"Referer\"; http_client_body; content:\"=\",depth 15; content:\"%\",within 2; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/en/file/b9cf176ddb51fa60c7512cdbafc5a598929ac3d0b3d0443a80a7f33259aa70f2/analysis/1484673198/; classtype:trojan-activity; sid:41335; rev:4;"
+	"GID": "1",
+	"SID": "41335",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Locky variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:12; http_uri; content:\"/checkupdate\",fast_pattern,nocase; http_header; content:\"x-requested-with|3A 20|\"; content:\"Referer\"; http_client_body; content:\"=\",depth 15; content:\"%\",within 2; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/en/file/b9cf176ddb51fa60c7512cdbafc5a598929ac3d0b3d0443a80a7f33259aa70f2/analysis/1484673198/; classtype:trojan-activity; sid:41335; rev:4;"
 }

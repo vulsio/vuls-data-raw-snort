@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1397",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP wayboard attempt\"; flow:to_server,established; http_uri; content:\"/way-board/way-board.cgi\"; content:\"db=\"; http_raw_uri; content:\"../..\"; metadata:ruleset community; service:http; reference:bugtraq,2370; reference:cve,2001-0214; reference:nessus,10610; classtype:web-application-attack; sid:1397; rev:16;"
+	"GID": "1",
+	"SID": "1397",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP wayboard attempt\"; flow:to_server,established; http_uri; content:\"/way-board/way-board.cgi\"; content:\"db=\"; http_raw_uri; content:\"../..\"; metadata:ruleset community; service:http; reference:bugtraq,2370; reference:cve,2001-0214; reference:nessus,10610; classtype:web-application-attack; sid:1397; rev:16;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2279",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP UpdateClasses.php access\"; flow:to_server,established; http_uri; content:\"/UpdateClasses.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9057; classtype:web-application-activity; sid:2279; rev:14;"
+	"GID": "1",
+	"SID": "2279",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP UpdateClasses.php access\"; flow:to_server,established; http_uri; content:\"/UpdateClasses.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9057; classtype:web-application-activity; sid:2279; rev:14;"
 }

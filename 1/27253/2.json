@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27253",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Cridex Encrypted POST w/ URL Pattern\"; flow:to_server,established; http_raw_uri; bufferlen:<34; http_method; content:\"POST\"; http_header; content:\"U|3B| MSIE \"; content:\"|0D 0A|Connection|3A| Keep-Alive|0D 0A|Cache-Control|3A| no-cache\",fast_pattern,nocase; content:!\"Accept-Language:\"; http_uri; pcre:\"/\\x2f[A-Za-z0-9\\x2b\\x2f\\x3d]{1,10}\\x2f[A-Za-z0-9\\x2b\\x2f\\x3d]{1,10}\\x2f[A-Za-z0-9\\x2b\\x2f\\x3d]{1,10}\\x2f([A-Za-z0-9\\x2b\\x2f\\x3d]{1,10})?(\\x2f[A-Za-z0-9\\x2b\\x2f\\x3d]{1,10})?/\"; http_client_body; pcre:\"/[^ -~\\x0d\\x0a]{4}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/cd0cdc216e456b34dc2e4c6db6bacbbba20122489e6751621f921ca53cc7e421/analysis/; classtype:trojan-activity; sid:27253; rev:2;"
+	"GID": "1",
+	"SID": "27253",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Cridex Encrypted POST w/ URL Pattern\"; flow:to_server,established; http_raw_uri; bufferlen:<34; http_method; content:\"POST\"; http_header; content:\"U|3B| MSIE \"; content:\"|0D 0A|Connection|3A| Keep-Alive|0D 0A|Cache-Control|3A| no-cache\",fast_pattern,nocase; content:!\"Accept-Language:\"; http_uri; pcre:\"/\\x2f[A-Za-z0-9\\x2b\\x2f\\x3d]{1,10}\\x2f[A-Za-z0-9\\x2b\\x2f\\x3d]{1,10}\\x2f[A-Za-z0-9\\x2b\\x2f\\x3d]{1,10}\\x2f([A-Za-z0-9\\x2b\\x2f\\x3d]{1,10})?(\\x2f[A-Za-z0-9\\x2b\\x2f\\x3d]{1,10})?/\"; http_client_body; pcre:\"/[^ -~\\x0d\\x0a]{4}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/cd0cdc216e456b34dc2e4c6db6bacbbba20122489e6751621f921ca53cc7e421/analysis/; classtype:trojan-activity; sid:27253; rev:2;"
 }

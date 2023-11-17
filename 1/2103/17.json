@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2103",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
-  "Option": "msg:\"NETBIOS SMB Trans2 OPEN2 unicode maximum param count overflow attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB2\",within 5,distance 3; byte_test:1,&,128,6,relative; pcre:\"/^.{27}/Rs\"; content:\"|00 00|\",within 2,distance 29; byte_test:2,>,1024,-12,relative,little; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2003-0201; classtype:protocol-command-decode; sid:2103; rev:17;"
+	"GID": "1",
+	"SID": "2103",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
+	"Option": "msg:\"NETBIOS SMB Trans2 OPEN2 unicode maximum param count overflow attempt\"; flow:to_server,established; content:\"|00|\",depth 1; content:\"|FF|SMB2\",within 5,distance 3; byte_test:1,&,128,6,relative; pcre:\"/^.{27}/Rs\"; content:\"|00 00|\",within 2,distance 29; byte_test:2,>,1024,-12,relative,little; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2003-0201; classtype:protocol-command-decode; sid:2103; rev:17;"
 }

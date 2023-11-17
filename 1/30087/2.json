@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30087",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gamut configuration download\"; flow:to_server,established; http_uri; content:\"|26|file=SenderClient.conf\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/dcb60900fcfd4ec83930177b7055fbdbba37f8e217409874be130f9c2e5b78fb/analysis/; classtype:trojan-activity; sid:30087; rev:2;"
+	"GID": "1",
+	"SID": "30087",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Gamut configuration download\"; flow:to_server,established; http_uri; content:\"|26|file=SenderClient.conf\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/dcb60900fcfd4ec83930177b7055fbdbba37f8e217409874be130f9c2e5b78fb/analysis/; classtype:trojan-activity; sid:30087; rev:2;"
 }

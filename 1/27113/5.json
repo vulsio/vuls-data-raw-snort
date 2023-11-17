@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27113",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT DotkaChef/Rmayana/DotCache exploit kit Zeroaccess download attempt\"; flow:to_server,established; http_uri; content:\"/?f=a\"; content:\"&k=\",distance 0; pcre:\"/\\&k=\\d+($|\\&h=)/\"; flowbits:set,file.exploit_kit.jar; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2013-1493; reference:cve,2013-2423; reference:url,www.basemont.com/new_exploit_kit_june_2013; reference:url,www.malwaresigs.com/2013/06/14/dotcachef/; classtype:trojan-activity; sid:27113; rev:5;"
+	"GID": "1",
+	"SID": "27113",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT DotkaChef/Rmayana/DotCache exploit kit Zeroaccess download attempt\"; flow:to_server,established; http_uri; content:\"/?f=a\"; content:\"&k=\",distance 0; pcre:\"/\\&k=\\d+($|\\&h=)/\"; flowbits:set,file.exploit_kit.jar; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2013-1493; reference:cve,2013-2423; reference:url,www.basemont.com/new_exploit_kit_june_2013; reference:url,www.malwaresigs.com/2013/06/14/dotcachef/; classtype:trojan-activity; sid:27113; rev:5;"
 }

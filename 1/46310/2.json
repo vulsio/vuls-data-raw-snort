@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46310",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER QNAP NVR/NAS Heap/Stack Overflow attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/cgi.cgi\",fast_pattern,nocase; content:\"u=\",nocase; isdataat:35,relative; pkt_data; pcre:\"/[?&]u=[^&\\s]{35}/ims\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:attempted-admin; sid:46310; rev:2;"
+	"GID": "1",
+	"SID": "46310",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER QNAP NVR/NAS Heap/Stack Overflow attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/cgi.cgi\",fast_pattern,nocase; content:\"u=\",nocase; isdataat:35,relative; pkt_data; pcre:\"/[?&]u=[^&\\s]{35}/ims\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:attempted-admin; sid:46310; rev:2;"
 }

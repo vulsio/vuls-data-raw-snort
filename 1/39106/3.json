@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "39106",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.LuminosityLink RAT variant outbound connection\"; flow:to_server,established; content:\"=P4CK3T=\",depth 32; content:\"8_=_8\"; metadata:impact_flag red,ruleset community; reference:url,virustotal.com/en/file/0a6ee066b27f5f8dfeedb8e5f19659e47b70296a49a627e2ce9d3d9456287051/analysis/; classtype:trojan-activity; sid:39106; rev:3;"
+	"GID": "1",
+	"SID": "39106",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.LuminosityLink RAT variant outbound connection\"; flow:to_server,established; content:\"=P4CK3T=\",depth 32; content:\"8_=_8\"; metadata:impact_flag red,ruleset community; reference:url,virustotal.com/en/file/0a6ee066b27f5f8dfeedb8e5f19659e47b70296a49a627e2ce9d3d9456287051/analysis/; classtype:trojan-activity; sid:39106; rev:3;"
 }

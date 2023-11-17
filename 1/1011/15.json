@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1011",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS exec-src access\"; flow:to_server,established; content:\"|23|filename=*.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1011; rev:15;"
+	"GID": "1",
+	"SID": "1011",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS exec-src access\"; flow:to_server,established; content:\"|23|filename=*.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1011; rev:15;"
 }

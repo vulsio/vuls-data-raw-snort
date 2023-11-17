@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3149",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"BROWSER-IE Microsoft Internet Explorer malformed object type overflow attempt\"; flow:to_client,established; file_data; content:\"object\",nocase; content:\"type\",within 200,nocase; content:\"////////////////////////////////\",fast_pattern,nocase; pcre:\"/object\\s[^>]*type\\s*=\\s*[\\x22\\x27][^\\x22\\x27]*\\x2f{32}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:cve,2003-0344; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-020; classtype:attempted-user; sid:3149; rev:13;"
+	"GID": "1",
+	"SID": "3149",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"BROWSER-IE Microsoft Internet Explorer malformed object type overflow attempt\"; flow:to_client,established; file_data; content:\"object\",nocase; content:\"type\",within 200,nocase; content:\"////////////////////////////////\",fast_pattern,nocase; pcre:\"/object\\s[^>]*type\\s*=\\s*[\\x22\\x27][^\\x22\\x27]*\\x2f{32}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:cve,2003-0344; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-020; classtype:attempted-user; sid:3149; rev:13;"
 }

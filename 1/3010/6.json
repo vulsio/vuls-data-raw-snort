@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3010",
-  "Rev": "6",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 22222",
-  "Option": "msg:\"MALWARE-CNC RUX the Tick get windows directory\"; flow:to_server,established; content:\"WINDIR\",depth 6; metadata:ruleset community; classtype:misc-activity; sid:3010; rev:6;"
+	"GID": "1",
+	"SID": "3010",
+	"Rev": "6",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 22222",
+	"Option": "msg:\"MALWARE-CNC RUX the Tick get windows directory\"; flow:to_server,established; content:\"WINDIR\",depth 6; metadata:ruleset community; classtype:misc-activity; sid:3010; rev:6;"
 }

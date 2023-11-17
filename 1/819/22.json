@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "819",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP mmstdod.cgi access\"; flow:to_server,established; http_uri; content:\"/mmstdod.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2063; reference:cve,2001-0021; reference:nessus,10566; classtype:attempted-recon; sid:819; rev:22;"
+	"GID": "1",
+	"SID": "819",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP mmstdod.cgi access\"; flow:to_server,established; http_uri; content:\"/mmstdod.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2063; reference:cve,2001-0021; reference:nessus,10566; classtype:attempted-recon; sid:819; rev:22;"
 }

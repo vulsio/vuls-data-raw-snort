@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "374",
-  "Rev": "11",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP PING IP NetMonitor Macintosh\"; itype:8; content:\"|A9| Sustainable So\",depth 32; metadata:ruleset community; classtype:misc-activity; sid:374; rev:11;"
+	"GID": "1",
+	"SID": "374",
+	"Rev": "11",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP PING IP NetMonitor Macintosh\"; itype:8; content:\"|A9| Sustainable So\",depth 32; metadata:ruleset community; classtype:misc-activity; sid:374; rev:11;"
 }

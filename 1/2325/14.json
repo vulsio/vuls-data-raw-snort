@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2325",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS VP-ASP ShopDisplayProducts.asp access\"; flow:to_server,established; http_uri; content:\"/ShopDisplayProducts.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,9133; reference:bugtraq,9134; reference:nessus,11942; classtype:web-application-activity; sid:2325; rev:14;"
+	"GID": "1",
+	"SID": "2325",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS VP-ASP ShopDisplayProducts.asp access\"; flow:to_server,established; http_uri; content:\"/ShopDisplayProducts.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,9133; reference:bugtraq,9134; reference:nessus,11942; classtype:web-application-activity; sid:2325; rev:14;"
 }

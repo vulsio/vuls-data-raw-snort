@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1120",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP mylog.phtml access\"; flow:to_server,established; http_uri; content:\"/mylog.phtml\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,713; reference:cve,1999-0068; reference:cve,1999-0346; classtype:attempted-recon; sid:1120; rev:16;"
+	"GID": "1",
+	"SID": "1120",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP mylog.phtml access\"; flow:to_server,established; http_uri; content:\"/mylog.phtml\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,713; reference:cve,1999-0068; reference:cve,1999-0346; classtype:attempted-recon; sid:1120; rev:16;"
 }

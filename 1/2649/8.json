@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2649",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE Oracle 9i TNS Listener SERVICE_NAME Remote Buffer Overflow attempt\"; flow:to_server,established; content:\"connect_data\",nocase; content:\"|28|service_name=\",nocase; isdataat:1000,relative; content:!\"|29|\",within 1000; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2002-0965; classtype:attempted-user; sid:2649; rev:8;"
+	"GID": "1",
+	"SID": "2649",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE Oracle 9i TNS Listener SERVICE_NAME Remote Buffer Overflow attempt\"; flow:to_server,established; content:\"connect_data\",nocase; content:\"|28|service_name=\",nocase; isdataat:1000,relative; content:!\"|29|\",within 1000; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2002-0965; classtype:attempted-user; sid:2649; rev:8;"
 }

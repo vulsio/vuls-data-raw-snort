@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "547",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"INDICATOR-COMPROMISE FTP 'MKD  ' possible warez site\"; flow:to_server,established; content:\"MKD  \",depth 5,nocase; metadata:ruleset community; service:ftp; classtype:misc-activity; sid:547; rev:11;"
+	"GID": "1",
+	"SID": "547",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"INDICATOR-COMPROMISE FTP 'MKD  ' possible warez site\"; flow:to_server,established; content:\"MKD  \",depth 5,nocase; metadata:ruleset community; service:ftp; classtype:misc-activity; sid:547; rev:11;"
 }

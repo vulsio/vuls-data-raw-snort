@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2555",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 7777:7778",
-  "Option": "msg:\"SERVER-OTHER Oracle Web Cache TRACE overflow attempt\"; flow:to_server,established; content:\"TRACE\"; pcre:\"/^TRACE[^s]{432}/ms\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:bugtraq,9868; reference:cve,2004-0385; reference:nessus,12126; classtype:attempted-admin; sid:2555; rev:8;"
+	"GID": "1",
+	"SID": "2555",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 7777:7778",
+	"Option": "msg:\"SERVER-OTHER Oracle Web Cache TRACE overflow attempt\"; flow:to_server,established; content:\"TRACE\"; pcre:\"/^TRACE[^s]{432}/ms\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:bugtraq,9868; reference:cve,2004-0385; reference:nessus,12126; classtype:attempted-admin; sid:2555; rev:8;"
 }

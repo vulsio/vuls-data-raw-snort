@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27596",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Redyms variant outbound connection\"; flow:to_server,established; http_uri; content:\"&intip=\",fast_pattern,nocase; content:\"?id=\"; content:\"&port=\",distance 0; content:\"&bid=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/1c61afd792257cbc72dc3221deb3d0093f0fc1abf2c3f2816e041e37769137a4/analysis/1375189147/; classtype:trojan-activity; sid:27596; rev:5;"
+	"GID": "1",
+	"SID": "27596",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Redyms variant outbound connection\"; flow:to_server,established; http_uri; content:\"&intip=\",fast_pattern,nocase; content:\"?id=\"; content:\"&port=\",distance 0; content:\"&bid=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/1c61afd792257cbc72dc3221deb3d0093f0fc1abf2c3f2816e041e37769137a4/analysis/1375189147/; classtype:trojan-activity; sid:27596; rev:5;"
 }

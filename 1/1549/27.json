@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1549",
-  "Rev": "27",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL HELO overflow attempt\"; flow:to_server,established; content:\"HELO\",nocase; isdataat:500,relative; pcre:\"/^HELO\\s[^\\n]{500}/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,7726; reference:bugtraq,895; reference:cve,2000-0042; reference:nessus,10324; reference:nessus,11674; classtype:attempted-admin; sid:1549; rev:27;"
+	"GID": "1",
+	"SID": "1549",
+	"Rev": "27",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL HELO overflow attempt\"; flow:to_server,established; content:\"HELO\",nocase; isdataat:500,relative; pcre:\"/^HELO\\s[^\\n]{500}/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,7726; reference:bugtraq,895; reference:cve,2000-0042; reference:nessus,10324; reference:nessus,11674; classtype:attempted-admin; sid:1549; rev:27;"
 }

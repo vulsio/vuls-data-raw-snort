@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2380",
-  "Rev": "10",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 500",
-  "Option": "msg:\"SERVER-OTHER ISAKMP fifth payload certificate request length overflow attempt\"; flow:to_server; byte_test:4,>,2043,24; byte_jump:2,30; byte_jump:2,-2,relative; byte_jump:2,-2,relative; content:\"|07|\",within 1,distance -4; byte_jump:2,1,relative; byte_test:2,>,2043,-2,relative; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,9582; reference:cve,2004-0040; classtype:attempted-admin; sid:2380; rev:10;"
+	"GID": "1",
+	"SID": "2380",
+	"Rev": "10",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 500",
+	"Option": "msg:\"SERVER-OTHER ISAKMP fifth payload certificate request length overflow attempt\"; flow:to_server; byte_test:4,>,2043,24; byte_jump:2,30; byte_jump:2,-2,relative; byte_jump:2,-2,relative; content:\"|07|\",within 1,distance -4; byte_jump:2,1,relative; byte_test:2,>,2043,-2,relative; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,9582; reference:cve,2004-0040; classtype:attempted-admin; sid:2380; rev:10;"
 }

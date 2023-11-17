@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38584",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Backdoor.DFSCook variant JS dropper outbound connection\"; flow:to_server,established; content:\"/img/script.php?\",fast_pattern,nocase; http_header; content:\"Accept|3A 20|*/*|0D 0A|\"; content:\"UA-CPU|3A 20|\"; content:!\"Referer\"; content:!\"Accept-Language\"; http_uri; pcre:\"/\\/img\\/script\\.php\\x3f.*\\.mov$/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/7a32e9d01e66f68461e410a29e38e147fb8a3d3695f1e55f4cf0d2ad789d5b2d/analysis/1460564508/; classtype:trojan-activity; sid:38584; rev:2;"
+	"GID": "1",
+	"SID": "38584",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Backdoor.DFSCook variant JS dropper outbound connection\"; flow:to_server,established; content:\"/img/script.php?\",fast_pattern,nocase; http_header; content:\"Accept|3A 20|*/*|0D 0A|\"; content:\"UA-CPU|3A 20|\"; content:!\"Referer\"; content:!\"Accept-Language\"; http_uri; pcre:\"/\\/img\\/script\\.php\\x3f.*\\.mov$/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/7a32e9d01e66f68461e410a29e38e147fb8a3d3695f1e55f4cf0d2ad789d5b2d/analysis/1460564508/; classtype:trojan-activity; sid:38584; rev:2;"
 }

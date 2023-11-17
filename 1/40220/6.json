@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "40220",
-  "Rev": "6",
-  "Header": "alert udp $HOME_NET [500,848,4500,4848] -> $EXTERNAL_NET any",
-  "Option": "msg:\"SERVER-OTHER Cisco IOS Group-Prime memory disclosure exfiltration attempt\"; flow:to_client; dsize:>2000; content:\"|0B 10 05 00|\",depth 8,offset 16; byte_test:4,>,2000,4,relative; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2016-6415; reference:url,attack.mitre.org/techniques/T1020; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160916-ikev1; classtype:attempted-recon; sid:40220; rev:6;"
+	"GID": "1",
+	"SID": "40220",
+	"Rev": "6",
+	"Header": "alert udp $HOME_NET [500,848,4500,4848] -> $EXTERNAL_NET any",
+	"Option": "msg:\"SERVER-OTHER Cisco IOS Group-Prime memory disclosure exfiltration attempt\"; flow:to_client; dsize:>2000; content:\"|0B 10 05 00|\",depth 8,offset 16; byte_test:4,>,2000,4,relative; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2016-6415; reference:url,attack.mitre.org/techniques/T1020; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160916-ikev1; classtype:attempted-recon; sid:40220; rev:6;"
 }

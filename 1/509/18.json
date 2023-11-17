@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "509",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP PCCS mysql database admin tool access\"; flow:to_server,established; content:\"pccsmysqladm/incs/dbconnect.inc\",depth 36,nocase; metadata:ruleset community; service:http; reference:bugtraq,1557; reference:cve,2000-0707; reference:nessus,10783; classtype:web-application-attack; sid:509; rev:18;"
+	"GID": "1",
+	"SID": "509",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP PCCS mysql database admin tool access\"; flow:to_server,established; content:\"pccsmysqladm/incs/dbconnect.inc\",depth 36,nocase; metadata:ruleset community; service:http; reference:bugtraq,1557; reference:cve,2000-0707; reference:nessus,10783; classtype:web-application-attack; sid:509; rev:18;"
 }

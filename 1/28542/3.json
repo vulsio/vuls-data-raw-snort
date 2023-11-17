@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28542",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 80 ( msg:\"MALWARE-CNC Win.Trojan.Conficker variant outbound connection\"; flow:to_server,established; isdataat:145; isdataat:!146; http_raw_uri; bufferlen:1; pkt_data; content:\"GET / HTTP/1.1|0D 0A|User-Agent: Mozilla/4.0",
-  "Option": "compatible|3B| MSIE 7.0|3B| Windows NT 5.1|3B| Trident/4.0)|0D 0A|Host: checkip.dyndns.org|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.sans.org/security-resources/malwarefaq/conficker-worm.php; classtype:trojan-activity; sid:28542; rev:3;"
+	"GID": "1",
+	"SID": "28542",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 80 ( msg:\"MALWARE-CNC Win.Trojan.Conficker variant outbound connection\"; flow:to_server,established; isdataat:145; isdataat:!146; http_raw_uri; bufferlen:1; pkt_data; content:\"GET / HTTP/1.1|0D 0A|User-Agent: Mozilla/4.0",
+	"Option": "compatible|3B| MSIE 7.0|3B| Windows NT 5.1|3B| Trident/4.0)|0D 0A|Host: checkip.dyndns.org|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.sans.org/security-resources/malwarefaq/conficker-worm.php; classtype:trojan-activity; sid:28542; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2927",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 119",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows XPAT pattern overflow attempt\"; flow:to_server,established; content:\"PAT|20|\",depth 5,nocase; isdataat:160,relative; pcre:\"/^X?PAT\\s+[^\\n]{160}/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2004-0574; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-036; classtype:attempted-admin; sid:2927; rev:13;"
+	"GID": "1",
+	"SID": "2927",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 119",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows XPAT pattern overflow attempt\"; flow:to_server,established; content:\"PAT|20|\",depth 5,nocase; isdataat:160,relative; pcre:\"/^X?PAT\\s+[^\\n]{160}/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2004-0574; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-036; classtype:attempted-admin; sid:2927; rev:13;"
 }

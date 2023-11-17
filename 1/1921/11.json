@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1921",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP SITE ZIPCHK overflow attempt\"; flow:to_server,established; content:\"SITE\",nocase; content:\"ZIPCHK\",distance 1,nocase; isdataat:100,relative; pcre:\"/^SITE\\s+ZIPCHK\\s[^\\n]{100}/ims\"; metadata:ruleset community; service:ftp; reference:cve,2000-0040; classtype:attempted-admin; sid:1921; rev:11;"
+	"GID": "1",
+	"SID": "1921",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP SITE ZIPCHK overflow attempt\"; flow:to_server,established; content:\"SITE\",nocase; content:\"ZIPCHK\",distance 1,nocase; isdataat:100,relative; pcre:\"/^SITE\\s+ZIPCHK\\s[^\\n]{100}/ims\"; metadata:ruleset community; service:ftp; reference:cve,2000-0040; classtype:attempted-admin; sid:1921; rev:11;"
 }

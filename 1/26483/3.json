@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26483",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP JavaScript tag in User-Agent field possible XSS attempt\"; flow:to_server,established; http_header; content:\"User-Agent|3A| <SCRIPT>\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.spiderlabs.com/2012/11/honeypot-alert-referer-field-xss-attacks.html; classtype:web-application-attack; sid:26483; rev:3;"
+	"GID": "1",
+	"SID": "26483",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP JavaScript tag in User-Agent field possible XSS attempt\"; flow:to_server,established; http_header; content:\"User-Agent|3A| <SCRIPT>\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.spiderlabs.com/2012/11/honeypot-alert-referer-field-xss-attacks.html; classtype:web-application-attack; sid:26483; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1197",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Phorum code access\"; flow:to_server,established; http_uri; content:\"/code.php3\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:1197; rev:19;"
+	"GID": "1",
+	"SID": "1197",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Phorum code access\"; flow:to_server,established; http_uri; content:\"/code.php3\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:1197; rev:19;"
 }

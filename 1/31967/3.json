@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31967",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"EXPLOIT-KIT Astrum exploit kit payload delivery\"; flow:to_client,established; flowbits:isset,file.exploit_kit.pe; file_data; content:\"|F2 F7 94 75 16 7E 8E 15|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2014/09/astrum-ek.html; classtype:trojan-activity; sid:31967; rev:3;"
+	"GID": "1",
+	"SID": "31967",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"EXPLOIT-KIT Astrum exploit kit payload delivery\"; flow:to_client,established; flowbits:isset,file.exploit_kit.pe; file_data; content:\"|F2 F7 94 75 16 7E 8E 15|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2014/09/astrum-ek.html; classtype:trojan-activity; sid:31967; rev:3;"
 }

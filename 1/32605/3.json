@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32605",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Worm.Jenxcus variant outbound connection\"; flow:to_server,established; http_uri; content:\"/seo.php?username=MAREYOLE&format=ptp\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8538cbb2271f90c57f57150d714ec92e59869f52c7060bb2ab1f57ef6757321d/analysis/; classtype:trojan-activity; sid:32605; rev:3;"
+	"GID": "1",
+	"SID": "32605",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Worm.Jenxcus variant outbound connection\"; flow:to_server,established; http_uri; content:\"/seo.php?username=MAREYOLE&format=ptp\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8538cbb2271f90c57f57150d714ec92e59869f52c7060bb2ab1f57ef6757321d/analysis/; classtype:trojan-activity; sid:32605; rev:3;"
 }

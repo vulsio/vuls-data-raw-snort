@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26655",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR Win.Backdoor.PCRat data upload\"; flow:to_server,established; content:\"PCRatd\",depth 6; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/669DF9DED24D56997D7B1EA6249BB704226DADA09230DC285AE66CA0C9B7247B/analysis/; classtype:misc-activity; sid:26655; rev:2;"
+	"GID": "1",
+	"SID": "26655",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-BACKDOOR Win.Backdoor.PCRat data upload\"; flow:to_server,established; content:\"PCRatd\",depth 6; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/669DF9DED24D56997D7B1EA6249BB704226DADA09230DC285AE66CA0C9B7247B/analysis/; classtype:misc-activity; sid:26655; rev:2;"
 }

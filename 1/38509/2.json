@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38509",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Boaxxe variant outbound connection\"; flow:to_server,established; content:\"|7C 7C|CM01|7C|CM02|7C|CM03|7C|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/efd9036e675507da76cd0946408aedb814aff9da62d23de4f0680a4e7186a75c/analysis/1460471360/; classtype:trojan-activity; sid:38509; rev:2;"
+	"GID": "1",
+	"SID": "38509",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Boaxxe variant outbound connection\"; flow:to_server,established; content:\"|7C 7C|CM01|7C|CM02|7C|CM03|7C|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/efd9036e675507da76cd0946408aedb814aff9da62d23de4f0680a4e7186a75c/analysis/1460471360/; classtype:trojan-activity; sid:38509; rev:2;"
 }

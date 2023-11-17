@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28852",
-  "Rev": "5",
-  "Header": "alert tcp any any -> any $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string - Linux.Trojan.Zollard\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Zollard|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d757aa51974806e5402fb8a5c930518bf9ba0b2fd62f74e0f4c33d85bce08ada/analysis/; classtype:trojan-activity; sid:28852; rev:5;"
+	"GID": "1",
+	"SID": "28852",
+	"Rev": "5",
+	"Header": "alert tcp any any -> any $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string - Linux.Trojan.Zollard\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Zollard|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d757aa51974806e5402fb8a5c930518bf9ba0b2fd62f74e0f4c33d85bce08ada/analysis/; classtype:trojan-activity; sid:28852; rev:5;"
 }

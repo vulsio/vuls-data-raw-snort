@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21940",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY EMF file magic detected\"; flow:to_client,established; file_data; content:\"|01 00 00 00|\",depth 4; content:\"|20|EMF\",within 4,distance 36,fast_pattern; flowbits:set,file.emf; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:21940; rev:13;"
+	"GID": "1",
+	"SID": "21940",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"FILE-IDENTIFY EMF file magic detected\"; flow:to_client,established; file_data; content:\"|01 00 00 00|\",depth 4; content:\"|20|EMF\",within 4,distance 36,fast_pattern; flowbits:set,file.emf; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:21940; rev:13;"
 }

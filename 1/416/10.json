@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "416",
-  "Rev": "10",
-  "Header": "alert icmp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP Information Reply undefined code\"; icode:>0; itype:16; metadata:ruleset community; classtype:misc-activity; sid:416; rev:10;"
+	"GID": "1",
+	"SID": "416",
+	"Rev": "10",
+	"Header": "alert icmp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP Information Reply undefined code\"; icode:>0; itype:16; metadata:ruleset community; classtype:misc-activity; sid:416; rev:10;"
 }

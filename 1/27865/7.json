@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27865",
-  "Rev": "7",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Blackholev2/Darkleech exploit kit landing page request\"; flow:to_server,established; http_raw_uri; bufferlen:>32; http_uri; content:\".php\",fast_pattern,nocase; http_method; content:\"GET\"; http_uri; pcre:\"/^\\/[a-f0-9]{32}\\/[a-z]{1,15}-[a-z]{1,15}\\.php/\"; http_header; content:!\"PacketShaper\"; content:!\"siteadvisor.com\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2012-1889; reference:cve,2012-4681; classtype:trojan-activity; sid:27865; rev:7;"
+	"GID": "1",
+	"SID": "27865",
+	"Rev": "7",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Blackholev2/Darkleech exploit kit landing page request\"; flow:to_server,established; http_raw_uri; bufferlen:>32; http_uri; content:\".php\",fast_pattern,nocase; http_method; content:\"GET\"; http_uri; pcre:\"/^\\/[a-f0-9]{32}\\/[a-z]{1,15}-[a-z]{1,15}\\.php/\"; http_header; content:!\"PacketShaper\"; content:!\"siteadvisor.com\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2012-1889; reference:cve,2012-4681; classtype:trojan-activity; sid:27865; rev:7;"
 }

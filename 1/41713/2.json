@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41713",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP DotNetNuke installation attempt detected\"; flow:to_server,established; http_uri; content:\"/Install/InstallWizard.aspx\",fast_pattern,nocase; content:\"executeinstall\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2015-2794; reference:url,www.exploit-db.com/exploits/39777; classtype:attempted-admin; sid:41713; rev:2;"
+	"GID": "1",
+	"SID": "41713",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP DotNetNuke installation attempt detected\"; flow:to_server,established; http_uri; content:\"/Install/InstallWizard.aspx\",fast_pattern,nocase; content:\"executeinstall\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2015-2794; reference:url,www.exploit-db.com/exploits/39777; classtype:attempted-admin; sid:41713; rev:2;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3089",
-  "Rev": "10",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 2048",
-  "Option": "msg:\"SERVER-OTHER squid WCCP I_SEE_YOU message overflow attempt\"; flow:to_server; content:\"|00 00 00 08|\",depth 4; byte_test:4,>,32,16; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,12275; reference:cve,2005-0095; classtype:attempted-user; sid:3089; rev:10;"
+	"GID": "1",
+	"SID": "3089",
+	"Rev": "10",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 2048",
+	"Option": "msg:\"SERVER-OTHER squid WCCP I_SEE_YOU message overflow attempt\"; flow:to_server; content:\"|00 00 00 08|\",depth 4; byte_test:4,>,32,16; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,12275; reference:cve,2005-0095; classtype:attempted-user; sid:3089; rev:10;"
 }

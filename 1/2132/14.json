@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2132",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS Synchrologic Email Accelerator userid list access attempt\"; flow:to_server,established; http_uri; content:\"/en/admin/aggregate.asp\",nocase; metadata:ruleset community; service:http; reference:nessus,11657; classtype:web-application-activity; sid:2132; rev:14;"
+	"GID": "1",
+	"SID": "2132",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS Synchrologic Email Accelerator userid list access attempt\"; flow:to_server,established; http_uri; content:\"/en/admin/aggregate.asp\",nocase; metadata:ruleset community; service:http; reference:nessus,11657; classtype:web-application-activity; sid:2132; rev:14;"
 }

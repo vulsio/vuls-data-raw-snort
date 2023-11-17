@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1466",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP cgiforum.pl access\"; flow:to_server,established; http_uri; content:\"/cgiforum.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1963; reference:cve,2000-1171; reference:nessus,10552; classtype:web-application-activity; sid:1466; rev:20;"
+	"GID": "1",
+	"SID": "1466",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP cgiforum.pl access\"; flow:to_server,established; http_uri; content:\"/cgiforum.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1963; reference:cve,2000-1171; reference:nessus,10552; classtype:web-application-activity; sid:1466; rev:20;"
 }

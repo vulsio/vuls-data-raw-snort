@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28817",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Backdoor.Iniduoh variant outbound connection\"; flow:to_server,established; http_uri; content:\"/is-ready\",fast_pattern,nocase; http_header; content:\"User|2D|Agent|3A 20|\"; content:\"|3C 7C 3E|\",within 3,distance 8; content:\"|3C 7C 3E|\",within 18; content:\"|3C 7C 3E|Microsoft Windows\",within 84; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/220b551d9381fb56b48511b622a0bbc15482378396b3e83f708379f460f3347a/analysis/; reference:url,www.virustotal.com/en/file/be442a5f8be3bf720236f71a613a534b8aa82b16b0daf8ff84a59bcb92e19e7d/analysis/; classtype:trojan-activity; sid:28817; rev:4;"
+	"GID": "1",
+	"SID": "28817",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Backdoor.Iniduoh variant outbound connection\"; flow:to_server,established; http_uri; content:\"/is-ready\",fast_pattern,nocase; http_header; content:\"User|2D|Agent|3A 20|\"; content:\"|3C 7C 3E|\",within 3,distance 8; content:\"|3C 7C 3E|\",within 18; content:\"|3C 7C 3E|Microsoft Windows\",within 84; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/220b551d9381fb56b48511b622a0bbc15482378396b3e83f708379f460f3347a/analysis/; reference:url,www.virustotal.com/en/file/be442a5f8be3bf720236f71a613a534b8aa82b16b0daf8ff84a59bcb92e19e7d/analysis/; classtype:trojan-activity; sid:28817; rev:4;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30567",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER Win.Trojan.Agent E-FAX phishing attempt\"; flow:to_client,established; flowbits:isset,file.zip; file_data; content:\"pdf_efax_\",fast_pattern,nocase; content:\"PK\",depth 2; content:\".pif\",distance 0,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; reference:url,www.virustotal.com/en/file/4e102fd6fce767fa6c0d0a9871bb71ec5969ded694a9292c2c8a9749e5648ed4/analysis/; classtype:trojan-activity; sid:30567; rev:3;"
+	"GID": "1",
+	"SID": "30567",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-OTHER Win.Trojan.Agent E-FAX phishing attempt\"; flow:to_client,established; flowbits:isset,file.zip; file_data; content:\"pdf_efax_\",fast_pattern,nocase; content:\"PK\",depth 2; content:\".pif\",distance 0,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; reference:url,www.virustotal.com/en/file/4e102fd6fce767fa6c0d0a9871bb71ec5969ded694a9292c2c8a9749e5648ed4/analysis/; classtype:trojan-activity; sid:30567; rev:3;"
 }

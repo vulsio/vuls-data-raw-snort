@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1556",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP DCShop orders.txt access\"; flow:to_server,established; http_uri; content:\"/orders/orders.txt\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2889; reference:cve,2001-0821; classtype:web-application-activity; sid:1556; rev:19;"
+	"GID": "1",
+	"SID": "1556",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP DCShop orders.txt access\"; flow:to_server,established; http_uri; content:\"/orders/orders.txt\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2889; reference:cve,2001-0821; classtype:web-application-activity; sid:1556; rev:19;"
 }

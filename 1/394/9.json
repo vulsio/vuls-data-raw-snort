@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "394",
-  "Rev": "9",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP Destination Unreachable Destination Host Unknown\"; icode:7; itype:3; metadata:ruleset community; classtype:misc-activity; sid:394; rev:9;"
+	"GID": "1",
+	"SID": "394",
+	"Rev": "9",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP Destination Unreachable Destination Host Unknown\"; icode:7; itype:3; metadata:ruleset community; classtype:misc-activity; sid:394; rev:9;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "223",
-  "Rev": "13",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET [31335,35555]",
-  "Option": "msg:\"MALWARE-OTHER Trin00 Daemon to Master PONG message detected\"; flow:to_server; content:\"PONG\",fast_pattern,nocase; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:223; rev:13;"
+	"GID": "1",
+	"SID": "223",
+	"Rev": "13",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET [31335,35555]",
+	"Option": "msg:\"MALWARE-OTHER Trin00 Daemon to Master PONG message detected\"; flow:to_server; content:\"PONG\",fast_pattern,nocase; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:223; rev:13;"
 }

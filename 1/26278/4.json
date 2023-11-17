@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26278",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Linksys E1500/E2500 apply.cgi unauthenticated password reset attempt\"; flow:to_server,established; http_uri; content:\"/apply.cgi\",fast_pattern,nocase; http_header; content:!\"Authorization:\",nocase; http_client_body; content:\"action=Apply\",nocase; content:\"PasswdModify=1\",nocase; content:\"http_passwd=\",nocase; content:\"http_passwdConfirm=\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,57760; reference:url,www.s3cur1ty.de/m1adv2013-004; classtype:attempted-admin; sid:26278; rev:4;"
+	"GID": "1",
+	"SID": "26278",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Linksys E1500/E2500 apply.cgi unauthenticated password reset attempt\"; flow:to_server,established; http_uri; content:\"/apply.cgi\",fast_pattern,nocase; http_header; content:!\"Authorization:\",nocase; http_client_body; content:\"action=Apply\",nocase; content:\"PasswdModify=1\",nocase; content:\"http_passwd=\",nocase; content:\"http_passwdConfirm=\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,57760; reference:url,www.s3cur1ty.de/m1adv2013-004; classtype:attempted-admin; sid:26278; rev:4;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33153",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Heur variant outbound connection\"; flow:to_server,established; http_method; content:\"GET\"; http_raw_uri; bufferlen:17; http_uri; content:\"/01/WindowsUpdate\",fast_pattern,nocase; http_header; content:!\"User-Agent:\"; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2fb5c3859df3b46cc7e2e2176654cb7e5f739f2bc9faf3e813736b37c6d3b6bc/analysis/; classtype:trojan-activity; sid:33153; rev:3;"
+	"GID": "1",
+	"SID": "33153",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Heur variant outbound connection\"; flow:to_server,established; http_method; content:\"GET\"; http_raw_uri; bufferlen:17; http_uri; content:\"/01/WindowsUpdate\",fast_pattern,nocase; http_header; content:!\"User-Agent:\"; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2fb5c3859df3b46cc7e2e2176654cb7e5f739f2bc9faf3e813736b37c6d3b6bc/analysis/; classtype:trojan-activity; sid:33153; rev:3;"
 }

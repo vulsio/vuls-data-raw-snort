@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41978",
-  "Rev": "5",
-  "Header": "alert tcp any any -> $HOME_NET 445",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB remote code execution attempt\"; flow:to_server,established; content:\"|FF|SMB3|00 00 00 00|\",depth 9,offset 4; byte_extract:2,26,TotalDataCount,relative,little; byte_test:2,>,TotalDataCount,20,relative,little; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:netbios-ssn; reference:cve,2017-0144; reference:cve,2017-0146; reference:url,blog.talosintelligence.com/2017/05/wannacry.html; reference:url,isc.sans.edu/forums/diary/ETERNALBLUE+Possible+Window+SMB+Buffer+Overflow+0Day/22304/; reference:url,technet.microsoft.com/en-us/security/bulletin/MS17-010; classtype:attempted-admin; sid:41978; rev:5;"
+	"GID": "1",
+	"SID": "41978",
+	"Rev": "5",
+	"Header": "alert tcp any any -> $HOME_NET 445",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows SMB remote code execution attempt\"; flow:to_server,established; content:\"|FF|SMB3|00 00 00 00|\",depth 9,offset 4; byte_extract:2,26,TotalDataCount,relative,little; byte_test:2,>,TotalDataCount,20,relative,little; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:netbios-ssn; reference:cve,2017-0144; reference:cve,2017-0146; reference:url,blog.talosintelligence.com/2017/05/wannacry.html; reference:url,isc.sans.edu/forums/diary/ETERNALBLUE+Possible+Window+SMB+Buffer+Overflow+0Day/22304/; reference:url,technet.microsoft.com/en-us/security/bulletin/MS17-010; classtype:attempted-admin; sid:41978; rev:5;"
 }

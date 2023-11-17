@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2414",
-  "Rev": "16",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 500",
-  "Option": "msg:\"SERVER-OTHER ISAKMP initial contact notification without SPI attempt\"; flow:to_server; content:\"|0B|\",depth 1,offset 16; content:\"|00 0C 00 00 00 01 01 00 06 02|\",depth 10,offset 30; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,9416; reference:bugtraq,9417; reference:cve,2004-0164; classtype:misc-attack; sid:2414; rev:16;"
+	"GID": "1",
+	"SID": "2414",
+	"Rev": "16",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 500",
+	"Option": "msg:\"SERVER-OTHER ISAKMP initial contact notification without SPI attempt\"; flow:to_server; content:\"|0B|\",depth 1,offset 16; content:\"|00 0C 00 00 00 01 01 00 06 02|\",depth 10,offset 30; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,9416; reference:bugtraq,9417; reference:cve,2004-0164; classtype:misc-attack; sid:2414; rev:16;"
 }

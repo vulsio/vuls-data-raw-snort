@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2548",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER HP Web JetAdmin setinfo access attempt\"; flow:to_server,established; http_uri; content:\"/plugins/hpjdwm/script/test/setinfo.hts\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,9972; reference:cve,2004-1856; reference:cve,2004-1857; reference:nessus,12120; classtype:web-application-activity; sid:2548; rev:10;"
+	"GID": "1",
+	"SID": "2548",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER HP Web JetAdmin setinfo access attempt\"; flow:to_server,established; http_uri; content:\"/plugins/hpjdwm/script/test/setinfo.hts\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,9972; reference:cve,2004-1856; reference:cve,2004-1857; reference:nessus,12120; classtype:web-application-activity; sid:2548; rev:10;"
 }

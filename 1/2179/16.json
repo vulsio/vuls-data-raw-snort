@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2179",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP PASS format string attempt\"; flow:to_server,established; content:\"PASS\",fast_pattern,nocase; pcre:\"/^PASS\\s[^\\n]*?%[^\\n]*?%/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,7474; reference:bugtraq,9262; reference:bugtraq,9800; reference:cve,2000-0699; reference:cve,2007-1195; reference:nessus,10490; classtype:misc-attack; sid:2179; rev:16;"
+	"GID": "1",
+	"SID": "2179",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP PASS format string attempt\"; flow:to_server,established; content:\"PASS\",fast_pattern,nocase; pcre:\"/^PASS\\s[^\\n]*?%[^\\n]*?%/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,7474; reference:bugtraq,9262; reference:bugtraq,9800; reference:cve,2000-0699; reference:cve,2007-1195; reference:nessus,10490; classtype:misc-attack; sid:2179; rev:16;"
 }

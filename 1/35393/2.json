@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "35393",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.TorrentLocker/Teerac self-signed certificate\"; flow:to_client,established; ssl_state:server_hello; content:\"|16 03 01 00 51 02|\"; content:\"|55 04 06 13 02|XX\",fast_pattern,nocase; content:\"|55 04 07 0C 0C|Default City\"; content:\"|55 04 0A 0C 13|Default Company Ltd\",distance 6; metadata:impact_flag red,ruleset community; service:ssl; reference:url,www.virustotal.com/en/file/4072beeaf09fe6fef48365f1c14fd800e21b32cfa2af561f515bc45372dd590d/analysis/; classtype:trojan-activity; sid:35393; rev:2;"
+	"GID": "1",
+	"SID": "35393",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.TorrentLocker/Teerac self-signed certificate\"; flow:to_client,established; ssl_state:server_hello; content:\"|16 03 01 00 51 02|\"; content:\"|55 04 06 13 02|XX\",fast_pattern,nocase; content:\"|55 04 07 0C 0C|Default City\"; content:\"|55 04 0A 0C 13|Default Company Ltd\",distance 6; metadata:impact_flag red,ruleset community; service:ssl; reference:url,www.virustotal.com/en/file/4072beeaf09fe6fef48365f1c14fd800e21b32cfa2af561f515bc45372dd590d/analysis/; classtype:trojan-activity; sid:35393; rev:2;"
 }

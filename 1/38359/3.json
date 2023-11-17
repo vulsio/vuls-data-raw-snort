@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38359",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.NetWiredRC variant send mail credentials\"; flow:to_server,established; content:\"|01 00 00 00 41|\",depth 5; isdataat:!9; metadata:impact_flag red,ruleset community; reference:url,www.circl.lu/pub/tr-23/; classtype:trojan-activity; sid:38359; rev:3;"
+	"GID": "1",
+	"SID": "38359",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.NetWiredRC variant send mail credentials\"; flow:to_server,established; content:\"|01 00 00 00 41|\",depth 5; isdataat:!9; metadata:impact_flag red,ruleset community; reference:url,www.circl.lu/pub/tr-23/; classtype:trojan-activity; sid:38359; rev:3;"
 }

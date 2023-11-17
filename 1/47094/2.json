@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "47094",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"PUA-ADWARE Win.Adware.Pbot variant outbound connection\"; flow:to_server,established; http_uri; content:\"/collect.php\",fast_pattern,nocase; content:\"pid=\"; content:\"cid=\"; content:\"sid=\"; content:\"act=\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/5e3dc49c1f4b57ab27000befd128fad77eba9a6e07f8766c7e1393cae890fdf6/detection; classtype:misc-activity; sid:47094; rev:2;"
+	"GID": "1",
+	"SID": "47094",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"PUA-ADWARE Win.Adware.Pbot variant outbound connection\"; flow:to_server,established; http_uri; content:\"/collect.php\",fast_pattern,nocase; content:\"pid=\"; content:\"cid=\"; content:\"sid=\"; content:\"act=\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/5e3dc49c1f4b57ab27000befd128fad77eba9a6e07f8766c7e1393cae890fdf6/detection; classtype:misc-activity; sid:47094; rev:2;"
 }

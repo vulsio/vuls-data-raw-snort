@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "57463",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET $HTTP_PORTS -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR Perl.Backdoor.STEADYPULSE webshell variant access\"; flow:to_client,established; file_data; content:\"<form action=|22 22| method=|22|GET|22|>\"; content:\"<input type=|22|text|22| name=|22|cmd|22|\",distance 0; content:\"<input type=|22|text|22| name=|22|serverid|22|\",distance 0,fast_pattern; content:\"<input type=|22|submit|22| value=|22|Run|22|>\",distance 0; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2021/04/suspected-apt-actors-leverage-bypass-techniques-pulse-secure-zero-day.html; classtype:trojan-activity; sid:57463; rev:1;"
+	"GID": "1",
+	"SID": "57463",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET $HTTP_PORTS -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-BACKDOOR Perl.Backdoor.STEADYPULSE webshell variant access\"; flow:to_client,established; file_data; content:\"<form action=|22 22| method=|22|GET|22|>\"; content:\"<input type=|22|text|22| name=|22|cmd|22|\",distance 0; content:\"<input type=|22|text|22| name=|22|serverid|22|\",distance 0,fast_pattern; content:\"<input type=|22|submit|22| value=|22|Run|22|>\",distance 0; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2021/04/suspected-apt-actors-leverage-bypass-techniques-pulse-secure-zero-day.html; classtype:trojan-activity; sid:57463; rev:1;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2013",
-  "Rev": "8",
-  "Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE CVS invalid module response\"; flow:to_client,established; content:\"cvs server|3A| cannot find module\",fast_pattern,nocase; content:\"error\"; metadata:ruleset community; classtype:misc-attack; sid:2013; rev:8;"
+	"GID": "1",
+	"SID": "2013",
+	"Rev": "8",
+	"Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE CVS invalid module response\"; flow:to_client,established; content:\"cvs server|3A| cannot find module\",fast_pattern,nocase; content:\"error\"; metadata:ruleset community; classtype:misc-attack; sid:2013; rev:8;"
 }

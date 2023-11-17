@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1099",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP cybercop scan\"; flow:to_server,established; http_uri; content:\"/cybercop\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1099; rev:15;"
+	"GID": "1",
+	"SID": "1099",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP cybercop scan\"; flow:to_server,established; http_uri; content:\"/cybercop\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1099; rev:15;"
 }

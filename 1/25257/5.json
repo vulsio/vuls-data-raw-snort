@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25257",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Skintrim variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/bin/check.php?cv=\"; http_header; content:\"ThIs_Is_tHe_bouNdaRY_$\",fast_pattern; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/80e67695fa394f56fd6ddae74b72e9050f651244aad52ad48ebe6304edff95e2/analysis/1357239259/; classtype:trojan-activity; sid:25257; rev:5;"
+	"GID": "1",
+	"SID": "25257",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Skintrim variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/bin/check.php?cv=\"; http_header; content:\"ThIs_Is_tHe_bouNdaRY_$\",fast_pattern; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/80e67695fa394f56fd6ddae74b72e9050f651244aad52ad48ebe6304edff95e2/analysis/1357239259/; classtype:trojan-activity; sid:25257; rev:5;"
 }

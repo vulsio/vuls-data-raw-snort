@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "50276",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-BACKDOOR Win.Backdoor.Chopper webshell inbound request attempt\"; flow:to_server,established; http_uri; content:\"/temporary_listen_addresses/smsservice\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,cybersecurity.att.com/blogs/labs-research/sharepoint-vulnerability-exploited-in-the-wild; reference:url,isc.sans.edu/diary/CVE-2019-0604+Attack/24952; classtype:trojan-activity; sid:50276; rev:3;"
+	"GID": "1",
+	"SID": "50276",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-BACKDOOR Win.Backdoor.Chopper webshell inbound request attempt\"; flow:to_server,established; http_uri; content:\"/temporary_listen_addresses/smsservice\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,cybersecurity.att.com/blogs/labs-research/sharepoint-vulnerability-exploited-in-the-wild; reference:url,isc.sans.edu/diary/CVE-2019-0604+Attack/24952; classtype:trojan-activity; sid:50276; rev:3;"
 }

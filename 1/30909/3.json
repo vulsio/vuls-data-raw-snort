@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30909",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"FILE-OTHER RARLAB WinRAR ZIP format filename spoof attempt\"; flow:to_server,established; flowbits:isset,file.zip; file_data; content:\"|50 4B 03 04|\",depth 4; content:\"|00 00|\",within 2,distance 24; content:\".exe\",within 64; flowbits:set,file.zip.winrar.spoof; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:smtp; reference:bugtraq,66383; reference:url,an7isec.blogspot.co.il/2014/03/winrar-file-extension-spoofing-0day.html; classtype:attempted-user; sid:30909; rev:3;"
+	"GID": "1",
+	"SID": "30909",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"FILE-OTHER RARLAB WinRAR ZIP format filename spoof attempt\"; flow:to_server,established; flowbits:isset,file.zip; file_data; content:\"|50 4B 03 04|\",depth 4; content:\"|00 00|\",within 2,distance 24; content:\".exe\",within 64; flowbits:set,file.zip.winrar.spoof; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:smtp; reference:bugtraq,66383; reference:url,an7isec.blogspot.co.il/2014/03/winrar-file-extension-spoofing-0day.html; classtype:attempted-user; sid:30909; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28982",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Worm.Steckt IRCbot requesting URL through IRC\"; flow:to_client,established; content:\"JOIN |3A|#\"; content:\"!dl http://\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:irc; reference:url,www.virustotal.com/en/file/411e93206a7750c8df25730349bf9756ddba52c1bc780eaac4bba2b3872bc037/analysis/; classtype:trojan-activity; sid:28982; rev:2;"
+	"GID": "1",
+	"SID": "28982",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Worm.Steckt IRCbot requesting URL through IRC\"; flow:to_client,established; content:\"JOIN |3A|#\"; content:\"!dl http://\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:irc; reference:url,www.virustotal.com/en/file/411e93206a7750c8df25730349bf9756ddba52c1bc780eaac4bba2b3872bc037/analysis/; classtype:trojan-activity; sid:28982; rev:2;"
 }

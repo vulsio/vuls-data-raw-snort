@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "45157",
-  "Rev": "4",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1900",
-  "Option": "msg:\"SERVER-OTHER SSDP M-SEARCH ssdp-all potential amplified distributed denial-of-service attempt\"; flow:to_server,no_stream; content:\"M-SEARCH\",depth 9; content:\"ssdp:all\",fast_pattern,nocase; detection_filter:track by_src,count 50,seconds 1; metadata:policy max-detect-ips drop,ruleset community; service:ssdp; reference:cve,2013-5211; reference:url,www.us-cert.gov/ncas/alerts/TA14-017A; classtype:attempted-dos; sid:45157; rev:4;"
+	"GID": "1",
+	"SID": "45157",
+	"Rev": "4",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1900",
+	"Option": "msg:\"SERVER-OTHER SSDP M-SEARCH ssdp-all potential amplified distributed denial-of-service attempt\"; flow:to_server,no_stream; content:\"M-SEARCH\",depth 9; content:\"ssdp:all\",fast_pattern,nocase; detection_filter:track by_src,count 50,seconds 1; metadata:policy max-detect-ips drop,ruleset community; service:ssdp; reference:cve,2013-5211; reference:url,www.us-cert.gov/ncas/alerts/TA14-017A; classtype:attempted-dos; sid:45157; rev:4;"
 }

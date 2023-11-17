@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1020",
-  "Rev": "26",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS isc$data attempt\"; flow:to_server,established; http_uri; content:\".idc|3A 3A 24|data\",nocase; metadata:ruleset community; service:http; reference:bugtraq,307; reference:cve,1999-0874; reference:nessus,10116; classtype:web-application-attack; sid:1020; rev:26;"
+	"GID": "1",
+	"SID": "1020",
+	"Rev": "26",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS isc$data attempt\"; flow:to_server,established; http_uri; content:\".idc|3A 3A 24|data\",nocase; metadata:ruleset community; service:http; reference:bugtraq,307; reference:cve,1999-0874; reference:nessus,10116; classtype:web-application-attack; sid:1020; rev:26;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26814",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Blackholev2 exploit kit Initial Gate from Linked-In Mailing Campaign\"; flow:to_server,established; http_uri; bufferlen:17; content:\"/linkendorse.html\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26814; rev:3;"
+	"GID": "1",
+	"SID": "26814",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Blackholev2 exploit kit Initial Gate from Linked-In Mailing Campaign\"; flow:to_server,established; http_uri; bufferlen:17; content:\"/linkendorse.html\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26814; rev:3;"
 }

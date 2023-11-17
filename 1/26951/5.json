@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26951",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT DotkaChef/Rmayana/DotCache exploit kit Malvertising Campaign URI request\"; flow:to_server,established; http_uri; content:\"/.cache/?f=\",fast_pattern; content:\".jar\"; pcre:\"/[^&]+&[a-z]=[a-f0-9]{16}&[a-z]=[a-f0-9]{16}$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,research.zscaler.com/2013/06/openxadvertisingcom-mass-malvertising.html; classtype:trojan-activity; sid:26951; rev:5;"
+	"GID": "1",
+	"SID": "26951",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT DotkaChef/Rmayana/DotCache exploit kit Malvertising Campaign URI request\"; flow:to_server,established; http_uri; content:\"/.cache/?f=\",fast_pattern; content:\".jar\"; pcre:\"/[^&]+&[a-z]=[a-f0-9]{16}&[a-z]=[a-f0-9]{16}$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,research.zscaler.com/2013/06/openxadvertisingcom-mass-malvertising.html; classtype:trojan-activity; sid:26951; rev:5;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2284",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP rolis guestbook remote file include attempt\"; flow:to_server,established; http_uri; content:\"/insert.inc.php\",fast_pattern,nocase; pkt_data; content:\"path=\"; metadata:ruleset community; service:http; reference:bugtraq,9057; classtype:web-application-attack; sid:2284; rev:13;"
+	"GID": "1",
+	"SID": "2284",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP rolis guestbook remote file include attempt\"; flow:to_server,established; http_uri; content:\"/insert.inc.php\",fast_pattern,nocase; pkt_data; content:\"path=\"; metadata:ruleset community; service:http; reference:bugtraq,9057; classtype:web-application-attack; sid:2284; rev:13;"
 }

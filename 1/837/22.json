@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "837",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP uploader.exe access\"; flow:to_server,established; http_uri; content:\"/uploader.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1611; reference:cve,1999-0177; reference:cve,2000-0769; reference:nessus,10291; classtype:attempted-recon; sid:837; rev:22;"
+	"GID": "1",
+	"SID": "837",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP uploader.exe access\"; flow:to_server,established; http_uri; content:\"/uploader.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1611; reference:cve,1999-0177; reference:cve,2000-0769; reference:nessus,10291; classtype:attempted-recon; sid:837; rev:22;"
 }

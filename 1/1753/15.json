@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1753",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS as_web.exe access\"; flow:to_server,established; http_uri; content:\"/as_web.exe\",nocase; metadata:ruleset community; service:http; reference:bugtraq,4670; reference:cve,2002-1727; reference:cve,2002-1728; classtype:web-application-activity; sid:1753; rev:15;"
+	"GID": "1",
+	"SID": "1753",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS as_web.exe access\"; flow:to_server,established; http_uri; content:\"/as_web.exe\",nocase; metadata:ruleset community; service:http; reference:bugtraq,4670; reference:cve,2002-1727; reference:cve,2002-1728; classtype:web-application-activity; sid:1753; rev:15;"
 }

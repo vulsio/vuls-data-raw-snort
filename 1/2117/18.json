@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2117",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS Battleaxe Forum login.asp access\"; flow:to_server,established; http_uri; content:\"myaccount/login.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,7416; reference:cve,2003-0215; reference:nessus,11548; classtype:web-application-activity; sid:2117; rev:18;"
+	"GID": "1",
+	"SID": "2117",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS Battleaxe Forum login.asp access\"; flow:to_server,established; http_uri; content:\"myaccount/login.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,7416; reference:cve,2003-0215; reference:nessus,11548; classtype:web-application-activity; sid:2117; rev:18;"
 }

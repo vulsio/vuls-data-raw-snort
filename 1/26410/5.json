@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26410",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"INDICATOR-COMPROMISE IP address check to j.maxmind.com detected\"; flow:to_server,established; http_uri; content:\"/app/geoip.js\"; http_header; content:\"Host|3A 20|j.maxmind.com\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:misc-activity; sid:26410; rev:5;"
+	"GID": "1",
+	"SID": "26410",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"INDICATOR-COMPROMISE IP address check to j.maxmind.com detected\"; flow:to_server,established; http_uri; content:\"/app/geoip.js\"; http_header; content:\"Host|3A 20|j.maxmind.com\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:misc-activity; sid:26410; rev:5;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30920",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Multiple exploit kit redirection gate\"; flow:to_server,established; http_raw_uri; bufferlen:72; http_method; content:\"POST\"; http_uri; content:\".php?q=\",fast_pattern,nocase; pcre:\"/^\\/[a-f0-9]{32}\\.php\\?q=[a-f0-9]{32}$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:30920; rev:2;"
+	"GID": "1",
+	"SID": "30920",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Multiple exploit kit redirection gate\"; flow:to_server,established; http_raw_uri; bufferlen:72; http_method; content:\"POST\"; http_uri; content:\".php?q=\",fast_pattern,nocase; pcre:\"/^\\/[a-f0-9]{32}\\.php\\?q=[a-f0-9]{32}$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:30920; rev:2;"
 }

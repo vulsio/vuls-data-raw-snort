@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1819",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 2533",
-  "Option": "msg:\"SERVER-OTHER Alcatel PABX 4400 connection attempt\"; flow:to_server,established; content:\"|00 01|C\",depth 3; metadata:ruleset community; reference:nessus,11019; classtype:misc-activity; sid:1819; rev:9;"
+	"GID": "1",
+	"SID": "1819",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 2533",
+	"Option": "msg:\"SERVER-OTHER Alcatel PABX 4400 connection attempt\"; flow:to_server,established; content:\"|00 01|C\",depth 3; metadata:ruleset community; reference:nessus,11019; classtype:misc-activity; sid:1819; rev:9;"
 }

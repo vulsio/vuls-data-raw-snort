@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2683",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE mdsys.md2.sdo_code_size buffer overflow attempt\"; flow:to_server,established; content:\"mdsys.md2.sdo_code_size\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{512,}\\x27|\\x22[^\\x22]{512,}\\x22)[\\r\\n\\s]*\\x3b.*layer[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|layer\\s*=>\\s*(\\x27[^\\x27]{512,}|\\x22[^\\x22]{512,})|\\(\\s*(\\x27[^\\x27]{512,}|\\x22[^\\x22]{512,}))/is\"; metadata:ruleset community; classtype:attempted-user; sid:2683; rev:4;"
+	"GID": "1",
+	"SID": "2683",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE mdsys.md2.sdo_code_size buffer overflow attempt\"; flow:to_server,established; content:\"mdsys.md2.sdo_code_size\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{512,}\\x27|\\x22[^\\x22]{512,}\\x22)[\\r\\n\\s]*\\x3b.*layer[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|layer\\s*=>\\s*(\\x27[^\\x27]{512,}|\\x22[^\\x22]{512,})|\\(\\s*(\\x27[^\\x27]{512,}|\\x22[^\\x22]{512,}))/is\"; metadata:ruleset community; classtype:attempted-user; sid:2683; rev:4;"
 }

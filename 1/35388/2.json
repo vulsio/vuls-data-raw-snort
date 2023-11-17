@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "35388",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Andromeda download request\"; flow:to_server,established; http_uri; content:\".mod\"; pcre:\"/[a-z]{2}_[a-z0-9]{8}\\.mod/i\"; http_header; content:\"User-Agent|3A 20|Mozilla/4.0|0D 0A|\",fast_pattern,nocase; content:!\"Accept\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2015/07/a-fileless-ursnif-doing-some-pos.html; classtype:trojan-activity; sid:35388; rev:2;"
+	"GID": "1",
+	"SID": "35388",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Andromeda download request\"; flow:to_server,established; http_uri; content:\".mod\"; pcre:\"/[a-z]{2}_[a-z0-9]{8}\\.mod/i\"; http_header; content:\"User-Agent|3A 20|Mozilla/4.0|0D 0A|\",fast_pattern,nocase; content:!\"Accept\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2015/07/a-fileless-ursnif-doing-some-pos.html; classtype:trojan-activity; sid:35388; rev:2;"
 }

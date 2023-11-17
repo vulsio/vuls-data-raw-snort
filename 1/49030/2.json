@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49030",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET 20256 -> $EXTERNAL_NET any",
-  "Option": "msg:\"PROTOCOL-SCADA PCOM Read Operands binary reply\"; flow:to_client,established; byte_test:1,=,102,2; content:\"|CD|\",depth 1,offset 18; metadata:policy max-detect-ips drop,ruleset community; reference:url,unitronicsplc.com; classtype:attempted-recon; sid:49030; rev:2;"
+	"GID": "1",
+	"SID": "49030",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET 20256 -> $EXTERNAL_NET any",
+	"Option": "msg:\"PROTOCOL-SCADA PCOM Read Operands binary reply\"; flow:to_client,established; byte_test:1,=,102,2; content:\"|CD|\",depth 1,offset 18; metadata:policy max-detect-ips drop,ruleset community; reference:url,unitronicsplc.com; classtype:attempted-recon; sid:49030; rev:2;"
 }

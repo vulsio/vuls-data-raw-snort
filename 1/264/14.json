@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "264",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
-  "Option": "msg:\"OS-LINUX x86 Linux overflow attempt\"; flow:to_server,established; content:\"1|C0 B0 02 CD 80 85 C0|uL|EB|L^|B0|\"; metadata:ruleset community; service:dns; classtype:attempted-admin; sid:264; rev:14;"
+	"GID": "1",
+	"SID": "264",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
+	"Option": "msg:\"OS-LINUX x86 Linux overflow attempt\"; flow:to_server,established; content:\"1|C0 B0 02 CD 80 85 C0|uL|EB|L^|B0|\"; metadata:ruleset community; service:dns; classtype:attempted-admin; sid:264; rev:14;"
 }

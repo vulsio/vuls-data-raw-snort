@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56607",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC potential Rat.Tool.CSBundleUSAToday connectivity check\"; flow:to_server,established; http_cookie; content:\"gnt_ub=86|5C 3B|gnt_sb=18|5C 3B|usprivacy=1YNY|5C 3B|DigiTrust.v1.identity=\"; http_header; content:\"Host: www.usatoday.com\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56607; rev:1;"
+	"GID": "1",
+	"SID": "56607",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC potential Rat.Tool.CSBundleUSAToday connectivity check\"; flow:to_server,established; http_cookie; content:\"gnt_ub=86|5C 3B|gnt_sb=18|5C 3B|usprivacy=1YNY|5C 3B|DigiTrust.v1.identity=\"; http_header; content:\"Host: www.usatoday.com\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56607; rev:1;"
 }

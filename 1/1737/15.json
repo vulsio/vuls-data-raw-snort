@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1737",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP squirrel mail theme arbitrary command attempt\"; flow:to_server,established; http_uri; content:\"/left_main.php\",nocase; content:\"cmdd=\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4385; reference:cve,2002-0516; classtype:web-application-attack; sid:1737; rev:15;"
+	"GID": "1",
+	"SID": "1737",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP squirrel mail theme arbitrary command attempt\"; flow:to_server,established; http_uri; content:\"/left_main.php\",nocase; content:\"cmdd=\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4385; reference:cve,2002-0516; classtype:web-application-attack; sid:1737; rev:15;"
 }

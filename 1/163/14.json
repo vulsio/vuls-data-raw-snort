@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "163",
-  "Rev": "14",
-  "Header": "alert tcp $HOME_NET 5714 -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR WinCrash 1.0 Server Active\"; flow:stateless; flags:AS,12; content:\"|B4 B4|\"; metadata:ruleset community; classtype:misc-activity; sid:163; rev:14;"
+	"GID": "1",
+	"SID": "163",
+	"Rev": "14",
+	"Header": "alert tcp $HOME_NET 5714 -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-BACKDOOR WinCrash 1.0 Server Active\"; flow:stateless; flags:AS,12; content:\"|B4 B4|\"; metadata:ruleset community; classtype:misc-activity; sid:163; rev:14;"
 }

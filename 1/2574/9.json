@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2574",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP RETR format string attempt\"; flow:to_server,established; content:\"RETR\",fast_pattern,nocase; pcre:\"/^RETR\\s[^\\n]*?%[^\\n]*?%/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,9800; reference:cve,2004-1883; classtype:attempted-admin; sid:2574; rev:9;"
+	"GID": "1",
+	"SID": "2574",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP RETR format string attempt\"; flow:to_server,established; content:\"RETR\",fast_pattern,nocase; pcre:\"/^RETR\\s[^\\n]*?%[^\\n]*?%/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,9800; reference:cve,2004-1883; classtype:attempted-admin; sid:2574; rev:9;"
 }

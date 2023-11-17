@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34996",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Agent-ALPW variant outbound connection\"; flow:to_server,established; http_header; content:\"|0D 0A|Accept: text/html, */*|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: Mozilla/5.0",
-  "Option": "Windows NT 6.1|3B| WOW64|3B| rv:12.0) Gecko/20100101 Firefox/12.0|0D 0A 0D 0A|\",fast_pattern,nocase; http_client_body; content:\"A=\",depth 2; http_uri; content:\".php\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/6452bea82dbef796eaed8d2403ffa7141e4379bb052fdb7b63a21400c04b0334/analysis/; classtype:trojan-activity; sid:34996; rev:2;"
+	"GID": "1",
+	"SID": "34996",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Agent-ALPW variant outbound connection\"; flow:to_server,established; http_header; content:\"|0D 0A|Accept: text/html, */*|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: Mozilla/5.0",
+	"Option": "Windows NT 6.1|3B| WOW64|3B| rv:12.0) Gecko/20100101 Firefox/12.0|0D 0A 0D 0A|\",fast_pattern,nocase; http_client_body; content:\"A=\",depth 2; http_uri; content:\".php\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/6452bea82dbef796eaed8d2403ffa7141e4379bb052fdb7b63a21400c04b0334/analysis/; classtype:trojan-activity; sid:34996; rev:2;"
 }

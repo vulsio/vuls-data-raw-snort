@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "22044",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY XM file attachment detected\"; flow:to_client,established; content:\".xm\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2exm/i\"; flowbits:set,file.xm; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap,pop3; classtype:misc-activity; sid:22044; rev:9;"
+	"GID": "1",
+	"SID": "22044",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
+	"Option": "msg:\"FILE-IDENTIFY XM file attachment detected\"; flow:to_client,established; content:\".xm\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2exm/i\"; flowbits:set,file.xm; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap,pop3; classtype:misc-activity; sid:22044; rev:9;"
 }

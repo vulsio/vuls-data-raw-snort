@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1678",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE select like '%' attempt backslash escaped\"; flow:to_server,established; content:\" where \",nocase; content:\" like |22|%|22|\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1678; rev:9;"
+	"GID": "1",
+	"SID": "1678",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE select like '%' attempt backslash escaped\"; flow:to_server,established; content:\" where \",nocase; content:\" like |22|%|22|\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1678; rev:9;"
 }

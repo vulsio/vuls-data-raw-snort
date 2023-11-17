@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "24885",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Potential Banking Trojan Config File Download\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_uri; content:\"|2F|Config|2E|txt\",fast_pattern,nocase; http_header; content:\"Mozilla|2F|3|2E|0|20 28|compatible|3B 20|Indy|20|Library|29 0D 0A|\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/2418469245edf860633f791b972e1a8a11e5744c6deb0cc1a55531cba3d0bd7f/analysis/; classtype:trojan-activity; sid:24885; rev:3;"
+	"GID": "1",
+	"SID": "24885",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Potential Banking Trojan Config File Download\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_uri; content:\"|2F|Config|2E|txt\",fast_pattern,nocase; http_header; content:\"Mozilla|2F|3|2E|0|20 28|compatible|3B 20|Indy|20|Library|29 0D 0A|\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/2418469245edf860633f791b972e1a8a11e5744c6deb0cc1a55531cba3d0bd7f/analysis/; classtype:trojan-activity; sid:24885; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1070",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP WebDAV search access\"; flow:to_server,established; content:\"SEARCH \",depth 8,nocase; metadata:ruleset community; service:http; reference:bugtraq,1756; reference:cve,2000-0951; classtype:web-application-activity; sid:1070; rev:16;"
+	"GID": "1",
+	"SID": "1070",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP WebDAV search access\"; flow:to_server,established; content:\"SEARCH \",depth 8,nocase; metadata:ruleset community; service:http; reference:bugtraq,1756; reference:cve,2000-0951; classtype:web-application-activity; sid:1070; rev:16;"
 }

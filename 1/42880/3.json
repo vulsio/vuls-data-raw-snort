@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "42880",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Deputy Dog implant outbound connection\"; flow:to_server,established; http_uri; content:\"Connect.php?id=\",fast_pattern,nocase; pkt_data; content:\"SessionID:\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:42880; rev:3;"
+	"GID": "1",
+	"SID": "42880",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Deputy Dog implant outbound connection\"; flow:to_server,established; http_uri; content:\"Connect.php?id=\",fast_pattern,nocase; pkt_data; content:\"SessionID:\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:42880; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1590",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP faqmanager.cgi arbitrary file access attempt\"; flow:to_server,established; http_uri; content:\"/faqmanager.cgi?\",nocase; content:\"toc=\",distance 0,nocase; content:\"|00|\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3810; reference:cve,2002-2033; reference:nessus,10837; classtype:web-application-attack; sid:1590; rev:18;"
+	"GID": "1",
+	"SID": "1590",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP faqmanager.cgi arbitrary file access attempt\"; flow:to_server,established; http_uri; content:\"/faqmanager.cgi?\",nocase; content:\"toc=\",distance 0,nocase; content:\"|00|\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3810; reference:cve,2002-2033; reference:nessus,10837; classtype:web-application-attack; sid:1590; rev:18;"
 }

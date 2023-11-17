@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "292",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
-  "Option": "msg:\"OS-LINUX x86 Linux samba overflow\"; flow:to_server,established; content:\"|EB|/_|EB|J^|89 FB 89|>|89 F2|\"; metadata:ruleset community; reference:bugtraq,1816; reference:bugtraq,536; reference:cve,1999-0182; reference:cve,1999-0811; classtype:attempted-admin; sid:292; rev:11;"
+	"GID": "1",
+	"SID": "292",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 139",
+	"Option": "msg:\"OS-LINUX x86 Linux samba overflow\"; flow:to_server,established; content:\"|EB|/_|EB|J^|89 FB 89|>|89 F2|\"; metadata:ruleset community; reference:bugtraq,1816; reference:bugtraq,536; reference:cve,1999-0182; reference:cve,1999-0811; classtype:attempted-admin; sid:292; rev:11;"
 }

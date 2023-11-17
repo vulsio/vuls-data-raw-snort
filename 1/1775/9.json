@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1775",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 3306",
-  "Option": "msg:\"SERVER-MYSQL root login attempt\"; flow:to_server,established; content:\"|0A 00 00 01 85 04 00 00 80|root|00|\",fast_pattern,nocase; metadata:ruleset community; service:mysql; classtype:protocol-command-decode; sid:1775; rev:9;"
+	"GID": "1",
+	"SID": "1775",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 3306",
+	"Option": "msg:\"SERVER-MYSQL root login attempt\"; flow:to_server,established; content:\"|0A 00 00 01 85 04 00 00 80|root|00|\",fast_pattern,nocase; metadata:ruleset community; service:mysql; classtype:protocol-command-decode; sid:1775; rev:9;"
 }

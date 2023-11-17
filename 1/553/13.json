@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "553",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"POLICY-OTHER FTP anonymous login attempt\"; flow:to_server,established; content:\"USER\",fast_pattern,nocase; pcre:\"/^USER\\s+(anonymous|ftp)[^\\w]*[\\r\\n]/ims\"; metadata:ruleset community; service:ftp; classtype:misc-activity; sid:553; rev:13;"
+	"GID": "1",
+	"SID": "553",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"POLICY-OTHER FTP anonymous login attempt\"; flow:to_server,established; content:\"USER\",fast_pattern,nocase; pcre:\"/^USER\\s+(anonymous|ftp)[^\\w]*[\\r\\n]/ims\"; metadata:ruleset community; service:ftp; classtype:misc-activity; sid:553; rev:13;"
 }

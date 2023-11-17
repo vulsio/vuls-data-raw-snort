@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1250",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"OS-OTHER Cisco IOS HTTP configuration attempt\"; flow:to_server,established; http_uri; content:\"/level/\"; pcre:\"/\\x2flevel\\x2f\\d+\\x2f(exec|configure)/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2936; reference:cve,2001-0537; reference:nessus,10700; classtype:web-application-attack; sid:1250; rev:22;"
+	"GID": "1",
+	"SID": "1250",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"OS-OTHER Cisco IOS HTTP configuration attempt\"; flow:to_server,established; http_uri; content:\"/level/\"; pcre:\"/\\x2flevel\\x2f\\d+\\x2f(exec|configure)/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2936; reference:cve,2001-0537; reference:nessus,10700; classtype:web-application-attack; sid:1250; rev:22;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2704",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Oracle 10g iSQLPlus login.unix connectID overflow attempt\"; flow:to_server,established; http_uri; content:\"/login.uix\",nocase; pkt_data; content:\"connectID=\",nocase; isdataat:255,relative; pcre:\"/connectID=[^&\\x3b\\r\\n]{255}/ims\"; metadata:ruleset community; service:http; reference:bugtraq,10871; reference:cve,2004-1362; reference:cve,2004-1363; reference:cve,2004-1364; reference:cve,2004-1365; reference:cve,2004-1366; reference:cve,2004-1368; reference:cve,2004-1369; reference:cve,2004-1370; reference:cve,2004-1371; reference:url,www.nextgenss.com/advisories/ora-isqlplus.txt; classtype:web-application-attack; sid:2704; rev:12;"
+	"GID": "1",
+	"SID": "2704",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Oracle 10g iSQLPlus login.unix connectID overflow attempt\"; flow:to_server,established; http_uri; content:\"/login.uix\",nocase; pkt_data; content:\"connectID=\",nocase; isdataat:255,relative; pcre:\"/connectID=[^&\\x3b\\r\\n]{255}/ims\"; metadata:ruleset community; service:http; reference:bugtraq,10871; reference:cve,2004-1362; reference:cve,2004-1363; reference:cve,2004-1364; reference:cve,2004-1365; reference:cve,2004-1366; reference:cve,2004-1368; reference:cve,2004-1369; reference:cve,2004-1370; reference:cve,2004-1371; reference:url,www.nextgenss.com/advisories/ora-isqlplus.txt; classtype:web-application-attack; sid:2704; rev:12;"
 }

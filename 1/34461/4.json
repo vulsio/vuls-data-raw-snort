@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34461",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [25]",
-  "Option": "msg:\"MALWARE-CNC Linux.Trojan.Mumblehard variant outbound connection\"; flow:to_server,established; content:\"POST / HTTP/1.0|0D 0A|Host: \",depth 28; content:\"Content-type: application/x-www-form-urlencoded|0D 0A|Content-Length: \",within 100; content:\"|0D 0A 0D 0A 0F 0F 09|\",within 25,fast_pattern; content:!\"User-Agent: \",nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/file/9512cd72e901d7df95ddbcdfc42cdb16141ff155e0cb0f8321069212e0cd67a8/analysis/1430996623; classtype:trojan-activity; sid:34461; rev:4;"
+	"GID": "1",
+	"SID": "34461",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [25]",
+	"Option": "msg:\"MALWARE-CNC Linux.Trojan.Mumblehard variant outbound connection\"; flow:to_server,established; content:\"POST / HTTP/1.0|0D 0A|Host: \",depth 28; content:\"Content-type: application/x-www-form-urlencoded|0D 0A|Content-Length: \",within 100; content:\"|0D 0A 0D 0A 0F 0F 09|\",within 25,fast_pattern; content:!\"User-Agent: \",nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/file/9512cd72e901d7df95ddbcdfc42cdb16141ff155e0cb0f8321069212e0cd67a8/analysis/1430996623; classtype:trojan-activity; sid:34461; rev:4;"
 }

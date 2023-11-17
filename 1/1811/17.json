@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1811",
-  "Rev": "17",
-  "Header": "alert tcp $HOME_NET 22 -> $EXTERNAL_NET any",
-  "Option": "msg:\"SERVER-OTHER successful gobbles ssh exploit uname\"; flow:to_client,established; content:\"uname\"; metadata:ruleset community; reference:bugtraq,5093; reference:cve,2002-0390; reference:cve,2002-0640; reference:nessus,11031; classtype:misc-attack; sid:1811; rev:17;"
+	"GID": "1",
+	"SID": "1811",
+	"Rev": "17",
+	"Header": "alert tcp $HOME_NET 22 -> $EXTERNAL_NET any",
+	"Option": "msg:\"SERVER-OTHER successful gobbles ssh exploit uname\"; flow:to_client,established; content:\"uname\"; metadata:ruleset community; reference:bugtraq,5093; reference:cve,2002-0390; reference:cve,2002-0640; reference:nessus,11031; classtype:misc-attack; sid:1811; rev:17;"
 }

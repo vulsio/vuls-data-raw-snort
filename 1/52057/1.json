@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "52057",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY Portable Executable binary file magic detected\"; flow:to_client,established; file_data; content:\"ZM\"; byte_jump:4,58,relative,little; content:\"PE|00 00|\",within 4,distance -64; flowbits:set,file.exe; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:52057; rev:1;"
+	"GID": "1",
+	"SID": "52057",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"FILE-IDENTIFY Portable Executable binary file magic detected\"; flow:to_client,established; file_data; content:\"ZM\"; byte_jump:4,58,relative,little; content:\"PE|00 00|\",within 4,distance -64; flowbits:set,file.exe; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:52057; rev:1;"
 }

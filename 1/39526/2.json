@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "39526",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-OFFICE RTF document incorrect file magic attempt\"; flow:to_client,established; flowbits:isset,file.rtf; file_data; content:\"|7B 5C|rt|0D 3C|\",depth 6; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:cve,2015-1641; reference:url,technet.microsoft.com/en-us/security/bulletin/ms15-033; classtype:attempted-user; sid:39526; rev:2;"
+	"GID": "1",
+	"SID": "39526",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"FILE-OFFICE RTF document incorrect file magic attempt\"; flow:to_client,established; flowbits:isset,file.rtf; file_data; content:\"|7B 5C|rt|0D 3C|\",depth 6; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:cve,2015-1641; reference:url,technet.microsoft.com/en-us/security/bulletin/ms15-033; classtype:attempted-user; sid:39526; rev:2;"
 }

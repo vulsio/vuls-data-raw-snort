@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1604",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 4080",
-  "Option": "msg:\"SERVER-WEBAPP iChat directory traversal attempt\"; flow:to_server,established; content:\"/../../\"; metadata:ruleset community; service:http; reference:cve,1999-0897; classtype:web-application-activity; sid:1604; rev:12;"
+	"GID": "1",
+	"SID": "1604",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 4080",
+	"Option": "msg:\"SERVER-WEBAPP iChat directory traversal attempt\"; flow:to_server,established; content:\"/../../\"; metadata:ruleset community; service:http; reference:cve,1999-0897; classtype:web-application-activity; sid:1604; rev:12;"
 }

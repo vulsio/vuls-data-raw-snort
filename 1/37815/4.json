@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "37815",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1720",
-  "Option": "msg:\"POLICY-OTHER Polycom Botnet inbound connection attempt\"; flow:to_server,established; content:\"|03 00|\",depth 2; content:\"|08 02|\",within 2,distance 2; content:\"EE|A8 C6|3\",within 80; content:\"ooh323\",distance 6,fast_pattern; metadata:ruleset community; reference:url,support.polycom.com/global/documents/support/documentation/H_3_2_3_Botnet_Bulletin_v_1_2.pdf; classtype:trojan-activity; sid:37815; rev:4;"
+	"GID": "1",
+	"SID": "37815",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1720",
+	"Option": "msg:\"POLICY-OTHER Polycom Botnet inbound connection attempt\"; flow:to_server,established; content:\"|03 00|\",depth 2; content:\"|08 02|\",within 2,distance 2; content:\"EE|A8 C6|3\",within 80; content:\"ooh323\",distance 6,fast_pattern; metadata:ruleset community; reference:url,support.polycom.com/global/documents/support/documentation/H_3_2_3_Botnet_Bulletin_v_1_2.pdf; classtype:trojan-activity; sid:37815; rev:4;"
 }

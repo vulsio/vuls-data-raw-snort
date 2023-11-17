@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "57738",
-  "Rev": "1",
-  "Header": "alert tcp any any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"POLICY-OTHER Active Directory Federation Services policy store transfer service request detected\"; flow:to_server,established; http_uri; content:\"/adfs/services/policystoretransfer\",fast_pattern,nocase; http_method; content:\"POST\",nocase; metadata:ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2021/04/abusing-replication-stealing-adfs-secrets-over-the-network.html; classtype:misc-activity; sid:57738; rev:1;"
+	"GID": "1",
+	"SID": "57738",
+	"Rev": "1",
+	"Header": "alert tcp any any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"POLICY-OTHER Active Directory Federation Services policy store transfer service request detected\"; flow:to_server,established; http_uri; content:\"/adfs/services/policystoretransfer\",fast_pattern,nocase; http_method; content:\"POST\",nocase; metadata:ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2021/04/abusing-replication-stealing-adfs-secrets-over-the-network.html; classtype:misc-activity; sid:57738; rev:1;"
 }

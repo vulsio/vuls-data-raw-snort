@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "976",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP .bat? access\"; flow:to_server,established; http_uri; content:\".bat?\",fast_pattern,nocase; content:\"/cgi-bin/\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2023; reference:bugtraq,4335; reference:cve,1999-0233; reference:cve,2002-0061; reference:cve,2019-0232; reference:url,support.microsoft.com/support/kb/articles/Q148/1/88.asp; reference:url,support.microsoft.com/support/kb/articles/Q155/0/56.asp; classtype:web-application-activity; sid:976; rev:22;"
+	"GID": "1",
+	"SID": "976",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP .bat? access\"; flow:to_server,established; http_uri; content:\".bat?\",fast_pattern,nocase; content:\"/cgi-bin/\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2023; reference:bugtraq,4335; reference:cve,1999-0233; reference:cve,2002-0061; reference:cve,2019-0232; reference:url,support.microsoft.com/support/kb/articles/Q148/1/88.asp; reference:url,support.microsoft.com/support/kb/articles/Q155/0/56.asp; classtype:web-application-activity; sid:976; rev:22;"
 }

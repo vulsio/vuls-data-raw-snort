@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26911",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Rombrast Trojan outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/info.php?act=\",fast_pattern,nocase; pcre:\"/^\\/info\\.php\\?act\\x3d(list|online)/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/deac0b06fb36e38520b002489dae6fff3d346e72d331c3889e9d2764fe2bcf14/analysis/; classtype:trojan-activity; sid:26911; rev:3;"
+	"GID": "1",
+	"SID": "26911",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Rombrast Trojan outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/info.php?act=\",fast_pattern,nocase; pcre:\"/^\\/info\\.php\\?act\\x3d(list|online)/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/deac0b06fb36e38520b002489dae6fff3d346e72d331c3889e9d2764fe2bcf14/analysis/; classtype:trojan-activity; sid:26911; rev:3;"
 }

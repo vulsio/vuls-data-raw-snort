@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2488",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL WinZip MIME content-disposition buffer overflow\"; flow:to_server,established; content:\"Content-Type|3A|\",fast_pattern,nocase; pcre:\"/name=[^\\r\\n]*?\\.(mim|uue|uu|b64|bhx|hqx|xxe)/ims\"; content:\"Content-Disposition|3A|\",nocase; pcre:\"/name=\\s*[^\\r\\n\\x3b\\s\\x2c]{300}/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,9758; reference:cve,2004-0333; reference:nessus,12621; classtype:attempted-user; sid:2488; rev:18;"
+	"GID": "1",
+	"SID": "2488",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL WinZip MIME content-disposition buffer overflow\"; flow:to_server,established; content:\"Content-Type|3A|\",fast_pattern,nocase; pcre:\"/name=[^\\r\\n]*?\\.(mim|uue|uu|b64|bhx|hqx|xxe)/ims\"; content:\"Content-Disposition|3A|\",nocase; pcre:\"/name=\\s*[^\\r\\n\\x3b\\s\\x2c]{300}/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,9758; reference:cve,2004-0333; reference:nessus,12621; classtype:attempted-user; sid:2488; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21442",
-  "Rev": "6",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC URI request for known malicious URI - base64 encoded\"; flow:to_server,established; content:\"GET http|3A 2F 2F|\",depth 11; base64_decode:relative; base64_data; content:\"clk=\"; content:\"&bid=\",distance 0; content:\"&aid=\",within 5,distance 40; content:\"&sid=\",distance 0; content:\"&rd=\",distance 0; content:\"&x86=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1001; reference:url,attack.mitre.org/techniques/T1132; reference:url,www.damballa.com/tdl4/; classtype:trojan-activity; sid:21442; rev:6;"
+	"GID": "1",
+	"SID": "21442",
+	"Rev": "6",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC URI request for known malicious URI - base64 encoded\"; flow:to_server,established; content:\"GET http|3A 2F 2F|\",depth 11; base64_decode:relative; base64_data; content:\"clk=\"; content:\"&bid=\",distance 0; content:\"&aid=\",within 5,distance 40; content:\"&sid=\",distance 0; content:\"&rd=\",distance 0; content:\"&x86=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1001; reference:url,attack.mitre.org/techniques/T1132; reference:url,www.damballa.com/tdl4/; classtype:trojan-activity; sid:21442; rev:6;"
 }

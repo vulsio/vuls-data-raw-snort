@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49838",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Tpshop remote file include attempt\"; flow:to_server,established; http_uri; content:\"/vendor/phpdocumentor/reflection-docblock/tests/phpDocumentor/Reflection/DocBlock/Tag/LinkTagTeet.php\",fast_pattern,nocase; content:\"down_url=\",nocase; content:\"|3A|/\"; pcre:\"/[?&]down_url=[^&]*?(http|ftp)/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2018-9919; reference:url,seclists.org/fulldisclosure/2018/May/11; classtype:web-application-attack; sid:49838; rev:1;"
+	"GID": "1",
+	"SID": "49838",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Tpshop remote file include attempt\"; flow:to_server,established; http_uri; content:\"/vendor/phpdocumentor/reflection-docblock/tests/phpDocumentor/Reflection/DocBlock/Tag/LinkTagTeet.php\",fast_pattern,nocase; content:\"down_url=\",nocase; content:\"|3A|/\"; pcre:\"/[?&]down_url=[^&]*?(http|ftp)/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2018-9919; reference:url,seclists.org/fulldisclosure/2018/May/11; classtype:web-application-attack; sid:49838; rev:1;"
 }

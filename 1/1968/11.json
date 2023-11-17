@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1968",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP phpbb quick-reply.php access\"; flow:to_server,established; http_uri; content:\"/quick-reply.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6173; reference:cve,2002-2287; classtype:web-application-activity; sid:1968; rev:11;"
+	"GID": "1",
+	"SID": "1968",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP phpbb quick-reply.php access\"; flow:to_server,established; http_uri; content:\"/quick-reply.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6173; reference:cve,2002-2287; classtype:web-application-activity; sid:1968; rev:11;"
 }

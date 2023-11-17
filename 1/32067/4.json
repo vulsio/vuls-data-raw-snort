@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32067",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Asprox outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:46<=>51; http_uri; content:\"/x/\",depth 3,fast_pattern; pkt_data; content:\"UA-CPU: \"; content:\"Connection: Keep-Alive|0D 0A 0D 0A|\"; http_uri; pcre:\"/\\x2fx\\x2f[0-9a-z]{8,10}\\x2f[0-9a-f]{32}\\x2fAA\\x2f0$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8ba8292eaa47967618c2376afe524736f4fa7eec15ed9cca17abfca692d26fe4/analysis/; classtype:trojan-activity; sid:32067; rev:4;"
+	"GID": "1",
+	"SID": "32067",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Asprox outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:46<=>51; http_uri; content:\"/x/\",depth 3,fast_pattern; pkt_data; content:\"UA-CPU: \"; content:\"Connection: Keep-Alive|0D 0A 0D 0A|\"; http_uri; pcre:\"/\\x2fx\\x2f[0-9a-z]{8,10}\\x2f[0-9a-f]{32}\\x2fAA\\x2f0$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8ba8292eaa47967618c2376afe524736f4fa7eec15ed9cca17abfca692d26fe4/analysis/; classtype:trojan-activity; sid:32067; rev:4;"
 }

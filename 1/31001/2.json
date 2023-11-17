@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31001",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE Potential malware download - .pdf.exe within .zip file\"; flow:to_client,established; flowbits:isset,file.zip; file_data; content:\".pdf.exe\",fast_pattern,nocase; http_header; content:\"Content-Length:\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:31001; rev:2;"
+	"GID": "1",
+	"SID": "31001",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE Potential malware download - .pdf.exe within .zip file\"; flow:to_client,established; flowbits:isset,file.zip; file_data; content:\".pdf.exe\",fast_pattern,nocase; http_header; content:\"Content-Length:\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:31001; rev:2;"
 }

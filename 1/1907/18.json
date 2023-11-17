@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1907",
-  "Rev": "18",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-RPC CMSD UDP CMSD_CREATE buffer overflow attempt\"; flow:to_server; content:\"|00 01 86 E4|\",depth 4,offset 12; content:\"|00 00 00 15|\",within 4,distance 4; byte_jump:4,4,relative,align; byte_jump:4,4,relative,align; byte_test:4,>,1024,0,relative; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; service:sunrpc; reference:bugtraq,36615; reference:bugtraq,524; reference:cve,1999-0696; reference:cve,2009-3699; classtype:attempted-admin; sid:1907; rev:18;"
+	"GID": "1",
+	"SID": "1907",
+	"Rev": "18",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-RPC CMSD UDP CMSD_CREATE buffer overflow attempt\"; flow:to_server; content:\"|00 01 86 E4|\",depth 4,offset 12; content:\"|00 00 00 15|\",within 4,distance 4; byte_jump:4,4,relative,align; byte_jump:4,4,relative,align; byte_test:4,>,1024,0,relative; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; service:sunrpc; reference:bugtraq,36615; reference:bugtraq,524; reference:cve,1999-0696; reference:cve,2009-3699; classtype:attempted-admin; sid:1907; rev:18;"
 }

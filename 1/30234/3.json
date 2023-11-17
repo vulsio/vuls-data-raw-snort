@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30234",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Graftor variant outbound connection\"; flow:to_server,established; content:\"|0D 0A|User-Agent: Mozilla/5.0",
-  "Option": "Windows|3B| U|3B| Windows NT 6.1|3B| pt-BR|3B| rv:1.9.2b5) Gecko/20091204 Firefox/3.6b5|0D 0A 0D 0A|\",fast_pattern,nocase; http_header; content:\"|0D 0A|Accept-Encoding: gzip,deflate, identity|0D 0A|\"; pkt_data; content:\" HTTP/1.1|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9ce3d15cbb5bc8cd42570f44ab4eb8f6332c5d0f28291d295883bf2923c01d4b/analysis/; classtype:trojan-activity; sid:30234; rev:3;"
+	"GID": "1",
+	"SID": "30234",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Graftor variant outbound connection\"; flow:to_server,established; content:\"|0D 0A|User-Agent: Mozilla/5.0",
+	"Option": "Windows|3B| U|3B| Windows NT 6.1|3B| pt-BR|3B| rv:1.9.2b5) Gecko/20091204 Firefox/3.6b5|0D 0A 0D 0A|\",fast_pattern,nocase; http_header; content:\"|0D 0A|Accept-Encoding: gzip,deflate, identity|0D 0A|\"; pkt_data; content:\" HTTP/1.1|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9ce3d15cbb5bc8cd42570f44ab4eb8f6332c5d0f28291d295883bf2923c01d4b/analysis/; classtype:trojan-activity; sid:30234; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1486",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS ctss.idc access\"; flow:to_server,established; http_uri; content:\"/ctss.idc\",nocase; metadata:ruleset community; service:http; reference:nessus,10359; classtype:web-application-activity; sid:1486; rev:18;"
+	"GID": "1",
+	"SID": "1486",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS ctss.idc access\"; flow:to_server,established; http_uri; content:\"/ctss.idc\",nocase; metadata:ruleset community; service:http; reference:nessus,10359; classtype:web-application-activity; sid:1486; rev:18;"
 }

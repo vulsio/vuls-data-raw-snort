@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26775",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Blocker variant outbound connection HTTP Header Structure\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_method; content:\"GET\"; http_uri; content:\"/index.html\"; pkt_data; content:\".info|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\",fast_pattern,nocase; pcre:\"/HTTP\\/1.[01]\\r\\nUser\\x2dAgent\\x3a\\x20[ -~]+\\r\\nHost\\x3a\\x20[a-z0-9\\x2d\\x2e]+\\.info\\r\\n/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/c157a06965bf9edc101350c6122d108ccb1d99600cbb6967ef41dfed255f2009/analysis/; classtype:trojan-activity; sid:26775; rev:3;"
+	"GID": "1",
+	"SID": "26775",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Blocker variant outbound connection HTTP Header Structure\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_method; content:\"GET\"; http_uri; content:\"/index.html\"; pkt_data; content:\".info|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\",fast_pattern,nocase; pcre:\"/HTTP\\/1.[01]\\r\\nUser\\x2dAgent\\x3a\\x20[ -~]+\\r\\nHost\\x3a\\x20[a-z0-9\\x2d\\x2e]+\\.info\\r\\n/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/c157a06965bf9edc101350c6122d108ccb1d99600cbb6967ef41dfed255f2009/analysis/; classtype:trojan-activity; sid:26775; rev:3;"
 }

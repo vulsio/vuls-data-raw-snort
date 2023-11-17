@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "911",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion exprcalc access\"; flow:to_server,established; http_uri; content:\"/cfdocs/expeval/exprcalc.cfm\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,115; reference:bugtraq,550; reference:cve,1999-0455; reference:cve,1999-0760; classtype:attempted-recon; sid:911; rev:20;"
+	"GID": "1",
+	"SID": "911",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Adobe Coldfusion exprcalc access\"; flow:to_server,established; http_uri; content:\"/cfdocs/expeval/exprcalc.cfm\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,115; reference:bugtraq,550; reference:cve,1999-0455; reference:cve,1999-0760; classtype:attempted-recon; sid:911; rev:20;"
 }

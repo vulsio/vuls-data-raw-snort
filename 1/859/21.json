@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "859",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP man.sh access\"; flow:to_server,established; http_uri; content:\"/man.sh\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2276; reference:cve,1999-1179; classtype:attempted-recon; sid:859; rev:21;"
+	"GID": "1",
+	"SID": "859",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP man.sh access\"; flow:to_server,established; http_uri; content:\"/man.sh\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2276; reference:cve,1999-1179; classtype:attempted-recon; sid:859; rev:21;"
 }

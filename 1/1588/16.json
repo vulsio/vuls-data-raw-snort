@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1588",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP SalesLogix Eviewer access\"; flow:to_server,established; http_uri; content:\"/slxweb.dll\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1078; reference:bugtraq,1089; reference:cve,2000-0278; reference:cve,2000-0289; classtype:web-application-activity; sid:1588; rev:16;"
+	"GID": "1",
+	"SID": "1588",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP SalesLogix Eviewer access\"; flow:to_server,established; http_uri; content:\"/slxweb.dll\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1078; reference:bugtraq,1089; reference:cve,2000-0278; reference:cve,2000-0289; classtype:web-application-activity; sid:1588; rev:16;"
 }

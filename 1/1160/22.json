@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1160",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Netscape dir index wp\"; flow:to_server,established; http_uri; content:\"?wp-\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1063; reference:cve,2000-0236; reference:nessus,10352; classtype:attempted-recon; sid:1160; rev:22;"
+	"GID": "1",
+	"SID": "1160",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Netscape dir index wp\"; flow:to_server,established; http_uri; content:\"?wp-\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1063; reference:cve,2000-0236; reference:nessus,10352; classtype:attempted-recon; sid:1160; rev:22;"
 }

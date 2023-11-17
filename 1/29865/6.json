@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29865",
-  "Rev": "6",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443 ( msg:\"MALWARE-CNC Win.Trojan.Kuluoz outbound connection\"; flow:to_server,established; content:\" HTTP/1.1|0D 0A|Accept: */*|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|User-Agent: Mozilla/5.0",
-  "Option": "Windows NT 6.1|3B| WOW64|3B| rv:25.0) Gecko/20100101 Firefox/25.0|0D 0A|Host: \",fast_pattern,nocase; content:\"POST /\",depth 6; content:\" HTTP/1.1\",within 9,distance 42; pcre:\"/^POST\\x20\\x2f[A-F\\d]{42}\\x20HTTP/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8b53c46a7dfbe738c558e653f33fccf2004fc294848eee20903daa556bb3af09/analysis/; classtype:trojan-activity; sid:29865; rev:6;"
+	"GID": "1",
+	"SID": "29865",
+	"Rev": "6",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443 ( msg:\"MALWARE-CNC Win.Trojan.Kuluoz outbound connection\"; flow:to_server,established; content:\" HTTP/1.1|0D 0A|Accept: */*|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|User-Agent: Mozilla/5.0",
+	"Option": "Windows NT 6.1|3B| WOW64|3B| rv:25.0) Gecko/20100101 Firefox/25.0|0D 0A|Host: \",fast_pattern,nocase; content:\"POST /\",depth 6; content:\" HTTP/1.1\",within 9,distance 42; pcre:\"/^POST\\x20\\x2f[A-F\\d]{42}\\x20HTTP/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8b53c46a7dfbe738c558e653f33fccf2004fc294848eee20903daa556bb3af09/analysis/; classtype:trojan-activity; sid:29865; rev:6;"
 }

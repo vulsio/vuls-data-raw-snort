@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27110",
-  "Rev": "7",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Blackholev2/Cool exploit kit outbound portable executable request\"; flow:to_server,established; http_uri; content:\"php?sf=\"; content:\"&Ze=\",distance 0; content:\"&m=\",distance 0; pcre:\"/php\\?sf=\\d+\\&Ze=\\d+\\&m=\\d+/\"; flowbits:set,file.exploit_kit.pe; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; classtype:trojan-activity; sid:27110; rev:7;"
+	"GID": "1",
+	"SID": "27110",
+	"Rev": "7",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Blackholev2/Cool exploit kit outbound portable executable request\"; flow:to_server,established; http_uri; content:\"php?sf=\"; content:\"&Ze=\",distance 0; content:\"&m=\",distance 0; pcre:\"/php\\?sf=\\d+\\&Ze=\\d+\\&m=\\d+/\"; flowbits:set,file.exploit_kit.pe; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; classtype:trojan-activity; sid:27110; rev:7;"
 }

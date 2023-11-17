@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28346",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-OBFUSCATION Javascript obfuscation - seen in IFRAMEr Tool attack\"; flow:to_client,established; file_data; content:\"aq=|22|0x|22 3B|ff=String|3B|\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1027; reference:url,attack.mitre.org/techniques/T1140; classtype:trojan-activity; sid:28346; rev:3;"
+	"GID": "1",
+	"SID": "28346",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-OBFUSCATION Javascript obfuscation - seen in IFRAMEr Tool attack\"; flow:to_client,established; file_data; content:\"aq=|22|0x|22 3B|ff=String|3B|\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1027; reference:url,attack.mitre.org/techniques/T1140; classtype:trojan-activity; sid:28346; rev:3;"
 }

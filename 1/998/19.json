@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "998",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS asp-srch attempt\"; flow:to_server,established; http_uri; content:\"|23|filename=*.asp\",nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:998; rev:19;"
+	"GID": "1",
+	"SID": "998",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS asp-srch attempt\"; flow:to_server,established; http_uri; content:\"|23|filename=*.asp\",nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:998; rev:19;"
 }

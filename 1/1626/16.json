@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1626",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS /StoreCSVS/InstantOrder.asmx request\"; flow:to_server,established; http_uri; content:\"/StoreCSVS/InstantOrder.asmx\",nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1626; rev:16;"
+	"GID": "1",
+	"SID": "1626",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS /StoreCSVS/InstantOrder.asmx request\"; flow:to_server,established; http_uri; content:\"/StoreCSVS/InstantOrder.asmx\",nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1626; rev:16;"
 }

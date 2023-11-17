@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "353",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP adm scan\"; flow:to_server,established; content:\"PASS ddd@|0A|\",fast_pattern,nocase; metadata:ruleset community; service:ftp; classtype:suspicious-login; sid:353; rev:13;"
+	"GID": "1",
+	"SID": "353",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP adm scan\"; flow:to_server,established; content:\"PASS ddd@|0A|\",fast_pattern,nocase; metadata:ruleset community; service:ftp; classtype:suspicious-login; sid:353; rev:13;"
 }

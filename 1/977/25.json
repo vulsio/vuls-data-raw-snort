@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "977",
-  "Rev": "25",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS .cnf access\"; flow:to_server,established; http_uri; content:\".cnf\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,4078; reference:cve,2002-1717; reference:nessus,10575; classtype:web-application-activity; sid:977; rev:25;"
+	"GID": "1",
+	"SID": "977",
+	"Rev": "25",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS .cnf access\"; flow:to_server,established; http_uri; content:\".cnf\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,4078; reference:cve,2002-1717; reference:nessus,10575; classtype:web-application-activity; sid:977; rev:25;"
 }

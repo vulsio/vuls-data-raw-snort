@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1443",
-  "Rev": "12",
-  "Header": "alert udp any any -> any 69",
-  "Option": "msg:\"PROTOCOL-TFTP GET passwd\"; flow:to_server; content:\"|00 01|\",depth 2; content:\"passwd\",offset 2,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2021-1437; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-aironet-info-disc-BfWqghj; classtype:successful-admin; sid:1443; rev:12;"
+	"GID": "1",
+	"SID": "1443",
+	"Rev": "12",
+	"Header": "alert udp any any -> any 69",
+	"Option": "msg:\"PROTOCOL-TFTP GET passwd\"; flow:to_server; content:\"|00 01|\",depth 2; content:\"passwd\",offset 2,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2021-1437; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-aironet-info-disc-BfWqghj; classtype:successful-admin; sid:1443; rev:12;"
 }

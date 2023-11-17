@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32335",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS ( msg:\"OS-OTHER Bash CGI environment variable injection attempt\"; flow:to_server,established; content:\"",
-  "Option": ") {\",depth 50; http_uri; bufferlen:>0; pkt_data; content:!\"HTTP/\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:32335; rev:2;"
+	"GID": "1",
+	"SID": "32335",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS ( msg:\"OS-OTHER Bash CGI environment variable injection attempt\"; flow:to_server,established; content:\"",
+	"Option": ") {\",depth 50; http_uri; bufferlen:>0; pkt_data; content:!\"HTTP/\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:32335; rev:2;"
 }

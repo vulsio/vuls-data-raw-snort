@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "195",
-  "Rev": "15",
-  "Header": "alert udp $HOME_NET 2140 -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR DeepThroat 3.1 Server Response\"; flow:to_client; content:\"Ahhhh My Mouth Is Open\"; metadata:ruleset community; reference:nessus,10053; classtype:trojan-activity; sid:195; rev:15;"
+	"GID": "1",
+	"SID": "195",
+	"Rev": "15",
+	"Header": "alert udp $HOME_NET 2140 -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-BACKDOOR DeepThroat 3.1 Server Response\"; flow:to_client; content:\"Ahhhh My Mouth Is Open\"; metadata:ruleset community; reference:nessus,10053; classtype:trojan-activity; sid:195; rev:15;"
 }

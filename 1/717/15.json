@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "717",
-  "Rev": "15",
-  "Header": "alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any",
-  "Option": "msg:\"PROTOCOL-TELNET not on console\"; flow:to_client,established; content:\"not on system console\",fast_pattern,nocase; metadata:ruleset community; service:telnet; classtype:bad-unknown; sid:717; rev:15;"
+	"GID": "1",
+	"SID": "717",
+	"Rev": "15",
+	"Header": "alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any",
+	"Option": "msg:\"PROTOCOL-TELNET not on console\"; flow:to_client,established; content:\"not on system console\",fast_pattern,nocase; metadata:ruleset community; service:telnet; classtype:bad-unknown; sid:717; rev:15;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "909",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion datasource username attempt\"; flow:to_server,established; content:\"CF_SETDATASOURCEUSERNAME|28 29|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,550; reference:cve,1999-0760; classtype:web-application-attack; sid:909; rev:15;"
+	"GID": "1",
+	"SID": "909",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Adobe Coldfusion datasource username attempt\"; flow:to_server,established; content:\"CF_SETDATASOURCEUSERNAME|28 29|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,550; reference:cve,1999-0760; classtype:web-application-attack; sid:909; rev:15;"
 }

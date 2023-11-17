@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3461",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Content-Type overflow attempt\"; flow:to_server,established; content:\"Content-Type\",nocase; content:\"|3A|\",distance 0; pcre:\"/^\\s*Content-Type\\s*\\x3A\\s*[^\\r\\n]{300}/im\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:bugtraq,44732; reference:bugtraq,7419; reference:cve,2003-0113; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-015; classtype:attempted-admin; sid:3461; rev:18;"
+	"GID": "1",
+	"SID": "3461",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL Content-Type overflow attempt\"; flow:to_server,established; content:\"Content-Type\",nocase; content:\"|3A|\",distance 0; pcre:\"/^\\s*Content-Type\\s*\\x3A\\s*[^\\r\\n]{300}/im\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:bugtraq,44732; reference:bugtraq,7419; reference:cve,2003-0113; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-015; classtype:attempted-admin; sid:3461; rev:18;"
 }

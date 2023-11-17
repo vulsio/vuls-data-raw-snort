@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33452",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"PUA-TOOLBARS Win.Toolbar.Crossrider variant outbound connection\"; flow:to_server,established; http_uri; content:\".gif?action=\"; content:\"&browser=\",distance 0; content:\"&osbuild=\",distance 0; content:\"&osprod=\",distance 0; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/06f3bd3df0326b5c3c5b03070d9d870507b868ee4e1acff62f0d301c43492709/analysis/; classtype:trojan-activity; sid:33452; rev:3;"
+	"GID": "1",
+	"SID": "33452",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"PUA-TOOLBARS Win.Toolbar.Crossrider variant outbound connection\"; flow:to_server,established; http_uri; content:\".gif?action=\"; content:\"&browser=\",distance 0; content:\"&osbuild=\",distance 0; content:\"&osprod=\",distance 0; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/06f3bd3df0326b5c3c5b03070d9d870507b868ee4e1acff62f0d301c43492709/analysis/; classtype:trojan-activity; sid:33452; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "47386",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 7001",
-  "Option": "msg:\"SERVER-WEBAPP Oracle WebLogic Server unauthenticated modified JSP access attempt\"; flow:to_server,established; http_uri; content:\"/ws_utc/css/config/keystore/\",fast_pattern,nocase; content:\".jsp\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,104763; reference:cve,2018-2894; reference:url,www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html; classtype:attempted-recon; sid:47386; rev:2;"
+	"GID": "1",
+	"SID": "47386",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 7001",
+	"Option": "msg:\"SERVER-WEBAPP Oracle WebLogic Server unauthenticated modified JSP access attempt\"; flow:to_server,established; http_uri; content:\"/ws_utc/css/config/keystore/\",fast_pattern,nocase; content:\".jsp\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,104763; reference:cve,2018-2894; reference:url,www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html; classtype:attempted-recon; sid:47386; rev:2;"
 }

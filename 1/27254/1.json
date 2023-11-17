@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27254",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Yakes Trojan HTTP Header Structure\"; flow:to_server,established; http_method; content:\"POST\"; pkt_data; content:\".php HTTP/1.1|0D 0A|Cache-Control: \",fast_pattern,nocase; content:\".php HTTP/1.1\",nocase; content:\"|0D 0A|Cache-Control: no-cache|0D 0A|Connection: close|0D 0A|Pragma: no-cache|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|\",within 113; pcre:\"/coded\\r\\nUser\\x2dAgent\\x3a\\x20[ -~]+\\r\\nContent\\x2dLength\\x3a\\x20[2-9][02468]\\r\\nHost\\x3a\\x20[a-z0-9\\x2d\\x2e]+\\r\\n\\r\\n[a-zA-Z0-9\\x2f\\x2b\\x3d]{20,}$/\"; http_client_body; pcre:\"/[\\x2f\\x2b\\x3d]/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/980c4ed3dd130c9313a35434e0b102a6b8b038c98735814834334ccc03e4da3c/analysis/; classtype:trojan-activity; sid:27254; rev:1;"
+	"GID": "1",
+	"SID": "27254",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Yakes Trojan HTTP Header Structure\"; flow:to_server,established; http_method; content:\"POST\"; pkt_data; content:\".php HTTP/1.1|0D 0A|Cache-Control: \",fast_pattern,nocase; content:\".php HTTP/1.1\",nocase; content:\"|0D 0A|Cache-Control: no-cache|0D 0A|Connection: close|0D 0A|Pragma: no-cache|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|\",within 113; pcre:\"/coded\\r\\nUser\\x2dAgent\\x3a\\x20[ -~]+\\r\\nContent\\x2dLength\\x3a\\x20[2-9][02468]\\r\\nHost\\x3a\\x20[a-z0-9\\x2d\\x2e]+\\r\\n\\r\\n[a-zA-Z0-9\\x2f\\x2b\\x3d]{20,}$/\"; http_client_body; pcre:\"/[\\x2f\\x2b\\x3d]/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/980c4ed3dd130c9313a35434e0b102a6b8b038c98735814834334ccc03e4da3c/analysis/; classtype:trojan-activity; sid:27254; rev:1;"
 }

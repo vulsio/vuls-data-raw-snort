@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2041",
-  "Rev": "9",
-  "Header": "alert udp $HOME_NET 49 -> $EXTERNAL_NET any",
-  "Option": "msg:\"INDICATOR-SCAN xtacacs failed login response\"; flow:to_client; content:\"|80 02|\",depth 2; content:\"|02|\",distance 4; metadata:policy max-detect-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:misc-activity; sid:2041; rev:9;"
+	"GID": "1",
+	"SID": "2041",
+	"Rev": "9",
+	"Header": "alert udp $HOME_NET 49 -> $EXTERNAL_NET any",
+	"Option": "msg:\"INDICATOR-SCAN xtacacs failed login response\"; flow:to_client; content:\"|80 02|\",depth 2; content:\"|02|\",distance 4; metadata:policy max-detect-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:misc-activity; sid:2041; rev:9;"
 }

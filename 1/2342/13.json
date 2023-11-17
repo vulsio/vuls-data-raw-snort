@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2342",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP DCP-Portal remote file include lib script attempt\"; flow:to_server,established; http_uri; content:\"/library/lib.php\",fast_pattern,nocase; content:\"root=\"; metadata:ruleset community; service:http; reference:bugtraq,6525; classtype:web-application-attack; sid:2342; rev:13;"
+	"GID": "1",
+	"SID": "2342",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP DCP-Portal remote file include lib script attempt\"; flow:to_server,established; http_uri; content:\"/library/lib.php\",fast_pattern,nocase; content:\"root=\"; metadata:ruleset community; service:http; reference:bugtraq,6525; classtype:web-application-attack; sid:2342; rev:13;"
 }

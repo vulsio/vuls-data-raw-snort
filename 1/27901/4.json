@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27901",
-  "Rev": "4",
-  "Header": "alert udp $SIP_SERVERS $SIP_PORTS -> $EXTERNAL_NET any",
-  "Option": "msg:\"PROTOCOL-VOIP Ghost call attack attempt\"; flow:to_client; sip_stat_code:180; content:\"SIP/2.0\",fast_pattern,nocase; detection_filter:track by_src,count 100,seconds 25; metadata:policy max-detect-ips drop,ruleset community; service:sip; reference:url,blog.sipvicious.org/2008/02/detecting-sip-attacks-with-snort.html; classtype:attempted-recon; sid:27901; rev:4;"
+	"GID": "1",
+	"SID": "27901",
+	"Rev": "4",
+	"Header": "alert udp $SIP_SERVERS $SIP_PORTS -> $EXTERNAL_NET any",
+	"Option": "msg:\"PROTOCOL-VOIP Ghost call attack attempt\"; flow:to_client; sip_stat_code:180; content:\"SIP/2.0\",fast_pattern,nocase; detection_filter:track by_src,count 100,seconds 25; metadata:policy max-detect-ips drop,ruleset community; service:sip; reference:url,blog.sipvicious.org/2008/02/detecting-sip-attacks-with-snort.html; classtype:attempted-recon; sid:27901; rev:4;"
 }

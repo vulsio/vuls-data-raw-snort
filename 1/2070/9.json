@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2070",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP post32.exe arbitrary command attempt\"; flow:to_server,established; http_uri; content:\"/post32.exe|7C|\"; metadata:ruleset community; service:http; reference:bugtraq,1485; classtype:web-application-attack; sid:2070; rev:9;"
+	"GID": "1",
+	"SID": "2070",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP post32.exe arbitrary command attempt\"; flow:to_server,established; http_uri; content:\"/post32.exe|7C|\"; metadata:ruleset community; service:http; reference:bugtraq,1485; classtype:web-application-attack; sid:2070; rev:9;"
 }

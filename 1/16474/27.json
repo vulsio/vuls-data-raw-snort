@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "16474",
-  "Rev": "27",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY Microsoft Compound File Binary v3 file magic detected\"; flow:to_client,established; file_data; content:\"|D0 CF 11 E0 A1 B1 1A E1|\"; content:\">|00 03 00|\",within 4,distance 16; flowbits:set,file.ole; flowbits:noalert; metadata:policy balanced-ips alert,policy connectivity-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:16474; rev:27;"
+	"GID": "1",
+	"SID": "16474",
+	"Rev": "27",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"FILE-IDENTIFY Microsoft Compound File Binary v3 file magic detected\"; flow:to_client,established; file_data; content:\"|D0 CF 11 E0 A1 B1 1A E1|\"; content:\">|00 03 00|\",within 4,distance 16; flowbits:set,file.ole; flowbits:noalert; metadata:policy balanced-ips alert,policy connectivity-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:16474; rev:27;"
 }

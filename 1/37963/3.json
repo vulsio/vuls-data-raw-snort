@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "37963",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"INDICATOR-COMPROMISE malicious file download attempt\"; flow:to_server,established; http_uri; content:\"|2F 70 6F 63|\"; pcre:\"/\\x2f\\x70\\x6f\\x63(\\d*|\\x5f[\\x61-\\x7a]+)\\x2e(\\x68\\x74\\x6d\\x6c|\\x78(\\x6c\\x73|\\x73\\x6c|\\x6d\\x6c)|\\x6a(\\x73|\\x61\\x76a)|\\x61\\x73\\x70|\\x70(\\x64f|\\x70\\x74|\\x48\\x70|\\x73\\x64)|\\x66\\x6c\\x76|\\x73\\x77\\x66|\\x64\\x6fc|\\x74\\x74\\x66|\\x62\\x6d\\x70|\\x6d(\\x70\\x33|\\x33\\x75))/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:misc-activity; sid:37963; rev:3;"
+	"GID": "1",
+	"SID": "37963",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"INDICATOR-COMPROMISE malicious file download attempt\"; flow:to_server,established; http_uri; content:\"|2F 70 6F 63|\"; pcre:\"/\\x2f\\x70\\x6f\\x63(\\d*|\\x5f[\\x61-\\x7a]+)\\x2e(\\x68\\x74\\x6d\\x6c|\\x78(\\x6c\\x73|\\x73\\x6c|\\x6d\\x6c)|\\x6a(\\x73|\\x61\\x76a)|\\x61\\x73\\x70|\\x70(\\x64f|\\x70\\x74|\\x48\\x70|\\x73\\x64)|\\x66\\x6c\\x76|\\x73\\x77\\x66|\\x64\\x6fc|\\x74\\x74\\x66|\\x62\\x6d\\x70|\\x6d(\\x70\\x33|\\x33\\x75))/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:misc-activity; sid:37963; rev:3;"
 }

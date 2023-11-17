@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "59934",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Atlassian Confluence OGNL expression injection attempt\"; flow:to_server,established; http_uri; content:\"${\",fast_pattern; content:\"java\",distance 0; content:\"|28|\",distance 0; content:\"}\",distance 0; pcre:\"/\\x24\\x7b[^\\x7d]*?javax?\\x2e[^\\x7d]*?\\x28/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-26134; classtype:attempted-user; gid:1; sid:59934; rev:2;"
+	"GID": "1",
+	"SID": "59934",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Atlassian Confluence OGNL expression injection attempt\"; flow:to_server,established; http_uri; content:\"${\",fast_pattern; content:\"java\",distance 0; content:\"|28|\",distance 0; content:\"}\",distance 0; pcre:\"/\\x24\\x7b[^\\x7d]*?javax?\\x2e[^\\x7d]*?\\x28/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-26134; classtype:attempted-user; gid:1; sid:59934; rev:2;"
 }

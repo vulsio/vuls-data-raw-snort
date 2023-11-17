@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1859",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 9090",
-  "Option": "msg:\"SERVER-WEBAPP Oracle JavaServer default password login attempt\"; flow:to_server,established; content:\"/servlet/admin\"; content:\"ae9f86d6beaa3f9ecb9a5b7e072a4138\"; metadata:ruleset community; service:http; reference:nessus,10995; reference:url,attack.mitre.org/techniques/T1078; classtype:default-login-attempt; sid:1859; rev:14;"
+	"GID": "1",
+	"SID": "1859",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 9090",
+	"Option": "msg:\"SERVER-WEBAPP Oracle JavaServer default password login attempt\"; flow:to_server,established; content:\"/servlet/admin\"; content:\"ae9f86d6beaa3f9ecb9a5b7e072a4138\"; metadata:ruleset community; service:http; reference:nessus,10995; reference:url,attack.mitre.org/techniques/T1078; classtype:default-login-attempt; sid:1859; rev:14;"
 }

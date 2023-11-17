@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2435",
-  "Rev": "34",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"FILE-IDENTIFY Microsoft emf file download request\"; flow:to_server,established; http_uri; content:\".emf\",fast_pattern,nocase; pcre:\"/\\x2eemf([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.emf; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:bugtraq,10120; reference:bugtraq,28819; reference:bugtraq,9707; reference:cve,2003-0906; reference:cve,2007-5746; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-011; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-032; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-053; reference:url,technet.microsoft.com/en-us/security/bulletin/MS06-001; classtype:misc-activity; gid:1; sid:2435; rev:34;"
+	"GID": "1",
+	"SID": "2435",
+	"Rev": "34",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"FILE-IDENTIFY Microsoft emf file download request\"; flow:to_server,established; http_uri; content:\".emf\",fast_pattern,nocase; pcre:\"/\\x2eemf([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.emf; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:bugtraq,10120; reference:bugtraq,28819; reference:bugtraq,9707; reference:cve,2003-0906; reference:cve,2007-5746; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-011; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-032; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-053; reference:url,technet.microsoft.com/en-us/security/bulletin/MS06-001; classtype:misc-activity; gid:1; sid:2435; rev:34;"
 }

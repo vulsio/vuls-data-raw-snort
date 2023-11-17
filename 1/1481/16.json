@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1481",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP upload.cgi access\"; flow:to_server,established; http_uri; content:\"/upload.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10290; classtype:attempted-recon; sid:1481; rev:16;"
+	"GID": "1",
+	"SID": "1481",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP upload.cgi access\"; flow:to_server,established; http_uri; content:\"/upload.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10290; classtype:attempted-recon; sid:1481; rev:16;"
 }

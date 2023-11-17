@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1455",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP calendar.pl access\"; flow:to_server,established; http_uri; content:\"calendar\",nocase; pcre:\"/calendar(|[-_]admin)\\.pl/i\"; metadata:ruleset community; service:http; reference:bugtraq,1215; reference:cve,2000-0432; classtype:attempted-recon; sid:1455; rev:18;"
+	"GID": "1",
+	"SID": "1455",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP calendar.pl access\"; flow:to_server,established; http_uri; content:\"calendar\",nocase; pcre:\"/calendar(|[-_]admin)\\.pl/i\"; metadata:ruleset community; service:http; reference:bugtraq,1215; reference:cve,2000-0432; classtype:attempted-recon; sid:1455; rev:18;"
 }

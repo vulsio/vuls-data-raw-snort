@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2040",
-  "Rev": "9",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 49",
-  "Option": "msg:\"POLICY-OTHER xtacacs login attempt\"; flow:to_server; content:\"|80 01|\",depth 2; content:\"|00|\",distance 4; metadata:ruleset community; classtype:misc-activity; sid:2040; rev:9;"
+	"GID": "1",
+	"SID": "2040",
+	"Rev": "9",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 49",
+	"Option": "msg:\"POLICY-OTHER xtacacs login attempt\"; flow:to_server; content:\"|80 01|\",depth 2; content:\"|00|\",distance 4; metadata:ruleset community; classtype:misc-activity; sid:2040; rev:9;"
 }

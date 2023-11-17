@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2255",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1024:",
-  "Option": "msg:\"PROTOCOL-RPC sadmind query with root credentials attempt TCP\"; flow:to_server,established; content:\"|00 01 87 88|\",depth 4,offset 16; content:\"|00 00 00 01 00 00 00 01|\",within 8,distance 4; byte_jump:4,8,relative,align; content:\"|00 00 00 00|\",within 4; metadata:ruleset community; classtype:misc-attack; sid:2255; rev:13;"
+	"GID": "1",
+	"SID": "2255",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1024:",
+	"Option": "msg:\"PROTOCOL-RPC sadmind query with root credentials attempt TCP\"; flow:to_server,established; content:\"|00 01 87 88|\",depth 4,offset 16; content:\"|00 00 00 01 00 00 00 01|\",within 8,distance 4; byte_jump:4,8,relative,align; content:\"|00 00 00 00|\",within 4; metadata:ruleset community; classtype:misc-attack; sid:2255; rev:13;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2158",
-  "Rev": "12",
-  "Header": "alert tcp any any <> any 179",
-  "Option": "msg:\"SERVER-OTHER BGP invalid length\"; flow:stateless; content:\"|FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF|\"; byte_test:2,<,19,0,relative; metadata:ruleset community; reference:bugtraq,6213; reference:cve,2002-1350; reference:nessus,14011; reference:nessus,15043; reference:url,sf.net/tracker/index.php?func=detail&aid=744523&group_id=53066&atid=469575; classtype:bad-unknown; sid:2158; rev:12;"
+	"GID": "1",
+	"SID": "2158",
+	"Rev": "12",
+	"Header": "alert tcp any any <> any 179",
+	"Option": "msg:\"SERVER-OTHER BGP invalid length\"; flow:stateless; content:\"|FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF|\"; byte_test:2,<,19,0,relative; metadata:ruleset community; reference:bugtraq,6213; reference:cve,2002-1350; reference:nessus,14011; reference:nessus,15043; reference:url,sf.net/tracker/index.php?func=detail&aid=744523&group_id=53066&atid=469575; classtype:bad-unknown; sid:2158; rev:12;"
 }

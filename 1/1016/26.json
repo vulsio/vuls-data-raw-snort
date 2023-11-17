@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1016",
-  "Rev": "26",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS global.asa access\"; flow:to_server,established; http_uri; content:\"/global.asa\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2000-0778; reference:cve,2001-0004; reference:nessus,10491; reference:nessus,10991; reference:url,technet.microsoft.com/en-us/security/bulletin/ms01-004; classtype:web-application-activity; sid:1016; rev:26;"
+	"GID": "1",
+	"SID": "1016",
+	"Rev": "26",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS global.asa access\"; flow:to_server,established; http_uri; content:\"/global.asa\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2000-0778; reference:cve,2001-0004; reference:nessus,10491; reference:nessus,10991; reference:url,technet.microsoft.com/en-us/security/bulletin/ms01-004; classtype:web-application-activity; sid:1016; rev:26;"
 }

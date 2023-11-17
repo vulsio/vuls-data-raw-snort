@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "39410",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $SMTP_SERVERS [25,587]",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.iSpy variant exfiltration outbound connection\"; flow:to_server,established; content:\"=0D=0A\",fast_pattern,nocase; content:\"iSpy Keylogger\"; content:\"=0D=0ABrowser\"; content:\"=0D=0AWebsite\",within 70; content:\"=0D=0AUsername\",within 70; content:\"=0D=0APassword\",within 70; metadata:impact_flag red,ruleset community; service:smtp; reference:url,attack.mitre.org/techniques/T1020; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/f4e902c1c2647e79167262bf948fe41368bab4d3876255eb3d9edb5ae02097b7/analysis/; classtype:trojan-activity; sid:39410; rev:3;"
+	"GID": "1",
+	"SID": "39410",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $SMTP_SERVERS [25,587]",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.iSpy variant exfiltration outbound connection\"; flow:to_server,established; content:\"=0D=0A\",fast_pattern,nocase; content:\"iSpy Keylogger\"; content:\"=0D=0ABrowser\"; content:\"=0D=0AWebsite\",within 70; content:\"=0D=0AUsername\",within 70; content:\"=0D=0APassword\",within 70; metadata:impact_flag red,ruleset community; service:smtp; reference:url,attack.mitre.org/techniques/T1020; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/f4e902c1c2647e79167262bf948fe41368bab4d3876255eb3d9edb5ae02097b7/analysis/; classtype:trojan-activity; sid:39410; rev:3;"
 }

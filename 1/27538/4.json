@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27538",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER self-signed SSL certificate with default MyCompany Ltd organization name\"; flow:to_client,established; ssl_state:server_hello; content:\"|55 04 0A|\"; content:\"|0E|MyCompany Ltd\",within 14,distance 1; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ssl; reference:url,attack.mitre.org/techniques/T1078; reference:url,en.wikipedia.org/wiki/Self-signed_certificate; reference:url,security.ncsa.illinois.edu/research/grid-howtos/usefulopenssl.html; classtype:policy-violation; sid:27538; rev:4;"
+	"GID": "1",
+	"SID": "27538",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-OTHER self-signed SSL certificate with default MyCompany Ltd organization name\"; flow:to_client,established; ssl_state:server_hello; content:\"|55 04 0A|\"; content:\"|0E|MyCompany Ltd\",within 14,distance 1; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ssl; reference:url,attack.mitre.org/techniques/T1078; reference:url,en.wikipedia.org/wiki/Self-signed_certificate; reference:url,security.ncsa.illinois.edu/research/grid-howtos/usefulopenssl.html; classtype:policy-violation; sid:27538; rev:4;"
 }

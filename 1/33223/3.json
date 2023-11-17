@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33223",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [25,587]",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.HawkEye Keylogger exfiltration attempt - clipboard and screenshot\"; flow:to_server,established; flowbits:isset,hawk.lgr; content:\"name=screenshot\",fast_pattern,nocase; pcre:\"/name\\x3dscreenshot\\d+\\x2e/i\"; metadata:impact_flag red,ruleset community; service:smtp; reference:url,attack.mitre.org/techniques/T1020; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/f4499928a6fee5d37fb711ed6d68708bf116cfc7f284d3295dd30ded7ecf64b2/analysis/; classtype:trojan-activity; sid:33223; rev:3;"
+	"GID": "1",
+	"SID": "33223",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [25,587]",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.HawkEye Keylogger exfiltration attempt - clipboard and screenshot\"; flow:to_server,established; flowbits:isset,hawk.lgr; content:\"name=screenshot\",fast_pattern,nocase; pcre:\"/name\\x3dscreenshot\\d+\\x2e/i\"; metadata:impact_flag red,ruleset community; service:smtp; reference:url,attack.mitre.org/techniques/T1020; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/f4499928a6fee5d37fb711ed6d68708bf116cfc7f284d3295dd30ded7ecf64b2/analysis/; classtype:trojan-activity; sid:33223; rev:3;"
 }

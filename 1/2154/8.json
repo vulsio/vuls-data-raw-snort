@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2154",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP autohtml.php access\"; flow:to_server,established; http_uri; content:\"/autohtml.php\"; metadata:ruleset community; service:http; reference:nessus,11630; classtype:web-application-activity; sid:2154; rev:8;"
+	"GID": "1",
+	"SID": "2154",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP autohtml.php access\"; flow:to_server,established; http_uri; content:\"/autohtml.php\"; metadata:ruleset community; service:http; reference:nessus,11630; classtype:web-application-activity; sid:2154; rev:8;"
 }

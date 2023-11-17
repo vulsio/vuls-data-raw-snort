@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1827",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-APACHE Apache Tomcat servlet mapping cross site scripting attempt\"; flow:to_server,established; http_uri; content:\"/servlet/\"; content:\"/org.apache.\"; metadata:ruleset community; service:http; reference:bugtraq,5193; reference:cve,2002-0682; reference:nessus,11041; classtype:web-application-attack; sid:1827; rev:16;"
+	"GID": "1",
+	"SID": "1827",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-APACHE Apache Tomcat servlet mapping cross site scripting attempt\"; flow:to_server,established; http_uri; content:\"/servlet/\"; content:\"/org.apache.\"; metadata:ruleset community; service:http; reference:bugtraq,5193; reference:cve,2002-0682; reference:nessus,11041; classtype:web-application-attack; sid:1827; rev:16;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "39705",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant inbound connection\"; flow:to_client,established; http_header; content:\"attachment|3B|\"; content:\"filename=\"; content:\"/us.xml\",within 20,fast_pattern; content:\"Content-Type|3A 20|application/octet-stream|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/292c12a4c9cf8724c7bfa9ec73e1b703bd51720ea18cd4528e9be516d05b5628/analysis/1468961317/; classtype:trojan-activity; sid:39705; rev:4;"
+	"GID": "1",
+	"SID": "39705",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant inbound connection\"; flow:to_client,established; http_header; content:\"attachment|3B|\"; content:\"filename=\"; content:\"/us.xml\",within 20,fast_pattern; content:\"Content-Type|3A 20|application/octet-stream|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/292c12a4c9cf8724c7bfa9ec73e1b703bd51720ea18cd4528e9be516d05b5628/analysis/1468961317/; classtype:trojan-activity; sid:39705; rev:4;"
 }

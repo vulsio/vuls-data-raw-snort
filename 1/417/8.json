@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "417",
-  "Rev": "8",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP Information Request\"; icode:0; itype:15; metadata:ruleset community; classtype:misc-activity; sid:417; rev:8;"
+	"GID": "1",
+	"SID": "417",
+	"Rev": "8",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP Information Request\"; icode:0; itype:15; metadata:ruleset community; classtype:misc-activity; sid:417; rev:8;"
 }

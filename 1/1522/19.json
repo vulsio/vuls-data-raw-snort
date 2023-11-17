@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1522",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ans.pl attempt\"; flow:to_server,established; http_uri; content:\"/ans.pl?\",nocase; content:\"p=../../\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,4147; reference:bugtraq,4149; reference:cve,2002-0306; reference:cve,2002-0307; reference:nessus,10875; classtype:web-application-attack; sid:1522; rev:19;"
+	"GID": "1",
+	"SID": "1522",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ans.pl attempt\"; flow:to_server,established; http_uri; content:\"/ans.pl?\",nocase; content:\"p=../../\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,4147; reference:bugtraq,4149; reference:cve,2002-0306; reference:cve,2002-0307; reference:nessus,10875; classtype:web-application-attack; sid:1522; rev:19;"
 }

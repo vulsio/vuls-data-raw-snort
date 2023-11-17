@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1092",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Armada Style Master Index directory traversal\"; flow:to_server,established; http_uri; content:\"/search.cgi?\",nocase; content:\"keys\",distance 0,nocase; pkt_data; content:\"catigory=../\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1772; reference:cve,2000-0924; reference:nessus,10562; reference:url,www.synnergy.net/downloads/advisories/SLA-2000-16.masterindex.txt; classtype:web-application-attack; sid:1092; rev:21;"
+	"GID": "1",
+	"SID": "1092",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Armada Style Master Index directory traversal\"; flow:to_server,established; http_uri; content:\"/search.cgi?\",nocase; content:\"keys\",distance 0,nocase; pkt_data; content:\"catigory=../\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1772; reference:cve,2000-0924; reference:nessus,10562; reference:url,www.synnergy.net/downloads/advisories/SLA-2000-16.masterindex.txt; classtype:web-application-attack; sid:1092; rev:21;"
 }

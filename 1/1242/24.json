@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1242",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS ISAPI .ida access\"; flow:to_server,established; http_uri; content:\".ida\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1065; reference:cve,2000-0071; classtype:web-application-activity; sid:1242; rev:24;"
+	"GID": "1",
+	"SID": "1242",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS ISAPI .ida access\"; flow:to_server,established; http_uri; content:\".ida\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1065; reference:cve,2000-0071; classtype:web-application-activity; sid:1242; rev:24;"
 }

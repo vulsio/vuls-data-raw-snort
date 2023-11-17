@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28430",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Glazunov exploit kit zip file download\"; flow:to_server,established; http_uri; content:\".zip\",fast_pattern; http_header; content:\" Java/1.\"; http_uri; pcre:\"/^\\/\\d+\\/\\d\\.zip$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2013-2471; reference:url,nakedsecurity.sophos.com/2013/07/02/the-four-seasons-of-glazunov-digging-further-into-sibhost-and-flimkit/; classtype:trojan-activity; sid:28430; rev:4;"
+	"GID": "1",
+	"SID": "28430",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Glazunov exploit kit zip file download\"; flow:to_server,established; http_uri; content:\".zip\",fast_pattern; http_header; content:\" Java/1.\"; http_uri; pcre:\"/^\\/\\d+\\/\\d\\.zip$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2013-2471; reference:url,nakedsecurity.sophos.com/2013/07/02/the-four-seasons-of-glazunov-digging-further-into-sibhost-and-flimkit/; classtype:trojan-activity; sid:28430; rev:4;"
 }

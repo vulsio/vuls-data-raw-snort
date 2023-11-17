@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3130",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET 1863 -> $HOME_NET any",
-  "Option": "msg:\"PUA-OTHER Microsoft MSN Messenger png overflow\"; flow:to_client,established; content:\"application/x-msnmsgrp2p\",nocase; content:\"|89|PNG|0D 0A 1A 0A|\",distance 0; content:\"IHDR\",within 4,distance 4; content:\"|03|\",within 1,distance 9; content:\"tRNS\",distance 0; byte_test:4,>,256,-8,relative,big; metadata:ruleset community; reference:bugtraq,10872; reference:cve,2004-0957; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-009; classtype:attempted-user; sid:3130; rev:8;"
+	"GID": "1",
+	"SID": "3130",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET 1863 -> $HOME_NET any",
+	"Option": "msg:\"PUA-OTHER Microsoft MSN Messenger png overflow\"; flow:to_client,established; content:\"application/x-msnmsgrp2p\",nocase; content:\"|89|PNG|0D 0A 1A 0A|\",distance 0; content:\"IHDR\",within 4,distance 4; content:\"|03|\",within 1,distance 9; content:\"tRNS\",distance 0; byte_test:4,>,256,-8,relative,big; metadata:ruleset community; reference:bugtraq,10872; reference:cve,2004-0957; reference:url,technet.microsoft.com/en-us/security/bulletin/MS05-009; classtype:attempted-user; sid:3130; rev:8;"
 }

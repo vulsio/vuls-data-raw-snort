@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1932",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP rpc-smb.pl access\"; flow:to_server,established; http_uri; content:\"/rpc-smb.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1278; classtype:web-application-activity; sid:1932; rev:11;"
+	"GID": "1",
+	"SID": "1932",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP rpc-smb.pl access\"; flow:to_server,established; http_uri; content:\"/rpc-smb.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1278; classtype:web-application-activity; sid:1932; rev:11;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1459",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP bb-histlog.sh access\"; flow:to_server,established; http_uri; content:\"/bb-histlog.sh\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,142; reference:cve,1999-1462; reference:nessus,10025; classtype:attempted-recon; sid:1459; rev:19;"
+	"GID": "1",
+	"SID": "1459",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP bb-histlog.sh access\"; flow:to_server,established; http_uri; content:\"/bb-histlog.sh\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,142; reference:cve,1999-1462; reference:nessus,10025; classtype:attempted-recon; sid:1459; rev:19;"
 }

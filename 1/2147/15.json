@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2147",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP BLNews objects.inc.php4 remote file include attempt\"; flow:to_server,established; http_uri; content:\"/objects.inc.php4\"; pkt_data; content:\"Server[path]=\"; pcre:\"/Server\\x5bpath\\x5d=(https?|ftps?|php)/\"; metadata:ruleset community; service:http; reference:bugtraq,7677; reference:cve,2003-0394; reference:nessus,11647; classtype:web-application-attack; sid:2147; rev:15;"
+	"GID": "1",
+	"SID": "2147",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP BLNews objects.inc.php4 remote file include attempt\"; flow:to_server,established; http_uri; content:\"/objects.inc.php4\"; pkt_data; content:\"Server[path]=\"; pcre:\"/Server\\x5bpath\\x5d=(https?|ftps?|php)/\"; metadata:ruleset community; service:http; reference:bugtraq,7677; reference:cve,2003-0394; reference:nessus,11647; classtype:web-application-attack; sid:2147; rev:15;"
 }

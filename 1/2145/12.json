@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2145",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP TextPortal admin.php default password admin attempt\"; flow:to_server,established; http_uri; content:\"/admin.php\"; pkt_data; content:\"op=admin_enter\"; content:\"password=admin\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7673; reference:nessus,11660; reference:url,attack.mitre.org/techniques/T1078; classtype:web-application-activity; sid:2145; rev:12;"
+	"GID": "1",
+	"SID": "2145",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP TextPortal admin.php default password admin attempt\"; flow:to_server,established; http_uri; content:\"/admin.php\"; pkt_data; content:\"op=admin_enter\"; content:\"password=admin\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7673; reference:nessus,11660; reference:url,attack.mitre.org/techniques/T1078; classtype:web-application-activity; sid:2145; rev:12;"
 }

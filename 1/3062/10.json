@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3062",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP NetScreen SA 5000 delhomepage.cgi access\"; flow:to_server,established; http_uri; content:\"/delhomepage.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9791; reference:cve,2004-0347; classtype:web-application-activity; sid:3062; rev:10;"
+	"GID": "1",
+	"SID": "3062",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP NetScreen SA 5000 delhomepage.cgi access\"; flow:to_server,established; http_uri; content:\"/delhomepage.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9791; reference:cve,2004-0347; classtype:web-application-activity; sid:3062; rev:10;"
 }

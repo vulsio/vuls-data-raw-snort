@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27915",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"PUA-ADWARE Vittalia adware outbound connection - pre install\"; flow:to_server,established; http_uri; content:\"/instapi.php?idMk=\"; content:\"&state=\",distance 0; content:\"&idTime=\",distance 0; content:\"&idA2=\",distance 0; content:\"&xVal=\",distance 0; http_header; content:\"User-Agent|3A| NSIS_ToolkitOffers",
-  "Option": "Mozilla)\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9cdb2b3095cfb94cf8f6204d0f073674dd808b0f742a16216c2f06cf3b5afd50/analysis/1378700802/; classtype:trojan-activity; sid:27915; rev:3;"
+	"GID": "1",
+	"SID": "27915",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"PUA-ADWARE Vittalia adware outbound connection - pre install\"; flow:to_server,established; http_uri; content:\"/instapi.php?idMk=\"; content:\"&state=\",distance 0; content:\"&idTime=\",distance 0; content:\"&idA2=\",distance 0; content:\"&xVal=\",distance 0; http_header; content:\"User-Agent|3A| NSIS_ToolkitOffers",
+	"Option": "Mozilla)\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9cdb2b3095cfb94cf8f6204d0f073674dd808b0f742a16216c2f06cf3b5afd50/analysis/1378700802/; classtype:trojan-activity; sid:27915; rev:3;"
 }

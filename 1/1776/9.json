@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1776",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 3306",
-  "Option": "msg:\"SERVER-MYSQL show databases attempt\"; flow:to_server,established; content:\"|0F 00 00 00 03|show databases\",fast_pattern,nocase; metadata:ruleset community; service:mysql; classtype:protocol-command-decode; sid:1776; rev:9;"
+	"GID": "1",
+	"SID": "1776",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 3306",
+	"Option": "msg:\"SERVER-MYSQL show databases attempt\"; flow:to_server,established; content:\"|0F 00 00 00 03|show databases\",fast_pattern,nocase; metadata:ruleset community; service:mysql; classtype:protocol-command-decode; sid:1776; rev:9;"
 }

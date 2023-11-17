@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1581",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Domino ntsync4.nsf access\"; flow:to_server,established; http_uri; content:\"/ntsync4.nsf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10629; classtype:attempted-recon; sid:1581; rev:14;"
+	"GID": "1",
+	"SID": "1581",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Domino ntsync4.nsf access\"; flow:to_server,established; http_uri; content:\"/ntsync4.nsf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10629; classtype:attempted-recon; sid:1581; rev:14;"
 }

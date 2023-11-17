@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28804",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Injector outbound connection\"; flow:to_server,established; http_client_body; content:\"|0D 0A 0D 0A|&nome=\",fast_pattern,nocase; content:\"conteudo=\",depth 9; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/253b2cb7f6eacaaaca5053f73445defce5df2cd4a5564ebc0721e0323a6c3557/analysis/1383139183/; classtype:trojan-activity; sid:28804; rev:4;"
+	"GID": "1",
+	"SID": "28804",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Injector outbound connection\"; flow:to_server,established; http_client_body; content:\"|0D 0A 0D 0A|&nome=\",fast_pattern,nocase; content:\"conteudo=\",depth 9; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/253b2cb7f6eacaaaca5053f73445defce5df2cd4a5564ebc0721e0323a6c3557/analysis/1383139183/; classtype:trojan-activity; sid:28804; rev:4;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1593",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP FormHandler.cgi external site redirection attempt\"; flow:to_server,established; http_uri; content:\"/FormHandler.cgi\",fast_pattern,nocase; pkt_data; content:\"redirect=http\"; metadata:ruleset community; service:http; reference:bugtraq,798; reference:bugtraq,799; reference:cve,1999-1050; reference:nessus,10075; classtype:web-application-attack; sid:1593; rev:21;"
+	"GID": "1",
+	"SID": "1593",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP FormHandler.cgi external site redirection attempt\"; flow:to_server,established; http_uri; content:\"/FormHandler.cgi\",fast_pattern,nocase; pkt_data; content:\"redirect=http\"; metadata:ruleset community; service:http; reference:bugtraq,798; reference:bugtraq,799; reference:cve,1999-1050; reference:nessus,10075; classtype:web-application-attack; sid:1593; rev:21;"
 }

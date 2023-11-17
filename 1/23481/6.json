@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "23481",
-  "Rev": "6",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-OBFUSCATION hex escaped characters in setTimeout call\"; flow:to_client,established; file_data; content:\"setTimeout|28|\",nocase; content:\"|5C|x\",within 10,nocase; content:\"|5C|x\",within 10,nocase; pcre:\"/setTimeout\\x28[\\x22\\x27][^\\x2C]*?\\x5cx[\\da-f]{2}[^\\x2C]*?[\\da-f]{2,}\\x5cx[\\da-f]{2}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,attack.mitre.org/techniques/T1027; reference:url,attack.mitre.org/techniques/T1140; classtype:bad-unknown; sid:23481; rev:6;"
+	"GID": "1",
+	"SID": "23481",
+	"Rev": "6",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-OBFUSCATION hex escaped characters in setTimeout call\"; flow:to_client,established; file_data; content:\"setTimeout|28|\",nocase; content:\"|5C|x\",within 10,nocase; content:\"|5C|x\",within 10,nocase; pcre:\"/setTimeout\\x28[\\x22\\x27][^\\x2C]*?\\x5cx[\\da-f]{2}[^\\x2C]*?[\\da-f]{2,}\\x5cx[\\da-f]{2}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,attack.mitre.org/techniques/T1027; reference:url,attack.mitre.org/techniques/T1140; classtype:bad-unknown; sid:23481; rev:6;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32038",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"OS-OTHER Bash environment variable injection attempt\"; flow:to_server,established; content:\"() {\",fast_pattern,nocase; content:\"MAIL\",nocase; content:\"FROM|3A|\",distance 0,nocase; pcre:\"/^\\s*?MAIL\\s+?FROM\\x3a[^\\r\\n]*?\\x28\\x29\\s\\x7b/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:32038; rev:3;"
+	"GID": "1",
+	"SID": "32038",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"OS-OTHER Bash environment variable injection attempt\"; flow:to_server,established; content:\"() {\",fast_pattern,nocase; content:\"MAIL\",nocase; content:\"FROM|3A|\",distance 0,nocase; pcre:\"/^\\s*?MAIL\\s+?FROM\\x3a[^\\r\\n]*?\\x28\\x29\\s\\x7b/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:32038; rev:3;"
 }

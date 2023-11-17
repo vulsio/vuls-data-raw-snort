@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1736",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP squirrel mail spell-check arbitrary command attempt\"; flow:to_server,established; http_uri; content:\"/squirrelspell/modules/check_me.mod.php\",fast_pattern,nocase; pkt_data; content:\"SQSPELL_APP[\",nocase; metadata:ruleset community; service:http; reference:bugtraq,3952; classtype:web-application-attack; sid:1736; rev:16;"
+	"GID": "1",
+	"SID": "1736",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP squirrel mail spell-check arbitrary command attempt\"; flow:to_server,established; http_uri; content:\"/squirrelspell/modules/check_me.mod.php\",fast_pattern,nocase; pkt_data; content:\"SQSPELL_APP[\",nocase; metadata:ruleset community; service:http; reference:bugtraq,3952; classtype:web-application-attack; sid:1736; rev:16;"
 }

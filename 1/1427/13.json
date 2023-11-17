@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1427",
-  "Rev": "13",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 162",
-  "Option": "msg:\"PROTOCOL-SNMP PROTOS test-suite-trap-app attempt\"; content:\"08|02 01 00 04 06|public|A4|+|06|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:url,www.ee.oulu.fi/research/ouspg/protos/testing/c06/snmpv1/index.html; classtype:misc-attack; sid:1427; rev:13;"
+	"GID": "1",
+	"SID": "1427",
+	"Rev": "13",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 162",
+	"Option": "msg:\"PROTOCOL-SNMP PROTOS test-suite-trap-app attempt\"; content:\"08|02 01 00 04 06|public|A4|+|06|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:url,www.ee.oulu.fi/research/ouspg/protos/testing/c06/snmpv1/index.html; classtype:misc-attack; sid:1427; rev:13;"
 }

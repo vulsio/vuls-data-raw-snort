@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25766",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Bancos variant outbound connection\"; flow:to_server,established; http_uri; content:\"/cmd.php?cmd=\"; content:\"arq=\",distance 0; content:\"cmd2=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.microsoft.com/security/portal/threat/encyclopedia/entry.aspx?Name=Win32%2fBancos; classtype:trojan-activity; sid:25766; rev:3;"
+	"GID": "1",
+	"SID": "25766",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Bancos variant outbound connection\"; flow:to_server,established; http_uri; content:\"/cmd.php?cmd=\"; content:\"arq=\",distance 0; content:\"cmd2=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.microsoft.com/security/portal/threat/encyclopedia/entry.aspx?Name=Win32%2fBancos; classtype:trojan-activity; sid:25766; rev:3;"
 }

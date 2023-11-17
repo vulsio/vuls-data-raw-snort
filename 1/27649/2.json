@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27649",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Brazilian Banking Trojan data theft\"; flow:to_server,established; http_method; content:\"POST\"; http_client_body; content:\"remetente=\",depth 10; content:\"&destinatario=\",distance 0; content:\"&assunto=\",distance 0; content:\"&mensagem=\",distance 0; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27649; rev:2;"
+	"GID": "1",
+	"SID": "27649",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Brazilian Banking Trojan data theft\"; flow:to_server,established; http_method; content:\"POST\"; http_client_body; content:\"remetente=\",depth 10; content:\"&destinatario=\",distance 0; content:\"&assunto=\",distance 0; content:\"&mensagem=\",distance 0; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27649; rev:2;"
 }

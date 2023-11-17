@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28552",
-  "Rev": "3",
-  "Header": "alert udp $EXTERNAL_NET 2425 -> $HOME_NET 2425",
-  "Option": "msg:\"INDICATOR-SCAN inbound probing for IPTUX messenger port \"; flow:to_server; content:\"iptux\",depth 5,offset 2; content:\"lws|3A|lws\",within 7,distance 9; metadata:policy max-detect-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; reference:url,github.com/iptux-src/iptux; classtype:misc-activity; sid:28552; rev:3;"
+	"GID": "1",
+	"SID": "28552",
+	"Rev": "3",
+	"Header": "alert udp $EXTERNAL_NET 2425 -> $HOME_NET 2425",
+	"Option": "msg:\"INDICATOR-SCAN inbound probing for IPTUX messenger port \"; flow:to_server; content:\"iptux\",depth 5,offset 2; content:\"lws|3A|lws\",within 7,distance 9; metadata:policy max-detect-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; reference:url,github.com/iptux-src/iptux; classtype:misc-activity; sid:28552; rev:3;"
 }

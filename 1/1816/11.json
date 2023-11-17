@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1816",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP directory.php access\"; flow:to_server,established; http_uri; content:\"/directory.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4278; reference:cve,2002-0434; classtype:misc-attack; sid:1816; rev:11;"
+	"GID": "1",
+	"SID": "1816",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP directory.php access\"; flow:to_server,established; http_uri; content:\"/directory.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4278; reference:cve,2002-0434; classtype:misc-attack; sid:1816; rev:11;"
 }

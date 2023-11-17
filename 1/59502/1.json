@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "59502",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3389",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows Server 2003 smart card authentication buffer overflow attempt\"; flow:to_server,established; content:\"|03 00|\"; content:\"|02 F0|\",distance 0; content:\"|64|\",distance 0; content:\"|72 44 43 49|\"; byte_extract:4,12,msg_size,relative,little; content:\"|DC 90 01 08|\",within msg_size,fast_pattern; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:rdp; reference:cve,2017-0176; reference:cve,2017-9073; reference:url,www.securitytracker.com/id/1038264; classtype:attempted-admin; sid:59502; rev:1;"
+	"GID": "1",
+	"SID": "59502",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3389",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows Server 2003 smart card authentication buffer overflow attempt\"; flow:to_server,established; content:\"|03 00|\"; content:\"|02 F0|\",distance 0; content:\"|64|\",distance 0; content:\"|72 44 43 49|\"; byte_extract:4,12,msg_size,relative,little; content:\"|DC 90 01 08|\",within msg_size,fast_pattern; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:rdp; reference:cve,2017-0176; reference:cve,2017-9073; reference:url,www.securitytracker.com/id/1038264; classtype:attempted-admin; sid:59502; rev:1;"
 }

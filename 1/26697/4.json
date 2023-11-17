@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26697",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Cbeplay Ransomware variant outbound connection - POST Body\"; flow:to_server,established; http_uri; content:\"index.php\"; http_client_body; content:\"|3B| name=|22|data|22 3B| filename=|22|\",fast_pattern,nocase; content:\"--\",depth 2; pcre:\"/filename=\\x22\\d+\\x22\\r\\n/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2013/02/cbeplayp-now-target-australia-and-moved.html; classtype:trojan-activity; sid:26697; rev:4;"
+	"GID": "1",
+	"SID": "26697",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Cbeplay Ransomware variant outbound connection - POST Body\"; flow:to_server,established; http_uri; content:\"index.php\"; http_client_body; content:\"|3B| name=|22|data|22 3B| filename=|22|\",fast_pattern,nocase; content:\"--\",depth 2; pcre:\"/filename=\\x22\\d+\\x22\\r\\n/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2013/02/cbeplayp-now-target-australia-and-moved.html; classtype:trojan-activity; sid:26697; rev:4;"
 }

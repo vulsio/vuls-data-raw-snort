@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2587",
-  "Rev": "9",
-  "Header": "alert tcp $HOME_NET 4711 -> $EXTERNAL_NET any",
-  "Option": "msg:\"PUA-P2P eDonkey server response\"; flow:to_client,established; content:\"Server|3A| eMule\",fast_pattern,nocase; metadata:ruleset community; reference:url,www.emule-project.net; classtype:policy-violation; sid:2587; rev:9;"
+	"GID": "1",
+	"SID": "2587",
+	"Rev": "9",
+	"Header": "alert tcp $HOME_NET 4711 -> $EXTERNAL_NET any",
+	"Option": "msg:\"PUA-P2P eDonkey server response\"; flow:to_client,established; content:\"Server|3A| eMule\",fast_pattern,nocase; metadata:ruleset community; reference:url,www.emule-project.net; classtype:policy-violation; sid:2587; rev:9;"
 }

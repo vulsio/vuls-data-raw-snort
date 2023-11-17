@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1944",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP /ecscripts/ecware.exe access\"; flow:to_server,established; http_uri; content:\"/ecscripts/ecware.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6066; classtype:web-application-activity; sid:1944; rev:11;"
+	"GID": "1",
+	"SID": "1944",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP /ecscripts/ecware.exe access\"; flow:to_server,established; http_uri; content:\"/ecscripts/ecware.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6066; classtype:web-application-activity; sid:1944; rev:11;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "966",
-  "Rev": "25",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage .... request\"; flow:to_server,established; http_uri; content:\"..../\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,989; reference:cve,1999-0386; reference:cve,2000-0153; reference:nessus,10142; classtype:web-application-attack; sid:966; rev:25;"
+	"GID": "1",
+	"SID": "966",
+	"Rev": "25",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Microsoft Frontpage .... request\"; flow:to_server,established; http_uri; content:\"..../\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,989; reference:cve,1999-0386; reference:cve,2000-0153; reference:nessus,10142; classtype:web-application-attack; sid:966; rev:25;"
 }

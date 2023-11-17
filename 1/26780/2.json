@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26780",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC cridex HTTP Response - default0.js\"; flow:to_client,established; file_data; content:\"|00|<script type=|22|text/javascript|22| src=|22|/scripts/default0.js|22|></script>|00|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/843ffd922b9bd902d736ddb664b578cde6e3033fa5a14b862b09045c36aa7524/analysis/1369942427/; classtype:trojan-activity; sid:26780; rev:2;"
+	"GID": "1",
+	"SID": "26780",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC cridex HTTP Response - default0.js\"; flow:to_client,established; file_data; content:\"|00|<script type=|22|text/javascript|22| src=|22|/scripts/default0.js|22|></script>|00|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/843ffd922b9bd902d736ddb664b578cde6e3033fa5a14b862b09045c36aa7524/analysis/1369942427/; classtype:trojan-activity; sid:26780; rev:2;"
 }

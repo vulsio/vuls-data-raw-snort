@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "50264",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Downloader.TeamBot outbound cnc connection\"; flow:to_server,established; http_uri; content:\"/7773/uploads/upload.php\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/43fbda74a65668333727c6512562db4f9e712cf1d5ad9dca8f06ae51bb937ba2; classtype:trojan-activity; sid:50264; rev:2;"
+	"GID": "1",
+	"SID": "50264",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Downloader.TeamBot outbound cnc connection\"; flow:to_server,established; http_uri; content:\"/7773/uploads/upload.php\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/43fbda74a65668333727c6512562db4f9e712cf1d5ad9dca8f06ae51bb937ba2; classtype:trojan-activity; sid:50264; rev:2;"
 }

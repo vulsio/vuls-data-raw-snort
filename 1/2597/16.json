@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2597",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Samba SWAT Authorization overflow attempt\"; flow:to_server,established; http_header; content:\"Authorization|3A|\",nocase; content:\"Basic\",within 50,nocase; pcre:\"/^Authorization\\x3a(\\s*|\\s*\\r?\\n\\s+)Basic\\s+=/ims\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,10780; reference:cve,2004-0600; classtype:web-application-attack; sid:2597; rev:16;"
+	"GID": "1",
+	"SID": "2597",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Samba SWAT Authorization overflow attempt\"; flow:to_server,established; http_header; content:\"Authorization|3A|\",nocase; content:\"Basic\",within 50,nocase; pcre:\"/^Authorization\\x3a(\\s*|\\s*\\r?\\n\\s+)Basic\\s+=/ims\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,10780; reference:cve,2004-0600; classtype:web-application-attack; sid:2597; rev:16;"
 }

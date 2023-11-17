@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "935",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion startstop DOS access\"; flow:to_server,established; http_uri; content:\"/cfide/administrator/startstop.html\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,247; reference:cve,1999-0756; classtype:web-application-attack; sid:935; rev:19;"
+	"GID": "1",
+	"SID": "935",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Adobe Coldfusion startstop DOS access\"; flow:to_server,established; http_uri; content:\"/cfide/administrator/startstop.html\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,247; reference:cve,1999-0756; classtype:web-application-attack; sid:935; rev:19;"
 }

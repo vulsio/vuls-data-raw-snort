@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1018",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS iisadmpwd attempt\"; flow:to_server,established; http_uri; content:\"/iisadmpwd/aexp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2110; reference:cve,1999-0407; reference:nessus,10371; classtype:web-application-attack; sid:1018; rev:23;"
+	"GID": "1",
+	"SID": "1018",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS iisadmpwd attempt\"; flow:to_server,established; http_uri; content:\"/iisadmpwd/aexp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2110; reference:cve,1999-0407; reference:nessus,10371; classtype:web-application-attack; sid:1018; rev:23;"
 }

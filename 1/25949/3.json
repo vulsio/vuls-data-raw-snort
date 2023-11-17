@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25949",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zebrocy outbound data connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\".php\"; http_header; content:\"User|2D|Agent|3A 20|Mozilla|2F|3.0|20 28|compatible|3B 20|Indy Library|29 0D 0A|\"; http_client_body; content:\"form-data|3B| name=|22|userfile|22 3B| filename=\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/979c14f993a1cd91f1b890f93a59ab5b14e059e056b9cf069222f529e50a4d5f/; reference:url,www.virustotal.com/#/file/ac9aea57da03206b1df12b5c012537c899bf5d67a5eb8113b4a4d99e0a0eb893/; reference:url,www.virustotal.com/en/file/04edf40eaf652dfab4e8dc2ca21fbf2e99d361746995767071789cc3fa24d2cc/analysis/1361822708/; classtype:trojan-activity; sid:25949; rev:3;"
+	"GID": "1",
+	"SID": "25949",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zebrocy outbound data connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\".php\"; http_header; content:\"User|2D|Agent|3A 20|Mozilla|2F|3.0|20 28|compatible|3B 20|Indy Library|29 0D 0A|\"; http_client_body; content:\"form-data|3B| name=|22|userfile|22 3B| filename=\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/979c14f993a1cd91f1b890f93a59ab5b14e059e056b9cf069222f529e50a4d5f/; reference:url,www.virustotal.com/#/file/ac9aea57da03206b1df12b5c012537c899bf5d67a5eb8113b4a4d99e0a0eb893/; reference:url,www.virustotal.com/en/file/04edf40eaf652dfab4e8dc2ca21fbf2e99d361746995767071789cc3fa24d2cc/analysis/1361822708/; classtype:trojan-activity; sid:25949; rev:3;"
 }

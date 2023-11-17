@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1028",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS query.asp access\"; flow:to_server,established; http_uri; content:\"/issamples/query.asp\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,193; reference:cve,1999-0449; classtype:web-application-activity; sid:1028; rev:22;"
+	"GID": "1",
+	"SID": "1028",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS query.asp access\"; flow:to_server,established; http_uri; content:\"/issamples/query.asp\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,193; reference:cve,1999-0449; classtype:web-application-activity; sid:1028; rev:22;"
 }

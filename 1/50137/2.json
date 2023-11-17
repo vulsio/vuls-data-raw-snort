@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "50137",
-  "Rev": "2",
-  "Header": "alert tcp any any -> $HOME_NET 3389",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows RDP MS_T120 channel bind attempt\"; flow:to_server,established; content:\"MS_T120|00|\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:rdp; reference:cve,2019-0708; reference:url,portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2019-0708; classtype:attempted-admin; sid:50137; rev:2;"
+	"GID": "1",
+	"SID": "50137",
+	"Rev": "2",
+	"Header": "alert tcp any any -> $HOME_NET 3389",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows RDP MS_T120 channel bind attempt\"; flow:to_server,established; content:\"MS_T120|00|\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:rdp; reference:cve,2019-0708; reference:url,portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2019-0708; classtype:attempted-admin; sid:50137; rev:2;"
 }

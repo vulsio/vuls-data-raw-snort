@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1377",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP wu-ftp bad file completion attempt\"; flow:to_server,established; content:\"~\"; content:\"[\",distance 0; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,3581; reference:bugtraq,3707; reference:cve,2001-0550; reference:cve,2001-0886; reference:nessus,10821; classtype:misc-attack; sid:1377; rev:24;"
+	"GID": "1",
+	"SID": "1377",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP wu-ftp bad file completion attempt\"; flow:to_server,established; content:\"~\"; content:\"[\",distance 0; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,3581; reference:bugtraq,3707; reference:cve,2001-0550; reference:cve,2001-0886; reference:nessus,10821; classtype:misc-attack; sid:1377; rev:24;"
 }

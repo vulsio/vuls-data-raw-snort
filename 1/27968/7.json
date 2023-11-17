@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27968",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Backdoor.Chopper web shell connection\"; flow:to_server,established; http_header; content:\"X-Forwarded-For\",nocase; http_client_body; content:\"=Execute\",nocase; content:\"On+Error+Resume+Next:\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1100; reference:url,informationonsecurity.blogspot.com/2012/11/china-chopper-webshell.html; reference:url,www.virustotal.com/en/file/BE24561427D754C0C150272CAB5017D5A2DA64D41BEC74416B8AE363FB07FD77/analysis/; classtype:trojan-activity; sid:27968; rev:7;"
+	"GID": "1",
+	"SID": "27968",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Backdoor.Chopper web shell connection\"; flow:to_server,established; http_header; content:\"X-Forwarded-For\",nocase; http_client_body; content:\"=Execute\",nocase; content:\"On+Error+Resume+Next:\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1100; reference:url,informationonsecurity.blogspot.com/2012/11/china-chopper-webshell.html; reference:url,www.virustotal.com/en/file/BE24561427D754C0C150272CAB5017D5A2DA64D41BEC74416B8AE363FB07FD77/analysis/; classtype:trojan-activity; sid:27968; rev:7;"
 }

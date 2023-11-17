@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31649",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Bancos variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:16; http_uri; content:\"/boydn/boye.html\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|Mozilla/3.0",
-  "Option": "compatible|3B| Indy Library)\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/61cbe9b94bca25503c884bb0c9363b95fac6203534e5b23c5887dde91fbd4951/analysis/1384873658/; classtype:trojan-activity; sid:31649; rev:2;"
+	"GID": "1",
+	"SID": "31649",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Bancos variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:16; http_uri; content:\"/boydn/boye.html\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|Mozilla/3.0",
+	"Option": "compatible|3B| Indy Library)\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/61cbe9b94bca25503c884bb0c9363b95fac6203534e5b23c5887dde91fbd4951/analysis/1384873658/; classtype:trojan-activity; sid:31649; rev:2;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25471",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Pushdo Spiral Traffic\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:39; http_uri; content:\"/?ptrxcz_\",fast_pattern,nocase; pcre:\"/^\\x2f\\x3fptrxcz\\x5f[a-zA-Z0-9]{30}$/i\"; metadata:ruleset community; service:http; reference:url,updates.atomicorp.com/channels/rules/delayed/modsec/10_asl_antimalware.conf; classtype:trojan-activity; sid:25471; rev:4;"
+	"GID": "1",
+	"SID": "25471",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Pushdo Spiral Traffic\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:39; http_uri; content:\"/?ptrxcz_\",fast_pattern,nocase; pcre:\"/^\\x2f\\x3fptrxcz\\x5f[a-zA-Z0-9]{30}$/i\"; metadata:ruleset community; service:http; reference:url,updates.atomicorp.com/channels/rules/delayed/modsec/10_asl_antimalware.conf; classtype:trojan-activity; sid:25471; rev:4;"
 }

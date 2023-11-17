@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49044",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"PUA-ADWARE Osx.Adware.MacSearch variant outbound connection detected\"; flow:to_server,established; http_header; content:\"User-Agent: macsearch/1 CFNetwork/\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/f54bb130f750f77546aebf690ba4b89f0ddb3c27a5e297383d0a30bcaa5f9cb4; classtype:trojan-activity; sid:49044; rev:1;"
+	"GID": "1",
+	"SID": "49044",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"PUA-ADWARE Osx.Adware.MacSearch variant outbound connection detected\"; flow:to_server,established; http_header; content:\"User-Agent: macsearch/1 CFNetwork/\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/f54bb130f750f77546aebf690ba4b89f0ddb3c27a5e297383d0a30bcaa5f9cb4; classtype:trojan-activity; sid:49044; rev:1;"
 }

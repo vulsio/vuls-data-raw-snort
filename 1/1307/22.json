@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1307",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP store.cgi access\"; flow:to_server,established; http_uri; content:\"/store.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2385; reference:cve,2001-0305; reference:nessus,10639; classtype:web-application-activity; sid:1307; rev:22;"
+	"GID": "1",
+	"SID": "1307",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP store.cgi access\"; flow:to_server,established; http_uri; content:\"/store.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2385; reference:cve,2001-0305; reference:nessus,10639; classtype:web-application-activity; sid:1307; rev:22;"
 }

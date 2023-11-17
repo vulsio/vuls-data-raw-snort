@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "904",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion exampleapp application.cfm\"; flow:to_server,established; http_uri; content:\"/cfdocs/exampleapp/email/application.cfm\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1021; reference:cve,2000-0189; reference:cve,2001-0535; classtype:attempted-recon; sid:904; rev:22;"
+	"GID": "1",
+	"SID": "904",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Adobe Coldfusion exampleapp application.cfm\"; flow:to_server,established; http_uri; content:\"/cfdocs/exampleapp/email/application.cfm\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1021; reference:cve,2000-0189; reference:cve,2001-0535; classtype:attempted-recon; sid:904; rev:22;"
 }

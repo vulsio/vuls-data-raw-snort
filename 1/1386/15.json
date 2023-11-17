@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1386",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 139",
-  "Option": "msg:\"SERVER-MSSQL raiserror possible buffer overflow\"; flow:to_server,established; content:\"r|00|a|00|i|00|s|00|e|00|r|00|r|00|o|00|r|00|\",offset 32,nocase; metadata:ruleset community; reference:bugtraq,3733; reference:cve,2001-0542; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-060; classtype:attempted-user; sid:1386; rev:15;"
+	"GID": "1",
+	"SID": "1386",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 139",
+	"Option": "msg:\"SERVER-MSSQL raiserror possible buffer overflow\"; flow:to_server,established; content:\"r|00|a|00|i|00|s|00|e|00|r|00|r|00|o|00|r|00|\",offset 32,nocase; metadata:ruleset community; reference:bugtraq,3733; reference:cve,2001-0542; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-060; classtype:attempted-user; sid:1386; rev:15;"
 }

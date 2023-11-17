@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2124",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 34012",
-  "Option": "msg:\"MALWARE-BACKDOOR Remote PC Access connection\"; flow:to_server,established; content:\"|28 00 01 00 04 00 00 00 00 00 00 00|\",depth 12; metadata:ruleset community; reference:nessus,11673; classtype:trojan-activity; sid:2124; rev:8;"
+	"GID": "1",
+	"SID": "2124",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 34012",
+	"Option": "msg:\"MALWARE-BACKDOOR Remote PC Access connection\"; flow:to_server,established; content:\"|28 00 01 00 04 00 00 00 00 00 00 00|\",depth 12; metadata:ruleset community; reference:nessus,11673; classtype:trojan-activity; sid:2124; rev:8;"
 }

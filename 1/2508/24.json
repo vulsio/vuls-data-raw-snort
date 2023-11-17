@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2508",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [135,139,445,593,1024:]",
-  "Option": "msg:\"OS-WINDOWS DCERPC NCACN-IP-TCP lsass DsRolerUpgradeDownlevelServer overflow attempt\"; flow:to_server,established; dce_iface:uuid 3919286a-b10c-11d0-9ba8-00c04fd92ef5; dce_opnum:\"9\"; dce_stub_data; byte_test:4,>,256,0,dce; metadata:policy max-detect-ips drop,ruleset community; service:netbios-ssn; reference:bugtraq,10108; reference:cve,2003-0533; reference:nessus,12205; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-011; classtype:attempted-admin; sid:2508; rev:24;"
+	"GID": "1",
+	"SID": "2508",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [135,139,445,593,1024:]",
+	"Option": "msg:\"OS-WINDOWS DCERPC NCACN-IP-TCP lsass DsRolerUpgradeDownlevelServer overflow attempt\"; flow:to_server,established; dce_iface:uuid 3919286a-b10c-11d0-9ba8-00c04fd92ef5; dce_opnum:\"9\"; dce_stub_data; byte_test:4,>,256,0,dce; metadata:policy max-detect-ips drop,ruleset community; service:netbios-ssn; reference:bugtraq,10108; reference:cve,2003-0533; reference:nessus,12205; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-011; classtype:attempted-admin; sid:2508; rev:24;"
 }

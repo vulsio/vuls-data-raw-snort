@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "283",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET 80 -> $HOME_NET any",
-  "Option": "msg:\"BROWSER-OTHER Netscape 4.7 client overflow\"; flow:to_client,established; content:\"3|C9 B1 10|?|E9 06|Q<|FA|G3|C0|P|F7 D0|P\"; metadata:ruleset community; reference:bugtraq,822; reference:cve,1999-1189; reference:cve,2000-1187; classtype:attempted-user; sid:283; rev:14;"
+	"GID": "1",
+	"SID": "283",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET 80 -> $HOME_NET any",
+	"Option": "msg:\"BROWSER-OTHER Netscape 4.7 client overflow\"; flow:to_client,established; content:\"3|C9 B1 10|?|E9 06|Q<|FA|G3|C0|P|F7 D0|P\"; metadata:ruleset community; reference:bugtraq,822; reference:cve,1999-1189; reference:cve,2000-1187; classtype:attempted-user; sid:283; rev:14;"
 }

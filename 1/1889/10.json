@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1889",
-  "Rev": "10",
-  "Header": "alert udp $EXTERNAL_NET 2002 -> $HOME_NET 2002",
-  "Option": "msg:\"MALWARE-CNC slapper worm admin traffic\"; content:\"|00 00|E|00 00|E|00 00|@|00|\",depth 10; metadata:ruleset community; reference:url,isc.incidents.org/analysis.html?id=167; reference:url,www.cert.org/advisories/CA-2002-27.html; classtype:trojan-activity; sid:1889; rev:10;"
+	"GID": "1",
+	"SID": "1889",
+	"Rev": "10",
+	"Header": "alert udp $EXTERNAL_NET 2002 -> $HOME_NET 2002",
+	"Option": "msg:\"MALWARE-CNC slapper worm admin traffic\"; content:\"|00 00|E|00 00|E|00 00|@|00|\",depth 10; metadata:ruleset community; reference:url,isc.incidents.org/analysis.html?id=167; reference:url,www.cert.org/advisories/CA-2002-27.html; classtype:trojan-activity; sid:1889; rev:10;"
 }

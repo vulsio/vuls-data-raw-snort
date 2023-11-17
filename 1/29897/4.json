@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29897",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.ExplorerHijack variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:12; http_uri; content:\"/prl/el.html\",fast_pattern,nocase; pkt_data; content:\"Accept: text/html, */*|0D 0A|User-Agent: Mozilla/3.0",
-  "Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b6f44c7466338ea14d1e711491b1d8174ee71e00541759eb18a31f959da521a9/analysis/; reference:url,www.virustotal.com/en/file/de67654959d29ffc5b9ec854d1e9e240ec96090ce8b3f9c3c9b337b7f2a54f8a/analysis/; classtype:trojan-activity; sid:29897; rev:4;"
+	"GID": "1",
+	"SID": "29897",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.ExplorerHijack variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:12; http_uri; content:\"/prl/el.html\",fast_pattern,nocase; pkt_data; content:\"Accept: text/html, */*|0D 0A|User-Agent: Mozilla/3.0",
+	"Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b6f44c7466338ea14d1e711491b1d8174ee71e00541759eb18a31f959da521a9/analysis/; reference:url,www.virustotal.com/en/file/de67654959d29ffc5b9ec854d1e9e240ec96090ce8b3f9c3c9b337b7f2a54f8a/analysis/; classtype:trojan-activity; sid:29897; rev:4;"
 }

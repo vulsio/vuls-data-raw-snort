@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1745",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Messagerie supp_membre.php access\"; flow:to_server,established; http_uri; content:\"/supp_membre.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4635; classtype:web-application-activity; sid:1745; rev:15;"
+	"GID": "1",
+	"SID": "1745",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Messagerie supp_membre.php access\"; flow:to_server,established; http_uri; content:\"/supp_membre.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4635; classtype:web-application-activity; sid:1745; rev:15;"
 }

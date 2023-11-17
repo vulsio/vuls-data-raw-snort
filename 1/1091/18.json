@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1091",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ICQ Webfront HTTP DOS\"; flow:to_server,established; http_uri; content:\"??????????\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1463; reference:cve,2000-1078; classtype:web-application-attack; sid:1091; rev:18;"
+	"GID": "1",
+	"SID": "1091",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ICQ Webfront HTTP DOS\"; flow:to_server,established; http_uri; content:\"??????????\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1463; reference:cve,2000-1078; classtype:web-application-attack; sid:1091; rev:18;"
 }

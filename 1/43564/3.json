@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "43564",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"POLICY-OTHER Teleopti WFM administrative user creation detected\"; flow:to_server,established; http_uri; content:\"/TeleoptiWFM/Administration/AddFirstUser\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,seclists.org/fulldisclosure/2017/Feb/13; classtype:attempted-admin; sid:43564; rev:3;"
+	"GID": "1",
+	"SID": "43564",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"POLICY-OTHER Teleopti WFM administrative user creation detected\"; flow:to_server,established; http_uri; content:\"/TeleoptiWFM/Administration/AddFirstUser\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,seclists.org/fulldisclosure/2017/Feb/13; classtype:attempted-admin; sid:43564; rev:3;"
 }

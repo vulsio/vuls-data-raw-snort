@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33833",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"PUA-ADWARE User-Agent adware OutBrowse/Amonitize\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|Mozilla\"; content:\" Loader|0D 0A|\",within 150,fast_pattern; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:33833; rev:3;"
+	"GID": "1",
+	"SID": "33833",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"PUA-ADWARE User-Agent adware OutBrowse/Amonitize\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|Mozilla\"; content:\" Loader|0D 0A|\",within 150,fast_pattern; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:33833; rev:3;"
 }

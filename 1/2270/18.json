@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2270",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Sendmail RCPT TO prescan too long addresses overflow\"; flow:to_server,established; content:\"RCPT TO|3A|\",fast_pattern,nocase; pcre:\"/^RCPT TO\\x3a\\s*[\\w\\s@\\.]{200,}\\x3b[\\w\\s@\\.]{200,}\\x3b[\\w\\s@\\.]{200}/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,7230; reference:cve,2003-0161; reference:cve,2003-0694; reference:nessus,11499; classtype:attempted-admin; sid:2270; rev:18;"
+	"GID": "1",
+	"SID": "2270",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL Sendmail RCPT TO prescan too long addresses overflow\"; flow:to_server,established; content:\"RCPT TO|3A|\",fast_pattern,nocase; pcre:\"/^RCPT TO\\x3a\\s*[\\w\\s@\\.]{200,}\\x3b[\\w\\s@\\.]{200,}\\x3b[\\w\\s@\\.]{200}/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,7230; reference:cve,2003-0161; reference:cve,2003-0694; reference:nessus,11499; classtype:attempted-admin; sid:2270; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "23621",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-OBFUSCATION known packer routine with secondary obfuscation\"; flow:to_client,established; file_data; content:\"eval(function(p,a,c,k,e,r)\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,attack.mitre.org/techniques/T1027; reference:url,attack.mitre.org/techniques/T1140; reference:url,dean.edwards.name/packer/; classtype:misc-activity; sid:23621; rev:9;"
+	"GID": "1",
+	"SID": "23621",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-OBFUSCATION known packer routine with secondary obfuscation\"; flow:to_client,established; file_data; content:\"eval(function(p,a,c,k,e,r)\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,attack.mitre.org/techniques/T1027; reference:url,attack.mitre.org/techniques/T1140; reference:url,dean.edwards.name/packer/; classtype:misc-activity; sid:23621; rev:9;"
 }

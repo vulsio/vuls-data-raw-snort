@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33444",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.SpyBanker variant outbound connection\"; flow:to_server,established; http_uri; content:\"/m343ff4ufbnmm4uu4nf34m443frr/\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/3.0",
-  "Option": "compatible|3B| Indy Library)|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/66e69ff2c4881a1c95eccd287af3b8db692fd5c9df3caee464f8b4125d46c1a4/analysis/; classtype:trojan-activity; sid:33444; rev:3;"
+	"GID": "1",
+	"SID": "33444",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.SpyBanker variant outbound connection\"; flow:to_server,established; http_uri; content:\"/m343ff4ufbnmm4uu4nf34m443frr/\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/3.0",
+	"Option": "compatible|3B| Indy Library)|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/66e69ff2c4881a1c95eccd287af3b8db692fd5c9df3caee464f8b4125d46c1a4/analysis/; classtype:trojan-activity; sid:33444; rev:3;"
 }

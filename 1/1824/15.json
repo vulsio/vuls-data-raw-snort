@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1824",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP AlienForm alienform.cgi access\"; flow:to_server,established; http_uri; content:\"/alienform.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4983; reference:cve,2002-0934; reference:nessus,11027; classtype:web-application-activity; sid:1824; rev:15;"
+	"GID": "1",
+	"SID": "1824",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP AlienForm alienform.cgi access\"; flow:to_server,established; http_uri; content:\"/alienform.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4983; reference:cve,2002-0934; reference:nessus,11027; classtype:web-application-activity; sid:1824; rev:15;"
 }

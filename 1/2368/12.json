@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2368",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP PhpGedView PGV config_gedcom.php base directory manipulation attempt\"; flow:to_server,established; http_uri; content:\"/config_gedcom.php\",nocase; pkt_data; content:\"PGV_BASE_DIRECTORY\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9368; reference:cve,2004-0030; classtype:web-application-attack; sid:2368; rev:12;"
+	"GID": "1",
+	"SID": "2368",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP PhpGedView PGV config_gedcom.php base directory manipulation attempt\"; flow:to_server,established; http_uri; content:\"/config_gedcom.php\",nocase; pkt_data; content:\"PGV_BASE_DIRECTORY\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9368; reference:cve,2004-0030; classtype:web-application-attack; sid:2368; rev:12;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "974",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS Microsoft Windows IIS directory traversal attempt\"; flow:to_server,established; content:\"..|5C|..\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2218; reference:cve,1999-0229; classtype:web-application-attack; sid:974; rev:23;"
+	"GID": "1",
+	"SID": "974",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS Microsoft Windows IIS directory traversal attempt\"; flow:to_server,established; content:\"..|5C|..\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2218; reference:cve,1999-0229; classtype:web-application-attack; sid:974; rev:23;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2113",
-  "Rev": "6",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 512",
-  "Option": "msg:\"PROTOCOL-SERVICES rexec username overflow attempt\"; flow:to_server,established; content:\"|00|\",offset 9; content:\"|00|\",distance 0; content:\"|00|\",distance 0; metadata:ruleset community; classtype:attempted-admin; sid:2113; rev:6;"
+	"GID": "1",
+	"SID": "2113",
+	"Rev": "6",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 512",
+	"Option": "msg:\"PROTOCOL-SERVICES rexec username overflow attempt\"; flow:to_server,established; content:\"|00|\",offset 9; content:\"|00|\",distance 0; content:\"|00|\",distance 0; metadata:ruleset community; classtype:attempted-admin; sid:2113; rev:6;"
 }

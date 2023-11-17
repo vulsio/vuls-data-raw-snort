@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "62507",
-  "Rev": "1",
-  "Header": "alert http",
-  "Option": "msg:\"SERVER-WEBAPP Atlassian Confluence remote code execution attempt\"; flow:to_server,established; http_uri; content:\"bootstrapStatusProvider.applicationConfig.setupComplete=\",fast_pattern,nocase; content:\"false\",distance 0,nocase; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2023-22515; reference:url,confluence.atlassian.com/kb/faq-for-cve-2023-22515-1295682188.html; classtype:attempted-user; gid:1; sid:62507; rev:1;"
+	"GID": "1",
+	"SID": "62507",
+	"Rev": "1",
+	"Header": "alert http",
+	"Option": "msg:\"SERVER-WEBAPP Atlassian Confluence remote code execution attempt\"; flow:to_server,established; http_uri; content:\"bootstrapStatusProvider.applicationConfig.setupComplete=\",fast_pattern,nocase; content:\"false\",distance 0,nocase; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2023-22515; reference:url,confluence.atlassian.com/kb/faq-for-cve-2023-22515-1295682188.html; classtype:attempted-user; gid:1; sid:62507; rev:1;"
 }

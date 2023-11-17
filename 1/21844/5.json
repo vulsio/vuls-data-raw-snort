@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21844",
-  "Rev": "5",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP System variable in URI attempt - %USERDOMAIN%\"; flow:to_server,established; http_uri; content:\"%USERDOMAIN%\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:21844; rev:5;"
+	"GID": "1",
+	"SID": "21844",
+	"Rev": "5",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP System variable in URI attempt - %USERDOMAIN%\"; flow:to_server,established; http_uri; content:\"%USERDOMAIN%\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:21844; rev:5;"
 }

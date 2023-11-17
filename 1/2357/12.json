@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2357",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP WebChat english.php file include\"; flow:to_server,established; http_uri; content:\"/defines.php\",nocase; pkt_data; content:\"WEBCHATPATH=\",nocase; content:\"english.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7000; reference:cve,2007-0485; classtype:web-application-attack; sid:2357; rev:12;"
+	"GID": "1",
+	"SID": "2357",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP WebChat english.php file include\"; flow:to_server,established; http_uri; content:\"/defines.php\",nocase; pkt_data; content:\"WEBCHATPATH=\",nocase; content:\"english.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7000; reference:cve,2007-0485; classtype:web-application-attack; sid:2357; rev:12;"
 }

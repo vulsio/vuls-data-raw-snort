@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3131",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP mailman directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/mailman/\"; http_raw_uri; content:\".../\"; metadata:ruleset community; service:http; reference:cve,2005-0202; classtype:web-application-attack; sid:3131; rev:10;"
+	"GID": "1",
+	"SID": "3131",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP mailman directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/mailman/\"; http_raw_uri; content:\".../\"; metadata:ruleset community; service:http; reference:cve,2005-0202; classtype:web-application-attack; sid:3131; rev:10;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28806",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"INDICATOR-COMPROMISE potential malware download - single digit .exe file download\"; flow:to_server,established; http_raw_uri; bufferlen:6; pkt_data; content:\".exe\",fast_pattern,nocase; http_uri; pcre:\"/\\/[a-z0-9]\\.exe$/i\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,urlquery.net/search.php?q=%5C%2F%5Ba-zA-Z%5D%5C.%5BEe%5D%5BXx%5D%5BEe%5D%24&type=regexp&start=2013-09-07&end=2013-12-06&max=400; classtype:trojan-activity; sid:28806; rev:3;"
+	"GID": "1",
+	"SID": "28806",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"INDICATOR-COMPROMISE potential malware download - single digit .exe file download\"; flow:to_server,established; http_raw_uri; bufferlen:6; pkt_data; content:\".exe\",fast_pattern,nocase; http_uri; pcre:\"/\\/[a-z0-9]\\.exe$/i\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,urlquery.net/search.php?q=%5C%2F%5Ba-zA-Z%5D%5C.%5BEe%5D%5BXx%5D%5BEe%5D%24&type=regexp&start=2013-09-07&end=2013-12-06&max=400; classtype:trojan-activity; sid:28806; rev:3;"
 }

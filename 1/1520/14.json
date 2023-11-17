@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1520",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP server-info access\"; flow:to_server,established; http_uri; content:\"/server-info\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,httpd.apache.org/docs/mod/mod_info.html; classtype:web-application-activity; sid:1520; rev:14;"
+	"GID": "1",
+	"SID": "1520",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP server-info access\"; flow:to_server,established; http_uri; content:\"/server-info\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,httpd.apache.org/docs/mod/mod_info.html; classtype:web-application-activity; sid:1520; rev:14;"
 }

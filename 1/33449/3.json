@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33449",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.FileEncoder IP geolocation checkin attempt\"; flow:to_server,established; isdataat:213; isdataat:!214; http_raw_uri; bufferlen:1; pkt_data; content:\"GET / HTTP/1.1|0D 0A|User-Agent: Mozilla/4.0",
-  "Option": "compatible|3B| MSIE 6.0|3B| Windows NT 5.1|3B| SV1|3B| .NET4.0C|3B| .NET4.0E|3B| .NET CLR 2.0.50727|3B| .NET CLR 3.0.4506.2152|3B| .NET CLR 3.5.30729)|0D 0A|Host: ip-addr.es|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/17edf82c40df6c7268191def7cbff6e60e78d7388018408800d42581567f78cf/analysis/; classtype:trojan-activity; sid:33449; rev:3;"
+	"GID": "1",
+	"SID": "33449",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.FileEncoder IP geolocation checkin attempt\"; flow:to_server,established; isdataat:213; isdataat:!214; http_raw_uri; bufferlen:1; pkt_data; content:\"GET / HTTP/1.1|0D 0A|User-Agent: Mozilla/4.0",
+	"Option": "compatible|3B| MSIE 6.0|3B| Windows NT 5.1|3B| SV1|3B| .NET4.0C|3B| .NET4.0E|3B| .NET CLR 2.0.50727|3B| .NET CLR 3.0.4506.2152|3B| .NET CLR 3.5.30729)|0D 0A|Host: ip-addr.es|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/17edf82c40df6c7268191def7cbff6e60e78d7388018408800d42581567f78cf/analysis/; classtype:trojan-activity; sid:33449; rev:3;"
 }

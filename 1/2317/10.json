@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2317",
-  "Rev": "10",
-  "Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE CVS non-relative path error response\"; flow:to_client,established; content:\"E cvs server|3A| warning|3A| cannot make directory CVS in /\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,9178; reference:cve,2003-0977; reference:nessus,11947; classtype:misc-attack; sid:2317; rev:10;"
+	"GID": "1",
+	"SID": "2317",
+	"Rev": "10",
+	"Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE CVS non-relative path error response\"; flow:to_client,established; content:\"E cvs server|3A| warning|3A| cannot make directory CVS in /\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,9178; reference:cve,2003-0977; reference:nessus,11947; classtype:misc-attack; sid:2317; rev:10;"
 }

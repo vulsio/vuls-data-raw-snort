@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21327",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent ASafaWeb Scan\"; flow:to_server,established; http_header; content:\"User-Agent|3A| asafaweb.com\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,asafaweb.com; classtype:network-scan; sid:21327; rev:8;"
+	"GID": "1",
+	"SID": "21327",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC User-Agent ASafaWeb Scan\"; flow:to_server,established; http_header; content:\"User-Agent|3A| asafaweb.com\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,asafaweb.com; classtype:network-scan; sid:21327; rev:8;"
 }

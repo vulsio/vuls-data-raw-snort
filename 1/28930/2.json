@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28930",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Fakeav variant outbound data connection\"; flow:to_server,established; http_raw_uri; bufferlen:>150; http_uri; content:\"/?\",depth 2; http_header; content:\"Firefox/4.0b8pre|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/^\\/\\?[a-z0-9]{2}\\=[a-z1-9]{100}/is\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:28930; rev:2;"
+	"GID": "1",
+	"SID": "28930",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Fakeav variant outbound data connection\"; flow:to_server,established; http_raw_uri; bufferlen:>150; http_uri; content:\"/?\",depth 2; http_header; content:\"Firefox/4.0b8pre|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/^\\/\\?[a-z0-9]{2}\\=[a-z1-9]{100}/is\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:28930; rev:2;"
 }

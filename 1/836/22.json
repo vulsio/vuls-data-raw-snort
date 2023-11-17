@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "836",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP textcounter.pl access\"; flow:to_server,established; http_uri; content:\"/textcounter.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2265; reference:cve,1999-1479; reference:nessus,11451; classtype:attempted-recon; sid:836; rev:22;"
+	"GID": "1",
+	"SID": "836",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP textcounter.pl access\"; flow:to_server,established; http_uri; content:\"/textcounter.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2265; reference:cve,1999-1479; reference:nessus,11451; classtype:attempted-recon; sid:836; rev:22;"
 }

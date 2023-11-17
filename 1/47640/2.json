@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "47640",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
-  "Option": "msg:\"SERVER-WEBAPP SSL certificate with null issuer rdnSequence fields detected\"; flow:to_client,established; ssl_state:server_hello; content:\"|30 07 06 03 55 04 06 13 00 31 09 30 07 06 03 55 04 08 13 00 31 09 30 07 06 03 55 04 07 13 00 31 09 30 07 06 03 55 04 0A 13 00 31 09 30 07 06 03 55 04 0B 13 00 31 09 30 07 06 03 55 04 03 13 00|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ssl; classtype:misc-activity; sid:47640; rev:2;"
+	"GID": "1",
+	"SID": "47640",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
+	"Option": "msg:\"SERVER-WEBAPP SSL certificate with null issuer rdnSequence fields detected\"; flow:to_client,established; ssl_state:server_hello; content:\"|30 07 06 03 55 04 06 13 00 31 09 30 07 06 03 55 04 08 13 00 31 09 30 07 06 03 55 04 07 13 00 31 09 30 07 06 03 55 04 0A 13 00 31 09 30 07 06 03 55 04 0B 13 00 31 09 30 07 06 03 55 04 03 13 00|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:ssl; classtype:misc-activity; sid:47640; rev:2;"
 }

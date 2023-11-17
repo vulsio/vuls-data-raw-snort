@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1829",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-APACHE Apache Tomcat TroubleShooter servlet access\"; flow:to_server,established; http_uri; content:\"/examples/servlet/TroubleShooter\"; metadata:ruleset community; service:http; reference:bugtraq,4575; reference:cve,2002-2006; reference:nessus,11046; classtype:web-application-activity; sid:1829; rev:15;"
+	"GID": "1",
+	"SID": "1829",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-APACHE Apache Tomcat TroubleShooter servlet access\"; flow:to_server,established; http_uri; content:\"/examples/servlet/TroubleShooter\"; metadata:ruleset community; service:http; reference:bugtraq,4575; reference:cve,2002-2006; reference:nessus,11046; classtype:web-application-activity; sid:1829; rev:15;"
 }

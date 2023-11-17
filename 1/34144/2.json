@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34144",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"PUA-ADWARE SuperOptimizer installation status\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|NSIS_Inetc",
-  "Option": "Mozilla)|0D 0A|\",fast_pattern,nocase; http_client_body; content:\"|22|event_type|22|\",depth 15,offset 1; content:\"|22|installation_session_id|22|\",within 100; content:\"|22|environment|22|\",distance 0; content:\"|22|command_line|22|\",distance 0; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/1df4d1f316bd526e56b5fa0f84704bac365484c049e6a7c76145cb45e5e32049/analysis/1426449377/; classtype:misc-activity; sid:34144; rev:2;"
+	"GID": "1",
+	"SID": "34144",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"PUA-ADWARE SuperOptimizer installation status\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|NSIS_Inetc",
+	"Option": "Mozilla)|0D 0A|\",fast_pattern,nocase; http_client_body; content:\"|22|event_type|22|\",depth 15,offset 1; content:\"|22|installation_session_id|22|\",within 100; content:\"|22|environment|22|\",distance 0; content:\"|22|command_line|22|\",distance 0; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/1df4d1f316bd526e56b5fa0f84704bac365484c049e6a7c76145cb45e5e32049/analysis/1426449377/; classtype:misc-activity; sid:34144; rev:2;"
 }

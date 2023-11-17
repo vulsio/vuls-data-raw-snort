@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30548",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:6; http_method; content:\"POST\"; http_uri; content:\"/write\"; http_header; content:\"Host: default|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.malwaremustdie.org/2014/03/a-post-to-sting-zeus-p2pgameover-crooks.html; reference:url,www.virustotal.com/en/file/7647eec6ae87c203085fe433f25c78f415baf31d01ee8aa31241241712b46a0d/analysis/; classtype:trojan-activity; sid:30548; rev:3;"
+	"GID": "1",
+	"SID": "30548",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:6; http_method; content:\"POST\"; http_uri; content:\"/write\"; http_header; content:\"Host: default|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.malwaremustdie.org/2014/03/a-post-to-sting-zeus-p2pgameover-crooks.html; reference:url,www.virustotal.com/en/file/7647eec6ae87c203085fe433f25c78f415baf31d01ee8aa31241241712b46a0d/analysis/; classtype:trojan-activity; sid:30548; rev:3;"
 }

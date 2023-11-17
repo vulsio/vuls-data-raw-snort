@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "989",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC sensepost.exe command shell\"; flow:to_server,established; http_uri; content:\"/sensepost.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11003; classtype:web-application-activity; sid:989; rev:18;"
+	"GID": "1",
+	"SID": "989",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC sensepost.exe command shell\"; flow:to_server,established; http_uri; content:\"/sensepost.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11003; classtype:web-application-activity; sid:989; rev:18;"
 }

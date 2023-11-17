@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "711",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
-  "Option": "msg:\"PROTOCOL-TELNET SGI telnetd format bug\"; flow:to_server,established; content:\"_RLD\",fast_pattern,nocase; content:\"bin/sh\"; metadata:ruleset community; service:telnet; reference:bugtraq,1572; reference:cve,2000-0733; classtype:attempted-admin; sid:711; rev:18;"
+	"GID": "1",
+	"SID": "711",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+	"Option": "msg:\"PROTOCOL-TELNET SGI telnetd format bug\"; flow:to_server,established; content:\"_RLD\",fast_pattern,nocase; content:\"bin/sh\"; metadata:ruleset community; service:telnet; reference:bugtraq,1572; reference:cve,2000-0733; classtype:attempted-admin; sid:711; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26275",
-  "Rev": "5",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP DD-WRT httpd cgi-bin remote command execution attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/\",depth 10,nocase; content:\"${IFS}\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,35742; reference:bugtraq,94819; reference:cve,2009-2765; reference:cve,2016-6277; classtype:attempted-admin; sid:26275; rev:5;"
+	"GID": "1",
+	"SID": "26275",
+	"Rev": "5",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP DD-WRT httpd cgi-bin remote command execution attempt\"; flow:to_server,established; http_uri; content:\"/cgi-bin/\",depth 10,nocase; content:\"${IFS}\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,35742; reference:bugtraq,94819; reference:cve,2009-2765; reference:cve,2016-6277; classtype:attempted-admin; sid:26275; rev:5;"
 }

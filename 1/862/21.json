@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "862",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP csh access\"; flow:to_server,established; http_uri; content:\"/csh\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,1999-0509; reference:url,www.cert.org/advisories/CA-1996-11.html; classtype:attempted-recon; sid:862; rev:21;"
+	"GID": "1",
+	"SID": "862",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP csh access\"; flow:to_server,established; http_uri; content:\"/csh\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,1999-0509; reference:url,www.cert.org/advisories/CA-1996-11.html; classtype:attempted-recon; sid:862; rev:21;"
 }

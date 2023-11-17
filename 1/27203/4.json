@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27203",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"INDICATOR-COMPROMISE Apache auto_prepend_file a.control.bin C2 traffic\"; flow:to_server,established; http_header; content:\"User-Agent|3A| SEX|2F|1\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2013/06/apache-php-injection-to-javascript-files.html; classtype:trojan-activity; sid:27203; rev:4;"
+	"GID": "1",
+	"SID": "27203",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"INDICATOR-COMPROMISE Apache auto_prepend_file a.control.bin C2 traffic\"; flow:to_server,established; http_header; content:\"User-Agent|3A| SEX|2F|1\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2013/06/apache-php-injection-to-javascript-files.html; classtype:trojan-activity; sid:27203; rev:4;"
 }

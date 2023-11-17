@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "301",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 515",
-  "Option": "msg:\"SERVER-OTHER LPRng overflow\"; flow:to_server,established; content:\"C|07 89|[|08 8D|K|08 89|C|0C B0 0B CD 80|1|C0 FE C0 CD 80 E8 94 FF FF FF|/bin/sh|0A|\"; metadata:ruleset community; reference:bugtraq,1712; reference:cve,2000-0917; classtype:attempted-admin; sid:301; rev:12;"
+	"GID": "1",
+	"SID": "301",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 515",
+	"Option": "msg:\"SERVER-OTHER LPRng overflow\"; flow:to_server,established; content:\"C|07 89|[|08 8D|K|08 89|C|0C B0 0B CD 80|1|C0 FE C0 CD 80 E8 94 FF FF FF|/bin/sh|0A|\"; metadata:ruleset community; reference:bugtraq,1712; reference:cve,2000-0917; classtype:attempted-admin; sid:301; rev:12;"
 }

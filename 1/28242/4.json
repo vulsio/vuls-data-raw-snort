@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28242",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.KanKan variant connection\"; flow:to_server,established; http_uri; content:\"/?u=\",depth 4; content:\"&u2=\"; content:\"&u5=inststart\"; http_header; content:\"NSIS_Inetc",
-  "Option": "Mozilla)\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/db31bdf400dd0d28487a0d298bc383a4a2912566130ea512b25639b3f95e94c4/analysis/; classtype:trojan-activity; sid:28242; rev:4;"
+	"GID": "1",
+	"SID": "28242",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.KanKan variant connection\"; flow:to_server,established; http_uri; content:\"/?u=\",depth 4; content:\"&u2=\"; content:\"&u5=inststart\"; http_header; content:\"NSIS_Inetc",
+	"Option": "Mozilla)\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/db31bdf400dd0d28487a0d298bc383a4a2912566130ea512b25639b3f95e94c4/analysis/; classtype:trojan-activity; sid:28242; rev:4;"
 }

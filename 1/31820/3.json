@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31820",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Banker.Delf variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_method; content:\"POST\"; http_uri; content:\"/notify.php\"; http_header; content:\"Content-Length: 0|0D 0A|\"; pkt_data; content:\" HTTP/1.0|0D 0A|\"; http_header; content:\"Content-Type: application/x-www-form-urlencoded|0D 0A|\"; content:\"User-Agent|3A 20|Mozilla/4.0",
-  "Option": "compatible|3B| MyApp)|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/dce2799df1da1ad992d37c78ea586dfd0cf673642ecc56ac464fe7a81a6994ca/analysis/; classtype:trojan-activity; sid:31820; rev:3;"
+	"GID": "1",
+	"SID": "31820",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Banker.Delf variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_method; content:\"POST\"; http_uri; content:\"/notify.php\"; http_header; content:\"Content-Length: 0|0D 0A|\"; pkt_data; content:\" HTTP/1.0|0D 0A|\"; http_header; content:\"Content-Type: application/x-www-form-urlencoded|0D 0A|\"; content:\"User-Agent|3A 20|Mozilla/4.0",
+	"Option": "compatible|3B| MyApp)|0D 0A 0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/dce2799df1da1ad992d37c78ea586dfd0cf673642ecc56ac464fe7a81a6994ca/analysis/; classtype:trojan-activity; sid:31820; rev:3;"
 }

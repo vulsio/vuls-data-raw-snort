@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "50989",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Dropper.Clipbanker variant outbound connection\"; flow:to_server,established; http_uri; content:\"/wp-content/plugins/WPSecurity/load.php\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2922662802eed0d2300c3646a7a9ae73209f71b37ab94b25e6df57f6aed7f23e/analysis/; classtype:trojan-activity; sid:50989; rev:1;"
+	"GID": "1",
+	"SID": "50989",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Dropper.Clipbanker variant outbound connection\"; flow:to_server,established; http_uri; content:\"/wp-content/plugins/WPSecurity/load.php\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2922662802eed0d2300c3646a7a9ae73209f71b37ab94b25e6df57f6aed7f23e/analysis/; classtype:trojan-activity; sid:50989; rev:1;"
 }

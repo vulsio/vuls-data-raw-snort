@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33646",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Linux.Trojan.XORDDoS outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:<64; http_uri; content:\"/check.action?iid=\"; content:\"&kernel=\",within 8,distance 32; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e8cb63cc050c952c1168965f597105a128b56114835eb7d40bdec964a0e243dc/analysis/; classtype:trojan-activity; sid:33646; rev:4;"
+	"GID": "1",
+	"SID": "33646",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Linux.Trojan.XORDDoS outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:<64; http_uri; content:\"/check.action?iid=\"; content:\"&kernel=\",within 8,distance 32; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e8cb63cc050c952c1168965f597105a128b56114835eb7d40bdec964a0e243dc/analysis/; classtype:trojan-activity; sid:33646; rev:4;"
 }

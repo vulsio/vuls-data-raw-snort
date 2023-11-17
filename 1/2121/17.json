@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2121",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
-  "Option": "msg:\"PROTOCOL-POP DELE negative argument attempt\"; flow:to_server,established; content:\"DELE\",fast_pattern,nocase; pcre:\"/^DELE\\s+-\\d/ims\"; metadata:ruleset community; service:pop3; reference:bugtraq,6053; reference:bugtraq,7445; reference:cve,2002-1539; reference:nessus,11570; classtype:misc-attack; sid:2121; rev:17;"
+	"GID": "1",
+	"SID": "2121",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
+	"Option": "msg:\"PROTOCOL-POP DELE negative argument attempt\"; flow:to_server,established; content:\"DELE\",fast_pattern,nocase; pcre:\"/^DELE\\s+-\\d/ims\"; metadata:ruleset community; service:pop3; reference:bugtraq,6053; reference:bugtraq,7445; reference:cve,2002-1539; reference:nessus,11570; classtype:misc-attack; sid:2121; rev:17;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2545",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 548",
-  "Option": "msg:\"SERVER-OTHER AFP FPLoginExt username buffer overflow attempt\"; flow:to_server,established; content:\"|00 02|\",depth 2; content:\"?\",within 1,distance 14; content:\"cleartxt passwrd\",nocase; byte_jump:2,1,relative; byte_jump:2,1,relative; isdataat:2,relative; metadata:ruleset community; reference:bugtraq,10271; reference:cve,2004-0430; reference:url,www.atstake.com/research/advisories/2004/a050304-1.txt; classtype:attempted-admin; sid:2545; rev:7;"
+	"GID": "1",
+	"SID": "2545",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 548",
+	"Option": "msg:\"SERVER-OTHER AFP FPLoginExt username buffer overflow attempt\"; flow:to_server,established; content:\"|00 02|\",depth 2; content:\"?\",within 1,distance 14; content:\"cleartxt passwrd\",nocase; byte_jump:2,1,relative; byte_jump:2,1,relative; isdataat:2,relative; metadata:ruleset community; reference:bugtraq,10271; reference:cve,2004-0430; reference:url,www.atstake.com/research/advisories/2004/a050304-1.txt; classtype:attempted-admin; sid:2545; rev:7;"
 }

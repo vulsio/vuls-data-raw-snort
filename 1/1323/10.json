@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1323",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 4321",
-  "Option": "msg:\"SERVER-OTHER rwhoisd format string attempt\"; flow:to_server,established; content:\"-soa %p\"; metadata:ruleset community; reference:bugtraq,3474; reference:cve,2001-0838; reference:nessus,10790; classtype:misc-attack; sid:1323; rev:10;"
+	"GID": "1",
+	"SID": "1323",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 4321",
+	"Option": "msg:\"SERVER-OTHER rwhoisd format string attempt\"; flow:to_server,established; content:\"-soa %p\"; metadata:ruleset community; reference:bugtraq,3474; reference:cve,2001-0838; reference:nessus,10790; classtype:misc-attack; sid:1323; rev:10;"
 }

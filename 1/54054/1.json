@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "54054",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Copperhedge outbound connection\"; flow:to_server,established; http_client_body; content:\"t34kjfdla45l\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/gui/file/b4bf6322c67a23553d5a9af6fcd9510eb613ffac963a21e32a9ced83132a09ba/detection; classtype:trojan-activity; sid:54054; rev:1;"
+	"GID": "1",
+	"SID": "54054",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Copperhedge outbound connection\"; flow:to_server,established; http_client_body; content:\"t34kjfdla45l\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/gui/file/b4bf6322c67a23553d5a9af6fcd9510eb613ffac963a21e32a9ced83132a09ba/detection; classtype:trojan-activity; sid:54054; rev:1;"
 }

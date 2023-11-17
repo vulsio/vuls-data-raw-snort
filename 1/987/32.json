@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "987",
-  "Rev": "32",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"FILE-IDENTIFY .htr access file download request\"; flow:to_server,established; http_uri; content:\".htr\",fast_pattern,nocase; pcre:\"/\\x2ehtr([\\?\\x5c\\x2f]|$)/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1488; reference:cve,2000-0630; reference:cve,2001-0004; reference:nessus,10680; reference:url,technet.microsoft.com/en-us/security/bulletin/ms01-004; classtype:misc-activity; sid:987; rev:32;"
+	"GID": "1",
+	"SID": "987",
+	"Rev": "32",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"FILE-IDENTIFY .htr access file download request\"; flow:to_server,established; http_uri; content:\".htr\",fast_pattern,nocase; pcre:\"/\\x2ehtr([\\?\\x5c\\x2f]|$)/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1488; reference:cve,2000-0630; reference:cve,2001-0004; reference:nessus,10680; reference:url,technet.microsoft.com/en-us/security/bulletin/ms01-004; classtype:misc-activity; sid:987; rev:32;"
 }

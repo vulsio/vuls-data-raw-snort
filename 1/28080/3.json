@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28080",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Napolar data theft\"; flow:to_server,established; http_client_body; content:\".exe&h=\",fast_pattern,nocase; content:\"p=\",depth 2; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/12781be5908ecc3dbf4a459e4cbc7bedb654b50236f7a961e85f3af5e2275ddf/analysis/; classtype:trojan-activity; sid:28080; rev:3;"
+	"GID": "1",
+	"SID": "28080",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Napolar data theft\"; flow:to_server,established; http_client_body; content:\".exe&h=\",fast_pattern,nocase; content:\"p=\",depth 2; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/12781be5908ecc3dbf4a459e4cbc7bedb654b50236f7a961e85f3af5e2275ddf/analysis/; classtype:trojan-activity; sid:28080; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27256",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kryptik Drive-by Download Malware\"; flow:to_server,established; http_method; content:\"GET\"; http_uri; content:\".php?id=\",offset 6,fast_pattern; http_header; content:\" HTTP/1.\",within 11,distance 1; content:\"|0D 0A|User-Agent: Mozilla/\",within 22,distance 1; pcre:\"/\\)\\r\\nHost\\x3a\\x20[a-z0-9\\x2d\\x2e]+\\r\\n(Cache\\x2dControl|Pragma)\\x3a\\x20no-cache\\r\\n\\r\\n$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,threatpost.com/nsa-whistleblower-article-redirects-to-malware; reference:url,www.virustotal.com/en/file/5d7b09613c03cb3b54b9ab7a886558bba38861a899638f4318c09eaa56401821/analysis/1373466967/; classtype:trojan-activity; sid:27256; rev:3;"
+	"GID": "1",
+	"SID": "27256",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kryptik Drive-by Download Malware\"; flow:to_server,established; http_method; content:\"GET\"; http_uri; content:\".php?id=\",offset 6,fast_pattern; http_header; content:\" HTTP/1.\",within 11,distance 1; content:\"|0D 0A|User-Agent: Mozilla/\",within 22,distance 1; pcre:\"/\\)\\r\\nHost\\x3a\\x20[a-z0-9\\x2d\\x2e]+\\r\\n(Cache\\x2dControl|Pragma)\\x3a\\x20no-cache\\r\\n\\r\\n$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,threatpost.com/nsa-whistleblower-article-redirects-to-malware; reference:url,www.virustotal.com/en/file/5d7b09613c03cb3b54b9ab7a886558bba38861a899638f4318c09eaa56401821/analysis/1373466967/; classtype:trojan-activity; sid:27256; rev:3;"
 }

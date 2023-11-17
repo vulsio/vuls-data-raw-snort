@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2582",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"OS-WINDOWS SAP Crystal Reports crystalImageHandler.asp directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/crystalimagehandler\",fast_pattern,nocase; content:\"dynamicimage=../\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,10260; reference:cve,2004-0204; reference:nessus,12271; reference:url,technet.microsoft.com/en-us/security/bulletin/ms04-017; classtype:web-application-attack; sid:2582; rev:18;"
+	"GID": "1",
+	"SID": "2582",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"OS-WINDOWS SAP Crystal Reports crystalImageHandler.asp directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/crystalimagehandler\",fast_pattern,nocase; content:\"dynamicimage=../\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,10260; reference:cve,2004-0204; reference:nessus,12271; reference:url,technet.microsoft.com/en-us/security/bulletin/ms04-017; classtype:web-application-attack; sid:2582; rev:18;"
 }

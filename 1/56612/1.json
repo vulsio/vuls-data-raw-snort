@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56612",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> any $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Rat.Tool.FeyeYelp variant outbound beacon attempt\"; flow:to_server,established; http_header; content:\"Sec-Fetch-Dest:\",nocase; content:\"empty\",within 10,nocase; http_uri; content:\"request_origin=user\",fast_pattern,nocase; content:\"parent_request_id=\",nocase; pcre:\"/parent_request_id=[^&\\x3B]{128}/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56612; rev:1;"
+	"GID": "1",
+	"SID": "56612",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> any $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Rat.Tool.FeyeYelp variant outbound beacon attempt\"; flow:to_server,established; http_header; content:\"Sec-Fetch-Dest:\",nocase; content:\"empty\",within 10,nocase; http_uri; content:\"request_origin=user\",fast_pattern,nocase; content:\"parent_request_id=\",nocase; pcre:\"/parent_request_id=[^&\\x3B]{128}/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56612; rev:1;"
 }

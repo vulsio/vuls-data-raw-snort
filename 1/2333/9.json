@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2333",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP RENAME format string attempt\"; flow:to_server,established; content:\"RENAME\",fast_pattern,nocase; pcre:\"/^RENAME\\s[^\\n]*?%[^\\n]*?%/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,9262; classtype:misc-attack; sid:2333; rev:9;"
+	"GID": "1",
+	"SID": "2333",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP RENAME format string attempt\"; flow:to_server,established; content:\"RENAME\",fast_pattern,nocase; pcre:\"/^RENAME\\s[^\\n]*?%[^\\n]*?%/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,9262; classtype:misc-attack; sid:2333; rev:9;"
 }

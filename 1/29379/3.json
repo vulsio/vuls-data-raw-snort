@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29379",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [777,778]",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper outbound encrypted traffic - potential exfiltration\"; flow:to_server,established; isdataat:1440; content:\"|03 2B 82 86 02 A0 05|\",fast_pattern,nocase; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1020; reference:url,www.virustotal.com/en/file/20b49af8b750a1899117827476402ccaf7095fb5b7aad2e96c8109290da453cb/analysis/; reference:url,www.virustotal.com/en/file/559e8dbe388c8c103996b208eb5532e295da717f84b4a7ddf5c9885de8115606/analysis/; classtype:trojan-activity; sid:29379; rev:3;"
+	"GID": "1",
+	"SID": "29379",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [777,778]",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper outbound encrypted traffic - potential exfiltration\"; flow:to_server,established; isdataat:1440; content:\"|03 2B 82 86 02 A0 05|\",fast_pattern,nocase; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1020; reference:url,www.virustotal.com/en/file/20b49af8b750a1899117827476402ccaf7095fb5b7aad2e96c8109290da453cb/analysis/; reference:url,www.virustotal.com/en/file/559e8dbe388c8c103996b208eb5532e295da717f84b4a7ddf5c9885de8115606/analysis/; classtype:trojan-activity; sid:29379; rev:3;"
 }

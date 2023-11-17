@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27775",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Fareit variant outbound connection\"; flow:to_server,established; http_method; content:\"GET\"; http_uri; content:\".htm\"; http_header; content:!\"Accept\"; content:\"|0A|Content-Length: 164|0D 0A|User-Agent: \",fast_pattern,nocase; content:\"host|3A|\",nocase; content:\"|2E|\",within 5; content:\"|2E|\",within 4; content:\"|2E|\",within 4; http_client_body; content:\"|6C 55 55 45|\",depth 4,offset 4; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27775; rev:5;"
+	"GID": "1",
+	"SID": "27775",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Fareit variant outbound connection\"; flow:to_server,established; http_method; content:\"GET\"; http_uri; content:\".htm\"; http_header; content:!\"Accept\"; content:\"|0A|Content-Length: 164|0D 0A|User-Agent: \",fast_pattern,nocase; content:\"host|3A|\",nocase; content:\"|2E|\",within 5; content:\"|2E|\",within 4; content:\"|2E|\",within 4; http_client_body; content:\"|6C 55 55 45|\",depth 4,offset 4; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27775; rev:5;"
 }

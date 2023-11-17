@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25224",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess URI and Referer\"; flow:to_server,established; http_raw_uri; bufferlen:52; http_header; content:\"/s/?k=\",fast_pattern,nocase; http_uri; pcre:\"/^\\x2f[a-z0-9]{51}$/i\"; http_header; pcre:\"/Referer\\x3a\\s*?http\\x3a\\x2f{2}[a-z0-9\\x2e\\x2d]+\\x2fs\\x2f\\x3fk\\x3d/i\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:25224; rev:3;"
+	"GID": "1",
+	"SID": "25224",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess URI and Referer\"; flow:to_server,established; http_raw_uri; bufferlen:52; http_header; content:\"/s/?k=\",fast_pattern,nocase; http_uri; pcre:\"/^\\x2f[a-z0-9]{51}$/i\"; http_header; pcre:\"/Referer\\x3a\\s*?http\\x3a\\x2f{2}[a-z0-9\\x2e\\x2d]+\\x2fs\\x2f\\x3fk\\x3d/i\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:25224; rev:3;"
 }

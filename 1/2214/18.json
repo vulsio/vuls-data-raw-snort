@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2214",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP 3R Soft MailStudio 2000 mailview.cgi access\"; flow:to_server,established; http_uri; content:\"/mailview.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1335; reference:bugtraq,4579; reference:cve,2000-0526; reference:nessus,11748; classtype:web-application-activity; sid:2214; rev:18;"
+	"GID": "1",
+	"SID": "2214",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP 3R Soft MailStudio 2000 mailview.cgi access\"; flow:to_server,established; http_uri; content:\"/mailview.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1335; reference:bugtraq,4579; reference:cve,2000-0526; reference:nessus,11748; classtype:web-application-activity; sid:2214; rev:18;"
 }

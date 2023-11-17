@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2150",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ttCMS header.php remote file include attempt\"; flow:to_server,established; http_uri; content:\"/admin/templates/header.php\",fast_pattern,nocase; content:\"admin_root=\",nocase; pcre:\"/admin_root=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,7542; reference:bugtraq,7543; reference:bugtraq,7625; reference:cve,2003-1458; reference:cve,2003-1459; reference:nessus,11636; classtype:web-application-attack; sid:2150; rev:20;"
+	"GID": "1",
+	"SID": "2150",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ttCMS header.php remote file include attempt\"; flow:to_server,established; http_uri; content:\"/admin/templates/header.php\",fast_pattern,nocase; content:\"admin_root=\",nocase; pcre:\"/admin_root=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,7542; reference:bugtraq,7543; reference:bugtraq,7625; reference:cve,2003-1458; reference:cve,2003-1459; reference:nessus,11636; classtype:web-application-attack; sid:2150; rev:20;"
 }

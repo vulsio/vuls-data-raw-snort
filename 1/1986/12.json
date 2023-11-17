@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1986",
-  "Rev": "12",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 1863",
-  "Option": "msg:\"POLICY-SOCIAL Microsoft MSN outbound file transfer request\"; flow:established; content:\"MSG \",depth 4; content:\"Content-Type|3A| application/x-msnmsgrp2p\",nocase; content:\"INVITE\",distance 0,nocase; metadata:ruleset community; classtype:policy-violation; sid:1986; rev:12;"
+	"GID": "1",
+	"SID": "1986",
+	"Rev": "12",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 1863",
+	"Option": "msg:\"POLICY-SOCIAL Microsoft MSN outbound file transfer request\"; flow:established; content:\"MSG \",depth 4; content:\"Content-Type|3A| application/x-msnmsgrp2p\",nocase; content:\"INVITE\",distance 0,nocase; metadata:ruleset community; classtype:policy-violation; sid:1986; rev:12;"
 }

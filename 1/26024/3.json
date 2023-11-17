@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26024",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Wecod variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:20; http_uri; content:\"/b/n/winrar/tudo.rar\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/22e0300501e6bbb7f46c2fb5aed12e4c0d23385cc6319d430cd4faed5241f362/analysis/; classtype:trojan-activity; sid:26024; rev:3;"
+	"GID": "1",
+	"SID": "26024",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Wecod variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:20; http_uri; content:\"/b/n/winrar/tudo.rar\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/22e0300501e6bbb7f46c2fb5aed12e4c0d23385cc6319d430cd4faed5241f362/analysis/; classtype:trojan-activity; sid:26024; rev:3;"
 }

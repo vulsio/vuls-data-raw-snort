@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "891",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP upload.pl access\"; flow:to_server,established; http_uri; content:\"/upload.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:891; rev:17;"
+	"GID": "1",
+	"SID": "891",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP upload.pl access\"; flow:to_server,established; http_uri; content:\"/upload.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:891; rev:17;"
 }

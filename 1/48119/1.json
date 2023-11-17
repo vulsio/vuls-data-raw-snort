@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "48119",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.ITranslator variant outbound connection\"; flow:to_server,established; http_header; content:\"UID: P002|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/b73d436d7741f50d29764367cbecc4ee67412230ff0d66b7d1d0e4d26983824d/analysis; classtype:trojan-activity; sid:48119; rev:1;"
+	"GID": "1",
+	"SID": "48119",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.ITranslator variant outbound connection\"; flow:to_server,established; http_header; content:\"UID: P002|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/b73d436d7741f50d29764367cbecc4ee67412230ff0d66b7d1d0e4d26983824d/analysis; classtype:trojan-activity; sid:48119; rev:1;"
 }

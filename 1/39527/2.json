@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "39527",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"FILE-OFFICE RTF document incorrect file magic attempt\"; flow:to_server,established; flowbits:isset,file.rtf; file_data; content:\"|7B 5C|rt|0D 3C|\",depth 6; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:cve,2015-1641; reference:url,technet.microsoft.com/en-us/security/bulletin/ms15-033; classtype:attempted-user; sid:39527; rev:2;"
+	"GID": "1",
+	"SID": "39527",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"FILE-OFFICE RTF document incorrect file magic attempt\"; flow:to_server,established; flowbits:isset,file.rtf; file_data; content:\"|7B 5C|rt|0D 3C|\",depth 6; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:cve,2015-1641; reference:url,technet.microsoft.com/en-us/security/bulletin/ms15-033; classtype:attempted-user; sid:39527; rev:2;"
 }

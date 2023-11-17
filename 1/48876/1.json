@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "48876",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.BitterRAT variant outbound connection\"; flow:to_server,established; http_uri; content:\"/purchase61dfdusfdsu/costnbenifit8889.php?p=\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/705487b3deaf5f2ffa3240208044015e836cf4b32ef817154e23cb9f5859993f; classtype:trojan-activity; sid:48876; rev:1;"
+	"GID": "1",
+	"SID": "48876",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.BitterRAT variant outbound connection\"; flow:to_server,established; http_uri; content:\"/purchase61dfdusfdsu/costnbenifit8889.php?p=\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/705487b3deaf5f2ffa3240208044015e836cf4b32ef817154e23cb9f5859993f; classtype:trojan-activity; sid:48876; rev:1;"
 }

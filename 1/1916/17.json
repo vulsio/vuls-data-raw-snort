@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1916",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-RPC STATD TCP monitor mon_name format string exploit attempt\"; flow:to_server,established; content:\"|00 01 86 B8|\",depth 4,offset 16; content:\"|00 00 00 02|\",within 4,distance 4; byte_jump:4,4,relative,align; byte_jump:4,4,relative,align; byte_test:4,>,100,0,relative; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; reference:bugtraq,1480; reference:cve,2000-0666; reference:nessus,10544; classtype:attempted-admin; sid:1916; rev:17;"
+	"GID": "1",
+	"SID": "1916",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-RPC STATD TCP monitor mon_name format string exploit attempt\"; flow:to_server,established; content:\"|00 01 86 B8|\",depth 4,offset 16; content:\"|00 00 00 02|\",within 4,distance 4; byte_jump:4,4,relative,align; byte_jump:4,4,relative,align; byte_test:4,>,100,0,relative; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; reference:bugtraq,1480; reference:cve,2000-0666; reference:nessus,10544; classtype:attempted-admin; sid:1916; rev:17;"
 }

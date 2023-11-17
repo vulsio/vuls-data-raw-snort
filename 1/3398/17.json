@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3398",
-  "Rev": "17",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET [135,1024:]",
-  "Option": "msg:\"OS-WINDOWS DCERPC NCADG-IP-UDP ISystemActivator RemoteCreateInstance attempt\"; dce_iface:uuid 000001a0-0000-0000-c000-000000000046; dce_opnum:\"4\"; dce_stub_data; content:\"|01 10 08 00 CC CC CC CC|\"; content:\"|5C 00 5C 00|\",distance 0; byte_test:4,>,256,-8,relative,dce; metadata:policy max-detect-ips drop,ruleset community; service:dcerpc; reference:bugtraq,8205; reference:cve,2003-0352; reference:cve,2003-0715; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-026; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-039; classtype:protocol-command-decode; sid:3398; rev:17;"
+	"GID": "1",
+	"SID": "3398",
+	"Rev": "17",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET [135,1024:]",
+	"Option": "msg:\"OS-WINDOWS DCERPC NCADG-IP-UDP ISystemActivator RemoteCreateInstance attempt\"; dce_iface:uuid 000001a0-0000-0000-c000-000000000046; dce_opnum:\"4\"; dce_stub_data; content:\"|01 10 08 00 CC CC CC CC|\"; content:\"|5C 00 5C 00|\",distance 0; byte_test:4,>,256,-8,relative,dce; metadata:policy max-detect-ips drop,ruleset community; service:dcerpc; reference:bugtraq,8205; reference:cve,2003-0352; reference:cve,2003-0715; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-026; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-039; classtype:protocol-command-decode; sid:3398; rev:17;"
 }

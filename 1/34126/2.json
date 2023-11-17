@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34126",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"PUA-ADWARE Vitruvian outbound connection\"; flow:to_server,established; http_uri; content:\"/inst?\"; content:\"hid=\"; content:\"&sid=\",distance 0; content:\"&tr=\",distance 0; content:\"&a=\",distance 0; content:\"&adm=\",distance 0; content:\"&os=\",distance 0; http_header; content:\"User-Agent|3A 20|Mozilla/4.0",
-  "Option": "compatible|3B| Win32|3B| WinHttp.WinHttpRequest.\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a59f0e717dc530814dea3fdf65597faaad90ed8bfe3c8b8f6cea0e708049a784/analysis/1426449345/; classtype:misc-activity; sid:34126; rev:2;"
+	"GID": "1",
+	"SID": "34126",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"PUA-ADWARE Vitruvian outbound connection\"; flow:to_server,established; http_uri; content:\"/inst?\"; content:\"hid=\"; content:\"&sid=\",distance 0; content:\"&tr=\",distance 0; content:\"&a=\",distance 0; content:\"&adm=\",distance 0; content:\"&os=\",distance 0; http_header; content:\"User-Agent|3A 20|Mozilla/4.0",
+	"Option": "compatible|3B| Win32|3B| WinHttp.WinHttpRequest.\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a59f0e717dc530814dea3fdf65597faaad90ed8bfe3c8b8f6cea0e708049a784/analysis/1426449345/; classtype:misc-activity; sid:34126; rev:2;"
 }

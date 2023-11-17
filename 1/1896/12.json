@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1896",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 749",
-  "Option": "msg:\"INDICATOR-SHELLCODE kadmind buffer overflow attempt\"; flow:to_server,established; content:\"|FF FF|KADM0.0A|00 00 FB 03|\"; metadata:ruleset community; reference:bugtraq,5731; reference:bugtraq,6024; reference:cve,2002-1226; reference:cve,2002-1235; reference:url,www.kb.cert.org/vuls/id/875073; classtype:shellcode-detect; sid:1896; rev:12;"
+	"GID": "1",
+	"SID": "1896",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 749",
+	"Option": "msg:\"INDICATOR-SHELLCODE kadmind buffer overflow attempt\"; flow:to_server,established; content:\"|FF FF|KADM0.0A|00 00 FB 03|\"; metadata:ruleset community; reference:bugtraq,5731; reference:bugtraq,6024; reference:cve,2002-1226; reference:cve,2002-1235; reference:url,www.kb.cert.org/vuls/id/875073; classtype:shellcode-detect; sid:1896; rev:12;"
 }

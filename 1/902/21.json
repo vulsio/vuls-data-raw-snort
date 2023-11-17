@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "902",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP tstisapi.dll access\"; flow:to_server,established; http_uri; content:\"tstisapi.dll\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2381; reference:cve,2001-0302; classtype:attempted-recon; sid:902; rev:21;"
+	"GID": "1",
+	"SID": "902",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP tstisapi.dll access\"; flow:to_server,established; http_uri; content:\"tstisapi.dll\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2381; reference:cve,2001-0302; classtype:attempted-recon; sid:902; rev:21;"
 }

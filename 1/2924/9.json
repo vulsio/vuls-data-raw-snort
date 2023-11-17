@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2924",
-  "Rev": "9",
-  "Header": "alert tcp $HOME_NET 445 -> $EXTERNAL_NET any",
-  "Option": "msg:\"NETBIOS SMB-DS repeated logon failure\"; flow:to_client,established,no_stream; content:\"|FF|SMBs\",depth 5,offset 4; content:\"m|00 00 C0|\",within 4; detection_filter:track by_dst,count 10,seconds 60; metadata:ruleset community; service:netbios-ssn; classtype:unsuccessful-user; sid:2924; rev:9;"
+	"GID": "1",
+	"SID": "2924",
+	"Rev": "9",
+	"Header": "alert tcp $HOME_NET 445 -> $EXTERNAL_NET any",
+	"Option": "msg:\"NETBIOS SMB-DS repeated logon failure\"; flow:to_client,established,no_stream; content:\"|FF|SMBs\",depth 5,offset 4; content:\"m|00 00 C0|\",within 4; detection_filter:track by_dst,count 10,seconds 60; metadata:ruleset community; service:netbios-ssn; classtype:unsuccessful-user; sid:2924; rev:9;"
 }

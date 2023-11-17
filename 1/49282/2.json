@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49282",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Magecart inbound scan for vulnerable plugin attempt\"; flow:to_server,established; http_uri; content:\"?misc=\",fast_pattern,nocase; content:\"&dl=\"; content:\"/index.php/\"; http_header; content:!\"Referer\"; http_method; content:\"POST\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:web-application-attack; sid:49282; rev:2;"
+	"GID": "1",
+	"SID": "49282",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Magecart inbound scan for vulnerable plugin attempt\"; flow:to_server,established; http_uri; content:\"?misc=\",fast_pattern,nocase; content:\"&dl=\"; content:\"/index.php/\"; http_header; content:!\"Referer\"; http_method; content:\"POST\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:web-application-attack; sid:49282; rev:2;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56605",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Rat.Tool.CSBundleUSATodayServer variant inbound command attempt\"; flow:to_client,established; file_data; content:\"{|22|navgd|22|:|22|<div class=gnt_n_dd_ls_w><div class=gnt_n_dd_nt>ONLY AT USA TODAY:</div><div class=gnt_n_dd_ls><a class=gnt_n_dd_ls_a href=https://supportlocal.usatoday.com/\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56605; rev:1;"
+	"GID": "1",
+	"SID": "56605",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Rat.Tool.CSBundleUSATodayServer variant inbound command attempt\"; flow:to_client,established; file_data; content:\"{|22|navgd|22|:|22|<div class=gnt_n_dd_ls_w><div class=gnt_n_dd_nt>ONLY AT USA TODAY:</div><div class=gnt_n_dd_ls><a class=gnt_n_dd_ls_a href=https://supportlocal.usatoday.com/\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56605; rev:1;"
 }

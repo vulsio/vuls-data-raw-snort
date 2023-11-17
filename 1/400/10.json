@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "400",
-  "Rev": "10",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP Destination Unreachable Network Unreachable for Type of Service\"; icode:11; itype:3; metadata:ruleset community; classtype:misc-activity; sid:400; rev:10;"
+	"GID": "1",
+	"SID": "400",
+	"Rev": "10",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP Destination Unreachable Network Unreachable for Type of Service\"; icode:11; itype:3; metadata:ruleset community; classtype:misc-activity; sid:400; rev:10;"
 }

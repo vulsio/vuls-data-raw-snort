@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "40762",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Android.Trojan.SpyNote RAT variant inbound connection\"; flow:to_client,established; content:\"Server Prent <please>|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/14eb51b26fa4932fc660daf7e803600bf29a8a46fe3f1d652194bc48e9617bd9/analysis/1478720273/; classtype:trojan-activity; sid:40762; rev:2;"
+	"GID": "1",
+	"SID": "40762",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Android.Trojan.SpyNote RAT variant inbound connection\"; flow:to_client,established; content:\"Server Prent <please>|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/14eb51b26fa4932fc660daf7e803600bf29a8a46fe3f1d652194bc48e9617bd9/analysis/1478720273/; classtype:trojan-activity; sid:40762; rev:2;"
 }

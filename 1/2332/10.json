@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2332",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP MKD format string attempt\"; flow:to_server,established; content:\"MKD\",fast_pattern,nocase; pcre:\"/^MKD\\s[^\\n]*?%[^\\n]*?%/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,9262; classtype:misc-attack; sid:2332; rev:10;"
+	"GID": "1",
+	"SID": "2332",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP MKD format string attempt\"; flow:to_server,established; content:\"MKD\",fast_pattern,nocase; pcre:\"/^MKD\\s[^\\n]*?%[^\\n]*?%/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,9262; classtype:misc-attack; sid:2332; rev:10;"
 }

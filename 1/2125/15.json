@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2125",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP CWD Root directory traversal attempt\"; flow:to_server,established; content:\"CWD\",nocase; content:\"C|3A 5C|\",distance 1; metadata:ruleset community; service:ftp; reference:bugtraq,7674; reference:cve,2003-0392; reference:nessus,11677; classtype:protocol-command-decode; sid:2125; rev:15;"
+	"GID": "1",
+	"SID": "2125",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP CWD Root directory traversal attempt\"; flow:to_server,established; content:\"CWD\",nocase; content:\"C|3A 5C|\",distance 1; metadata:ruleset community; service:ftp; reference:bugtraq,7674; reference:cve,2003-0392; reference:nessus,11677; classtype:protocol-command-decode; sid:2125; rev:15;"
 }

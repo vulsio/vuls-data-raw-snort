@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1500",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ExAir access\"; flow:to_server,established; http_uri; content:\"/exair/search/\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,193; reference:cve,1999-0449; reference:nessus,10002; reference:nessus,10003; reference:nessus,10004; classtype:web-application-activity; sid:1500; rev:23;"
+	"GID": "1",
+	"SID": "1500",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ExAir access\"; flow:to_server,established; http_uri; content:\"/exair/search/\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,193; reference:cve,1999-0449; reference:nessus,10002; reference:nessus,10003; reference:nessus,10004; classtype:web-application-activity; sid:1500; rev:23;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46086",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Linksys E-Series apply.cgi ping function command injection attempt\"; flow:to_server,established; http_uri; content:\"apply.cgi\",fast_pattern,nocase; content:\"ping_\",nocase; http_raw_uri; content:\"%26\"; pcre:\"/[?&]ping(\\x5f|%5f)(ip|size|times)=[^&]*?%26/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2013-3307; classtype:web-application-attack; sid:46086; rev:3;"
+	"GID": "1",
+	"SID": "46086",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Linksys E-Series apply.cgi ping function command injection attempt\"; flow:to_server,established; http_uri; content:\"apply.cgi\",fast_pattern,nocase; content:\"ping_\",nocase; http_raw_uri; content:\"%26\"; pcre:\"/[?&]ping(\\x5f|%5f)(ip|size|times)=[^&]*?%26/i\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2013-3307; classtype:web-application-attack; sid:46086; rev:3;"
 }

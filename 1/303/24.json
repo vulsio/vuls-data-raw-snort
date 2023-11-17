@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "303",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
-  "Option": "msg:\"SERVER-OTHER Bind Buffer Overflow named tsig overflow attempt\"; flow:to_server,established; content:\"|AB CD 09 80 00 00 00 01 00 00 00 00 00 00 01 00 01|    |02|a\"; metadata:policy max-detect-ips drop,ruleset community; service:dns; reference:bugtraq,2302; reference:cve,2001-0010; reference:nessus,10605; classtype:attempted-admin; sid:303; rev:24;"
+	"GID": "1",
+	"SID": "303",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
+	"Option": "msg:\"SERVER-OTHER Bind Buffer Overflow named tsig overflow attempt\"; flow:to_server,established; content:\"|AB CD 09 80 00 00 00 01 00 00 00 00 00 00 01 00 01|    |02|a\"; metadata:policy max-detect-ips drop,ruleset community; service:dns; reference:bugtraq,2302; reference:cve,2001-0010; reference:nessus,10605; classtype:attempted-admin; sid:303; rev:24;"
 }

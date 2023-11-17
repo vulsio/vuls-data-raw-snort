@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25578",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER Fake postal receipt HTTP Response phishing attack\"; flow:to_client,established; http_header; content:\"|3B 20|filename=PostalReceipt.zip|0D 0A|\",fast_pattern,nocase; file_data; content:\"PostalReceipt.exe\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; reference:url,www.urlquery.net/search.php?q=receipt&type=string&start=2013-01-03&end=2013-01-18&max=50; classtype:trojan-activity; sid:25578; rev:4;"
+	"GID": "1",
+	"SID": "25578",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-OTHER Fake postal receipt HTTP Response phishing attack\"; flow:to_client,established; http_header; content:\"|3B 20|filename=PostalReceipt.zip|0D 0A|\",fast_pattern,nocase; file_data; content:\"PostalReceipt.exe\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; reference:url,www.urlquery.net/search.php?q=receipt&type=string&start=2013-01-03&end=2013-01-18&max=50; classtype:trojan-activity; sid:25578; rev:4;"
 }

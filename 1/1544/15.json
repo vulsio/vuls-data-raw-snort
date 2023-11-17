@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1544",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Cisco Catalyst command execution attempt\"; flow:to_server,established; http_uri; content:\"/exec/show/config/cr\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1846; reference:cve,2000-0945; reference:nessus,10545; classtype:web-application-activity; sid:1544; rev:15;"
+	"GID": "1",
+	"SID": "1544",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Cisco Catalyst command execution attempt\"; flow:to_server,established; http_uri; content:\"/exec/show/config/cr\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1846; reference:cve,2000-0945; reference:nessus,10545; classtype:web-application-activity; sid:1544; rev:15;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46437",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"MALWARE-CNC Vbs.Downloader.Agent inbound connection\"; flow:to_server,established; flowbits:isset,file.ole; file_data; content:\"3832D640-CF90-11CF-8E43-00A0C911005A\",fast_pattern,nocase; content:\"Workbook_Open\",nocase; content:\"Document_Open\",nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:url,www.virustotal.com/#/file/7975cbaa5657d89b45126bf739fd84acd5bbe724f372a20360bd4fc038b67541; classtype:trojan-activity; sid:46437; rev:1;"
+	"GID": "1",
+	"SID": "46437",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"MALWARE-CNC Vbs.Downloader.Agent inbound connection\"; flow:to_server,established; flowbits:isset,file.ole; file_data; content:\"3832D640-CF90-11CF-8E43-00A0C911005A\",fast_pattern,nocase; content:\"Workbook_Open\",nocase; content:\"Document_Open\",nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:url,www.virustotal.com/#/file/7975cbaa5657d89b45126bf739fd84acd5bbe724f372a20360bd4fc038b67541; classtype:trojan-activity; sid:46437; rev:1;"
 }

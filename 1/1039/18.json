@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1039",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS srch.htm access\"; flow:to_server,established; http_uri; content:\"/samples/isapi/srch.htm\",nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1039; rev:18;"
+	"GID": "1",
+	"SID": "1039",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS srch.htm access\"; flow:to_server,established; http_uri; content:\"/samples/isapi/srch.htm\",nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1039; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "51533",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.BlackRAT variant inbound connection\"; flow:to_client,established; content:\"BlackRAT.Data\",fast_pattern,nocase; content:\"|2C 20|Version=\",nocase; content:\"data|05|bytes\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/gui/file/6610e632758a0ae2ab9b259fe1f83236aff6b5bd485c3d4e3fd4995be68535bf/detection; classtype:trojan-activity; sid:51533; rev:1;"
+	"GID": "1",
+	"SID": "51533",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.BlackRAT variant inbound connection\"; flow:to_client,established; content:\"BlackRAT.Data\",fast_pattern,nocase; content:\"|2C 20|Version=\",nocase; content:\"data|05|bytes\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/gui/file/6610e632758a0ae2ab9b259fe1f83236aff6b5bd485c3d4e3fd4995be68535bf/detection; classtype:trojan-activity; sid:51533; rev:1;"
 }

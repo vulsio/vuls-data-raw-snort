@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2707",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IMAGE JPEG parser multipacket heap overflow attempt\"; flow:to_client,established; flowbits:isset,file.jpeg; file_data; content:\"|00 48 00 00 FF|\",fast_pattern,nocase; pcre:\"/\\x00\\x48\\x00\\x00\\xFF[\\xE1\\xE2\\xED\\xFE]\\x00[\\x00\\x01]/\"; metadata:ruleset community; service:ftp-data,http,imap,pop3; reference:bugtraq,11173; reference:cve,2004-0200; reference:cve,2017-16392; reference:url,helpx.adobe.com/security/products/acrobat/apsb17-36.html; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-028; classtype:attempted-admin; sid:2707; rev:14;"
+	"GID": "1",
+	"SID": "2707",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"FILE-IMAGE JPEG parser multipacket heap overflow attempt\"; flow:to_client,established; flowbits:isset,file.jpeg; file_data; content:\"|00 48 00 00 FF|\",fast_pattern,nocase; pcre:\"/\\x00\\x48\\x00\\x00\\xFF[\\xE1\\xE2\\xED\\xFE]\\x00[\\x00\\x01]/\"; metadata:ruleset community; service:ftp-data,http,imap,pop3; reference:bugtraq,11173; reference:cve,2004-0200; reference:cve,2017-16392; reference:url,helpx.adobe.com/security/products/acrobat/apsb17-36.html; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-028; classtype:attempted-admin; sid:2707; rev:14;"
 }

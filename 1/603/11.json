@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "603",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 513",
-  "Option": "msg:\"PROTOCOL-SERVICES rlogin echo++\"; flow:to_server,established; content:\"echo |22| + + |22|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:bad-unknown; sid:603; rev:11;"
+	"GID": "1",
+	"SID": "603",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 513",
+	"Option": "msg:\"PROTOCOL-SERVICES rlogin echo++\"; flow:to_server,established; content:\"echo |22| + + |22|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:bad-unknown; sid:603; rev:11;"
 }

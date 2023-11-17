@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2942",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [139,445]",
-  "Option": "msg:\"NETBIOS DCERPC NCACN-IP-TCP winreg InitiateSystemShutdown attempt\"; flow:to_server,established; dce_iface:uuid 338cd001-2244-31f1-aaaa-900038001003; dce_opnum:\"24\"; metadata:ruleset community; service:netbios-ssn; reference:url,msdn.microsoft.com/library/default.asp?url=/library/en-us/shutdown/base/initiatesystemshutdown.asp; classtype:protocol-command-decode; sid:2942; rev:14;"
+	"GID": "1",
+	"SID": "2942",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [139,445]",
+	"Option": "msg:\"NETBIOS DCERPC NCACN-IP-TCP winreg InitiateSystemShutdown attempt\"; flow:to_server,established; dce_iface:uuid 338cd001-2244-31f1-aaaa-900038001003; dce_opnum:\"24\"; metadata:ruleset community; service:netbios-ssn; reference:url,msdn.microsoft.com/library/default.asp?url=/library/en-us/shutdown/base/initiatesystemshutdown.asp; classtype:protocol-command-decode; sid:2942; rev:14;"
 }

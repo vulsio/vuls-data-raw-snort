@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1948",
-  "Rev": "20",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 53",
-  "Option": "msg:\"PROTOCOL-DNS dns zone transfer via UDP detected\"; flow:to_server; content:\"|00 01 00 00 00 00 00|\",depth 8,offset 4; byte_test:1,!&,0xF8,2; content:\"|00 00 FC 00 01|\",fast_pattern; isdataat:!1,relative; metadata:policy max-detect-ips drop,ruleset community; service:dns; reference:cve,1999-0532; reference:nessus,10595; classtype:attempted-recon; sid:1948; rev:20;"
+	"GID": "1",
+	"SID": "1948",
+	"Rev": "20",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 53",
+	"Option": "msg:\"PROTOCOL-DNS dns zone transfer via UDP detected\"; flow:to_server; content:\"|00 01 00 00 00 00 00|\",depth 8,offset 4; byte_test:1,!&,0xF8,2; content:\"|00 00 FC 00 01|\",fast_pattern; isdataat:!1,relative; metadata:policy max-detect-ips drop,ruleset community; service:dns; reference:cve,1999-0532; reference:nessus,10595; classtype:attempted-recon; sid:1948; rev:20;"
 }

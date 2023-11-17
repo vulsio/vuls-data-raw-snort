@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29174",
-  "Rev": "3",
-  "Header": "alert tcp any any -> any $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string fortis\"; flow:to_server,established; http_header; content:\"User-Agent: fortis|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/92614908e7842e0dfa72ecfee868b06017b5cc445f201874776583f754b137a3/analysis/; classtype:trojan-activity; sid:29174; rev:3;"
+	"GID": "1",
+	"SID": "29174",
+	"Rev": "3",
+	"Header": "alert tcp any any -> any $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string fortis\"; flow:to_server,established; http_header; content:\"User-Agent: fortis|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/92614908e7842e0dfa72ecfee868b06017b5cc445f201874776583f754b137a3/analysis/; classtype:trojan-activity; sid:29174; rev:3;"
 }

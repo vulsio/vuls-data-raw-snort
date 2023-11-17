@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1181",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Annex Terminal DOS attempt\"; flow:to_server,established; http_uri; content:\"/ping?query=\"; metadata:ruleset community; service:http; reference:cve,1999-1070; reference:nessus,10017; classtype:attempted-dos; sid:1181; rev:18;"
+	"GID": "1",
+	"SID": "1181",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Annex Terminal DOS attempt\"; flow:to_server,established; http_uri; content:\"/ping?query=\"; metadata:ruleset community; service:http; reference:cve,1999-1070; reference:nessus,10017; classtype:attempted-dos; sid:1181; rev:18;"
 }

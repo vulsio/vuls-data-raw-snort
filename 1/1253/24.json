@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1253",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
-  "Option": "msg:\"PROTOCOL-TELNET bsd exploit client finishing\"; flow:to_server,established; isdataat:200; raw_data; content:\"|FF F6 FF F6 FF FB 08 FF F6|\",depth 50,offset 200; metadata:ruleset community; service:telnet; reference:bugtraq,3064; reference:cve,2001-0554; reference:nessus,10709; classtype:successful-admin; sid:1253; rev:24;"
+	"GID": "1",
+	"SID": "1253",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+	"Option": "msg:\"PROTOCOL-TELNET bsd exploit client finishing\"; flow:to_server,established; isdataat:200; raw_data; content:\"|FF F6 FF F6 FF FB 08 FF F6|\",depth 50,offset 200; metadata:ruleset community; service:telnet; reference:bugtraq,3064; reference:cve,2001-0554; reference:nessus,10709; classtype:successful-admin; sid:1253; rev:24;"
 }

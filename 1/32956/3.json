@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32956",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Android.CoolReaper.Trojan outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/dmp/api/\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|UAC/1.0.0",
-  "Option": "Android \"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/94b3d27488d10ec2dd73f39513a6d7845ab50b395d6b3adb614b94f8a8609f0e/analysis/; classtype:trojan-activity; sid:32956; rev:3;"
+	"GID": "1",
+	"SID": "32956",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Android.CoolReaper.Trojan outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/dmp/api/\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|UAC/1.0.0",
+	"Option": "Android \"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/94b3d27488d10ec2dd73f39513a6d7845ab50b395d6b3adb614b94f8a8609f0e/analysis/; classtype:trojan-activity; sid:32956; rev:3;"
 }

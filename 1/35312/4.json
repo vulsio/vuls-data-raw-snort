@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "35312",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Ursnif outbound connection\"; flow:to_server,established; http_uri; content:\"/photoLibrary/?user=\"; content:\"&ver=\"; content:\"&os2=\",fast_pattern,nocase; content:\"&type=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2015/07/a-fileless-ursnif-doing-some-pos.html; classtype:trojan-activity; sid:35312; rev:4;"
+	"GID": "1",
+	"SID": "35312",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Ursnif outbound connection\"; flow:to_server,established; http_uri; content:\"/photoLibrary/?user=\"; content:\"&ver=\"; content:\"&os2=\",fast_pattern,nocase; content:\"&type=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malware.dontneedcoffee.com/2015/07/a-fileless-ursnif-doing-some-pos.html; classtype:trojan-activity; sid:35312; rev:4;"
 }

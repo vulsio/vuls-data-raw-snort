@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1996",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP viralator.cgi access\"; flow:to_server,established; http_uri; content:\"/viralator.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3495; reference:cve,2001-0849; reference:nessus,11107; classtype:web-application-activity; sid:1996; rev:13;"
+	"GID": "1",
+	"SID": "1996",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP viralator.cgi access\"; flow:to_server,established; http_uri; content:\"/viralator.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3495; reference:cve,2001-0849; reference:nessus,11107; classtype:web-application-activity; sid:1996; rev:13;"
 }

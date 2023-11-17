@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1729",
-  "Rev": "16",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 6666:7000",
-  "Option": "msg:\"POLICY-SOCIAL IRC channel join\"; flow:to_server,established; isdataat:!139; content:\"JOIN \"; pcre:\"/(&|#|\\+|!)/R\"; metadata:ruleset community; classtype:policy-violation; sid:1729; rev:16;"
+	"GID": "1",
+	"SID": "1729",
+	"Rev": "16",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 6666:7000",
+	"Option": "msg:\"POLICY-SOCIAL IRC channel join\"; flow:to_server,established; isdataat:!139; content:\"JOIN \"; pcre:\"/(&|#|\\+|!)/R\"; metadata:ruleset community; classtype:policy-violation; sid:1729; rev:16;"
 }

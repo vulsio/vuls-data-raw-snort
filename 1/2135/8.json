@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2135",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP philboard.mdb access\"; flow:to_server,established; http_uri; content:\"/philboard.mdb\"; metadata:ruleset community; service:http; reference:nessus,11682; classtype:web-application-activity; sid:2135; rev:8;"
+	"GID": "1",
+	"SID": "2135",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP philboard.mdb access\"; flow:to_server,established; http_uri; content:\"/philboard.mdb\"; metadata:ruleset community; service:http; reference:nessus,11682; classtype:web-application-activity; sid:2135; rev:8;"
 }

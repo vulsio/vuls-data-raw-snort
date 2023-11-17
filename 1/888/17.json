@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "888",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP wwwadmin.pl access\"; flow:to_server,established; http_uri; content:\"/wwwadmin.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:888; rev:17;"
+	"GID": "1",
+	"SID": "888",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP wwwadmin.pl access\"; flow:to_server,established; http_uri; content:\"/wwwadmin.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:888; rev:17;"
 }

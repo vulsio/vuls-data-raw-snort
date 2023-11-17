@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2739",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE dbms_repcat.alter_priority_nvarchar2 buffer overflow attempt\"; flow:to_server,established; content:\"dbms_repcat.alter_priority_nvarchar2\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1075,}\\x27|\\x22[^\\x22]{1075,}\\x22)[\\r\\n\\s]*\\x3b.*gname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|gname\\s*=>\\s*(\\x27[^\\x27]{1075,}|\\x22[^\\x22]{1075,})|\\(\\s*(\\x27[^\\x27]{1075,}|\\x22[^\\x22]{1075,}))/is\"; metadata:ruleset community; reference:url,www.appsecinc.com/resources/alerts/oracle/2004-0001/25.html; classtype:attempted-user; sid:2739; rev:4;"
+	"GID": "1",
+	"SID": "2739",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE dbms_repcat.alter_priority_nvarchar2 buffer overflow attempt\"; flow:to_server,established; content:\"dbms_repcat.alter_priority_nvarchar2\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1075,}\\x27|\\x22[^\\x22]{1075,}\\x22)[\\r\\n\\s]*\\x3b.*gname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|gname\\s*=>\\s*(\\x27[^\\x27]{1075,}|\\x22[^\\x22]{1075,})|\\(\\s*(\\x27[^\\x27]{1075,}|\\x22[^\\x22]{1075,}))/is\"; metadata:ruleset community; reference:url,www.appsecinc.com/resources/alerts/oracle/2004-0001/25.html; classtype:attempted-user; sid:2739; rev:4;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1224",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ROADS search.pl attempt\"; flow:to_server,established; http_uri; content:\"/ROADS/cgi-bin/search.pl\"; pkt_data; content:\"form=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2371; reference:cve,2001-0215; reference:nessus,10627; classtype:attempted-recon; sid:1224; rev:17;"
+	"GID": "1",
+	"SID": "1224",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ROADS search.pl attempt\"; flow:to_server,established; http_uri; content:\"/ROADS/cgi-bin/search.pl\"; pkt_data; content:\"form=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2371; reference:cve,2001-0215; reference:nessus,10627; classtype:attempted-recon; sid:1224; rev:17;"
 }

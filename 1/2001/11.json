@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2001",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP smartsearch.cgi access\"; flow:to_server,established; http_uri; content:\"/smartsearch.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7133; classtype:web-application-activity; sid:2001; rev:11;"
+	"GID": "1",
+	"SID": "2001",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP smartsearch.cgi access\"; flow:to_server,established; http_uri; content:\"/smartsearch.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,7133; classtype:web-application-activity; sid:2001; rev:11;"
 }

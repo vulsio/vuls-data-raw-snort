@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "601",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 513",
-  "Option": "msg:\"PROTOCOL-SERVICES rlogin LinuxNIS\"; flow:to_server,established; content:\"|3A 3A 3A 3A 3A 3A 3A 3A 00 3A 3A 3A 3A 3A 3A 3A 3A|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:bad-unknown; sid:601; rev:11;"
+	"GID": "1",
+	"SID": "601",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 513",
+	"Option": "msg:\"PROTOCOL-SERVICES rlogin LinuxNIS\"; flow:to_server,established; content:\"|3A 3A 3A 3A 3A 3A 3A 3A 00 3A 3A 3A 3A 3A 3A 3A 3A|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:bad-unknown; sid:601; rev:11;"
 }

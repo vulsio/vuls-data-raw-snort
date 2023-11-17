@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3273",
-  "Rev": "10",
-  "Header": "alert tcp $SQL_SERVERS 1433 -> $EXTERNAL_NET any",
-  "Option": "msg:\"SQL sa brute force failed login unicode attempt\"; flow:to_client,established,no_stream; content:\"L|00|o|00|g|00|i|00|n|00| |00|f|00|a|00|i|00|l|00|e|00|d|00| |00|f|00|o|00|r|00| |00|u|00|s|00|e|00|r|00| |00|'|00|s|00|a|00|'|00|\"; detection_filter:track by_src,count 5,seconds 2; metadata:ruleset community; reference:bugtraq,4797; reference:cve,2000-1209; reference:nessus,10673; reference:url,attack.mitre.org/techniques/T1110; classtype:unsuccessful-user; sid:3273; rev:10;"
+	"GID": "1",
+	"SID": "3273",
+	"Rev": "10",
+	"Header": "alert tcp $SQL_SERVERS 1433 -> $EXTERNAL_NET any",
+	"Option": "msg:\"SQL sa brute force failed login unicode attempt\"; flow:to_client,established,no_stream; content:\"L|00|o|00|g|00|i|00|n|00| |00|f|00|a|00|i|00|l|00|e|00|d|00| |00|f|00|o|00|r|00| |00|u|00|s|00|e|00|r|00| |00|'|00|s|00|a|00|'|00|\"; detection_filter:track by_src,count 5,seconds 2; metadata:ruleset community; reference:bugtraq,4797; reference:cve,2000-1209; reference:nessus,10673; reference:url,attack.mitre.org/techniques/T1110; classtype:unsuccessful-user; sid:3273; rev:10;"
 }

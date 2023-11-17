@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46416",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Spyware.Autoit outbound connection\"; flow:to_server,established; http_client_body; content:\"win32=FFD8FFE000104A464946\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8ac4e164b463c313af059760ce1f830c19b0d5a280ec80554e8f77939143e24e; classtype:trojan-activity; sid:46416; rev:2;"
+	"GID": "1",
+	"SID": "46416",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Spyware.Autoit outbound connection\"; flow:to_server,established; http_client_body; content:\"win32=FFD8FFE000104A464946\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/8ac4e164b463c313af059760ce1f830c19b0d5a280ec80554e8f77939143e24e; classtype:trojan-activity; sid:46416; rev:2;"
 }

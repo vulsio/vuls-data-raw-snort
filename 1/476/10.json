@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "476",
-  "Rev": "10",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP webtrends scanner\"; icode:0; itype:8; content:\"|00 00 00 00|EEEEEEEEEEEE\",fast_pattern,nocase; metadata:ruleset community; classtype:attempted-recon; sid:476; rev:10;"
+	"GID": "1",
+	"SID": "476",
+	"Rev": "10",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP webtrends scanner\"; icode:0; itype:8; content:\"|00 00 00 00|EEEEEEEEEEEE\",fast_pattern,nocase; metadata:ruleset community; classtype:attempted-recon; sid:476; rev:10;"
 }

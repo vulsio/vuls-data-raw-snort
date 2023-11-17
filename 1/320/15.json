@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "320",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
-  "Option": "msg:\"PROTOCOL-FINGER cmd_rootsh backdoor attempt\"; flow:to_server,established; content:\"cmd_rootsh\"; metadata:ruleset community; reference:nessus,10070; reference:url,www.sans.org/y2k/TFN_toolkit.htm; reference:url,www.sans.org/y2k/fingerd.htm; classtype:attempted-admin; sid:320; rev:15;"
+	"GID": "1",
+	"SID": "320",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
+	"Option": "msg:\"PROTOCOL-FINGER cmd_rootsh backdoor attempt\"; flow:to_server,established; content:\"cmd_rootsh\"; metadata:ruleset community; reference:nessus,10070; reference:url,www.sans.org/y2k/TFN_toolkit.htm; reference:url,www.sans.org/y2k/fingerd.htm; classtype:attempted-admin; sid:320; rev:15;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32069",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"OS-OTHER Bash environment variable injection attempt\"; flow:to_server,established; content:\"PASS \",depth 5; content:\"() {\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:32069; rev:3;"
+	"GID": "1",
+	"SID": "32069",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"OS-OTHER Bash environment variable injection attempt\"; flow:to_server,established; content:\"PASS \",depth 5; content:\"() {\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp; reference:cve,2014-6271; reference:cve,2014-6277; reference:cve,2014-6278; reference:cve,2014-7169; classtype:attempted-admin; sid:32069; rev:3;"
 }

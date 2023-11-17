@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26482",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Unknown Thinner Encrypted POST botnet C&C\"; flow:to_server,established; http_uri; content:\"/thinner/thumb?img=\",fast_pattern,nocase; http_client_body; pcre:\"/[^\\x20-\\x7e\\x0d\\x0a]{4}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,support.clean-mx.de/clean-mx/viruses.php?sort=firstseen%20desc&review=95.57.120.111; classtype:trojan-activity; sid:26482; rev:2;"
+	"GID": "1",
+	"SID": "26482",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Unknown Thinner Encrypted POST botnet C&C\"; flow:to_server,established; http_uri; content:\"/thinner/thumb?img=\",fast_pattern,nocase; http_client_body; pcre:\"/[^\\x20-\\x7e\\x0d\\x0a]{4}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,support.clean-mx.de/clean-mx/viruses.php?sort=firstseen%20desc&review=95.57.120.111; classtype:trojan-activity; sid:26482; rev:2;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1326",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORTS",
-  "Option": "msg:\"INDICATOR-SHELLCODE ssh CRC32 overflow NOOP\"; flow:to_server,established; content:\"|90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90|\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,2347; reference:cve,2001-0144; reference:cve,2001-0572; classtype:shellcode-detect; sid:1326; rev:13;"
+	"GID": "1",
+	"SID": "1326",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORTS",
+	"Option": "msg:\"INDICATOR-SHELLCODE ssh CRC32 overflow NOOP\"; flow:to_server,established; content:\"|90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90|\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,2347; reference:cve,2001-0144; reference:cve,2001-0572; classtype:shellcode-detect; sid:1326; rev:13;"
 }

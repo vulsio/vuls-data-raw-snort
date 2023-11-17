@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27041",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Styx exploit kit plugin detection connection jlnp\"; flow:to_server,established; http_uri; content:\"/jlnp.html\",fast_pattern,nocase; pcre:\"/\\/jlnp\\.html$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2007-5659; reference:cve,2008-0655; reference:cve,2011-3544; reference:cve,2012-0507; reference:cve,2012-1723; reference:cve,2012-4681; reference:cve,2012-4969; reference:cve,2013-0422; reference:cve,2013-2423; classtype:trojan-activity; sid:27041; rev:4;"
+	"GID": "1",
+	"SID": "27041",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Styx exploit kit plugin detection connection jlnp\"; flow:to_server,established; http_uri; content:\"/jlnp.html\",fast_pattern,nocase; pcre:\"/\\/jlnp\\.html$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2007-5659; reference:cve,2008-0655; reference:cve,2011-3544; reference:cve,2012-0507; reference:cve,2012-1723; reference:cve,2012-4681; reference:cve,2012-4969; reference:cve,2013-0422; reference:cve,2013-2423; classtype:trojan-activity; sid:27041; rev:4;"
 }

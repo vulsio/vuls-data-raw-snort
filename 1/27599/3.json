@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27599",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Fort Disco Registration variant outbound connection\"; flow:to_server,established; http_uri; content:\"/cmd.php\"; http_header; content:\"User-Agent|3A 20|Mozilla/4.0",
-  "Option": "compatible|3B| Synapse)\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.net-security.org/secworld.php?id=15370; classtype:trojan-activity; sid:27599; rev:3;"
+	"GID": "1",
+	"SID": "27599",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Fort Disco Registration variant outbound connection\"; flow:to_server,established; http_uri; content:\"/cmd.php\"; http_header; content:\"User-Agent|3A 20|Mozilla/4.0",
+	"Option": "compatible|3B| Synapse)\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.net-security.org/secworld.php?id=15370; classtype:trojan-activity; sid:27599; rev:3;"
 }

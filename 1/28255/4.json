@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28255",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kuluoz Potential phishing URL\"; flow:to_server,established; http_uri; content:\"/get.php?invite=\",fast_pattern,nocase; http_header; content:\"Accept-Encoding: gzip\"; http_uri; pcre:\"/^\\/get.php\\?invite=.*?=$/m\"; http_header; content:!\"Referer:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; reference:url,urlquery.net/search.php?q=get.php%3Finvite%3D&type=string&start=2013-10-01&end=2013-10-16&max=50; reference:url,www.virustotal.com/en/file/93a40a83977ca24df6e12d7d6f19a9b9d92cb3ea3174ea9d4398ad2048205c42/analysis/; classtype:trojan-activity; sid:28255; rev:4;"
+	"GID": "1",
+	"SID": "28255",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kuluoz Potential phishing URL\"; flow:to_server,established; http_uri; content:\"/get.php?invite=\",fast_pattern,nocase; http_header; content:\"Accept-Encoding: gzip\"; http_uri; pcre:\"/^\\/get.php\\?invite=.*?=$/m\"; http_header; content:!\"Referer:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; reference:url,urlquery.net/search.php?q=get.php%3Finvite%3D&type=string&start=2013-10-01&end=2013-10-16&max=50; reference:url,www.virustotal.com/en/file/93a40a83977ca24df6e12d7d6f19a9b9d92cb3ea3174ea9d4398ad2048205c42/analysis/; classtype:trojan-activity; sid:28255; rev:4;"
 }

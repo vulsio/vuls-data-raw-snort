@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41725",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 4786",
-  "Option": "msg:\"SERVER-OTHER Cisco IOS Smart Install protocol version command attempt\"; flow:to_server,established; content:\"|00 00 00 02 00 00 00 01 00 00 00 05|\",depth 12; content:\"tftp://\",nocase; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2018-0156; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-smi; reference:url,tools.cisco.com/security/center/content/CiscoSecurityResponse/cisco-sr-20170214-smi; classtype:attempted-admin; sid:41725; rev:4;"
+	"GID": "1",
+	"SID": "41725",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 4786",
+	"Option": "msg:\"SERVER-OTHER Cisco IOS Smart Install protocol version command attempt\"; flow:to_server,established; content:\"|00 00 00 02 00 00 00 01 00 00 00 05|\",depth 12; content:\"tftp://\",nocase; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2018-0156; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-smi; reference:url,tools.cisco.com/security/center/content/CiscoSecurityResponse/cisco-sr-20170214-smi; classtype:attempted-admin; sid:41725; rev:4;"
 }

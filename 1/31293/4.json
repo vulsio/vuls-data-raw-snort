@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31293",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dyre publickey outbound connection\"; flow:to_server,established; content:\"/publickey/ HTTP/1.1|0D 0A|User-Agent: Wget/1.9|0D 0A|Host: \",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,phishme.com/project-dyre-new-rat-slurps-bank-credentials-bypasses-ssl; reference:url,www.virustotal.com/en/file/417c9cd7c8abbd7bbddfc313c9f153758fd11bda47f754b9c59bc308d808c486/analysis/; classtype:trojan-activity; sid:31293; rev:4;"
+	"GID": "1",
+	"SID": "31293",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Dyre publickey outbound connection\"; flow:to_server,established; content:\"/publickey/ HTTP/1.1|0D 0A|User-Agent: Wget/1.9|0D 0A|Host: \",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,phishme.com/project-dyre-new-rat-slurps-bank-credentials-bypasses-ssl; reference:url,www.virustotal.com/en/file/417c9cd7c8abbd7bbddfc313c9f153758fd11bda47f754b9c59bc308d808c486/analysis/; classtype:trojan-activity; sid:31293; rev:4;"
 }

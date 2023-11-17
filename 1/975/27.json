@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "975",
-  "Rev": "27",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS Alternate Data streams ASP file access attempt\"; flow:to_server,established; http_uri; content:\".asp|3A 3A 24|DATA\",nocase; metadata:ruleset community; service:http; reference:bugtraq,149; reference:cve,1999-0278; reference:nessus,10362; reference:url,docs.microsoft.com/en-us/security-updates/securitybulletins/1998/ms98-003; classtype:web-application-attack; sid:975; rev:27;"
+	"GID": "1",
+	"SID": "975",
+	"Rev": "27",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS Alternate Data streams ASP file access attempt\"; flow:to_server,established; http_uri; content:\".asp|3A 3A 24|DATA\",nocase; metadata:ruleset community; service:http; reference:bugtraq,149; reference:cve,1999-0278; reference:nessus,10362; reference:url,docs.microsoft.com/en-us/security-updates/securitybulletins/1998/ms98-003; classtype:web-application-attack; sid:975; rev:27;"
 }

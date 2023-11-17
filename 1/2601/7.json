@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2601",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE dbms_repcat.drop_master_repgroup buffer overflow attempt\"; flow:to_server,established; content:\"dbms_repcat.drop_master_repgroup\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*gname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|gname\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/is\"; metadata:ruleset community; classtype:attempted-user; sid:2601; rev:7;"
+	"GID": "1",
+	"SID": "2601",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE dbms_repcat.drop_master_repgroup buffer overflow attempt\"; flow:to_server,established; content:\"dbms_repcat.drop_master_repgroup\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*gname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|gname\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/is\"; metadata:ruleset community; classtype:attempted-user; sid:2601; rev:7;"
 }

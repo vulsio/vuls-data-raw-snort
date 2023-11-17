@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "421",
-  "Rev": "8",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP Mobile Registration Reply\"; icode:0; itype:36; metadata:ruleset community; classtype:misc-activity; sid:421; rev:8;"
+	"GID": "1",
+	"SID": "421",
+	"Rev": "8",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP Mobile Registration Reply\"; icode:0; itype:36; metadata:ruleset community; classtype:misc-activity; sid:421; rev:8;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34137",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"PUA-ADWARE SearchProtect user-agent detection\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|SearchProtect|3B|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/cbddccb934d302497ac60f924088034a1852c378cc51df20c2e53b401ffc4651/analysis/; classtype:misc-activity; sid:34137; rev:3;"
+	"GID": "1",
+	"SID": "34137",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"PUA-ADWARE SearchProtect user-agent detection\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|SearchProtect|3B|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/cbddccb934d302497ac60f924088034a1852c378cc51df20c2e53b401ffc4651/analysis/; classtype:misc-activity; sid:34137; rev:3;"
 }

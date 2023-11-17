@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "52548",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.XpertRAT inbound connection\"; flow:to_client,established; isdataat:!12; content:\"|7C 30 7C A1 40 23 40 21|\",depth 8,offset 3; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/gui/file/064d1d9a20f737679bb7ce912854c7ab29f78a0716ee8bc8dc69ade02acdca5a/detection; classtype:trojan-activity; sid:52548; rev:1;"
+	"GID": "1",
+	"SID": "52548",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.XpertRAT inbound connection\"; flow:to_client,established; isdataat:!12; content:\"|7C 30 7C A1 40 23 40 21|\",depth 8,offset 3; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/gui/file/064d1d9a20f737679bb7ce912854c7ab29f78a0716ee8bc8dc69ade02acdca5a/detection; classtype:trojan-activity; sid:52548; rev:1;"
 }

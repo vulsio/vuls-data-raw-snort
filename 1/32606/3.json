@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32606",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Sodebral variant outbound connection\"; flow:to_server,established; http_uri; content:\"/verifica/index.php?id=\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/3.0",
-  "Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e0290c3900445dc00ca24888924e37fa6ac17ecaddc60591e32b81536b9f5ef7/analysis/; classtype:trojan-activity; sid:32606; rev:3;"
+	"GID": "1",
+	"SID": "32606",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Sodebral variant outbound connection\"; flow:to_server,established; http_uri; content:\"/verifica/index.php?id=\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/3.0",
+	"Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e0290c3900445dc00ca24888924e37fa6ac17ecaddc60591e32b81536b9f5ef7/analysis/; classtype:trojan-activity; sid:32606; rev:3;"
 }

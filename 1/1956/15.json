@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1956",
-  "Rev": "15",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 500:",
-  "Option": "msg:\"PROTOCOL-RPC AMD UDP version request\"; flow:to_server; content:\"|00 04 93 F3|\",depth 4,offset 12; content:\"|00 00 00 08|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,1554; reference:cve,2000-0696; classtype:rpc-portmap-decode; sid:1956; rev:15;"
+	"GID": "1",
+	"SID": "1956",
+	"Rev": "15",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 500:",
+	"Option": "msg:\"PROTOCOL-RPC AMD UDP version request\"; flow:to_server; content:\"|00 04 93 F3|\",depth 4,offset 12; content:\"|00 00 00 08|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,1554; reference:cve,2000-0696; classtype:rpc-portmap-decode; sid:1956; rev:15;"
 }

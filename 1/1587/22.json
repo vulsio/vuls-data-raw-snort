@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1587",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP cgitest.exe access\"; flow:to_server,established; http_uri; content:\"/cgitest.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1313; reference:bugtraq,3885; reference:cve,2000-0521; reference:cve,2002-0128; reference:nessus,10040; reference:nessus,10623; reference:nessus,11131; classtype:web-application-activity; sid:1587; rev:22;"
+	"GID": "1",
+	"SID": "1587",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP cgitest.exe access\"; flow:to_server,established; http_uri; content:\"/cgitest.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1313; reference:bugtraq,3885; reference:cve,2000-0521; reference:cve,2002-0128; reference:nessus,10040; reference:nessus,10623; reference:nessus,11131; classtype:web-application-activity; sid:1587; rev:22;"
 }

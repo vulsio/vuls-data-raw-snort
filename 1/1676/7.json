@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1676",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE select union attempt\"; flow:to_server,established; content:\"select \",nocase; content:\" union \",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1676; rev:7;"
+	"GID": "1",
+	"SID": "1676",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE select union attempt\"; flow:to_server,established; content:\"select \",nocase; content:\" union \",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1676; rev:7;"
 }

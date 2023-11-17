@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21838",
-  "Rev": "5",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP System variable directory traversal attempt - %PSModulePath%\"; flow:to_server,established; http_uri; content:\"%PSModulePath%\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:21838; rev:5;"
+	"GID": "1",
+	"SID": "21838",
+	"Rev": "5",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP System variable directory traversal attempt - %PSModulePath%\"; flow:to_server,established; http_uri; content:\"%PSModulePath%\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:21838; rev:5;"
 }

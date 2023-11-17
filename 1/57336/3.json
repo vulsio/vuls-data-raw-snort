@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "57336",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"POLICY-OTHER F5 iControl REST interface tm.util.bash invocation attempt\"; flow:to_server,established; http_uri; content:\"/mgmt/tm/util/bash\",fast_pattern,nocase; http_client_body; content:\"command\",nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-1388; classtype:policy-violation; sid:57336; rev:3;"
+	"GID": "1",
+	"SID": "57336",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"POLICY-OTHER F5 iControl REST interface tm.util.bash invocation attempt\"; flow:to_server,established; http_uri; content:\"/mgmt/tm/util/bash\",fast_pattern,nocase; http_client_body; content:\"command\",nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-1388; classtype:policy-violation; sid:57336; rev:3;"
 }

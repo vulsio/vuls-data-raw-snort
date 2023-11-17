@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "714",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
-  "Option": "msg:\"PROTOCOL-TELNET resolv_host_conf\"; flow:to_server,established; content:\"resolv_host_conf\",fast_pattern,nocase; metadata:ruleset community; service:telnet; reference:bugtraq,2181; reference:cve,2001-0170; classtype:attempted-admin; sid:714; rev:15;"
+	"GID": "1",
+	"SID": "714",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+	"Option": "msg:\"PROTOCOL-TELNET resolv_host_conf\"; flow:to_server,established; content:\"resolv_host_conf\",fast_pattern,nocase; metadata:ruleset community; service:telnet; reference:bugtraq,2181; reference:cve,2001-0170; classtype:attempted-admin; sid:714; rev:15;"
 }

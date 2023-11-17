@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1677",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE select like '%' attempt\"; flow:to_server,established; content:\" where \",nocase; content:\" like '%'\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1677; rev:7;"
+	"GID": "1",
+	"SID": "1677",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE select like '%' attempt\"; flow:to_server,established; content:\" where \",nocase; content:\" like '%'\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1677; rev:7;"
 }

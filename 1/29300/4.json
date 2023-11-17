@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29300",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Graftor variant inbound connection\"; flow:to_client,established; http_header; content:\"|3B 20|filename=CostcoForm.zip|0D 0A|\",fast_pattern,nocase; file_data; content:\"CostcoForm.exe\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b20fcfe7d851dfe1f835e60072e53b0a3c54e14d0fc94814ce841be4740f295c/analysis; classtype:trojan-activity; sid:29300; rev:4;"
+	"GID": "1",
+	"SID": "29300",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Graftor variant inbound connection\"; flow:to_client,established; http_header; content:\"|3B 20|filename=CostcoForm.zip|0D 0A|\",fast_pattern,nocase; file_data; content:\"CostcoForm.exe\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b20fcfe7d851dfe1f835e60072e53b0a3c54e14d0fc94814ce841be4740f295c/analysis; classtype:trojan-activity; sid:29300; rev:4;"
 }

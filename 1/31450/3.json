@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31450",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.CryptoWall outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:<17; pkt_data; content:\"HTTP/1.1|0D 0A|Accept: */*|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|Connection: Close|0D 0A|Content-Length: 100|0D 0A|User-Agent: \",fast_pattern,nocase; http_client_body; content:\"=\",depth 1,offset 1; pcre:\"/[a-z]=[a-f0-9]{98}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a92ae8e80b0b70288a32c0455856453c5980021156132a540035e7ef5e0fa79e/analysis/; classtype:trojan-activity; sid:31450; rev:3;"
+	"GID": "1",
+	"SID": "31450",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.CryptoWall outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:<17; pkt_data; content:\"HTTP/1.1|0D 0A|Accept: */*|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|Connection: Close|0D 0A|Content-Length: 100|0D 0A|User-Agent: \",fast_pattern,nocase; http_client_body; content:\"=\",depth 1,offset 1; pcre:\"/[a-z]=[a-f0-9]{98}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a92ae8e80b0b70288a32c0455856453c5980021156132a540035e7ef5e0fa79e/analysis/; classtype:trojan-activity; sid:31450; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46748",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Qarallax outbound connection\"; flow:to_server,established; content:\"|00 05|child|01 00 16|\",depth 11; content:\"|22|magic|22|\",within 100; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/en/file/658f67dbf509fc017ace6db7ed38b3591fe72b9ba950a59054869cd718b4da2b/analysis; classtype:trojan-activity; sid:46748; rev:1;"
+	"GID": "1",
+	"SID": "46748",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Qarallax outbound connection\"; flow:to_server,established; content:\"|00 05|child|01 00 16|\",depth 11; content:\"|22|magic|22|\",within 100; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/en/file/658f67dbf509fc017ace6db7ed38b3591fe72b9ba950a59054869cd718b4da2b/analysis; classtype:trojan-activity; sid:46748; rev:1;"
 }

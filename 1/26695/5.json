@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26695",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Namihno variant outbound request\"; flow:to_server,established; http_uri; content:\"/windows/update/search?hl=\"; content:\"&q=\",distance 0; content:\"&meta=\",distance 0; content:\"&id=\",distance 0; metadata:ruleset community; service:http; classtype:trojan-activity; sid:26695; rev:5;"
+	"GID": "1",
+	"SID": "26695",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Namihno variant outbound request\"; flow:to_server,established; http_uri; content:\"/windows/update/search?hl=\"; content:\"&q=\",distance 0; content:\"&meta=\",distance 0; content:\"&id=\",distance 0; metadata:ruleset community; service:http; classtype:trojan-activity; sid:26695; rev:5;"
 }

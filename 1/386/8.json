@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "386",
-  "Rev": "8",
-  "Header": "alert icmp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP Address Mask Reply\"; icode:0; itype:18; metadata:ruleset community; classtype:misc-activity; sid:386; rev:8;"
+	"GID": "1",
+	"SID": "386",
+	"Rev": "8",
+	"Header": "alert icmp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP Address Mask Reply\"; icode:0; itype:18; metadata:ruleset community; classtype:misc-activity; sid:386; rev:8;"
 }

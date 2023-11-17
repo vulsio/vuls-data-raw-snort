@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "43063",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kabob outbound connection\"; flow:to_server,established; http_client_body; content:\"@|E9 03 00 00 00 00 00 00 00 00 64|\",fast_pattern,nocase; http_uri; pcre:\"/\\/\\d{8}\\/\\w{4}\\/[A-F0-9]{4}\\/[A-F0-9]{4}\\/[A-Z0-9\\-_~]{12}\\.[aj]sp/i\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:43063; rev:3;"
+	"GID": "1",
+	"SID": "43063",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kabob outbound connection\"; flow:to_server,established; http_client_body; content:\"@|E9 03 00 00 00 00 00 00 00 00 64|\",fast_pattern,nocase; http_uri; pcre:\"/\\/\\d{8}\\/\\w{4}\\/[A-F0-9]{4}\\/[A-F0-9]{4}\\/[A-Z0-9\\-_~]{12}\\.[aj]sp/i\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:43063; rev:3;"
 }

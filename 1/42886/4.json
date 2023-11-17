@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "42886",
-  "Rev": "4",
-  "Header": "alert http",
-  "Option": "msg:\"MALWARE-CNC HttpBrowser User-Agent outbound communication attmept\"; flow:to_server,established; http_header:field user-agent; content:\"HttpBrowser/1.0\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; gid:1; sid:42886; rev:4;"
+	"GID": "1",
+	"SID": "42886",
+	"Rev": "4",
+	"Header": "alert http",
+	"Option": "msg:\"MALWARE-CNC HttpBrowser User-Agent outbound communication attmept\"; flow:to_server,established; http_header:field user-agent; content:\"HttpBrowser/1.0\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; gid:1; sid:42886; rev:4;"
 }

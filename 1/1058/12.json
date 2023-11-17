@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1058",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SQL xp_enumdsn attempt\"; flow:to_server,established; content:\"xp_enumdsn\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1058; rev:12;"
+	"GID": "1",
+	"SID": "1058",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SQL xp_enumdsn attempt\"; flow:to_server,established; content:\"xp_enumdsn\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1058; rev:12;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1805",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Oracle Reports CGI access\"; flow:to_server,established; http_uri; content:\"/rwcgi60\",fast_pattern,nocase; pkt_data; content:\"setauth=\"; metadata:ruleset community; service:http; reference:bugtraq,4848; reference:cve,2002-0947; classtype:web-application-activity; sid:1805; rev:12;"
+	"GID": "1",
+	"SID": "1805",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Oracle Reports CGI access\"; flow:to_server,established; http_uri; content:\"/rwcgi60\",fast_pattern,nocase; pkt_data; content:\"setauth=\"; metadata:ruleset community; service:http; reference:bugtraq,4848; reference:cve,2002-0947; classtype:web-application-activity; sid:1805; rev:12;"
 }

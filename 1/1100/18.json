@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1100",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"INDICATOR-SCAN L3retriever HTTP Probe\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Java1.2.1|0D 0A|\"; metadata:ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:web-application-activity; sid:1100; rev:18;"
+	"GID": "1",
+	"SID": "1100",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"INDICATOR-SCAN L3retriever HTTP Probe\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Java1.2.1|0D 0A|\"; metadata:ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:web-application-activity; sid:1100; rev:18;"
 }

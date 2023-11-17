@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2669",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ibillpm.pl access\"; flow:to_server,established; http_uri; content:\"/ibillpm.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3476; reference:cve,2001-0839; reference:nessus,11083; classtype:web-application-activity; sid:2669; rev:15;"
+	"GID": "1",
+	"SID": "2669",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ibillpm.pl access\"; flow:to_server,established; http_uri; content:\"/ibillpm.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3476; reference:cve,2001-0839; reference:nessus,11083; classtype:web-application-activity; sid:2669; rev:15;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1129",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP .htaccess access\"; flow:to_server,established; http_uri; content:\".htaccess\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1170; classtype:attempted-recon; sid:1129; rev:16;"
+	"GID": "1",
+	"SID": "1129",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP .htaccess access\"; flow:to_server,established; http_uri; content:\".htaccess\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1170; classtype:attempted-recon; sid:1129; rev:16;"
 }

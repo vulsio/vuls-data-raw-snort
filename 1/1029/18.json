@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1029",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS scripts-browse access\"; flow:to_server,established; content:\"/scripts/ \",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11032; classtype:web-application-attack; sid:1029; rev:18;"
+	"GID": "1",
+	"SID": "1029",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS scripts-browse access\"; flow:to_server,established; content:\"/scripts/ \",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11032; classtype:web-application-attack; sid:1029; rev:18;"
 }

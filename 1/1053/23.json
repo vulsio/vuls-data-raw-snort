@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1053",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ads.cgi command execution attempt\"; flow:to_server,established; http_uri; content:\"/ads.cgi\",fast_pattern,nocase; pkt_data; content:\"file=\",nocase; http_raw_uri; content:\"../../\"; http_uri; content:\"|7C|\"; metadata:ruleset community; service:http; reference:bugtraq,2103; reference:cve,2001-0025; reference:nessus,11464; classtype:web-application-attack; sid:1053; rev:23;"
+	"GID": "1",
+	"SID": "1053",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ads.cgi command execution attempt\"; flow:to_server,established; http_uri; content:\"/ads.cgi\",fast_pattern,nocase; pkt_data; content:\"file=\",nocase; http_raw_uri; content:\"../../\"; http_uri; content:\"|7C|\"; metadata:ruleset community; service:http; reference:bugtraq,2103; reference:cve,2001-0025; reference:nessus,11464; classtype:web-application-attack; sid:1053; rev:23;"
 }

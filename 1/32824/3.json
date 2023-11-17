@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32824",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Darkhotel variant outbound connection\"; flow:to_server,established; http_uri; content:\"/txt/read.php\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|\"; content:\"Media Center PC 6.0\",within 175; content:!\"Accept|3A 20|\"; content:!\"Referer|3A 20|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,securelist.com/files/2014/11/darkhotel_kl_07.11.pdf; reference:url,securelist.com/files/2014/11/darkhotelappendixindicators_kl.pdf; classtype:trojan-activity; sid:32824; rev:3;"
+	"GID": "1",
+	"SID": "32824",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Darkhotel variant outbound connection\"; flow:to_server,established; http_uri; content:\"/txt/read.php\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|\"; content:\"Media Center PC 6.0\",within 175; content:!\"Accept|3A 20|\"; content:!\"Referer|3A 20|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,securelist.com/files/2014/11/darkhotel_kl_07.11.pdf; reference:url,securelist.com/files/2014/11/darkhotelappendixindicators_kl.pdf; classtype:trojan-activity; sid:32824; rev:3;"
 }

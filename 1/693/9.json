@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "693",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 1433",
-  "Option": "msg:\"INDICATOR-SHELLCODE shellcode attempt\"; flow:to_server,established; content:\"H|00|%|00|x|00|w|00 90 00 90 00 90 00 90 00 90 00|3|00 C0 00|P|00|h|00|.|00|\"; metadata:ruleset community; classtype:shellcode-detect; sid:693; rev:9;"
+	"GID": "1",
+	"SID": "693",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 1433",
+	"Option": "msg:\"INDICATOR-SHELLCODE shellcode attempt\"; flow:to_server,established; content:\"H|00|%|00|x|00|w|00 90 00 90 00 90 00 90 00 90 00|3|00 C0 00|P|00|h|00|.|00|\"; metadata:ruleset community; classtype:shellcode-detect; sid:693; rev:9;"
 }

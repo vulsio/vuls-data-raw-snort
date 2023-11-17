@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1990",
-  "Rev": "7",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 1863",
-  "Option": "msg:\"POLICY-SOCIAL Microsoft MSN user search\"; flow:to_server,established; content:\"CAL \",depth 4,nocase; metadata:ruleset community; classtype:policy-violation; sid:1990; rev:7;"
+	"GID": "1",
+	"SID": "1990",
+	"Rev": "7",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 1863",
+	"Option": "msg:\"POLICY-SOCIAL Microsoft MSN user search\"; flow:to_server,established; content:\"CAL \",depth 4,nocase; metadata:ruleset community; classtype:policy-violation; sid:1990; rev:7;"
 }

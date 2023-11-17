@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28814",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gozi/Neverquest variant outbound connection\"; flow:to_server,established; http_uri; content:\"/post.aspx?forumID=\",fast_pattern,nocase; http_client_body; content:\"|0D 0A|URL: http\",depth 11,offset 17; http_header; content:!\"Accept\"; http_client_body; pcre:\"/^(?!\\d{17}|[A-F]{17})[A-F0-9]{17}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b78c5c53d3b54acbca2b344a779528f0408258b6ac12899c860d99bf563e883a/analysis/; classtype:trojan-activity; sid:28814; rev:3;"
+	"GID": "1",
+	"SID": "28814",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Gozi/Neverquest variant outbound connection\"; flow:to_server,established; http_uri; content:\"/post.aspx?forumID=\",fast_pattern,nocase; http_client_body; content:\"|0D 0A|URL: http\",depth 11,offset 17; http_header; content:!\"Accept\"; http_client_body; pcre:\"/^(?!\\d{17}|[A-F]{17})[A-F0-9]{17}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b78c5c53d3b54acbca2b344a779528f0408258b6ac12899c860d99bf563e883a/analysis/; classtype:trojan-activity; sid:28814; rev:3;"
 }

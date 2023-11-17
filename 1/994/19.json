@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "994",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS /scripts/iisadmin/default.htm access\"; flow:to_server,established; http_uri; content:\"/scripts/iisadmin/default.htm\",nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:994; rev:19;"
+	"GID": "1",
+	"SID": "994",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS /scripts/iisadmin/default.htm access\"; flow:to_server,established; http_uri; content:\"/scripts/iisadmin/default.htm\",nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:994; rev:19;"
 }

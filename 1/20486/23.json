@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "20486",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY RTF file magic detected\"; flow:to_client,established; file_data; content:\"{|5C|rt\",fast_pattern,nocase; flowbits:set,file.rtf; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:20486; rev:23;"
+	"GID": "1",
+	"SID": "20486",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"FILE-IDENTIFY RTF file magic detected\"; flow:to_client,established; file_data; content:\"{|5C|rt\",fast_pattern,nocase; flowbits:set,file.rtf; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:20486; rev:23;"
 }

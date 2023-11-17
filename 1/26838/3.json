@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26838",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Blackholev2 exploit kit Initial Gate from NatPay Mailing Campaign\"; flow:to_server,established; http_uri; content:\"/natpay.html?\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26838; rev:3;"
+	"GID": "1",
+	"SID": "26838",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Blackholev2 exploit kit Initial Gate from NatPay Mailing Campaign\"; flow:to_server,established; http_uri; content:\"/natpay.html?\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26838; rev:3;"
 }

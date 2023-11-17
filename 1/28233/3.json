@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28233",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Blackholev2/Cool exploit kit payload download attempt\"; flow:to_server,established; http_raw_uri; bufferlen:50<=>150; http_header; content:\" Java/1.\",fast_pattern,nocase; http_uri; content:\".php?\"; pcre:\"/\\/(?:[^\\/]+?\\/[a-z]{2,24}|closest\\/[a-z0-9]{15,25})\\.php\\?[ab10]+=[ab10]+&[ab10]+=[ab10]+$/\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:28233; rev:3;"
+	"GID": "1",
+	"SID": "28233",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Blackholev2/Cool exploit kit payload download attempt\"; flow:to_server,established; http_raw_uri; bufferlen:50<=>150; http_header; content:\" Java/1.\",fast_pattern,nocase; http_uri; content:\".php?\"; pcre:\"/\\/(?:[^\\/]+?\\/[a-z]{2,24}|closest\\/[a-z0-9]{15,25})\\.php\\?[ab10]+=[ab10]+&[ab10]+=[ab10]+$/\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:28233; rev:3;"
 }

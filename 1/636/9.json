@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "636",
-  "Rev": "9",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 7",
-  "Option": "msg:\"INDICATOR-SCAN cybercop udp bomb\"; flow:to_server; content:\"cybercop\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:bad-unknown; sid:636; rev:9;"
+	"GID": "1",
+	"SID": "636",
+	"Rev": "9",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 7",
+	"Option": "msg:\"INDICATOR-SCAN cybercop udp bomb\"; flow:to_server; content:\"cybercop\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:bad-unknown; sid:636; rev:9;"
 }

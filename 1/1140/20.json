@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1140",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP guestbook.pl access\"; flow:to_server,established; http_uri; content:\"/guestbook.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,776; reference:cve,1999-0237; reference:cve,1999-1053; reference:nessus,10099; classtype:attempted-recon; sid:1140; rev:20;"
+	"GID": "1",
+	"SID": "1140",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP guestbook.pl access\"; flow:to_server,established; http_uri; content:\"/guestbook.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,776; reference:cve,1999-0237; reference:cve,1999-1053; reference:nessus,10099; classtype:attempted-recon; sid:1140; rev:20;"
 }

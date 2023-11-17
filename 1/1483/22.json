@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1483",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ustorekeeper.pl access\"; flow:to_server,established; http_uri; content:\"/ustorekeeper.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,2001-0466; reference:nessus,10645; classtype:web-application-activity; sid:1483; rev:22;"
+	"GID": "1",
+	"SID": "1483",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ustorekeeper.pl access\"; flow:to_server,established; http_uri; content:\"/ustorekeeper.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,2001-0466; reference:nessus,10645; classtype:web-application-activity; sid:1483; rev:22;"
 }

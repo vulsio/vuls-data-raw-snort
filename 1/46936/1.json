@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46936",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent: HTTPREAD|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/782cc4188618cf0c4815f85ea7873a004464095f5ed459b8d1579fa27ce5810e/analysis/; classtype:trojan-activity; sid:46936; rev:1;"
+	"GID": "1",
+	"SID": "46936",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent: HTTPREAD|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/782cc4188618cf0c4815f85ea7873a004464095f5ed459b8d1579fa27ce5810e/analysis/; classtype:trojan-activity; sid:46936; rev:1;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "710",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
-  "Option": "msg:\"PROTOCOL-TELNET EZsetup account attempt\"; flow:to_server,established; content:\"OutOfBox\"; metadata:ruleset community; service:telnet; reference:cve,1999-0501; reference:nessus,11244; classtype:suspicious-login; sid:710; rev:17;"
+	"GID": "1",
+	"SID": "710",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+	"Option": "msg:\"PROTOCOL-TELNET EZsetup account attempt\"; flow:to_server,established; content:\"OutOfBox\"; metadata:ruleset community; service:telnet; reference:cve,1999-0501; reference:nessus,11244; classtype:suspicious-login; sid:710; rev:17;"
 }

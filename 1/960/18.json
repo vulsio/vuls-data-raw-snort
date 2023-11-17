@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "960",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage service.stp access\"; flow:to_server,established; http_uri; content:\"/_vti_pvt/service.stp\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2002-1717; classtype:web-application-activity; sid:960; rev:18;"
+	"GID": "1",
+	"SID": "960",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Microsoft Frontpage service.stp access\"; flow:to_server,established; http_uri; content:\"/_vti_pvt/service.stp\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2002-1717; classtype:web-application-activity; sid:960; rev:18;"
 }

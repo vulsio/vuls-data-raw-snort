@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1082",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP amazon 1-click cookie theft\"; flow:to_server,established; content:\"ref%3Cscript%20language%3D%22Javascript\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1194; reference:cve,2000-0439; classtype:web-application-attack; sid:1082; rev:15;"
+	"GID": "1",
+	"SID": "1082",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP amazon 1-click cookie theft\"; flow:to_server,established; content:\"ref%3Cscript%20language%3D%22Javascript\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1194; reference:cve,2000-0439; classtype:web-application-attack; sid:1082; rev:15;"
 }

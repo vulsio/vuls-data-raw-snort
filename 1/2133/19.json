@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2133",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS MS BizTalk server access\"; flow:to_server,established; http_uri; content:\"/biztalkhttpreceive.dll\",nocase; metadata:ruleset community; service:http; reference:bugtraq,7469; reference:bugtraq,7470; reference:cve,2003-0117; reference:cve,2003-0118; reference:nessus,11638; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-016; classtype:web-application-activity; sid:2133; rev:19;"
+	"GID": "1",
+	"SID": "2133",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS MS BizTalk server access\"; flow:to_server,established; http_uri; content:\"/biztalkhttpreceive.dll\",nocase; metadata:ruleset community; service:http; reference:bugtraq,7469; reference:bugtraq,7470; reference:cve,2003-0117; reference:cve,2003-0118; reference:nessus,11638; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-016; classtype:web-application-activity; sid:2133; rev:19;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26480",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zbot fake PNG config file download without User-Agent\"; flow:to_server,established; http_header; content:\"Accept: application/xml,application/xhtml+xml,text/html|3B|q=0.9,text/plain|3B|q=0.8,image/png,*/*|3B|q=0.5|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/\\.png$/i\"; http_header; content:!\"User-Agent:\",nocase; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:26480; rev:4;"
+	"GID": "1",
+	"SID": "26480",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zbot fake PNG config file download without User-Agent\"; flow:to_server,established; http_header; content:\"Accept: application/xml,application/xhtml+xml,text/html|3B|q=0.9,text/plain|3B|q=0.8,image/png,*/*|3B|q=0.5|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/\\.png$/i\"; http_header; content:!\"User-Agent:\",nocase; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:26480; rev:4;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1414",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 161",
-  "Option": "msg:\"PROTOCOL-SNMP private access tcp\"; flow:to_server,established; content:\"private\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1414; rev:20;"
+	"GID": "1",
+	"SID": "1414",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 161",
+	"Option": "msg:\"PROTOCOL-SNMP private access tcp\"; flow:to_server,established; content:\"private\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1414; rev:20;"
 }

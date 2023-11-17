@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1085",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP strings overflow\"; flow:to_server,established; content:\"|BA|I|FE FF FF F7 D2 B9 BF FF FF FF F7 D1|\"; metadata:ruleset community; service:http; reference:bugtraq,802; classtype:web-application-attack; sid:1085; rev:15;"
+	"GID": "1",
+	"SID": "1085",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP strings overflow\"; flow:to_server,established; content:\"|BA|I|FE FF FF F7 D2 B9 BF FF FF FF F7 D1|\"; metadata:ruleset community; service:http; reference:bugtraq,802; classtype:web-application-attack; sid:1085; rev:15;"
 }

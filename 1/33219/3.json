@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33219",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gamarue variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:9; http_method; content:\"POST\"; http_uri; content:\"/2ldr.php\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/4.0|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/eefe5370b09a32a7b295c136073a8560958c4a58822a7da5b501a10543266c6e/analysis/1421697833/; classtype:trojan-activity; sid:33219; rev:3;"
+	"GID": "1",
+	"SID": "33219",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Gamarue variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:9; http_method; content:\"POST\"; http_uri; content:\"/2ldr.php\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/4.0|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/eefe5370b09a32a7b295c136073a8560958c4a58822a7da5b501a10543266c6e/analysis/1421697833/; classtype:trojan-activity; sid:33219; rev:3;"
 }

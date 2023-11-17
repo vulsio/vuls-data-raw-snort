@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "900",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP webspirs.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/webspirs.cgi\",fast_pattern,nocase; http_raw_uri; content:\"../../\"; metadata:ruleset community; service:http; reference:bugtraq,2362; reference:cve,2001-0211; reference:nessus,10616; classtype:web-application-attack; sid:900; rev:22;"
+	"GID": "1",
+	"SID": "900",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP webspirs.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/webspirs.cgi\",fast_pattern,nocase; http_raw_uri; content:\"../../\"; metadata:ruleset community; service:http; reference:bugtraq,2362; reference:cve,2001-0211; reference:nessus,10616; classtype:web-application-attack; sid:900; rev:22;"
 }

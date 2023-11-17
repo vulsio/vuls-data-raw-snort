@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1602",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP htsearch access\"; flow:to_server,established; http_uri; content:\"/htsearch\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1026; reference:cve,2000-0208; reference:nessus,10105; classtype:web-application-activity; sid:1602; rev:21;"
+	"GID": "1",
+	"SID": "1602",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP htsearch access\"; flow:to_server,established; http_uri; content:\"/htsearch\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1026; reference:cve,2000-0208; reference:nessus,10105; classtype:web-application-activity; sid:1602; rev:21;"
 }

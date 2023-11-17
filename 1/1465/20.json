@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1465",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP auktion.cgi access\"; flow:to_server,established; http_uri; content:\"/auktion.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2367; reference:cve,2001-0212; reference:nessus,10638; classtype:web-application-activity; sid:1465; rev:20;"
+	"GID": "1",
+	"SID": "1465",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP auktion.cgi access\"; flow:to_server,established; http_uri; content:\"/auktion.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2367; reference:cve,2001-0212; reference:nessus,10638; classtype:web-application-activity; sid:1465; rev:20;"
 }

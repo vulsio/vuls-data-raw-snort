@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1874",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Oracle Java Process Manager access\"; flow:to_server,established; http_uri; content:\"/oprocmgr-status\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:nessus,10851; classtype:web-application-activity; sid:1874; rev:9;"
+	"GID": "1",
+	"SID": "1874",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Oracle Java Process Manager access\"; flow:to_server,established; http_uri; content:\"/oprocmgr-status\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:nessus,10851; classtype:web-application-activity; sid:1874; rev:9;"
 }

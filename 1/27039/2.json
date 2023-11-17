@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27039",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.OnlineGameHack variant outbound connection\"; flow:to_server,established; http_uri; content:\"/get.asp?mac=\"; content:\"&os=\",within 36; metadata:ruleset community; service:http; reference:url,image.ahnlab.com/global/upload/download/asecreport/ASEC_Report_Vol.39_Eng.pdf; classtype:trojan-activity; sid:27039; rev:2;"
+	"GID": "1",
+	"SID": "27039",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.OnlineGameHack variant outbound connection\"; flow:to_server,established; http_uri; content:\"/get.asp?mac=\"; content:\"&os=\",within 36; metadata:ruleset community; service:http; reference:url,image.ahnlab.com/global/upload/download/asecreport/ASEC_Report_Vol.39_Eng.pdf; classtype:trojan-activity; sid:27039; rev:2;"
 }

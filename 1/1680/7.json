@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1680",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE all_constraints access\"; flow:to_server,established; content:\"all_constraints\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1680; rev:7;"
+	"GID": "1",
+	"SID": "1680",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE all_constraints access\"; flow:to_server,established; content:\"all_constraints\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1680; rev:7;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "360",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP serv-u directory traversal\"; flow:to_server,established; content:\".%20.\",fast_pattern,nocase; metadata:ruleset community; service:ftp; reference:bugtraq,2052; reference:cve,2001-0054; reference:nessus,10565; classtype:bad-unknown; sid:360; rev:16;"
+	"GID": "1",
+	"SID": "360",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP serv-u directory traversal\"; flow:to_server,established; content:\".%20.\",fast_pattern,nocase; metadata:ruleset community; service:ftp; reference:bugtraq,2052; reference:cve,2001-0054; reference:nessus,10565; classtype:bad-unknown; sid:360; rev:16;"
 }

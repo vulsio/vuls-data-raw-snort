@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "20223",
-  "Rev": "24",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"FILE-IDENTIFY SMI file download request\"; flow:to_server,established; http_uri; content:\".smi\",fast_pattern,nocase; pcre:\"/\\x2esmi([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.realplayer.playlist; flowbits:set,file.smi; flowbits:set,file.dmg; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:bugtraq,49149; reference:url,en.wikipedia.org/wiki/SAMI; classtype:misc-activity; sid:20223; rev:24;"
+	"GID": "1",
+	"SID": "20223",
+	"Rev": "24",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"FILE-IDENTIFY SMI file download request\"; flow:to_server,established; http_uri; content:\".smi\",fast_pattern,nocase; pcre:\"/\\x2esmi([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.realplayer.playlist; flowbits:set,file.smi; flowbits:set,file.dmg; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:bugtraq,49149; reference:url,en.wikipedia.org/wiki/SAMI; classtype:misc-activity; sid:20223; rev:24;"
 }

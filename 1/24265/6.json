@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "24265",
-  "Rev": "6",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 84",
-  "Option": "msg:\"MALWARE-OTHER Malicious UA detected on non-standard port\"; flow:to_server,established,no_stream; content:\"User-Agent|3A| Mozilla/5.0 |28|Windows|3B| U|3B| MSIE 9.0|3B| Windows NT 9.0|3B| en-US|29|\"; detection_filter:track by_src,count 1,seconds 120; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,anubis.iseclab.org/?action=result&task_id=1691c3b8835221fa4692960681f39c736&format=html; classtype:trojan-activity; sid:24265; rev:6;"
+	"GID": "1",
+	"SID": "24265",
+	"Rev": "6",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 84",
+	"Option": "msg:\"MALWARE-OTHER Malicious UA detected on non-standard port\"; flow:to_server,established,no_stream; content:\"User-Agent|3A| Mozilla/5.0 |28|Windows|3B| U|3B| MSIE 9.0|3B| Windows NT 9.0|3B| en-US|29|\"; detection_filter:track by_src,count 1,seconds 120; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,anubis.iseclab.org/?action=result&task_id=1691c3b8835221fa4692960681f39c736&format=html; classtype:trojan-activity; sid:24265; rev:6;"
 }

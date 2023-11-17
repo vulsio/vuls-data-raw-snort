@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1696",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE create database attempt\"; flow:to_server,established; content:\"create database\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1696; rev:7;"
+	"GID": "1",
+	"SID": "1696",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE create database attempt\"; flow:to_server,established; content:\"create database\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1696; rev:7;"
 }

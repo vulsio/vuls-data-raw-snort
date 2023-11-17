@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "937",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage _vti_rpc access\"; flow:to_server,established; http_uri; content:\"/_vti_rpc\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2144; reference:cve,2001-0096; reference:nessus,10585; classtype:web-application-activity; sid:937; rev:22;"
+	"GID": "1",
+	"SID": "937",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Microsoft Frontpage _vti_rpc access\"; flow:to_server,established; http_uri; content:\"/_vti_rpc\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2144; reference:cve,2001-0096; reference:nessus,10585; classtype:web-application-activity; sid:937; rev:22;"
 }

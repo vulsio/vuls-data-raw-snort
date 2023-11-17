@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1542",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP cgimail access\"; flow:to_server,established; http_uri; content:\"/cgimail\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1623; reference:cve,2000-0726; reference:nessus,11721; classtype:web-application-activity; sid:1542; rev:20;"
+	"GID": "1",
+	"SID": "1542",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP cgimail access\"; flow:to_server,established; http_uri; content:\"/cgimail\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1623; reference:cve,2000-0726; reference:nessus,11721; classtype:web-application-activity; sid:1542; rev:20;"
 }

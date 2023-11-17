@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1925",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-RPC mountd TCP exportall request\"; flow:to_server,established; content:\"|00 01 86 A5|\",depth 4,offset 16; content:\"|00 00 00 06|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; classtype:attempted-recon; sid:1925; rev:12;"
+	"GID": "1",
+	"SID": "1925",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-RPC mountd TCP exportall request\"; flow:to_server,established; content:\"|00 01 86 A5|\",depth 4,offset 16; content:\"|00 00 00 06|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; classtype:attempted-recon; sid:1925; rev:12;"
 }

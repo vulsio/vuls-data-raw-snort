@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "260",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
-  "Option": "msg:\"SERVER-OTHER Bind Buffer Overflow via NXT records named overflow ADMROCKS\"; flow:to_server,established; content:\"ADMROCKS\"; metadata:ruleset community; service:dns; reference:bugtraq,788; reference:cve,1999-0833; reference:url,www.cert.org/advisories/CA-1999-14.html; classtype:attempted-admin; sid:260; rev:19;"
+	"GID": "1",
+	"SID": "260",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
+	"Option": "msg:\"SERVER-OTHER Bind Buffer Overflow via NXT records named overflow ADMROCKS\"; flow:to_server,established; content:\"ADMROCKS\"; metadata:ruleset community; service:dns; reference:bugtraq,788; reference:cve,1999-0833; reference:url,www.cert.org/advisories/CA-1999-14.html; classtype:attempted-admin; sid:260; rev:19;"
 }

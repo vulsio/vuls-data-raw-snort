@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38610",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Godzilla downloader successful base64 binary download\"; flow:to_client,established; content:\"GODZILLA=\",fast_pattern,nocase; http_cookie; content:\"GODZILLA=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f597634ff5e2623baff35d99bfdb2aac1725c9f49805b4903c13093c43172cb7/analysis/1461593386; classtype:trojan-activity; sid:38610; rev:2;"
+	"GID": "1",
+	"SID": "38610",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Godzilla downloader successful base64 binary download\"; flow:to_client,established; content:\"GODZILLA=\",fast_pattern,nocase; http_cookie; content:\"GODZILLA=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f597634ff5e2623baff35d99bfdb2aac1725c9f49805b4903c13093c43172cb7/analysis/1461593386; classtype:trojan-activity; sid:38610; rev:2;"
 }

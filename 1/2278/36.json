@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2278",
-  "Rev": "36",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP HTTP request with negative Content-Length attempt\"; flow:to_server,established; http_header; content:\"Content-Length|3A|\",nocase; content:!\"|0D|\",within 10; content:!\"|0A|\",within 10; pcre:\"/Content-Length\\x3A\\s*[2-9][0-9]{9}/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,16354; reference:bugtraq,17879; reference:bugtraq,54055; reference:bugtraq,9098; reference:bugtraq,9476; reference:bugtraq,9576; reference:cve,2004-0095; reference:cve,2005-3653; reference:cve,2006-2162; reference:cve,2006-3655; reference:cve,2014-9192; reference:cve,2015-5343; reference:cve,2017-1000470; classtype:misc-attack; sid:2278; rev:36;"
+	"GID": "1",
+	"SID": "2278",
+	"Rev": "36",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP HTTP request with negative Content-Length attempt\"; flow:to_server,established; http_header; content:\"Content-Length|3A|\",nocase; content:!\"|0D|\",within 10; content:!\"|0A|\",within 10; pcre:\"/Content-Length\\x3A\\s*[2-9][0-9]{9}/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,16354; reference:bugtraq,17879; reference:bugtraq,54055; reference:bugtraq,9098; reference:bugtraq,9476; reference:bugtraq,9576; reference:cve,2004-0095; reference:cve,2005-3653; reference:cve,2006-2162; reference:cve,2006-3655; reference:cve,2014-9192; reference:cve,2015-5343; reference:cve,2017-1000470; classtype:misc-attack; sid:2278; rev:36;"
 }

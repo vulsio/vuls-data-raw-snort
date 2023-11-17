@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28795",
-  "Rev": "7",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Goon/Infinity exploit kit payload download attempt\"; flow:to_server,established; http_raw_uri; bufferlen:<30; http_uri; content:\".mp3\",fast_pattern,nocase; http_header; content:\" Java/1.\"; http_uri; pcre:\"/\\/\\d+\\.mp3$/\"; flowbits:set,file.exploit_kit.pe; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:cve,2012-0507; reference:url,blog.talosintel.com/2013/11/im-calling-this-goon-exploit-kit-for-now.html; classtype:trojan-activity; sid:28795; rev:7;"
+	"GID": "1",
+	"SID": "28795",
+	"Rev": "7",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Goon/Infinity exploit kit payload download attempt\"; flow:to_server,established; http_raw_uri; bufferlen:<30; http_uri; content:\".mp3\",fast_pattern,nocase; http_header; content:\" Java/1.\"; http_uri; pcre:\"/\\/\\d+\\.mp3$/\"; flowbits:set,file.exploit_kit.pe; metadata:policy max-detect-ips alert,ruleset community; service:http; reference:cve,2012-0507; reference:url,blog.talosintel.com/2013/11/im-calling-this-goon-exploit-kit-for-now.html; classtype:trojan-activity; sid:28795; rev:7;"
 }

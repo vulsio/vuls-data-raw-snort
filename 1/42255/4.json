@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "42255",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3389",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows empty RDP cookie negotiation attempt\"; flow:to_server,established; content:\"|08 E0 00 00 00 00|\",depth 6,offset 4; content:\"|0D 0A|\",within 2,distance 1; isdataat:!1,relative; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:rdp; reference:cve,2017-0176; reference:cve,2017-9073; reference:url,www.securitytracker.com/id/1038264; classtype:policy-violation; sid:42255; rev:4;"
+	"GID": "1",
+	"SID": "42255",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3389",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows empty RDP cookie negotiation attempt\"; flow:to_server,established; content:\"|08 E0 00 00 00 00|\",depth 6,offset 4; content:\"|0D 0A|\",within 2,distance 1; isdataat:!1,relative; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:rdp; reference:cve,2017-0176; reference:cve,2017-9073; reference:url,www.securitytracker.com/id/1038264; classtype:policy-violation; sid:42255; rev:4;"
 }

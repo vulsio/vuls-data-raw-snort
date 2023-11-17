@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3453",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 617",
-  "Option": "msg:\"SERVER-OTHER Arkeia client backup system info probe\"; flow:to_server,established; content:\"ARKADMIN_GET_\"; pcre:\"/^(CLIENT|MACHINE)_INFO/Ri\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:bugtraq,12594; reference:cve,2005-0491; classtype:attempted-recon; sid:3453; rev:10;"
+	"GID": "1",
+	"SID": "3453",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 617",
+	"Option": "msg:\"SERVER-OTHER Arkeia client backup system info probe\"; flow:to_server,established; content:\"ARKADMIN_GET_\"; pcre:\"/^(CLIENT|MACHINE)_INFO/Ri\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:bugtraq,12594; reference:cve,2005-0491; classtype:attempted-recon; sid:3453; rev:10;"
 }

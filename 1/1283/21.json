@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1283",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS Microsoft Office Outlook web dos\"; flow:to_server,established; http_uri; content:\"/exchange/LogonFrm.asp?\",fast_pattern,nocase; pkt_data; content:\"mailbox=\",nocase; content:\"%%%\"; metadata:ruleset community; service:http; reference:bugtraq,3223; classtype:web-application-attack; sid:1283; rev:21;"
+	"GID": "1",
+	"SID": "1283",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS Microsoft Office Outlook web dos\"; flow:to_server,established; http_uri; content:\"/exchange/LogonFrm.asp?\",fast_pattern,nocase; pkt_data; content:\"mailbox=\",nocase; content:\"%%%\"; metadata:ruleset community; service:http; reference:bugtraq,3223; classtype:web-application-attack; sid:1283; rev:21;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46068",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.yty module download request\"; flow:to_server,established; http_uri; content:\"/football/download/\",depth 19; http_header; content:!\"User-Agent|3A|\",nocase; content:!\"Accept|3A|\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.arbornetworks.com/blog/asert/donot-team-leverages-new-modular-malware-framework-south-asia/; classtype:trojan-activity; sid:46068; rev:1;"
+	"GID": "1",
+	"SID": "46068",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.yty module download request\"; flow:to_server,established; http_uri; content:\"/football/download/\",depth 19; http_header; content:!\"User-Agent|3A|\",nocase; content:!\"Accept|3A|\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.arbornetworks.com/blog/asert/donot-team-leverages-new-modular-malware-framework-south-asia/; classtype:trojan-activity; sid:46068; rev:1;"
 }

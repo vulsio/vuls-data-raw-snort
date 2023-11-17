@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26528",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE Unix.Backdoor.Cdorked redirect attempt\"; flow:to_client,established; http_header; content:\"0aW1lP\",fast_pattern; content:\"/index.php?\",distance -50; base64_decode:bytes 150,offset 10,relative; base64_data; content:\"time=\"; content:\"&src=\",distance 0; content:\"&surl=\",distance 0; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2013/04/apache-binary-backdoors-on-cpanel-based-servers.html; reference:url,virustotal.com/en/file/7b3cd8c1bd0249df458084f28d91648ad14e1baf455fdd53b174481d540070c6/analysis/; classtype:trojan-activity; sid:26528; rev:4;"
+	"GID": "1",
+	"SID": "26528",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE Unix.Backdoor.Cdorked redirect attempt\"; flow:to_client,established; http_header; content:\"0aW1lP\",fast_pattern; content:\"/index.php?\",distance -50; base64_decode:bytes 150,offset 10,relative; base64_data; content:\"time=\"; content:\"&src=\",distance 0; content:\"&surl=\",distance 0; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2013/04/apache-binary-backdoors-on-cpanel-based-servers.html; reference:url,virustotal.com/en/file/7b3cd8c1bd0249df458084f28d91648ad14e1baf455fdd53b174481d540070c6/analysis/; classtype:trojan-activity; sid:26528; rev:4;"
 }

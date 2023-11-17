@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1065",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP rcmd attempt\"; flow:to_server,established; http_uri; content:\"rcmd.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1065; rev:15;"
+	"GID": "1",
+	"SID": "1065",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP rcmd attempt\"; flow:to_server,established; http_uri; content:\"rcmd.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1065; rev:15;"
 }

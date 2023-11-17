@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26467",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Magic variant inbound connection\"; flow:to_client,established; file_data; content:\"some_magic_code1\",depth 36; metadata:ruleset community; service:http; reference:url,www.seculert.com/blog/2013/04/magic-persistent-threat.html; classtype:trojan-activity; sid:26467; rev:3;"
+	"GID": "1",
+	"SID": "26467",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Magic variant inbound connection\"; flow:to_client,established; file_data; content:\"some_magic_code1\",depth 36; metadata:ruleset community; service:http; reference:url,www.seculert.com/blog/2013/04/magic-persistent-threat.html; classtype:trojan-activity; sid:26467; rev:3;"
 }

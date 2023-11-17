@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56863",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC MultiOS.Malware.GORAT command and control response attempt\"; flow:to_client,established; http_header; content:\"HTTP/1.\",depth 7; raw_data; content:\"|0D 0A 0D 0A|murica\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56863; rev:1;"
+	"GID": "1",
+	"SID": "56863",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC MultiOS.Malware.GORAT command and control response attempt\"; flow:to_client,established; http_header; content:\"HTTP/1.\",depth 7; raw_data; content:\"|0D 0A 0D 0A|murica\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56863; rev:1;"
 }

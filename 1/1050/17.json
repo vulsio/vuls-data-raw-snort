@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1050",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP iPlanet GETPROPERTIES attempt\"; flow:to_server,established; content:\"GETPROPERTIES\",depth 13; metadata:ruleset community; service:http; reference:bugtraq,2732; reference:cve,2001-0746; classtype:web-application-attack; sid:1050; rev:17;"
+	"GID": "1",
+	"SID": "1050",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP iPlanet GETPROPERTIES attempt\"; flow:to_server,established; content:\"GETPROPERTIES\",depth 13; metadata:ruleset community; service:http; reference:bugtraq,2732; reference:cve,2001-0746; classtype:web-application-attack; sid:1050; rev:17;"
 }

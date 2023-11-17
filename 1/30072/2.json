@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30072",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-OTHER ANDR.Trojan.iBanking outbound connection attempt\"; flow:to_server,established; http_raw_uri; bufferlen:22; http_uri; content:\"/android/sms/index.php\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|Apache-HttpClient|2F|\"; http_client_body; content:\"bot_id=\"; content:\"&number=&iccid=&model=\",distance 0; content:\"&imei=\",distance 0; content:\"&os=\",distance 0; content:\"&control_number=\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.kernelmode.info/forum/viewtopic.php?f=16&t=3166; reference:url,www.virustotal.com/en/file/38f6fccfc8a31306c0a03cad6908c148e8506fd70ce03165fd89e18113b68e02/analysis/; classtype:trojan-activity; sid:30072; rev:2;"
+	"GID": "1",
+	"SID": "30072",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-OTHER ANDR.Trojan.iBanking outbound connection attempt\"; flow:to_server,established; http_raw_uri; bufferlen:22; http_uri; content:\"/android/sms/index.php\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|Apache-HttpClient|2F|\"; http_client_body; content:\"bot_id=\"; content:\"&number=&iccid=&model=\",distance 0; content:\"&imei=\",distance 0; content:\"&os=\",distance 0; content:\"&control_number=\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.kernelmode.info/forum/viewtopic.php?f=16&t=3166; reference:url,www.virustotal.com/en/file/38f6fccfc8a31306c0a03cad6908c148e8506fd70ce03165fd89e18113b68e02/analysis/; classtype:trojan-activity; sid:30072; rev:2;"
 }

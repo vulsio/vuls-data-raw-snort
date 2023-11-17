@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27252",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess 111-byte URL variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:111; pkt_data; content:\"==\",depth 2,offset 103; content:\" HTTP/1.0|0D 0A|Host:\",within 16,distance 10; http_uri; pcre:\"/^\\/[a-z\\d]{98}\\x3d{2}[a-z\\d]{10}$/i\"; http_header; content:!\"Accept:\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27252; rev:3;"
+	"GID": "1",
+	"SID": "27252",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess 111-byte URL variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:111; pkt_data; content:\"==\",depth 2,offset 103; content:\" HTTP/1.0|0D 0A|Host:\",within 16,distance 10; http_uri; pcre:\"/^\\/[a-z\\d]{98}\\x3d{2}[a-z\\d]{10}$/i\"; http_header; content:!\"Accept:\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27252; rev:3;"
 }

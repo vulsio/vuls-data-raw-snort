@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21908",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY Portable Executable file attachment detected\"; flow:to_client,established; content:\".exe\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2eexe/i\"; flowbits:set,file.exe; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap,pop3; classtype:misc-activity; sid:21908; rev:11;"
+	"GID": "1",
+	"SID": "21908",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
+	"Option": "msg:\"FILE-IDENTIFY Portable Executable file attachment detected\"; flow:to_client,established; content:\".exe\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2eexe/i\"; flowbits:set,file.exe; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap,pop3; classtype:misc-activity; sid:21908; rev:11;"
 }

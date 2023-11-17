@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "44689",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gen variant outbound connection\"; flow:to_server,established; http_uri; content:\"/aspnet_client/system_web/4_0_30319/update/\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,us-cert.gov/ncas/alerts/TA17-293A; classtype:trojan-activity; sid:44689; rev:3;"
+	"GID": "1",
+	"SID": "44689",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Gen variant outbound connection\"; flow:to_server,established; http_uri; content:\"/aspnet_client/system_web/4_0_30319/update/\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,us-cert.gov/ncas/alerts/TA17-293A; classtype:trojan-activity; sid:44689; rev:3;"
 }

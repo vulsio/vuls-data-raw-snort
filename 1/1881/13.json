@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1881",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP bad HTTP 1.1 request - potential worm attack\"; flow:to_server,established; content:\"GET / HTTP/1.1|0D 0A 0D 0A|\",depth 18; metadata:ruleset community; service:http; reference:url,securityresponse.symantec.com/avcenter/security/Content/2002.09.13.html; classtype:web-application-activity; sid:1881; rev:13;"
+	"GID": "1",
+	"SID": "1881",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP bad HTTP 1.1 request - potential worm attack\"; flow:to_server,established; content:\"GET / HTTP/1.1|0D 0A 0D 0A|\",depth 18; metadata:ruleset community; service:http; reference:url,securityresponse.symantec.com/avcenter/security/Content/2002.09.13.html; classtype:web-application-activity; sid:1881; rev:13;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1125",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP webcart access\"; flow:to_server,established; http_uri; content:\"/webcart/\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-0610; reference:nessus,10298; classtype:attempted-recon; sid:1125; rev:16;"
+	"GID": "1",
+	"SID": "1125",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP webcart access\"; flow:to_server,established; http_uri; content:\"/webcart/\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-0610; reference:nessus,10298; classtype:attempted-recon; sid:1125; rev:16;"
 }

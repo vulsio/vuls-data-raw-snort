@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "568",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 9100",
-  "Option": "msg:\"POLICY-OTHER HP JetDirect LCD modification attempt\"; flow:to_server,established; content:\"@PJL RDYMSG DISPLAY =\"; metadata:ruleset community; reference:bugtraq,2245; classtype:misc-activity; sid:568; rev:11;"
+	"GID": "1",
+	"SID": "568",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 9100",
+	"Option": "msg:\"POLICY-OTHER HP JetDirect LCD modification attempt\"; flow:to_server,established; content:\"@PJL RDYMSG DISPLAY =\"; metadata:ruleset community; reference:bugtraq,2245; classtype:misc-activity; sid:568; rev:11;"
 }

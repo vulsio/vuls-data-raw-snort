@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46970",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Autophyte RAT variant outbound connection\"; flow:to_server,established; http_client_body; content:\"Content-Disposition: form-data|3B| name=|22|board_id|22|\",fast_pattern,nocase; content:\"Content-Disposition: form-data|3B| name=|22|user_id|22|\"; content:\"Content-Disposition: form-data|3B| name=|22|file1|22|\"; http_header; content:!\"Referer\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/#/file/c10363059c57c52501c01f85e3bb43533ccc639f0ea57f43bae5736a8e7a9bc8/detection; reference:url,www.virustotal.com/#/file/e98991cdd9ddd30adf490673c67a4f8241993f26810da09b52d8748c6160a292/detection; classtype:trojan-activity; sid:46970; rev:1;"
+	"GID": "1",
+	"SID": "46970",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Autophyte RAT variant outbound connection\"; flow:to_server,established; http_client_body; content:\"Content-Disposition: form-data|3B| name=|22|board_id|22|\",fast_pattern,nocase; content:\"Content-Disposition: form-data|3B| name=|22|user_id|22|\"; content:\"Content-Disposition: form-data|3B| name=|22|file1|22|\"; http_header; content:!\"Referer\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/#/file/c10363059c57c52501c01f85e3bb43533ccc639f0ea57f43bae5736a8e7a9bc8/detection; reference:url,www.virustotal.com/#/file/e98991cdd9ddd30adf490673c67a4f8241993f26810da09b52d8748c6160a292/detection; classtype:trojan-activity; sid:46970; rev:1;"
 }

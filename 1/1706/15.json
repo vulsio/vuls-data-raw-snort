@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1706",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP echo.bat access\"; flow:to_server,established; http_uri; content:\"/echo.bat\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1002; reference:cve,2000-0213; reference:nessus,10246; classtype:web-application-activity; sid:1706; rev:15;"
+	"GID": "1",
+	"SID": "1706",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP echo.bat access\"; flow:to_server,established; http_uri; content:\"/echo.bat\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1002; reference:cve,2000-0213; reference:nessus,10246; classtype:web-application-activity; sid:1706; rev:15;"
 }

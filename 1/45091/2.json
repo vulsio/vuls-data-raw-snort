@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "45091",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Backdoor.StoneDrill login outbound connection\"; flow:to_server,established; http_client_body; content:\"username=MD5Sum\",fast_pattern,nocase; content:\"password=MD5Sum\"; content:\"button=Login\"; metadata:impact_flag red,ruleset community; service:http; reference:url,securelist.com/files/2017/03/Report_Shamoon_StoneDrill_final.pdf; classtype:trojan-activity; sid:45091; rev:2;"
+	"GID": "1",
+	"SID": "45091",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Backdoor.StoneDrill login outbound connection\"; flow:to_server,established; http_client_body; content:\"username=MD5Sum\",fast_pattern,nocase; content:\"password=MD5Sum\"; content:\"button=Login\"; metadata:impact_flag red,ruleset community; service:http; reference:url,securelist.com/files/2017/03/Report_Shamoon_StoneDrill_final.pdf; classtype:trojan-activity; sid:45091; rev:2;"
 }

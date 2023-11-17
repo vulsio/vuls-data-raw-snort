@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49042",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"PUA-ADWARE Osx.Adware.FairyTail variant outbound connection detected\"; flow:to_server,established; http_header; content:\"User-Agent: SpellingChecker/22\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/a9a7a1c48cd1232249336749f4252c845ce68fd9e7da85b6da6ccbcdc21bcf66; classtype:trojan-activity; sid:49042; rev:1;"
+	"GID": "1",
+	"SID": "49042",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"PUA-ADWARE Osx.Adware.FairyTail variant outbound connection detected\"; flow:to_server,established; http_header; content:\"User-Agent: SpellingChecker/22\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/#/file/a9a7a1c48cd1232249336749f4252c845ce68fd9e7da85b6da6ccbcdc21bcf66; classtype:trojan-activity; sid:49042; rev:1;"
 }

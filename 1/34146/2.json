@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34146",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"PUA-ADWARE SuperOptimizer geolocation request\"; flow:to_server,established; http_uri; content:\"/ip/?client=sp\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|NSIS_Inetc",
-  "Option": "Mozilla)|0D 0A|\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/1df4d1f316bd526e56b5fa0f84704bac365484c049e6a7c76145cb45e5e32049/analysis/1426449377/; classtype:misc-activity; sid:34146; rev:2;"
+	"GID": "1",
+	"SID": "34146",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"PUA-ADWARE SuperOptimizer geolocation request\"; flow:to_server,established; http_uri; content:\"/ip/?client=sp\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|NSIS_Inetc",
+	"Option": "Mozilla)|0D 0A|\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/1df4d1f316bd526e56b5fa0f84704bac365484c049e6a7c76145cb45e5e32049/analysis/1426449377/; classtype:misc-activity; sid:34146; rev:2;"
 }

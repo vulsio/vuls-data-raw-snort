@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1167",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP rpm_query access\"; flow:to_server,established; http_uri; content:\"/rpm_query\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1036; reference:cve,2000-0192; reference:nessus,10340; classtype:attempted-recon; sid:1167; rev:17;"
+	"GID": "1",
+	"SID": "1167",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP rpm_query access\"; flow:to_server,established; http_uri; content:\"/rpm_query\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1036; reference:cve,2000-0192; reference:nessus,10340; classtype:attempted-recon; sid:1167; rev:17;"
 }

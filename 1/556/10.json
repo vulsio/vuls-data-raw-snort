@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "556",
-  "Rev": "10",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"PUA-P2P Outbound GNUTella client request\"; flow:to_server,established; content:\"GNUTELLA CONNECT\",depth 40; metadata:ruleset community; classtype:policy-violation; sid:556; rev:10;"
+	"GID": "1",
+	"SID": "556",
+	"Rev": "10",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"PUA-P2P Outbound GNUTella client request\"; flow:to_server,established; content:\"GNUTELLA CONNECT\",depth 40; metadata:ruleset community; classtype:policy-violation; sid:556; rev:10;"
 }

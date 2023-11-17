@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38581",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"FILE-OFFICE RFT document malformed header\"; flow:to_server,established; flowbits:isset,file.rtf; file_data; content:\"|7B 5C|rtvpn\",depth 7; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:cve,2015-1641; reference:url,technet.microsoft.com/en-us/security/bulletin/ms15-033; classtype:attempted-user; sid:38581; rev:2;"
+	"GID": "1",
+	"SID": "38581",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"FILE-OFFICE RFT document malformed header\"; flow:to_server,established; flowbits:isset,file.rtf; file_data; content:\"|7B 5C|rtvpn\",depth 7; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:cve,2015-1641; reference:url,technet.microsoft.com/en-us/security/bulletin/ms15-033; classtype:attempted-user; sid:38581; rev:2;"
 }

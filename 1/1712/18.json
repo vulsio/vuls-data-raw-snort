@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1712",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP bslist.cgi access\"; flow:to_server,established; http_uri; content:\"/bslist.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2160; reference:cve,2001-0100; classtype:web-application-activity; sid:1712; rev:18;"
+	"GID": "1",
+	"SID": "1712",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP bslist.cgi access\"; flow:to_server,established; http_uri; content:\"/bslist.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2160; reference:cve,2001-0100; classtype:web-application-activity; sid:1712; rev:18;"
 }

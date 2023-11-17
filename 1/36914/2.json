@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "36914",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Potential hostile executable served from compromised or malicious WordPress site\"; flow:to_server,established; http_uri; content:\"/wp-admin/\"; pkt_data; content:\".exe|20|HTTP/1.\",fast_pattern,nocase; http_uri; pcre:\"/\\.exe$/\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:36914; rev:2;"
+	"GID": "1",
+	"SID": "36914",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Potential hostile executable served from compromised or malicious WordPress site\"; flow:to_server,established; http_uri; content:\"/wp-admin/\"; pkt_data; content:\".exe|20|HTTP/1.\",fast_pattern,nocase; http_uri; pcre:\"/\\.exe$/\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:36914; rev:2;"
 }

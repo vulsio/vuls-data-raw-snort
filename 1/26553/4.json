@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26553",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"PUA-ADWARE Win.Adware.BProtector browser hijacker dll list download attempt\"; flow:to_server,established; http_method; content:\"GET\"; http_uri; content:\"/builds/\",nocase; content:\"fflists.txt\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:misc-activity; sid:26553; rev:4;"
+	"GID": "1",
+	"SID": "26553",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"PUA-ADWARE Win.Adware.BProtector browser hijacker dll list download attempt\"; flow:to_server,established; http_method; content:\"GET\"; http_uri; content:\"/builds/\",nocase; content:\"fflists.txt\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:misc-activity; sid:26553; rev:4;"
 }

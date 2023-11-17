@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29127",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_uri; bufferlen:13; content:\"/webstat/?i=\",depth 12,fast_pattern; http_header; content:\"User-Agent: Mozilla/7\"; content:\"|3B 20|MSIE|20|\",distance 0; content:!\"Accept-Encoding:\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:29127; rev:2;"
+	"GID": "1",
+	"SID": "29127",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_uri; bufferlen:13; content:\"/webstat/?i=\",depth 12,fast_pattern; http_header; content:\"User-Agent: Mozilla/7\"; content:\"|3B 20|MSIE|20|\",distance 0; content:!\"Accept-Encoding:\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:29127; rev:2;"
 }

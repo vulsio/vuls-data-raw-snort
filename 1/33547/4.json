@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33547",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Turla outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"?uid=\"; content:\"&context=\",distance 0; content:\"&mode=text\",distance 0,fast_pattern; content:\"&data=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1065; reference:url,www.virustotal.com/en/file/1a488c6824bd39f3568346b2aaf3f6666f41b1d4961a2d77360c7c65c7978b5e/analysis/; classtype:trojan-activity; sid:33547; rev:4;"
+	"GID": "1",
+	"SID": "33547",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Turla outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"?uid=\"; content:\"&context=\",distance 0; content:\"&mode=text\",distance 0,fast_pattern; content:\"&data=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1065; reference:url,www.virustotal.com/en/file/1a488c6824bd39f3568346b2aaf3f6666f41b1d4961a2d77360c7c65c7978b5e/analysis/; classtype:trojan-activity; sid:33547; rev:4;"
 }

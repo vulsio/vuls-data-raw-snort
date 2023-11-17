@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "307",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 6666:7000",
-  "Option": "msg:\"SERVER-OTHER CHAT IRC topic overflow\"; flow:to_client,established; content:\"|EB|K[S2|E4 83 C3 0B|K|88 23 B8|Pw\"; metadata:ruleset community; reference:bugtraq,573; reference:cve,1999-0672; classtype:attempted-user; sid:307; rev:12;"
+	"GID": "1",
+	"SID": "307",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 6666:7000",
+	"Option": "msg:\"SERVER-OTHER CHAT IRC topic overflow\"; flow:to_client,established; content:\"|EB|K[S2|E4 83 C3 0B|K|88 23 B8|Pw\"; metadata:ruleset community; reference:bugtraq,573; reference:cve,1999-0672; classtype:attempted-user; sid:307; rev:12;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30973",
-  "Rev": "7",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT CritX exploit kit payload request\"; flow:to_server,established; http_uri; content:\"/load\"; content:\".php\",distance 0; pcre:\"/\\/load(?:(?:db|rh|silver|msie|flash|fla[0-9]{4,5}))\\.php/\"; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; reference:url,malware-traffic-analysis.net/2014/05/29/index.html; classtype:trojan-activity; sid:30973; rev:7;"
+	"GID": "1",
+	"SID": "30973",
+	"Rev": "7",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT CritX exploit kit payload request\"; flow:to_server,established; http_uri; content:\"/load\"; content:\".php\",distance 0; pcre:\"/\\/load(?:(?:db|rh|silver|msie|flash|fla[0-9]{4,5}))\\.php/\"; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; reference:url,malware-traffic-analysis.net/2014/05/29/index.html; classtype:trojan-activity; sid:30973; rev:7;"
 }

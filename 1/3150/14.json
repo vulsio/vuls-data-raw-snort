@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3150",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS SQLXML content type overflow\"; flow:to_server,established; http_uri; pcre:\"/\\.x[sm]l/i\"; content:\"contenttype=\"; pcre:\"/contenttype=[^\\r\\n\\x3b\\x38]{100}/ims\"; metadata:ruleset community; service:http; reference:bugtraq,5004; reference:cve,2002-0186; reference:nessus,11304; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-030; reference:url,www.westpoint.ltd.uk/advisories/wp-02-0007.txt; classtype:attempted-admin; sid:3150; rev:14;"
+	"GID": "1",
+	"SID": "3150",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS SQLXML content type overflow\"; flow:to_server,established; http_uri; pcre:\"/\\.x[sm]l/i\"; content:\"contenttype=\"; pcre:\"/contenttype=[^\\r\\n\\x3b\\x38]{100}/ims\"; metadata:ruleset community; service:http; reference:bugtraq,5004; reference:cve,2002-0186; reference:nessus,11304; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-030; reference:url,www.westpoint.ltd.uk/advisories/wp-02-0007.txt; classtype:attempted-admin; sid:3150; rev:14;"
 }

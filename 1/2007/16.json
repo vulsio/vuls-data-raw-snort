@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2007",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 32771:34000",
-  "Option": "msg:\"PROTOCOL-RPC kcms_server directory traversal attempt\"; flow:to_server,established; content:\"|00 01 87|}\",depth 4,offset 16; byte_jump:4,20,relative,align; byte_jump:4,4,relative,align; content:\"/../\",distance 0; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; service:sunrpc; reference:bugtraq,6665; reference:cve,2003-0027; reference:url,www.kb.cert.org/vuls/id/850785; classtype:misc-attack; sid:2007; rev:16;"
+	"GID": "1",
+	"SID": "2007",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 32771:34000",
+	"Option": "msg:\"PROTOCOL-RPC kcms_server directory traversal attempt\"; flow:to_server,established; content:\"|00 01 87|}\",depth 4,offset 16; byte_jump:4,20,relative,align; byte_jump:4,4,relative,align; content:\"/../\",distance 0; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; service:sunrpc; reference:bugtraq,6665; reference:cve,2003-0027; reference:url,www.kb.cert.org/vuls/id/850785; classtype:misc-attack; sid:2007; rev:16;"
 }

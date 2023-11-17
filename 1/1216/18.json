@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1216",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP filemail access\"; flow:to_server,established; http_uri; content:\"/filemail\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1154; reference:cve,1999-1155; reference:url,www.securityfocus.com/archive/1/11175; classtype:attempted-recon; sid:1216; rev:18;"
+	"GID": "1",
+	"SID": "1216",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP filemail access\"; flow:to_server,established; http_uri; content:\"/filemail\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1154; reference:cve,1999-1155; reference:url,www.securityfocus.com/archive/1/11175; classtype:attempted-recon; sid:1216; rev:18;"
 }

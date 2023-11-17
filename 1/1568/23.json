@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1568",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS /exchange/root.asp access\"; flow:to_server,established; http_uri; content:\"/exchange/root.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,3301; reference:cve,2001-0660; reference:nessus,10755; reference:nessus,10781; classtype:web-application-activity; sid:1568; rev:23;"
+	"GID": "1",
+	"SID": "1568",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS /exchange/root.asp access\"; flow:to_server,established; http_uri; content:\"/exchange/root.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,3301; reference:cve,2001-0660; reference:nessus,10755; reference:nessus,10781; classtype:web-application-activity; sid:1568; rev:23;"
 }

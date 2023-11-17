@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41711",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Houdini variant initial outbound connection\"; flow:to_server,established; content:\"new_slave|0D 0A|\",depth 11,offset 4; metadata:impact_flag red,ruleset community; reference:url,virustotal.com/en/file/8d75e47c04bb2cc0f4c2e973475d4ff1fc8f32039794e3ea5ca2494c66d80d3f/analysis/; classtype:trojan-activity; sid:41711; rev:2;"
+	"GID": "1",
+	"SID": "41711",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Houdini variant initial outbound connection\"; flow:to_server,established; content:\"new_slave|0D 0A|\",depth 11,offset 4; metadata:impact_flag red,ruleset community; reference:url,virustotal.com/en/file/8d75e47c04bb2cc0f4c2e973475d4ff1fc8f32039794e3ea5ca2494c66d80d3f/analysis/; classtype:trojan-activity; sid:41711; rev:2;"
 }

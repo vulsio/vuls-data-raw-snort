@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29864",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Redkit exploit kit payload request\"; flow:to_server,established; http_uri; content:\"/download.asp?p=\",nocase; http_header; content:\" Java/1.\",fast_pattern,nocase; http_uri; pcre:\"/\\/download\\.asp\\?p\\=\\d$/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.invincea.com/2014/02/ekia-citadel-a-k-a-the-malware-the-popped-fazio-mechanical/; classtype:trojan-activity; sid:29864; rev:2;"
+	"GID": "1",
+	"SID": "29864",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Redkit exploit kit payload request\"; flow:to_server,established; http_uri; content:\"/download.asp?p=\",nocase; http_header; content:\" Java/1.\",fast_pattern,nocase; http_uri; pcre:\"/\\/download\\.asp\\?p\\=\\d$/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.invincea.com/2014/02/ekia-citadel-a-k-a-the-malware-the-popped-fazio-mechanical/; classtype:trojan-activity; sid:29864; rev:2;"
 }

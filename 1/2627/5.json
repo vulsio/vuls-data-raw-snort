@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2627",
-  "Rev": "5",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE dbms_repcat.repcat_import_check buffer overflow attempt\"; flow:to_server,established; content:\"dbms_repcat.repcat_import_check\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*gname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|gname\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|(\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*gowner[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|gowner\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]*\\x27|\\x22[^\\x22]+\\x22)\\s*,\\s*(true|false)\\s*,\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/is\"; metadata:ruleset community; reference:url,www.appsecinc.com/Policy/PolicyCheck90.html; classtype:attempted-user; sid:2627; rev:5;"
+	"GID": "1",
+	"SID": "2627",
+	"Rev": "5",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE dbms_repcat.repcat_import_check buffer overflow attempt\"; flow:to_server,established; content:\"dbms_repcat.repcat_import_check\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*gname[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|gname\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|(\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*gowner[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|gowner\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]*\\x27|\\x22[^\\x22]+\\x22)\\s*,\\s*(true|false)\\s*,\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/is\"; metadata:ruleset community; reference:url,www.appsecinc.com/Policy/PolicyCheck90.html; classtype:attempted-user; sid:2627; rev:5;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "704",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 1433",
-  "Option": "msg:\"SERVER-MSSQL xp_sprintf possible buffer overflow\"; flow:to_server,established; content:\"x|00|p|00|_|00|s|00|p|00|r|00|i|00|n|00|t|00|f|00|\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,1204; reference:bugtraq,3733; reference:cve,2001-0542; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-060; classtype:attempted-user; sid:704; rev:16;"
+	"GID": "1",
+	"SID": "704",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS 1433",
+	"Option": "msg:\"SERVER-MSSQL xp_sprintf possible buffer overflow\"; flow:to_server,established; content:\"x|00|p|00|_|00|s|00|p|00|r|00|i|00|n|00|t|00|f|00|\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,1204; reference:bugtraq,3733; reference:cve,2001-0542; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-060; classtype:attempted-user; sid:704; rev:16;"
 }

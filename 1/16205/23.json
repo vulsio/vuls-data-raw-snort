@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "16205",
-  "Rev": "23",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"FILE-IDENTIFY BMP file download request\"; flow:to_server,established; http_uri; content:\".bmp\",fast_pattern,nocase; pcre:\"/\\x2ebmp([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.bmp; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/BMP_file_format; classtype:misc-activity; sid:16205; rev:23;"
+	"GID": "1",
+	"SID": "16205",
+	"Rev": "23",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"FILE-IDENTIFY BMP file download request\"; flow:to_server,established; http_uri; content:\".bmp\",fast_pattern,nocase; pcre:\"/\\x2ebmp([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.bmp; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/BMP_file_format; classtype:misc-activity; sid:16205; rev:23;"
 }

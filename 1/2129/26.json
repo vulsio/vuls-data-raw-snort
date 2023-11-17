@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2129",
-  "Rev": "26",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS nsiislog.dll access\"; flow:to_server,established; http_uri; content:\"/nsiislog.dll\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,8035; reference:cve,2003-0227; reference:cve,2003-0349; reference:nessus,11664; reference:url,technet.microsoft.com/en-us/security/bulletin/ms03-018; classtype:web-application-activity; sid:2129; rev:26;"
+	"GID": "1",
+	"SID": "2129",
+	"Rev": "26",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS nsiislog.dll access\"; flow:to_server,established; http_uri; content:\"/nsiislog.dll\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,8035; reference:cve,2003-0227; reference:cve,2003-0349; reference:nessus,11664; reference:url,technet.microsoft.com/en-us/security/bulletin/ms03-018; classtype:web-application-activity; sid:2129; rev:26;"
 }

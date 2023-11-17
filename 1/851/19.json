@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "851",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP files.pl access\"; flow:to_server,established; http_uri; content:\"/files.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1081; classtype:attempted-recon; sid:851; rev:19;"
+	"GID": "1",
+	"SID": "851",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP files.pl access\"; flow:to_server,established; http_uri; content:\"/files.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1081; classtype:attempted-recon; sid:851; rev:19;"
 }

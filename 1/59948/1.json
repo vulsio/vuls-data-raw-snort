@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "59948",
-  "Rev": "1",
-  "Header": "alert http",
-  "Option": "msg:\"SERVER-WEBAPP Atlassian Confluence OGNL expression injection attempt\"; flow:to_server,established; http_uri; content:\"${\"; content:\"com.opensymphony.\",distance 0,fast_pattern; content:\"|28|\",distance 0; content:\"}\",distance 0; pcre:\"/\\x24\\x7b[^\\x7d]*?com\\x2eopensymphony\\x2e(xwork2|webwork)\\x2e(Servlet)?ActionContext[^\\x7d]*?\\x28/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2022-26134; classtype:attempted-user; gid:1; sid:59948; rev:1;"
+	"GID": "1",
+	"SID": "59948",
+	"Rev": "1",
+	"Header": "alert http",
+	"Option": "msg:\"SERVER-WEBAPP Atlassian Confluence OGNL expression injection attempt\"; flow:to_server,established; http_uri; content:\"${\"; content:\"com.opensymphony.\",distance 0,fast_pattern; content:\"|28|\",distance 0; content:\"}\",distance 0; pcre:\"/\\x24\\x7b[^\\x7d]*?com\\x2eopensymphony\\x2e(xwork2|webwork)\\x2e(Servlet)?ActionContext[^\\x7d]*?\\x28/i\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2022-26134; classtype:attempted-user; gid:1; sid:59948; rev:1;"
 }

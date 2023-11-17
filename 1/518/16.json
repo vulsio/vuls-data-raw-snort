@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "518",
-  "Rev": "16",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 69",
-  "Option": "msg:\"PROTOCOL-TFTP Put\"; flow:to_server; content:\"|00 02|\",depth 2; metadata:policy max-detect-ips drop,ruleset community; reference:cve,1999-0183; reference:url,github.com/rapid7/metasploit-framework/blob/unstable/unstable-modules/auxiliary/d20tftpbd.rb; classtype:bad-unknown; sid:518; rev:16;"
+	"GID": "1",
+	"SID": "518",
+	"Rev": "16",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 69",
+	"Option": "msg:\"PROTOCOL-TFTP Put\"; flow:to_server; content:\"|00 02|\",depth 2; metadata:policy max-detect-ips drop,ruleset community; reference:cve,1999-0183; reference:url,github.com/rapid7/metasploit-framework/blob/unstable/unstable-modules/auxiliary/d20tftpbd.rb; classtype:bad-unknown; sid:518; rev:16;"
 }

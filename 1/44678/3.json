@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "44678",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"POLICY-OTHER NetSupport Manager RAT outbound connection detected\"; flow:to_server,established; content:\"User-Agent|3A| NetSupport Manager/\",fast_pattern,nocase; content:\"CMD=\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/#/file/b87ef28981defd135496e25233cc7a47a376a75ddea97fcd4c0927995dd22e47/detection; classtype:trojan-activity; sid:44678; rev:3;"
+	"GID": "1",
+	"SID": "44678",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"POLICY-OTHER NetSupport Manager RAT outbound connection detected\"; flow:to_server,established; content:\"User-Agent|3A| NetSupport Manager/\",fast_pattern,nocase; content:\"CMD=\"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/#/file/b87ef28981defd135496e25233cc7a47a376a75ddea97fcd4c0927995dd22e47/detection; classtype:trojan-activity; sid:44678; rev:3;"
 }

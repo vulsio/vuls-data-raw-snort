@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25947",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 80",
-  "Option": "msg:\"APP-DETECT Ammyy remote access tool\"; flow:to_server,established; http_method; content:\"POST\"; http_header; content:\"|0A|Host|3A 20|rl.ammyy.com|0D 0A|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.ammyy.com; classtype:policy-violation; sid:25947; rev:3;"
+	"GID": "1",
+	"SID": "25947",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 80",
+	"Option": "msg:\"APP-DETECT Ammyy remote access tool\"; flow:to_server,established; http_method; content:\"POST\"; http_header; content:\"|0A|Host|3A 20|rl.ammyy.com|0D 0A|\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.ammyy.com; classtype:policy-violation; sid:25947; rev:3;"
 }

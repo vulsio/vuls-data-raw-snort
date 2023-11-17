@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2106",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
-  "Option": "msg:\"PROTOCOL-IMAP lsub overflow attempt\"; flow:to_server,established; content:\"LSUB\"; isdataat:100,relative; pcre:\"/\\sLSUB\\s[^\\n]{100}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:imap; reference:bugtraq,1110; reference:bugtraq,15006; reference:cve,2000-0284; reference:cve,2005-3155; reference:nessus,10374; classtype:misc-attack; sid:2106; rev:17;"
+	"GID": "1",
+	"SID": "2106",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+	"Option": "msg:\"PROTOCOL-IMAP lsub overflow attempt\"; flow:to_server,established; content:\"LSUB\"; isdataat:100,relative; pcre:\"/\\sLSUB\\s[^\\n]{100}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:imap; reference:bugtraq,1110; reference:bugtraq,15006; reference:cve,2000-0284; reference:cve,2005-3155; reference:nessus,10374; classtype:misc-attack; sid:2106; rev:17;"
 }

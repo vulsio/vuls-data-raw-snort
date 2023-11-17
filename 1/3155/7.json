@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3155",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 31337",
-  "Option": "msg:\"MALWARE-BACKDOOR BackOrifice 2000 Inbound Traffic\"; flow:to_server,established; content:\"1j|D0 D9|\"; metadata:ruleset community; classtype:trojan-activity; sid:3155; rev:7;"
+	"GID": "1",
+	"SID": "3155",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 31337",
+	"Option": "msg:\"MALWARE-BACKDOOR BackOrifice 2000 Inbound Traffic\"; flow:to_server,established; content:\"1j|D0 D9|\"; metadata:ruleset community; classtype:trojan-activity; sid:3155; rev:7;"
 }

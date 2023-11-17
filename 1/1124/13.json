@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1124",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Ecommerce check.txt access\"; flow:to_server,established; http_uri; content:\"/config/check.txt\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:1124; rev:13;"
+	"GID": "1",
+	"SID": "1124",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Ecommerce check.txt access\"; flow:to_server,established; http_uri; content:\"/config/check.txt\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:attempted-recon; sid:1124; rev:13;"
 }

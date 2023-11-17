@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2253",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL XEXCH50 overflow attempt\"; flow:to_server,established; content:\"XEXCH50\",fast_pattern,nocase; pcre:\"/^XEXCH50\\s+-\\d/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:bugtraq,8838; reference:cve,2003-0714; reference:nessus,11889; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-046; classtype:attempted-admin; sid:2253; rev:20;"
+	"GID": "1",
+	"SID": "2253",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL XEXCH50 overflow attempt\"; flow:to_server,established; content:\"XEXCH50\",fast_pattern,nocase; pcre:\"/^XEXCH50\\s+-\\d/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:smtp; reference:bugtraq,8838; reference:cve,2003-0714; reference:nessus,11889; reference:url,technet.microsoft.com/en-us/security/bulletin/MS03-046; classtype:attempted-admin; sid:2253; rev:20;"
 }

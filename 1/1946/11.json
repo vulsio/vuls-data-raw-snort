@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1946",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8888",
-  "Option": "msg:\"SERVER-WEBAPP answerbook2 admin attempt\"; flow:to_server,established; content:\"/cgi-bin/admin/admin\"; metadata:ruleset community; service:http; reference:bugtraq,5383; reference:cve,2000-0696; classtype:web-application-activity; sid:1946; rev:11;"
+	"GID": "1",
+	"SID": "1946",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8888",
+	"Option": "msg:\"SERVER-WEBAPP answerbook2 admin attempt\"; flow:to_server,established; content:\"/cgi-bin/admin/admin\"; metadata:ruleset community; service:http; reference:bugtraq,5383; reference:cve,2000-0696; classtype:web-application-activity; sid:1946; rev:11;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56616",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Cobalt Strike beacon outbound connection attempt\"; flow:to_server,established; content:\"{|22|locale|22 3A 22|en|22|,|22|channel|22 3A 22|prod|22|,|22|addon|22 3A 22|\",fast_pattern,nocase; pcre:\"/^POST\\s(?:\\/track|\\/api\\/v1\\/survey\\/embed|\\/svc\\/weather\\/v2)/\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:attempted-user; sid:56616; rev:1;"
+	"GID": "1",
+	"SID": "56616",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Cobalt Strike beacon outbound connection attempt\"; flow:to_server,established; content:\"{|22|locale|22 3A 22|en|22|,|22|channel|22 3A 22|prod|22|,|22|addon|22 3A 22|\",fast_pattern,nocase; pcre:\"/^POST\\s(?:\\/track|\\/api\\/v1\\/survey\\/embed|\\/svc\\/weather\\/v2)/\"; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:http; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:attempted-user; sid:56616; rev:1;"
 }

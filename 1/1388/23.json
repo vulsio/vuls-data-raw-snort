@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1388",
-  "Rev": "23",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows UPnP Location overflow attempt\"; content:\"Location\",fast_pattern,nocase; pcre:\"/^Location\\s*\\x3a\\s*\\w+\\x3a\\/\\/([^\\n]*\\x3a)?[^\\n]{128}/ims\"; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,3723; reference:cve,2001-0876; reference:cve,2007-2386; reference:nessus,10829; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-059; classtype:misc-attack; sid:1388; rev:23;"
+	"GID": "1",
+	"SID": "1388",
+	"Rev": "23",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows UPnP Location overflow attempt\"; content:\"Location\",fast_pattern,nocase; pcre:\"/^Location\\s*\\x3a\\s*\\w+\\x3a\\/\\/([^\\n]*\\x3a)?[^\\n]{128}/ims\"; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,3723; reference:cve,2001-0876; reference:cve,2007-2386; reference:nessus,10829; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-059; classtype:misc-attack; sid:1388; rev:23;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26966",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win32/Autorun.JN variant outbound connection\"; flow:to_server,established; isdataat:141; isdataat:!142; http_raw_uri; bufferlen:8; http_uri; content:\"/u5.htm\",fast_pattern,nocase; http_raw_uri; content:\"//u5.htm\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.microsoft.com/security/portal/threat/encyclopedia/Entry.aspx?Name=Worm%3AWin32%2FAutorun.JN; reference:url,www.virustotal.com/en/file/36144738373c665d262bc007fceaeb9613e59ec29ea3d7424dd9f400af2c0f06/analysis/; classtype:trojan-activity; sid:26966; rev:5;"
+	"GID": "1",
+	"SID": "26966",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win32/Autorun.JN variant outbound connection\"; flow:to_server,established; isdataat:141; isdataat:!142; http_raw_uri; bufferlen:8; http_uri; content:\"/u5.htm\",fast_pattern,nocase; http_raw_uri; content:\"//u5.htm\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.microsoft.com/security/portal/threat/encyclopedia/Entry.aspx?Name=Worm%3AWin32%2FAutorun.JN; reference:url,www.virustotal.com/en/file/36144738373c665d262bc007fceaeb9613e59ec29ea3d7424dd9f400af2c0f06/analysis/; classtype:trojan-activity; sid:26966; rev:5;"
 }

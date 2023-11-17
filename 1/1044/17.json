@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1044",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS webhits access\"; flow:to_server,established; http_uri; content:\".htw\"; metadata:ruleset community; service:http; reference:bugtraq,950; reference:cve,2000-0097; classtype:web-application-activity; sid:1044; rev:17;"
+	"GID": "1",
+	"SID": "1044",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS webhits access\"; flow:to_server,established; http_uri; content:\".htw\"; metadata:ruleset community; service:http; reference:bugtraq,950; reference:cve,2000-0097; classtype:web-application-activity; sid:1044; rev:17;"
 }

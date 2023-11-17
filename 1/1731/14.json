@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1731",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP a1stats access\"; flow:to_server,established; http_uri; content:\"/a1stats/\"; metadata:ruleset community; service:http; reference:bugtraq,2705; reference:cve,2001-0561; reference:nessus,10669; classtype:web-application-activity; sid:1731; rev:14;"
+	"GID": "1",
+	"SID": "1731",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP a1stats access\"; flow:to_server,established; http_uri; content:\"/a1stats/\"; metadata:ruleset community; service:http; reference:bugtraq,2705; reference:cve,2001-0561; reference:nessus,10669; classtype:web-application-activity; sid:1731; rev:14;"
 }

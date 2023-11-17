@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34308",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.DesertFalcon variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/products/fupdates.php?\"; content:\"account=\",distance 0; content:\"&name=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/015fbc0b216d197136df8692b354bf2fc7bd6eb243e73283d861a4dbbb81a751/analysis/; classtype:trojan-activity; sid:34308; rev:2;"
+	"GID": "1",
+	"SID": "34308",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.DesertFalcon variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/products/fupdates.php?\"; content:\"account=\",distance 0; content:\"&name=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/015fbc0b216d197136df8692b354bf2fc7bd6eb243e73283d861a4dbbb81a751/analysis/; classtype:trojan-activity; sid:34308; rev:2;"
 }

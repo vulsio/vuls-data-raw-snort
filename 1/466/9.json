@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "466",
-  "Rev": "9",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP L3retriever Ping\"; icode:0; itype:8; content:\"ABCDEFGHIJKLMNOPQRSTUVWABCDEFGHI\",depth 32; metadata:ruleset community; classtype:attempted-recon; sid:466; rev:9;"
+	"GID": "1",
+	"SID": "466",
+	"Rev": "9",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP L3retriever Ping\"; icode:0; itype:8; content:\"ABCDEFGHIJKLMNOPQRSTUVWABCDEFGHI\",depth 32; metadata:ruleset community; classtype:attempted-recon; sid:466; rev:9;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28008",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC BLYPT installer reuse outbound traffic\"; flow:to_server,established; http_uri; content:\"/index.aspx?info=reuse\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,blog.trendmicro.com/trendlabs-security-intelligence/blypt-a-new-backdoor-family-installed-via-java-exploit; classtype:trojan-activity; sid:28008; rev:2;"
+	"GID": "1",
+	"SID": "28008",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC BLYPT installer reuse outbound traffic\"; flow:to_server,established; http_uri; content:\"/index.aspx?info=reuse\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,blog.trendmicro.com/trendlabs-security-intelligence/blypt-a-new-backdoor-family-installed-via-java-exploit; classtype:trojan-activity; sid:28008; rev:2;"
 }

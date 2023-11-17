@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29788",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Careto outbound connection\"; flow:to_server,established; http_uri; content:\"Group|3D|\"; content:\"Install|3D|\"; content:\"Ver|3D|\"; content:\"Ask|3D|\"; content:\"Bn|3D|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/19e818d0da361c4feedd456fca63d68d4b024fbbd3d9265f606076c7ee72e8f8/analysis/; classtype:trojan-activity; sid:29788; rev:3;"
+	"GID": "1",
+	"SID": "29788",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Careto outbound connection\"; flow:to_server,established; http_uri; content:\"Group|3D|\"; content:\"Install|3D|\"; content:\"Ver|3D|\"; content:\"Ask|3D|\"; content:\"Bn|3D|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/19e818d0da361c4feedd456fca63d68d4b024fbbd3d9265f606076c7ee72e8f8/analysis/; classtype:trojan-activity; sid:29788; rev:3;"
 }

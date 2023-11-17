@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "928",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Adobe Coldfusion exampleapp access\"; flow:to_server,established; http_uri; content:\"/cfdocs/exampleapp/\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2001-0535; classtype:attempted-recon; sid:928; rev:18;"
+	"GID": "1",
+	"SID": "928",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Adobe Coldfusion exampleapp access\"; flow:to_server,established; http_uri; content:\"/cfdocs/exampleapp/\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,2001-0535; classtype:attempted-recon; sid:928; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "157",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 666",
-  "Option": "msg:\"MALWARE-BACKDOOR BackConstruction 2.1 Client FTP Open Request\"; flow:to_server,established; content:\"FTPON\"; metadata:ruleset community; classtype:misc-activity; sid:157; rev:9;"
+	"GID": "1",
+	"SID": "157",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 666",
+	"Option": "msg:\"MALWARE-BACKDOOR BackConstruction 2.1 Client FTP Open Request\"; flow:to_server,established; content:\"FTPON\"; metadata:ruleset community; classtype:misc-activity; sid:157; rev:9;"
 }

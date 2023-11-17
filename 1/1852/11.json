@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1852",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP robots.txt access\"; flow:to_server,established; http_uri; content:\"/robots.txt\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10302; classtype:web-application-activity; sid:1852; rev:11;"
+	"GID": "1",
+	"SID": "1852",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP robots.txt access\"; flow:to_server,established; http_uri; content:\"/robots.txt\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10302; classtype:web-application-activity; sid:1852; rev:11;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1142",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP /.... access\"; flow:to_server,established; content:\"/....\"; metadata:ruleset community; service:http; classtype:attempted-recon; sid:1142; rev:11;"
+	"GID": "1",
+	"SID": "1142",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP /.... access\"; flow:to_server,established; content:\"/....\"; metadata:ruleset community; service:http; classtype:attempted-recon; sid:1142; rev:11;"
 }

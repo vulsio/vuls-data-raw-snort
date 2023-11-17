@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33678",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.FannyWorm outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|Mozilla/4.0",
-  "Option": "compatible|3B|)|0D 0A|\",fast_pattern,nocase; http_uri; content:\"/ads/QueryRecord\"; content:\".html\",within 25; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/003315b0aea2fcb9f77d29223dd8947d0e6792b3a0227e054be8eb2a11f443d9/analysis/; classtype:trojan-activity; sid:33678; rev:3;"
+	"GID": "1",
+	"SID": "33678",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.FannyWorm outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent|3A 20|Mozilla/4.0",
+	"Option": "compatible|3B|)|0D 0A|\",fast_pattern,nocase; http_uri; content:\"/ads/QueryRecord\"; content:\".html\",within 25; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/003315b0aea2fcb9f77d29223dd8947d0e6792b3a0227e054be8eb2a11f443d9/analysis/; classtype:trojan-activity; sid:33678; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1013",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS fpcount access\"; flow:to_server,established; http_uri; content:\"/fpcount.exe\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2252; reference:cve,1999-1376; classtype:web-application-activity; sid:1013; rev:21;"
+	"GID": "1",
+	"SID": "1013",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS fpcount access\"; flow:to_server,established; http_uri; content:\"/fpcount.exe\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2252; reference:cve,1999-1376; classtype:web-application-activity; sid:1013; rev:21;"
 }

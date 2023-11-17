@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49004",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 20256",
-  "Option": "msg:\"PROTOCOL-SCADA PCOM Write Memory Bits ASCII request \"; flow:to_server,established; byte_test:1,=,101,2; content:\"SB\",depth 2,offset 9; metadata:policy max-detect-ips drop,ruleset community; reference:url,unitronicsplc.com; classtype:attempted-recon; sid:49004; rev:2;"
+	"GID": "1",
+	"SID": "49004",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 20256",
+	"Option": "msg:\"PROTOCOL-SCADA PCOM Write Memory Bits ASCII request \"; flow:to_server,established; byte_test:1,=,101,2; content:\"SB\",depth 2,offset 9; metadata:policy max-detect-ips drop,ruleset community; reference:url,unitronicsplc.com; classtype:attempted-recon; sid:49004; rev:2;"
 }

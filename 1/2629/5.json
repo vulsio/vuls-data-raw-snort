@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2629",
-  "Rev": "5",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE dbms_repcat_admin.register_user_repgroup buffer overflow attempt\"; flow:to_server,established; content:\"dbms_repcat_admin.register_user_repgroup\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*privilege_type[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|privilege_type\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]*\\x27|\\x22[^\\x22]+\\x22)\\s*,\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/is\"; metadata:ruleset community; reference:url,www.appsecinc.com/Policy/PolicyCheck94.html; classtype:attempted-user; sid:2629; rev:5;"
+	"GID": "1",
+	"SID": "2629",
+	"Rev": "5",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE dbms_repcat_admin.register_user_repgroup buffer overflow attempt\"; flow:to_server,established; content:\"dbms_repcat_admin.register_user_repgroup\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*privilege_type[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|privilege_type\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\x27[^\\x27]*\\x27|\\x22[^\\x22]+\\x22)\\s*,\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/is\"; metadata:ruleset community; reference:url,www.appsecinc.com/Policy/PolicyCheck94.html; classtype:attempted-user; sid:2629; rev:5;"
 }

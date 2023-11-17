@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32225",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Cryptowall variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:27; http_uri; content:\"/blog-trabajos/n65dj17i1836\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f75b9ed535c3b33ead4da28854f3e8d6e805135679a2352463184acb06ffcaf0/analysis/; classtype:trojan-activity; sid:32225; rev:3;"
+	"GID": "1",
+	"SID": "32225",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Cryptowall variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:27; http_uri; content:\"/blog-trabajos/n65dj17i1836\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f75b9ed535c3b33ead4da28854f3e8d6e805135679a2352463184acb06ffcaf0/analysis/; classtype:trojan-activity; sid:32225; rev:3;"
 }

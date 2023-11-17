@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "715",
-  "Rev": "14",
-  "Header": "alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any",
-  "Option": "msg:\"PROTOCOL-TELNET Attempted SU from wrong group\"; flow:to_client,established; content:\"to su root\",fast_pattern,nocase; metadata:ruleset community; service:telnet; classtype:attempted-admin; sid:715; rev:14;"
+	"GID": "1",
+	"SID": "715",
+	"Rev": "14",
+	"Header": "alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any",
+	"Option": "msg:\"PROTOCOL-TELNET Attempted SU from wrong group\"; flow:to_client,established; content:\"to su root\",fast_pattern,nocase; metadata:ruleset community; service:telnet; classtype:attempted-admin; sid:715; rev:14;"
 }

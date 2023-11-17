@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33228",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kovter variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/form2.php\",fast_pattern,nocase; http_header; content:!\"Accept\"; http_client_body; pcre:\"/[a-z\\d\\x2f\\x2b\\x3d]{100,300}/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/599dc4c4dae2d12f8c8ea00114c1cbddecbc171c552e7fbe5aba516ef11b08f0/analysis/; classtype:trojan-activity; sid:33228; rev:4;"
+	"GID": "1",
+	"SID": "33228",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kovter variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/form2.php\",fast_pattern,nocase; http_header; content:!\"Accept\"; http_client_body; pcre:\"/[a-z\\d\\x2f\\x2b\\x3d]{100,300}/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/599dc4c4dae2d12f8c8ea00114c1cbddecbc171c552e7fbe5aba516ef11b08f0/analysis/; classtype:trojan-activity; sid:33228; rev:4;"
 }

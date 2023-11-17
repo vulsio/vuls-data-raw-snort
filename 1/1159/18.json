@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1159",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP webplus access\"; flow:to_server,established; http_uri; content:\"/webplus?script\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1174; reference:bugtraq,1720; reference:bugtraq,1722; reference:bugtraq,1725; reference:cve,2000-1005; classtype:attempted-recon; sid:1159; rev:18;"
+	"GID": "1",
+	"SID": "1159",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP webplus access\"; flow:to_server,established; http_uri; content:\"/webplus?script\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1174; reference:bugtraq,1720; reference:bugtraq,1722; reference:bugtraq,1725; reference:cve,2000-1005; classtype:attempted-recon; sid:1159; rev:18;"
 }

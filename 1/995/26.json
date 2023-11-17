@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "995",
-  "Rev": "26",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS ism.dll access\"; flow:to_server,established; http_uri; content:\"/scripts/iisadmin/ism.dll?http/dir\",nocase; metadata:ruleset community; service:http; reference:bugtraq,189; reference:cve,1999-1538; reference:cve,2000-0630; classtype:web-application-attack; sid:995; rev:26;"
+	"GID": "1",
+	"SID": "995",
+	"Rev": "26",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS ism.dll access\"; flow:to_server,established; http_uri; content:\"/scripts/iisadmin/ism.dll?http/dir\",nocase; metadata:ruleset community; service:http; reference:bugtraq,189; reference:cve,1999-1538; reference:cve,2000-0630; classtype:web-application-attack; sid:995; rev:26;"
 }

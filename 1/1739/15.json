@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1739",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP DNSTools administrator authentication bypass attempt\"; flow:to_server,established; http_uri; content:\"/dnstools.php\",nocase; content:\"user_logged_in=true\",nocase; content:\"user_dnstools_administrator=true\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4617; reference:cve,2002-0613; classtype:web-application-attack; sid:1739; rev:15;"
+	"GID": "1",
+	"SID": "1739",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP DNSTools administrator authentication bypass attempt\"; flow:to_server,established; http_uri; content:\"/dnstools.php\",nocase; content:\"user_logged_in=true\",nocase; content:\"user_dnstools_administrator=true\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4617; reference:cve,2002-0613; classtype:web-application-attack; sid:1739; rev:15;"
 }

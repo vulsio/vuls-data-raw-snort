@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "844",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP args.bat access\"; flow:to_server,established; http_uri; content:\"/args.bat\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1180; reference:nessus,11465; classtype:attempted-recon; sid:844; rev:21;"
+	"GID": "1",
+	"SID": "844",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP args.bat access\"; flow:to_server,established; http_uri; content:\"/args.bat\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1180; reference:nessus,11465; classtype:attempted-recon; sid:844; rev:21;"
 }

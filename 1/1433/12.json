@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1433",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP .history access\"; flow:to_server,established; http_uri; content:\"/.history\"; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1433; rev:12;"
+	"GID": "1",
+	"SID": "1433",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP .history access\"; flow:to_server,established; http_uri; content:\"/.history\"; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1433; rev:12;"
 }

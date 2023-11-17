@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "45412",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Asus RT-AC88U deleteOfflineClients memory corruption attempt\"; flow:to_server,established; http_raw_uri; bufferlen:>64; http_uri; content:\"/deleteOfflineClient.cgi\",fast_pattern,nocase; content:\"delete_offline_client=\"; pcre:\"/[?&]delete_offline_client=[^&]{14}/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2017-12754; classtype:attempted-admin; sid:45412; rev:3;"
+	"GID": "1",
+	"SID": "45412",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Asus RT-AC88U deleteOfflineClients memory corruption attempt\"; flow:to_server,established; http_raw_uri; bufferlen:>64; http_uri; content:\"/deleteOfflineClient.cgi\",fast_pattern,nocase; content:\"delete_offline_client=\"; pcre:\"/[?&]delete_offline_client=[^&]{14}/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2017-12754; classtype:attempted-admin; sid:45412; rev:3;"
 }

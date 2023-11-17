@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46839",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.RedLeaves variant outbound connection\"; flow:to_server,established; http_header; content:\".NET CLR 3.0.30729|3B| .NET4.0C|3B| .NET4.0E)|0D 0A|Content-Length\",fast_pattern,nocase; http_raw_uri; bufferlen:<20; http_uri; content:\"/index.php\"; http_method; content:\"POST\"; http_header; content:\"Connection: Keep-Alive|0D 0A|Accept: */*|0D 0A|\"; content:!\"Content-Type\"; content:!\"Referer\"; content:!\"Accept-\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f6449e255bc1a9d4a02391be35d0dd37def19b7e20cfcc274427a0b39cb21b7b/analysis/; classtype:trojan-activity; sid:46839; rev:1;"
+	"GID": "1",
+	"SID": "46839",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.RedLeaves variant outbound connection\"; flow:to_server,established; http_header; content:\".NET CLR 3.0.30729|3B| .NET4.0C|3B| .NET4.0E)|0D 0A|Content-Length\",fast_pattern,nocase; http_raw_uri; bufferlen:<20; http_uri; content:\"/index.php\"; http_method; content:\"POST\"; http_header; content:\"Connection: Keep-Alive|0D 0A|Accept: */*|0D 0A|\"; content:!\"Content-Type\"; content:!\"Referer\"; content:!\"Accept-\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f6449e255bc1a9d4a02391be35d0dd37def19b7e20cfcc274427a0b39cb21b7b/analysis/; classtype:trojan-activity; sid:46839; rev:1;"
 }

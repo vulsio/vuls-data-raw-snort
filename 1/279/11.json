@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "279",
-  "Rev": "11",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161",
-  "Option": "msg:\"SERVER-OTHER Bay/Nortel Nautica Marlin\"; flow:to_server; dsize:0; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,1009; reference:cve,2000-0221; classtype:attempted-dos; sid:279; rev:11;"
+	"GID": "1",
+	"SID": "279",
+	"Rev": "11",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161",
+	"Option": "msg:\"SERVER-OTHER Bay/Nortel Nautica Marlin\"; flow:to_server; dsize:0; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,1009; reference:cve,2000-0221; classtype:attempted-dos; sid:279; rev:11;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "300001",
-  "Rev": "1",
-  "Header": "alert http",
-  "Option": "msg:\"SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt\"; flow:to_server,established; http_raw_uri; content:\"/vpns/\",fast_pattern,nocase; pcre:\"/vpn.*?(\\x2e|%(25)?2e){2}(\\x2f|%(25)?2f).*?vpns/i\"; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2019-19781; reference:url,support.citrix.com/article/CTX267027; classtype:web-application-attack; sid:300001; rev:1;"
+	"GID": "1",
+	"SID": "300001",
+	"Rev": "1",
+	"Header": "alert http",
+	"Option": "msg:\"SERVER-WEBAPP Citrix ADC and Gateway arbitrary code execution attempt\"; flow:to_server,established; http_raw_uri; content:\"/vpns/\",fast_pattern,nocase; pcre:\"/vpn.*?(\\x2e|%(25)?2e){2}(\\x2f|%(25)?2f).*?vpns/i\"; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:cve,2019-19781; reference:url,support.citrix.com/article/CTX267027; classtype:web-application-attack; sid:300001; rev:1;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27044",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string pb - Htbot\"; flow:to_server,established; http_header; content:\"User-Agent: pb|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,malwr.com/analysis/MTNlMDg4ZTQwZjU2NDUxM2EwZDNlYzllNjZkMjRkNDI/; reference:url,www.virustotal.com/en/file/36802c72d1d5addc87d16688dcb37b680fd48f832fa7b93c15cf4f426aa3f0a7/analysis/; classtype:trojan-activity; sid:27044; rev:3;"
+	"GID": "1",
+	"SID": "27044",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string pb - Htbot\"; flow:to_server,established; http_header; content:\"User-Agent: pb|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,malwr.com/analysis/MTNlMDg4ZTQwZjU2NDUxM2EwZDNlYzllNjZkMjRkNDI/; reference:url,www.virustotal.com/en/file/36802c72d1d5addc87d16688dcb37b680fd48f832fa7b93c15cf4f426aa3f0a7/analysis/; classtype:trojan-activity; sid:27044; rev:3;"
 }

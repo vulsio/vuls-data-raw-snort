@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "44652",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Zusy variant outbound connection\"; flow:to_server,established; http_uri; content:\"/QualityCheck/ni6.php\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/5dea4247e021eeeb1347ff269a357dee77e8ac1837383b0ef37fb123339639a1/analysis/; classtype:trojan-activity; sid:44652; rev:2;"
+	"GID": "1",
+	"SID": "44652",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Zusy variant outbound connection\"; flow:to_server,established; http_uri; content:\"/QualityCheck/ni6.php\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/5dea4247e021eeeb1347ff269a357dee77e8ac1837383b0ef37fb123339639a1/analysis/; classtype:trojan-activity; sid:44652; rev:2;"
 }

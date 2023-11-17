@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "567",
-  "Rev": "17",
-  "Header": "alert tcp $SMTP_SERVERS 25 -> $EXTERNAL_NET any",
-  "Option": "msg:\"SERVER-MAIL SMTP relaying denied\"; flow:to_client,established; content:\"550 5.7.1\",depth 70; metadata:ruleset community; service:smtp; reference:url,mail-abuse.org/tsi/ar-fix.html; classtype:misc-activity; sid:567; rev:17;"
+	"GID": "1",
+	"SID": "567",
+	"Rev": "17",
+	"Header": "alert tcp $SMTP_SERVERS 25 -> $EXTERNAL_NET any",
+	"Option": "msg:\"SERVER-MAIL SMTP relaying denied\"; flow:to_client,established; content:\"550 5.7.1\",depth 70; metadata:ruleset community; service:smtp; reference:url,mail-abuse.org/tsi/ar-fix.html; classtype:misc-activity; sid:567; rev:17;"
 }

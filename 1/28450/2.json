@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28450",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Sakura exploit kit exploit payload retrieve attempt\"; flow:to_server,established; http_raw_uri; bufferlen:<25; http_uri; content:\".ld\",fast_pattern,nocase; http_header; content:\" Java/1.\"; http_uri; pcre:\"/^\\/\\d+\\.ld$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:28450; rev:2;"
+	"GID": "1",
+	"SID": "28450",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Sakura exploit kit exploit payload retrieve attempt\"; flow:to_server,established; http_raw_uri; bufferlen:<25; http_uri; content:\".ld\",fast_pattern,nocase; http_header; content:\" Java/1.\"; http_uri; pcre:\"/^\\/\\d+\\.ld$/\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:28450; rev:2;"
 }

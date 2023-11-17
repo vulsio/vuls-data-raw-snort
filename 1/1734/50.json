@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1734",
-  "Rev": "50",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP USER overflow attempt\"; flow:to_server,established; content:\"USER\",nocase; isdataat:100,relative; pcre:\"/^USER(?!\\n)\\s[^\\n]{100}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,10078; reference:bugtraq,10720; reference:bugtraq,1227; reference:bugtraq,1504; reference:bugtraq,15352; reference:bugtraq,1690; reference:bugtraq,22044; reference:bugtraq,22045; reference:bugtraq,4638; reference:bugtraq,49750; reference:bugtraq,7307; reference:bugtraq,8376; reference:cve,1999-1510; reference:cve,1999-1514; reference:cve,1999-1519; reference:cve,1999-1539; reference:cve,2000-0479; reference:cve,2000-0656; reference:cve,2000-0761; reference:cve,2000-0943; reference:cve,2000-1194; reference:cve,2001-0256; reference:cve,2001-0794; reference:cve,2001-0826; reference:cve,2002-0126; reference:cve,2002-1522; reference:cve,2003-0271; reference:cve,2004-0286; reference:cve,2004-0695; reference:cve,2005-3683; classtype:attempted-admin; sid:1734; rev:50;"
+	"GID": "1",
+	"SID": "1734",
+	"Rev": "50",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP USER overflow attempt\"; flow:to_server,established; content:\"USER\",nocase; isdataat:100,relative; pcre:\"/^USER(?!\\n)\\s[^\\n]{100}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,10078; reference:bugtraq,10720; reference:bugtraq,1227; reference:bugtraq,1504; reference:bugtraq,15352; reference:bugtraq,1690; reference:bugtraq,22044; reference:bugtraq,22045; reference:bugtraq,4638; reference:bugtraq,49750; reference:bugtraq,7307; reference:bugtraq,8376; reference:cve,1999-1510; reference:cve,1999-1514; reference:cve,1999-1519; reference:cve,1999-1539; reference:cve,2000-0479; reference:cve,2000-0656; reference:cve,2000-0761; reference:cve,2000-0943; reference:cve,2000-1194; reference:cve,2001-0256; reference:cve,2001-0794; reference:cve,2001-0826; reference:cve,2002-0126; reference:cve,2002-1522; reference:cve,2003-0271; reference:cve,2004-0286; reference:cve,2004-0695; reference:cve,2005-3683; classtype:attempted-admin; sid:1734; rev:50;"
 }

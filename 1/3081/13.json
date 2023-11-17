@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3081",
-  "Rev": "13",
-  "Header": "alert tcp $HOME_NET 5880 -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR Y3KRAT 1.5 Connect\"; flow:to_client,established; content:\"connected\",depth 9; flowbits:set,backdoor.y3krat_15.connect; flowbits:noalert; metadata:ruleset community; classtype:misc-activity; sid:3081; rev:13;"
+	"GID": "1",
+	"SID": "3081",
+	"Rev": "13",
+	"Header": "alert tcp $HOME_NET 5880 -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-BACKDOOR Y3KRAT 1.5 Connect\"; flow:to_client,established; content:\"connected\",depth 9; flowbits:set,backdoor.y3krat_15.connect; flowbits:noalert; metadata:ruleset community; classtype:misc-activity; sid:3081; rev:13;"
 }

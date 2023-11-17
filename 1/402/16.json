@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "402",
-  "Rev": "16",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP destination unreachable port unreachable packet detected\"; icode:3; itype:3; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2004-0790; reference:cve,2005-0068; classtype:misc-activity; sid:402; rev:16;"
+	"GID": "1",
+	"SID": "402",
+	"Rev": "16",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP destination unreachable port unreachable packet detected\"; icode:3; itype:3; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2004-0790; reference:cve,2005-0068; classtype:misc-activity; sid:402; rev:16;"
 }

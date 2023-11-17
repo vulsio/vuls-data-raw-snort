@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1681",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE all_views access\"; flow:to_server,established; content:\"all_views\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1681; rev:7;"
+	"GID": "1",
+	"SID": "1681",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE all_views access\"; flow:to_server,established; content:\"all_views\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1681; rev:7;"
 }

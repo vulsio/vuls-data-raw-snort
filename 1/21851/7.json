@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21851",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER TDS Sutra - redirect received\"; flow:to_client,established; http_stat_code; content:\"302\"; pkt_data; content:\"=_\"; content:\"_|5C 3B| domain=\",within 11,distance 1; http_cookie; pcre:\"/^[a-z]{5}\\d=_\\d_/\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,wepawet.iseclab.org/view.php?hash=822b95927fd4d8bb6eb2e62f4e1ef645&t=1243359208&type=js; reference:url,www.nartv.org/tag/tds/; reference:url,xylibox.blogspot.com/2011/12/sutra-tds-v34.html; classtype:trojan-activity; sid:21851; rev:7;"
+	"GID": "1",
+	"SID": "21851",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-OTHER TDS Sutra - redirect received\"; flow:to_client,established; http_stat_code; content:\"302\"; pkt_data; content:\"=_\"; content:\"_|5C 3B| domain=\",within 11,distance 1; http_cookie; pcre:\"/^[a-z]{5}\\d=_\\d_/\"; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,wepawet.iseclab.org/view.php?hash=822b95927fd4d8bb6eb2e62f4e1ef645&t=1243359208&type=js; reference:url,www.nartv.org/tag/tds/; reference:url,xylibox.blogspot.com/2011/12/sutra-tds-v34.html; classtype:trojan-activity; sid:21851; rev:7;"
 }

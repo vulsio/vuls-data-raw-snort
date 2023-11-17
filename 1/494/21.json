@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "494",
-  "Rev": "21",
-  "Header": "alert tcp $HTTP_SERVERS $HTTP_PORTS -> $EXTERNAL_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE command completed\"; flow:established; content:\"Command completed\",fast_pattern,nocase; pcre:\"/^Command\\s+?completed\\b/ms\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1806; reference:cve,2000-0884; reference:url,technet.microsoft.com/en-us/security/bulletin/ms00-078; classtype:bad-unknown; sid:494; rev:21;"
+	"GID": "1",
+	"SID": "494",
+	"Rev": "21",
+	"Header": "alert tcp $HTTP_SERVERS $HTTP_PORTS -> $EXTERNAL_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE command completed\"; flow:established; content:\"Command completed\",fast_pattern,nocase; pcre:\"/^Command\\s+?completed\\b/ms\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1806; reference:cve,2000-0884; reference:url,technet.microsoft.com/en-us/security/bulletin/ms00-078; classtype:bad-unknown; sid:494; rev:21;"
 }

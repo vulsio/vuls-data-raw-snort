@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "162",
-  "Rev": "10",
-  "Header": "alert udp $EXTERNAL_NET 3345 -> $HOME_NET 3344",
-  "Option": "msg:\"MALWARE-BACKDOOR Matrix 2.0 Server access\"; flow:to_server; content:\"logged in\"; metadata:ruleset community; classtype:misc-activity; sid:162; rev:10;"
+	"GID": "1",
+	"SID": "162",
+	"Rev": "10",
+	"Header": "alert udp $EXTERNAL_NET 3345 -> $HOME_NET 3344",
+	"Option": "msg:\"MALWARE-BACKDOOR Matrix 2.0 Server access\"; flow:to_server; content:\"logged in\"; metadata:ruleset community; classtype:misc-activity; sid:162; rev:10;"
 }

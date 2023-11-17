@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1994",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP vpasswd.cgi access\"; flow:to_server,established; http_uri; content:\"/vpasswd.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6038; reference:nessus,11165; classtype:web-application-activity; sid:1994; rev:11;"
+	"GID": "1",
+	"SID": "1994",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP vpasswd.cgi access\"; flow:to_server,established; http_uri; content:\"/vpasswd.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6038; reference:nessus,11165; classtype:web-application-activity; sid:1994; rev:11;"
 }

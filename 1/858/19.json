@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "858",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP filemail access\"; flow:to_server,established; http_uri; content:\"/filemail.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1154; classtype:attempted-recon; sid:858; rev:19;"
+	"GID": "1",
+	"SID": "858",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP filemail access\"; flow:to_server,established; http_uri; content:\"/filemail.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1154; classtype:attempted-recon; sid:858; rev:19;"
 }

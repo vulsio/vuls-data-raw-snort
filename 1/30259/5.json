@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30259",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Strictor variant outbound connection\"; flow:to_server,established; http_uri; content:\"/20\",depth 3; http_header; content:\"|0D 0A|Accept: text/html, */*|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: Mozilla/3.0",
-  "Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\",fast_pattern,nocase; http_uri; content:\".inf\",nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/143756537dfb4964c04d874fd16366ef384bdb4f64a739db019fa9b947b821a1/analysis/1395684118/; classtype:trojan-activity; sid:30259; rev:5;"
+	"GID": "1",
+	"SID": "30259",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Strictor variant outbound connection\"; flow:to_server,established; http_uri; content:\"/20\",depth 3; http_header; content:\"|0D 0A|Accept: text/html, */*|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: Mozilla/3.0",
+	"Option": "compatible|3B| Indy Library)|0D 0A 0D 0A|\",fast_pattern,nocase; http_uri; content:\".inf\",nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/143756537dfb4964c04d874fd16366ef384bdb4f64a739db019fa9b947b821a1/analysis/1395684118/; classtype:trojan-activity; sid:30259; rev:5;"
 }

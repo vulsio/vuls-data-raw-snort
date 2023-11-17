@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1569",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP loadpage.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/loadpage.cgi\"; pkt_data; content:\"file=../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2109; reference:cve,2000-1092; reference:nessus,10065; classtype:web-application-attack; sid:1569; rev:17;"
+	"GID": "1",
+	"SID": "1569",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP loadpage.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/loadpage.cgi\"; pkt_data; content:\"file=../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2109; reference:cve,2000-1092; reference:nessus,10065; classtype:web-application-attack; sid:1569; rev:17;"
 }

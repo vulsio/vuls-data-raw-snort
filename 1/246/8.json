@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "246",
-  "Rev": "8",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 10498",
-  "Option": "msg:\"MALWARE-OTHER mstream agent pong to handler\"; flow:to_server; content:\"pong\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:246; rev:8;"
+	"GID": "1",
+	"SID": "246",
+	"Rev": "8",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 10498",
+	"Option": "msg:\"MALWARE-OTHER mstream agent pong to handler\"; flow:to_server; content:\"pong\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:246; rev:8;"
 }

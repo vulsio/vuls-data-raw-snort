@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32958",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.TinyZBot response connection attempt\"; flow:to_client,established; file_data; content:\"<?xml\"; content:\"<soap:Body><GetFileListResponse xmlns=|22|http|3A 2F 2F|\",within 70,distance 200; content:\"<GetFileListResult><string>[ALL]__\",within 75,fast_pattern; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0d1f479842cd5bde4f18ab8c85a099da39e13a4051a7c21334e33d55b6f18d76/analysis/; classtype:trojan-activity; sid:32958; rev:2;"
+	"GID": "1",
+	"SID": "32958",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.TinyZBot response connection attempt\"; flow:to_client,established; file_data; content:\"<?xml\"; content:\"<soap:Body><GetFileListResponse xmlns=|22|http|3A 2F 2F|\",within 70,distance 200; content:\"<GetFileListResult><string>[ALL]__\",within 75,fast_pattern; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0d1f479842cd5bde4f18ab8c85a099da39e13a4051a7c21334e33d55b6f18d76/analysis/; classtype:trojan-activity; sid:32958; rev:2;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2078",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP phpBB privmsg.php access\"; flow:to_server,established; http_uri; content:\"/privmsg.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6634; reference:cve,2003-1530; classtype:web-application-activity; sid:2078; rev:11;"
+	"GID": "1",
+	"SID": "2078",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP phpBB privmsg.php access\"; flow:to_server,established; http_uri; content:\"/privmsg.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6634; reference:cve,2003-1530; classtype:web-application-activity; sid:2078; rev:11;"
 }

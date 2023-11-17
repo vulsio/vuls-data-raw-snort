@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1467",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP directorypro.cgi access\"; flow:to_server,established; http_uri; content:\"/directorypro.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2793; reference:cve,2001-0780; reference:nessus,10679; classtype:web-application-activity; sid:1467; rev:20;"
+	"GID": "1",
+	"SID": "1467",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP directorypro.cgi access\"; flow:to_server,established; http_uri; content:\"/directorypro.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2793; reference:cve,2001-0780; reference:nessus,10679; classtype:web-application-activity; sid:1467; rev:20;"
 }

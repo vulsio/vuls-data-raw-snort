@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27708",
-  "Rev": "8",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Ransomware.Urausy outbound connection\"; flow:to_server,established; http_uri; bufferlen:>145; content:\".html\"; pkt_data; content:\"|0D 0A|User-Agent|3A| Mozilla/5.0 |28|compatible|3B| MSIE 9.0|3B| Windows NT 6.1|3B| Trident/5.0\",fast_pattern,nocase; http_header; content:!\"Cookie:\"; content:!\"X-BlueCoat-Via:\"; content:!\"Referer\"; http_uri; pcre:\"/\\x2f[a-z-_]{80,}\\x2ehtml$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f53a483befed8d1494827a3f2444cfe638d3f7e595d72b722eab92d1aca9ede3/analysis/1376847283/; classtype:trojan-activity; sid:27708; rev:8;"
+	"GID": "1",
+	"SID": "27708",
+	"Rev": "8",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Ransomware.Urausy outbound connection\"; flow:to_server,established; http_uri; bufferlen:>145; content:\".html\"; pkt_data; content:\"|0D 0A|User-Agent|3A| Mozilla/5.0 |28|compatible|3B| MSIE 9.0|3B| Windows NT 6.1|3B| Trident/5.0\",fast_pattern,nocase; http_header; content:!\"Cookie:\"; content:!\"X-BlueCoat-Via:\"; content:!\"Referer\"; http_uri; pcre:\"/\\x2f[a-z-_]{80,}\\x2ehtml$/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f53a483befed8d1494827a3f2444cfe638d3f7e595d72b722eab92d1aca9ede3/analysis/1376847283/; classtype:trojan-activity; sid:27708; rev:8;"
 }

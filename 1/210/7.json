@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "210",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
-  "Option": "msg:\"MALWARE-BACKDOOR attempt\"; flow:to_server,established; content:\"backdoor\",nocase; metadata:ruleset community; classtype:attempted-admin; sid:210; rev:7;"
+	"GID": "1",
+	"SID": "210",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+	"Option": "msg:\"MALWARE-BACKDOOR attempt\"; flow:to_server,established; content:\"backdoor\",nocase; metadata:ruleset community; classtype:attempted-admin; sid:210; rev:7;"
 }

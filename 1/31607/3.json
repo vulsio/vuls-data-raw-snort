@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31607",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Glupteba client response/authenticate to C&C server\"; flow:to_server,established; isdataat:14; isdataat:!18; content:\"|3A|bpass|0A|\",fast_pattern,nocase; pcre:\"/[0-9A-Z]{8}\\x3abpass\\x0a/\"; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/0bcc2bf3cf06952e18c3e1d9860698dbb3ff1644a0389a9756c1b82b66fb2b83/analysis/; classtype:trojan-activity; sid:31607; rev:3;"
+	"GID": "1",
+	"SID": "31607",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Glupteba client response/authenticate to C&C server\"; flow:to_server,established; isdataat:14; isdataat:!18; content:\"|3A|bpass|0A|\",fast_pattern,nocase; pcre:\"/[0-9A-Z]{8}\\x3abpass\\x0a/\"; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/0bcc2bf3cf06952e18c3e1d9860698dbb3ff1644a0389a9756c1b82b66fb2b83/analysis/; classtype:trojan-activity; sid:31607; rev:3;"
 }

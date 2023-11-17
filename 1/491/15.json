@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "491",
-  "Rev": "15",
-  "Header": "alert tcp $HOME_NET 21 -> $EXTERNAL_NET any",
-  "Option": "msg:\"PROTOCOL-FTP Bad login\"; flow:to_client,established; content:\"530 \",fast_pattern,nocase; pcre:\"/^530\\s+(Login|User)/ims\"; metadata:ruleset community; service:ftp; classtype:bad-unknown; sid:491; rev:15;"
+	"GID": "1",
+	"SID": "491",
+	"Rev": "15",
+	"Header": "alert tcp $HOME_NET 21 -> $EXTERNAL_NET any",
+	"Option": "msg:\"PROTOCOL-FTP Bad login\"; flow:to_client,established; content:\"530 \",fast_pattern,nocase; pcre:\"/^530\\s+(Login|User)/ims\"; metadata:ruleset community; service:ftp; classtype:bad-unknown; sid:491; rev:15;"
 }

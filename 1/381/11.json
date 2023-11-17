@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "381",
-  "Rev": "11",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP PING Oracle Solaris\"; dsize:8; itype:8; metadata:ruleset community; classtype:misc-activity; sid:381; rev:11;"
+	"GID": "1",
+	"SID": "381",
+	"Rev": "11",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP PING Oracle Solaris\"; dsize:8; itype:8; metadata:ruleset community; classtype:misc-activity; sid:381; rev:11;"
 }

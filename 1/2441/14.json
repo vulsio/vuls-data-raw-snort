@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2441",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP NetObserve authentication bypass attempt\"; flow:to_server,established; content:\"login=0\",nocase; http_cookie; content:\"login=0\",nocase; metadata:ruleset community; service:http; reference:bugtraq,9319; classtype:web-application-attack; sid:2441; rev:14;"
+	"GID": "1",
+	"SID": "2441",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP NetObserve authentication bypass attempt\"; flow:to_server,established; content:\"login=0\",nocase; http_cookie; content:\"login=0\",nocase; metadata:ruleset community; service:http; reference:bugtraq,9319; classtype:web-application-attack; sid:2441; rev:14;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1079",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows WebDAV propfind access\"; flow:to_server,established; content:\"propfind\",nocase; pcre:\"/<a\\x3a\\s*propfind.*?xmlns\\x3a\\s*a=[\\x21\\x22]?DAV[\\x21\\x22]?/Ri\"; metadata:ruleset community; service:http; reference:bugtraq,1656; reference:cve,2000-0869; reference:cve,2003-0718; reference:nessus,10505; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-030; classtype:web-application-activity; sid:1079; rev:24;"
+	"GID": "1",
+	"SID": "1079",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows WebDAV propfind access\"; flow:to_server,established; content:\"propfind\",nocase; pcre:\"/<a\\x3a\\s*propfind.*?xmlns\\x3a\\s*a=[\\x21\\x22]?DAV[\\x21\\x22]?/Ri\"; metadata:ruleset community; service:http; reference:bugtraq,1656; reference:cve,2000-0869; reference:cve,2003-0718; reference:nessus,10505; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-030; classtype:web-application-activity; sid:1079; rev:24;"
 }

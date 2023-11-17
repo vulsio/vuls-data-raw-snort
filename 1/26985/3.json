@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26985",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Rawin exploit kit outbound java retrieval\"; flow:to_server,established; http_uri; content:\"rawin.php?b=\"; content:\"&v=1.\",distance 0; pcre:\"/\\.php\\?b=[A-F0-9]+&v=1\\./\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26985; rev:3;"
+	"GID": "1",
+	"SID": "26985",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Rawin exploit kit outbound java retrieval\"; flow:to_server,established; http_uri; content:\"rawin.php?b=\"; content:\"&v=1.\",distance 0; pcre:\"/\\.php\\?b=[A-F0-9]+&v=1\\./\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26985; rev:3;"
 }

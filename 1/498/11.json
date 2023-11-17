@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "498",
-  "Rev": "11",
-  "Header": "alert ip any any -> any any",
-  "Option": "msg:\"INDICATOR-COMPROMISE id check returned root\"; content:\"uid=0|28|root|29|\"; metadata:ruleset community; classtype:bad-unknown; sid:498; rev:11;"
+	"GID": "1",
+	"SID": "498",
+	"Rev": "11",
+	"Header": "alert ip any any -> any any",
+	"Option": "msg:\"INDICATOR-COMPROMISE id check returned root\"; content:\"uid=0|28|root|29|\"; metadata:ruleset community; classtype:bad-unknown; sid:498; rev:11;"
 }

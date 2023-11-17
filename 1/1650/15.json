@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1650",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP tst.bat access\"; flow:to_server,established; http_uri; content:\"/tst.bat\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,770; reference:cve,1999-0885; reference:nessus,10014; classtype:web-application-activity; sid:1650; rev:15;"
+	"GID": "1",
+	"SID": "1650",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP tst.bat access\"; flow:to_server,established; http_uri; content:\"/tst.bat\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,770; reference:cve,1999-0885; reference:nessus,10014; classtype:web-application-activity; sid:1650; rev:15;"
 }

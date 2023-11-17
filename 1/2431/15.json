@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2431",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 119",
-  "Option": "msg:\"PROTOCOL-NNTP rmgroup overflow attempt\"; flow:to_server,established; content:\"rmgroup\",fast_pattern,nocase; pcre:\"/^rmgroup\\x3a[^\\n]{32}/ims\"; metadata:ruleset community; service:nntp; reference:bugtraq,9382; reference:cve,2004-0045; reference:nessus,11984; classtype:attempted-admin; sid:2431; rev:15;"
+	"GID": "1",
+	"SID": "2431",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 119",
+	"Option": "msg:\"PROTOCOL-NNTP rmgroup overflow attempt\"; flow:to_server,established; content:\"rmgroup\",fast_pattern,nocase; pcre:\"/^rmgroup\\x3a[^\\n]{32}/ims\"; metadata:ruleset community; service:nntp; reference:bugtraq,9382; reference:cve,2004-0045; reference:nessus,11984; classtype:attempted-admin; sid:2431; rev:15;"
 }

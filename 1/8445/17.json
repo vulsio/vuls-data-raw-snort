@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "8445",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-OFFICE Microsoft Windows RTF file with embedded object package download attempt\"; flow:to_client,established; file_data; content:\"{|5C|rt\",nocase; content:\"{|5C|object|5C|objemb{|5C|*|5C|objclass Package}\",distance 0,nocase; flowbits:set,file.rtf.embed; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:ftp-data,http,imap,pop3; reference:cve,2006-4692; reference:url,technet.microsoft.com/en-us/security/bulletin/ms06-065; classtype:misc-activity; sid:8445; rev:17;"
+	"GID": "1",
+	"SID": "8445",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"FILE-OFFICE Microsoft Windows RTF file with embedded object package download attempt\"; flow:to_client,established; file_data; content:\"{|5C|rt\",nocase; content:\"{|5C|object|5C|objemb{|5C|*|5C|objclass Package}\",distance 0,nocase; flowbits:set,file.rtf.embed; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:ftp-data,http,imap,pop3; reference:cve,2006-4692; reference:url,technet.microsoft.com/en-us/security/bulletin/ms06-065; classtype:misc-activity; sid:8445; rev:17;"
 }

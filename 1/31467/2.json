@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31467",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Androm variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:9; http_uri; content:\"/gate.php\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/4.0|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malwr.com/analysis/ZmE3ZWU2YTkyM2U0NGQ0MmI1NDcxMjUwZDE2NTM5MjQ/; classtype:trojan-activity; sid:31467; rev:2;"
+	"GID": "1",
+	"SID": "31467",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Androm variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:9; http_uri; content:\"/gate.php\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/4.0|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,malwr.com/analysis/ZmE3ZWU2YTkyM2U0NGQ0MmI1NDcxMjUwZDE2NTM5MjQ/; classtype:trojan-activity; sid:31467; rev:2;"
 }

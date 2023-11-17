@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34122",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"PUA-ADWARE InstallMetrix reporting fetch offers stage status\"; flow:to_server,established; http_uri; content:\"/report.php?\"; content:\"download_id=\",distance 0; content:\"&mode=\",distance 0; content:\"&combo_id=\",distance 0; content:\"&os_name=\",distance 0; content:\"&os_add=\",distance 0; content:\"&os_build=\",distance 0; content:\"&proj_id=\",distance 0; content:\"&offer_id=\",distance 0; http_header; content:!\"Connection\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d99db4f7f047cbf672eb19ea2e492a45d948338c0f10ef4761db3b9e372ba90e/analysis/1426449298/; classtype:misc-activity; sid:34122; rev:2;"
+	"GID": "1",
+	"SID": "34122",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"PUA-ADWARE InstallMetrix reporting fetch offers stage status\"; flow:to_server,established; http_uri; content:\"/report.php?\"; content:\"download_id=\",distance 0; content:\"&mode=\",distance 0; content:\"&combo_id=\",distance 0; content:\"&os_name=\",distance 0; content:\"&os_add=\",distance 0; content:\"&os_build=\",distance 0; content:\"&proj_id=\",distance 0; content:\"&offer_id=\",distance 0; http_header; content:!\"Connection\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/d99db4f7f047cbf672eb19ea2e492a45d948338c0f10ef4761db3b9e372ba90e/analysis/1426449298/; classtype:misc-activity; sid:34122; rev:2;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2655",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"SERVER-OTHER HP Web JetAdmin ExecuteFile admin access\"; flow:to_server,established; content:\"/plugins/framework/script/content.hts\",fast_pattern,nocase; content:\"ExecuteFile\",nocase; metadata:ruleset community; reference:bugtraq,10224; classtype:attempted-admin; sid:2655; rev:8;"
+	"GID": "1",
+	"SID": "2655",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"SERVER-OTHER HP Web JetAdmin ExecuteFile admin access\"; flow:to_server,established; content:\"/plugins/framework/script/content.hts\",fast_pattern,nocase; content:\"ExecuteFile\",nocase; metadata:ruleset community; reference:bugtraq,10224; classtype:attempted-admin; sid:2655; rev:8;"
 }

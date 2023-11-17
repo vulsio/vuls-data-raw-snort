@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46967",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Danabot outbound connection\"; flow:to_server,established; http_uri; content:\"/index.php?m=F&\",fast_pattern,nocase; content:\"&a=\"; content:\"&b=\"; content:\"&d=\"; content:\"&e=\"; http_header; content:!\"Referer\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f60c6c45ff27d1733d8ab03393ab88e3a2d7c75c7d9fce3169417e8c9fd3df12/analysis; classtype:trojan-activity; sid:46967; rev:1;"
+	"GID": "1",
+	"SID": "46967",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Danabot outbound connection\"; flow:to_server,established; http_uri; content:\"/index.php?m=F&\",fast_pattern,nocase; content:\"&a=\"; content:\"&b=\"; content:\"&d=\"; content:\"&e=\"; http_header; content:!\"Referer\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/f60c6c45ff27d1733d8ab03393ab88e3a2d7c75c7d9fce3169417e8c9fd3df12/analysis; classtype:trojan-activity; sid:46967; rev:1;"
 }

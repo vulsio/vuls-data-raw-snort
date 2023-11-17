@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2091",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS WEBDAV nessus safe scan attempt\"; flow:to_server,established; content:\"SEARCH / HTTP/1.1|0D 0A|Host|3A|\"; content:\"|0D 0A 0D 0A|\",within 255; metadata:ruleset community; service:http; reference:bugtraq,7116; reference:cve,2003-0109; reference:nessus,11412; reference:nessus,11413; reference:url,technet.microsoft.com/en-us/security/bulletin/ms03-007; classtype:attempted-admin; sid:2091; rev:16;"
+	"GID": "1",
+	"SID": "2091",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS WEBDAV nessus safe scan attempt\"; flow:to_server,established; content:\"SEARCH / HTTP/1.1|0D 0A|Host|3A|\"; content:\"|0D 0A 0D 0A|\",within 255; metadata:ruleset community; service:http; reference:bugtraq,7116; reference:cve,2003-0109; reference:nessus,11412; reference:nessus,11413; reference:url,technet.microsoft.com/en-us/security/bulletin/ms03-007; classtype:attempted-admin; sid:2091; rev:16;"
 }

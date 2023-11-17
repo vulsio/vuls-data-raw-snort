@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49664",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443 ( msg:\"MALWARE-CNC Win.Trojan.TSCookie variant outbound connection\"; flow:to_server,established; content:\"User-Agent: Mozilla/4.0",
-  "Option": "compatible|3B| MSIE 8.0|3B| Win32)|0D 0A|\",fast_pattern,nocase; content:\"|20|/t\",depth 4,offset 3; content:\".aspx?m=\",within 20; content:!\"Referer\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,blogs.jpcert.or.jp/en/2018/11/tscookie2.html; classtype:trojan-activity; sid:49664; rev:1;"
+	"GID": "1",
+	"SID": "49664",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443 ( msg:\"MALWARE-CNC Win.Trojan.TSCookie variant outbound connection\"; flow:to_server,established; content:\"User-Agent: Mozilla/4.0",
+	"Option": "compatible|3B| MSIE 8.0|3B| Win32)|0D 0A|\",fast_pattern,nocase; content:\"|20|/t\",depth 4,offset 3; content:\".aspx?m=\",within 20; content:!\"Referer\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,blogs.jpcert.or.jp/en/2018/11/tscookie2.html; classtype:trojan-activity; sid:49664; rev:1;"
 }

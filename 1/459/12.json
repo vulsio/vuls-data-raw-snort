@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "459",
-  "Rev": "12",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP unassigned type 1 undefined code\"; itype:1; metadata:ruleset community; classtype:misc-activity; sid:459; rev:12;"
+	"GID": "1",
+	"SID": "459",
+	"Rev": "12",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP unassigned type 1 undefined code\"; itype:1; metadata:ruleset community; classtype:misc-activity; sid:459; rev:12;"
 }

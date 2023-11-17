@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "234",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 27665",
-  "Option": "msg:\"MALWARE-OTHER Trin00 Attacker to Master default password\"; flow:to_server,established; content:\"gOrave\"; metadata:ruleset community; reference:cve,2000-0138; reference:url,attack.mitre.org/techniques/T1078; classtype:attempted-dos; sid:234; rev:9;"
+	"GID": "1",
+	"SID": "234",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 27665",
+	"Option": "msg:\"MALWARE-OTHER Trin00 Attacker to Master default password\"; flow:to_server,established; content:\"gOrave\"; metadata:ruleset community; reference:cve,2000-0138; reference:url,attack.mitre.org/techniques/T1078; classtype:attempted-dos; sid:234; rev:9;"
 }

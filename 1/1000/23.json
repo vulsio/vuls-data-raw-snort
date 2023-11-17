@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1000",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS bdir.htr access\"; flow:to_server,established; http_uri; content:\"/bdir.htr\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2280; reference:nessus,10577; classtype:web-application-activity; sid:1000; rev:23;"
+	"GID": "1",
+	"SID": "1000",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS bdir.htr access\"; flow:to_server,established; http_uri; content:\"/bdir.htr\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2280; reference:nessus,10577; classtype:web-application-activity; sid:1000; rev:23;"
 }

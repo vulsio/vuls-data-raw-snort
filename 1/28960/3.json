@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28960",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Alurewo outbound connection\"; flow:to_server,established; http_uri; content:\"/cmd?version=\",fast_pattern,nocase; content:\"&aid=\"; content:\"&id=\",distance 0; content:\"&os=\",within 4,distance 36; metadata:impact_flag red,ruleset community; service:http; reference:url,www.sophos.com/ja-jp/threat-center/threat-analyses/viruses-and-spyware/Troj~Agent-AFDE/detailed-analysis.aspx; reference:url,www.virustotal.com/en/file/9171bd76d3fa26a78225cb7c9d5112635fa84e8bdf3388577f22da9178871161/analysis/; classtype:trojan-activity; sid:28960; rev:3;"
+	"GID": "1",
+	"SID": "28960",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Alurewo outbound connection\"; flow:to_server,established; http_uri; content:\"/cmd?version=\",fast_pattern,nocase; content:\"&aid=\"; content:\"&id=\",distance 0; content:\"&os=\",within 4,distance 36; metadata:impact_flag red,ruleset community; service:http; reference:url,www.sophos.com/ja-jp/threat-center/threat-analyses/viruses-and-spyware/Troj~Agent-AFDE/detailed-analysis.aspx; reference:url,www.virustotal.com/en/file/9171bd76d3fa26a78225cb7c9d5112635fa84e8bdf3388577f22da9178871161/analysis/; classtype:trojan-activity; sid:28960; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1878",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP sdbsearch.cgi access\"; flow:to_server,established; http_uri; content:\"/sdbsearch.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1658; reference:cve,2000-0868; reference:nessus,10503; classtype:web-application-activity; sid:1878; rev:13;"
+	"GID": "1",
+	"SID": "1878",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP sdbsearch.cgi access\"; flow:to_server,established; http_uri; content:\"/sdbsearch.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1658; reference:cve,2000-0868; reference:nessus,10503; classtype:web-application-activity; sid:1878; rev:13;"
 }

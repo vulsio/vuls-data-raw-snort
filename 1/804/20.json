@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "804",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP SWSoft ASPSeek Overflow attempt\"; flow:to_server,established; http_uri; content:\"/s.cgi\",fast_pattern,nocase; content:\"tmpl=\"; metadata:ruleset community; service:http; reference:bugtraq,2492; reference:cve,2001-0476; classtype:web-application-attack; sid:804; rev:20;"
+	"GID": "1",
+	"SID": "804",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP SWSoft ASPSeek Overflow attempt\"; flow:to_server,established; http_uri; content:\"/s.cgi\",fast_pattern,nocase; content:\"tmpl=\"; metadata:ruleset community; service:http; reference:bugtraq,2492; reference:cve,2001-0476; classtype:web-application-attack; sid:804; rev:20;"
 }

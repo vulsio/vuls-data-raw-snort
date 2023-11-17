@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1531",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP bb-hist.sh attempt\"; flow:to_server,established; http_uri; content:\"/bb-hist.sh?\",nocase; content:\"HISTFILE=../..\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,142; reference:cve,1999-1462; reference:nessus,10025; classtype:web-application-attack; sid:1531; rev:18;"
+	"GID": "1",
+	"SID": "1531",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP bb-hist.sh attempt\"; flow:to_server,established; http_uri; content:\"/bb-hist.sh?\",nocase; content:\"HISTFILE=../..\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,142; reference:cve,1999-1462; reference:nessus,10025; classtype:web-application-attack; sid:1531; rev:18;"
 }

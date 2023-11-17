@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41347",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Western Digital MyCloud command injection attempt\"; flow:to_server,established; http_uri; content:\"/web/google_analytics.php\",fast_pattern,nocase; http_raw_uri; content:\"cmd=set\",nocase; content:\"arg=\",nocase; content:\"%26\",distance 0; http_cookie; content:\"isAdmin=1\",nocase; content:\"username=admin\",nocase; content:\"local_login=1\",nocase; http_raw_uri; pcre:\"/[?&]arg=[^&]*?%26/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2016-10108; classtype:web-application-attack; sid:41347; rev:3;"
+	"GID": "1",
+	"SID": "41347",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Western Digital MyCloud command injection attempt\"; flow:to_server,established; http_uri; content:\"/web/google_analytics.php\",fast_pattern,nocase; http_raw_uri; content:\"cmd=set\",nocase; content:\"arg=\",nocase; content:\"%26\",distance 0; http_cookie; content:\"isAdmin=1\",nocase; content:\"username=admin\",nocase; content:\"local_login=1\",nocase; http_raw_uri; pcre:\"/[?&]arg=[^&]*?%26/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2016-10108; classtype:web-application-attack; sid:41347; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1820",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP IBM Net.Commerce orderdspc.d2w access\"; flow:to_server,established; http_uri; content:\"/ncommerce3/ExecMacro/orderdspc.d2w\"; metadata:ruleset community; service:http; reference:bugtraq,2350; reference:cve,2001-0319; reference:nessus,11020; classtype:web-application-activity; sid:1820; rev:15;"
+	"GID": "1",
+	"SID": "1820",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP IBM Net.Commerce orderdspc.d2w access\"; flow:to_server,established; http_uri; content:\"/ncommerce3/ExecMacro/orderdspc.d2w\"; metadata:ruleset community; service:http; reference:bugtraq,2350; reference:cve,2001-0319; reference:nessus,11020; classtype:web-application-activity; sid:1820; rev:15;"
 }

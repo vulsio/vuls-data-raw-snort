@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1215",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ministats admin access\"; flow:to_server,established; http_uri; content:\"/ministats/admin.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1215; rev:18;"
+	"GID": "1",
+	"SID": "1215",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ministats admin access\"; flow:to_server,established; http_uri; content:\"/ministats/admin.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-activity; sid:1215; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "440",
-  "Rev": "10",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-ICMP Reserved for Security Type 19 undefined code\"; icode:>0; itype:19; metadata:ruleset community; classtype:misc-activity; sid:440; rev:10;"
+	"GID": "1",
+	"SID": "440",
+	"Rev": "10",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-ICMP Reserved for Security Type 19 undefined code\"; icode:>0; itype:19; metadata:ruleset community; classtype:misc-activity; sid:440; rev:10;"
 }

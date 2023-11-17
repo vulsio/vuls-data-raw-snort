@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2391",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP APPE overflow attempt\"; flow:to_server,established; content:\"APPE\",nocase; isdataat:200,relative; pcre:\"/^APPE(?!\\n)\\s[^\\n]{200}/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,8315; reference:bugtraq,8542; reference:cve,2000-0133; reference:cve,2003-0466; reference:cve,2003-0772; classtype:attempted-admin; sid:2391; rev:17;"
+	"GID": "1",
+	"SID": "2391",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP APPE overflow attempt\"; flow:to_server,established; content:\"APPE\",nocase; isdataat:200,relative; pcre:\"/^APPE(?!\\n)\\s[^\\n]{200}/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,8315; reference:bugtraq,8542; reference:cve,2000-0133; reference:cve,2003-0466; reference:cve,2003-0772; classtype:attempted-admin; sid:2391; rev:17;"
 }

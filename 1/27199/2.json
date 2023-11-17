@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27199",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Meredrop variant outbound connection GET Request\"; flow:to_server,established; http_uri; content:\"/?\",depth 2; content:\"h=NT\",fast_pattern,nocase; pcre:\"/\\.[A-Z\\d]{8}\\x2d[A-Z\\d]{6}\\x2d[A-Z\\d]{6}\\x2d[A-Z\\d]{8}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/dfb0050cb7fd6c879027cbecda703613b8d9fb2b2a5682478dbcd0518172302c/analysis/1373576492/; classtype:trojan-activity; sid:27199; rev:2;"
+	"GID": "1",
+	"SID": "27199",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Meredrop variant outbound connection GET Request\"; flow:to_server,established; http_uri; content:\"/?\",depth 2; content:\"h=NT\",fast_pattern,nocase; pcre:\"/\\.[A-Z\\d]{8}\\x2d[A-Z\\d]{6}\\x2d[A-Z\\d]{6}\\x2d[A-Z\\d]{8}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/dfb0050cb7fd6c879027cbecda703613b8d9fb2b2a5682478dbcd0518172302c/analysis/1373576492/; classtype:trojan-activity; sid:27199; rev:2;"
 }

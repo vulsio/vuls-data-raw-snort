@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "810",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP whois_raw.cgi access\"; flow:to_server,established; http_uri; content:\"/whois_raw.cgi\"; metadata:ruleset community; service:http; reference:bugtraq,304; reference:cve,1999-1063; reference:nessus,10306; classtype:attempted-recon; sid:810; rev:19;"
+	"GID": "1",
+	"SID": "810",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP whois_raw.cgi access\"; flow:to_server,established; http_uri; content:\"/whois_raw.cgi\"; metadata:ruleset community; service:http; reference:bugtraq,304; reference:cve,1999-1063; reference:nessus,10306; classtype:attempted-recon; sid:810; rev:19;"
 }

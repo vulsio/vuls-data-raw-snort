@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "542",
-  "Rev": "21",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 6666:7000",
-  "Option": "msg:\"POLICY-SOCIAL IRC nick change\"; flow:to_server,established; isdataat:!139; content:\"NICK \",fast_pattern,nocase; metadata:ruleset community; classtype:policy-violation; sid:542; rev:21;"
+	"GID": "1",
+	"SID": "542",
+	"Rev": "21",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 6666:7000",
+	"Option": "msg:\"POLICY-SOCIAL IRC nick change\"; flow:to_server,established; isdataat:!139; content:\"NICK \",fast_pattern,nocase; metadata:ruleset community; classtype:policy-violation; sid:542; rev:21;"
 }

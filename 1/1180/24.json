@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1180",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP get32.exe access\"; flow:to_server,established; http_uri; content:\"/get32.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1485; reference:bugtraq,770; reference:cve,1999-0885; reference:nessus,10011; classtype:attempted-recon; sid:1180; rev:24;"
+	"GID": "1",
+	"SID": "1180",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP get32.exe access\"; flow:to_server,established; http_uri; content:\"/get32.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1485; reference:bugtraq,770; reference:cve,1999-0885; reference:nessus,10011; classtype:attempted-recon; sid:1180; rev:24;"
 }

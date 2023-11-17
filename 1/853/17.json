@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "853",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP wrap access\"; flow:to_server,established; http_uri; content:\"/wrap\"; metadata:ruleset community; service:http; reference:bugtraq,373; reference:cve,1999-0149; reference:nessus,10317; classtype:attempted-recon; sid:853; rev:17;"
+	"GID": "1",
+	"SID": "853",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP wrap access\"; flow:to_server,established; http_uri; content:\"/wrap\"; metadata:ruleset community; service:http; reference:bugtraq,373; reference:cve,1999-0149; reference:nessus,10317; classtype:attempted-recon; sid:853; rev:17;"
 }

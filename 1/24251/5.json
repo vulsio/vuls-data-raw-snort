@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "24251",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"OS-MOBILE Android/Fakelash.A!tr.spy trojan command and control channel traffic\"; flow:to_server,established; http_uri; content:\"/data.php?action=\",nocase; content:\"&m=\",distance 0,nocase; content:\"&p=\",distance 0,nocase; content:\"&n=\",distance 0,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.fortiguard.com/android-malware-distributed-by-malicious-sms-in-france/; classtype:trojan-activity; sid:24251; rev:5;"
+	"GID": "1",
+	"SID": "24251",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"OS-MOBILE Android/Fakelash.A!tr.spy trojan command and control channel traffic\"; flow:to_server,established; http_uri; content:\"/data.php?action=\",nocase; content:\"&m=\",distance 0,nocase; content:\"&p=\",distance 0,nocase; content:\"&n=\",distance 0,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.fortiguard.com/android-malware-distributed-by-malicious-sms-in-france/; classtype:trojan-activity; sid:24251; rev:5;"
 }

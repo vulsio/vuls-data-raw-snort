@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26812",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC XP Fake Antivirus Check-in\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_header; content:\"|3B| MSIE 6.0|3B| Windows NT 5.1)|0D 0A|Accept: */*|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/^\\x2F\\d{10}$/\"; metadata:ruleset community; service:http; reference:url,camas.comodo.com/cgi-bin/submit?file=cf3eff5320b0c8d41490e412e89b97559bf34fcde8f9934e5fb7c76467a679d8; classtype:trojan-activity; sid:26812; rev:2;"
+	"GID": "1",
+	"SID": "26812",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC XP Fake Antivirus Check-in\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_header; content:\"|3B| MSIE 6.0|3B| Windows NT 5.1)|0D 0A|Accept: */*|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/^\\x2F\\d{10}$/\"; metadata:ruleset community; service:http; reference:url,camas.comodo.com/cgi-bin/submit?file=cf3eff5320b0c8d41490e412e89b97559bf34fcde8f9934e5fb7c76467a679d8; classtype:trojan-activity; sid:26812; rev:2;"
 }

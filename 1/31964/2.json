@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31964",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Banker variant outbound connection\"; flow:to_server,established; http_uri; content:\"/notify.php\",fast_pattern,nocase; http_header; content:\"Accept: text/html, */*|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: \"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/bf40d710dda1a3ada127d68b34b837eca03a28699cd858cda7d4a3e36690628a/analysis/; classtype:trojan-activity; sid:31964; rev:2;"
+	"GID": "1",
+	"SID": "31964",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Banker variant outbound connection\"; flow:to_server,established; http_uri; content:\"/notify.php\",fast_pattern,nocase; http_header; content:\"Accept: text/html, */*|0D 0A|Accept-Encoding: identity|0D 0A|User-Agent: \"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/bf40d710dda1a3ada127d68b34b837eca03a28699cd858cda7d4a3e36690628a/analysis/; classtype:trojan-activity; sid:31964; rev:2;"
 }

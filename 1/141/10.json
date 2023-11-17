@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "141",
-  "Rev": "10",
-  "Header": "alert tcp $HOME_NET 31785 -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR HackAttack 1.20 Connect\"; flow:to_client,established; content:\"host\"; metadata:ruleset community; classtype:misc-activity; sid:141; rev:10;"
+	"GID": "1",
+	"SID": "141",
+	"Rev": "10",
+	"Header": "alert tcp $HOME_NET 31785 -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-BACKDOOR HackAttack 1.20 Connect\"; flow:to_client,established; content:\"host\"; metadata:ruleset community; classtype:misc-activity; sid:141; rev:10;"
 }

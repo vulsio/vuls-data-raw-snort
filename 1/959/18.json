@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "959",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage service.pwd\"; flow:to_server,established; http_uri; content:\"/service.pwd\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1205; classtype:web-application-activity; sid:959; rev:18;"
+	"GID": "1",
+	"SID": "959",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Microsoft Frontpage service.pwd\"; flow:to_server,established; http_uri; content:\"/service.pwd\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1205; classtype:web-application-activity; sid:959; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1405",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP AHG search.cgi access\"; flow:to_server,established; http_uri; content:\"/publisher/search.cgi\",fast_pattern,nocase; content:\"template=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,3985; reference:cve,2002-2113; classtype:web-application-activity; sid:1405; rev:17;"
+	"GID": "1",
+	"SID": "1405",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP AHG search.cgi access\"; flow:to_server,established; http_uri; content:\"/publisher/search.cgi\",fast_pattern,nocase; content:\"template=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,3985; reference:cve,2002-2113; classtype:web-application-activity; sid:1405; rev:17;"
 }

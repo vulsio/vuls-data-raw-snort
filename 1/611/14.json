@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "611",
-  "Rev": "14",
-  "Header": "alert tcp $HOME_NET 513 -> $EXTERNAL_NET any",
-  "Option": "msg:\"PROTOCOL-SERVICES rlogin login failure\"; flow:to_client,established; content:\"|01|rlogind|3A| Permission denied.\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:unsuccessful-user; sid:611; rev:14;"
+	"GID": "1",
+	"SID": "611",
+	"Rev": "14",
+	"Header": "alert tcp $HOME_NET 513 -> $EXTERNAL_NET any",
+	"Option": "msg:\"PROTOCOL-SERVICES rlogin login failure\"; flow:to_client,established; content:\"|01|rlogind|3A| Permission denied.\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; classtype:unsuccessful-user; sid:611; rev:14;"
 }

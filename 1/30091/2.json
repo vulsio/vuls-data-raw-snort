@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30091",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Necurs variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:13; pkt_data; content:\"/forum/db.php HTTP/1.1|0D 0A|Content-Type: application/octet-stream|0D 0A|Host: \",fast_pattern,nocase; http_header; content:!\"User-Agent:\"; content:!\"Referer:\"; content:!\"Accept\"; metadata:ruleset community; service:http; reference:url,file-analyzer.net/analysis/2306/8066/0/html#network; reference:url,www.virustotal.com/en/file/009f75196d1df18713d2572e3a797fb6a784a5c6c7dd7d253ba408ed7164c313/analysis/1393271978/; classtype:trojan-activity; sid:30091; rev:2;"
+	"GID": "1",
+	"SID": "30091",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Necurs variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:13; pkt_data; content:\"/forum/db.php HTTP/1.1|0D 0A|Content-Type: application/octet-stream|0D 0A|Host: \",fast_pattern,nocase; http_header; content:!\"User-Agent:\"; content:!\"Referer:\"; content:!\"Accept\"; metadata:ruleset community; service:http; reference:url,file-analyzer.net/analysis/2306/8066/0/html#network; reference:url,www.virustotal.com/en/file/009f75196d1df18713d2572e3a797fb6a784a5c6c7dd7d253ba408ed7164c313/analysis/1393271978/; classtype:trojan-activity; sid:30091; rev:2;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "39573",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Backdoor.NanoBot variant outbound connection\"; flow:to_server,established; isdataat:11; isdataat:!12; content:\"|08 00 00 00 27 C7 CC 6B C2 FD 13 0E|\",depth 12; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/d74fcf6b8f2f1c3a1ed742feb3f323f7826e9fc79a3d642082cee46770a4697a/analysis/1461003042/; classtype:trojan-activity; sid:39573; rev:4;"
+	"GID": "1",
+	"SID": "39573",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Backdoor.NanoBot variant outbound connection\"; flow:to_server,established; isdataat:11; isdataat:!12; content:\"|08 00 00 00 27 C7 CC 6B C2 FD 13 0E|\",depth 12; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/d74fcf6b8f2f1c3a1ed742feb3f323f7826e9fc79a3d642082cee46770a4697a/analysis/1461003042/; classtype:trojan-activity; sid:39573; rev:4;"
 }

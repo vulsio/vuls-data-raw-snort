@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31084",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zbot variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:11; http_uri; content:\"/srt/ge.php\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/750d533898f19c606ee9e96ff72c1aa3d830c469f2f564890ebbc38b169eb41b/analysis/1400275398/; classtype:trojan-activity; sid:31084; rev:3;"
+	"GID": "1",
+	"SID": "31084",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zbot variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:11; http_uri; content:\"/srt/ge.php\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/750d533898f19c606ee9e96ff72c1aa3d830c469f2f564890ebbc38b169eb41b/analysis/1400275398/; classtype:trojan-activity; sid:31084; rev:3;"
 }

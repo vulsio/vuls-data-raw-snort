@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38890",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kirts exfiltration attempt\"; flow:to_server,established; http_uri; content:\".php?fname=Hawkeye_Keylogger\",fast_pattern,nocase; content:\"&data=\"; http_header; content:!\"User-Agent\"; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1020; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/f81128f3b9c0347f4ee5946ecf9a95a3d556e8e3a4742d01e5605f862e1d116d/analysis/1462888129/; classtype:trojan-activity; sid:38890; rev:3;"
+	"GID": "1",
+	"SID": "38890",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kirts exfiltration attempt\"; flow:to_server,established; http_uri; content:\".php?fname=Hawkeye_Keylogger\",fast_pattern,nocase; content:\"&data=\"; http_header; content:!\"User-Agent\"; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1020; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/f81128f3b9c0347f4ee5946ecf9a95a3d556e8e3a4742d01e5605f862e1d116d/analysis/1462888129/; classtype:trojan-activity; sid:38890; rev:3;"
 }

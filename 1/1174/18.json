@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1174",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP /cgi-bin/jj access\"; flow:to_server,established; http_uri; content:\"/cgi-bin/jj\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2002; reference:cve,1999-0260; reference:nessus,10131; classtype:web-application-activity; sid:1174; rev:18;"
+	"GID": "1",
+	"SID": "1174",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP /cgi-bin/jj access\"; flow:to_server,established; http_uri; content:\"/cgi-bin/jj\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2002; reference:cve,1999-0260; reference:nessus,10131; classtype:web-application-activity; sid:1174; rev:18;"
 }

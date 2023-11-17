@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29887",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string Updates downloader - Win.Trojan.Upatre\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Updates downloader|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/F167C95A467F584890F39BA2162F1B96E7626F5C575EB151C8E4E00E68F97478/analysis/; classtype:trojan-activity; sid:29887; rev:5;"
+	"GID": "1",
+	"SID": "29887",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string Updates downloader - Win.Trojan.Upatre\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Updates downloader|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/F167C95A467F584890F39BA2162F1B96E7626F5C575EB151C8E4E00E68F97478/analysis/; classtype:trojan-activity; sid:29887; rev:5;"
 }

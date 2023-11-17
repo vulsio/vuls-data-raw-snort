@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "20221",
-  "Rev": "8",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Injector variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Opera|5C|9.64|0A|\",fast_pattern,nocase; http_uri; content:\"bb.php?v=\"; content:\"id=\",distance 0; content:\"b=\",distance 0; content:\"tm=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2afb098dfea7d2acd73da520fe26d09acee1449c79d2c8753f3008a2a8f648b2/analysis/; classtype:trojan-activity; sid:20221; rev:8;"
+	"GID": "1",
+	"SID": "20221",
+	"Rev": "8",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Injector variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Opera|5C|9.64|0A|\",fast_pattern,nocase; http_uri; content:\"bb.php?v=\"; content:\"id=\",distance 0; content:\"b=\",distance 0; content:\"tm=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/2afb098dfea7d2acd73da520fe26d09acee1449c79d2c8753f3008a2a8f648b2/analysis/; classtype:trojan-activity; sid:20221; rev:8;"
 }

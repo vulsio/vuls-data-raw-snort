@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1133",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"INDICATOR-SCAN cybercop os probe\"; flow:stateless; ack:0; flags:FPS; content:\"AAAAAAAAAAAAAAAA\",depth 16; metadata:ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:attempted-recon; sid:1133; rev:18;"
+	"GID": "1",
+	"SID": "1133",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"INDICATOR-SCAN cybercop os probe\"; flow:stateless; ack:0; flags:FPS; content:\"AAAAAAAAAAAAAAAA\",depth 16; metadata:ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1018; reference:url,attack.mitre.org/techniques/T1040; reference:url,attack.mitre.org/techniques/T1046; classtype:attempted-recon; sid:1133; rev:18;"
 }

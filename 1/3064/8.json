@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3064",
-  "Rev": "8",
-  "Header": "alert tcp $HOME_NET 1020 -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR Vampire 1.2 connection confirmation\"; flow:to_client,established; flowbits:isset,backdoor.vampire_12.connect; content:\"Vampire v1.2 Server On-Line.....\",depth 32; metadata:ruleset community; classtype:misc-activity; sid:3064; rev:8;"
+	"GID": "1",
+	"SID": "3064",
+	"Rev": "8",
+	"Header": "alert tcp $HOME_NET 1020 -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-BACKDOOR Vampire 1.2 connection confirmation\"; flow:to_client,established; flowbits:isset,backdoor.vampire_12.connect; content:\"Vampire v1.2 Server On-Line.....\",depth 32; metadata:ruleset community; classtype:misc-activity; sid:3064; rev:8;"
 }

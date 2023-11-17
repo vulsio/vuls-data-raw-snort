@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27204",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Potential Bancos Brazilian Banking Trojan Browser Proxy Autoconfig File\"; flow:to_client,established; file_data; content:\"return |22|DIRECT|22|\",fast_pattern,nocase; content:\".com.br\",nocase; pcre:\"/\\x22[a-z\\d\\x2e\\x2d]{1,10}\\x22\\s{0,3}\\+\\s{0,3}\\x22[a-z\\d\\x2e\\x2d]{1,10}\\x22\\s{0,3}\\+\\s{0,3}\\x22[a-z\\d\\x2e\\x2d]{1,10}\\x22/i\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27204; rev:1;"
+	"GID": "1",
+	"SID": "27204",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Potential Bancos Brazilian Banking Trojan Browser Proxy Autoconfig File\"; flow:to_client,established; file_data; content:\"return |22|DIRECT|22|\",fast_pattern,nocase; content:\".com.br\",nocase; pcre:\"/\\x22[a-z\\d\\x2e\\x2d]{1,10}\\x22\\s{0,3}\\+\\s{0,3}\\x22[a-z\\d\\x2e\\x2d]{1,10}\\x22\\s{0,3}\\+\\s{0,3}\\x22[a-z\\d\\x2e\\x2d]{1,10}\\x22/i\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27204; rev:1;"
 }

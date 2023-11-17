@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "877",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP rksh access\"; flow:to_server,established; http_uri; content:\"/rksh\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,1999-0509; reference:url,www.cert.org/advisories/CA-1996-11.html; classtype:attempted-recon; sid:877; rev:20;"
+	"GID": "1",
+	"SID": "877",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP rksh access\"; flow:to_server,established; http_uri; content:\"/rksh\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:cve,1999-0509; reference:url,www.cert.org/advisories/CA-1996-11.html; classtype:attempted-recon; sid:877; rev:20;"
 }

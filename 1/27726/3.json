@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27726",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Orbit Downloader denial of service update\"; flow:to_server,established; http_uri; content:\"/update/ido.ipl\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.welivesecurity.com/2013/08/21/orbital-decay-the-dark-side-of-a-popular-file-downloading-tool; classtype:trojan-activity; sid:27726; rev:3;"
+	"GID": "1",
+	"SID": "27726",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Orbit Downloader denial of service update\"; flow:to_server,established; http_uri; content:\"/update/ido.ipl\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.welivesecurity.com/2013/08/21/orbital-decay-the-dark-side-of-a-popular-file-downloading-tool; classtype:trojan-activity; sid:27726; rev:3;"
 }

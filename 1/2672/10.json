@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2672",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP sresult.exe access\"; flow:to_server,established; http_uri; content:\"/sresult.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,10837; reference:cve,2004-2528; reference:nessus,14186; classtype:web-application-activity; sid:2672; rev:10;"
+	"GID": "1",
+	"SID": "2672",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP sresult.exe access\"; flow:to_server,established; http_uri; content:\"/sresult.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,10837; reference:cve,2004-2528; reference:nessus,14186; classtype:web-application-activity; sid:2672; rev:10;"
 }

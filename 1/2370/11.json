@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2370",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP BugPort config.conf file access\"; flow:to_server,established; http_uri; content:\"/config.conf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9542; reference:cve,2004-2353; classtype:attempted-recon; sid:2370; rev:11;"
+	"GID": "1",
+	"SID": "2370",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP BugPort config.conf file access\"; flow:to_server,established; http_uri; content:\"/config.conf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9542; reference:cve,2004-2353; classtype:attempted-recon; sid:2370; rev:11;"
 }

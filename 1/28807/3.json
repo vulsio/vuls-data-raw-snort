@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28807",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Injector variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:9; pkt_data; content:\"/load.exe HTTP/1.1|0D 0A|User-Agent: Mozilla/\",fast_pattern,nocase; http_header; content:\"|3B 20|MSIE|20|\"; content:\")|0D 0A|Host: \",distance 0; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,urlquery.net/search.php?q=%5C%2Fload%5C.exe%24&type=regexp&start=2013-08-24&end=2013-11-22&max=400; reference:url,www.virustotal.com/en/file/032572ea1f34a060ecac98a8e2899dc0f2a41dff199e879050481ddd3818b4d0/analysis/; classtype:trojan-activity; sid:28807; rev:3;"
+	"GID": "1",
+	"SID": "28807",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Injector variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:9; pkt_data; content:\"/load.exe HTTP/1.1|0D 0A|User-Agent: Mozilla/\",fast_pattern,nocase; http_header; content:\"|3B 20|MSIE|20|\"; content:\")|0D 0A|Host: \",distance 0; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,urlquery.net/search.php?q=%5C%2Fload%5C.exe%24&type=regexp&start=2013-08-24&end=2013-11-22&max=400; reference:url,www.virustotal.com/en/file/032572ea1f34a060ecac98a8e2899dc0f2a41dff199e879050481ddd3818b4d0/analysis/; classtype:trojan-activity; sid:28807; rev:3;"
 }

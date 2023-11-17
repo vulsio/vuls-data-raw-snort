@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1479",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ttawebtop.cgi arbitrary file attempt\"; flow:to_server,established; content:\"/ttawebtop.cgi\",nocase; content:\"pg=../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2890; reference:cve,2001-0805; reference:nessus,10696; classtype:web-application-attack; sid:1479; rev:16;"
+	"GID": "1",
+	"SID": "1479",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ttawebtop.cgi arbitrary file attempt\"; flow:to_server,established; content:\"/ttawebtop.cgi\",nocase; content:\"pg=../\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2890; reference:cve,2001-0805; reference:nessus,10696; classtype:web-application-attack; sid:1479; rev:16;"
 }

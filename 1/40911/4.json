@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "40911",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Rootkit.Sednit variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_uri; content:\"/search.php\",fast_pattern,nocase; http_client_body; content:\"as_ft=\"; content:\"as_q=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1014; reference:url,virustotal.com/en/file/471fbdc52b501dfe6275a32f89a8a6b02a2aa9a0e70937f5de610b4185334668/analysis/1480953133/; classtype:trojan-activity; sid:40911; rev:4;"
+	"GID": "1",
+	"SID": "40911",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Rootkit.Sednit variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:11; http_uri; content:\"/search.php\",fast_pattern,nocase; http_client_body; content:\"as_ft=\"; content:\"as_q=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1014; reference:url,virustotal.com/en/file/471fbdc52b501dfe6275a32f89a8a6b02a2aa9a0e70937f5de610b4185334668/analysis/1480953133/; classtype:trojan-activity; sid:40911; rev:4;"
 }

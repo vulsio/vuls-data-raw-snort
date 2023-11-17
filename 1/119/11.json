@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "119",
-  "Rev": "11",
-  "Header": "alert tcp $HOME_NET 6789 -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR Doly 2.0 access\"; flow:to_client,established; content:\"Wtzup Use\",depth 32; metadata:ruleset community; classtype:misc-activity; sid:119; rev:11;"
+	"GID": "1",
+	"SID": "119",
+	"Rev": "11",
+	"Header": "alert tcp $HOME_NET 6789 -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-BACKDOOR Doly 2.0 access\"; flow:to_client,established; content:\"Wtzup Use\",depth 32; metadata:ruleset community; classtype:misc-activity; sid:119; rev:11;"
 }

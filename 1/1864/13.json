@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1864",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP SITE NEWER attempt\"; flow:to_server,established; content:\"SITE\",nocase; content:\"NEWER\",distance 1,nocase; pcre:\"/^SITE\\s+NEWER/ims\"; metadata:ruleset community; service:ftp; reference:cve,1999-0880; reference:nessus,10319; classtype:attempted-dos; sid:1864; rev:13;"
+	"GID": "1",
+	"SID": "1864",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP SITE NEWER attempt\"; flow:to_server,established; content:\"SITE\",nocase; content:\"NEWER\",distance 1,nocase; pcre:\"/^SITE\\s+NEWER/ims\"; metadata:ruleset community; service:ftp; reference:cve,1999-0880; reference:nessus,10319; classtype:attempted-dos; sid:1864; rev:13;"
 }

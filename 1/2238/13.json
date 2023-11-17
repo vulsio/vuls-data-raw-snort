@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2238",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP WebLogic ConsoleHelp view source attempt\"; flow:to_server,established; http_uri; content:\"/ConsoleHelp/\",nocase; content:\".jsp\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1518; reference:cve,2000-0682; reference:nessus,11724; classtype:web-application-attack; sid:2238; rev:13;"
+	"GID": "1",
+	"SID": "2238",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP WebLogic ConsoleHelp view source attempt\"; flow:to_server,established; http_uri; content:\"/ConsoleHelp/\",nocase; content:\".jsp\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1518; reference:cve,2000-0682; reference:nessus,11724; classtype:web-application-attack; sid:2238; rev:13;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2680",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE ctxsys.driddlr.subindexpopulate buffer overflow attempt\"; flow:to_server,established; content:\"ctxsys.driddlr.subindexpopulate\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*logfile[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|logfile\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\d+\\s*,\\s*){3}(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/is\"; metadata:ruleset community; classtype:attempted-user; sid:2680; rev:4;"
+	"GID": "1",
+	"SID": "2680",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE ctxsys.driddlr.subindexpopulate buffer overflow attempt\"; flow:to_server,established; content:\"ctxsys.driddlr.subindexpopulate\",nocase; pcre:\"/((\\w+)[\\r\\n\\s]*\\x3a=[\\r\\n\\s]*(\\x27[^\\x27]{1024,}\\x27|\\x22[^\\x22]{1024,}\\x22)[\\r\\n\\s]*\\x3b.*logfile[\\r\\n\\s]*=>[\\r\\n\\s]*\\2|logfile\\s*=>\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})|\\(\\s*(\\d+\\s*,\\s*){3}(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,}))/is\"; metadata:ruleset community; classtype:attempted-user; sid:2680; rev:4;"
 }

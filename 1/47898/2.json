@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "47898",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.OilRig variant outbound connection\"; flow:to_server,established; http_uri; content:\"/tahw?\",depth 6; pcre:\"/\\x2ftahw\\x3f[A-F0-9]{3,84}$/\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/055b7607848777634b2b17a5c51da7949829ff88084c3cb30bcb3e58aae5d8e9; classtype:attempted-user; sid:47898; rev:2;"
+	"GID": "1",
+	"SID": "47898",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.OilRig variant outbound connection\"; flow:to_server,established; http_uri; content:\"/tahw?\",depth 6; pcre:\"/\\x2ftahw\\x3f[A-F0-9]{3,84}$/\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/055b7607848777634b2b17a5c51da7949829ff88084c3cb30bcb3e58aae5d8e9; classtype:attempted-user; sid:47898; rev:2;"
 }

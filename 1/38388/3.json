@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38388",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.FTPKeyLogger geolocation check\"; flow:to_server,established; http_raw_uri; bufferlen:16; http_uri; content:\"/geoip/geoip.php\",fast_pattern,nocase; http_header; content:!\"Accept\"; content:!\"User-Agent\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/44f956d41f5aea97884f88f60c1e28dc246b4b7318a87b332367e7f0476ca8fc/analysis/1459279340/; classtype:trojan-activity; sid:38388; rev:3;"
+	"GID": "1",
+	"SID": "38388",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.FTPKeyLogger geolocation check\"; flow:to_server,established; http_raw_uri; bufferlen:16; http_uri; content:\"/geoip/geoip.php\",fast_pattern,nocase; http_header; content:!\"Accept\"; content:!\"User-Agent\"; content:!\"Referer\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1056; reference:url,www.virustotal.com/en/file/44f956d41f5aea97884f88f60c1e28dc246b4b7318a87b332367e7f0476ca8fc/analysis/1459279340/; classtype:trojan-activity; sid:38388; rev:3;"
 }

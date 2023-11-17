@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32977",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kuluos variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/w1/form.php\",fast_pattern,nocase; http_raw_uri; bufferlen:12; http_header; content:!\"Connection|3A 20|\"; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/48936d3242ccd9decedf1057b08eacf5f952efeb1b7bb2f354bb02028a361ac2/analysis/; classtype:trojan-activity; sid:32977; rev:3;"
+	"GID": "1",
+	"SID": "32977",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kuluos variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"/w1/form.php\",fast_pattern,nocase; http_raw_uri; bufferlen:12; http_header; content:!\"Connection|3A 20|\"; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/48936d3242ccd9decedf1057b08eacf5f952efeb1b7bb2f354bb02028a361ac2/analysis/; classtype:trojan-activity; sid:32977; rev:3;"
 }

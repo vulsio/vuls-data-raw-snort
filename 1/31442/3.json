@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31442",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Injector variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:4; http_uri; content:\"/re/\",fast_pattern,nocase; pkt_data; content:\"User-Agent: Mozilla/5.0",
-  "Option": "compatible|3B| MSIE 9.0|3B| Windows NT 6.1|3B| Trident/5.0)|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|Host: \"; http_header; content:\"|0D 0A|Connection: Close|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/56939273f68158dacc58d4e8d5bb5b0c4c04be89e279651c8f19fa6392f3d837/analysis/; reference:url,www.virustotal.com/en/file/ad40cabf66001087c2e9f548811b17341f63f19f528a3c04a1c9ab9f10b5eff9/analysis/; classtype:trojan-activity; sid:31442; rev:3;"
+	"GID": "1",
+	"SID": "31442",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Injector variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:4; http_uri; content:\"/re/\",fast_pattern,nocase; pkt_data; content:\"User-Agent: Mozilla/5.0",
+	"Option": "compatible|3B| MSIE 9.0|3B| Windows NT 6.1|3B| Trident/5.0)|0D 0A|Content-Type: application/x-www-form-urlencoded|0D 0A|Host: \"; http_header; content:\"|0D 0A|Connection: Close|0D 0A|Cache-Control: no-cache|0D 0A 0D 0A|\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/56939273f68158dacc58d4e8d5bb5b0c4c04be89e279651c8f19fa6392f3d837/analysis/; reference:url,www.virustotal.com/en/file/ad40cabf66001087c2e9f548811b17341f63f19f528a3c04a1c9ab9f10b5eff9/analysis/; classtype:trojan-activity; sid:31442; rev:3;"
 }

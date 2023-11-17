@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "36066",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Bagsu variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent: Mozilla/4.0",
-  "Option": "compatible|3B| MyApp)|0D 0A 0D 0A|\",fast_pattern,nocase; http_client_body; content:\"windows=\",depth 8; content:\"&av=\",within 50; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/1fbe27602da7de2ce95254ffd409f70635179371354b4914997de273f6be9422/analysis/; classtype:trojan-activity; sid:36066; rev:2;"
+	"GID": "1",
+	"SID": "36066",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Bagsu variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent: Mozilla/4.0",
+	"Option": "compatible|3B| MyApp)|0D 0A 0D 0A|\",fast_pattern,nocase; http_client_body; content:\"windows=\",depth 8; content:\"&av=\",within 50; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/1fbe27602da7de2ce95254ffd409f70635179371354b4914997de273f6be9422/analysis/; classtype:trojan-activity; sid:36066; rev:2;"
 }

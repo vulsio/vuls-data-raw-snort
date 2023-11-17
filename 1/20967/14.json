@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "20967",
-  "Rev": "14",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"FILE-IDENTIFY JPEG file download request\"; flow:to_server,established; http_uri; content:\".jfi\",fast_pattern,nocase; pcre:\"/\\x2ejfif?([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.jpeg; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/Jpg; classtype:misc-activity; sid:20967; rev:14;"
+	"GID": "1",
+	"SID": "20967",
+	"Rev": "14",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"FILE-IDENTIFY JPEG file download request\"; flow:to_server,established; http_uri; content:\".jfi\",fast_pattern,nocase; pcre:\"/\\x2ejfif?([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.jpeg; flowbits:noalert; metadata:policy balanced-ips alert,policy max-detect-ips alert,policy security-ips alert,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/Jpg; classtype:misc-activity; sid:20967; rev:14;"
 }

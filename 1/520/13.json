@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "520",
-  "Rev": "13",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 69",
-  "Option": "msg:\"PROTOCOL-TFTP root directory\"; flow:to_server; content:\"|00 01|/\",depth 3; metadata:policy max-detect-ips drop,ruleset community; reference:cve,1999-0183; classtype:bad-unknown; sid:520; rev:13;"
+	"GID": "1",
+	"SID": "520",
+	"Rev": "13",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 69",
+	"Option": "msg:\"PROTOCOL-TFTP root directory\"; flow:to_server; content:\"|00 01|/\",depth 3; metadata:policy max-detect-ips drop,ruleset community; reference:cve,1999-0183; classtype:bad-unknown; sid:520; rev:13;"
 }

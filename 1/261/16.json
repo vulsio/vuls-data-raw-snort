@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "261",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
-  "Option": "msg:\"SERVER-OTHER Bind named overflow attempt\"; flow:to_server,established; content:\"|CD 80 E8 D7 FF FF FF|/bin/sh\",fast_pattern,nocase; metadata:ruleset community; service:dns; reference:url,www.cert.org/advisories/CA-1998-05.html; classtype:attempted-admin; sid:261; rev:16;"
+	"GID": "1",
+	"SID": "261",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
+	"Option": "msg:\"SERVER-OTHER Bind named overflow attempt\"; flow:to_server,established; content:\"|CD 80 E8 D7 FF FF FF|/bin/sh\",fast_pattern,nocase; metadata:ruleset community; service:dns; reference:url,www.cert.org/advisories/CA-1998-05.html; classtype:attempted-admin; sid:261; rev:16;"
 }

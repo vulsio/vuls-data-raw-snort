@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1291",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP sml3com access\"; flow:to_server,established; http_uri; content:\"/graphics/sml3com\"; metadata:ruleset community; service:http; reference:bugtraq,2721; reference:cve,2001-0740; classtype:web-application-activity; sid:1291; rev:15;"
+	"GID": "1",
+	"SID": "1291",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP sml3com access\"; flow:to_server,established; http_uri; content:\"/graphics/sml3com\"; metadata:ruleset community; service:http; reference:bugtraq,2721; reference:cve,2001-0740; classtype:web-application-activity; sid:1291; rev:15;"
 }

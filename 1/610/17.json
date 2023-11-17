@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "610",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 514",
-  "Option": "msg:\"PROTOCOL-SERVICES rsh root\"; flow:to_server,established; content:\"|00|root|00|\",fast_pattern,nocase; pcre:\"/^(\\d{1,5})?\\x00?[^\\x00]+?\\x00root\\x00/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:bugtraq,57221; reference:cve,2012-6392; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130109-lms; classtype:attempted-admin; sid:610; rev:17;"
+	"GID": "1",
+	"SID": "610",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 514",
+	"Option": "msg:\"PROTOCOL-SERVICES rsh root\"; flow:to_server,established; content:\"|00|root|00|\",fast_pattern,nocase; pcre:\"/^(\\d{1,5})?\\x00?[^\\x00]+?\\x00root\\x00/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:bugtraq,57221; reference:cve,2012-6392; reference:url,tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130109-lms; classtype:attempted-admin; sid:610; rev:17;"
 }

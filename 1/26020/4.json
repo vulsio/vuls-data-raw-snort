@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26020",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Sibhost exploit kit\"; flow:to_server,established; http_uri; content:\"yoO4TAbn2tpl5DltCfASJIZ2spEJPLSn\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.malwaresigs.com/2013/02/26/sport-cd-am-sibhost; classtype:trojan-activity; sid:26020; rev:4;"
+	"GID": "1",
+	"SID": "26020",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Sibhost exploit kit\"; flow:to_server,established; http_uri; content:\"yoO4TAbn2tpl5DltCfASJIZ2spEJPLSn\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.malwaresigs.com/2013/02/26/sport-cd-am-sibhost; classtype:trojan-activity; sid:26020; rev:4;"
 }

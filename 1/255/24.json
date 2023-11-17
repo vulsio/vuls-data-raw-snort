@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "255",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
-  "Option": "msg:\"PROTOCOL-DNS dns zone transfer via TCP detected\"; flow:to_server,established; content:\"|00 01 00 00 00 00 00|\",depth 8,offset 6; byte_test:1,!&,0xF8,4; content:\"|00 00 FC 00 01|\",fast_pattern; isdataat:!1,relative; metadata:policy max-detect-ips drop,ruleset community; service:dns; reference:cve,1999-0532; reference:nessus,10595; classtype:attempted-recon; sid:255; rev:24;"
+	"GID": "1",
+	"SID": "255",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 53",
+	"Option": "msg:\"PROTOCOL-DNS dns zone transfer via TCP detected\"; flow:to_server,established; content:\"|00 01 00 00 00 00 00|\",depth 8,offset 6; byte_test:1,!&,0xF8,4; content:\"|00 00 FC 00 01|\",fast_pattern; isdataat:!1,relative; metadata:policy max-detect-ips drop,ruleset community; service:dns; reference:cve,1999-0532; reference:nessus,10595; classtype:attempted-recon; sid:255; rev:24;"
 }

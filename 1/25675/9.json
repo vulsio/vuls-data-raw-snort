@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25675",
-  "Rev": "9",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 1024:65535 ( msg:\"MALWARE-CNC Win.Trojan.Fakeavlock variant outbound connection\"; flow:to_server,established; isdataat:266; isdataat:!276; http_header; content:\"User-Agent|3A| Mozilla/5.0",
-  "Option": "Windows|3B| U|3B| MSIE 9.0|3B| Windows NT 9.0|3B| en-US)|0D 0A|\",fast_pattern,nocase; http_raw_uri; bufferlen:159; http_uri; pcre:\"/\\x2f[A-F0-9]{158}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/file/c49f7dbc036ad0a86df02cbbde00cb3b3fbd651d82f6c9c5a98170644374f64f/analysis/; classtype:trojan-activity; sid:25675; rev:9;"
+	"GID": "1",
+	"SID": "25675",
+	"Rev": "9",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 1024:65535 ( msg:\"MALWARE-CNC Win.Trojan.Fakeavlock variant outbound connection\"; flow:to_server,established; isdataat:266; isdataat:!276; http_header; content:\"User-Agent|3A| Mozilla/5.0",
+	"Option": "Windows|3B| U|3B| MSIE 9.0|3B| Windows NT 9.0|3B| en-US)|0D 0A|\",fast_pattern,nocase; http_raw_uri; bufferlen:159; http_uri; pcre:\"/\\x2f[A-F0-9]{158}/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/file/c49f7dbc036ad0a86df02cbbde00cb3b3fbd651d82f6c9c5a98170644374f64f/analysis/; classtype:trojan-activity; sid:25675; rev:9;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "47320",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Js.Trojan.Agent JS Sniffer beacon connection\"; flow:to_server,established; http_uri; content:\".php?\"; content:\"=WyJ1cmw\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:47320; rev:1;"
+	"GID": "1",
+	"SID": "47320",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Js.Trojan.Agent JS Sniffer beacon connection\"; flow:to_server,established; http_uri; content:\".php?\"; content:\"=WyJ1cmw\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:47320; rev:1;"
 }

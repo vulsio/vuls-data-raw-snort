@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21498",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY XML file magic detected\"; flow:to_client,established; file_data; content:\"<?xml\",depth 50,nocase; flowbits:set,file.xml; flowbits:set,file.xul; flowbits:noalert; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:21498; rev:16;"
+	"GID": "1",
+	"SID": "21498",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"FILE-IDENTIFY XML file magic detected\"; flow:to_client,established; file_data; content:\"<?xml\",depth 50,nocase; flowbits:set,file.xml; flowbits:set,file.xul; flowbits:noalert; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:ftp-data,http,imap,pop3; classtype:misc-activity; sid:21498; rev:16;"
 }

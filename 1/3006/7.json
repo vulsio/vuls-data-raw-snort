@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3006",
-  "Rev": "7",
-  "Header": "alert udp $EXTERNAL_NET 7808 -> $HOME_NET any",
-  "Option": "msg:\"SERVER-OTHER Volition Freespace 2 buffer overflow attempt\"; flow:to_client; content:\"|00 E1|..|B4 00 00 00|\",depth 8; isdataat:160,relative; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,9785; classtype:misc-attack; sid:3006; rev:7;"
+	"GID": "1",
+	"SID": "3006",
+	"Rev": "7",
+	"Header": "alert udp $EXTERNAL_NET 7808 -> $HOME_NET any",
+	"Option": "msg:\"SERVER-OTHER Volition Freespace 2 buffer overflow attempt\"; flow:to_client; content:\"|00 E1|..|B4 00 00 00|\",depth 8; isdataat:160,relative; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,9785; classtype:misc-attack; sid:3006; rev:7;"
 }

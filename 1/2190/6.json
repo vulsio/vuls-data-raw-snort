@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2190",
-  "Rev": "6",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 135",
-  "Option": "msg:\"NETBIOS DCERPC invalid bind attempt\"; flow:to_server,established; content:\"|05|\",depth 1; content:\"|0B|\",within 1,distance 1; byte_test:1,&,1,0,relative; content:\"|00|\",within 1,distance 21; metadata:ruleset community; classtype:attempted-dos; sid:2190; rev:6;"
+	"GID": "1",
+	"SID": "2190",
+	"Rev": "6",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 135",
+	"Option": "msg:\"NETBIOS DCERPC invalid bind attempt\"; flow:to_server,established; content:\"|05|\",depth 1; content:\"|0B|\",within 1,distance 1; byte_test:1,&,1,0,relative; content:\"|00|\",within 1,distance 21; metadata:ruleset community; classtype:attempted-dos; sid:2190; rev:6;"
 }

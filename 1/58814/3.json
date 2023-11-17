@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "58814",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"POLICY-OTHER Java User-Agent remote class download attempt\"; flow:to_server,established; http_uri; content:\".class\",fast_pattern,nocase; http_header; content:\"|0D 0A|User-Agent: Java/\",nocase; metadata:ruleset community; service:http; reference:cve,2021-44228; reference:cve,2021-44832; reference:cve,2021-45046; reference:cve,2021-45105; classtype:policy-violation; sid:58814; rev:3;"
+	"GID": "1",
+	"SID": "58814",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"POLICY-OTHER Java User-Agent remote class download attempt\"; flow:to_server,established; http_uri; content:\".class\",fast_pattern,nocase; http_header; content:\"|0D 0A|User-Agent: Java/\",nocase; metadata:ruleset community; service:http; reference:cve,2021-44228; reference:cve,2021-44832; reference:cve,2021-45046; reference:cve,2021-45105; classtype:policy-violation; sid:58814; rev:3;"
 }

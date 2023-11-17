@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1185",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP bizdbsearch attempt\"; flow:to_server,established; http_uri; content:\"/bizdb1-search.cgi\",fast_pattern,nocase; content:\"mail\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1104; reference:cve,2000-0287; reference:nessus,10383; classtype:web-application-attack; sid:1185; rev:23;"
+	"GID": "1",
+	"SID": "1185",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP bizdbsearch attempt\"; flow:to_server,established; http_uri; content:\"/bizdb1-search.cgi\",fast_pattern,nocase; content:\"mail\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1104; reference:cve,2000-0287; reference:nessus,10383; classtype:web-application-attack; sid:1185; rev:23;"
 }

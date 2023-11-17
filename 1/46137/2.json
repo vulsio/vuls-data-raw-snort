@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46137",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Cidox variant outbound connection attempt\"; flow:to_server,established; content:\"POST /b/req/\",depth 12; content:\" HTTP/1.1|0D 0A|Accept: */*|0D 0A|Content-Type: application/octet-stream|0D 0A|Connection: Close|0D 0A|User-Agent: Mozilla/\",within 103,distance 24; content:\")|0D 0A|Host: \",distance 0; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; classtype:trojan-activity; sid:46137; rev:2;"
+	"GID": "1",
+	"SID": "46137",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Cidox variant outbound connection attempt\"; flow:to_server,established; content:\"POST /b/req/\",depth 12; content:\" HTTP/1.1|0D 0A|Accept: */*|0D 0A|Content-Type: application/octet-stream|0D 0A|Connection: Close|0D 0A|User-Agent: Mozilla/\",within 103,distance 24; content:\")|0D 0A|Host: \",distance 0; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; classtype:trojan-activity; sid:46137; rev:2;"
 }

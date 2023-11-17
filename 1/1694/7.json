@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1694",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE alter table attempt\"; flow:to_server,established; content:\"alter table\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1694; rev:7;"
+	"GID": "1",
+	"SID": "1694",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE alter table attempt\"; flow:to_server,established; content:\"alter table\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1694; rev:7;"
 }

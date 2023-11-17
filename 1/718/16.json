@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "718",
-  "Rev": "16",
-  "Header": "alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any",
-  "Option": "msg:\"PROTOCOL-TELNET login incorrect\"; flow:to_client,established; content:\"Login incorrect\"; metadata:ruleset community; service:telnet; classtype:bad-unknown; sid:718; rev:16;"
+	"GID": "1",
+	"SID": "718",
+	"Rev": "16",
+	"Header": "alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any",
+	"Option": "msg:\"PROTOCOL-TELNET login incorrect\"; flow:to_client,established; content:\"Login incorrect\"; metadata:ruleset community; service:telnet; classtype:bad-unknown; sid:718; rev:16;"
 }

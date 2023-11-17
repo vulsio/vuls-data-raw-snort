@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26657",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Shiz variant outbound connection\"; flow:to_server,established; http_method; content:\"GET\"; http_uri; content:\"/login.php\",depth 10; http_header; content:\"Referer|3A| http://www.google.com\"; content:\"User-Agent|3A| Mozilla/4.0 |28|compatible|3B| MSIE 2.0|3B|\",fast_pattern,nocase; pkt_data; content:\"HTTP/1.0|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,camas.comodo.com/cgi-bin/submit?file=58963fd6a567513990ec6be52dc036bc5b728bb6528fca61227b22681ac838e6; reference:url,www.virustotal.com/en/file/58963fd6a567513990ec6be52dc036bc5b728bb6528fca61227b22681ac838e6/analysis/1368563326/; classtype:trojan-activity; sid:26657; rev:4;"
+	"GID": "1",
+	"SID": "26657",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Shiz variant outbound connection\"; flow:to_server,established; http_method; content:\"GET\"; http_uri; content:\"/login.php\",depth 10; http_header; content:\"Referer|3A| http://www.google.com\"; content:\"User-Agent|3A| Mozilla/4.0 |28|compatible|3B| MSIE 2.0|3B|\",fast_pattern,nocase; pkt_data; content:\"HTTP/1.0|0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,camas.comodo.com/cgi-bin/submit?file=58963fd6a567513990ec6be52dc036bc5b728bb6528fca61227b22681ac838e6; reference:url,www.virustotal.com/en/file/58963fd6a567513990ec6be52dc036bc5b728bb6528fca61227b22681ac838e6/analysis/1368563326/; classtype:trojan-activity; sid:26657; rev:4;"
 }

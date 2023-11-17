@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27774",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC RDN Banker Data Exfiltration\"; flow:to_server,established; http_method; content:\"POST\"; http_client_body; content:\"|3B| name=|22|arquivo|22 3B| filename=|22|C:|5C|\",fast_pattern,nocase; content:\"_.log|22 0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1020; classtype:trojan-activity; sid:27774; rev:3;"
+	"GID": "1",
+	"SID": "27774",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC RDN Banker Data Exfiltration\"; flow:to_server,established; http_method; content:\"POST\"; http_client_body; content:\"|3B| name=|22|arquivo|22 3B| filename=|22|C:|5C|\",fast_pattern,nocase; content:\"_.log|22 0D 0A|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1020; classtype:trojan-activity; sid:27774; rev:3;"
 }

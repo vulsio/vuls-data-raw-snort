@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "44469",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Potential hostile executable served from compromised or malicious WordPress site attempt\"; flow:to_server,established; http_uri; content:\"/wp-admin\",fast_pattern,nocase; pcre:\"/(exe|dll|scr|rar|ps1|bat)$/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.avast.com/2013/05/03/regents-of-louisiana-spreading-sirefef-malware; classtype:trojan-activity; sid:44469; rev:2;"
+	"GID": "1",
+	"SID": "44469",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Potential hostile executable served from compromised or malicious WordPress site attempt\"; flow:to_server,established; http_uri; content:\"/wp-admin\",fast_pattern,nocase; pcre:\"/(exe|dll|scr|rar|ps1|bat)$/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,blog.avast.com/2013/05/03/regents-of-louisiana-spreading-sirefef-malware; classtype:trojan-activity; sid:44469; rev:2;"
 }

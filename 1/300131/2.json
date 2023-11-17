@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "300131",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP F5 BIG-IP iControl remote code execution attempt\"; flow:to_server,established; http_header; content:\"Connection|3A|\",nocase; content:\"X-F5-Auth\",distance 0,fast_pattern,nocase; pcre:\"/^Connection:[^\\r\\n]*?X-F5-Auth/im\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-1388; classtype:attempted-user; sid:300131; rev:2;"
+	"GID": "1",
+	"SID": "300131",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP F5 BIG-IP iControl remote code execution attempt\"; flow:to_server,established; http_header; content:\"Connection|3A|\",nocase; content:\"X-F5-Auth\",distance 0,fast_pattern,nocase; pcre:\"/^Connection:[^\\r\\n]*?X-F5-Auth/im\"; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-1388; classtype:attempted-user; sid:300131; rev:2;"
 }

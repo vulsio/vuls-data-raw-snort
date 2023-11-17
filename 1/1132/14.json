@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1132",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 457",
-  "Option": "msg:\"SERVER-WEBAPP Netscape Unixware overflow\"; flow:to_server,established; content:\"|EB|_|9A FF FF FF FF 07 FF C3|^1|C0 89|F|9D|\"; metadata:ruleset community; reference:bugtraq,908; reference:cve,1999-0744; classtype:attempted-recon; sid:1132; rev:14;"
+	"GID": "1",
+	"SID": "1132",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 457",
+	"Option": "msg:\"SERVER-WEBAPP Netscape Unixware overflow\"; flow:to_server,established; content:\"|EB|_|9A FF FF FF FF 07 FF C3|^1|C0 89|F|9D|\"; metadata:ruleset community; reference:bugtraq,908; reference:cve,1999-0744; classtype:attempted-recon; sid:1132; rev:14;"
 }

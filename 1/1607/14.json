@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1607",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP HyperSeek hsx.cgi access\"; flow:to_server,established; http_uri; content:\"/hsx.cgi\"; metadata:ruleset community; service:http; reference:bugtraq,2314; reference:cve,2001-0253; reference:nessus,10602; classtype:web-application-activity; sid:1607; rev:14;"
+	"GID": "1",
+	"SID": "1607",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP HyperSeek hsx.cgi access\"; flow:to_server,established; http_uri; content:\"/hsx.cgi\"; metadata:ruleset community; service:http; reference:bugtraq,2314; reference:cve,2001-0253; reference:nessus,10602; classtype:web-application-activity; sid:1607; rev:14;"
 }

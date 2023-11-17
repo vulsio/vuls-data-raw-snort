@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "44688",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Netgear DGN1000 series routers arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/setup.cgi\",nocase; pkt_data; content:\"todo=syscmd\",fast_pattern,nocase; content:\"cmd=\",nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,60281; reference:url,www.exploit-db.com/exploits/25978/; classtype:attempted-admin; sid:44688; rev:4;"
+	"GID": "1",
+	"SID": "44688",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Netgear DGN1000 series routers arbitrary command execution attempt\"; flow:to_server,established; http_uri; content:\"/setup.cgi\",nocase; pkt_data; content:\"todo=syscmd\",fast_pattern,nocase; content:\"cmd=\",nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,60281; reference:url,www.exploit-db.com/exploits/25978/; classtype:attempted-admin; sid:44688; rev:4;"
 }

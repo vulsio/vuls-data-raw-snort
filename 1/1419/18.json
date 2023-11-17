@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1419",
-  "Rev": "18",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 162",
-  "Option": "msg:\"PROTOCOL-SNMP trap udp\"; flow:to_server; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1419; rev:18;"
+	"GID": "1",
+	"SID": "1419",
+	"Rev": "18",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 162",
+	"Option": "msg:\"PROTOCOL-SNMP trap udp\"; flow:to_server; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1419; rev:18;"
 }

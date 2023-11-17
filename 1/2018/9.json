@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2018",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-RPC mountd TCP dump request\"; flow:to_server,established; content:\"|00 01 86 A5|\",depth 4,offset 16; content:\"|00 00 00 02|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; classtype:attempted-recon; sid:2018; rev:9;"
+	"GID": "1",
+	"SID": "2018",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-RPC mountd TCP dump request\"; flow:to_server,established; content:\"|00 01 86 A5|\",depth 4,offset 16; content:\"|00 00 00 02|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 8; metadata:ruleset community; classtype:attempted-recon; sid:2018; rev:9;"
 }

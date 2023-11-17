@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1075",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS postinfo.asp access\"; flow:to_server,established; http_uri; content:\"/scripts/postinfo.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1811; reference:cve,1999-0360; classtype:web-application-activity; sid:1075; rev:21;"
+	"GID": "1",
+	"SID": "1075",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS postinfo.asp access\"; flow:to_server,established; http_uri; content:\"/scripts/postinfo.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1811; reference:cve,1999-0360; classtype:web-application-activity; sid:1075; rev:21;"
 }

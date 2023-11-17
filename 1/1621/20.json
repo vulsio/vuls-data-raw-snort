@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1621",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP CMD overflow attempt\"; flow:to_server,established; content:\"CMD\",nocase; isdataat:200,relative; pcre:\"/^CMD(?!\\n)\\s[^\\n]{200}/ims\"; metadata:ruleset community; service:ftp; classtype:attempted-admin; sid:1621; rev:20;"
+	"GID": "1",
+	"SID": "1621",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP CMD overflow attempt\"; flow:to_server,established; content:\"CMD\",nocase; isdataat:200,relative; pcre:\"/^CMD(?!\\n)\\s[^\\n]{200}/ims\"; metadata:ruleset community; service:ftp; classtype:attempted-admin; sid:1621; rev:20;"
 }

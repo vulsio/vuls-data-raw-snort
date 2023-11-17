@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26382",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER UTF-8 BOM in zip file attachment detected\"; flow:to_client,established; file_data; content:\"|EF BB BF 50 4B 03 04|\",depth 7; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26382; rev:4;"
+	"GID": "1",
+	"SID": "26382",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-OTHER UTF-8 BOM in zip file attachment detected\"; flow:to_client,established; file_data; content:\"|EF BB BF 50 4B 03 04|\",depth 7; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; classtype:trojan-activity; sid:26382; rev:4;"
 }

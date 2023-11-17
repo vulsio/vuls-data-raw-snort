@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1392",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP lastlines.cgi access\"; flow:to_server,established; http_uri; content:\"/lastlines.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3754; reference:bugtraq,3755; reference:cve,2001-1205; reference:cve,2001-1206; classtype:attempted-recon; sid:1392; rev:22;"
+	"GID": "1",
+	"SID": "1392",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP lastlines.cgi access\"; flow:to_server,established; http_uri; content:\"/lastlines.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3754; reference:bugtraq,3755; reference:cve,2001-1205; reference:cve,2001-1206; classtype:attempted-recon; sid:1392; rev:22;"
 }

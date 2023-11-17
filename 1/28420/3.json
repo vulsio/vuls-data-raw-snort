@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28420",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-OBFUSCATION Javascript obfuscation - createElement - seen in IFRAMEr Tool attack\"; flow:to_client,established; file_data; content:\"|22|c|22|+|22|r|22 3A|2+|22|e|22|+|22|a|22|+|22|t|22|+|22|e|22|+|22|E|22|+|22|l|22|+|22|e|22|+|22|m|22|+((f)?|22|e|22|+|22|n|22|+|22|t|22 3A 22 22|\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1027; reference:url,attack.mitre.org/techniques/T1140; classtype:trojan-activity; sid:28420; rev:3;"
+	"GID": "1",
+	"SID": "28420",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-OBFUSCATION Javascript obfuscation - createElement - seen in IFRAMEr Tool attack\"; flow:to_client,established; file_data; content:\"|22|c|22|+|22|r|22 3A|2+|22|e|22|+|22|a|22|+|22|t|22|+|22|e|22|+|22|E|22|+|22|l|22|+|22|e|22|+|22|m|22|+((f)?|22|e|22|+|22|n|22|+|22|t|22 3A 22 22|\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1027; reference:url,attack.mitre.org/techniques/T1140; classtype:trojan-activity; sid:28420; rev:3;"
 }

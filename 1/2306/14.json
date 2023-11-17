@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2306",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP gallery remote file include attempt\"; flow:to_server,established; http_uri; content:\"/setup/\"; content:\"GALLERY_BASEDIR=\"; pcre:\"/GALLERY_BASEDIR=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,8814; reference:cve,2003-1227; reference:nessus,11876; classtype:web-application-attack; sid:2306; rev:14;"
+	"GID": "1",
+	"SID": "2306",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP gallery remote file include attempt\"; flow:to_server,established; http_uri; content:\"/setup/\"; content:\"GALLERY_BASEDIR=\"; pcre:\"/GALLERY_BASEDIR=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,8814; reference:cve,2003-1227; reference:nessus,11876; classtype:web-application-attack; sid:2306; rev:14;"
 }

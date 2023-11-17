@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1428",
-  "Rev": "8",
-  "Header": "alert tcp $HOME_NET any -> 64.245.58.0/23 any",
-  "Option": "msg:\"POLICY-MULTIMEDIA audio galaxy keepalive\"; flow:established; content:\"E_|00 03 05|\",depth 5; metadata:ruleset community; classtype:misc-activity; sid:1428; rev:8;"
+	"GID": "1",
+	"SID": "1428",
+	"Rev": "8",
+	"Header": "alert tcp $HOME_NET any -> 64.245.58.0/23 any",
+	"Option": "msg:\"POLICY-MULTIMEDIA audio galaxy keepalive\"; flow:established; content:\"E_|00 03 05|\",depth 5; metadata:ruleset community; classtype:misc-activity; sid:1428; rev:8;"
 }

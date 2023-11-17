@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49418",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Orange LiveBox unauthorized credentials access attempt\"; flow:to_server,established; http_raw_uri; bufferlen:23; http_uri; content:\"/get_getnetworkconf.cgi\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2018-20377; reference:url,badpackets.net/over-19000-orange-livebox-adsl-modems-are-leaking-their-wifi-credentials/; classtype:attempted-recon; sid:49418; rev:1;"
+	"GID": "1",
+	"SID": "49418",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Orange LiveBox unauthorized credentials access attempt\"; flow:to_server,established; http_raw_uri; bufferlen:23; http_uri; content:\"/get_getnetworkconf.cgi\",fast_pattern,nocase; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2018-20377; reference:url,badpackets.net/over-19000-orange-livebox-adsl-modems-are-leaking-their-wifi-credentials/; classtype:attempted-recon; sid:49418; rev:1;"
 }

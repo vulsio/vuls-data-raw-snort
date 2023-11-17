@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "19678",
-  "Rev": "10",
-  "Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"SERVER-OTHER multiple products blacknurse ICMP denial of service attempt\"; icode:3; itype:3; detection_filter:track by_src,count 250,seconds 1; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2011-1871; reference:url,soc.tdc.dk/blacknurse/blacknurse.pdf; reference:url,technet.microsoft.com/en-us/security/bulletin/MS11-064; reference:url,technet.microsoft.com/en-us/security/bulletin/MS11-083; classtype:attempted-dos; sid:19678; rev:10;"
+	"GID": "1",
+	"SID": "19678",
+	"Rev": "10",
+	"Header": "alert icmp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"SERVER-OTHER multiple products blacknurse ICMP denial of service attempt\"; icode:3; itype:3; detection_filter:track by_src,count 250,seconds 1; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2011-1871; reference:url,soc.tdc.dk/blacknurse/blacknurse.pdf; reference:url,technet.microsoft.com/en-us/security/bulletin/MS11-064; reference:url,technet.microsoft.com/en-us/security/bulletin/MS11-083; classtype:attempted-dos; sid:19678; rev:10;"
 }

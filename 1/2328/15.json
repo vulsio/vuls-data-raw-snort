@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2328",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP authentication_index.php access\"; flow:to_server,established; http_uri; content:\"/authentication_index.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,2004-0032; reference:nessus,11982; classtype:web-application-activity; sid:2328; rev:15;"
+	"GID": "1",
+	"SID": "2328",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP authentication_index.php access\"; flow:to_server,established; http_uri; content:\"/authentication_index.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,2004-0032; reference:nessus,11982; classtype:web-application-activity; sid:2328; rev:15;"
 }

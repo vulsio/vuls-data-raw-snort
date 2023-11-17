@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2116",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP chipcfg.cgi access\"; flow:to_server,established; http_uri; content:\"/chipcfg.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2767; reference:cve,2001-1341; reference:url,archives.neohapsis.com/archives/bugtraq/2001-05/0233.html; classtype:web-application-activity; sid:2116; rev:17;"
+	"GID": "1",
+	"SID": "2116",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP chipcfg.cgi access\"; flow:to_server,established; http_uri; content:\"/chipcfg.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2767; reference:cve,2001-1341; reference:url,archives.neohapsis.com/archives/bugtraq/2001-05/0233.html; classtype:web-application-activity; sid:2116; rev:17;"
 }

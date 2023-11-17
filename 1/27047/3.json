@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27047",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"INDICATOR-COMPROMISE Unknown ?1 redirect\"; flow:to_server,established; content:\"GET /?1 HTTP/1.1\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:bad-unknown; sid:27047; rev:3;"
+	"GID": "1",
+	"SID": "27047",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"INDICATOR-COMPROMISE Unknown ?1 redirect\"; flow:to_server,established; content:\"GET /?1 HTTP/1.1\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:bad-unknown; sid:27047; rev:3;"
 }

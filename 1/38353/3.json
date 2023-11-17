@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38353",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.NetWiredRC variant connection setup\"; flow:to_server,established; content:\"|43 00 00 00 05|\",depth 5; isdataat:!79; metadata:impact_flag red,ruleset community; reference:url,www.circl.lu/pub/tr-23/; classtype:trojan-activity; sid:38353; rev:3;"
+	"GID": "1",
+	"SID": "38353",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.NetWiredRC variant connection setup\"; flow:to_server,established; content:\"|43 00 00 00 05|\",depth 5; isdataat:!79; metadata:impact_flag red,ruleset community; reference:url,www.circl.lu/pub/tr-23/; classtype:trojan-activity; sid:38353; rev:3;"
 }

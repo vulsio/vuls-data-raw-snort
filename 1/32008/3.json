@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32008",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER Fake Delta Ticket HTTP Response phishing attack\"; flow:to_client,established; file_data; content:\"PK\",depth 2; content:\"DeltaTicket_ET-RM-\",distance 0,nocase; content:\".exe\",distance 0,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; reference:url,www.satinfo.es/blog/tag/deltaticket_et-rm-0hj423891156-exe; classtype:trojan-activity; sid:32008; rev:3;"
+	"GID": "1",
+	"SID": "32008",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-OTHER Fake Delta Ticket HTTP Response phishing attack\"; flow:to_client,established; file_data; content:\"PK\",depth 2; content:\"DeltaTicket_ET-RM-\",distance 0,nocase; content:\".exe\",distance 0,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; reference:url,www.satinfo.es/blog/tag/deltaticket_et-rm-0hj423891156-exe; classtype:trojan-activity; sid:32008; rev:3;"
 }

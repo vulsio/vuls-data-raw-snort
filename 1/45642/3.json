@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "45642",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 1025:",
-  "Option": "msg:\"MALWARE-CNC Vbs.Trojan.Agent outbound connection\"; flow:to_server,established; content:\"Content-Length: 0\",fast_pattern,nocase; content:\"User-Agent\"; content:\"|2D 7C 2D|\",within 10; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html; reference:url,virustotal.com/en/file/15f5aaa71bfa3d62fd558a3e88dd5ba26f7638bf2ac653b8d6b8d54dc7e5926b/analysis/; classtype:trojan-activity; sid:45642; rev:3;"
+	"GID": "1",
+	"SID": "45642",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 1025:",
+	"Option": "msg:\"MALWARE-CNC Vbs.Trojan.Agent outbound connection\"; flow:to_server,established; content:\"Content-Length: 0\",fast_pattern,nocase; content:\"User-Agent\"; content:\"|2D 7C 2D|\",within 10; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html; reference:url,virustotal.com/en/file/15f5aaa71bfa3d62fd558a3e88dd5ba26f7638bf2ac653b8d6b8d54dc7e5926b/analysis/; classtype:trojan-activity; sid:45642; rev:3;"
 }

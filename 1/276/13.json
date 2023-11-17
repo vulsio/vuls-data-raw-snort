@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "276",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 7070",
-  "Option": "msg:\"SERVER-OTHER RealNetworks Audio Server denial of service attempt\"; flow:to_server,established; content:\"|FF F4 FF FD 06|\",fast_pattern,nocase; metadata:ruleset community; reference:cve,1999-0271; reference:nessus,10183; classtype:attempted-dos; sid:276; rev:13;"
+	"GID": "1",
+	"SID": "276",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 7070",
+	"Option": "msg:\"SERVER-OTHER RealNetworks Audio Server denial of service attempt\"; flow:to_server,established; content:\"|FF F4 FF FD 06|\",fast_pattern,nocase; metadata:ruleset community; reference:cve,1999-0271; reference:nessus,10183; classtype:attempted-dos; sid:276; rev:13;"
 }

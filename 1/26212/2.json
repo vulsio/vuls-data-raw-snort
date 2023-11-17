@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26212",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Proxyier variant outbound connection\"; flow:to_server,established; content:\"GET /?\",depth 6; content:\"HTTP/1.1|0D 0A|Host|3A 20|update|2E|\",distance 0; http_header; content:\"0b8pre|0D 0A|\",fast_pattern,nocase; content:!\"|0A|Referer\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:26212; rev:2;"
+	"GID": "1",
+	"SID": "26212",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Proxyier variant outbound connection\"; flow:to_server,established; content:\"GET /?\",depth 6; content:\"HTTP/1.1|0D 0A|Host|3A 20|update|2E|\",distance 0; http_header; content:\"0b8pre|0D 0A|\",fast_pattern,nocase; content:!\"|0A|Referer\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:26212; rev:2;"
 }

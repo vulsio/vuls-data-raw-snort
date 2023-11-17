@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26968",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gozi Data Theft POST Data\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"data.php\"; http_client_body; content:\"|0D 0A|URL: \",fast_pattern,nocase; content:\"Content-Disposition: form-data|3B| name=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b78c5c53d3b54acbca2b344a779528f0408258b6ac12899c860d99bf563e883a/analysis/; classtype:trojan-activity; sid:26968; rev:3;"
+	"GID": "1",
+	"SID": "26968",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Gozi Data Theft POST Data\"; flow:to_server,established; http_method; content:\"POST\"; http_uri; content:\"data.php\"; http_client_body; content:\"|0D 0A|URL: \",fast_pattern,nocase; content:\"Content-Disposition: form-data|3B| name=\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b78c5c53d3b54acbca2b344a779528f0408258b6ac12899c860d99bf563e883a/analysis/; classtype:trojan-activity; sid:26968; rev:3;"
 }

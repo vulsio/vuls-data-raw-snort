@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31112",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Bancos password stealing attempt\"; flow:to_server,established; http_client_body; content:\"rotina=plogin&login=\",fast_pattern,nocase; content:\"&senha=\"; content:\"&casa=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/61cbe9b94bca25503c884bb0c9363b95fac6203534e5b23c5887dde91fbd4951/analysis/1384873658; classtype:trojan-activity; sid:31112; rev:2;"
+	"GID": "1",
+	"SID": "31112",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Bancos password stealing attempt\"; flow:to_server,established; http_client_body; content:\"rotina=plogin&login=\",fast_pattern,nocase; content:\"&senha=\"; content:\"&casa=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/61cbe9b94bca25503c884bb0c9363b95fac6203534e5b23c5887dde91fbd4951/analysis/1384873658; classtype:trojan-activity; sid:31112; rev:2;"
 }

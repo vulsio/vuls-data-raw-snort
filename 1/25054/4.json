@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25054",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC ZeroAccess Clickserver callback\"; flow:to_server,established; http_raw_uri; bufferlen:95; pkt_data; content:\" HTTP/1.0|0D 0A|Host:\",fast_pattern,nocase; http_uri; pcre:\"/^\\x2f[A-Z\\d]{83}\\x3d[A-Z\\d]{10}$/i\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:25054; rev:4;"
+	"GID": "1",
+	"SID": "25054",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC ZeroAccess Clickserver callback\"; flow:to_server,established; http_raw_uri; bufferlen:95; pkt_data; content:\" HTTP/1.0|0D 0A|Host:\",fast_pattern,nocase; http_uri; pcre:\"/^\\x2f[A-Z\\d]{83}\\x3d[A-Z\\d]{10}$/i\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:25054; rev:4;"
 }

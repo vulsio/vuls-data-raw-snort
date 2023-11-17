@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1872",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Oracle Dynamic Monitoring Services dms access\"; flow:to_server,established; http_uri; content:\"/dms0\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:nessus,10848; classtype:web-application-activity; sid:1872; rev:11;"
+	"GID": "1",
+	"SID": "1872",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Oracle Dynamic Monitoring Services dms access\"; flow:to_server,established; http_uri; content:\"/dms0\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:nessus,10848; classtype:web-application-activity; sid:1872; rev:11;"
 }

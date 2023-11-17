@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "40763",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Android.Trojan.SpyNote RAT variant getSMS command response\"; flow:to_server,established; content:\"|7C|ge|7C|t|7C|SM|7C|S|7C|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/14eb51b26fa4932fc660daf7e803600bf29a8a46fe3f1d652194bc48e9617bd9/analysis/1478720273/; classtype:trojan-activity; sid:40763; rev:2;"
+	"GID": "1",
+	"SID": "40763",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Android.Trojan.SpyNote RAT variant getSMS command response\"; flow:to_server,established; content:\"|7C|ge|7C|t|7C|SM|7C|S|7C|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/14eb51b26fa4932fc660daf7e803600bf29a8a46fe3f1d652194bc48e9617bd9/analysis/1478720273/; classtype:trojan-activity; sid:40763; rev:2;"
 }

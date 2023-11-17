@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46317",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 23",
-  "Option": "msg:\"SERVER-OTHER NETGEAR TelnetEnable attempt\"; flow:to_server,established; content:\"|C0 F3 AC 2A 40 79 49 0C A3 6E 89 64 73 66 0F 0B|\"; content:\"|5D FC 67 3A 16 DC 00 56 A3 6E 89 64 73 66 0F 0B|\"; metadata:policy max-detect-ips drop,ruleset community; classtype:attempted-admin; sid:46317; rev:3;"
+	"GID": "1",
+	"SID": "46317",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 23",
+	"Option": "msg:\"SERVER-OTHER NETGEAR TelnetEnable attempt\"; flow:to_server,established; content:\"|C0 F3 AC 2A 40 79 49 0C A3 6E 89 64 73 66 0F 0B|\"; content:\"|5D FC 67 3A 16 DC 00 56 A3 6E 89 64 73 66 0F 0B|\"; metadata:policy max-detect-ips drop,ruleset community; classtype:attempted-admin; sid:46317; rev:3;"
 }

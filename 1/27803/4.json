@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27803",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.PRISM variant outbound connection\"; flow:to_server,established; http_uri; content:\"/form.php\",depth 9; http_client_body; content:\"RcpTfdsvoD9KB9O\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/417cb84f48d20120b92530c489e9c3ee9a9deab53fddc0dc153f1034d3c52c58/analysis/1377785686/; classtype:trojan-activity; sid:27803; rev:4;"
+	"GID": "1",
+	"SID": "27803",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.PRISM variant outbound connection\"; flow:to_server,established; http_uri; content:\"/form.php\",depth 9; http_client_body; content:\"RcpTfdsvoD9KB9O\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/417cb84f48d20120b92530c489e9c3ee9a9deab53fddc0dc153f1034d3c52c58/analysis/1377785686/; classtype:trojan-activity; sid:27803; rev:4;"
 }

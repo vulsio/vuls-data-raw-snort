@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "35549",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:10; http_uri; content:\"/order.php\"; http_header; content:\"|0D 0A|User-Agent: Mozilla/4.0|0D 0A|\"; content:\"|0D 0A|Content-Type: application/octet-stream|0D 0A|\"; http_client_body; content:\"|A0 CD 37 A4 5B|\",depth 5,fast_pattern; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a7009a6ed3ff0191e3c8e7f8b27b9b16afe2a82d1eb131ecd27d8f8a5b17e819/analysis/1433243075/; classtype:trojan-activity; sid:35549; rev:2;"
+	"GID": "1",
+	"SID": "35549",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:10; http_uri; content:\"/order.php\"; http_header; content:\"|0D 0A|User-Agent: Mozilla/4.0|0D 0A|\"; content:\"|0D 0A|Content-Type: application/octet-stream|0D 0A|\"; http_client_body; content:\"|A0 CD 37 A4 5B|\",depth 5,fast_pattern; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a7009a6ed3ff0191e3c8e7f8b27b9b16afe2a82d1eb131ecd27d8f8a5b17e819/analysis/1433243075/; classtype:trojan-activity; sid:35549; rev:2;"
 }

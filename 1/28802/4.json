@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28802",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Bancos outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:17<=>27; http_header; content:\"ip-who-is.com|0D 0A|\",fast_pattern,nocase; http_uri; content:\"/locate-ip/\",depth 11; http_header; content:\"User-Agent: Mozilla/3.0",
-  "Option": "compatible|3B| Indy Library)\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/26c60976776d212aefc9863efde914059dd2847291084c158ce51655fc1e48d0/analysis/1382620137/; classtype:trojan-activity; sid:28802; rev:4;"
+	"GID": "1",
+	"SID": "28802",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Bancos outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:17<=>27; http_header; content:\"ip-who-is.com|0D 0A|\",fast_pattern,nocase; http_uri; content:\"/locate-ip/\",depth 11; http_header; content:\"User-Agent: Mozilla/3.0",
+	"Option": "compatible|3B| Indy Library)\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/26c60976776d212aefc9863efde914059dd2847291084c158ce51655fc1e48d0/analysis/1382620137/; classtype:trojan-activity; sid:28802; rev:4;"
 }

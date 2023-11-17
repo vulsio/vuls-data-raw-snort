@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25271",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Buzus variant outbound connection\"; flow:to_server,established; http_uri; content:\"/default.aspx?ver=\"; content:\"&uid=\",distance 0; http_header; content:\"|3B 20|MRA|20|5.10|20|\"; http_uri; pcre:\"/\\x26uid\\x3d[a-f0-9]{16}($|\\x26)/\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:25271; rev:4;"
+	"GID": "1",
+	"SID": "25271",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Buzus variant outbound connection\"; flow:to_server,established; http_uri; content:\"/default.aspx?ver=\"; content:\"&uid=\",distance 0; http_header; content:\"|3B 20|MRA|20|5.10|20|\"; http_uri; pcre:\"/\\x26uid\\x3d[a-f0-9]{16}($|\\x26)/\"; metadata:ruleset community; service:http; classtype:trojan-activity; sid:25271; rev:4;"
 }

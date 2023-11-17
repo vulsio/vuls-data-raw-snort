@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "614",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET 31790 -> $HOME_NET 31789",
-  "Option": "msg:\"MALWARE-BACKDOOR hack-a-tack attempt\"; flow:stateless; flags:A+; content:\"A\",depth 1; metadata:ruleset community; classtype:attempted-recon; sid:614; rev:13;"
+	"GID": "1",
+	"SID": "614",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET 31790 -> $HOME_NET 31789",
+	"Option": "msg:\"MALWARE-BACKDOOR hack-a-tack attempt\"; flow:stateless; flags:A+; content:\"A\",depth 1; metadata:ruleset community; classtype:attempted-recon; sid:614; rev:13;"
 }

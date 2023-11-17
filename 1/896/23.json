@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "896",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP way-board access\"; flow:to_server,established; http_uri; content:\"/way-board\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2370; reference:cve,2001-0214; reference:nessus,10610; classtype:web-application-activity; sid:896; rev:23;"
+	"GID": "1",
+	"SID": "896",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP way-board access\"; flow:to_server,established; http_uri; content:\"/way-board\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2370; reference:cve,2001-0214; reference:nessus,10610; classtype:web-application-activity; sid:896; rev:23;"
 }

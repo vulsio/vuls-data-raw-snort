@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21724",
-  "Rev": "12",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"FILE-IDENTIFY ANI file download request\"; flow:to_server,established; http_uri; content:\".ani\",fast_pattern,nocase; pcre:\"/\\x2eani([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.ani; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; classtype:misc-activity; sid:21724; rev:12;"
+	"GID": "1",
+	"SID": "21724",
+	"Rev": "12",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"FILE-IDENTIFY ANI file download request\"; flow:to_server,established; http_uri; content:\".ani\",fast_pattern,nocase; pcre:\"/\\x2eani([\\?\\x5c\\x2f]|$)/ims\"; flowbits:set,file.ani; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:http; classtype:misc-activity; sid:21724; rev:12;"
 }

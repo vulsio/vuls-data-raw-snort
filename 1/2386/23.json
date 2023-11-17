@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2386",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS NTLM ASN1 vulnerability scan attempt\"; flow:to_server,established; http_header; content:\"Authorization|3A|\",nocase; content:\"Negotiate\",within 20,nocase; content:\"YIQAAABiBoMAAAYrBgEFBQKgggBTMIFQoA4wDAYKKwYBBAGCNwICCqM\",within 100; metadata:ruleset community; service:http; reference:bugtraq,9633; reference:bugtraq,9635; reference:cve,2003-0818; reference:nessus,12052; reference:nessus,12055; reference:nessus,12065; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-007; classtype:attempted-dos; sid:2386; rev:23;"
+	"GID": "1",
+	"SID": "2386",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS NTLM ASN1 vulnerability scan attempt\"; flow:to_server,established; http_header; content:\"Authorization|3A|\",nocase; content:\"Negotiate\",within 20,nocase; content:\"YIQAAABiBoMAAAYrBgEFBQKgggBTMIFQoA4wDAYKKwYBBAGCNwICCqM\",within 100; metadata:ruleset community; service:http; reference:bugtraq,9633; reference:bugtraq,9635; reference:cve,2003-0818; reference:nessus,12052; reference:nessus,12055; reference:nessus,12065; reference:url,technet.microsoft.com/en-us/security/bulletin/MS04-007; classtype:attempted-dos; sid:2386; rev:23;"
 }

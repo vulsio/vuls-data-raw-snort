@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1743",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Blahz-DNS dostuff.php access\"; flow:to_server,established; http_uri; content:\"/dostuff.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4618; reference:cve,2002-0599; classtype:web-application-activity; sid:1743; rev:17;"
+	"GID": "1",
+	"SID": "1743",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Blahz-DNS dostuff.php access\"; flow:to_server,established; http_uri; content:\"/dostuff.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4618; reference:cve,2002-0599; classtype:web-application-activity; sid:1743; rev:17;"
 }

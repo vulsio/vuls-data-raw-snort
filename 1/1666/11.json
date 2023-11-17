@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1666",
-  "Rev": "11",
-  "Header": "alert tcp $HTTP_SERVERS $HTTP_PORTS -> $EXTERNAL_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE index of /cgi-bin/ response\"; flow:to_client,established; file_data; content:\"Index of /cgi-bin/\",nocase; metadata:ruleset community; service:http; reference:nessus,10039; classtype:bad-unknown; sid:1666; rev:11;"
+	"GID": "1",
+	"SID": "1666",
+	"Rev": "11",
+	"Header": "alert tcp $HTTP_SERVERS $HTTP_PORTS -> $EXTERNAL_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE index of /cgi-bin/ response\"; flow:to_client,established; file_data; content:\"Index of /cgi-bin/\",nocase; metadata:ruleset community; service:http; reference:nessus,10039; classtype:bad-unknown; sid:1666; rev:11;"
 }

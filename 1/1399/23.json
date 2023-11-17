@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1399",
-  "Rev": "23",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP PHP-Nuke remote file include attempt\"; flow:to_server,established; http_uri; content:\"/index.php\",fast_pattern,nocase; content:\"file=\"; pcre:\"/file=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,3889; reference:cve,2002-0206; classtype:web-application-attack; sid:1399; rev:23;"
+	"GID": "1",
+	"SID": "1399",
+	"Rev": "23",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP PHP-Nuke remote file include attempt\"; flow:to_server,established; http_uri; content:\"/index.php\",fast_pattern,nocase; content:\"file=\"; pcre:\"/file=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,3889; reference:cve,2002-0206; classtype:web-application-attack; sid:1399; rev:23;"
 }

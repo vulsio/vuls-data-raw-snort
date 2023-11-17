@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1640",
-  "Rev": "13",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 6666:7000",
-  "Option": "msg:\"POLICY-SOCIAL IRC DCC chat request\"; flow:to_server,established; content:\"PRIVMSG \",nocase; content:\" |3A|.DCC CHAT chat\",distance 0,fast_pattern,nocase; metadata:ruleset community; classtype:policy-violation; sid:1640; rev:13;"
+	"GID": "1",
+	"SID": "1640",
+	"Rev": "13",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 6666:7000",
+	"Option": "msg:\"POLICY-SOCIAL IRC DCC chat request\"; flow:to_server,established; content:\"PRIVMSG \",nocase; content:\" |3A|.DCC CHAT chat\",distance 0,fast_pattern,nocase; metadata:ruleset community; classtype:policy-violation; sid:1640; rev:13;"
 }

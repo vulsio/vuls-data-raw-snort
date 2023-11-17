@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29399",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"POLICY-SPAM Potential phishing attack - .zip statement filename download with .exe name within .zip the same \"; flow:to_client,established; http_header; content:\"statement\",fast_pattern,nocase; content:\".zip\"; pcre:\"/\\sfilename=[a-z0-9]{0,20}statement[a-z0-9]{0,20}\\.zip/i\"; file_data; content:\"PK\",depth 2; content:\".exe\",within 50; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; classtype:trojan-activity; sid:29399; rev:4;"
+	"GID": "1",
+	"SID": "29399",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"POLICY-SPAM Potential phishing attack - .zip statement filename download with .exe name within .zip the same \"; flow:to_client,established; http_header; content:\"statement\",fast_pattern,nocase; content:\".zip\"; pcre:\"/\\sfilename=[a-z0-9]{0,20}statement[a-z0-9]{0,20}\\.zip/i\"; file_data; content:\"PK\",depth 2; content:\".exe\",within 50; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1192; classtype:trojan-activity; sid:29399; rev:4;"
 }

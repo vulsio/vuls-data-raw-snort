@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1654",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP cart32.exe access\"; flow:to_server,established; http_uri; content:\"/cart32.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1153; reference:nessus,10389; classtype:web-application-activity; sid:1654; rev:19;"
+	"GID": "1",
+	"SID": "1654",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP cart32.exe access\"; flow:to_server,established; http_uri; content:\"/cart32.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1153; reference:nessus,10389; classtype:web-application-activity; sid:1654; rev:19;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27045",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Blocker Download\"; flow:to_client,established; flowbits:isset,file.exe; http_header; content:\"filename=\"; content:\"security_cleaner.exe\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/6d4d93f68aaf783a2526d920fa3c070d061fd56853669a72a10b2c2232008582/analysis/1372086855/; classtype:trojan-activity; sid:27045; rev:3;"
+	"GID": "1",
+	"SID": "27045",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Blocker Download\"; flow:to_client,established; flowbits:isset,file.exe; http_header; content:\"filename=\"; content:\"security_cleaner.exe\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/6d4d93f68aaf783a2526d920fa3c070d061fd56853669a72a10b2c2232008582/analysis/1372086855/; classtype:trojan-activity; sid:27045; rev:3;"
 }

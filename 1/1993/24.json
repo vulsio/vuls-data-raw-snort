@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1993",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
-  "Option": "msg:\"PROTOCOL-IMAP login literal buffer overflow attempt\"; flow:to_server,established; pcre:\"/\\sLOGIN\\s[^\\n]*?\\{\\s*(-|[3-9][0-9]{2}|2[6-9][0-9]|25[7-9]|[0-9]{4})/ims\"; content:\"LOGIN\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:imap; reference:bugtraq,14718; reference:bugtraq,21724; reference:bugtraq,23810; reference:bugtraq,6298; reference:cve,2002-1580; reference:cve,2005-1758; reference:cve,2006-6424; reference:cve,2007-0221; reference:nessus,12532; classtype:misc-attack; sid:1993; rev:24;"
+	"GID": "1",
+	"SID": "1993",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 143",
+	"Option": "msg:\"PROTOCOL-IMAP login literal buffer overflow attempt\"; flow:to_server,established; pcre:\"/\\sLOGIN\\s[^\\n]*?\\{\\s*(-|[3-9][0-9]{2}|2[6-9][0-9]|25[7-9]|[0-9]{4})/ims\"; content:\"LOGIN\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:imap; reference:bugtraq,14718; reference:bugtraq,21724; reference:bugtraq,23810; reference:bugtraq,6298; reference:cve,2002-1580; reference:cve,2005-1758; reference:cve,2006-6424; reference:cve,2007-0221; reference:nessus,12532; classtype:misc-attack; sid:1993; rev:24;"
 }

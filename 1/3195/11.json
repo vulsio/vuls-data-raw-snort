@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3195",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 137",
-  "Option": "msg:\"OS-WINDOWS name query overflow attempt TCP\"; flow:to_server,established; byte_test:1,&,64,2; content:\" \",offset 12; isdataat:56,relative; metadata:policy max-detect-ips drop,ruleset community; service:netbios-ns; reference:bugtraq,9624; reference:cve,2003-0825; reference:nessus,15912; reference:url,technet.microsoft.com/en-us/security/bulletin/ms04-006; classtype:attempted-admin; sid:3195; rev:11;"
+	"GID": "1",
+	"SID": "3195",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 137",
+	"Option": "msg:\"OS-WINDOWS name query overflow attempt TCP\"; flow:to_server,established; byte_test:1,&,64,2; content:\" \",offset 12; isdataat:56,relative; metadata:policy max-detect-ips drop,ruleset community; service:netbios-ns; reference:bugtraq,9624; reference:cve,2003-0825; reference:nessus,15912; reference:url,technet.microsoft.com/en-us/security/bulletin/ms04-006; classtype:attempted-admin; sid:3195; rev:11;"
 }

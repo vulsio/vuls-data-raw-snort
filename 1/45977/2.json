@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "45977",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET 445 -> any any",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows SMB kernel heap memory leak attempt\"; flow:to_client,established; content:\"|FF|SMB|A0|\",depth 5,offset 4; isdataat:127; content:\"|FF FF FF FF|\",within 4,distance 123; byte_extract:4,28,ids; byte_test:4,=,ids,174,relative; byte_extract:2,0,uid,relative; byte_test:2,=,uid,172,relative; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:netbios-ssn; reference:cve,2017-0143; reference:cve,2017-0146; reference:cve,2017-0147; reference:url,technet.microsoft.com/en-us/security/bulletin/MS17-010; classtype:attempted-recon; sid:45977; rev:2;"
+	"GID": "1",
+	"SID": "45977",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET 445 -> any any",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows SMB kernel heap memory leak attempt\"; flow:to_client,established; content:\"|FF|SMB|A0|\",depth 5,offset 4; isdataat:127; content:\"|FF FF FF FF|\",within 4,distance 123; byte_extract:4,28,ids; byte_test:4,=,ids,174,relative; byte_extract:2,0,uid,relative; byte_test:2,=,uid,172,relative; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:netbios-ssn; reference:cve,2017-0143; reference:cve,2017-0146; reference:cve,2017-0147; reference:url,technet.microsoft.com/en-us/security/bulletin/MS17-010; classtype:attempted-recon; sid:45977; rev:2;"
 }

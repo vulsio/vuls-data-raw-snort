@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29665",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Graftor variant outbound connection\"; flow:to_server,established; http_client_body; content:\"&bolausado\",fast_pattern,nocase; content:\"rotina=\",depth 7; content:\"&casa=\",distance 0; content:\"&idcliente\",distance 0; content:\"&outro=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9ce3d15cbb5bc8cd42570f44ab4eb8f6332c5d0f28291d295883bf2923c01d4b/analysis/; classtype:trojan-activity; sid:29665; rev:2;"
+	"GID": "1",
+	"SID": "29665",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Graftor variant outbound connection\"; flow:to_server,established; http_client_body; content:\"&bolausado\",fast_pattern,nocase; content:\"rotina=\",depth 7; content:\"&casa=\",distance 0; content:\"&idcliente\",distance 0; content:\"&outro=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/9ce3d15cbb5bc8cd42570f44ab4eb8f6332c5d0f28291d295883bf2923c01d4b/analysis/; classtype:trojan-activity; sid:29665; rev:2;"
 }

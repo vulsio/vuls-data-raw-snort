@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "512",
-  "Rev": "9",
-  "Header": "alert tcp $HOME_NET 5631:5632 -> $EXTERNAL_NET any",
-  "Option": "msg:\"PUA-OTHER PCAnywhere Failed Login\"; flow:to_client,established; content:\"Invalid login\",depth 16; metadata:ruleset community; classtype:unsuccessful-user; sid:512; rev:9;"
+	"GID": "1",
+	"SID": "512",
+	"Rev": "9",
+	"Header": "alert tcp $HOME_NET 5631:5632 -> $EXTERNAL_NET any",
+	"Option": "msg:\"PUA-OTHER PCAnywhere Failed Login\"; flow:to_client,established; content:\"Invalid login\",depth 16; metadata:ruleset community; classtype:unsuccessful-user; sid:512; rev:9;"
 }

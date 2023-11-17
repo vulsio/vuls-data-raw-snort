@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33282",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Upatre variant outbound connection\"; flow:to_server,established; http_uri; content:\"/js/jquery-\",fast_pattern; content:\".js?\",within 15,distance 1; pcre:\"/\\x2ejs\\x3f[a-zA-Z0-9]{9,20}=Mozilla\\x2f/Gi\"; http_header; content:\"Referer|3A 20|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/7a06565bb9d49aa92084b5bc32cf59d04dc1d60d63827099ca7c14063f54967a/analysis/1421616162/; classtype:trojan-activity; sid:33282; rev:3;"
+	"GID": "1",
+	"SID": "33282",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Upatre variant outbound connection\"; flow:to_server,established; http_uri; content:\"/js/jquery-\",fast_pattern; content:\".js?\",within 15,distance 1; pcre:\"/\\x2ejs\\x3f[a-zA-Z0-9]{9,20}=Mozilla\\x2f/Gi\"; http_header; content:\"Referer|3A 20|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/7a06565bb9d49aa92084b5bc32cf59d04dc1d60d63827099ca7c14063f54967a/analysis/1421616162/; classtype:trojan-activity; sid:33282; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "58728",
-  "Rev": "5",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Apache Log4j logging remote code execution attempt\"; flow:to_server,established; http_client_body; content:\"${lower:\",fast_pattern,nocase; pcre:\"/\\x24{(\\x24{(upper|lower):j}|j)(\\x24{(upper|lower):n}|n)(\\x24{(upper|lower):d}|d)(\\x24{(upper|lower):i}|i)(\\x24{(upper|lower)::}|:)/i\"; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2021-44228; reference:cve,2021-44832; reference:cve,2021-45046; reference:cve,2021-45105; classtype:attempted-user; sid:58728; rev:5;"
+	"GID": "1",
+	"SID": "58728",
+	"Rev": "5",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Apache Log4j logging remote code execution attempt\"; flow:to_server,established; http_client_body; content:\"${lower:\",fast_pattern,nocase; pcre:\"/\\x24{(\\x24{(upper|lower):j}|j)(\\x24{(upper|lower):n}|n)(\\x24{(upper|lower):d}|d)(\\x24{(upper|lower):i}|i)(\\x24{(upper|lower)::}|:)/i\"; metadata:policy balanced-ips drop,policy connectivity-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2021-44228; reference:cve,2021-44832; reference:cve,2021-45046; reference:cve,2021-45105; classtype:attempted-user; sid:58728; rev:5;"
 }

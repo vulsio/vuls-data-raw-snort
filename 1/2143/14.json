@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2143",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP b2 cafelog gm-2-b2.php remote file include attempt\"; flow:to_server,established; http_uri; content:\"/gm-2-b2.php\",fast_pattern,nocase; pkt_data; content:\"b2inc=\"; pcre:\"/b2inc=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:nessus,11667; classtype:web-application-attack; sid:2143; rev:14;"
+	"GID": "1",
+	"SID": "2143",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP b2 cafelog gm-2-b2.php remote file include attempt\"; flow:to_server,established; http_uri; content:\"/gm-2-b2.php\",fast_pattern,nocase; pkt_data; content:\"b2inc=\"; pcre:\"/b2inc=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:nessus,11667; classtype:web-application-attack; sid:2143; rev:14;"
 }

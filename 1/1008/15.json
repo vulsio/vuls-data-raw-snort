@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1008",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS del attempt\"; flow:to_server,established; content:\"&del+/s+c|3A 5C|*.*\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1008; rev:15;"
+	"GID": "1",
+	"SID": "1008",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS del attempt\"; flow:to_server,established; content:\"&del+/s+c|3A 5C|*.*\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1008; rev:15;"
 }

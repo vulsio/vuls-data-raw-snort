@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2267",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Sendmail MAIL FROM prescan too many addresses overflow\"; flow:to_server,established; content:\"MAIL FROM|3A|\",fast_pattern,nocase; pcre:\"/^MAIL FROM\\x3a\\s*[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?</ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,6991; reference:cve,2002-1337; classtype:attempted-admin; sid:2267; rev:15;"
+	"GID": "1",
+	"SID": "2267",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL Sendmail MAIL FROM prescan too many addresses overflow\"; flow:to_server,established; content:\"MAIL FROM|3A|\",fast_pattern,nocase; pcre:\"/^MAIL FROM\\x3a\\s*[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?<[^\\n]*?</ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,6991; reference:cve,2002-1337; classtype:attempted-admin; sid:2267; rev:15;"
 }

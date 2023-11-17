@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1434",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP .bash_history access\"; flow:to_server,established; http_uri; content:\"/.bash_history\"; metadata:ruleset community; service:http; reference:bugtraq,337; reference:cve,1999-0408; reference:url,attack.mitre.org/techniques/T1139; classtype:web-application-attack; sid:1434; rev:15;"
+	"GID": "1",
+	"SID": "1434",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP .bash_history access\"; flow:to_server,established; http_uri; content:\"/.bash_history\"; metadata:ruleset community; service:http; reference:bugtraq,337; reference:cve,1999-0408; reference:url,attack.mitre.org/techniques/T1139; classtype:web-application-attack; sid:1434; rev:15;"
 }

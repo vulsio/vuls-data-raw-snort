@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "852",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP wguest.exe access\"; flow:to_server,established; http_uri; content:\"/wguest.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2024; reference:cve,1999-0287; reference:cve,1999-0467; classtype:attempted-recon; sid:852; rev:22;"
+	"GID": "1",
+	"SID": "852",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP wguest.exe access\"; flow:to_server,established; http_uri; content:\"/wguest.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2024; reference:cve,1999-0287; reference:cve,1999-0467; classtype:attempted-recon; sid:852; rev:22;"
 }

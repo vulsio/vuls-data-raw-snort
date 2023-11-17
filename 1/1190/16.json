@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1190",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Netscape Enterprise Server directory view\"; flow:to_server,established; http_uri; content:\"?wp-uncheckout\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1063; reference:cve,2000-0236; classtype:attempted-recon; sid:1190; rev:16;"
+	"GID": "1",
+	"SID": "1190",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Netscape Enterprise Server directory view\"; flow:to_server,established; http_uri; content:\"?wp-uncheckout\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1063; reference:cve,2000-0236; classtype:attempted-recon; sid:1190; rev:16;"
 }

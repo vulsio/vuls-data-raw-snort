@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2138",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP logicworks.ini access\"; flow:to_server,established; http_uri; content:\"/logicworks.ini\"; metadata:ruleset community; service:http; reference:bugtraq,6996; reference:cve,2003-1383; reference:nessus,11639; classtype:web-application-activity; sid:2138; rev:10;"
+	"GID": "1",
+	"SID": "2138",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP logicworks.ini access\"; flow:to_server,established; http_uri; content:\"/logicworks.ini\"; metadata:ruleset community; service:http; reference:bugtraq,6996; reference:cve,2003-1383; reference:nessus,11639; classtype:web-application-activity; sid:2138; rev:10;"
 }

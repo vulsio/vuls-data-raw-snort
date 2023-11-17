@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26715",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.BlackRev rev 3 outbound traffic\"; flow:to_server,established; http_uri; content:\"gate.php|3F|id=\"; http_header; content:\"User-Agent|3A| Mozilla/4.0",
-  "Option": "compatible|3B| SEObot)|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/gate\\x2ephp\\x3fid=[a-z]{15}/\"; metadata:ruleset community; service:http; reference:url,ddos.arbornetworks.com/2013/05/the-revolution-will-be-written-in-delphi; classtype:trojan-activity; sid:26715; rev:3;"
+	"GID": "1",
+	"SID": "26715",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.BlackRev rev 3 outbound traffic\"; flow:to_server,established; http_uri; content:\"gate.php|3F|id=\"; http_header; content:\"User-Agent|3A| Mozilla/4.0",
+	"Option": "compatible|3B| SEObot)|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/gate\\x2ephp\\x3fid=[a-z]{15}/\"; metadata:ruleset community; service:http; reference:url,ddos.arbornetworks.com/2013/05/the-revolution-will-be-written-in-delphi; classtype:trojan-activity; sid:26715; rev:3;"
 }

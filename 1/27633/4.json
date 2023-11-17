@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27633",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Worm.Silly variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:7; http_uri; content:\"/ul.htm\",fast_pattern,nocase; http_header; content:\"|3B| MSIE 6.0|3B 20|\"; content:!\"Accept-Language: \"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0ddd3488b618b17437413a9d579aa111f0a2ba302262d0a9b0d2832718a93524/analysis/; classtype:trojan-activity; sid:27633; rev:4;"
+	"GID": "1",
+	"SID": "27633",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Worm.Silly variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:7; http_uri; content:\"/ul.htm\",fast_pattern,nocase; http_header; content:\"|3B| MSIE 6.0|3B 20|\"; content:!\"Accept-Language: \"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0ddd3488b618b17437413a9d579aa111f0a2ba302262d0a9b0d2832718a93524/analysis/; classtype:trojan-activity; sid:27633; rev:4;"
 }

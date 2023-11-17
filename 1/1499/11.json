@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1499",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8888",
-  "Option": "msg:\"SERVER-WEBAPP SiteScope Service access\"; flow:to_server,established; content:\"/SiteScope/cgi/go.exe/SiteScope\"; metadata:ruleset community; service:http; reference:nessus,10778; classtype:web-application-activity; sid:1499; rev:11;"
+	"GID": "1",
+	"SID": "1499",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 8888",
+	"Option": "msg:\"SERVER-WEBAPP SiteScope Service access\"; flow:to_server,established; content:\"/SiteScope/cgi/go.exe/SiteScope\"; metadata:ruleset community; service:http; reference:nessus,10778; classtype:web-application-activity; sid:1499; rev:11;"
 }

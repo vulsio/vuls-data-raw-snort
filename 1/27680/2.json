@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27680",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:>95; pkt_data; content:\".php HTTP/1.1|0D 0A|User-Agent: Opera/\",fast_pattern,nocase; http_uri; pcre:\"/(?=^[a-z\\x2d\\x5f\\x2f]{95,}\\.php$).*?[a-z]{2,48}\\x2d[a-z]{2,48}\\x2d[a-z]{2,48}\\x2d[a-z]{2,48}\\x2d?\\.php$/\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27680; rev:2;"
+	"GID": "1",
+	"SID": "27680",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:>95; pkt_data; content:\".php HTTP/1.1|0D 0A|User-Agent: Opera/\",fast_pattern,nocase; http_uri; pcre:\"/(?=^[a-z\\x2d\\x5f\\x2f]{95,}\\.php$).*?[a-z]{2,48}\\x2d[a-z]{2,48}\\x2d[a-z]{2,48}\\x2d[a-z]{2,48}\\x2d?\\.php$/\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27680; rev:2;"
 }

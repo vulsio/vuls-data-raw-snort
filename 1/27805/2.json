@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27805",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Bisonha variant outbound connection\"; flow:to_server,established; content:\"GET /3001\",fast_pattern; isdataat:260,relative; content:\"0000000000000000000000000\"; pcre:\"/\\/3001[0-9A-F]{262,304}/\"; metadata:impact_flag red,ruleset community; service:ssl; reference:url,bl0g.cedricpernet.net/post/2013/08/29/APT-More-on-G20Summit-Espionage-Operation; reference:url,www.virustotal.com/en/file/f0d8834fb0e2d3c6e7c1fde7c6bcf9171e5deca119338e4fac21568e0bb70ab7/analysis/; classtype:trojan-activity; sid:27805; rev:2;"
+	"GID": "1",
+	"SID": "27805",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Bisonha variant outbound connection\"; flow:to_server,established; content:\"GET /3001\",fast_pattern; isdataat:260,relative; content:\"0000000000000000000000000\"; pcre:\"/\\/3001[0-9A-F]{262,304}/\"; metadata:impact_flag red,ruleset community; service:ssl; reference:url,bl0g.cedricpernet.net/post/2013/08/29/APT-More-on-G20Summit-Espionage-Operation; reference:url,www.virustotal.com/en/file/f0d8834fb0e2d3c6e7c1fde7c6bcf9171e5deca119338e4fac21568e0bb70ab7/analysis/; classtype:trojan-activity; sid:27805; rev:2;"
 }

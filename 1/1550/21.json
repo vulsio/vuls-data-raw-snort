@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1550",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL ETRN overflow attempt\"; flow:to_server,established; content:\"ETRN\",nocase; isdataat:500,relative; pcre:\"/^ETRN\\s[^\\n]{500}/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,1297; reference:bugtraq,7515; reference:cve,2000-0490; reference:nessus,10438; classtype:attempted-admin; sid:1550; rev:21;"
+	"GID": "1",
+	"SID": "1550",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL ETRN overflow attempt\"; flow:to_server,established; content:\"ETRN\",nocase; isdataat:500,relative; pcre:\"/^ETRN\\s[^\\n]{500}/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,1297; reference:bugtraq,7515; reference:cve,2000-0490; reference:nessus,10438; classtype:attempted-admin; sid:1550; rev:21;"
 }

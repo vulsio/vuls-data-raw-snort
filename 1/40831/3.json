@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "40831",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Backdoor.Houdini variant initial outbound connection\"; flow:to_server,established; content:\"new_houdini|0D 0A|\",depth 13,offset 4; metadata:impact_flag red,ruleset community; classtype:trojan-activity; sid:40831; rev:3;"
+	"GID": "1",
+	"SID": "40831",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Backdoor.Houdini variant initial outbound connection\"; flow:to_server,established; content:\"new_houdini|0D 0A|\",depth 13,offset 4; metadata:impact_flag red,ruleset community; classtype:trojan-activity; sid:40831; rev:3;"
 }

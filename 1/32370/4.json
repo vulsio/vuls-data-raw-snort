@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32370",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-OTHER AOL Instant Messenger goaway message buffer overflow attempt\"; flow:to_server,established; file_data; content:\"aim|3A|goaway?message=\",nocase; isdataat:500,relative; pcre:\"/\\x22aim\\x3Agoaway\\x3Fmessage\\x3D[^\\x22]{500}|\\x27aim\\x3Agoaway\\x3Fmessage\\x3D[^\\x27]{500}|aim\\x3Agoaway\\x3Fmessage\\x3D[^\\s]{500}/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:bugtraq,10889; reference:cve,2004-0636; classtype:misc-attack; sid:32370; rev:4;"
+	"GID": "1",
+	"SID": "32370",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-OTHER AOL Instant Messenger goaway message buffer overflow attempt\"; flow:to_server,established; file_data; content:\"aim|3A|goaway?message=\",nocase; isdataat:500,relative; pcre:\"/\\x22aim\\x3Agoaway\\x3Fmessage\\x3D[^\\x22]{500}|\\x27aim\\x3Agoaway\\x3Fmessage\\x3D[^\\x27]{500}|aim\\x3Agoaway\\x3Fmessage\\x3D[^\\s]{500}/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:bugtraq,10889; reference:cve,2004-0636; classtype:misc-attack; sid:32370; rev:4;"
 }

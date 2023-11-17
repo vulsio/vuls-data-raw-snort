@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2319",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1655",
-  "Option": "msg:\"SERVER-OTHER ebola PASS overflow attempt\"; flow:to_server,established; content:\"PASS\",fast_pattern,nocase; pcre:\"/^PASS\\s[^\\n]{49}/ims\"; metadata:ruleset community; reference:bugtraq,9156; classtype:attempted-admin; sid:2319; rev:7;"
+	"GID": "1",
+	"SID": "2319",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1655",
+	"Option": "msg:\"SERVER-OTHER ebola PASS overflow attempt\"; flow:to_server,established; content:\"PASS\",fast_pattern,nocase; pcre:\"/^PASS\\s[^\\n]{49}/ims\"; metadata:ruleset community; reference:bugtraq,9156; classtype:attempted-admin; sid:2319; rev:7;"
 }

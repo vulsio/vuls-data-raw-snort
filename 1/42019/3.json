@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "42019",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string - Andr.Trojan.Agent\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Ray-Downer|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a3a849ef491a40c0fc1cb4c5e4769447da27ca02552a5fd270b9c2b8dbc0ff70/analysis/; classtype:trojan-activity; sid:42019; rev:3;"
+	"GID": "1",
+	"SID": "42019",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent string - Andr.Trojan.Agent\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Ray-Downer|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/a3a849ef491a40c0fc1cb4c5e4769447da27ca02552a5fd270b9c2b8dbc0ff70/analysis/; classtype:trojan-activity; sid:42019; rev:3;"
 }

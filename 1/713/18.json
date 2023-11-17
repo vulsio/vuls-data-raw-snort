@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "713",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
-  "Option": "msg:\"PROTOCOL-TELNET livingston DOS\"; flow:to_server,established; raw_data; content:\"|FF F3 FF F3 FF F3 FF F3 FF F3|\",fast_pattern,nocase; metadata:ruleset community; service:telnet; reference:bugtraq,2225; reference:cve,1999-0218; classtype:attempted-dos; sid:713; rev:18;"
+	"GID": "1",
+	"SID": "713",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+	"Option": "msg:\"PROTOCOL-TELNET livingston DOS\"; flow:to_server,established; raw_data; content:\"|FF F3 FF F3 FF F3 FF F3 FF F3|\",fast_pattern,nocase; metadata:ruleset community; service:telnet; reference:bugtraq,2225; reference:cve,1999-0218; classtype:attempted-dos; sid:713; rev:18;"
 }

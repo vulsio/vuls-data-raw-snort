@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1539",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP /cgi-bin/ls access\"; flow:to_server,established; http_uri; content:\"/cgi-bin/ls\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,936; reference:cve,2000-0079; reference:nessus,10037; classtype:web-application-activity; sid:1539; rev:19;"
+	"GID": "1",
+	"SID": "1539",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP /cgi-bin/ls access\"; flow:to_server,established; http_uri; content:\"/cgi-bin/ls\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,936; reference:cve,2000-0079; reference:nessus,10037; classtype:web-application-activity; sid:1539; rev:19;"
 }

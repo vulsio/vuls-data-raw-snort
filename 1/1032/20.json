@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1032",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS showcode access\"; flow:to_server,established; http_uri; content:\"/Sites/Knowledge/Membership/Inspired/ViewCode.asp\",nocase; metadata:ruleset community; service:http; reference:cve,1999-0737; reference:nessus,10576; reference:url,technet.microsoft.com/en-us/security/bulletin/ms99-013; classtype:web-application-activity; sid:1032; rev:20;"
+	"GID": "1",
+	"SID": "1032",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS showcode access\"; flow:to_server,established; http_uri; content:\"/Sites/Knowledge/Membership/Inspired/ViewCode.asp\",nocase; metadata:ruleset community; service:http; reference:cve,1999-0737; reference:nessus,10576; reference:url,technet.microsoft.com/en-us/security/bulletin/ms99-013; classtype:web-application-activity; sid:1032; rev:20;"
 }

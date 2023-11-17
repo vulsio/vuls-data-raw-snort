@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1150",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Domino catalog.nsf access\"; flow:to_server,established; http_uri; content:\"/catalog.nsf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10629; classtype:attempted-recon; sid:1150; rev:16;"
+	"GID": "1",
+	"SID": "1150",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Domino catalog.nsf access\"; flow:to_server,established; http_uri; content:\"/catalog.nsf\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10629; classtype:attempted-recon; sid:1150; rev:16;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28538",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [$HTTP_PORTS,443] ( msg:\"MALWARE-CNC Win.Trojan.Asprox/Kuluoz variant connection\"; flow:to_server,established; content:\"User-Agent: Mozilla/5.0",
-  "Option": "Windows NT 6.1|3B| WOW64|3B| rv:23.0) Gecko/20100101 Firefox/23.0\"; content:\"Content-Disposition: form-data|3B| name=|22|key|22 3B| filename=|22|key.bin|22|\",fast_pattern,nocase; content:\"Content-Disposition: form-data|3B| name=|22|data|22 3B| filename=|22|data.bin|22|\"; content:\"Content-Type: multipart/form-data|3B| boundary=\"; pcre:\"/POST\\s\\/[A-F0-9]{42}\\s/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,stopmalvertising.com/malware-reports/analysis-of-asprox-and-its-new-encryption-scheme.html; reference:url,www.virustotal.com/en/file/929b62b673db55f443a36fa2de184a2be03788bbe714fc586b82a19444727a54/analysis/; classtype:trojan-activity; sid:28538; rev:5;"
+	"GID": "1",
+	"SID": "28538",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [$HTTP_PORTS,443] ( msg:\"MALWARE-CNC Win.Trojan.Asprox/Kuluoz variant connection\"; flow:to_server,established; content:\"User-Agent: Mozilla/5.0",
+	"Option": "Windows NT 6.1|3B| WOW64|3B| rv:23.0) Gecko/20100101 Firefox/23.0\"; content:\"Content-Disposition: form-data|3B| name=|22|key|22 3B| filename=|22|key.bin|22|\",fast_pattern,nocase; content:\"Content-Disposition: form-data|3B| name=|22|data|22 3B| filename=|22|data.bin|22|\"; content:\"Content-Type: multipart/form-data|3B| boundary=\"; pcre:\"/POST\\s\\/[A-F0-9]{42}\\s/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,stopmalvertising.com/malware-reports/analysis-of-asprox-and-its-new-encryption-scheme.html; reference:url,www.virustotal.com/en/file/929b62b673db55f443a36fa2de184a2be03788bbe714fc586b82a19444727a54/analysis/; classtype:trojan-activity; sid:28538; rev:5;"
 }

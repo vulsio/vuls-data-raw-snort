@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "489",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP no password\"; flow:to_server,established; content:\"PASS\",fast_pattern,nocase; pcre:\"/^PASS\\s*\\n/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; classtype:unknown; sid:489; rev:19;"
+	"GID": "1",
+	"SID": "489",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP no password\"; flow:to_server,established; content:\"PASS\",fast_pattern,nocase; pcre:\"/^PASS\\s*\\n/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; classtype:unknown; sid:489; rev:19;"
 }

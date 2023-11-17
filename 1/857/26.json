@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "857",
-  "Rev": "26",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP faxsurvey access\"; flow:to_server,established; http_uri; content:\"/faxsurvey\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2056; reference:cve,1999-0262; reference:nessus,10067; classtype:web-application-activity; sid:857; rev:26;"
+	"GID": "1",
+	"SID": "857",
+	"Rev": "26",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP faxsurvey access\"; flow:to_server,established; http_uri; content:\"/faxsurvey\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,2056; reference:cve,1999-0262; reference:nessus,10067; classtype:web-application-activity; sid:857; rev:26;"
 }

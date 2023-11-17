@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1843",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 33270",
-  "Option": "msg:\"MALWARE-BACKDOOR trinity connection attempt\"; flow:to_server,established; content:\"!@|23|\",depth 3; metadata:ruleset community; reference:cve,2000-0138; reference:nessus,10501; classtype:attempted-admin; sid:1843; rev:11;"
+	"GID": "1",
+	"SID": "1843",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 33270",
+	"Option": "msg:\"MALWARE-BACKDOOR trinity connection attempt\"; flow:to_server,established; content:\"!@|23|\",depth 3; metadata:ruleset community; reference:cve,2000-0138; reference:nessus,10501; classtype:attempted-admin; sid:1843; rev:11;"
 }

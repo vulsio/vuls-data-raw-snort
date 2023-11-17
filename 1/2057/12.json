@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2057",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP helpout.exe access\"; flow:to_server,established; http_uri; content:\"/helpout.exe\"; metadata:ruleset community; service:http; reference:bugtraq,6002; reference:cve,2002-1169; reference:nessus,11162; classtype:web-application-activity; sid:2057; rev:12;"
+	"GID": "1",
+	"SID": "2057",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP helpout.exe access\"; flow:to_server,established; http_uri; content:\"/helpout.exe\"; metadata:ruleset community; service:http; reference:bugtraq,6002; reference:cve,2002-1169; reference:nessus,11162; classtype:web-application-activity; sid:2057; rev:12;"
 }

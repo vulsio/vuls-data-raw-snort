@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "243",
-  "Rev": "8",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 6838",
-  "Option": "msg:\"MALWARE-OTHER mstream agent to handler\"; flow:to_server; content:\"newserver\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:243; rev:8;"
+	"GID": "1",
+	"SID": "243",
+	"Rev": "8",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 6838",
+	"Option": "msg:\"MALWARE-OTHER mstream agent to handler\"; flow:to_server; content:\"newserver\"; metadata:ruleset community; reference:cve,2000-0138; classtype:attempted-dos; sid:243; rev:8;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1166",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ws_ftp.ini access\"; flow:to_server,established; http_uri; content:\"/ws_ftp.ini\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,547; reference:cve,1999-1078; classtype:attempted-recon; sid:1166; rev:17;"
+	"GID": "1",
+	"SID": "1166",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ws_ftp.ini access\"; flow:to_server,established; http_uri; content:\"/ws_ftp.ini\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,547; reference:cve,1999-1078; classtype:attempted-recon; sid:1166; rev:17;"
 }

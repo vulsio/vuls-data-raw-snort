@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27630",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Backdoor.Aumlib variant outbound connection\"; flow:to_server,established; content:\"/bbs/search.asp\"; content:\"User-Agent|3A| Mozilla/4.0 |28|compatible|3B| MSIE 5.0|3B| Windows NT 5.0|29|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27630; rev:5;"
+	"GID": "1",
+	"SID": "27630",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Backdoor.Aumlib variant outbound connection\"; flow:to_server,established; content:\"/bbs/search.asp\"; content:\"User-Agent|3A| Mozilla/4.0 |28|compatible|3B| MSIE 5.0|3B| Windows NT 5.0|29|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:27630; rev:5;"
 }

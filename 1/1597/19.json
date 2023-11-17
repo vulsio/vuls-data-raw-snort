@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1597",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP guestbook.cgi access\"; flow:to_server,established; http_uri; content:\"/guestbook.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-0237; reference:nessus,10098; classtype:web-application-activity; sid:1597; rev:19;"
+	"GID": "1",
+	"SID": "1597",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP guestbook.cgi access\"; flow:to_server,established; http_uri; content:\"/guestbook.cgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-0237; reference:nessus,10098; classtype:web-application-activity; sid:1597; rev:19;"
 }

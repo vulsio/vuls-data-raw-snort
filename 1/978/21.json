@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "978",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS ASP contents view\"; flow:to_server,established; content:\"%20\"; content:\"&CiRestriction=none\",nocase; content:\"&CiHiliteType=Full\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1084; reference:cve,2000-0302; reference:nessus,10356; reference:url,technet.microsoft.com/en-us/security/bulletin/MS00-006; classtype:web-application-attack; sid:978; rev:21;"
+	"GID": "1",
+	"SID": "978",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS ASP contents view\"; flow:to_server,established; content:\"%20\"; content:\"&CiRestriction=none\",nocase; content:\"&CiHiliteType=Full\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1084; reference:cve,2000-0302; reference:nessus,10356; reference:url,technet.microsoft.com/en-us/security/bulletin/MS00-006; classtype:web-application-attack; sid:978; rev:21;"
 }

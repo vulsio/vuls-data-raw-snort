@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2012",
-  "Rev": "7",
-  "Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE CVS missing cvsroot response\"; flow:to_client,established; content:\"E protocol error|3A| Root request missing\",fast_pattern,nocase; metadata:ruleset community; classtype:misc-attack; sid:2012; rev:7;"
+	"GID": "1",
+	"SID": "2012",
+	"Rev": "7",
+	"Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE CVS missing cvsroot response\"; flow:to_client,established; content:\"E protocol error|3A| Root request missing\",fast_pattern,nocase; metadata:ruleset community; classtype:misc-attack; sid:2012; rev:7;"
 }

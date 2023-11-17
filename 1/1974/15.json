@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1974",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP REST overflow attempt\"; flow:to_server,established; content:\"REST\",nocase; isdataat:100,relative; pcre:\"/^REST(?!\\n)\\s[^\\n]{100}/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,2972; reference:cve,2001-0826; reference:nessus,11755; classtype:attempted-admin; sid:1974; rev:15;"
+	"GID": "1",
+	"SID": "1974",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP REST overflow attempt\"; flow:to_server,established; content:\"REST\",nocase; isdataat:100,relative; pcre:\"/^REST(?!\\n)\\s[^\\n]{100}/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,2972; reference:cve,2001-0826; reference:nessus,11755; classtype:attempted-admin; sid:1974; rev:15;"
 }

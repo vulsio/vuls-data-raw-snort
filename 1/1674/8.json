@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1674",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE connect_data remote version detection attempt\"; flow:to_server,established; content:\"connect_data|28|command=version|29|\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1674; rev:8;"
+	"GID": "1",
+	"SID": "1674",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE connect_data remote version detection attempt\"; flow:to_server,established; content:\"connect_data|28|command=version|29|\",nocase; metadata:ruleset community; classtype:protocol-command-decode; sid:1674; rev:8;"
 }

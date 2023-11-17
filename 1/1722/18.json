@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1722",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP MachineInfo access\"; flow:to_server,established; http_uri; content:\"/MachineInfo\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1067; classtype:web-application-activity; sid:1722; rev:18;"
+	"GID": "1",
+	"SID": "1722",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP MachineInfo access\"; flow:to_server,established; http_uri; content:\"/MachineInfo\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-1067; classtype:web-application-activity; sid:1722; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2183",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Sendmail Content-Transfer-Encoding overflow attempt\"; flow:to_server,established; content:\"Content-Transfer-Encoding\",nocase; content:\"|3A|\",distance 0; isdataat:100,relative; content:!\"|0A|\",within 100; pcre:\"/^\\s*Content-Transfer-Encoding\\s*\\x3A[^\\n]{100}/im\"; metadata:ruleset community; service:smtp; reference:cve,2003-0161; reference:url,www.cert.org/advisories/CA-2003-12.html; classtype:attempted-admin; sid:2183; rev:16;"
+	"GID": "1",
+	"SID": "2183",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL Sendmail Content-Transfer-Encoding overflow attempt\"; flow:to_server,established; content:\"Content-Transfer-Encoding\",nocase; content:\"|3A|\",distance 0; isdataat:100,relative; content:!\"|0A|\",within 100; pcre:\"/^\\s*Content-Transfer-Encoding\\s*\\x3A[^\\n]{100}/im\"; metadata:ruleset community; service:smtp; reference:cve,2003-0161; reference:url,www.cert.org/advisories/CA-2003-12.html; classtype:attempted-admin; sid:2183; rev:16;"
 }

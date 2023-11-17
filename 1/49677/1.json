@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49677",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Ransomware.Lockergoga binary download attempt\"; flow:to_client,established; flowbits:isset,file.exe; file_data; content:\"AVBlockTransformation\",fast_pattern,nocase; content:\"boost\"; content:\"BlockCipher\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,bleepingcomputer.com/news/security/new-lockergoga-ransomware-allegedly-used-in-altran-attack/; classtype:trojan-activity; sid:49677; rev:1;"
+	"GID": "1",
+	"SID": "49677",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Ransomware.Lockergoga binary download attempt\"; flow:to_client,established; flowbits:isset,file.exe; file_data; content:\"AVBlockTransformation\",fast_pattern,nocase; content:\"boost\"; content:\"BlockCipher\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,bleepingcomputer.com/news/security/new-lockergoga-ransomware-allegedly-used-in-altran-attack/; classtype:trojan-activity; sid:49677; rev:1;"
 }

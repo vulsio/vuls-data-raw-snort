@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "813",
-  "Rev": "22",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP webplus directory traversal\"; flow:to_server,established; http_uri; content:\"/webplus?script\",fast_pattern,nocase; http_raw_uri; content:\"../\"; metadata:ruleset community; service:http; reference:bugtraq,1102; reference:cve,2000-0282; reference:nessus,10367; classtype:web-application-attack; sid:813; rev:22;"
+	"GID": "1",
+	"SID": "813",
+	"Rev": "22",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP webplus directory traversal\"; flow:to_server,established; http_uri; content:\"/webplus?script\",fast_pattern,nocase; http_raw_uri; content:\"../\"; metadata:ruleset community; service:http; reference:bugtraq,1102; reference:cve,2000-0282; reference:nessus,10367; classtype:web-application-attack; sid:813; rev:22;"
 }

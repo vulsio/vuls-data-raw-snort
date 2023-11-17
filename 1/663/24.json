@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "663",
-  "Rev": "24",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Sendmail rcpt to command attempt\"; flow:to_server,established; content:\"rcpt to|3A|\",fast_pattern,nocase; pcre:\"/^rcpt\\s+to\\:\\s*[\\x7c\\x3b]/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,1; reference:cve,1999-0095; classtype:attempted-admin; sid:663; rev:24;"
+	"GID": "1",
+	"SID": "663",
+	"Rev": "24",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL Sendmail rcpt to command attempt\"; flow:to_server,established; content:\"rcpt to|3A|\",fast_pattern,nocase; pcre:\"/^rcpt\\s+to\\:\\s*[\\x7c\\x3b]/ims\"; metadata:ruleset community; service:smtp; reference:bugtraq,1; reference:cve,1999-0095; classtype:attempted-admin; sid:663; rev:24;"
 }

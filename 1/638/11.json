@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "638",
-  "Rev": "11",
-  "Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-SHELLCODE SGI NOOP\"; content:\"|03 E0 F8|%|03 E0 F8|%|03 E0 F8|%|03 E0 F8|%\",fast_pattern,nocase; metadata:ruleset community; classtype:shellcode-detect; sid:638; rev:11;"
+	"GID": "1",
+	"SID": "638",
+	"Rev": "11",
+	"Header": "alert ip $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-SHELLCODE SGI NOOP\"; content:\"|03 E0 F8|%|03 E0 F8|%|03 E0 F8|%|03 E0 F8|%\",fast_pattern,nocase; metadata:ruleset community; classtype:shellcode-detect; sid:638; rev:11;"
 }

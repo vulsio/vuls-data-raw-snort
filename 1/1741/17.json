@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1741",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP DNSTools access\"; flow:to_server,established; http_uri; content:\"/dnstools.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4617; reference:cve,2002-0613; classtype:web-application-activity; sid:1741; rev:17;"
+	"GID": "1",
+	"SID": "1741",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP DNSTools access\"; flow:to_server,established; http_uri; content:\"/dnstools.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,4617; reference:cve,2002-0613; classtype:web-application-activity; sid:1741; rev:17;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28285",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.hdog connectivity check-in version 2\"; flow:to_server,established; http_uri; content:\"/?gws_rd=cr\",fast_pattern,nocase; pkt_data; content:\"|0D 0A|Connection: Close|0D 0A 0D 0A|\"; http_header; content:\"|3B 20|MSIE|20|\"; content:!\"Accept-Encoding: \"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/ca1bc54e33064eb08163a17a56dcb1d0d811fc694c05af1d9ea768ef992cb489/analysis/1381870348/; reference:url,www.virustotal.com/en/file/d4b16269c9849c33a7bb2fdc782173a00e99db12a585689618dde3f4c6fcb101/analysis/; classtype:trojan-activity; sid:28285; rev:2;"
+	"GID": "1",
+	"SID": "28285",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.hdog connectivity check-in version 2\"; flow:to_server,established; http_uri; content:\"/?gws_rd=cr\",fast_pattern,nocase; pkt_data; content:\"|0D 0A|Connection: Close|0D 0A 0D 0A|\"; http_header; content:\"|3B 20|MSIE|20|\"; content:!\"Accept-Encoding: \"; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/ca1bc54e33064eb08163a17a56dcb1d0d811fc694c05af1d9ea768ef992cb489/analysis/1381870348/; reference:url,www.virustotal.com/en/file/d4b16269c9849c33a7bb2fdc782173a00e99db12a585689618dde3f4c6fcb101/analysis/; classtype:trojan-activity; sid:28285; rev:2;"
 }

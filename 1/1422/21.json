@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1422",
-  "Rev": "21",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161:162",
-  "Option": "msg:\"PROTOCOL-SNMP community string buffer overflow attempt with evasion\"; flow:to_server; content:\" |04 82 01 00|\",depth 5,offset 7; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:cve,2002-0012; reference:cve,2002-0013; reference:url,www.cert.org/advisories/CA-2002-03.html; classtype:misc-attack; sid:1422; rev:21;"
+	"GID": "1",
+	"SID": "1422",
+	"Rev": "21",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161:162",
+	"Option": "msg:\"PROTOCOL-SNMP community string buffer overflow attempt with evasion\"; flow:to_server; content:\" |04 82 01 00|\",depth 5,offset 7; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:cve,2002-0012; reference:cve,2002-0013; reference:url,www.cert.org/advisories/CA-2002-03.html; classtype:misc-attack; sid:1422; rev:21;"
 }

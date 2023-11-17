@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33457",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Symmi variant outbound connection\"; flow:to_server,established; http_method; content:\"GET\"; http_header; content:\"User-Agent: http://www.pershop.com.br/\",fast_pattern,nocase; http_uri; content:\".php\"; http_header; content:!\"Referer:\"; content:!\"Accept-\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/609c2c8ab60a30822689a3955fb84f06b5c3962e0d2b894f4794ac8ee5eee2eb/analysis/; classtype:trojan-activity; sid:33457; rev:3;"
+	"GID": "1",
+	"SID": "33457",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Symmi variant outbound connection\"; flow:to_server,established; http_method; content:\"GET\"; http_header; content:\"User-Agent: http://www.pershop.com.br/\",fast_pattern,nocase; http_uri; content:\".php\"; http_header; content:!\"Referer:\"; content:!\"Accept-\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/609c2c8ab60a30822689a3955fb84f06b5c3962e0d2b894f4794ac8ee5eee2eb/analysis/; classtype:trojan-activity; sid:33457; rev:3;"
 }

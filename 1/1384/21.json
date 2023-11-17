@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1384",
-  "Rev": "21",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1900",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows UPnP malformed advertisement\"; flow:to_server,no_stream; content:\"NOTIFY * \",fast_pattern,nocase; content:\"LOCATION|3A|\",nocase; detection_filter:track by_dst,count 10,seconds 1; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,3723; reference:cve,2001-0876; reference:cve,2001-0877; reference:nessus,10829; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-059; classtype:misc-attack; sid:1384; rev:21;"
+	"GID": "1",
+	"SID": "1384",
+	"Rev": "21",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 1900",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows UPnP malformed advertisement\"; flow:to_server,no_stream; content:\"NOTIFY * \",fast_pattern,nocase; content:\"LOCATION|3A|\",nocase; detection_filter:track by_dst,count 10,seconds 1; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,3723; reference:cve,2001-0876; reference:cve,2001-0877; reference:nessus,10829; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-059; classtype:misc-attack; sid:1384; rev:21;"
 }

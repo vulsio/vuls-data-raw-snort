@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34931",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Bancos variant outbound connection\"; flow:to_server,established; http_client_body; content:\"ID_MAQUINA=\",fast_pattern,nocase; content:\"&VERSAO=\",nocase; content:\"&WIN=\",within 50,nocase; content:\"&NAVEGADOR=\",within 200,nocase; content:\"&PLUGIN=\",within 50,nocase; content:\"&AV=\",within 50,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/7816d2b6507950177cf1af596744abe523cad492f4d78e230962602b1b269044/analysis/; classtype:trojan-activity; sid:34931; rev:2;"
+	"GID": "1",
+	"SID": "34931",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Bancos variant outbound connection\"; flow:to_server,established; http_client_body; content:\"ID_MAQUINA=\",fast_pattern,nocase; content:\"&VERSAO=\",nocase; content:\"&WIN=\",within 50,nocase; content:\"&NAVEGADOR=\",within 200,nocase; content:\"&PLUGIN=\",within 50,nocase; content:\"&AV=\",within 50,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/7816d2b6507950177cf1af596744abe523cad492f4d78e230962602b1b269044/analysis/; classtype:trojan-activity; sid:34931; rev:2;"
 }

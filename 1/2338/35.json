@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2338",
-  "Rev": "35",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP LIST buffer overflow attempt\"; flow:to_server,established; content:\"LIST\",nocase; isdataat:128,relative; pcre:\"/^LIST(?!\\n)\\s[^\\n]{128}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,10181; reference:bugtraq,14339; reference:bugtraq,33454; reference:bugtraq,58247; reference:bugtraq,6869; reference:bugtraq,7251; reference:bugtraq,7861; reference:bugtraq,8486; reference:bugtraq,9675; reference:cve,1999-0349; reference:cve,1999-1510; reference:cve,2000-0129; reference:cve,2004-1992; reference:cve,2005-2373; reference:cve,2007-0019; reference:cve,2009-0351; reference:url,technet.microsoft.com/en-us/security/bulletin/MS99-003; classtype:misc-attack; sid:2338; rev:35;"
+	"GID": "1",
+	"SID": "2338",
+	"Rev": "35",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP LIST buffer overflow attempt\"; flow:to_server,established; content:\"LIST\",nocase; isdataat:128,relative; pcre:\"/^LIST(?!\\n)\\s[^\\n]{128}/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,10181; reference:bugtraq,14339; reference:bugtraq,33454; reference:bugtraq,58247; reference:bugtraq,6869; reference:bugtraq,7251; reference:bugtraq,7861; reference:bugtraq,8486; reference:bugtraq,9675; reference:cve,1999-0349; reference:cve,1999-1510; reference:cve,2000-0129; reference:cve,2004-1992; reference:cve,2005-2373; reference:cve,2007-0019; reference:cve,2009-0351; reference:url,technet.microsoft.com/en-us/security/bulletin/MS99-003; classtype:misc-attack; sid:2338; rev:35;"
 }

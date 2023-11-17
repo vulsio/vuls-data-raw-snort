@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "39903",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 25",
-  "Option": "msg:\"FILE-OFFICE Microsoft Windows RTF file with embedded object package SMTP upload attempt\"; flow:to_server,established; file_data; content:\"{|5C|rt\",nocase; content:\"{|5C|object|5C|objemb{|5C|*|5C|objclass Package}\",distance 0,nocase; flowbits:set,file.rtf.embed; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:smtp; reference:url,en.wikipedia.org/wiki/Rich_Text_Format; classtype:misc-activity; sid:39903; rev:4;"
+	"GID": "1",
+	"SID": "39903",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 25",
+	"Option": "msg:\"FILE-OFFICE Microsoft Windows RTF file with embedded object package SMTP upload attempt\"; flow:to_server,established; file_data; content:\"{|5C|rt\",nocase; content:\"{|5C|object|5C|objemb{|5C|*|5C|objclass Package}\",distance 0,nocase; flowbits:set,file.rtf.embed; metadata:policy max-detect-ips alert,policy security-ips alert,ruleset community; service:smtp; reference:url,en.wikipedia.org/wiki/Rich_Text_Format; classtype:misc-activity; sid:39903; rev:4;"
 }

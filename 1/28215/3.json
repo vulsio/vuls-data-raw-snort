@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28215",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP vBulletin upgrade.php exploit attempt\"; flow:to_server,established; http_uri; content:\"install/upgrade.php\",fast_pattern,nocase; http_client_body; content:\"firstrun=false\"; content:\"&customerid=\"; content:\"username%5d=\"; content:\"password%5d=\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.net-security.org/secworld.php?id=15743; classtype:attempted-admin; sid:28215; rev:3;"
+	"GID": "1",
+	"SID": "28215",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP vBulletin upgrade.php exploit attempt\"; flow:to_server,established; http_uri; content:\"install/upgrade.php\",fast_pattern,nocase; http_client_body; content:\"firstrun=false\"; content:\"&customerid=\"; content:\"username%5d=\"; content:\"password%5d=\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.net-security.org/secworld.php?id=15743; classtype:attempted-admin; sid:28215; rev:3;"
 }

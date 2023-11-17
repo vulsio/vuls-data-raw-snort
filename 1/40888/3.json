@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "40888",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"BROWSER-FIREFOX Mozilla Firefox ESR NotifyTimeChange use after free attempt\"; flow:to_client,established; file_data; content:\".createElementNS\"; content:\"svg\",within 10; content:\".setAttribute\"; content:\"begin\",within 15; content:\".setAttribute\",distance 0; content:\"end\",within 10; content:\".end\",within 20; content:\".setAttribute\",distance 0; content:\"end\",within 10; content:\".end\",within 20; content:\".pauseAnimations\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2016-9079; reference:url,www.mozilla.org/en-US/security/advisories/mfsa2016-92/; classtype:attempted-user; sid:40888; rev:3;"
+	"GID": "1",
+	"SID": "40888",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"BROWSER-FIREFOX Mozilla Firefox ESR NotifyTimeChange use after free attempt\"; flow:to_client,established; file_data; content:\".createElementNS\"; content:\"svg\",within 10; content:\".setAttribute\"; content:\"begin\",within 15; content:\".setAttribute\",distance 0; content:\"end\",within 10; content:\".end\",within 20; content:\".setAttribute\",distance 0; content:\"end\",within 10; content:\".end\",within 20; content:\".pauseAnimations\",fast_pattern,nocase; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2016-9079; reference:url,www.mozilla.org/en-US/security/advisories/mfsa2016-92/; classtype:attempted-user; sid:40888; rev:3;"
 }

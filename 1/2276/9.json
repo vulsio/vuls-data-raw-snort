@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2276",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP oracle portal demo access\"; flow:to_server,established; http_uri; content:\"/pls/portal/PORTAL_DEMO\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11918; classtype:web-application-activity; sid:2276; rev:9;"
+	"GID": "1",
+	"SID": "2276",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP oracle portal demo access\"; flow:to_server,established; http_uri; content:\"/pls/portal/PORTAL_DEMO\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,11918; classtype:web-application-activity; sid:2276; rev:9;"
 }

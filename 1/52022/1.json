@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "52022",
-  "Rev": "1",
-  "Header": "alert udp any 67 -> $HOME_NET 68",
-  "Option": "msg:\"OS-LINUX Red Hat NetworkManager DHCP client command injection attempt\"; content:\"|63 82 53 63|\"; content:\"|27|\",distance 0; content:\"|23|\",within 254; pcre:\"/\\x63\\x82\\x53\\x63.+?[\\x0c-\\xfe][\\x05-\\xff][\\x20-\\x7f]{0,250}\\x27[\\x20-\\x7f]{3,250}\\x23/s\"; metadata:policy max-detect-ips drop,ruleset community; service:dhcp; reference:cve,2018-1111; reference:url,access.redhat.com/security/cve/cve-2018-1111; classtype:attempted-user; sid:52022; rev:1;"
+	"GID": "1",
+	"SID": "52022",
+	"Rev": "1",
+	"Header": "alert udp any 67 -> $HOME_NET 68",
+	"Option": "msg:\"OS-LINUX Red Hat NetworkManager DHCP client command injection attempt\"; content:\"|63 82 53 63|\"; content:\"|27|\",distance 0; content:\"|23|\",within 254; pcre:\"/\\x63\\x82\\x53\\x63.+?[\\x0c-\\xfe][\\x05-\\xff][\\x20-\\x7f]{0,250}\\x27[\\x20-\\x7f]{3,250}\\x23/s\"; metadata:policy max-detect-ips drop,ruleset community; service:dhcp; reference:cve,2018-1111; reference:url,access.redhat.com/security/cve/cve-2018-1111; classtype:attempted-user; sid:52022; rev:1;"
 }

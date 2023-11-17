@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "38565",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Sweeper variant dropper initial download attempt\"; flow:to_server,established; http_method; content:\"HEAD\"; pkt_data; content:\".bin\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|Microsoft BITS\"; pkt_data; content:\"Accept-Encoding|3A 20|identity|0D 0A|\"; http_header; content:!\"Content-Length\"; http_uri; pcre:\"/\\/[a-f0-9]{32}\\/\\w+\\.bin/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1197; reference:url,www.virustotal.com/en/file/70e6df66c76700afef596e2dd7c956f4f476acca5b935b3f067084241638d182/analysis/1460636221/; classtype:trojan-activity; sid:38565; rev:3;"
+	"GID": "1",
+	"SID": "38565",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Sweeper variant dropper initial download attempt\"; flow:to_server,established; http_method; content:\"HEAD\"; pkt_data; content:\".bin\",fast_pattern,nocase; http_header; content:\"User-Agent|3A 20|Microsoft BITS\"; pkt_data; content:\"Accept-Encoding|3A 20|identity|0D 0A|\"; http_header; content:!\"Content-Length\"; http_uri; pcre:\"/\\/[a-f0-9]{32}\\/\\w+\\.bin/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1197; reference:url,www.virustotal.com/en/file/70e6df66c76700afef596e2dd7c956f4f476acca5b935b3f067084241638d182/analysis/1460636221/; classtype:trojan-activity; sid:38565; rev:3;"
 }

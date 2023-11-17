@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1115",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ICQ webserver DOS\"; flow:to_server,established; http_uri; content:\".html/......\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-0474; reference:url,www.securiteam.com/exploits/2ZUQ1QAQOG.html; classtype:attempted-dos; sid:1115; rev:17;"
+	"GID": "1",
+	"SID": "1115",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ICQ webserver DOS\"; flow:to_server,established; http_uri; content:\".html/......\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:cve,1999-0474; reference:url,www.securiteam.com/exploits/2ZUQ1QAQOG.html; classtype:attempted-dos; sid:1115; rev:17;"
 }

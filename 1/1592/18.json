@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1592",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP /fcgi-bin/echo.exe access\"; flow:to_server,established; http_uri; content:\"/fcgi-bin/echo.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10838; classtype:web-application-activity; sid:1592; rev:18;"
+	"GID": "1",
+	"SID": "1592",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP /fcgi-bin/echo.exe access\"; flow:to_server,established; http_uri; content:\"/fcgi-bin/echo.exe\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:nessus,10838; classtype:web-application-activity; sid:1592; rev:18;"
 }

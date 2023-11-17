@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49788",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zacinlo outbound connection\"; flow:to_server,established; http_uri; content:\"/entry/feedbackinfo/production/\",fast_pattern,nocase; http_header; content:\"User-Agent: wget\"; content:\"Referer:\"; content:\"/entry/feedbackinfo/production/\",within 100; content:!\"Accept-\"; content:!\"Content-\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,labs.bitdefender.com/2018/06/six-years-and-counting-inside-the-complex-zacinlo-ad-fraud-operation/; classtype:trojan-activity; sid:49788; rev:2;"
+	"GID": "1",
+	"SID": "49788",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zacinlo outbound connection\"; flow:to_server,established; http_uri; content:\"/entry/feedbackinfo/production/\",fast_pattern,nocase; http_header; content:\"User-Agent: wget\"; content:\"Referer:\"; content:\"/entry/feedbackinfo/production/\",within 100; content:!\"Accept-\"; content:!\"Content-\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,labs.bitdefender.com/2018/06/six-years-and-counting-inside-the-complex-zacinlo-ad-fraud-operation/; classtype:trojan-activity; sid:49788; rev:2;"
 }

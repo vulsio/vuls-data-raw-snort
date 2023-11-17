@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "654",
-  "Rev": "29",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL RCPT TO overflow\"; flow:to_server,established; content:\"rcpt to|3A|\",nocase; isdataat:256,relative; pcre:\"/^RCPT TO\\x3a\\s*\\x3c?[^\\n\\x3e]{256}/im\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:bugtraq,2283; reference:bugtraq,43182; reference:bugtraq,9696; reference:cve,2001-0260; reference:cve,2003-0694; reference:cve,2008-0394; reference:cve,2009-0410; reference:cve,2010-2580; classtype:attempted-admin; sid:654; rev:29;"
+	"GID": "1",
+	"SID": "654",
+	"Rev": "29",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL RCPT TO overflow\"; flow:to_server,established; content:\"rcpt to|3A|\",nocase; isdataat:256,relative; pcre:\"/^RCPT TO\\x3a\\s*\\x3c?[^\\n\\x3e]{256}/im\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:bugtraq,2283; reference:bugtraq,43182; reference:bugtraq,9696; reference:cve,2001-0260; reference:cve,2003-0694; reference:cve,2008-0394; reference:cve,2009-0410; reference:cve,2010-2580; classtype:attempted-admin; sid:654; rev:29;"
 }

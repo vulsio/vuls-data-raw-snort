@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "20080",
-  "Rev": "8",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 12080",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Derusbi.A variant outbound connection\"; flow:to_server,established; content:\"|00 00 00 01 00 00 00|\",depth 7,offset 1; content:\"|01 00 00 00 68 01 00 00|\",within 8,distance 8; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/6fecd042c3c0b54e7354cd8dfb1975c626acd8df55f88c4149462e15e77918b0/analysis/; reference:url,www.virustotal.com/en/file/705404d6bbf6dae254e2d3bc44eca239976be7f0dc4d49fe93b0fb1d1c2704fe/analysis/; classtype:trojan-activity; sid:20080; rev:8;"
+	"GID": "1",
+	"SID": "20080",
+	"Rev": "8",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 12080",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Derusbi.A variant outbound connection\"; flow:to_server,established; content:\"|00 00 00 01 00 00 00|\",depth 7,offset 1; content:\"|01 00 00 00 68 01 00 00|\",within 8,distance 8; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/6fecd042c3c0b54e7354cd8dfb1975c626acd8df55f88c4149462e15e77918b0/analysis/; reference:url,www.virustotal.com/en/file/705404d6bbf6dae254e2d3bc44eca239976be7f0dc4d49fe93b0fb1d1c2704fe/analysis/; classtype:trojan-activity; sid:20080; rev:8;"
 }

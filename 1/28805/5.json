@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28805",
-  "Rev": "5",
-  "Header": "alert udp $HOME_NET any -> $EXTERNAL_NET 2090",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Palevo outbound connection\"; flow:to_server; dsize:21; content:\"|00 00|\",depth 2,offset 19; metadata:impact_flag red,ruleset community; reference:url,palevotracker.abuse.ch/?ipaddress=209.222.14.3; reference:url,palevotracker.abuse.ch/?ipaddress=31.170.179.179; classtype:trojan-activity; sid:28805; rev:5;"
+	"GID": "1",
+	"SID": "28805",
+	"Rev": "5",
+	"Header": "alert udp $HOME_NET any -> $EXTERNAL_NET 2090",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Palevo outbound connection\"; flow:to_server; dsize:21; content:\"|00 00|\",depth 2,offset 19; metadata:impact_flag red,ruleset community; reference:url,palevotracker.abuse.ch/?ipaddress=209.222.14.3; reference:url,palevotracker.abuse.ch/?ipaddress=31.170.179.179; classtype:trojan-activity; sid:28805; rev:5;"
 }

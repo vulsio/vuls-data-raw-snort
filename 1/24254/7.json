@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "24254",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE IP only webpage redirect attempt\"; flow:to_client,established; file_data; content:\"document.location=\"; pcre:\"/^[^>]*\\x2f\\x2f\\d{1,3}\\x2e\\d{1,3}\\x2e\\d{1,3}\\x2e\\d{1,3}/Rs\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:bad-unknown; sid:24254; rev:7;"
+	"GID": "1",
+	"SID": "24254",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE IP only webpage redirect attempt\"; flow:to_client,established; file_data; content:\"document.location=\"; pcre:\"/^[^>]*\\x2f\\x2f\\d{1,3}\\x2e\\d{1,3}\\x2e\\d{1,3}\\x2e\\d{1,3}/Rs\"; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:bad-unknown; sid:24254; rev:7;"
 }

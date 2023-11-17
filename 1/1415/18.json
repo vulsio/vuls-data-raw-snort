@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1415",
-  "Rev": "18",
-  "Header": "alert udp any any -> 255.255.255.255 161",
-  "Option": "msg:\"PROTOCOL-SNMP Broadcast request\"; flow:to_server; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1415; rev:18;"
+	"GID": "1",
+	"SID": "1415",
+	"Rev": "18",
+	"Header": "alert udp any any -> 255.255.255.255 161",
+	"Option": "msg:\"PROTOCOL-SNMP Broadcast request\"; flow:to_server; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1415; rev:18;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1447",
-  "Rev": "20",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3389",
-  "Option": "msg:\"POLICY-OTHER Microsoft Windows Terminal server RDP attempt\"; flow:to_server,established; content:\"|03 00 00 0B 06 E0 00 00 00 00 00|\",depth 11; metadata:ruleset community; service:rdp; reference:bugtraq,3099; reference:cve,2001-0540; reference:cve,2001-0663; reference:nessus,10940; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-040; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-052; classtype:protocol-command-decode; sid:1447; rev:20;"
+	"GID": "1",
+	"SID": "1447",
+	"Rev": "20",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3389",
+	"Option": "msg:\"POLICY-OTHER Microsoft Windows Terminal server RDP attempt\"; flow:to_server,established; content:\"|03 00 00 0B 06 E0 00 00 00 00 00|\",depth 11; metadata:ruleset community; service:rdp; reference:bugtraq,3099; reference:cve,2001-0540; reference:cve,2001-0663; reference:nessus,10940; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-040; reference:url,technet.microsoft.com/en-us/security/bulletin/MS01-052; classtype:protocol-command-decode; sid:1447; rev:20;"
 }

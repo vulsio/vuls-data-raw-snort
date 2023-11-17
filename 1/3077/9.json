@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3077",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP RNFR overflow attempt\"; flow:to_server,established; content:\"RNFR\",nocase; isdataat:200,relative; pcre:\"/^RNFR\\s[^\\n]{200}/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,14339; classtype:attempted-admin; sid:3077; rev:9;"
+	"GID": "1",
+	"SID": "3077",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP RNFR overflow attempt\"; flow:to_server,established; content:\"RNFR\",nocase; isdataat:200,relative; pcre:\"/^RNFR\\s[^\\n]{200}/ims\"; metadata:ruleset community; service:ftp; reference:bugtraq,14339; classtype:attempted-admin; sid:3077; rev:9;"
 }

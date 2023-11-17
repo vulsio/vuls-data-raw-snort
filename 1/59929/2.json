@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "59929",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-BACKDOOR Jsp.Webshell.Behinder download attempt\"; flow:to_client,established; file_data; content:\"<%\"; content:\"java.util.*\"; content:\"extends ClassLoader\",fast_pattern,nocase; content:\"defineClass\"; content:\"getInstance(|22|AES|22|)\"; content:\"decodeBuffer\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-26134; reference:url,community.atlassian.com/t5/Confluence-discussions/CVE-2022-26134-Critical-severity-unauthenticated-remote-code/td-p/20456533; classtype:trojan-activity; gid:1; sid:59929; rev:2;"
+	"GID": "1",
+	"SID": "59929",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-BACKDOOR Jsp.Webshell.Behinder download attempt\"; flow:to_client,established; file_data; content:\"<%\"; content:\"java.util.*\"; content:\"extends ClassLoader\",fast_pattern,nocase; content:\"defineClass\"; content:\"getInstance(|22|AES|22|)\"; content:\"decodeBuffer\",distance 0; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2022-26134; reference:url,community.atlassian.com/t5/Confluence-discussions/CVE-2022-26134-Critical-severity-unauthenticated-remote-code/td-p/20456533; classtype:trojan-activity; gid:1; sid:59929; rev:2;"
 }

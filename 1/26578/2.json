@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26578",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kazy/FakeAV Checkin with IE6 User-Agent\"; flow:to_server,established; http_uri; content:\"/images/m.php?id=\",fast_pattern,nocase; http_header; content:\"|3B 20|MSIE 6.0|3B 20|\"; content:!\"Referer|3A 20|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b288d6eadc9d4bca710f73e850a0901cf5fe62c775350c9a30ebaf9a05097a0f/analysis/1367713929/; classtype:trojan-activity; sid:26578; rev:2;"
+	"GID": "1",
+	"SID": "26578",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kazy/FakeAV Checkin with IE6 User-Agent\"; flow:to_server,established; http_uri; content:\"/images/m.php?id=\",fast_pattern,nocase; http_header; content:\"|3B 20|MSIE 6.0|3B 20|\"; content:!\"Referer|3A 20|\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b288d6eadc9d4bca710f73e850a0901cf5fe62c775350c9a30ebaf9a05097a0f/analysis/1367713929/; classtype:trojan-activity; sid:26578; rev:2;"
 }

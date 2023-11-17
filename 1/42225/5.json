@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "42225",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [995,80,53,443]",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.RedLeaves outbound connection\"; flow:to_server,established; isdataat:11; isdataat:!12; content:\"|7A 8D 9B DC|\",depth 4,offset 4; metadata:impact_flag red,ruleset community; reference:url,github.com/nccgroup/Cyber-Defence/blob/master/Technical%20Notes/Red%20Leaves/Red%20Leaves%20technical%20note%20v1.0.pdf; classtype:trojan-activity; sid:42225; rev:5;"
+	"GID": "1",
+	"SID": "42225",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET [995,80,53,443]",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.RedLeaves outbound connection\"; flow:to_server,established; isdataat:11; isdataat:!12; content:\"|7A 8D 9B DC|\",depth 4,offset 4; metadata:impact_flag red,ruleset community; reference:url,github.com/nccgroup/Cyber-Defence/blob/master/Technical%20Notes/Red%20Leaves/Red%20Leaves%20technical%20note%20v1.0.pdf; classtype:trojan-activity; sid:42225; rev:5;"
 }

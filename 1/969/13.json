@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "969",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS WebDAV file lock attempt\"; flow:to_server,established; content:\"LOCK \",depth 5; metadata:ruleset community; service:http; reference:bugtraq,2736; reference:nessus,10732; classtype:web-application-activity; sid:969; rev:13;"
+	"GID": "1",
+	"SID": "969",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS WebDAV file lock attempt\"; flow:to_server,established; content:\"LOCK \",depth 5; metadata:ruleset community; service:http; reference:bugtraq,2736; reference:nessus,10732; classtype:web-application-activity; sid:969; rev:13;"
 }

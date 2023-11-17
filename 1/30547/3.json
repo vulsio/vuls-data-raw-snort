@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30547",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Ramdo variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:1; http_method; content:\"POST\"; http_header; content:\".org|0D 0A|Content-Length|3A| 128|0D 0A|Cache-Control|3A| no-cache|0D 0A 0D 0A|\",fast_pattern,nocase; content:!\"User-Agent|3A|\"; content:!\"Accept|3A|\"; pcre:\"/^Host\\x3a\\s[a-z]{16}\\.org\\x0d/m\"; metadata:impact_flag red,ruleset community; service:http; reference:url,blogs.technet.com/b/mmpc/archive/2014/04/08/msrt-april-2014-ramdo.aspx; classtype:trojan-activity; sid:30547; rev:3;"
+	"GID": "1",
+	"SID": "30547",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Ramdo variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:1; http_method; content:\"POST\"; http_header; content:\".org|0D 0A|Content-Length|3A| 128|0D 0A|Cache-Control|3A| no-cache|0D 0A 0D 0A|\",fast_pattern,nocase; content:!\"User-Agent|3A|\"; content:!\"Accept|3A|\"; pcre:\"/^Host\\x3a\\s[a-z]{16}\\.org\\x0d/m\"; metadata:impact_flag red,ruleset community; service:http; reference:url,blogs.technet.com/b/mmpc/archive/2014/04/08/msrt-april-2014-ramdo.aspx; classtype:trojan-activity; sid:30547; rev:3;"
 }

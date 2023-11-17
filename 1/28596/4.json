@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28596",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT Nuclear exploit kit payload request\"; flow:to_server,established; http_uri; bufferlen:24<=>26; content:\"/f/\",fast_pattern,nocase; pcre:\"/^\\/f\\/1\\d{9}\\/\\d{9,10}(\\/\\d)+$/\"; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; classtype:trojan-activity; sid:28596; rev:4;"
+	"GID": "1",
+	"SID": "28596",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT Nuclear exploit kit payload request\"; flow:to_server,established; http_uri; bufferlen:24<=>26; content:\"/f/\",fast_pattern,nocase; pcre:\"/^\\/f\\/1\\d{9}\\/\\d{9,10}(\\/\\d)+$/\"; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; classtype:trojan-activity; sid:28596; rev:4;"
 }

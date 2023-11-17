@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2375",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3127:3199",
-  "Option": "msg:\"MALWARE-CNC DoomJuice/mydoom.a backdoor upload/execute\"; flow:to_server,established; content:\"|85 13|<|9E A2|\",depth 5; metadata:ruleset community; reference:url,securityresponse.symantec.com/avcenter/venc/data/w32.hllw.doomjuice.html; classtype:trojan-activity; sid:2375; rev:9;"
+	"GID": "1",
+	"SID": "2375",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3127:3199",
+	"Option": "msg:\"MALWARE-CNC DoomJuice/mydoom.a backdoor upload/execute\"; flow:to_server,established; content:\"|85 13|<|9E A2|\",depth 5; metadata:ruleset community; reference:url,securityresponse.symantec.com/avcenter/venc/data/w32.hllw.doomjuice.html; classtype:trojan-activity; sid:2375; rev:9;"
 }

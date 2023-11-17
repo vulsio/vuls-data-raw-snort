@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1769",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP .DS_Store access\"; flow:to_server,established; http_uri; content:\"/.DS_Store\"; metadata:ruleset community; service:http; reference:url,www.macintouch.com/mosxreaderreports46.html; classtype:web-application-activity; sid:1769; rev:10;"
+	"GID": "1",
+	"SID": "1769",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP .DS_Store access\"; flow:to_server,established; http_uri; content:\"/.DS_Store\"; metadata:ruleset community; service:http; reference:url,www.macintouch.com/mosxreaderreports46.html; classtype:web-application-activity; sid:1769; rev:10;"
 }

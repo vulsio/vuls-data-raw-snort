@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1199",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 2301",
-  "Option": "msg:\"SERVER-WEBAPP Compaq Insight directory traversal\"; flow:to_server,established; content:\"../\"; metadata:ruleset community; service:http; reference:bugtraq,282; reference:cve,1999-0771; classtype:web-application-attack; sid:1199; rev:18;"
+	"GID": "1",
+	"SID": "1199",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 2301",
+	"Option": "msg:\"SERVER-WEBAPP Compaq Insight directory traversal\"; flow:to_server,established; content:\"../\"; metadata:ruleset community; service:http; reference:bugtraq,282; reference:cve,1999-0771; classtype:web-application-attack; sid:1199; rev:18;"
 }

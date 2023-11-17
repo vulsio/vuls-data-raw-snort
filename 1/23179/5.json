@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "23179",
-  "Rev": "5",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE script before DOCTYPE possible malicious redirect attempt\"; flow:to_client,established; file_data; content:\"</script><!DOCTYPE\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:web-application-attack; sid:23179; rev:5;"
+	"GID": "1",
+	"SID": "23179",
+	"Rev": "5",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE script before DOCTYPE possible malicious redirect attempt\"; flow:to_client,established; file_data; content:\"</script><!DOCTYPE\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:web-application-attack; sid:23179; rev:5;"
 }

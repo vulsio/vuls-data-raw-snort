@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31530",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Symmi variant outbound connection\"; flow:to_server,established; http_uri; content:\"/index.php?email=libpurple_XMPP\",fast_pattern,nocase; content:\"&method=post\"; pkt_data; content:\" HTTP/1.0|0D 0A|Accept: */*|0D 0A|Connection: close|0D 0A|Host: \"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b2b7571ffc6ee27fc716f308d72a3268ffa5f32330ca6349aacc92e6cecb2582/analysis/1406043461/; classtype:trojan-activity; sid:31530; rev:2;"
+	"GID": "1",
+	"SID": "31530",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Symmi variant outbound connection\"; flow:to_server,established; http_uri; content:\"/index.php?email=libpurple_XMPP\",fast_pattern,nocase; content:\"&method=post\"; pkt_data; content:\" HTTP/1.0|0D 0A|Accept: */*|0D 0A|Connection: close|0D 0A|Host: \"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/b2b7571ffc6ee27fc716f308d72a3268ffa5f32330ca6349aacc92e6cecb2582/analysis/1406043461/; classtype:trojan-activity; sid:31530; rev:2;"
 }

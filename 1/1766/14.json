@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1766",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP search.dll directory listing attempt\"; flow:to_server,established; http_uri; content:\"/search.dll\"; pkt_data; content:\"query=%00\"; metadata:ruleset community; service:http; reference:bugtraq,1684; reference:cve,2000-0835; reference:nessus,10514; classtype:web-application-attack; sid:1766; rev:14;"
+	"GID": "1",
+	"SID": "1766",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP search.dll directory listing attempt\"; flow:to_server,established; http_uri; content:\"/search.dll\"; pkt_data; content:\"query=%00\"; metadata:ruleset community; service:http; reference:bugtraq,1684; reference:cve,2000-0835; reference:nessus,10514; classtype:web-application-attack; sid:1766; rev:14;"
 }

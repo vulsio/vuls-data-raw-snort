@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2247",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS UploadScript11.asp access\"; flow:to_server,established; http_uri; content:\"/UploadScript11.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,3608; reference:cve,2001-0938; reference:nessus,11746; classtype:web-application-activity; sid:2247; rev:16;"
+	"GID": "1",
+	"SID": "2247",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS UploadScript11.asp access\"; flow:to_server,established; http_uri; content:\"/UploadScript11.asp\",nocase; metadata:ruleset community; service:http; reference:bugtraq,3608; reference:cve,2001-0938; reference:nessus,11746; classtype:web-application-activity; sid:2247; rev:16;"
 }

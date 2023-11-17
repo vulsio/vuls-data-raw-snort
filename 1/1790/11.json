@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1790",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET 6666:7000 -> $HOME_NET any",
-  "Option": "msg:\"POLICY-SOCIAL IRC dns response\"; flow:to_client,established; content:\"|3A|\"; content:\" 302 \"; content:\"=+\",fast_pattern,nocase; metadata:ruleset community; classtype:policy-violation; sid:1790; rev:11;"
+	"GID": "1",
+	"SID": "1790",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET 6666:7000 -> $HOME_NET any",
+	"Option": "msg:\"POLICY-SOCIAL IRC dns response\"; flow:to_client,established; content:\"|3A|\"; content:\" 302 \"; content:\"=+\",fast_pattern,nocase; metadata:ruleset community; classtype:policy-violation; sid:1790; rev:11;"
 }

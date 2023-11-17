@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26264",
-  "Rev": "6",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Dapato banking Trojan variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:21; http_uri; content:\"/pics/_vti_cnf/00.inf\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/ebcff32473d032041bd69e9599fbff4ad295128003f76d1f452ba7cb6e2d20d4/analysis/1364314446/; classtype:trojan-activity; sid:26264; rev:6;"
+	"GID": "1",
+	"SID": "26264",
+	"Rev": "6",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Dapato banking Trojan variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:21; http_uri; content:\"/pics/_vti_cnf/00.inf\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/ebcff32473d032041bd69e9599fbff4ad295128003f76d1f452ba7cb6e2d20d4/analysis/1364314446/; classtype:trojan-activity; sid:26264; rev:6;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29395",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 80 ( msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:6; pkt_data; content:\"/webhp HTTP/1.1|0D 0A|Accept: */*|0D 0A|Connection: Close|0D 0A|User-Agent: Mozilla/4.0",
-  "Option": "\",fast_pattern,nocase; http_header; content:\"|3B| MSIE \"; content:\"google.\"; content:!\"Accept-\"; http_cookie; content:\"NID=\",depth 4; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/ef4e0ccc49decb41f213a20f61d92374c3b97497105d7c20e7284f65055d2ccb/analysis/; classtype:trojan-activity; sid:29395; rev:1;"
+	"GID": "1",
+	"SID": "29395",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 80 ( msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:6; pkt_data; content:\"/webhp HTTP/1.1|0D 0A|Accept: */*|0D 0A|Connection: Close|0D 0A|User-Agent: Mozilla/4.0",
+	"Option": "\",fast_pattern,nocase; http_header; content:\"|3B| MSIE \"; content:\"google.\"; content:!\"Accept-\"; http_cookie; content:\"NID=\",depth 4; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/ef4e0ccc49decb41f213a20f61d92374c3b97497105d7c20e7284f65055d2ccb/analysis/; classtype:trojan-activity; sid:29395; rev:1;"
 }

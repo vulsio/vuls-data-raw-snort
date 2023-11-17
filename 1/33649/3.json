@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "33649",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent - Google Omaha - Win.Trojan.ExtenBro\"; flow:to_server,established; http_header; content:\"User-Agent: Google Omaha|0D 0A|\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/34a3667846bbdea8dc92150e6766e3bac129a2b5fd4856c6f1512e794b90f23d/analysis/; classtype:trojan-activity; sid:33649; rev:3;"
+	"GID": "1",
+	"SID": "33649",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent - Google Omaha - Win.Trojan.ExtenBro\"; flow:to_server,established; http_header; content:\"User-Agent: Google Omaha|0D 0A|\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.virustotal.com/en/file/34a3667846bbdea8dc92150e6766e3bac129a2b5fd4856c6f1512e794b90f23d/analysis/; classtype:trojan-activity; sid:33649; rev:3;"
 }

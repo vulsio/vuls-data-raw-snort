@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1111",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-APACHE Apache Tomcat server exploit access\"; flow:to_server,established; http_uri; content:\"/contextAdmin/contextAdmin.html\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1548; reference:cve,2000-0672; reference:nessus,10477; classtype:attempted-recon; sid:1111; rev:18;"
+	"GID": "1",
+	"SID": "1111",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-APACHE Apache Tomcat server exploit access\"; flow:to_server,established; http_uri; content:\"/contextAdmin/contextAdmin.html\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1548; reference:cve,2000-0672; reference:nessus,10477; classtype:attempted-recon; sid:1111; rev:18;"
 }

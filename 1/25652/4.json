@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25652",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Kryptic variant outbound connection\"; flow:to_server,established; http_header; content:\"Accept-Language: en-us|3B 0D 0A|\"; http_client_body; content:\"wok5VLG.6\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/3ff78086c2e0fb839beeea7e4a209850c00f338005872e845155341cc30a5db5/analysis/; classtype:trojan-activity; sid:25652; rev:4;"
+	"GID": "1",
+	"SID": "25652",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Kryptic variant outbound connection\"; flow:to_server,established; http_header; content:\"Accept-Language: en-us|3B 0D 0A|\"; http_client_body; content:\"wok5VLG.6\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.virustotal.com/file/3ff78086c2e0fb839beeea7e4a209850c00f338005872e845155341cc30a5db5/analysis/; classtype:trojan-activity; sid:25652; rev:4;"
 }

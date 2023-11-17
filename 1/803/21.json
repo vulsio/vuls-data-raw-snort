@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "803",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP HyperSeek hsx.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/hsx.cgi\"; http_raw_uri; content:\"../../\"; content:\"%00\",distance 1; metadata:ruleset community; service:http; reference:bugtraq,2314; reference:cve,2001-0253; reference:nessus,10602; classtype:web-application-attack; sid:803; rev:21;"
+	"GID": "1",
+	"SID": "803",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP HyperSeek hsx.cgi directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/hsx.cgi\"; http_raw_uri; content:\"../../\"; content:\"%00\",distance 1; metadata:ruleset community; service:http; reference:bugtraq,2314; reference:cve,2001-0253; reference:nessus,10602; classtype:web-application-attack; sid:803; rev:21;"
 }

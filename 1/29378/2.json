@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29378",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET [777,778] -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper inbound encrypted traffic\"; flow:to_client,established; isdataat:9; isdataat:!20; content:\"|05 29 00 00 00 05 29 00 00 00|\",fast_pattern,nocase; metadata:ruleset community; reference:url,www.virustotal.com/en/file/20b49af8b750a1899117827476402ccaf7095fb5b7aad2e96c8109290da453cb/analysis/; reference:url,www.virustotal.com/en/file/559e8dbe388c8c103996b208eb5532e295da717f84b4a7ddf5c9885de8115606/analysis/; classtype:trojan-activity; sid:29378; rev:2;"
+	"GID": "1",
+	"SID": "29378",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET [777,778] -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper inbound encrypted traffic\"; flow:to_client,established; isdataat:9; isdataat:!20; content:\"|05 29 00 00 00 05 29 00 00 00|\",fast_pattern,nocase; metadata:ruleset community; reference:url,www.virustotal.com/en/file/20b49af8b750a1899117827476402ccaf7095fb5b7aad2e96c8109290da453cb/analysis/; reference:url,www.virustotal.com/en/file/559e8dbe388c8c103996b208eb5532e295da717f84b4a7ddf5c9885de8115606/analysis/; classtype:trojan-activity; sid:29378; rev:2;"
 }

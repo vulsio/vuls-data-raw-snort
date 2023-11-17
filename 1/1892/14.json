@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1892",
-  "Rev": "14",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161",
-  "Option": "msg:\"PROTOCOL-SNMP null community string attempt\"; content:\"|04 01 00|\",depth 15,offset 5; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,2112; reference:bugtraq,8974; reference:cve,1999-0517; classtype:misc-attack; sid:1892; rev:14;"
+	"GID": "1",
+	"SID": "1892",
+	"Rev": "14",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 161",
+	"Option": "msg:\"PROTOCOL-SNMP null community string attempt\"; content:\"|04 01 00|\",depth 15,offset 5; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,2112; reference:bugtraq,8974; reference:cve,1999-0517; classtype:misc-attack; sid:1892; rev:14;"
 }

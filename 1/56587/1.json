@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "56587",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Backdoor.SSLBeacon variant certificate exchange attempt\"; flow:to_client,established; ssl_state:server_hello; content:\"ajax.microsoft.com\",fast_pattern,nocase; content:\"Information Technologies\",nocase; content:\"Microsoft\",nocase; content:\"Seattle\",nocase; content:\"WA\",nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ssl; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56587; rev:1;"
+	"GID": "1",
+	"SID": "56587",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET 443 -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Backdoor.SSLBeacon variant certificate exchange attempt\"; flow:to_client,established; ssl_state:server_hello; content:\"ajax.microsoft.com\",fast_pattern,nocase; content:\"Information Technologies\",nocase; content:\"Microsoft\",nocase; content:\"Seattle\",nocase; content:\"WA\",nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ssl; reference:url,fireeye.com/blog/threat-research/2020/12/unauthorized-access-of-fireeye-red-team-tools.html; classtype:trojan-activity; sid:56587; rev:1;"
 }

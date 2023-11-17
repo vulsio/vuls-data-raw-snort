@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "47415",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Osx.Trojan.Calisto outbound connection\"; flow:to_server,established; http_uri; content:\"/calisto/listenyee.php\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/en/file/81c127c3cceaf44df10bb3ceb20ce1774f6a9ead0db4bd991abf39db828661cc/analysis/; classtype:trojan-activity; sid:47415; rev:1;"
+	"GID": "1",
+	"SID": "47415",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Osx.Trojan.Calisto outbound connection\"; flow:to_server,established; http_uri; content:\"/calisto/listenyee.php\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,virustotal.com/en/file/81c127c3cceaf44df10bb3ceb20ce1774f6a9ead0db4bd991abf39db828661cc/analysis/; classtype:trojan-activity; sid:47415; rev:1;"
 }

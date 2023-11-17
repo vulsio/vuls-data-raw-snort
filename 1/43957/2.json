@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "43957",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Ubiquiti Networks UniFi Cloud Key Firm v0.6.1 Host Remote Command Execution attempt\"; flow:to_server,established; http_uri; bufferlen:11; content:\"/api/status\",fast_pattern,nocase; http_header; pcre:\"/^Host\\x3A[^\\x0a]*?([\\x60\\x3b\\x7c]|[\\x3c\\x3e\\x24]\\x28|%60|%3b|%7c|%26|%3c%28|%3e%28|%24%28)/im\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,cxsecurity.com/issue/WLB-2017080038; classtype:web-application-attack; sid:43957; rev:2;"
+	"GID": "1",
+	"SID": "43957",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Ubiquiti Networks UniFi Cloud Key Firm v0.6.1 Host Remote Command Execution attempt\"; flow:to_server,established; http_uri; bufferlen:11; content:\"/api/status\",fast_pattern,nocase; http_header; pcre:\"/^Host\\x3A[^\\x0a]*?([\\x60\\x3b\\x7c]|[\\x3c\\x3e\\x24]\\x28|%60|%3b|%7c|%26|%3c%28|%3e%28|%24%28)/im\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,cxsecurity.com/issue/WLB-2017080038; classtype:web-application-attack; sid:43957; rev:2;"
 }

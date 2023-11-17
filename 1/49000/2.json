@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "49000",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 20256",
-  "Option": "msg:\"PROTOCOL-SCADA PCOM Stop Device ASCII request \"; flow:to_server,established; byte_test:1,=,101,2; content:\"CCS\",depth 3,offset 9; metadata:policy max-detect-ips drop,ruleset community; reference:url,unitronicsplc.com; classtype:attempted-dos; sid:49000; rev:2;"
+	"GID": "1",
+	"SID": "49000",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 20256",
+	"Option": "msg:\"PROTOCOL-SCADA PCOM Stop Device ASCII request \"; flow:to_server,established; byte_test:1,=,101,2; content:\"CCS\",depth 3,offset 9; metadata:policy max-detect-ips drop,ruleset community; reference:url,unitronicsplc.com; classtype:attempted-dos; sid:49000; rev:2;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "326",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
-  "Option": "msg:\"PROTOCOL-FINGER remote command execution attempt\"; flow:to_server,established; content:\"|3B|\"; metadata:ruleset community; reference:bugtraq,974; reference:cve,1999-0150; classtype:attempted-user; sid:326; rev:15;"
+	"GID": "1",
+	"SID": "326",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
+	"Option": "msg:\"PROTOCOL-FINGER remote command execution attempt\"; flow:to_server,established; content:\"|3B|\"; metadata:ruleset community; reference:bugtraq,974; reference:cve,1999-0150; classtype:attempted-user; sid:326; rev:15;"
 }

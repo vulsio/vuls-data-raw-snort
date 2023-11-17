@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "51671",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Silence variant outbound connection detected\"; flow:to_server,established; http_uri; content:\"/showthread.php?yz=\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/gui/file/793b0dea13a1934f3a81d348ca8cb033da908a74feed5a37a3ccc9cb08cf31f1/detection; classtype:trojan-activity; sid:51671; rev:1;"
+	"GID": "1",
+	"SID": "51671",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Silence variant outbound connection detected\"; flow:to_server,established; http_uri; content:\"/showthread.php?yz=\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/gui/file/793b0dea13a1934f3a81d348ca8cb033da908a74feed5a37a3ccc9cb08cf31f1/detection; classtype:trojan-activity; sid:51671; rev:1;"
 }

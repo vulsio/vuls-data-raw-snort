@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26723",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Trojan Downloader7\"; flow:to_server,established; content:\".lavaibrasilok.com|0D 0A 0D 0A|\",fast_pattern,nocase; http_header; content:\"|3B| MSIE \"; content:!\"Accept-Language:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.drwebhk.com/en/virus_techinfo/Trojan.DownLoader7.25647.html; classtype:trojan-activity; sid:26723; rev:2;"
+	"GID": "1",
+	"SID": "26723",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Trojan Downloader7\"; flow:to_server,established; content:\".lavaibrasilok.com|0D 0A 0D 0A|\",fast_pattern,nocase; http_header; content:\"|3B| MSIE \"; content:!\"Accept-Language:\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.drwebhk.com/en/virus_techinfo/Trojan.DownLoader7.25647.html; classtype:trojan-activity; sid:26723; rev:2;"
 }

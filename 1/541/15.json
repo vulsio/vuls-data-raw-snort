@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "541",
-  "Rev": "15",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"POLICY-SOCIAL ICQ access\"; flow:to_server,established; content:\"User-Agent|3A|ICQ\",fast_pattern,nocase; metadata:ruleset community; classtype:policy-violation; sid:541; rev:15;"
+	"GID": "1",
+	"SID": "541",
+	"Rev": "15",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"POLICY-SOCIAL ICQ access\"; flow:to_server,established; content:\"User-Agent|3A|ICQ\",fast_pattern,nocase; metadata:ruleset community; classtype:policy-violation; sid:541; rev:15;"
 }

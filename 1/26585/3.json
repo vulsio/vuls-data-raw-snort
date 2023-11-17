@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26585",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE config.inc.php in iframe\"; flow:to_client,established; file_data; content:\"<iframe\"; content:\"config.inc.php\",within 100; content:\"</iframe>\",distance 0; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2013/05/auto-generated-iframes-to-blackhole-exploit-kit-following-the-cookie-trail.html; classtype:trojan-activity; sid:26585; rev:3;"
+	"GID": "1",
+	"SID": "26585",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE config.inc.php in iframe\"; flow:to_client,established; file_data; content:\"<iframe\"; content:\"config.inc.php\",within 100; content:\"</iframe>\",distance 0; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,blog.sucuri.net/2013/05/auto-generated-iframes-to-blackhole-exploit-kit-following-the-cookie-trail.html; classtype:trojan-activity; sid:26585; rev:3;"
 }

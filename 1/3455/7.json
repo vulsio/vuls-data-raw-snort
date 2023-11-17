@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3455",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 5001",
-  "Option": "msg:\"SERVER-OTHER Bontago Game Server Nickname buffer overflow\"; flow:to_server,established; content:\"|FF 01 00 00 00 00 01|\"; isdataat:512,relative; metadata:ruleset community; reference:bugtraq,12603; reference:cve,2005-0501; reference:url,aluigi.altervista.org/adv/bontagobof-adv.txt; classtype:attempted-user; sid:3455; rev:7;"
+	"GID": "1",
+	"SID": "3455",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 5001",
+	"Option": "msg:\"SERVER-OTHER Bontago Game Server Nickname buffer overflow\"; flow:to_server,established; content:\"|FF 01 00 00 00 00 01|\"; isdataat:512,relative; metadata:ruleset community; reference:bugtraq,12603; reference:cve,2005-0501; reference:url,aluigi.altervista.org/adv/bontagobof-adv.txt; classtype:attempted-user; sid:3455; rev:7;"
 }

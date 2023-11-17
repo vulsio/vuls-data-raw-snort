@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1997",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP read_body.php access attempt\"; flow:to_server,established; http_uri; content:\"/read_body.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6302; reference:cve,2002-1341; reference:nessus,11415; classtype:web-application-activity; sid:1997; rev:13;"
+	"GID": "1",
+	"SID": "1997",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP read_body.php access attempt\"; flow:to_server,established; http_uri; content:\"/read_body.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6302; reference:cve,2002-1341; reference:nessus,11415; classtype:web-application-activity; sid:1997; rev:13;"
 }

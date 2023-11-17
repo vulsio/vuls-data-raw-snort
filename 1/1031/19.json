@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1031",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS /SiteServer/Publishing/viewcode.asp access\"; flow:to_server,established; http_uri; content:\"/SiteServer/Publishing/viewcode.asp\",nocase; metadata:ruleset community; service:http; reference:nessus,10576; classtype:web-application-activity; sid:1031; rev:19;"
+	"GID": "1",
+	"SID": "1031",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS /SiteServer/Publishing/viewcode.asp access\"; flow:to_server,established; http_uri; content:\"/SiteServer/Publishing/viewcode.asp\",nocase; metadata:ruleset community; service:http; reference:nessus,10576; classtype:web-application-activity; sid:1031; rev:19;"
 }

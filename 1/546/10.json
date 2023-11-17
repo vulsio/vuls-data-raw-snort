@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "546",
-  "Rev": "10",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"INDICATOR-COMPROMISE FTP 'CWD  ' possible warez site\"; flow:to_server,established; content:\"CWD  \",depth 5,nocase; metadata:ruleset community; service:ftp; classtype:misc-activity; sid:546; rev:10;"
+	"GID": "1",
+	"SID": "546",
+	"Rev": "10",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"INDICATOR-COMPROMISE FTP 'CWD  ' possible warez site\"; flow:to_server,established; content:\"CWD  \",depth 5,nocase; metadata:ruleset community; service:ftp; classtype:misc-activity; sid:546; rev:10;"
 }

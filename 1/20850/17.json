@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "20850",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
-  "Option": "msg:\"FILE-IDENTIFY Microsoft Windows EMF metafile file attachment detected\"; flow:to_client,established; content:\".emf\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2eemf/i\"; flowbits:set,file.emf; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap,pop3; classtype:misc-activity; sid:20850; rev:17;"
+	"GID": "1",
+	"SID": "20850",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET [110,143] -> $HOME_NET any",
+	"Option": "msg:\"FILE-IDENTIFY Microsoft Windows EMF metafile file attachment detected\"; flow:to_client,established; content:\".emf\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2eemf/i\"; flowbits:set,file.emf; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:imap,pop3; classtype:misc-activity; sid:20850; rev:17;"
 }

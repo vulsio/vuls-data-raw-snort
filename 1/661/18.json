@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "661",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"SERVER-MAIL Majordomo ifs\"; flow:to_server,established; content:\"eply-to|3A| a~.`/bin/\",fast_pattern,nocase; metadata:ruleset community; service:smtp; reference:bugtraq,2310; reference:cve,1999-0207; classtype:attempted-admin; sid:661; rev:18;"
+	"GID": "1",
+	"SID": "661",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"SERVER-MAIL Majordomo ifs\"; flow:to_server,established; content:\"eply-to|3A| a~.`/bin/\",fast_pattern,nocase; metadata:ruleset community; service:smtp; reference:bugtraq,2310; reference:cve,1999-0207; classtype:attempted-admin; sid:661; rev:18;"
 }

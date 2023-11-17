@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2033",
-  "Rev": "16",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
-  "Option": "msg:\"PROTOCOL-RPC ypserv maplist request UDP\"; flow:to_server; content:\"|00 01 86 A4|\",depth 4,offset 12; content:\"|00 00 00 0B|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,5914; reference:bugtraq,6016; reference:cve,2002-1232; reference:nessus,13976; classtype:rpc-portmap-decode; sid:2033; rev:16;"
+	"GID": "1",
+	"SID": "2033",
+	"Rev": "16",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET any",
+	"Option": "msg:\"PROTOCOL-RPC ypserv maplist request UDP\"; flow:to_server; content:\"|00 01 86 A4|\",depth 4,offset 12; content:\"|00 00 00 0B|\",within 4,distance 4; content:\"|00 00 00 00|\",depth 4,offset 4; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,5914; reference:bugtraq,6016; reference:cve,2002-1232; reference:nessus,13976; classtype:rpc-portmap-decode; sid:2033; rev:16;"
 }

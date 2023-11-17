@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1003",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS cmd? access\"; flow:to_server,established; content:\".cmd?&\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1003; rev:15;"
+	"GID": "1",
+	"SID": "1003",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS cmd? access\"; flow:to_server,established; content:\".cmd?&\",fast_pattern,nocase; metadata:ruleset community; service:http; classtype:web-application-attack; sid:1003; rev:15;"
 }

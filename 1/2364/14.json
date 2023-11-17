@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2364",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Cyboards options_form.php access\"; flow:to_server,established; http_uri; content:\"/options_form.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6597; classtype:web-application-activity; sid:2364; rev:14;"
+	"GID": "1",
+	"SID": "2364",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Cyboards options_form.php access\"; flow:to_server,established; http_uri; content:\"/options_form.php\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,6597; classtype:web-application-activity; sid:2364; rev:14;"
 }

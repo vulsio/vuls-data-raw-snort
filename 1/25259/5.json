@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25259",
-  "Rev": "5",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.BancosBanload variant outbound connection\"; flow:to_server,established; http_uri; content:\".gif\"; http_header; content:\"|0D 0A|Accept|2D|Encoding|3A 20|gzip|2C|deflateidentity|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/file/098fa9dbc519669a50fc6f3cdc8d9e4b05a6f0c32d154f515e403b54d72efff6/analysis/1357138873/; classtype:trojan-activity; sid:25259; rev:5;"
+	"GID": "1",
+	"SID": "25259",
+	"Rev": "5",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.BancosBanload variant outbound connection\"; flow:to_server,established; http_uri; content:\".gif\"; http_header; content:\"|0D 0A|Accept|2D|Encoding|3A 20|gzip|2C|deflateidentity|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/file/098fa9dbc519669a50fc6f3cdc8d9e4b05a6f0c32d154f515e403b54d72efff6/analysis/1357138873/; classtype:trojan-activity; sid:25259; rev:5;"
 }

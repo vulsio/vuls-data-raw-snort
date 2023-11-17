@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26779",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Cridex encrypted POST check-in\"; flow:to_server,established; http_uri; content:\"/cos3q/in\",fast_pattern,nocase; http_client_body; content:\".exe\",nocase; pcre:\"/\\x5f\\w{24}\\.exe/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/843ffd922b9bd902d736ddb664b578cde6e3033fa5a14b862b09045c36aa7524/analysis/1369942427/; classtype:trojan-activity; sid:26779; rev:4;"
+	"GID": "1",
+	"SID": "26779",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Cridex encrypted POST check-in\"; flow:to_server,established; http_uri; content:\"/cos3q/in\",fast_pattern,nocase; http_client_body; content:\".exe\",nocase; pcre:\"/\\x5f\\w{24}\\.exe/i\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/843ffd922b9bd902d736ddb664b578cde6e3033fa5a14b862b09045c36aa7524/analysis/1369942427/; classtype:trojan-activity; sid:26779; rev:4;"
 }

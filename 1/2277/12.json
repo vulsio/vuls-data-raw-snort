@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2277",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP PeopleSoft PeopleBooks psdoccgi access\"; flow:to_server,established; http_uri; content:\"/psdoccgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9037; reference:bugtraq,9038; reference:cve,2003-0626; reference:cve,2003-0627; classtype:web-application-activity; sid:2277; rev:12;"
+	"GID": "1",
+	"SID": "2277",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP PeopleSoft PeopleBooks psdoccgi access\"; flow:to_server,established; http_uri; content:\"/psdoccgi\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,9037; reference:bugtraq,9038; reference:cve,2003-0626; reference:cve,2003-0627; classtype:web-application-activity; sid:2277; rev:12;"
 }

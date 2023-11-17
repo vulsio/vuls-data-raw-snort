@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "827",
-  "Rev": "21",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP info2www access\"; flow:to_server,established; http_uri; content:\"/info2www\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1995; reference:cve,1999-0266; reference:nessus,10127; classtype:attempted-recon; sid:827; rev:21;"
+	"GID": "1",
+	"SID": "827",
+	"Rev": "21",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP info2www access\"; flow:to_server,established; http_uri; content:\"/info2www\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1995; reference:cve,1999-0266; reference:nessus,10127; classtype:attempted-recon; sid:827; rev:21;"
 }

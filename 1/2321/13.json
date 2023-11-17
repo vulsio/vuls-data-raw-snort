@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2321",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS foxweb.exe access\"; flow:to_server,established; http_uri; content:\"/foxweb.exe\",nocase; metadata:ruleset community; service:http; reference:nessus,11939; classtype:web-application-activity; sid:2321; rev:13;"
+	"GID": "1",
+	"SID": "2321",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS foxweb.exe access\"; flow:to_server,established; http_uri; content:\"/foxweb.exe\",nocase; metadata:ruleset community; service:http; reference:nessus,11939; classtype:web-application-activity; sid:2321; rev:13;"
 }

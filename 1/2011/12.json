@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2011",
-  "Rev": "12",
-  "Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
-  "Option": "msg:\"INDICATOR-COMPROMISE CVS invalid directory response\"; flow:to_client,established; content:\"E protocol error|3A| invalid directory syntax in\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,6650; reference:cve,2003-0015; reference:nessus,11385; classtype:misc-attack; sid:2011; rev:12;"
+	"GID": "1",
+	"SID": "2011",
+	"Rev": "12",
+	"Header": "alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any",
+	"Option": "msg:\"INDICATOR-COMPROMISE CVS invalid directory response\"; flow:to_client,established; content:\"E protocol error|3A| invalid directory syntax in\",fast_pattern,nocase; metadata:ruleset community; reference:bugtraq,6650; reference:cve,2003-0015; reference:nessus,11385; classtype:misc-attack; sid:2011; rev:12;"
 }

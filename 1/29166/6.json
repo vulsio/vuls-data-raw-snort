@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "29166",
-  "Rev": "6",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"EXPLOIT-KIT CritX exploit kit payload download attempt\"; flow:to_server,established; http_uri; content:\"/loadmsie.php?id=\",fast_pattern,nocase; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; classtype:trojan-activity; sid:29166; rev:6;"
+	"GID": "1",
+	"SID": "29166",
+	"Rev": "6",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"EXPLOIT-KIT CritX exploit kit payload download attempt\"; flow:to_server,established; http_uri; content:\"/loadmsie.php?id=\",fast_pattern,nocase; flowbits:set,file.exploit_kit.pe; metadata:ruleset community; service:http; classtype:trojan-activity; sid:29166; rev:6;"
 }

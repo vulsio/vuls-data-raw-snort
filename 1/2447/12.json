@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2447",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ServletManager access\"; flow:to_server,established; http_uri; content:\"/servlet/ServletManager\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3697; reference:cve,2001-1195; reference:nessus,12122; classtype:web-application-activity; sid:2447; rev:12;"
+	"GID": "1",
+	"SID": "2447",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ServletManager access\"; flow:to_server,established; http_uri; content:\"/servlet/ServletManager\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,3697; reference:cve,2001-1195; reference:nessus,12122; classtype:web-application-activity; sid:2447; rev:12;"
 }

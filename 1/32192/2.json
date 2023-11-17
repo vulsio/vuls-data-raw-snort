@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32192",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zxshell variant outbound connection\"; flow:to_server,established; content:\"|20|OS|3A 20|\"; content:\"|20|CPU|3A|\",distance 0; content:\"Hz,RAM|3A|\",distance 0; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/547044cb73f1c18ccd92cd28afded37756f749a9338ed7c04306c1de46889d6b/analysis/; classtype:trojan-activity; sid:32192; rev:2;"
+	"GID": "1",
+	"SID": "32192",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zxshell variant outbound connection\"; flow:to_server,established; content:\"|20|OS|3A 20|\"; content:\"|20|CPU|3A|\",distance 0; content:\"Hz,RAM|3A|\",distance 0; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/547044cb73f1c18ccd92cd28afded37756f749a9338ed7c04306c1de46889d6b/analysis/; classtype:trojan-activity; sid:32192; rev:2;"
 }

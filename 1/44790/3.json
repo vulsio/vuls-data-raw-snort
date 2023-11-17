@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "44790",
-  "Rev": "3",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP MikroTik RouterOS cross site request forgery attempt\"; flow:to_server,established; http_uri; content:\"/cfg\",fast_pattern,nocase; content:\"process=password\",nocase; content:\"password1=\",nocase; content:\"password2=\",nocase; content:\"button=\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,73013; reference:cve,2015-2350; classtype:policy-violation; sid:44790; rev:3;"
+	"GID": "1",
+	"SID": "44790",
+	"Rev": "3",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP MikroTik RouterOS cross site request forgery attempt\"; flow:to_server,established; http_uri; content:\"/cfg\",fast_pattern,nocase; content:\"process=password\",nocase; content:\"password1=\",nocase; content:\"password2=\",nocase; content:\"button=\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,73013; reference:cve,2015-2350; classtype:policy-violation; sid:44790; rev:3;"
 }

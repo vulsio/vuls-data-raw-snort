@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "27648",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.SpyBanker.ZSL variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_client_body; content:\"valor=\",depth 6; content:\"]branco[\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/709fa674b301e9123fc2c01e817da21cb29cdfb5a42634a793e27c9533d335b1/analysis/1375811416/; classtype:trojan-activity; sid:27648; rev:4;"
+	"GID": "1",
+	"SID": "27648",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.SpyBanker.ZSL variant outbound connection\"; flow:to_server,established; http_method; content:\"POST\"; http_client_body; content:\"valor=\",depth 6; content:\"]branco[\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/709fa674b301e9123fc2c01e817da21cb29cdfb5a42634a793e27c9533d335b1/analysis/1375811416/; classtype:trojan-activity; sid:27648; rev:4;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34917",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET 21 -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Critroni certificate exchange\"; flow:to_client,established; content:\"|00 D3 62 47 DA 62 4A A1 34|\"; content:\"|3B 02 49 86 4B DF D7 D7 6C E2 2F 36 81 01 24 3F|\",within 400; metadata:impact_flag red,ruleset community; service:ssl; reference:url,www.virustotal.com/en/file/af7a9f581653394955bec5cf10a7dbafbf64f42d09918807274b5d25849a1251/analysis/; classtype:trojan-activity; sid:34917; rev:2;"
+	"GID": "1",
+	"SID": "34917",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET 21 -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Critroni certificate exchange\"; flow:to_client,established; content:\"|00 D3 62 47 DA 62 4A A1 34|\"; content:\"|3B 02 49 86 4B DF D7 D7 6C E2 2F 36 81 01 24 3F|\",within 400; metadata:impact_flag red,ruleset community; service:ssl; reference:url,www.virustotal.com/en/file/af7a9f581653394955bec5cf10a7dbafbf64f42d09918807274b5d25849a1251/analysis/; classtype:trojan-activity; sid:34917; rev:2;"
 }

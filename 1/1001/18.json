@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1001",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP carbo.dll access\"; flow:to_server,established; http_uri; content:\"/carbo.dll\"; pkt_data; content:\"icatcommand=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2126; reference:cve,1999-1069; classtype:attempted-recon; sid:1001; rev:18;"
+	"GID": "1",
+	"SID": "1001",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP carbo.dll access\"; flow:to_server,established; http_uri; content:\"/carbo.dll\"; pkt_data; content:\"icatcommand=\",nocase; metadata:ruleset community; service:http; reference:bugtraq,2126; reference:cve,1999-1069; classtype:attempted-recon; sid:1001; rev:18;"
 }

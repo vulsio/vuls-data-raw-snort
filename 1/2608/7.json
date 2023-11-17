@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2608",
-  "Rev": "7",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE sysdbms_repcat_rgt.check_ddl_text buffer overflow attempt\"; flow:to_server,established; content:\"sysdbms_repcat_rgt.check_ddl_text\",nocase; pcre:\"/\\(\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})/is\"; metadata:ruleset community; reference:url,www.appsecinc.com/Policy/PolicyCheck97.html; classtype:attempted-user; sid:2608; rev:7;"
+	"GID": "1",
+	"SID": "2608",
+	"Rev": "7",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE sysdbms_repcat_rgt.check_ddl_text buffer overflow attempt\"; flow:to_server,established; content:\"sysdbms_repcat_rgt.check_ddl_text\",nocase; pcre:\"/\\(\\s*(\\x27[^\\x27]{1024,}|\\x22[^\\x22]{1024,})/is\"; metadata:ruleset community; reference:url,www.appsecinc.com/Policy/PolicyCheck97.html; classtype:attempted-user; sid:2608; rev:7;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28976",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Agent.DF - Data Exfiltration\"; flow:to_server,established; http_client_body; content:\"|3B| name=|22|arquivo|22 3B| filename=|22|C:|5C|\",fast_pattern,nocase; content:\"|0D 0A|TP=\"; content:\"|0D 0A|LGSN=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1020; reference:url,www.virustotal.com/en/file/b9587fc86f1459ccf7b096b6bf68b4fcc165946a86f3ed9ce84c61907aa99dae/analysis/1386599712/; classtype:trojan-activity; sid:28976; rev:3;"
+	"GID": "1",
+	"SID": "28976",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Agent.DF - Data Exfiltration\"; flow:to_server,established; http_client_body; content:\"|3B| name=|22|arquivo|22 3B| filename=|22|C:|5C|\",fast_pattern,nocase; content:\"|0D 0A|TP=\"; content:\"|0D 0A|LGSN=\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1020; reference:url,www.virustotal.com/en/file/b9587fc86f1459ccf7b096b6bf68b4fcc165946a86f3ed9ce84c61907aa99dae/analysis/1386599712/; classtype:trojan-activity; sid:28976; rev:3;"
 }

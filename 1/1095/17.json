@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1095",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Talentsoft Web+ Source Code view access\"; flow:to_server,established; http_uri; content:\"/webplus.exe?\",nocase; content:\"script=test.wml\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,1722; reference:url,archives.neohapsis.com/archives/ntbugtraq/2000-q3/0168.html; classtype:web-application-attack; sid:1095; rev:17;"
+	"GID": "1",
+	"SID": "1095",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Talentsoft Web+ Source Code view access\"; flow:to_server,established; http_uri; content:\"/webplus.exe?\",nocase; content:\"script=test.wml\",distance 0,nocase; metadata:ruleset community; service:http; reference:bugtraq,1722; reference:url,archives.neohapsis.com/archives/ntbugtraq/2000-q3/0168.html; classtype:web-application-attack; sid:1095; rev:17;"
 }

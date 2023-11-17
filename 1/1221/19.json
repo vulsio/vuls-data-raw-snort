@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1221",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Muscat Empower cgi access\"; flow:to_server,established; http_uri; content:\"/empower?DB\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2374; reference:cve,2001-0224; reference:nessus,10609; classtype:web-application-activity; sid:1221; rev:19;"
+	"GID": "1",
+	"SID": "1221",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Muscat Empower cgi access\"; flow:to_server,established; http_uri; content:\"/empower?DB\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,2374; reference:cve,2001-0224; reference:nessus,10609; classtype:web-application-activity; sid:1221; rev:19;"
 }

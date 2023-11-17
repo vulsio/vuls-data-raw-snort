@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30261",
-  "Rev": "8",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"PUA-ADWARE Lucky Leap Adware outbound connection\"; flow:to_server,established; http_uri; content:\"/gdi?alpha=\",fast_pattern,nocase; pkt_data; content:\"|0D 0A|Cache-Control: no-store,no-cache|0D 0A|Pragma: no-cache|0D 0A|Connection: Keep-Alive|0D 0A 0D 0A|\"; http_header; content:!\"Accept\"; content:!\"User-Agent:\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/43c6fb02baf800b3ab3d8f35167c37dced8ef3244691e70499a7a9243068c016/analysis/1395425759/; classtype:trojan-activity; sid:30261; rev:8;"
+	"GID": "1",
+	"SID": "30261",
+	"Rev": "8",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"PUA-ADWARE Lucky Leap Adware outbound connection\"; flow:to_server,established; http_uri; content:\"/gdi?alpha=\",fast_pattern,nocase; pkt_data; content:\"|0D 0A|Cache-Control: no-store,no-cache|0D 0A|Pragma: no-cache|0D 0A|Connection: Keep-Alive|0D 0A 0D 0A|\"; http_header; content:!\"Accept\"; content:!\"User-Agent:\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/en/file/43c6fb02baf800b3ab3d8f35167c37dced8ef3244691e70499a7a9243068c016/analysis/1395425759/; classtype:trojan-activity; sid:30261; rev:8;"
 }

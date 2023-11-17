@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "23492",
-  "Rev": "6",
-  "Header": "alert udp $HOME_NET any -> $EXTERNAL_NET 53",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess outbound connection\"; flow:to_server; dsize:20; content:\"|9E 98|\",depth 2,offset 6; metadata:ruleset community; reference:url,www.virustotal.com/file/50cdd9f6c5629630c8d8a3a4fe7d929d3c6463b2f9407d9a90703047e7db7ff9/analysis/; classtype:trojan-activity; sid:23492; rev:6;"
+	"GID": "1",
+	"SID": "23492",
+	"Rev": "6",
+	"Header": "alert udp $HOME_NET any -> $EXTERNAL_NET 53",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.ZeroAccess outbound connection\"; flow:to_server; dsize:20; content:\"|9E 98|\",depth 2,offset 6; metadata:ruleset community; reference:url,www.virustotal.com/file/50cdd9f6c5629630c8d8a3a4fe7d929d3c6463b2f9407d9a90703047e7db7ff9/analysis/; classtype:trojan-activity; sid:23492; rev:6;"
 }

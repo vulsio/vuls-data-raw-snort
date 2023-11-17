@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3459",
-  "Rev": "9",
-  "Header": "alert udp $HOME_NET any -> $EXTERNAL_NET 41170",
-  "Option": "msg:\"PUA-P2P Manolito Search Query\"; flow:to_server; content:\"|01 02 00 14|\",depth 4,offset 16; metadata:ruleset community; reference:url,openlito.sourceforge.net; reference:url,www.blubster.com; classtype:policy-violation; sid:3459; rev:9;"
+	"GID": "1",
+	"SID": "3459",
+	"Rev": "9",
+	"Header": "alert udp $HOME_NET any -> $EXTERNAL_NET 41170",
+	"Option": "msg:\"PUA-P2P Manolito Search Query\"; flow:to_server; content:\"|01 02 00 14|\",depth 4,offset 16; metadata:ruleset community; reference:url,openlito.sourceforge.net; reference:url,www.blubster.com; classtype:policy-violation; sid:3459; rev:9;"
 }

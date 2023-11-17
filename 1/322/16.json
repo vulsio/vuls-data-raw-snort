@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "322",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
-  "Option": "msg:\"PROTOCOL-FINGER search query\"; flow:to_server,established; content:\"search\"; metadata:ruleset community; reference:cve,1999-0259; classtype:attempted-recon; sid:322; rev:16;"
+	"GID": "1",
+	"SID": "322",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 79",
+	"Option": "msg:\"PROTOCOL-FINGER search query\"; flow:to_server,established; content:\"search\"; metadata:ruleset community; reference:cve,1999-0259; classtype:attempted-recon; sid:322; rev:16;"
 }

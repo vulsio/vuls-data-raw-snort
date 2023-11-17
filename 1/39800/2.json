@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "39800",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Hancitor variant outbound connection\"; flow:to_server,established; http_uri; content:\"/gate.php\",fast_pattern,nocase; http_client_body; content:\"GUID=\",depth 122; content:\"BUILD=\",depth 122; content:\"INFO=\",depth 122; content:\"IP=\",depth 122; content:\"TYPE=\",depth 122; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/5ec4ba1a97500e664af6896f4c02846ca6777e671bb600103dc8d49224e38f48/analysis/1469201551/; classtype:trojan-activity; sid:39800; rev:2;"
+	"GID": "1",
+	"SID": "39800",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Hancitor variant outbound connection\"; flow:to_server,established; http_uri; content:\"/gate.php\",fast_pattern,nocase; http_client_body; content:\"GUID=\",depth 122; content:\"BUILD=\",depth 122; content:\"INFO=\",depth 122; content:\"IP=\",depth 122; content:\"TYPE=\",depth 122; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/5ec4ba1a97500e664af6896f4c02846ca6777e671bb600103dc8d49224e38f48/analysis/1469201551/; classtype:trojan-activity; sid:39800; rev:2;"
 }

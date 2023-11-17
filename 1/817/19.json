@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "817",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP dcboard.cgi invalid user addition attempt\"; flow:to_server,established; http_uri; content:\"/dcboard.cgi\"; pkt_data; content:\"command=register\"; content:\"%7cadmin\"; metadata:ruleset community; service:http; reference:bugtraq,2728; reference:cve,2001-0527; reference:nessus,10583; classtype:web-application-attack; sid:817; rev:19;"
+	"GID": "1",
+	"SID": "817",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP dcboard.cgi invalid user addition attempt\"; flow:to_server,established; http_uri; content:\"/dcboard.cgi\"; pkt_data; content:\"command=register\"; content:\"%7cadmin\"; metadata:ruleset community; service:http; reference:bugtraq,2728; reference:cve,2001-0527; reference:nessus,10583; classtype:web-application-attack; sid:817; rev:19;"
 }

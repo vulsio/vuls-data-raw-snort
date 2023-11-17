@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1420",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 162",
-  "Option": "msg:\"PROTOCOL-SNMP trap tcp\"; flow:stateless; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1420; rev:19;"
+	"GID": "1",
+	"SID": "1420",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 162",
+	"Option": "msg:\"PROTOCOL-SNMP trap tcp\"; flow:stateless; metadata:policy max-detect-ips drop,ruleset community; service:snmp; reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:1420; rev:19;"
 }

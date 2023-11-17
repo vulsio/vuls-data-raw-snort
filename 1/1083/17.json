@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1083",
-  "Rev": "17",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP unify eWave ServletExec DOS\"; flow:to_server,established; http_uri; content:\"/servlet/ServletExec\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1868; reference:cve,2000-1025; classtype:web-application-activity; sid:1083; rev:17;"
+	"GID": "1",
+	"SID": "1083",
+	"Rev": "17",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP unify eWave ServletExec DOS\"; flow:to_server,established; http_uri; content:\"/servlet/ServletExec\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1868; reference:cve,2000-1025; classtype:web-application-activity; sid:1083; rev:17;"
 }

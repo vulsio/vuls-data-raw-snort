@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "290",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
-  "Option": "msg:\"PROTOCOL-POP EXPLOIT qpopper overflow\"; flow:to_server,established; content:\"|E8 D9 FF FF FF|/bin/sh\",fast_pattern,nocase; metadata:ruleset community; service:pop3; reference:bugtraq,830; reference:cve,1999-0822; reference:nessus,10184; classtype:attempted-admin; sid:290; rev:16;"
+	"GID": "1",
+	"SID": "290",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
+	"Option": "msg:\"PROTOCOL-POP EXPLOIT qpopper overflow\"; flow:to_server,established; content:\"|E8 D9 FF FF FF|/bin/sh\",fast_pattern,nocase; metadata:ruleset community; service:pop3; reference:bugtraq,830; reference:cve,1999-0822; reference:nessus,10184; classtype:attempted-admin; sid:290; rev:16;"
 }

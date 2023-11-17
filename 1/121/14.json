@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "121",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET 1000:1300 -> $HOME_NET 146",
-  "Option": "msg:\"MALWARE-BACKDOOR Infector 1.6 Client to Server Connection Request\"; flow:to_server,established; content:\"FC \"; metadata:ruleset community; reference:nessus,11157; classtype:misc-activity; sid:121; rev:14;"
+	"GID": "1",
+	"SID": "121",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET 1000:1300 -> $HOME_NET 146",
+	"Option": "msg:\"MALWARE-BACKDOOR Infector 1.6 Client to Server Connection Request\"; flow:to_server,established; content:\"FC \"; metadata:ruleset community; reference:nessus,11157; classtype:misc-activity; sid:121; rev:14;"
 }

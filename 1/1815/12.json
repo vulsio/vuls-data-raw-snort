@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1815",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP directory.php arbitrary command attempt\"; flow:to_server,established; http_uri; content:\"/directory.php\"; pkt_data; content:\"dir=\"; content:\"|3B|\"; metadata:ruleset community; service:http; reference:bugtraq,4278; reference:cve,2002-0434; reference:nessus,11017; classtype:misc-attack; sid:1815; rev:12;"
+	"GID": "1",
+	"SID": "1815",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP directory.php arbitrary command attempt\"; flow:to_server,established; http_uri; content:\"/directory.php\"; pkt_data; content:\"dir=\"; content:\"|3B|\"; metadata:ruleset community; service:http; reference:bugtraq,4278; reference:cve,2002-0434; reference:nessus,11017; classtype:misc-attack; sid:1815; rev:12;"
 }

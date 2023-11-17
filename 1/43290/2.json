@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "43290",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP /ws_ftp.log file access attempt\"; flow:to_server,established; http_uri; content:\"/ws_ftp.log\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:43290; rev:2;"
+	"GID": "1",
+	"SID": "43290",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP /ws_ftp.log file access attempt\"; flow:to_server,established; http_uri; content:\"/ws_ftp.log\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; classtype:attempted-recon; sid:43290; rev:2;"
 }

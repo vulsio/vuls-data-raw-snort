@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "215",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
-  "Option": "msg:\"MALWARE-BACKDOOR MISC Linux rootkit attempt\"; flow:to_server,established; content:\"d13hh[\",nocase; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1014; classtype:attempted-admin; sid:215; rev:9;"
+	"GID": "1",
+	"SID": "215",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET any -> $TELNET_SERVERS 23",
+	"Option": "msg:\"MALWARE-BACKDOOR MISC Linux rootkit attempt\"; flow:to_server,established; content:\"d13hh[\",nocase; metadata:ruleset community; reference:url,attack.mitre.org/techniques/T1014; classtype:attempted-admin; sid:215; rev:9;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26526",
-  "Rev": "6",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"EXPLOIT-KIT Portable Executable downloaded with bad DOS stub\"; flow:to_client,established; file_data; content:\"MZ\",depth 2; content:\"|2F 2A 14 20|\",distance 0; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:cve,2013-2423; reference:url,www.invincea.com/2013/04/k-i-a-java-cve-2013-2423-via-new-and-improved-cool-ek/; classtype:trojan-activity; sid:26526; rev:6;"
+	"GID": "1",
+	"SID": "26526",
+	"Rev": "6",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"EXPLOIT-KIT Portable Executable downloaded with bad DOS stub\"; flow:to_client,established; file_data; content:\"MZ\",depth 2; content:\"|2F 2A 14 20|\",distance 0; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:cve,2013-2423; reference:url,www.invincea.com/2013/04/k-i-a-java-cve-2013-2423-via-new-and-improved-cool-ek/; classtype:trojan-activity; sid:26526; rev:6;"
 }

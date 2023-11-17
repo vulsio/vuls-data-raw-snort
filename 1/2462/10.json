@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2462",
-  "Rev": "10",
-  "Header": "alert ip any any -> any any",
-  "Option": "msg:\"SERVER-OTHER Ethereal IGMP IGAP account overflow attempt\"; ip_proto:2; byte_test:1,>,63,0; byte_test:1,<,67,0; byte_test:1,>,16,12; metadata:ruleset community; reference:bugtraq,9952; reference:cve,2004-0176; reference:cve,2004-0367; classtype:attempted-admin; sid:2462; rev:10;"
+	"GID": "1",
+	"SID": "2462",
+	"Rev": "10",
+	"Header": "alert ip any any -> any any",
+	"Option": "msg:\"SERVER-OTHER Ethereal IGMP IGAP account overflow attempt\"; ip_proto:2; byte_test:1,>,63,0; byte_test:1,<,67,0; byte_test:1,>,16,12; metadata:ruleset community; reference:bugtraq,9952; reference:cve,2004-0176; reference:cve,2004-0367; classtype:attempted-admin; sid:2462; rev:10;"
 }

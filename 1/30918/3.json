@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "30918",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent - User-Agent User-Agent Mozilla\"; flow:to_server,established; http_header; content:\"User-Agent: User-Agent: Mozilla/\",fast_pattern,nocase; pkt_data; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/file/D67B6706559C5F7AB97CC788E668E27A29B7D2D39C9ACA93AF73778E53993339/analysis/; classtype:trojan-activity; sid:30918; rev:3;"
+	"GID": "1",
+	"SID": "30918",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC User-Agent known malicious user agent - User-Agent User-Agent Mozilla\"; flow:to_server,established; http_header; content:\"User-Agent: User-Agent: Mozilla/\",fast_pattern,nocase; pkt_data; content:!\"Accept\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/file/D67B6706559C5F7AB97CC788E668E27A29B7D2D39C9ACA93AF73778E53993339/analysis/; classtype:trojan-activity; sid:30918; rev:3;"
 }

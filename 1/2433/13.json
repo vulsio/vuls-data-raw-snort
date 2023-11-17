@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2433",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3000",
-  "Option": "msg:\"SERVER-WEBAPP MDaemon form2raw.cgi overflow attempt\"; flow:to_server,established; content:\"/form2raw.cgi\",fast_pattern,nocase; pcre:\"/\\Wfrom=[^\\x3b&\\n]{100}/is\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,9317; reference:cve,2003-1200; reference:url,secunia.com/advisories/10512/; classtype:web-application-attack; sid:2433; rev:13;"
+	"GID": "1",
+	"SID": "2433",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 3000",
+	"Option": "msg:\"SERVER-WEBAPP MDaemon form2raw.cgi overflow attempt\"; flow:to_server,established; content:\"/form2raw.cgi\",fast_pattern,nocase; pcre:\"/\\Wfrom=[^\\x3b&\\n]{100}/is\"; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,9317; reference:cve,2003-1200; reference:url,secunia.com/advisories/10512/; classtype:web-application-attack; sid:2433; rev:13;"
 }

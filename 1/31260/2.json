@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31260",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Andromeda HTTP proxy response attempt\"; flow:to_client,established; file_data; content:\"function FindProxyForURL(url, host)\",depth 35; content:\"yx0=0|3B|yx1=1|3B|yx2=2|3B|yx3=3|3B|yx4=4|3B|yx5=5|3B|yx6=6|3B|yx7=7|3B|yx8=8|3B|yx9=9|3B|lit=|22 22|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.exposedbotnets.com/2013/06/localmworg-andromeda-http-botnet-hosted.html; classtype:trojan-activity; sid:31260; rev:2;"
+	"GID": "1",
+	"SID": "31260",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Andromeda HTTP proxy response attempt\"; flow:to_client,established; file_data; content:\"function FindProxyForURL(url, host)\",depth 35; content:\"yx0=0|3B|yx1=1|3B|yx2=2|3B|yx3=3|3B|yx4=4|3B|yx5=5|3B|yx6=6|3B|yx7=7|3B|yx8=8|3B|yx9=9|3B|lit=|22 22|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.exposedbotnets.com/2013/06/localmworg-andromeda-http-botnet-hosted.html; classtype:trojan-activity; sid:31260; rev:2;"
 }

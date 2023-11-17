@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1458",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP user_update_passwd.pl access\"; flow:to_server,established; http_uri; content:\"/user_update_passwd.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1486; reference:cve,2000-0627; classtype:attempted-recon; sid:1458; rev:18;"
+	"GID": "1",
+	"SID": "1458",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP user_update_passwd.pl access\"; flow:to_server,established; http_uri; content:\"/user_update_passwd.pl\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1486; reference:cve,2000-0627; classtype:attempted-recon; sid:1458; rev:18;"
 }

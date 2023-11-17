@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2157",
-  "Rev": "14",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS IISProtect globaladmin.asp access\"; flow:to_server,established; http_uri; content:\"/iisprotect/admin/GlobalAdmin.asp\",nocase; metadata:ruleset community; service:http; reference:nessus,11661; classtype:web-application-activity; sid:2157; rev:14;"
+	"GID": "1",
+	"SID": "2157",
+	"Rev": "14",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS IISProtect globaladmin.asp access\"; flow:to_server,established; http_uri; content:\"/iisprotect/admin/GlobalAdmin.asp\",nocase; metadata:ruleset community; service:http; reference:nessus,11661; classtype:web-application-activity; sid:2157; rev:14;"
 }

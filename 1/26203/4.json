@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26203",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Gupd variant outbound connection\"; flow:to_server,established; http_client_body; content:\"cstype=\",depth 7; content:\"&authname=\",within 48,distance 1; content:\"&authpass=\",within 48,distance 1; content:\"&hostname=\",within 48,distance 1; content:\"&ostype=\",within 256,distance 1; content:\"&macaddr=\",within 64,distance 16; content:\"&owner=\",within 48,distance 17; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0DD9018A9AF609382FABDA8E4EC86033DA83E42FEC25499C329DBDCBB00F2AF0/analysis/; classtype:trojan-activity; sid:26203; rev:4;"
+	"GID": "1",
+	"SID": "26203",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Gupd variant outbound connection\"; flow:to_server,established; http_client_body; content:\"cstype=\",depth 7; content:\"&authname=\",within 48,distance 1; content:\"&authpass=\",within 48,distance 1; content:\"&hostname=\",within 48,distance 1; content:\"&ostype=\",within 256,distance 1; content:\"&macaddr=\",within 64,distance 16; content:\"&owner=\",within 48,distance 17; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0DD9018A9AF609382FABDA8E4EC86033DA83E42FEC25499C329DBDCBB00F2AF0/analysis/; classtype:trojan-activity; sid:26203; rev:4;"
 }

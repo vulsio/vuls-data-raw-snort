@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46744",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper malicious executable download attempt\"; flow:to_client,established; http_header; content:\"Content-Type:\",nocase; content:\"application/java-vm\",within 50,fast_pattern; file_data; content:\"MZ\",depth 2; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,virustotal.com/#/file/76afa767b0374bde95d9a93074aceaec88228ba234caa13dd01313076baf02ee/detection; classtype:trojan-activity; sid:46744; rev:2;"
+	"GID": "1",
+	"SID": "46744",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Dropper malicious executable download attempt\"; flow:to_client,established; http_header; content:\"Content-Type:\",nocase; content:\"application/java-vm\",within 50,fast_pattern; file_data; content:\"MZ\",depth 2; metadata:impact_flag red,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,virustotal.com/#/file/76afa767b0374bde95d9a93074aceaec88228ba234caa13dd01313076baf02ee/detection; classtype:trojan-activity; sid:46744; rev:2;"
 }

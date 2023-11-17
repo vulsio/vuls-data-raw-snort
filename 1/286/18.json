@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "286",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
-  "Option": "msg:\"PROTOCOL-POP EXPLOIT x86 BSD overflow\"; flow:to_server,established; content:\"^|0E|1|C0 B0 3B 8D|~|0E 89 FA 89 F9|\",fast_pattern,nocase; metadata:ruleset community; service:pop3; reference:bugtraq,133; reference:cve,1999-0006; reference:nessus,10196; classtype:attempted-admin; sid:286; rev:18;"
+	"GID": "1",
+	"SID": "286",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 110",
+	"Option": "msg:\"PROTOCOL-POP EXPLOIT x86 BSD overflow\"; flow:to_server,established; content:\"^|0E|1|C0 B0 3B 8D|~|0E 89 FA 89 F9|\",fast_pattern,nocase; metadata:ruleset community; service:pop3; reference:bugtraq,133; reference:cve,1999-0006; reference:nessus,10196; classtype:attempted-admin; sid:286; rev:18;"
 }

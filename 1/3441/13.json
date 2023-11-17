@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3441",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
-  "Option": "msg:\"PROTOCOL-FTP PORT bounce attempt\"; flow:to_server,established; content:\"PORT\",nocase; pcre:\"/^PORT/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,126; reference:cve,1999-0017; reference:nessus,10081; classtype:misc-attack; sid:3441; rev:13;"
+	"GID": "1",
+	"SID": "3441",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 21",
+	"Option": "msg:\"PROTOCOL-FTP PORT bounce attempt\"; flow:to_server,established; content:\"PORT\",nocase; pcre:\"/^PORT/ims\"; metadata:policy max-detect-ips drop,ruleset community; service:ftp; reference:bugtraq,126; reference:cve,1999-0017; reference:nessus,10081; classtype:misc-attack; sid:3441; rev:13;"
 }

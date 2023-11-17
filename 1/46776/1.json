@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46776",
-  "Rev": "1",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Nagios XI command injection attempt\"; flow:to_server,established; http_uri; content:\"/nagiosxi/backend/index.php\",fast_pattern,nocase; content:\"command_data=\",nocase; http_raw_uri; content:\"%26\"; pcre:\"/[?&]command(\\x5f|%5f)data=[^&]*?%26/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2018-8734; classtype:web-application-attack; sid:46776; rev:1;"
+	"GID": "1",
+	"SID": "46776",
+	"Rev": "1",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Nagios XI command injection attempt\"; flow:to_server,established; http_uri; content:\"/nagiosxi/backend/index.php\",fast_pattern,nocase; content:\"command_data=\",nocase; http_raw_uri; content:\"%26\"; pcre:\"/[?&]command(\\x5f|%5f)data=[^&]*?%26/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:cve,2018-8734; classtype:web-application-attack; sid:46776; rev:1;"
 }

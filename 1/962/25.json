@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "962",
-  "Rev": "25",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-OTHER Microsoft Frontpage shtml.exe access\"; flow:to_server,established; http_uri; content:\"/_vti_bin/shtml.exe\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1174; reference:bugtraq,1608; reference:bugtraq,5804; reference:cve,2000-0413; reference:cve,2000-0709; reference:cve,2002-0692; reference:nessus,10405; reference:nessus,11311; classtype:web-application-activity; sid:962; rev:25;"
+	"GID": "1",
+	"SID": "962",
+	"Rev": "25",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-OTHER Microsoft Frontpage shtml.exe access\"; flow:to_server,established; http_uri; content:\"/_vti_bin/shtml.exe\",nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:bugtraq,1174; reference:bugtraq,1608; reference:bugtraq,5804; reference:cve,2000-0413; reference:cve,2000-0709; reference:cve,2002-0692; reference:nessus,10405; reference:nessus,11311; classtype:web-application-activity; sid:962; rev:25;"
 }

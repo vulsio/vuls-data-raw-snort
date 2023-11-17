@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21698",
-  "Rev": "13",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-  "Option": "msg:\"FILE-IDENTIFY SAMI file attachment detected\"; flow:to_server,established; content:\".sami\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2esami/i\"; flowbits:set,file.realplayer.playlist; flowbits:set,file.smi; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:smtp; classtype:misc-activity; sid:21698; rev:13;"
+	"GID": "1",
+	"SID": "21698",
+	"Rev": "13",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
+	"Option": "msg:\"FILE-IDENTIFY SAMI file attachment detected\"; flow:to_server,established; content:\".sami\",fast_pattern,nocase; content:\"Content-Disposition: attachment|3B|\"; content:\"filename=\",nocase; pcre:\"/filename=[^\\n]*\\x2esami/i\"; flowbits:set,file.realplayer.playlist; flowbits:set,file.smi; flowbits:noalert; metadata:policy max-detect-ips alert,ruleset community; service:smtp; classtype:misc-activity; sid:21698; rev:13;"
 }

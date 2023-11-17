@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "861",
-  "Rev": "25",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP w3-msql access\"; flow:to_server,established; http_uri; content:\"/w3-msql/\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,591; reference:bugtraq,898; reference:cve,1999-0276; reference:cve,1999-0753; reference:cve,2000-0012; reference:nessus,10296; classtype:attempted-recon; sid:861; rev:25;"
+	"GID": "1",
+	"SID": "861",
+	"Rev": "25",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP w3-msql access\"; flow:to_server,established; http_uri; content:\"/w3-msql/\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,591; reference:bugtraq,898; reference:cve,1999-0276; reference:cve,1999-0753; reference:cve,2000-0012; reference:nessus,10296; classtype:attempted-recon; sid:861; rev:25;"
 }

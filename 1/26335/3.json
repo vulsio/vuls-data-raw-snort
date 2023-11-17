@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "26335",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC FBI Ransom Trojan variant outbound connection\"; flow:to_server,established; http_uri; content:\"/nosignal.jpg?\",fast_pattern,nocase; pcre:\"/^\\x2fnosignal\\.jpg\\?\\d\\.\\d+$/\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:26335; rev:3;"
+	"GID": "1",
+	"SID": "26335",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC FBI Ransom Trojan variant outbound connection\"; flow:to_server,established; http_uri; content:\"/nosignal.jpg?\",fast_pattern,nocase; pcre:\"/^\\x2fnosignal\\.jpg\\?\\d\\.\\d+$/\"; metadata:impact_flag red,ruleset community; service:http; classtype:trojan-activity; sid:26335; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "37467",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Vawtrak variant outbound connection\"; flow:to_server,established; http_uri; content:\"/rss/feed/stream\",fast_pattern,nocase; http_client_body; content:\"|3F|\",depth 1,offset 2; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/6ADFAFFEA064A9F89064FBA300CDFCD7634CFD06802BF250FA1B070CABFBEBF5/analysis/; classtype:trojan-activity; sid:37467; rev:2;"
+	"GID": "1",
+	"SID": "37467",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Vawtrak variant outbound connection\"; flow:to_server,established; http_uri; content:\"/rss/feed/stream\",fast_pattern,nocase; http_client_body; content:\"|3F|\",depth 1,offset 2; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/6ADFAFFEA064A9F89064FBA300CDFCD7634CFD06802BF250FA1B070CABFBEBF5/analysis/; classtype:trojan-activity; sid:37467; rev:2;"
 }

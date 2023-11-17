@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25854",
-  "Rev": "6",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection - MSIE7 No Referer No Cookie\"; flow:to_server,established; http_raw_uri; bufferlen:1; http_uri; content:\"|2F|\"; http_header; pcre:\"/\\r\\nHost\\x3A\\s+[^\\r\\n]*?[bcdfghjklmnpqrstvwxyz]{5,}[^\\r\\n]*?\\x2Einfo\\r\\n/i\"; content:!\"|0A|Referer|3A|\"; content:!\"|0A|Cookie|3A|\"; content:\"|3B 20|MSIE|20|7.0|3B 20|\"; content:\"|2E|info|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/Zeus_(Trojan_horse); classtype:trojan-activity; sid:25854; rev:6;"
+	"GID": "1",
+	"SID": "25854",
+	"Rev": "6",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zeus variant outbound connection - MSIE7 No Referer No Cookie\"; flow:to_server,established; http_raw_uri; bufferlen:1; http_uri; content:\"|2F|\"; http_header; pcre:\"/\\r\\nHost\\x3A\\s+[^\\r\\n]*?[bcdfghjklmnpqrstvwxyz]{5,}[^\\r\\n]*?\\x2Einfo\\r\\n/i\"; content:!\"|0A|Referer|3A|\"; content:!\"|0A|Cookie|3A|\"; content:\"|3B 20|MSIE|20|7.0|3B 20|\"; content:\"|2E|info|0D 0A|\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,en.wikipedia.org/wiki/Zeus_(Trojan_horse); classtype:trojan-activity; sid:25854; rev:6;"
 }

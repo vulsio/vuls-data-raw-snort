@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "47567",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Zegost variant outbound connection\"; flow:to_server,established; content:\"|2A 00 00 00|\",depth 4; isdataat:37,relative; isdataat:!38,relative; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/#/file/108bbc4ff7b7da4f0de1225094964d03b19fc38b93933f739c475f08ae17915e/detection; classtype:trojan-activity; sid:47567; rev:2;"
+	"GID": "1",
+	"SID": "47567",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Zegost variant outbound connection\"; flow:to_server,established; content:\"|2A 00 00 00|\",depth 4; isdataat:37,relative; isdataat:!38,relative; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; reference:url,www.virustotal.com/#/file/108bbc4ff7b7da4f0de1225094964d03b19fc38b93933f739c475f08ae17915e/detection; classtype:trojan-activity; sid:47567; rev:2;"
 }

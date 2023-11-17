@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "41442",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
-  "Option": "msg:\"MALWARE-CNC Win.Ransomware.X-Mas outbound connection\"; flow:to_server,established; content:\"WebKitFormBoundary\"; content:\"|20|form-data|3B 20|name=|22|uid|22|\",fast_pattern; content:\"|20|form-data|3B 20|name=|22|uname|22|\",distance 0; content:\"|20|form-data|3B 20|name=|22|cname|22|\",distance 0; content:\"|20|form-data|3B 20|name=|22|ltime|22|\",distance 0; content:\"|20|form-data|3B 20|name=|22|uright|22|\",distance 0; content:\"|20|form-data|3B 20|name=|22|sysinfo|22|\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/2aa91ed4e591da10499708bde44b1f9d0000eaee9a81018cb0f36bd44844df7a/analysis/1484847335/; reference:url,virustotal.com/en/file/83a2b429b969fc5cd38b6c5072391c3513b3b914f54ea80e245b243dbd5377be/analysis/1484847306/; classtype:trojan-activity; sid:41442; rev:3;"
+	"GID": "1",
+	"SID": "41442",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443",
+	"Option": "msg:\"MALWARE-CNC Win.Ransomware.X-Mas outbound connection\"; flow:to_server,established; content:\"WebKitFormBoundary\"; content:\"|20|form-data|3B 20|name=|22|uid|22|\",fast_pattern; content:\"|20|form-data|3B 20|name=|22|uname|22|\",distance 0; content:\"|20|form-data|3B 20|name=|22|cname|22|\",distance 0; content:\"|20|form-data|3B 20|name=|22|ltime|22|\",distance 0; content:\"|20|form-data|3B 20|name=|22|uright|22|\",distance 0; content:\"|20|form-data|3B 20|name=|22|sysinfo|22|\",distance 0; metadata:impact_flag red,ruleset community; service:http; reference:url,virustotal.com/en/file/2aa91ed4e591da10499708bde44b1f9d0000eaee9a81018cb0f36bd44844df7a/analysis/1484847335/; reference:url,virustotal.com/en/file/83a2b429b969fc5cd38b6c5072391c3513b3b914f54ea80e245b243dbd5377be/analysis/1484847306/; classtype:trojan-activity; sid:41442; rev:3;"
 }

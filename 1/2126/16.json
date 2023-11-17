@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2126",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1723",
-  "Option": "msg:\"OS-WINDOWS Microsoft Windows PPTP Start Control Request buffer overflow attempt\"; flow:to_server,established,no_stream; isdataat:156; content:\"|00 01|\",depth 2,offset 2; content:\"|00 01|\",depth 2,offset 8; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,5807; reference:cve,2002-1214; reference:nessus,11178; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-063; classtype:attempted-admin; sid:2126; rev:16;"
+	"GID": "1",
+	"SID": "2126",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET 1723",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows PPTP Start Control Request buffer overflow attempt\"; flow:to_server,established,no_stream; isdataat:156; content:\"|00 01|\",depth 2,offset 2; content:\"|00 01|\",depth 2,offset 8; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,5807; reference:cve,2002-1214; reference:nessus,11178; reference:url,technet.microsoft.com/en-us/security/bulletin/MS02-063; classtype:attempted-admin; sid:2126; rev:16;"
 }

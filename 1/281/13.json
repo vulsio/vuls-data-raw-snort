@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "281",
-  "Rev": "13",
-  "Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 9",
-  "Option": "msg:\"SERVER-OTHER Ascend Route\"; flow:to_server; content:\"NAMENAME\",depth 50,offset 25; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,714; reference:cve,1999-0060; classtype:attempted-dos; sid:281; rev:13;"
+	"GID": "1",
+	"SID": "281",
+	"Rev": "13",
+	"Header": "alert udp $EXTERNAL_NET any -> $HOME_NET 9",
+	"Option": "msg:\"SERVER-OTHER Ascend Route\"; flow:to_server; content:\"NAMENAME\",depth 50,offset 25; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,714; reference:cve,1999-0060; classtype:attempted-dos; sid:281; rev:13;"
 }

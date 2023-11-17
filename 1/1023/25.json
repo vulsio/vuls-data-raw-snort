@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1023",
-  "Rev": "25",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-IIS msadcs.dll access\"; flow:to_server,established; http_uri; content:\"/msadcs.dll\",nocase; metadata:ruleset community; service:http; reference:bugtraq,529; reference:cve,1999-1011; reference:nessus,10357; reference:url,technet.microsoft.com/en-us/security/bulletin/ms99-025; classtype:web-application-activity; sid:1023; rev:25;"
+	"GID": "1",
+	"SID": "1023",
+	"Rev": "25",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-IIS msadcs.dll access\"; flow:to_server,established; http_uri; content:\"/msadcs.dll\",nocase; metadata:ruleset community; service:http; reference:bugtraq,529; reference:cve,1999-1011; reference:nessus,10357; reference:url,technet.microsoft.com/en-us/security/bulletin/ms99-025; classtype:web-application-activity; sid:1023; rev:25;"
 }

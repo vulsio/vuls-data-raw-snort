@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "46785",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Downloader.Zebrocy known malicious user-agent string\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Mozilla v5.1\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/5fab4d08348b4ef080ba91bdb0d769d31797f5092bff3b24b3c23d091fccc8a7; classtype:trojan-activity; sid:46785; rev:1;"
+	"GID": "1",
+	"SID": "46785",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Downloader.Zebrocy known malicious user-agent string\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Mozilla v5.1\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/5fab4d08348b4ef080ba91bdb0d769d31797f5092bff3b24b3c23d091fccc8a7; classtype:trojan-activity; sid:46785; rev:1;"
 }

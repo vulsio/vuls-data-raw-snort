@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "31449",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.CryptoWall downloader attempt\"; flow:to_server,established; http_raw_uri; bufferlen:<20; http_header; content:\"User-Agent|3A 20|macrotest|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/\\x2f(css|upload)\\x2f[a-z]{2}[0-9]{3}\\x2eccs/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e370c1fc6e7e289523fdf2f090edb7885f8d0de1b99be0164dafffeca9914b10/analysis/; classtype:trojan-activity; sid:31449; rev:2;"
+	"GID": "1",
+	"SID": "31449",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.CryptoWall downloader attempt\"; flow:to_server,established; http_raw_uri; bufferlen:<20; http_header; content:\"User-Agent|3A 20|macrotest|0D 0A|\",fast_pattern,nocase; http_uri; pcre:\"/\\x2f(css|upload)\\x2f[a-z]{2}[0-9]{3}\\x2eccs/\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/e370c1fc6e7e289523fdf2f090edb7885f8d0de1b99be0164dafffeca9914b10/analysis/; classtype:trojan-activity; sid:31449; rev:2;"
 }

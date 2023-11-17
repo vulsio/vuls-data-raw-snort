@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32919",
-  "Rev": "2",
-  "Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER Win.Trojan.Wiper download attempt\"; flow:to_client,established; file_data; content:\"|C9 06 D9 96 FC 37 23 5A FE F9 40 BA 4C 94 14 98|\",depth 16; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32919; rev:2;"
+	"GID": "1",
+	"SID": "32919",
+	"Rev": "2",
+	"Header": "alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-OTHER Win.Trojan.Wiper download attempt\"; flow:to_client,established; file_data; content:\"|C9 06 D9 96 FC 37 23 5A FE F9 40 BA 4C 94 14 98|\",depth 16; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; service:ftp-data,http,imap,pop3; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32919; rev:2;"
 }

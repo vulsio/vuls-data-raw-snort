@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "28859",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent z00sAgent - Win.Trojan.Zbot\"; flow:to_server,established; http_header; content:\"User-Agent|3A| z00sAgent\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0220b1071c8a0093e673d836ae436cb468b8cd1bd5873dad08351309e13af9e5/analysis/1383673331/; classtype:trojan-activity; sid:28859; rev:3;"
+	"GID": "1",
+	"SID": "28859",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC User-Agent known malicious user-agent z00sAgent - Win.Trojan.Zbot\"; flow:to_server,established; http_header; content:\"User-Agent|3A| z00sAgent\",fast_pattern,nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/0220b1071c8a0093e673d836ae436cb468b8cd1bd5873dad08351309e13af9e5/analysis/1383673331/; classtype:trojan-activity; sid:28859; rev:3;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "47177",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.NukeSped RAT variant outbound communication\"; flow:to_server,established; content:\"|B0 00 B0 00 B0 00 B0 00 26 00 26 00 26 00|\",depth 15; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/#/file/4a740227eeb82c20286d9c112ef95f0c1380d0e90ffb39fc75c8456db4f60756/; classtype:trojan-activity; sid:47177; rev:1;"
+	"GID": "1",
+	"SID": "47177",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.NukeSped RAT variant outbound communication\"; flow:to_server,established; content:\"|B0 00 B0 00 B0 00 B0 00 26 00 26 00 26 00|\",depth 15; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/#/file/4a740227eeb82c20286d9c112ef95f0c1380d0e90ffb39fc75c8456db4f60756/; classtype:trojan-activity; sid:47177; rev:1;"
 }

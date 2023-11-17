@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2181",
-  "Rev": "8",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
-  "Option": "msg:\"PUA-P2P BitTorrent transfer\"; flow:to_server,established; content:\"|13|BitTorrent protocol\",depth 20; metadata:ruleset community; classtype:policy-violation; sid:2181; rev:8;"
+	"GID": "1",
+	"SID": "2181",
+	"Rev": "8",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET any",
+	"Option": "msg:\"PUA-P2P BitTorrent transfer\"; flow:to_server,established; content:\"|13|BitTorrent protocol\",depth 20; metadata:ruleset community; classtype:policy-violation; sid:2181; rev:8;"
 }

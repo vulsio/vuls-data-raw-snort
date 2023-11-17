@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "21444",
-  "Rev": "13",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.TDSS variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Mozilla/4.0",
-  "Option": "compatible|3B 20|)\",fast_pattern,nocase; content:\"HOST|3A|\"; content:!\"X-BlueCoat-Via\",nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,about-threats.trendmicro.com/Malware.aspx?language=apac&name=TDSS; reference:url,www.virustotal.com/file/75e8b49e1d316f28363cccb697cfd2ebca3122dba3dba321dba6391b49fc757e/analysis/; classtype:trojan-activity; sid:21444; rev:13;"
+	"GID": "1",
+	"SID": "21444",
+	"Rev": "13",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.TDSS variant outbound connection\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Mozilla/4.0",
+	"Option": "compatible|3B 20|)\",fast_pattern,nocase; content:\"HOST|3A|\"; content:!\"X-BlueCoat-Via\",nocase; metadata:impact_flag red,ruleset community; service:http; reference:url,about-threats.trendmicro.com/Malware.aspx?language=apac&name=TDSS; reference:url,www.virustotal.com/file/75e8b49e1d316f28363cccb697cfd2ebca3122dba3dba321dba6391b49fc757e/analysis/; classtype:trojan-activity; sid:21444; rev:13;"
 }

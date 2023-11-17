@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "47934",
-  "Rev": "1",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.MSDownloader variant outbound connection\"; flow:to_server,established; http_header; content:\"MS_D0wnl0ad3r\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/c3c5d7961381c202c98badc7ff0739b4f381c10b4e76d153ad2a978118a4b505/detection; classtype:trojan-activity; sid:47934; rev:1;"
+	"GID": "1",
+	"SID": "47934",
+	"Rev": "1",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.MSDownloader variant outbound connection\"; flow:to_server,established; http_header; content:\"MS_D0wnl0ad3r\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,www.virustotal.com/#/file/c3c5d7961381c202c98badc7ff0739b4f381c10b4e76d153ad2a978118a4b505/detection; classtype:trojan-activity; sid:47934; rev:1;"
 }

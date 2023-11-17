@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "32916",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 488",
-  "Option": "msg:\"MALWARE-BACKDOOR Win.Trojan.Wiper outbound communication attempt\"; flow:to_server,established; content:\"|65 DB 37 37 37 37 37 37|\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32916; rev:2;"
+	"GID": "1",
+	"SID": "32916",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 488",
+	"Option": "msg:\"MALWARE-BACKDOOR Win.Trojan.Wiper outbound communication attempt\"; flow:to_server,established; content:\"|65 DB 37 37 37 37 37 37|\",fast_pattern,nocase; metadata:impact_flag red,policy max-detect-ips drop,ruleset community; reference:url,us-cert.gov/ncas/alerts/TA14-353A; classtype:trojan-activity; sid:32916; rev:2;"
 }

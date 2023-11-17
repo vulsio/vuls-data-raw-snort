@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2451",
-  "Rev": "9",
-  "Header": "alert tcp $EXTERNAL_NET 5050 -> $HOME_NET any",
-  "Option": "msg:\"POLICY-SOCIAL Yahoo IM voicechat\"; flow:to_client,established; content:\"YMSG\",depth 4,nocase; content:\"|00|J\",depth 2,offset 10; metadata:ruleset community; classtype:policy-violation; sid:2451; rev:9;"
+	"GID": "1",
+	"SID": "2451",
+	"Rev": "9",
+	"Header": "alert tcp $EXTERNAL_NET 5050 -> $HOME_NET any",
+	"Option": "msg:\"POLICY-SOCIAL Yahoo IM voicechat\"; flow:to_client,established; content:\"YMSG\",depth 4,nocase; content:\"|00|J\",depth 2,offset 10; metadata:ruleset community; classtype:policy-violation; sid:2451; rev:9;"
 }

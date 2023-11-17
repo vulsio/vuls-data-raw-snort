@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1255",
-  "Rev": "15",
-  "Header": "alert tcp $HTTP_SERVERS any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP PHPLIB remote command attempt\"; flow:to_server,established; http_uri; content:\"/db_mysql.inc\"; metadata:ruleset community; service:http; reference:bugtraq,3079; reference:cve,2001-1370; classtype:attempted-user; sid:1255; rev:15;"
+	"GID": "1",
+	"SID": "1255",
+	"Rev": "15",
+	"Header": "alert tcp $HTTP_SERVERS any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP PHPLIB remote command attempt\"; flow:to_server,established; http_uri; content:\"/db_mysql.inc\"; metadata:ruleset community; service:http; reference:bugtraq,3079; reference:cve,2001-1370; classtype:attempted-user; sid:1255; rev:15;"
 }

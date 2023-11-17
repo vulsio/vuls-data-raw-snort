@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2153",
-  "Rev": "11",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP autohtml.php directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/autohtml.php\",fast_pattern,nocase; pkt_data; content:\"name=\"; content:\"../../\",distance 0; metadata:ruleset community; service:http; reference:nessus,11630; classtype:web-application-attack; sid:2153; rev:11;"
+	"GID": "1",
+	"SID": "2153",
+	"Rev": "11",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP autohtml.php directory traversal attempt\"; flow:to_server,established; http_uri; content:\"/autohtml.php\",fast_pattern,nocase; pkt_data; content:\"name=\"; content:\"../../\",distance 0; metadata:ruleset community; service:http; reference:nessus,11630; classtype:web-application-attack; sid:2153; rev:11;"
 }

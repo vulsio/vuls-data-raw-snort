@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1290",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"FILE-OTHER readme.eml autoload attempt\"; flow:to_client,established; file_data; content:\"window.open|28 22|readme.eml|22|\",nocase; metadata:ruleset community; service:http; reference:url,www.cert.org/advisories/CA-2001-26.html; classtype:attempted-user; sid:1290; rev:16;"
+	"GID": "1",
+	"SID": "1290",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"FILE-OTHER readme.eml autoload attempt\"; flow:to_client,established; file_data; content:\"window.open|28 22|readme.eml|22|\",nocase; metadata:ruleset community; service:http; reference:url,www.cert.org/advisories/CA-2001-26.html; classtype:attempted-user; sid:1290; rev:16;"
 }

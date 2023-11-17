@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2155",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ttforum remote file include attempt\"; flow:to_server,established; http_uri; content:\"forum/index.php\"; content:\"template=\"; pcre:\"/template=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,7542; reference:bugtraq,7543; reference:cve,2003-1458; reference:cve,2003-1459; reference:nessus,11615; classtype:web-application-attack; sid:2155; rev:15;"
+	"GID": "1",
+	"SID": "2155",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ttforum remote file include attempt\"; flow:to_server,established; http_uri; content:\"forum/index.php\"; content:\"template=\"; pcre:\"/template=(https?|ftps?|php)/i\"; metadata:ruleset community; service:http; reference:bugtraq,7542; reference:bugtraq,7543; reference:cve,2003-1458; reference:cve,2003-1459; reference:nessus,11615; classtype:web-application-attack; sid:2155; rev:15;"
 }

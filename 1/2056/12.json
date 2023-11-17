@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2056",
-  "Rev": "12",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP TRACE attempt\"; flow:to_server,established; content:\"TRACE\",depth 5; metadata:ruleset community; service:http; reference:bugtraq,9561; reference:cve,2003-1567; reference:cve,2004-2320; reference:cve,2010-0360; reference:nessus,11213; classtype:web-application-attack; sid:2056; rev:12;"
+	"GID": "1",
+	"SID": "2056",
+	"Rev": "12",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP TRACE attempt\"; flow:to_server,established; content:\"TRACE\",depth 5; metadata:ruleset community; service:http; reference:bugtraq,9561; reference:cve,2003-1567; reference:cve,2004-2320; reference:cve,2010-0360; reference:nessus,11213; classtype:web-application-attack; sid:2056; rev:12;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "22061",
-  "Rev": "8",
-  "Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
-  "Option": "msg:\"MALWARE-OTHER Alureon - Malicious IFRAME load attempt\"; flow:to_client,established; file_data; content:\"name=|5C 22|Twitter|5C 22| scrolling=|5C 22|auto|5C 22| frameborder=|5C 22|no|5C 22| align=|5C 22|center|5C 22| height = |5C 22|1px|5C 22| width = |5C 22|1px|5C 22|>\",fast_pattern,nocase; metadata:policy balanced-ips alert,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1102; classtype:trojan-activity; sid:22061; rev:8;"
+	"GID": "1",
+	"SID": "22061",
+	"Rev": "8",
+	"Header": "alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"MALWARE-OTHER Alureon - Malicious IFRAME load attempt\"; flow:to_client,established; file_data; content:\"name=|5C 22|Twitter|5C 22| scrolling=|5C 22|auto|5C 22| frameborder=|5C 22|no|5C 22| align=|5C 22|center|5C 22| height = |5C 22|1px|5C 22| width = |5C 22|1px|5C 22|>\",fast_pattern,nocase; metadata:policy balanced-ips alert,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1102; classtype:trojan-activity; sid:22061; rev:8;"
 }

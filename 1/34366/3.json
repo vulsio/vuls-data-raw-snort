@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34366",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443 ( msg:\"MALWARE-CNC Win.Trojan.Beebone outbound connection\"; flow:to_server,established; content:\"User-Agent|3A 20|Mozilla/4.0",
-  "Option": "compatible|3B| MSIE 7.0|3B| Windows NT 5.1|3B| SV1)|0D 0A|\",fast_pattern,nocase; content:\"GET\"; pcre:\"/GET \\/[a-z]{8,12}\\?[a-z] HTTP\\/1.1/i\"; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/b06c6ac1174a6992f423d935ccba6f34f107b6591768a743d44d66423312d33a/analysis/; classtype:trojan-activity; sid:34366; rev:3;"
+	"GID": "1",
+	"SID": "34366",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET 443 ( msg:\"MALWARE-CNC Win.Trojan.Beebone outbound connection\"; flow:to_server,established; content:\"User-Agent|3A 20|Mozilla/4.0",
+	"Option": "compatible|3B| MSIE 7.0|3B| Windows NT 5.1|3B| SV1)|0D 0A|\",fast_pattern,nocase; content:\"GET\"; pcre:\"/GET \\/[a-z]{8,12}\\?[a-z] HTTP\\/1.1/i\"; metadata:impact_flag red,ruleset community; reference:url,www.virustotal.com/en/file/b06c6ac1174a6992f423d935ccba6f34f107b6591768a743d44d66423312d33a/analysis/; classtype:trojan-activity; sid:34366; rev:3;"
 }

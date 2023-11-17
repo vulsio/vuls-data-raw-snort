@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1395",
-  "Rev": "16",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP zml.cgi attempt\"; flow:to_server,established; http_uri; content:\"/zml.cgi\"; pkt_data; content:\"file=../\"; metadata:ruleset community; service:http; reference:bugtraq,3759; reference:cve,2001-1209; reference:nessus,10830; classtype:web-application-activity; sid:1395; rev:16;"
+	"GID": "1",
+	"SID": "1395",
+	"Rev": "16",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP zml.cgi attempt\"; flow:to_server,established; http_uri; content:\"/zml.cgi\"; pkt_data; content:\"file=../\"; metadata:ruleset community; service:http; reference:bugtraq,3759; reference:cve,2001-1209; reference:nessus,10830; classtype:web-application-activity; sid:1395; rev:16;"
 }

@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25660",
-  "Rev": "3",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.Medfos variant outbound connection\"; flow:to_server,established; http_uri; content:\"/js/disable.js?type=\",fast_pattern,nocase; http_header; content:\"Accept|3A 20|application/javascript|2C 20 2A 2F 2A 3B|q=0.8\"; metadata:ruleset community; service:http; reference:url,www.microsoft.com/security/portal/threat/encyclopedia/Entry.aspx?Name=Trojan:JS/Medfos.B; classtype:trojan-activity; sid:25660; rev:3;"
+	"GID": "1",
+	"SID": "25660",
+	"Rev": "3",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.Medfos variant outbound connection\"; flow:to_server,established; http_uri; content:\"/js/disable.js?type=\",fast_pattern,nocase; http_header; content:\"Accept|3A 20|application/javascript|2C 20 2A 2F 2A 3B|q=0.8\"; metadata:ruleset community; service:http; reference:url,www.microsoft.com/security/portal/threat/encyclopedia/Entry.aspx?Name=Trojan:JS/Medfos.B; classtype:trojan-activity; sid:25660; rev:3;"
 }

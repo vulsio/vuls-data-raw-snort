@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "2698",
-  "Rev": "4",
-  "Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
-  "Option": "msg:\"SERVER-ORACLE create file buffer overflow attempt\"; flow:to_server,established; content:\"create\",nocase; pcre:\"/CREATE\\s.*?FILE\\s+((AS|MEMBER|TO)\\s+)?(\\x27[^\\x27]{512}|\\x22[^\\x22]{512})/ims\"; metadata:ruleset community; classtype:attempted-user; sid:2698; rev:4;"
+	"GID": "1",
+	"SID": "2698",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $SQL_SERVERS $ORACLE_PORTS",
+	"Option": "msg:\"SERVER-ORACLE create file buffer overflow attempt\"; flow:to_server,established; content:\"create\",nocase; pcre:\"/CREATE\\s.*?FILE\\s+((AS|MEMBER|TO)\\s+)?(\\x27[^\\x27]{512}|\\x22[^\\x22]{512})/ims\"; metadata:ruleset community; classtype:attempted-user; sid:2698; rev:4;"
 }

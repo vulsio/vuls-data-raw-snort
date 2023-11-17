@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1141",
-  "Rev": "19",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP handler access\"; flow:to_server,established; http_uri; content:\"/handler\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,380; reference:cve,1999-0148; reference:nessus,10100; classtype:web-application-activity; sid:1141; rev:19;"
+	"GID": "1",
+	"SID": "1141",
+	"Rev": "19",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP handler access\"; flow:to_server,established; http_uri; content:\"/handler\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,380; reference:cve,1999-0148; reference:nessus,10100; classtype:web-application-activity; sid:1141; rev:19;"
 }

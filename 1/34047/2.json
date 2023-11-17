@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "34047",
-  "Rev": "2",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Win.Trojan.VBPasswordStealer variant outbound connection\"; flow:to_server,established; http_uri; content:\"/index.php?\"; content:\"action=add\",fast_pattern; content:\"&username=\",distance 0; content:\"&password=\",distance 0; content:\"&app=\",distance 0; content:\"&pcname=\",distance 0; content:\"&sitename=\",distance 0; http_header; content:!\"Accept\"; content:!\"Connection\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/4f0988ac590d52b97b1a162f5ee098c38f6e640be783a511049d8e5006cac011/analysis/; classtype:trojan-activity; sid:34047; rev:2;"
+	"GID": "1",
+	"SID": "34047",
+	"Rev": "2",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Win.Trojan.VBPasswordStealer variant outbound connection\"; flow:to_server,established; http_uri; content:\"/index.php?\"; content:\"action=add\",fast_pattern; content:\"&username=\",distance 0; content:\"&password=\",distance 0; content:\"&app=\",distance 0; content:\"&pcname=\",distance 0; content:\"&sitename=\",distance 0; http_header; content:!\"Accept\"; content:!\"Connection\"; metadata:impact_flag red,ruleset community; service:http; reference:url,www.virustotal.com/en/file/4f0988ac590d52b97b1a162f5ee098c38f6e640be783a511049d8e5006cac011/analysis/; classtype:trojan-activity; sid:34047; rev:2;"
 }

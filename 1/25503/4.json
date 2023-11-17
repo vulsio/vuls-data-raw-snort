@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "25503",
-  "Rev": "4",
-  "Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
-  "Option": "msg:\"MALWARE-CNC Necurs Rootkit sba.cgi\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:16; http_uri; content:\"/cgi-bin/sba.cgi\",fast_pattern,nocase; http_client_body; pcre:\"/[^\\x20-\\x7e\\x0d\\x0a]{4}/\"; metadata:ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1014; reference:url,www.virustotal.com/file/b1e6f0cad0ae5c60e9e4fa18fd3b4a045d6db172c10a1c8e054e22d1aff4c673/analysis/; classtype:trojan-activity; sid:25503; rev:4;"
+	"GID": "1",
+	"SID": "25503",
+	"Rev": "4",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"MALWARE-CNC Necurs Rootkit sba.cgi\"; flow:to_server,established; http_method; content:\"POST\"; http_raw_uri; bufferlen:16; http_uri; content:\"/cgi-bin/sba.cgi\",fast_pattern,nocase; http_client_body; pcre:\"/[^\\x20-\\x7e\\x0d\\x0a]{4}/\"; metadata:ruleset community; service:http; reference:url,attack.mitre.org/techniques/T1014; reference:url,www.virustotal.com/file/b1e6f0cad0ae5c60e9e4fa18fd3b4a045d6db172c10a1c8e054e22d1aff4c673/analysis/; classtype:trojan-activity; sid:25503; rev:4;"
 }

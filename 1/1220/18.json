@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1220",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP ultraboard access\"; flow:to_server,established; http_uri; content:\"/ultraboard\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1164; reference:bugtraq,1175; reference:cve,2000-0332; reference:cve,2000-0426; reference:nessus,11748; classtype:attempted-recon; sid:1220; rev:18;"
+	"GID": "1",
+	"SID": "1220",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP ultraboard access\"; flow:to_server,established; http_uri; content:\"/ultraboard\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:bugtraq,1164; reference:bugtraq,1175; reference:cve,2000-0332; reference:cve,2000-0426; reference:nessus,11748; classtype:attempted-recon; sid:1220; rev:18;"
 }

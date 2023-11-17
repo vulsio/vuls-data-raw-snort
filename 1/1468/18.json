@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "1468",
-  "Rev": "18",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-  "Option": "msg:\"SERVER-WEBAPP Web Shopper shopper.cgi attempt\"; flow:to_server,established; http_uri; content:\"/shopper.cgi\",fast_pattern,nocase; pkt_data; content:\"newpage=../\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1776; reference:cve,2000-0922; reference:nessus,10533; classtype:web-application-attack; sid:1468; rev:18;"
+	"GID": "1",
+	"SID": "1468",
+	"Rev": "18",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
+	"Option": "msg:\"SERVER-WEBAPP Web Shopper shopper.cgi attempt\"; flow:to_server,established; http_uri; content:\"/shopper.cgi\",fast_pattern,nocase; pkt_data; content:\"newpage=../\",nocase; metadata:ruleset community; service:http; reference:bugtraq,1776; reference:cve,2000-0922; reference:nessus,10533; classtype:web-application-attack; sid:1468; rev:18;"
 }

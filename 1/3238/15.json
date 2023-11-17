@@ -1,7 +1,7 @@
 {
-  "GID": "1",
-  "SID": "3238",
-  "Rev": "15",
-  "Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [135,593,1024:]",
-  "Option": "msg:\"OS-WINDOWS DCERPC NCACN-IP-TCP irot IrotIsRunning/Revoke overflow attempt\"; flow:to_server,established; dce_iface:uuid b9e79e60-3d52-11ce-aaa1-00006901293f; dce_opnum:\"1-2\"; dce_stub_data; pcre:\"/^(\\x00\\x00\\x00\\x00|.{12})/s\"; byte_jump:4,-4,relative,dce,align; byte_test:4,>,1024,0,relative,dce; metadata:ruleset community; reference:bugtraq,6005; reference:cve,2002-1561; reference:url,technet.microsoft.com/en-us/security/bulletin/ms03-010; classtype:attempted-admin; sid:3238; rev:15;"
+	"GID": "1",
+	"SID": "3238",
+	"Rev": "15",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET [135,593,1024:]",
+	"Option": "msg:\"OS-WINDOWS DCERPC NCACN-IP-TCP irot IrotIsRunning/Revoke overflow attempt\"; flow:to_server,established; dce_iface:uuid b9e79e60-3d52-11ce-aaa1-00006901293f; dce_opnum:\"1-2\"; dce_stub_data; pcre:\"/^(\\x00\\x00\\x00\\x00|.{12})/s\"; byte_jump:4,-4,relative,dce,align; byte_test:4,>,1024,0,relative,dce; metadata:ruleset community; reference:bugtraq,6005; reference:cve,2002-1561; reference:url,technet.microsoft.com/en-us/security/bulletin/ms03-010; classtype:attempted-admin; sid:3238; rev:15;"
 }
