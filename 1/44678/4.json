@@ -1,0 +1,7 @@
+{
+	"GID": "1",
+	"SID": "44678",
+	"Rev": "4",
+	"Header": "alert http",
+	"Option": "msg:\"POLICY-OTHER NetSupport Manager RAT outbound connection detected\"; flow:to_server,established; http_header; content:\"User-Agent|3A| NetSupport Manager/\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,blogs.vmware.com/security/2023/11/netsupport-rat-the-rat-king-returns.html; reference:url,www.virustotal.com/#/file/b87ef28981defd135496e25233cc7a47a376a75ddea97fcd4c0927995dd22e47/detection; classtype:trojan-activity; gid:1; sid:44678; rev:4;"
+}
