@@ -1,0 +1,7 @@
+{
+	"GID": "1",
+	"SID": "26395",
+	"Rev": "6",
+	"Header": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+	"Option": "msg:\"APP-DETECT Ufasoft bitcoin miner possible data upload\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Ufasoft\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,ufasoft.com/open/bitcoin/; classtype:policy-violation; gid:1; sid:26395; rev:6;"
+}

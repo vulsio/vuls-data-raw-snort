@@ -1,0 +1,7 @@
+{
+	"GID": "1",
+	"SID": "25359",
+	"Rev": "4",
+	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
+	"Option": "msg:\"APP-DETECT Acunetix web vulnerability scanner probe attempt\"; flow:to_server,established; http_uri; content:\"/acunetix-wvs-test-for-some-inexistent-file\",fast_pattern,nocase; metadata:ruleset community; service:http; reference:url,www.acunetix.com; classtype:web-application-attack; gid:1; sid:25359; rev:4;"
+}

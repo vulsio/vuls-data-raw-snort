@@ -1,7 +1,0 @@
-{
-	"GID": "1",
-	"SID": "25362",
-	"Rev": "3",
-	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-	"Option": "msg:\"APP-DETECT Acunetix web vulnerability scanner base64 XSS attempt\"; flow:to_server,established; http_uri; content:\"PHNjcmlwdD\",fast_pattern,nocase; metadata:policy max-detect-ips drop,ruleset community; service:http; reference:url,www.acunetix.com; classtype:web-application-attack; sid:25362; rev:3;"
-}
