@@ -1,7 +1,0 @@
-{
-	"GID": "1",
-	"SID": "42821",
-	"Rev": "2",
-	"Header": "alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25",
-	"Option": "msg:\"OS-WINDOWS Microsoft Malware Protection Engine type confusion attempt\"; flow:to_server,established; file_data; content:\"Error\"; content:\".toString.call\",within 50,fast_pattern; content:\"message\",within 25; metadata:policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop,ruleset community; service:smtp; reference:cve,2017-0290; reference:url,technet.microsoft.com/en-us/library/security/4022344.aspx; classtype:attempted-admin; sid:42821; rev:2;"
-}
