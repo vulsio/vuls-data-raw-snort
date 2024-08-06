@@ -1,7 +1,0 @@
-{
-	"GID": "1",
-	"SID": "2381",
-	"Rev": "21",
-	"Header": "alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS",
-	"Option": "msg:\"SERVER-WEBAPP Checkpoint Firewall-1 HTTP parsing format string vulnerability attempt\"; flow:to_server,established; http_method; content:\"HEAD\"; http_uri; content:\"|3A|/\",offset 11; pcre:\"/^[^\\x3a\\x3f]{11,}\\x3a\\x2f/ims\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,9581; reference:cve,2004-0039; reference:nessus,12084; classtype:attempted-admin; sid:2381; rev:21;"
-}
