@@ -1,0 +1,7 @@
+{
+	"GID": "1",
+	"SID": "58615",
+	"Rev": "2",
+	"Header": "alert http any $HTTP_PORTS -> $HOME_NET any",
+	"Option": "msg:\"OS-WINDOWS Microsoft Windows Content-Disposition CLSID command attempt\"; flow:to_client,established; http_header; content:\"Content-Disposition|3A|\",nocase; content:\"{25336920-03f9-11cf-8fd0-00aa00686f13}\"; content:\"|2E|\",within 50,nocase; metadata:policy max-detect-ips drop,ruleset community; reference:bugtraq,9510; reference:cve,2004-0420; reference:url,docs.microsoft.com/en-us/security-updates/SecurityBulletins/2004/ms04-024; classtype:attempted-user; gid:1; sid:58615; rev:2;"
+}
