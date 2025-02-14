@@ -1,7 +1,0 @@
-{
-	"GID": "1",
-	"SID": "3087",
-	"Rev": "20",
-	"Header": "alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS",
-	"Option": "msg:\"SERVER-IIS w3who.dll buffer overflow attempt\"; flow:to_server,established; http_uri; content:\"/w3who.dll?\",nocase; pkt_data; pcre:\"/w3who\\.dll\\x3F[^\\r\\n]{519}/i\"; metadata:policy max-detect-ips drop,policy security-ips drop,ruleset community; service:http; reference:bugtraq,11820; reference:cve,2004-1134; classtype:attempted-admin; sid:3087; rev:20;"
-}
